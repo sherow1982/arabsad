@@ -1,38 +1,58 @@
+# Robots.txt for arabsad.com - Digital Marketing Agency
+# Generated: 2025-11-01
+
 User-agent: *
 Allow: /
 
-# ملفات Sitemap
+# Sitemap
 Sitemap: https://arabsad.com/sitemap.xml
 
-# منع الوصول للملفات الحساسة
-Disallow: /admin/
-Disallow: /private/
-Disallow: /.git/
-Disallow: /node_modules/
+# Allow all important pages
+Allow: /index.html
+Allow: /services-page.html
+Allow: /google-ads-service.html
+Allow: /social-media-service.html
+Allow: /seo-service.html
+Allow: /ecommerce-service.html
+Allow: /gulf-cities.html
+Allow: /sa.html
+Allow: /ae.html
+Allow: /kw.html
+Allow: /qa.html
+Allow: /bh.html
+Allow: /om.html
 
-# السماح لمحركات البحث بالوصول للمحتوى المهم
+# Allow assets and resources
+Allow: /assets/
 Allow: /images/
 Allow: /css/
 Allow: /js/
-Allow: /assets/
 
-# تحديد crawl-delay
+# Block development and test files
+Disallow: /test/
+Disallow: /dev/
+Disallow: /_*
+Disallow: /.*
+
+# Allow specific bots with higher crawl rate
+User-agent: Googlebot
 Crawl-delay: 1
 
-# ملفات خاصة بـ Google
-User-agent: Googlebot
-Allow: /
-
-# ملفات خاصة بـ Bing
 User-agent: Bingbot
-Allow: /
+Crawl-delay: 2
 
-# منع بعض البوتات غير المرغوب فيها
+User-agent: YandexBot
+Crawl-delay: 3
+
+# Block aggressive crawlers
 User-agent: AhrefsBot
 Disallow: /
 
 User-agent: MJ12bot
 Disallow: /
 
-User-agent: DotBot
+User-agent: SemrushBot
 Disallow: /
+
+# Host directive (preferred domain)
+Host: arabsad.com
