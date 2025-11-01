@@ -1,17 +1,17 @@
-# إعدادات الموقع الأساسية
-title: "إعلانات العرب - شريكك الموثوق في النجاح الرقمي"
-description: "منصة شاملة للإعلانات والتسويق الرقمي في العالم العربي ودول الخليج. خدمات احترافية في إعلانات جوجل، فيسبوك، إنستجرام، سناب شات، تيك توك وتصميم المتاجر الإلكترونية."
+# إعدادات الموقع المحسنة للانتشار في الخليج 2025
+title: "مؤسسة إعلانات العرب - أفضل شركة تسويق رقمي في الخليج العربي"
+description: "شركة إعلانات العرب الرائدة في الخليج. خدمات إعلانات جوجل، فيسبوك، تيك توك، سناب شات، تصميم متاجر إلكترونية وسيو في السعودية والإمارات وقطر والكويت والبحرين."
 url: "https://arabsad.com"
 baseurl: ""
 
 author:
-  name: "إعلانات العرب"
-  email: "info@arabsad.com"
-  phone: "+966505914774"
+  name: "مؤسسة إعلانات العرب"
+  email: "sherow1982@gmail.com"
+  phone: "+201110760081"
 
 lang: ar
-locale: ar_SA
-timezone: Asia/Riyadh
+locale: ar_EG
+timezone: Africa/Cairo
 
 encoding: utf-8
 markdown: kramdown
@@ -34,51 +34,124 @@ facebook:
 og_image: /assets/images/arabsad-og-image.jpg
 
 social:
-  name: إعلانات العرب
+  name: مؤسسة إعلانات العرب
   links:
-    - https://twitter.com/arabsad
     - https://www.facebook.com/arabsad
     - https://www.instagram.com/arabsad
-    - https://www.linkedin.com/company/arabsad
+    - https://wa.me/201110760081
 
 google_analytics: 
 
-search_enabled: true
+# الكلمات المفتاحية المحسنة للخليج العربي 2025
+keywords:
+  primary:
+    - "شركة تسويق رقمي السعودية"
+    - "إعلانات جوجل الخليج العربي" 
+    - "وكالة تسويق إلكتروني الإمارات"
+    - "خدمات سيو عربية"
+    - "تصميم متاجر إلكترونية السعودية"
+    - "إدارة حسابات تواصل اجتماعي دبي"
+  long_tail:
+    - "أفضل شركة إعلانات جوجل في الرياض"
+    - "تصميم متجر إلكتروني احترافي جدة"
+    - "خدمات سيو للشركات السعودية"
+    - "إدارة فيسبوك وإنستجرام للشركات الخليجية"
+  commercial:
+    - "سعر إعلانات جوجل السعودية"
+    - "تكلفة تصميم متجر إلكتروني"
+    - "أسعار خدمات السيو الخليج"
+    - "باقات إدارة السوشيال ميديا"
 
-exclude:
-  - README.md
-  - Gemfile
-  - Gemfile.lock
-  - node_modules
-  - vendor
-  - .sass-cache
-  - .jekyll-cache
-  - gemfiles
-  - package.json
-  - package-lock.json
+# معلومات الاتصال المحدثة
+contact:
+  phones: 
+    - "+201110760081"
+    - "+201093304677"
+  email: "sherow1982@gmail.com"
+  address: "القاهرة، جمهورية مصر العربية"
+  website: "https://arabsad.com"
+  whatsapp: "https://wa.me/201110760081"
 
-include:
-  - .htaccess
-  - _pages
+# إحصائيات الشركة المحدثة
+stats:
+  clients: "500+"
+  projects: "1000+"
+  experience: "10+"
+  success_rate: "98%"
+
+# المدن المستهدفة للسيو المحلي
+target_cities:
+  saudi:
+    - name: "الرياض"
+      slug: "riyadh"
+      coordinates: [24.7136, 46.6753]
+    - name: "جدة" 
+      slug: "jeddah"
+      coordinates: [21.4858, 39.1925]
+    - name: "الدمام"
+      slug: "dammam"
+      coordinates: [26.4207, 50.0888]
+  uae:
+    - name: "دبي"
+      slug: "dubai"
+      coordinates: [25.2048, 55.2708]
+    - name: "أبوظبي"
+      slug: "abudhabi"
+      coordinates: [24.4539, 54.3773]
+  qatar:
+    - name: "الدوحة"
+      slug: "doha"
+      coordinates: [25.3548, 51.1839]
+  kuwait:
+    - name: "الكويت"
+      slug: "kuwait"
+      coordinates: [29.3117, 47.4818]
+  bahrain:
+    - name: "المنامة"
+      slug: "manama"
+      coordinates: [26.2285, 50.5860]
 
 structured_data:
   type: Organization
-  name: "إعلانات العرب"
+  name: "مؤسسة إعلانات العرب"
   url: "https://arabsad.com"
   logo: "https://arabsad.com/assets/images/logo.png"
   sameAs:
     - "https://www.facebook.com/arabsad"
-    - "https://www.twitter.com/arabsad"
     - "https://www.instagram.com/arabsad"
-    - "https://www.linkedin.com/company/arabsad"
+    - "https://wa.me/201110760081"
   address:
     "@type": PostalAddress
-    streetAddress: "الرياض"
-    addressCountry: "SA"
+    streetAddress: "القاهرة"
+    addressCountry: "EG"
   contactPoint:
-    "@type": ContactPoint
-    telephone: "+966505914774"
-    contactType: "customer service"
+    - "@type": ContactPoint
+      telephone: "+201110760081"
+      contactType: "customer service"
+    - "@type": ContactPoint
+      telephone: "+201093304677"
+      contactType: "customer service"
+
+# خدمات الشركة للـ schema
+services:
+  - name: "إعلانات جوجل"
+    description: "حملات إعلانية احترافية على Google Ads"
+    url: "/services/google-ads.html"
+  - name: "إعلانات السوشيال ميديا"
+    description: "إعلانات فيسبوك، إنستجرام، تيك توك، سناب شات"
+    url: "/services/social-ads.html"
+  - name: "تصميم المواقع"
+    description: "مواقع احترافية متوافقة مع السيو"
+    url: "/services/website-design.html"
+  - name: "المتاجر الإلكترونية"
+    description: "متاجر إلكترونية متكاملة جاهزة للبيع"
+    url: "/services/ecommerce.html"
+  - name: "تحسين محركات البحث"
+    description: "خدمات سيو شاملة للظهور في الصفحة الأولى"
+    url: "/services/seo.html"
+  - name: "إدارة وسائل التواصل"
+    description: "إدارة احترافية لحسابات التواصل الاجتماعي"
+    url: "/services/social-management.html"
 
 sass:
   style: compressed
@@ -92,26 +165,18 @@ compress_html:
 feed:
   path: feed.xml
 
-keywords: 
-  - "إعلانات العرب"
-  - "تسويق رقمي السعودية"
-  - "إعلانات جوجل الخليج"
-  - "شركة إعلانات عربية"
-  - "تصميم متاجر إلكترونية"
-  - "سيو عربي"
-  - "إعلانات فيسبوك العربية"
-  - "تحسين محركات البحث"
-  - "إدارة وسائل التواصل الاجتماعي"
-  - "التسويق الرقمي الخليج"
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+  - .sass-cache
+  - .jekyll-cache
 
-contact:
-  phone: "+966505914774"
-  email: "info@arabsad.com"
-  address: "الرياض، المملكة العربية السعودية"
-  website: "https://arabsad.com"
-
-stats:
-  clients: "200+"
-  projects: "500+"
-  experience: "8+"
-  success_rate: "95%"
+include:
+  - .htaccess
+  - _pages
+  - blog
+  - cities
+  - services
