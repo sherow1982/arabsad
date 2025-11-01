@@ -1,0 +1,117 @@
+# إعدادات الموقع الأساسية
+title: "إعلانات العرب - شريكك الموثوق في النجاح الرقمي"
+description: "منصة شاملة للإعلانات والتسويق الرقمي في العالم العربي ودول الخليج. خدمات احترافية في إعلانات جوجل، فيسبوك، إنستجرام، سناب شات، تيك توك وتصميم المتاجر الإلكترونية."
+url: "https://arabsad.com"
+baseurl: ""
+
+author:
+  name: "إعلانات العرب"
+  email: "info@arabsad.com"
+  phone: "+966505914774"
+
+lang: ar
+locale: ar_SA
+timezone: Asia/Riyadh
+
+encoding: utf-8
+markdown: kramdown
+highlighter: rouge
+
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+twitter:
+  username: arabsad
+  card: summary_large_image
+
+facebook:
+  app_id: 
+  publisher: 
+  admins: 
+
+og_image: /assets/images/arabsad-og-image.jpg
+
+social:
+  name: إعلانات العرب
+  links:
+    - https://twitter.com/arabsad
+    - https://www.facebook.com/arabsad
+    - https://www.instagram.com/arabsad
+    - https://www.linkedin.com/company/arabsad
+
+google_analytics: 
+
+search_enabled: true
+
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+  - .sass-cache
+  - .jekyll-cache
+  - gemfiles
+  - package.json
+  - package-lock.json
+
+include:
+  - .htaccess
+  - _pages
+
+structured_data:
+  type: Organization
+  name: "إعلانات العرب"
+  url: "https://arabsad.com"
+  logo: "https://arabsad.com/assets/images/logo.png"
+  sameAs:
+    - "https://www.facebook.com/arabsad"
+    - "https://www.twitter.com/arabsad"
+    - "https://www.instagram.com/arabsad"
+    - "https://www.linkedin.com/company/arabsad"
+  address:
+    "@type": PostalAddress
+    streetAddress: "الرياض"
+    addressCountry: "SA"
+  contactPoint:
+    "@type": ContactPoint
+    telephone: "+966505914774"
+    contactType: "customer service"
+
+sass:
+  style: compressed
+  
+compress_html:
+  clippings: all
+  comments: all
+  endings: all
+  profile: false
+  
+feed:
+  path: feed.xml
+
+keywords: 
+  - "إعلانات العرب"
+  - "تسويق رقمي السعودية"
+  - "إعلانات جوجل الخليج"
+  - "شركة إعلانات عربية"
+  - "تصميم متاجر إلكترونية"
+  - "سيو عربي"
+  - "إعلانات فيسبوك العربية"
+  - "تحسين محركات البحث"
+  - "إدارة وسائل التواصل الاجتماعي"
+  - "التسويق الرقمي الخليج"
+
+contact:
+  phone: "+966505914774"
+  email: "info@arabsad.com"
+  address: "الرياض، المملكة العربية السعودية"
+  website: "https://arabsad.com"
+
+stats:
+  clients: "200+"
+  projects: "500+"
+  experience: "8+"
+  success_rate: "95%"
