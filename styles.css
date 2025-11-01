@@ -1,3 +1,48 @@
-/* CSS المكتمل مع البانر وزر الواتساب العائم وأنماط الخدمات والمدونة ... */
-
-REPLACED_BY_FULL_CSS
+/* إعادة تعيين الأساسيات */
+* { margin:0; padding:0; box-sizing:border-box; }
+:root{--primary-color:#1e40af;--secondary-color:#f59e0b;--accent-color:#10b981;--whatsapp-color:#25d366;--text-color:#1f2937;--text-light:#6b7280;--bg-color:#fff;--bg-light:#f9fafb;--border-color:#e5e7eb;--shadow:0 4px 6px -1px rgb(0 0 0 / 0.1);--shadow-lg:0 10px 15px -3px rgb(0 0 0 / 0.1);--border-radius:8px;--transition:all .3s ease}
+body{font-family:'Cairo','Segoe UI',Tahoma,Geneva,Verdana,sans-serif;line-height:1.6;color:var(--text-color);direction:rtl;text-align:right}
+.container{max-width:1200px;margin:0 auto;padding:0 20px}
+/* Banner */
+.banner-top{background:linear-gradient(135deg,var(--primary-color),#3b82f6);padding:10px 0}
+.banner-content{text-align:center}
+.banner-img{max-width:100%;max-height:200px;border-radius:8px;box-shadow:var(--shadow-lg)}
+/* Header */
+.header{background:#fff;box-shadow:var(--shadow);position:sticky;top:0;z-index:999}
+.nav{padding:1rem 0}
+.nav .container{display:flex;justify-content:space-between;align-items:center}
+.nav-brand h1{color:var(--primary-color);font-size:1.8rem;margin:0}
+.nav-brand .domain{font-size:.9rem;color:var(--secondary-color);font-weight:500}
+.nav-menu{display:flex;list-style:none;gap:1rem;flex-wrap:wrap}
+.nav-menu a{color:var(--text-color);font-weight:500}
+.nav-toggle{display:none;flex-direction:column;cursor:pointer}
+.nav-toggle span{width:25px;height:3px;background:var(--text-color);margin:2px 0}
+/* WhatsApp Floating */
+.whatsapp-float{position:fixed;bottom:30px;left:30px;z-index:1000;animation:pulse 2s infinite}
+.whatsapp-btn{background:var(--whatsapp-color);color:#fff;padding:15px 20px;border-radius:50px;display:flex;align-items:center;gap:10px;text-decoration:none;font-weight:600;box-shadow:var(--shadow-lg)}
+.whatsapp-btn:hover{background:#128c7e;transform:translateY(-3px);color:#fff}
+@keyframes pulse{0%{transform:scale(1)}50%{transform:scale(1.05)}100%{transform:scale(1)}}
+/* Hero */
+.hero{background:linear-gradient(135deg,var(--primary-color),#3b82f6);color:#fff;padding:120px 0 80px;text-align:center}
+.hero h1{font-size:3rem;margin-bottom:.5rem}
+.hero h2{font-size:1.8rem;color:var(--secondary-color);font-weight:500;margin-bottom:1rem}
+.hero p{font-size:1.1rem;max-width:800px;margin:0 auto 2rem;color:rgba(255,255,255,.9)}
+.hero-stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:1.5rem;max-width:600px;margin:2rem auto}
+.stat-number{font-size:2rem;font-weight:700;color:var(--secondary-color)}
+/* Sections */
+section{padding:80px 0}
+.section-desc{text-align:center;color:var(--text-light);max-width:600px;margin:0 auto 2rem}
+/* Services grid placeholder */
+.services{background:var(--bg-light)}
+/* Contact */
+.contact-content{display:grid;grid-template-columns:1fr;gap:2rem}
+.contact-info{background:#fff;padding:2rem;border-radius:8px;box-shadow:var(--shadow)}
+.contact-item{margin-bottom:1rem;padding-bottom:1rem;border-bottom:1px solid var(--border-color)}
+/* Footer */
+.footer{background:var(--text-color);color:#fff;padding:3rem 0 1rem}
+.footer-content{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:2rem;margin-bottom:2rem}
+.footer-brand h3{color:var(--secondary-color)}
+.footer-links a{color:rgba(255,255,255,.8)}
+.footer-bottom{border-top:1px solid rgba(255,255,255,.2);text-align:center;padding-top:1rem;color:rgba(255,255,255,.7)}
+/* Responsive */
+@media(max-width:768px){.nav-menu{display:none;position:absolute;top:100%;right:0;left:0;background:#fff;flex-direction:column;padding:1rem;box-shadow:var(--shadow)}.nav-menu.active{display:flex}.nav-toggle{display:flex}.banner-img{max-height:150px}.whatsapp-btn{padding:12px 16px}}
