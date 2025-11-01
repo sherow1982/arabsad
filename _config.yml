@@ -1,158 +1,40 @@
-# إعدادات الموقع المحسنة للانتشار في الخليج 2025
-title: "مؤسسة إعلانات العرب - أفضل شركة تسويق رقمي في الخليج العربي"
-description: "شركة إعلانات العرب الرائدة في الخليج. خدمات إعلانات جوجل، فيسبوك، تيك توك، سناب شات، تصميم متاجر إلكترونية وسيو في السعودية والإمارات وقطر والكويت والبحرين."
+# Site settings - محسن لـ SEO الخليجي 2025
+title: "مؤسسة إعلانات العرب - أفضل شركة تسويق رقمي في الخليج"
+description: "شركة إعلانات العرب الرائدة في الخليج. Google Ads، فيسبوك، تيك توك، سناب شات، متاجر إلكترونية وSEO. 10+ سنوات خبرة في السعودية والإمارات والخليج."
 url: "https://arabsad.com"
 baseurl: ""
+lang: "ar"
+locale: "ar"
+timezone: "Asia/Riyadh"
+theme_color: "#1e40af"
 
+# Author info
 author:
   name: "مؤسسة إعلانات العرب"
   email: "sherow1982@gmail.com"
   phone: "+201110760081"
+  
+logo: "/assets/images/logo-arabsad.png"
 
-lang: ar
-locale: ar_EG
-timezone: Africa/Cairo
+# Social profiles
+social:
+  name: "مؤسسة إعلانات العرب"
+  links:
+    - "https://arabsad.com"
+    - "https://wa.me/201110760081"
 
-encoding: utf-8
+# Jekyll plugins for SEO
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-feed
+
+# Build settings
 markdown: kramdown
 highlighter: rouge
+permalink: /:title/
 
-plugins:
-  - jekyll-feed
-  - jekyll-sitemap
-  - jekyll-seo-tag
-
-twitter:
-  username: arabsad
-  card: summary_large_image
-
-facebook:
-  app_id: 
-  publisher: 
-  admins: 
-
-og_image: /assets/images/arabsad-og-image.jpg
-
-social:
-  name: مؤسسة إعلانات العرب
-  links:
-    - https://www.facebook.com/arabsad
-    - https://www.instagram.com/arabsad
-    - https://wa.me/201110760081
-
-google_analytics: 
-
-# الكلمات المفتاحية المحسنة للخليج العربي 2025
-keywords:
-  primary:
-    - "شركة تسويق رقمي السعودية"
-    - "إعلانات جوجل الخليج العربي" 
-    - "وكالة تسويق إلكتروني الإمارات"
-    - "خدمات سيو عربية"
-    - "تصميم متاجر إلكترونية السعودية"
-    - "إدارة حسابات تواصل اجتماعي دبي"
-  long_tail:
-    - "أفضل شركة إعلانات جوجل في الرياض"
-    - "تصميم متجر إلكتروني احترافي جدة"
-    - "خدمات سيو للشركات السعودية"
-    - "إدارة فيسبوك وإنستجرام للشركات الخليجية"
-  commercial:
-    - "سعر إعلانات جوجل السعودية"
-    - "تكلفة تصميم متجر إلكتروني"
-    - "أسعار خدمات السيو الخليج"
-    - "باقات إدارة السوشيال ميديا"
-
-# معلومات الاتصال المحدثة
-contact:
-  phones: 
-    - "+201110760081"
-    - "+201093304677"
-  email: "sherow1982@gmail.com"
-  address: "القاهرة، جمهورية مصر العربية"
-  website: "https://arabsad.com"
-  whatsapp: "https://wa.me/201110760081"
-
-# إحصائيات الشركة المحدثة
-stats:
-  clients: "500+"
-  projects: "1000+"
-  experience: "10+"
-  success_rate: "98%"
-
-# المدن المستهدفة للسيو المحلي
-target_cities:
-  saudi:
-    - name: "الرياض"
-      slug: "riyadh"
-      coordinates: [24.7136, 46.6753]
-    - name: "جدة" 
-      slug: "jeddah"
-      coordinates: [21.4858, 39.1925]
-    - name: "الدمام"
-      slug: "dammam"
-      coordinates: [26.4207, 50.0888]
-  uae:
-    - name: "دبي"
-      slug: "dubai"
-      coordinates: [25.2048, 55.2708]
-    - name: "أبوظبي"
-      slug: "abudhabi"
-      coordinates: [24.4539, 54.3773]
-  qatar:
-    - name: "الدوحة"
-      slug: "doha"
-      coordinates: [25.3548, 51.1839]
-  kuwait:
-    - name: "الكويت"
-      slug: "kuwait"
-      coordinates: [29.3117, 47.4818]
-  bahrain:
-    - name: "المنامة"
-      slug: "manama"
-      coordinates: [26.2285, 50.5860]
-
-structured_data:
-  type: Organization
-  name: "مؤسسة إعلانات العرب"
-  url: "https://arabsad.com"
-  logo: "https://arabsad.com/assets/images/logo.png"
-  sameAs:
-    - "https://www.facebook.com/arabsad"
-    - "https://www.instagram.com/arabsad"
-    - "https://wa.me/201110760081"
-  address:
-    "@type": PostalAddress
-    streetAddress: "القاهرة"
-    addressCountry: "EG"
-  contactPoint:
-    - "@type": ContactPoint
-      telephone: "+201110760081"
-      contactType: "customer service"
-    - "@type": ContactPoint
-      telephone: "+201093304677"
-      contactType: "customer service"
-
-# خدمات الشركة للـ schema
-services:
-  - name: "إعلانات جوجل"
-    description: "حملات إعلانية احترافية على Google Ads"
-    url: "/services/google-ads.html"
-  - name: "إعلانات السوشيال ميديا"
-    description: "إعلانات فيسبوك، إنستجرام، تيك توك، سناب شات"
-    url: "/services/social-ads.html"
-  - name: "تصميم المواقع"
-    description: "مواقع احترافية متوافقة مع السيو"
-    url: "/services/website-design.html"
-  - name: "المتاجر الإلكترونية"
-    description: "متاجر إلكترونية متكاملة جاهزة للبيع"
-    url: "/services/ecommerce.html"
-  - name: "تحسين محركات البحث"
-    description: "خدمات سيو شاملة للظهور في الصفحة الأولى"
-    url: "/services/seo.html"
-  - name: "إدارة وسائل التواصل"
-    description: "إدارة احترافية لحسابات التواصل الاجتماعي"
-    url: "/services/social-management.html"
-
+# Compression
 sass:
   style: compressed
   
@@ -161,22 +43,21 @@ compress_html:
   comments: all
   endings: all
   profile: false
-  
-feed:
-  path: feed.xml
 
+# Defaults
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: "default"
+      lang: "ar"
+      dir: "rtl"
+
+# Exclude
 exclude:
-  - README.md
-  - Gemfile
-  - Gemfile.lock
   - node_modules
   - vendor
-  - .sass-cache
-  - .jekyll-cache
-
-include:
-  - .htaccess
-  - _pages
-  - blog
-  - cities
-  - services
+  - Gemfile*
+  - README.md
+  - ".git*"
+  - LICENSE
