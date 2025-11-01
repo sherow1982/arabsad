@@ -9,21 +9,31 @@
   <meta name="theme-color" content="#1e40af">
   <link rel="canonical" href="https://arabsad.com/">
   
-  <!-- Performance -->
+  <!-- Performance optimizations -->
   <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="preload" as="image" href="assets/images/logo-arabsad.png">
+  <link rel="dns-prefetch" href="//wa.me">
   
-  <!-- Social -->
+  <!-- Social Media Meta Tags -->
   <meta property="og:title" content="مؤسسة إعلانات العرب - وكالة تسويق رقمي في الخليج">
   <meta property="og:description" content="خدمات تسويق رقمي احترافية: Google Ads، Social Media، SEO، وتصميم مواقع. نتائج موثوقة في دول الخليج.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://arabsad.com/">
   <meta property="og:image" content="https://arabsad.com/assets/images/logo-arabsad.png">
+  <meta property="og:site_name" content="مؤسسة إعلانات العرب">
   <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="مؤسسة إعلانات العرب - وكالة تسويق رقمي">
+  <meta name="twitter:description" content="خدمات تسويق رقمي احترافية في الخليج العربي">
+  <meta name="twitter:image" content="https://arabsad.com/assets/images/logo-arabsad.png">
 
-  <!-- hreflang -->
+  <!-- Geo targeting -->
+  <meta name="geo.region" content="SA-RI">
+  <meta name="geo.placename" content="Saudi Arabia">
+  <meta name="ICBM" content="24.7136, 46.6753">
+
+  <!-- Hreflang tags -->
   <link rel="alternate" hreflang="x-default" href="https://arabsad.com/">
   <link rel="alternate" hreflang="ar" href="https://arabsad.com/">
   <link rel="alternate" hreflang="ar-SA" href="https://arabsad.com/sa.html">
@@ -35,73 +45,262 @@
 
   <!-- Icons -->
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
-  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/logo-arabsad.png">
+  <link rel="manifest" href="/manifest.json">
 
-  <link rel="stylesheet" href="styles.css">
+  <!-- CSS -->
+  <link rel="stylesheet" href="assets/css/main.css">
   
+  <!-- Structured Data -->
   <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"DigitalMarketingAgency","name":"مؤسسة إعلانات العرب","url":"https://arabsad.com","logo":"https://arabsad.com/assets/images/logo-arabsad.png","image":"https://arabsad.com/assets/images/logo-arabsad.png","email":"sherow1982@gmail.com","telephone":"+201110760081","areaServed":[{"@type":"Country","name":"السعودية"},{"@type":"Country","name":"الإمارات"},{"@type":"Country","name":"الكويت"},{"@type":"Country","name":"قطر"},{"@type":"Country","name":"البحرين"},{"@type":"Country","name":"عُمان"}],"serviceType":["Google Ads","Facebook Ads","Instagram Ads","TikTok Ads","Snapchat Ads","SEO","Website Design"]}
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "مؤسسة إعلانات العرب",
+    "alternateName": "ARABS AD",
+    "url": "https://arabsad.com",
+    "logo": "https://arabsad.com/assets/images/logo-arabsad.png",
+    "image": "https://arabsad.com/assets/images/logo-arabsad.png",
+    "description": "مؤسسة إعلانات العرب للتسويق الإلكتروني والإعلانات الممولة في الخليج العربي",
+    "email": "sherow1982@gmail.com",
+    "telephone": "+201110760081",
+    "address": {
+      "@type": "PostalAddress",
+      "addressCountry": "SA",
+      "addressRegion": "Riyadh"
+    },
+    "sameAs": [
+      "https://wa.me/201110760081"
+    ],
+    "areaServed": [
+      {
+        "@type": "Country",
+        "name": "السعودية"
+      },
+      {
+        "@type": "Country",
+        "name": "الإمارات"
+      },
+      {
+        "@type": "Country",
+        "name": "الكويت"
+      },
+      {
+        "@type": "Country",
+        "name": "قطر"
+      },
+      {
+        "@type": "Country",
+        "name": "البحرين"
+      },
+      {
+        "@type": "Country",
+        "name": "عُمان"
+      }
+    ],
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "خدمات التسويق الرقمي",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "إعلانات جوجل",
+            "description": "إدارة حملات Google Ads احترافية"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "إعلانات وسائل التواصل الاجتماعي",
+            "description": "إدارة إعلانات فيسبوك وإنستجرام وتيك توك"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "تحسين محركات البحث SEO",
+            "description": "تحسين ترتيب المواقع في نتائج البحث"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "تصميم المتاجر الإلكترونية",
+            "description": "تصميم وبرمجة متاجر إلكترونية احترافية"
+          }
+        }
+      ]
+    }
+  }
+  </script>
+
+  <!-- Google Analytics & GTM -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
   </script>
 </head>
 <body>
+  <!-- Google Tag Manager (noscript) -->
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WKBHHWNG" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
-  <div class="banner-top"><div class="container"><div class="banner-content">
-    <img src="assets/images/logo-arabsad.png" alt="ARABS AD - مؤسسة إعلانات العرب" class="banner-img" width="200" height="140">
-  </div></div></div>
+  <!-- Skip to main content for accessibility -->
+  <a href="#main-content" class="skip-link">تخطي إلى المحتوى الرئيسي</a>
 
-  <header class="header">
-    <nav class="nav"><div class="container">
-      <div class="nav-brand">
-        <img src="assets/images/logo-arabsad.png" alt="ARABS AD" width="35" height="35">
-        <div><h1>مؤسسة إعلانات العرب</h1><span class="domain">arabsad.com</span></div>
+  <!-- Top Banner -->
+  <div class="banner-top">
+    <div class="container">
+      <div class="banner-content">
+        <img src="assets/images/logo-arabsad.png" alt="ARABS AD - مؤسسة إعلانات العرب" class="banner-img" width="200" height="140" loading="eager">
       </div>
-      <ul class="nav-menu" id="navMenu">
-        <li><a href="#home">الرئيسية</a></li>
-        <li><a href="services-page.html">خدماتنا</a></li>
-        <li><a href="google-ads-service.html">Google Ads</a></li>
-        <li><a href="social-media-service.html">Social Ads</a></li>
-        <li><a href="seo-service.html">SEO</a></li>
-        <li><a href="ecommerce-service.html">المتاجر الإلكترونية</a></li>
-        <li><a href="gulf-cities.html">مدن الخليج</a></li>
-        <li><a href="#contact">اتصل بنا</a></li>
-      </ul>
-      <div class="nav-toggle" id="navToggle"><span></span><span></span><span></span></div>
-    </div></nav>
-  </header>
-
-  <div class="whatsapp-float">
-    <a href="https://wa.me/201110760081?text=أهلاً بك في مؤسسة إعلانات العرب. كيف يمكننا مساعدتك؟" target="_blank" class="whatsapp-btn" rel="nofollow noopener">💬 راسلنا</a>
+    </div>
   </div>
 
-  <button id="backToTop" class="back-to-top" aria-label="الرجوع للأعلى">↑</button>
-
-  <main>
-    <section id="home" class="hero">
+  <!-- Header -->
+  <header class="header" role="banner">
+    <nav class="nav" role="navigation" aria-label="التنقل الرئيسي">
       <div class="container">
-        <div class="hero-content">
-          <h1>مؤسسة إعلانات العرب</h1>
-          <h2>للتسويق الإلكتروني والإعلانات الممولة</h2>
-          <p>نقدم حلولاً شاملة للتسويق الرقمي والإعلانات الممولة في دول الخليج العربي مع خبرة تزيد عن 10 سنوات. فريقنا يضمن أفضل النتائج وأعلى معدلات التحويل.</p>
-          <div class="hero-stats">
-            <div class="stat"><span class="stat-number">500+</span><span class="stat-label">عميل راضي</span></div>
-            <div class="stat"><span class="stat-number">1000+</span><span class="stat-label">مشروع ناجح</span></div>
-            <div class="stat"><span class="stat-number">10+</span><span class="stat-label">سنوات خبرة</span></div>
-            <div class="stat"><span class="stat-number">6</span><span class="stat-label">دول خليجية</span></div>
+        <div class="nav-brand">
+          <img src="assets/images/logo-arabsad.png" alt="شعار مؤسسة إعلانات العرب" width="40" height="40" loading="eager">
+          <div>
+            <h1>مؤسسة إعلانات العرب</h1>
+            <span class="domain">arabsad.com</span>
           </div>
+        </div>
+        <ul class="nav-menu" id="navMenu">
+          <li><a href="#home" aria-current="page">الرئيسية</a></li>
+          <li><a href="services-page.html">خدماتنا</a></li>
+          <li><a href="google-ads-service.html">Google Ads</a></li>
+          <li><a href="social-media-service.html">Social Ads</a></li>
+          <li><a href="seo-service.html">SEO</a></li>
+          <li><a href="ecommerce-service.html">المتاجر الإلكترونية</a></li>
+          <li><a href="gulf-cities.html">مدن الخليج</a></li>
+          <li><a href="#contact">اتصل بنا</a></li>
+        </ul>
+        <button class="nav-toggle" id="navToggle" aria-label="فتح/إغلاق القائمة" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- WhatsApp Floating Button -->
+  <div class="whatsapp-float">
+    <a href="https://wa.me/201110760081?text=أهلاً بك في مؤسسة إعلانات العرب. كيف يمكننا مساعدتك؟" target="_blank" class="whatsapp-btn" rel="nofollow noopener" aria-label="تواصل معنا عبر واتساب">💬 راسلنا</a>
+  </div>
+
+  <!-- Back to Top Button -->
+  <button id="backToTop" class="back-to-top" aria-label="الرجوع للأعلى" title="الرجوع للأعلى">↑</button>
+
+  <!-- Main Content -->
+  <main id="main-content" role="main">
+    <!-- Hero Section -->
+    <section id="home" class="hero" aria-labelledby="hero-title">
+      <div class="container">
+        <div class="hero-content animate-fade-in">
+          <h1 id="hero-title">مؤسسة إعلانات العرب</h1>
+          <h2>للتسويق الإلكتروني والإعلانات الممولة</h2>
+          <p>نقدم حلولاً شاملة للتسويق الرقمي والإعلانات الممولة في دول الخليج العربي مع خبرة تزيد عن 10 سنوات. فريقنا يضمن أفضل النتائج وأعلى معدلات التحويل لنشاطك التجاري.</p>
+          
+          <!-- Stats Section -->
+          <div class="hero-stats">
+            <div class="stat">
+              <span class="stat-number" data-count="500">500+</span>
+              <span class="stat-label">عميل راضي</span>
+            </div>
+            <div class="stat">
+              <span class="stat-number" data-count="1000">1000+</span>
+              <span class="stat-label">مشروع ناجح</span>
+            </div>
+            <div class="stat">
+              <span class="stat-number" data-count="10">10+</span>
+              <span class="stat-label">سنوات خبرة</span>
+            </div>
+            <div class="stat">
+              <span class="stat-number" data-count="6">6</span>
+              <span class="stat-label">دول خليجية</span>
+            </div>
+          </div>
+          
+          <!-- CTA Buttons -->
           <div class="hero-cta">
             <a href="https://wa.me/201110760081?text=أريد بدء مشروع تسويقي احترافي" class="btn btn-primary" target="_blank" rel="nofollow noopener">📞 تواصل واتساب</a>
-            <a href="services/ecommerce.html" class="btn btn-secondary" target="_blank">🔴 شاهد 8 متاجر</a>
+            <a href="services-page.html" class="btn btn-secondary">🔍 تصفح الخدمات</a>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Contact section with refined block -->
-    <section id="contact" class="contact">
+    <!-- Services Overview Section -->
+    <section class="section" aria-labelledby="services-title">
       <div class="container">
-        <h2 class="section-title">تواصل معنا</h2>
+        <h2 id="services-title" class="section-title">خدماتنا المتخصصة</h2>
+        <p class="section-desc">نوفر مجموعة شاملة من خدمات التسويق الرقمي المصممة لتحقيق أهدافك التجارية</p>
+        
+        <div class="grid grid-3">
+          <div class="card">
+            <h3>🎯 إعلانات جوجل</h3>
+            <p>إدارة حملات Google Ads احترافية بجميع أنواعها: Search، Display، YouTube، Shopping، وPerformance Max لضمان أفضل عائد على الاستثمار.</p>
+            <a href="google-ads-service.html" class="btn btn-secondary">تفاصيل أكثر</a>
+          </div>
+          
+          <div class="card">
+            <h3>📱 إعلانات السوشيال ميديا</h3>
+            <p>حملات إعلانية مؤثرة على فيسبوك، إنستجرام، تيك توك، سناب شات مع استهداف دقيق للجمهور المناسب لنشاطك التجاري.</p>
+            <a href="social-media-service.html" class="btn btn-secondary">تفاصيل أكثر</a>
+          </div>
+          
+          <div class="card">
+            <h3>🔍 تحسين محركات البحث SEO</h3>
+            <p>تحسين ترتيب موقعك في نتائج البحث الطبيعية لزيادة الزيارات المجانية وبناء سمعة قوية على الإنترنت.</p>
+            <a href="seo-service.html" class="btn btn-secondary">تفاصيل أكثر</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="section" style="background: var(--bg-light);" aria-labelledby="why-us-title">
+      <div class="container">
+        <h2 id="why-us-title" class="section-title">لماذا تختار مؤسسة إعلانات العرب؟</h2>
+        
+        <div class="grid grid-2">
+          <div class="card">
+            <h3>✅ خبرة محلية عميقة</h3>
+            <p>نفهم السوق الخليجي جيداً ونصمم استراتيجيات تسويقية تتماشى مع الثقافة والعادات المحلية في كل دولة.</p>
+          </div>
+          
+          <div class="card">
+            <h3>📊 نتائج قابلة للقياس</h3>
+            <p>نوفر تقارير شفافة ومفصلة تُظهر أداء حملاتك وعائد الاستثمار بشكل واضح ومفهوم.</p>
+          </div>
+          
+          <div class="card">
+            <h3>🎯 استراتيجيات مخصصة</h3>
+            <p>لا نؤمن بالحلول الجاهزة. نصمم استراتيجية تسويقية فريدة لكل عميل بناءً على أهدافه وطبيعة نشاطه.</p>
+          </div>
+          
+          <div class="card">
+            <h3>⚡ دعم فني سريع</h3>
+            <p>فريق دعم متاح على مدار الساعة للرد على استفساراتك وحل أي مشاكل قد تواجهها بسرعة.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact" aria-labelledby="contact-title">
+      <div class="container">
+        <h2 id="contact-title" class="section-title">تواصل معنا</h2>
         <div class="contact-content">
           <div class="contact-info">
             <div class="contact-item">
@@ -114,6 +313,7 @@
                 </div>
               </div>
             </div>
+            
             <div class="contact-item">
               <div class="contact-icon">💬</div>
               <div class="contact-details">
@@ -124,20 +324,27 @@
                 </div>
               </div>
             </div>
+            
             <div class="contact-item">
               <div class="contact-icon">✉️</div>
               <div class="contact-details">
                 <strong>البريد الإلكتروني:</strong>
-                <div class="contact-links"><a class="contact-link" href="mailto:sherow1982@gmail.com">sherow1982@gmail.com</a></div>
+                <div class="contact-links">
+                  <a class="contact-link" href="mailto:sherow1982@gmail.com">sherow1982@gmail.com</a>
+                </div>
               </div>
             </div>
+            
             <div class="contact-item">
               <div class="contact-icon">🌐</div>
               <div class="contact-details">
                 <strong>الموقع:</strong>
-                <div class="contact-links"><a class="contact-link" href="https://arabsad.com">arabsad.com</a></div>
+                <div class="contact-links">
+                  <a class="contact-link" href="https://arabsad.com">arabsad.com</a>
+                </div>
               </div>
             </div>
+            
             <div class="contact-item">
               <div class="contact-icon">🕐</div>
               <div class="contact-details">
@@ -146,9 +353,10 @@
               </div>
             </div>
           </div>
-          <div class="contact-cta card">
+          
+          <div class="contact-cta">
             <h3>ابدأ مشروعك الآن</h3>
-            <p>احصل على استشارة مجانية وخطة تسويقية مخصصة لنشاطك</p>
+            <p>احصل على استشارة مجانية وخطة تسويقية مخصصة لنشاطك التجاري</p>
             <div class="cta-buttons">
               <a href="https://wa.me/201110760081?text=أريد استشارة مجانية للتسويق الرقمي" target="_blank" class="btn btn-primary" rel="nofollow noopener">📞 استشارة مجانية</a>
               <a href="services-page.html" class="btn btn-secondary">تصفح الخدمات</a>
@@ -159,22 +367,35 @@
     </section>
   </main>
 
-  <footer class="footer"><div class="container"><div class="footer-content">
-    <div class="footer-brand">
-      <img src="assets/images/logo-arabsad.png" alt="ARABS AD" width="35" height="35">
-      <h3>مؤسسة إعلانات العرب</h3>
-      <p>للتسويق الإلكتروني والإعلانات الممولة في الخليج العربي</p>
+  <!-- Footer -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <img src="assets/images/logo-arabsad.png" alt="شعار مؤسسة إعلانات العرب" width="40" height="40" loading="lazy">
+          <div>
+            <h3>مؤسسة إعلانات العرب</h3>
+            <p>للتسويق الإلكتروني والإعلانات الممولة في الخليج العربي</p>
+          </div>
+        </div>
+        
+        <div class="footer-contact">
+          <h4>تواصل معنا</h4>
+          <p>📞 <a href="https://wa.me/201110760081" target="_blank" rel="nofollow noopener">+20 111 076 0081</a></p>
+          <p>📞 <a href="https://wa.me/201093304677" target="_blank" rel="nofollow noopener">+20 109 330 4677</a></p>
+          <p>✉️ <a href="mailto:sherow1982@gmail.com">sherow1982@gmail.com</a></p>
+          <p>🌐 <a href="https://arabsad.com">arabsad.com</a></p>
+          <p>📄 <a href="services-page.html">خدماتنا</a> • <a href="gulf-cities.html">مدن الخليج</a></p>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>© 2025 مؤسسة إعلانات العرب - جميع الحقوق محفوظة</p>
+      </div>
     </div>
-    <div class="footer-contact">
-      <h4>تواصل</h4>
-      <p>📞 <a href="https://wa.me/201110760081" target="_blank" rel="nofollow noopener">+20 111 076 0081</a></p>
-      <p>📞 <a href="https://wa.me/201093304677" target="_blank" rel="nofollow noopener">+20 109 330 4677</a></p>
-      <p>✉️ <a href="mailto:sherow1982@gmail.com">sherow1982@gmail.com</a></p>
-      <p>🌐 <a href="https://arabsad.com">arabsad.com</a></p>
-      <p>📄 <a href="services-page.html">خدماتنا</a> • <a href="gulf-cities.html">مدن الخليج</a></p>
-    </div>
-  </div><div class="footer-bottom"><p>© 2025 مؤسسة إعلانات العرب - جميع الحقوق محفوظة</p></div></div></footer>
+  </footer>
 
+  <!-- Scripts -->
   <script src="script.js" defer></script>
 </body>
 </html>
