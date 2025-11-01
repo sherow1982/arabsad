@@ -126,7 +126,7 @@ img { background: var(--bg-light); transition: var(--transition); }
 /* Breadcrumb */
 .breadcrumb { background: var(--bg-light); padding: 1rem 0; font-size: 0.9rem; }
 .breadcrumb ol { list-style: none; display: flex; gap: 0.5rem; align-items: center; margin: 0; padding: 0; }
-.breadcrumb li::after { content: '\2190'; margin: 0 0.5rem; color: var(--text-light); }
+.breadcrumb li::after { content: '\2190'; margin: 0.5rem; color: var(--text-light); }
 .breadcrumb li:last-child::after { display: none; }
 .breadcrumb a { color: var(--text-light); }
 .breadcrumb a:hover { color: var(--primary-color); }
@@ -189,18 +189,23 @@ img { background: var(--bg-light); transition: var(--transition); }
 
 /* Mobile responsiveness */
 @media (max-width: 768px) {
-  .nav-menu { display: none; position: absolute; top: 100%; left: 0; right: 0; background: var(--white); flex-direction: column; padding: 1rem; box-shadow: var(--shadow-light); border-top: 1px solid var(--border-light); }
+  .nav-menu { display: none; position: fixed; inset: 56px 0 0 0; background: var(--white); flex-direction: column; padding: 1rem; box-shadow: var(--shadow-light); border-top: 1px solid var(--border-light); overflow-y: auto; }
   .nav-menu.active { display: flex; }
-  .nav-toggle { display: flex; }
+  .nav-toggle { display: flex; position: relative; z-index: 1001; }
+
+  /* Hero tuning for small screens */
   .hero, .hero-service { padding: 2rem 0; }
-  .hero-cta { flex-direction: column; align-items: center; }
-  .hero-cta .btn { width: 100%; max-width: 300px; }
-  .cta-buttons { flex-direction: column; }
-  .cta-buttons .btn { width: 100%; }
-  .service-actions { flex-direction: column; }
-  .service-actions .btn { width: 100%; }
-  .whatsapp-float { bottom: 4rem; }
-  .back-to-top { bottom: 4rem; left: 0.5rem; }
+  .hero .rev-title { font-size: 1.6rem !important; }
+  .hero .rev-sub { font-size: 1rem !important; max-width: 90%; margin-inline: auto; }
+
+  /* Make service cards clickable */
+  .service-card { text-align: left; }
+  .service-card a.btn.btn-secondary { width: 100%; }
+
+  /* Footer spacing */
+  .footer-content { grid-template-columns: 1fr; gap: 1.25rem; }
+  .whatsapp-float { bottom: 4.5rem; }
+  .back-to-top { bottom: 4.5rem; left: 0.5rem; }
 }
 
 /* Accessibility */
@@ -219,8 +224,5 @@ a:focus, button:focus, .btn:focus { outline: 2px solid var(--primary-color); out
 .success { border-color: #16a34a !important; background-color: #f0fdf4; }
 .success-message { color: #16a34a; font-size: 0.875rem; margin-top: 0.25rem; }
 
-/* Print */
-@media print { .whatsapp-float, .back-to-top, .nav-toggle, .banner-top { display: none !important; } body { font-size: 12pt; line-height: 1.5; color: #000; background: #fff; } .container { max-width: none; padding: 0; } a[href]:after { content: " (" attr(href) ")"; font-size: 10pt; color: #666; } }
-
-/* Images helper (from images.css) */
+/* Images helper */
 .img-cover{object-fit:cover}.img-contain{object-fit:contain}.logo{image-rendering:auto}.hidden{display:none}img[loading="lazy"]{filter:blur(0);transition:filter .2s ease-in-out}
