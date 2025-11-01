@@ -1,0 +1,107 @@
+{
+  "name": "مؤسسة إعلانات العرب",
+  "short_name": "ARABS AD",
+  "description": "مؤسسة إعلانات العرب للتسويق الإلكتروني والإعلانات الممولة في الخليج العربي",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#1e40af",
+  "orientation": "portrait-primary",
+  "dir": "rtl",
+  "lang": "ar",
+  "scope": "/",
+  "icons": [
+    {
+      "src": "/assets/images/logo-arabsad.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/assets/images/logo-arabsad.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ],
+  "categories": ["business", "marketing", "advertising"],
+  "screenshots": [
+    {
+      "src": "/assets/images/screenshot-desktop.png",
+      "sizes": "1280x720",
+      "type": "image/png",
+      "form_factor": "wide",
+      "label": "الصفحة الرئيسية - سطح المكتب"
+    },
+    {
+      "src": "/assets/images/screenshot-mobile.png",
+      "sizes": "375x667",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "الصفحة الرئيسية - الجوال"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "خدمات Google Ads",
+      "short_name": "Google Ads",
+      "description": "إدارة حملات Google Ads احترافية",
+      "url": "/google-ads-service.html",
+      "icons": [
+        {
+          "src": "/assets/images/google-ads-icon.png",
+          "sizes": "96x96"
+        }
+      ]
+    },
+    {
+      "name": "إعلانات السوشيال ميديا",
+      "short_name": "Social Ads",
+      "description": "إعلانات فيسبوك وإنستجرام وتيك توك",
+      "url": "/social-media-service.html",
+      "icons": [
+        {
+          "src": "/assets/images/social-media-icon.png",
+          "sizes": "96x96"
+        }
+      ]
+    },
+    {
+      "name": "تحسين محركات البحث SEO",
+      "short_name": "SEO",
+      "description": "تحسين ترتيب المواقع في نتائج البحث",
+      "url": "/seo-service.html",
+      "icons": [
+        {
+          "src": "/assets/images/seo-icon.png",
+          "sizes": "96x96"
+        }
+      ]
+    },
+    {
+      "name": "تواصل معنا",
+      "short_name": "اتصال",
+      "description": "تواصل مع فريق مؤسسة إعلانات العرب",
+      "url": "/#contact",
+      "icons": [
+        {
+          "src": "/assets/images/contact-icon.png",
+          "sizes": "96x96"
+        }
+      ]
+    }
+  ],
+  "related_applications": [
+    {
+      "platform": "web",
+      "url": "https://arabsad.com"
+    }
+  ],
+  "prefer_related_applications": false
+}
