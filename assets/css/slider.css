@@ -1,13 +1,128 @@
-/* Slider isolated styles */
-.rev-slider{position:relative;overflow:hidden}
-.rev-slide{display:grid;place-items:center;min-height:58vh;background:linear-gradient(135deg,#0a2540,#1e40af)}
-.rev-inner{max-width:1000px;margin:auto;text-align:center;padding:3rem 1rem;color:#fff}
-.rev-kicker{font-weight:700;letter-spacing:.04em;color:#f59e0b;margin-bottom:.5rem}
-.rev-title{font-size:clamp(1.6rem,4.8vw,3rem);font-weight:800;margin:0 0 .5rem;color:#fff}
-.rev-sub{font-size:clamp(1rem,2.6vw,1.25rem);opacity:.9;margin:0 auto 1.25rem;max-width:720px;color:#fff}
-.rev-cta{display:flex;gap:.75rem;justify-content:center;flex-wrap:wrap}
-.slide-dots{position:absolute;inset:auto 0 10px 0;display:flex;gap:6px;justify-content:center}
-.slide-dots button{width:10px;height:10px;border-radius:50%;border:0;background:#94a3b8;opacity:.6;cursor:pointer}
-.slide-dots button.active{background:#f59e0b;opacity:1}
-/* Ensure hero wrapper doesn't override global styles */
-.hero{padding:0;background:#0a2540}
+/* Revolution-like slider styles - Enhanced */
+.hero { padding: 0; background: #0a2540; color: #fff; position: relative; overflow: hidden; }
+
+.rev-slider { position: relative; overflow: hidden; min-height: 70vh; }
+@media (min-width: 768px) { .rev-slider { min-height: 65vh; } }
+
+.rev-slide { 
+  position: absolute; 
+  top: 0; 
+  left: 0; 
+  width: 100%; 
+  height: 100%; 
+  display: grid; 
+  place-items: center; 
+  background: linear-gradient(135deg, #0a2540 0%, #1e40af 45%, #16a34a 100%); 
+  opacity: 0;
+  transition: opacity 0.8s ease-in-out, transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+  transform: scale(1.05);
+}
+
+.rev-slide.active { opacity: 1; transform: scale(1); }
+
+.rev-inner { 
+  max-width: 900px; 
+  margin: auto; 
+  text-align: center; 
+  padding: 3rem 1.5rem; 
+  color: #fff; 
+  position: relative;
+  z-index: 2;
+}
+
+.rev-kicker { 
+  display: inline-block;
+  font-weight: 700; 
+  letter-spacing: 0.08em; 
+  color: #f59e0b; 
+  background: rgba(245, 158, 11, 0.1);
+  padding: 0.5rem 1rem;
+  border-radius: 999px;
+  margin-bottom: 1rem; 
+  font-size: 0.9rem;
+  border: 1px solid rgba(245, 158, 11, 0.3);
+}
+
+.rev-title { 
+  font-size: clamp(1.8rem, 5.2vw, 3.5rem); 
+  font-weight: 800; 
+  margin: 0 0 1rem; 
+  color: #fff; 
+  line-height: 1.2;
+  text-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.rev-sub { 
+  font-size: clamp(1rem, 2.8vw, 1.3rem); 
+  opacity: 0.95; 
+  margin: 0 auto 2rem; 
+  max-width: 650px; 
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.6;
+}
+
+.rev-cta { 
+  display: flex; 
+  gap: 1rem; 
+  justify-content: center; 
+  flex-wrap: wrap; 
+  margin-top: 2rem;
+}
+
+.slide-dots { 
+  position: absolute; 
+  bottom: 20px; 
+  left: 50%; 
+  transform: translateX(-50%);
+  display: flex; 
+  gap: 8px; 
+  z-index: 10;
+}
+
+.slide-dots button { 
+  width: 12px; 
+  height: 12px; 
+  border-radius: 50%; 
+  border: 2px solid rgba(255, 255, 255, 0.4); 
+  background: transparent; 
+  cursor: pointer; 
+  transition: all 0.3s ease;
+}
+
+.slide-dots button.active { 
+  background: #f59e0b; 
+  border-color: #f59e0b;
+  transform: scale(1.2);
+}
+
+.slide-dots button:hover { 
+  border-color: rgba(255, 255, 255, 0.8); 
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* Slide background overlays for visual depth */
+.rev-slide:nth-child(1) { background: linear-gradient(135deg, #0a2540 0%, #1e40af 70%, #3b82f6 100%); }
+.rev-slide:nth-child(2) { background: linear-gradient(135deg, #1e40af 0%, #8b5cf6 50%, #ec4899 100%); }
+.rev-slide:nth-child(3) { background: linear-gradient(135deg, #16a34a 0%, #059669 50%, #0d9488 100%); }
+.rev-slide:nth-child(4) { background: linear-gradient(135deg, #ea580c 0%, #dc2626 50%, #be123c 100%); }
+
+/* Mobile optimizations */
+@media (max-width: 768px) {
+  .rev-slider { min-height: 75vh; }
+  .rev-inner { padding: 2rem 1rem; }
+  .rev-kicker { font-size: 0.8rem; }
+  .rev-cta { flex-direction: column; align-items: center; }
+  .rev-cta .btn { width: 100%; max-width: 280px; }
+  .slide-dots { bottom: 15px; }
+}
+
+/* Animation enhancements */
+@keyframes slideInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.rev-slide.active .rev-kicker { animation: slideInUp 0.6s ease 0.2s both; }
+.rev-slide.active .rev-title { animation: slideInUp 0.6s ease 0.4s both; }
+.rev-slide.active .rev-sub { animation: slideInUp 0.6s ease 0.6s both; }
+.rev-slide.active .rev-cta { animation: slideInUp 0.6s ease 0.8s both; }
