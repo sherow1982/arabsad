@@ -1,0 +1,147 @@
+/* ملف الخطوط العربية الفاخرة والتحسينات العامة */
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&display=swap');
+
+/* متغيرات عامة */
+:root {
+  --font-heading: 'Cairo', 'IBM Plex Sans Arabic', sans-serif;
+  --font-body: 'IBM Plex Sans Arabic', 'Cairo', sans-serif;
+  --font-elegant: 'Amiri', 'Times New Roman', serif;
+  
+  --gradient-primary: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  --gradient-gold: linear-gradient(135deg, #ffd700 0%, #ffb700 100%);
+  --color-primary: #1a365d;
+  --color-accent: #ed8936;
+  --shadow-elegant: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+/* الخط الفاخر للعناوين */
+h1, h2, h3, h4, h5, h6,
+.rev-title, .hero h1, .hero h2,
+.display-1, .display-2, .display-3, .display-4, .display-5 {
+  font-family: var(--font-heading) !important;
+  font-weight: 700 !important;
+}
+
+/* تدرج لوني فاخر للعناوين الرئيسية */
+h1, .rev-title {
+  font-weight: 800 !important;
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* عناوين ثانوية بلون أزرق راقي */
+h2, .display-2 {
+  color: var(--color-primary) !important;
+  font-weight: 700 !important;
+}
+
+/* الخط الفاخر للنصوص */
+p, .rev-sub, .display-7, body {
+  font-family: var(--font-body) !important;
+  line-height: 1.8;
+  font-weight: 400;
+}
+
+/* تحسين الأزرار */
+.btn, button {
+  font-family: var(--font-body) !important;
+  font-weight: 600;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  box-shadow: var(--shadow-elegant);
+  text-decoration: none;
+}
+
+.btn:hover, button:hover {
+  transform: translateY(-3px);
+  text-decoration: none;
+}
+
+.btn-primary {
+  background: var(--gradient-primary) !important;
+  border: none !important;
+  color: white !important;
+}
+
+.btn-success {
+  background: linear-gradient(135deg, #25D366 0%, #128C7E 100%) !important;
+  border: none !important;
+  color: white !important;
+}
+
+/* تحسين البطاقات والعناصر التفاعلية */
+.card, .service-card, .item-wrapper {
+  border-radius: 15px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
+
+.card:hover, .service-card:hover, .item-wrapper:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-elegant);
+}
+
+/* تحسين الصور */
+img {
+  transition: transform 0.3s ease;
+  border-radius: 8px;
+}
+
+img:hover {
+  transform: scale(1.02);
+}
+
+/* تحسين الروابط */
+a {
+  transition: all 0.3s ease;
+}
+
+a:hover {
+  color: var(--color-accent) !important;
+  transform: translateY(-1px);
+}
+
+/* تحسينات للجوال */
+@media (max-width: 768px) {
+  h1, .rev-title {
+    font-size: 2.2rem !important;
+  }
+  
+  h2, .display-2 {
+    font-size: 1.8rem !important;
+  }
+  
+  .shared-header .header-content {
+    flex-direction: column !important;
+    gap: 1rem !important;
+  }
+  
+  .shared-header .header-nav {
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    gap: 0.8rem !important;
+  }
+}
+
+/* تحسينات للأداء */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.6s ease;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* منع تضارب مع أنماط موجودة */
+* {
+  font-smoothing: antialiased;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
