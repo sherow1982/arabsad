@@ -86,6 +86,61 @@
     </image:image>
   </url>
 
+  <!-- مقالات المدونة -->
+  <url>
+    <loc>https://arabsad.com/blog/ecommerce-seo-gulf-optimization.html</loc>
+    <lastmod>2025-11-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+    <image:image>
+      <image:loc>https://arabsad.com/assets/images/ecommerce-seo-gulf.jpg</image:loc>
+      <image:title>دليل شامل لتحسين المتاجر الإلكترونية للسيو في دول الخليج العربي</image:title>
+      <image:caption>دليل متخصص وشامل لتحسين محركات البحث للمتاجر الإلكترونية في السعودية والإمارات والكويت وقطر والبحرين وعمان</image:caption>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://arabsad.com/blog/google-ads-saudi-guide-2025.html</loc>
+    <lastmod>2025-11-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://arabsad.com/blog/tiktok-snapchat-gulf-marketing-2025.html</loc>
+    <lastmod>2025-11-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://arabsad.com/blog/seo-arabic-websites-2025.html</loc>
+    <lastmod>2025-11-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://arabsad.com/blog/ecommerce-design-gulf-2025.html</loc>
+    <lastmod>2025-11-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://arabsad.com/blog/facebook-instagram-ads-2025.html</loc>
+    <lastmod>2025-11-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.65</priority>
+  </url>
+
+  <url>
+    <loc>https://arabsad.com/blog/digital-marketing-trends-gulf-2025.html</loc>
+    <lastmod>2025-11-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.65</priority>
+  </url>
+
   <!-- صفحات دول الخليج -->
   <url>
     <loc>https://arabsad.com/sa.html</loc>
@@ -238,6 +293,18 @@
     <lastmod>2025-11-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://arabsad.com/blog/ecommerce-seo-gulf-optimization.html</loc>
+    <lastmod>2025-11-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+    <image:image>
+      <image:loc>https://arabsad.com/assets/images/ecommerce-seo-gulf.jpg</image:loc>
+      <image:title>دليل شامل لتحسين المتاجر الإلكترونية للسيو في دول الخليج العربي</image:title>
+      <image:caption>دليل متخصص وشامل لتحسين محركات البحث للمتاجر الإلكترونية في السعودية والإمارات والكويت وقطر والبحرين وعمان - أكثر من 5000 كلمة من المحتوى الأصلي والمتخصص</image:caption>
+    </image:image>
   </url>
 
   <url>
