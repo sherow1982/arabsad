@@ -1,0 +1,90 @@
+<!-- زر واتساب فاخر ونبضي -->
+<div class="whatsapp-float-container">
+    <a href="https://wa.me/201110760081?text=مرحباً%20بك،%20أريد%20الاستفسار%20عن%20خدماتكم" 
+       target="_blank" 
+       class="whatsapp-float"
+       style="position: fixed; bottom: 20px; left: 20px; width: 65px; height: 65px; 
+              background: linear-gradient(135deg, #25D366, #128C7E); 
+              border-radius: 50%; display: flex; align-items: center; justify-content: center; 
+              z-index: 9999; color: white; font-size: 1.6rem; text-decoration: none; 
+              box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4); 
+              transition: all 0.3s ease; 
+              animation: whatsapp-pulse 2s infinite;"
+       onmouseover="this.style.transform='scale(1.15)'; this.style.boxShadow='0 10px 30px rgba(37, 211, 102, 0.6)';" 
+       onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 6px 20px rgba(37, 211, 102, 0.4)';">
+        <span>💬</span>
+    </a>
+    
+    <!-- شارة الحالة ونص ترحيبي -->
+    <div class="whatsapp-tooltip" 
+         style="position: fixed; bottom: 85px; left: 15px; 
+                background: rgba(0,0,0,0.8); color: white; 
+                padding: 0.5rem 0.8rem; border-radius: 8px; 
+                font-size: 0.85rem; opacity: 0; 
+                transition: opacity 0.3s ease; 
+                white-space: nowrap; z-index: 9998;
+                font-family: var(--font-body);"
+         id="whatsappTooltip">
+        انقر للتواصل الفوري
+    </div>
+</div>
+
+<style>
+/* تأثير النبض */
+@keyframes whatsapp-pulse {
+    0% {
+        box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4), 0 0 0 0 rgba(37, 211, 102, 0.7);
+    }
+    70% {
+        box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4), 0 0 0 12px rgba(37, 211, 102, 0);
+    }
+    100% {
+        box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4), 0 0 0 0 rgba(37, 211, 102, 0);
+    }
+}
+
+/* إظهار التلميح عند التمرير */
+.whatsapp-float:hover + .whatsapp-tooltip {
+    opacity: 1 !important;
+}
+
+/* تحسينات للجوال */
+@media (max-width: 768px) {
+    .whatsapp-float {
+        width: 60px !important;
+        height: 60px !important;
+        bottom: 15px !important;
+        left: 15px !important;
+        font-size: 1.4rem !important;
+    }
+    
+    .whatsapp-tooltip {
+        bottom: 80px !important;
+        left: 10px !important;
+    }
+}
+
+/* تحسين إمكانية الوصول */
+.whatsapp-float:focus {
+    outline: 2px solid #ffd700;
+    outline-offset: 3px;
+}
+</style>
+
+<script>
+// تفعيل التلميح التفاعلي
+document.addEventListener('DOMContentLoaded', function() {
+    const tooltip = document.getElementById('whatsappTooltip');
+    const whatsappBtn = document.querySelector('.whatsapp-float');
+    
+    if (whatsappBtn && tooltip) {
+        // إظهار التلميح بعد 3 ثواني من تحميل الصفحة
+        setTimeout(() => {
+            tooltip.style.opacity = '1';
+            setTimeout(() => {
+                tooltip.style.opacity = '0';
+            }, 3000);
+        }, 3000);
+    }
+});
+</script>
