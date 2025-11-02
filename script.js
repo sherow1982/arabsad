@@ -1,45 +1,34 @@
-// Enhanced JavaScript for ArabSad.com - Performance Optimized
-// مؤسسة إعلانات العرب - البرمجة المحسنة
+// 🚀 Enhanced JavaScript for ArabSad.com - Fully Responsive
+// مؤسسة إعلانات العرب - البرمجة المحسنة والمتجاوبة
 (function() {
   'use strict';
   
-  // Configuration
+  // 🎨 Global Configuration
   const CONFIG = {
-    PLACEHOLDER_IMAGE: 'assets/images/placeholder.webp',
-    SCROLL_THRESHOLD: 400,
+    SOCIAL_MEDIA: {
+      facebook: 'https://www.facebook.com/arabads.me',
+      instagram: 'https://instagram.com/arabsadads',
+      tiktok: 'https://tiktok.com/@arabsadads',
+      twitter: 'https://twitter.com/arabsadads',
+      linkedin: 'https://linkedin.com/company/arabsad',
+      whatsapp: 'https://wa.me/201110760081'
+    },
+    SCROLL_THRESHOLD: 300,
     ANIMATION_DURATION: 300,
-    SLIDER_INTERVAL: 5500,
-    LAZY_LOAD_MARGIN: '100px 0px',
-    PERFORMANCE_MARK: 'arabsad-init'
+    TOAST_DURATION: 4000
   };
   
-  // Cache DOM elements
+  // 🗺️ DOM Cache
   const DOM = {
     topBtn: null,
     navToggle: null,
     navMenu: null,
-    revSlider: null,
-    progress: null
+    progress: null,
+    toastContainer: null
   };
   
-  // Performance utilities
-  const Performance = {
-    mark: (name) => {
-      if ('performance' in window && performance.mark) {
-        performance.mark(name);
-      }
-    },
-    
-    measure: (name, start, end) => {
-      if ('performance' in window && performance.measure) {
-        try {
-          performance.measure(name, start, end);
-        } catch (e) {
-          console.debug('Performance measurement failed:', e);
-        }
-      }
-    },
-    
+  // 🎯 Utility Functions
+  const Utils = {
     debounce: (func, wait) => {
       let timeout;
       return function executedFunction(...args) {
@@ -68,260 +57,178 @@
           }, delay - (currentTime - lastExecTime));
         }
       };
+    },
+    
+    isValidEmail: (email) => {
+      return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
     }
   };
   
-  // Advanced Slider with touch support and improved accessibility
-  const RevSlider = {
+  // 📱 Social Media Links Manager
+  const SocialMediaManager = {
     init() {
-      DOM.revSlider = document.getElementById('revSlider');
-      if (!DOM.revSlider) return;
-      
-      this.slides = Array.from(DOM.revSlider.querySelectorAll('.rev-slide'));
-      this.dotsContainer = DOM.revSlider.querySelector('.slide-dots');
-      this.currentIndex = 0;
-      this.timer = null;
-      this.isAnimating = false;
-      this.touchStartX = 0;
-      this.touchEndX = 0;
-      
-      this.createDots();
-      this.bindEvents();
-      this.startAutoplay();
-      
-      // Initialize first slide
-      this.slides[0].classList.add('active');
-      this.updateDots();
+      this.updateAllSocialLinks();
+      this.createSocialSection();
     },
     
-    createDots() {
-      if (!this.dotsContainer || this.slides.length <= 1) return;
-      
-      this.dotsContainer.innerHTML = this.slides.map((_, index) => 
-        `<button type="button" class="slide-dot ${index === 0 ? 'active' : ''}" 
-                aria-label="إظهار الشريحة ${index + 1} من ${this.slides.length}" 
-                data-slide="${index}"></button>`
-      ).join('');
-    },
-    
-    updateDots() {
-      if (!this.dotsContainer) return;
-      
-      this.dotsContainer.querySelectorAll('.slide-dot').forEach((dot, index) => {
-        dot.classList.toggle('active', index === this.currentIndex);
-        dot.setAttribute('aria-pressed', index === this.currentIndex ? 'true' : 'false');
+    updateAllSocialLinks() {
+      // Update Facebook links
+      document.querySelectorAll('a[href*="facebook.com"]').forEach(link => {
+        link.href = CONFIG.SOCIAL_MEDIA.facebook;
+        link.target = '_blank';
+        link.rel = 'noopener noreferrer';
       });
-    },
-    
-    goToSlide(targetIndex, direction = 'forward') {
-      if (this.isAnimating || targetIndex === this.currentIndex) return;
       
-      this.isAnimating = true;
-      const previousIndex = this.currentIndex;
+      // Update Instagram links
+      document.querySelectorAll('a[href*="instagram.com"]').forEach(link => {
+        link.href = CONFIG.SOCIAL_MEDIA.instagram;
+        link.target = '_blank';
+        link.rel = 'noopener noreferrer';
+      });
       
-      // Calculate target index with wrapping
-      this.currentIndex = ((targetIndex % this.slides.length) + this.slides.length) % this.slides.length;
+      // Update TikTok links
+      document.querySelectorAll('a[href*="tiktok.com"]').forEach(link => {
+        link.href = CONFIG.SOCIAL_MEDIA.tiktok;
+        link.target = '_blank';
+        link.rel = 'noopener noreferrer';
+      });
       
-      // Add transition classes
-      this.slides[previousIndex].classList.add(direction === 'forward' ? 'slide-out-left' : 'slide-out-right');
-      this.slides[this.currentIndex].classList.add('active', direction === 'forward' ? 'slide-in-right' : 'slide-in-left');
-      
-      // Clean up after animation
-      setTimeout(() => {
-        this.slides[previousIndex].classList.remove('active', 'slide-out-left', 'slide-out-right');
-        this.slides[this.currentIndex].classList.remove('slide-in-left', 'slide-in-right');
-        this.updateDots();
-        this.isAnimating = false;
-      }, CONFIG.ANIMATION_DURATION);
-      
-      this.resetTimer();
+      console.log('✅ All social media links updated successfully');
     },
     
-    nextSlide() {
-      this.goToSlide(this.currentIndex + 1, 'forward');
-    },
-    
-    prevSlide() {
-      this.goToSlide(this.currentIndex - 1, 'backward');
-    },
-    
-    resetTimer() {
-      clearTimeout(this.timer);
-      const interval = Number(this.slides[this.currentIndex]?.dataset.interval || CONFIG.SLIDER_INTERVAL);
-      this.timer = setTimeout(() => this.nextSlide(), interval);
-    },
-    
-    startAutoplay() {
-      this.resetTimer();
-    },
-    
-    stopAutoplay() {
-      clearTimeout(this.timer);
-    },
-    
-    handleTouchStart(e) {
-      this.touchStartX = e.changedTouches[0].screenX;
-    },
-    
-    handleTouchEnd(e) {
-      this.touchEndX = e.changedTouches[0].screenX;
-      this.handleSwipe();
-    },
-    
-    handleSwipe() {
-      const swipeDistance = this.touchEndX - this.touchStartX;
-      const minSwipeDistance = 50;
-      
-      if (Math.abs(swipeDistance) > minSwipeDistance) {
-        if (swipeDistance > 0) {
-          this.prevSlide();
-        } else {
-          this.nextSlide();
-        }
-      }
-    },
-    
-    bindEvents() {
-      // Dot navigation
-      if (this.dotsContainer) {
-        this.dotsContainer.addEventListener('click', (e) => {
-          const slideIndex = Number(e.target.dataset.slide);
-          if (!isNaN(slideIndex)) {
-            this.goToSlide(slideIndex);
-          }
-        });
+    createSocialSection() {
+      // Check if social section exists
+      if (document.querySelector('.social-follow') || document.querySelector('.social-buttons')) {
+        return;
       }
       
-      // Keyboard navigation
-      DOM.revSlider.addEventListener('keydown', (e) => {
-        switch(e.key) {
-          case 'ArrowLeft':
-          case 'ArrowUp':
-            e.preventDefault();
-            this.prevSlide();
-            break;
-          case 'ArrowRight':
-          case 'ArrowDown':
-            e.preventDefault();
-            this.nextSlide();
-            break;
-          case 'Home':
-            e.preventDefault();
-            this.goToSlide(0);
-            break;
-          case 'End':
-            e.preventDefault();
-            this.goToSlide(this.slides.length - 1);
-            break;
-        }
-      });
+      // Create social section for pages that don't have it
+      const socialHTML = `
+        <section class="section social-follow">
+          <div class="container">
+            <h3>تابعنا على وسائل التواصل</h3>
+            <div class="social-buttons">
+              <a href="${CONFIG.SOCIAL_MEDIA.whatsapp}?text=تابعتكم من الموقع" target="_blank" class="social-btn whatsapp" rel="noopener noreferrer">
+                <span class="social-icon">💬</span>
+                واتساب
+              </a>
+              <a href="${CONFIG.SOCIAL_MEDIA.facebook}" target="_blank" class="social-btn facebook" rel="noopener noreferrer">
+                <span class="social-icon">📘</span>
+                فيسبوك
+              </a>
+              <a href="${CONFIG.SOCIAL_MEDIA.instagram}" target="_blank" class="social-btn instagram" rel="noopener noreferrer">
+                <span class="social-icon">📷</span>
+                إنستجرام
+              </a>
+              <a href="${CONFIG.SOCIAL_MEDIA.tiktok}" target="_blank" class="social-btn tiktok" rel="noopener noreferrer">
+                <span class="social-icon">🎵</span>
+                تيك توك
+              </a>
+            </div>
+          </div>
+        </section>
+      `;
       
-      // Touch events for mobile
-      DOM.revSlider.addEventListener('touchstart', (e) => this.handleTouchStart(e), { passive: true });
-      DOM.revSlider.addEventListener('touchend', (e) => this.handleTouchEnd(e), { passive: true });
-      
-      // Pause/resume on hover and focus
-      DOM.revSlider.addEventListener('mouseenter', () => this.stopAutoplay());
-      DOM.revSlider.addEventListener('mouseleave', () => this.startAutoplay());
-      DOM.revSlider.addEventListener('focusin', () => this.stopAutoplay());
-      DOM.revSlider.addEventListener('focusout', () => this.startAutoplay());
-      
-      // Pause when tab is not visible
-      document.addEventListener('visibilitychange', () => {
-        if (document.hidden) {
-          this.stopAutoplay();
-        } else {
-          this.startAutoplay();
-        }
-      });
+      // Insert social section
+      const main = document.querySelector('main') || document.querySelector('.container');
+      if (main && main.children.length > 0) {
+        main.insertAdjacentHTML('afterbegin', socialHTML);
+      }
     }
   };
   
-  // Enhanced scroll progress indicator
-  const ScrollProgress = {
-    init() {
-      DOM.progress = document.getElementById('progress');
-      if (!DOM.progress) return;
-      
-      this.updateProgress = Performance.throttle(() => {
-        const h = document.documentElement;
-        const scrollPercent = Math.min(
-          (h.scrollTop / (h.scrollHeight - h.clientHeight)) * 100,
-          100
-        );
-        DOM.progress.style.width = scrollPercent + '%';
-        DOM.progress.setAttribute('aria-valuenow', Math.round(scrollPercent));
-      }, 16); // 60fps
-      
-      // Set initial ARIA attributes
-      DOM.progress.setAttribute('role', 'progressbar');
-      DOM.progress.setAttribute('aria-valuemin', '0');
-      DOM.progress.setAttribute('aria-valuemax', '100');
-      DOM.progress.setAttribute('aria-label', 'تقدم قراءة الصفحة');
-      
-      window.addEventListener('scroll', this.updateProgress, { passive: true });
-      this.updateProgress();
-    }
-  };
-  
-  // Enhanced mobile navigation with better UX
-  const Navigation = {
+  // 💪 Responsive Navigation System
+  const ResponsiveNavigation = {
     init() {
       DOM.navToggle = document.getElementById('navToggle');
       DOM.navMenu = document.getElementById('navMenu');
       
+      if (!DOM.navToggle || !DOM.navMenu) {
+        this.createMobileNav();
+      }
+      
+      this.bindEvents();
+    },
+    
+    createMobileNav() {
+      // Create mobile navigation if it doesn't exist
+      const header = document.querySelector('header') || document.body.firstElementChild;
+      if (!header) return;
+      
+      const mobileNavHTML = `
+        <nav class="mobile-nav" id="mobileNav">
+          <button class="nav-toggle" id="navToggle" aria-label="فتح القائمة">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+          <ul class="nav-menu" id="navMenu">
+            <li><a href="index.html">🏠 الرئيسية</a></li>
+            <li><a href="#services">🎯 الخدمات</a></li>
+            <li><a href="#countries">🌍 الدول</a></li>
+            <li><a href="#contact">📞 تواصل</a></li>
+          </ul>
+        </nav>
+      `;
+      
+      header.insertAdjacentHTML('afterbegin', mobileNavHTML);
+      DOM.navToggle = document.getElementById('navToggle');
+      DOM.navMenu = document.getElementById('navMenu');
+    },
+    
+    bindEvents() {
       if (!DOM.navToggle || !DOM.navMenu) return;
       
-      DOM.navToggle.addEventListener('click', this.toggle.bind(this));
+      DOM.navToggle.addEventListener('click', () => this.toggleMenu());
       
-      // Close menu when clicking outside
-      document.addEventListener('click', (e) => {
-        if (DOM.navMenu.classList.contains('active') && 
-            !DOM.navMenu.contains(e.target) && 
-            !DOM.navToggle.contains(e.target)) {
-          this.close();
+      // Close menu on link click
+      DOM.navMenu.addEventListener('click', (e) => {
+        if (e.target.matches('a')) {
+          setTimeout(() => this.closeMenu(), 100);
         }
       });
       
-      // Close menu on escape key
+      // Close on outside click
+      document.addEventListener('click', (e) => {
+        if (!DOM.navToggle.contains(e.target) && 
+            !DOM.navMenu.contains(e.target) && 
+            DOM.navMenu.classList.contains('active')) {
+          this.closeMenu();
+        }
+      });
+      
+      // Close on escape
       document.addEventListener('keydown', (e) => {
         if (e.key === 'Escape' && DOM.navMenu.classList.contains('active')) {
-          this.close();
+          this.closeMenu();
           DOM.navToggle.focus();
         }
       });
       
-      // Close menu when navigating to anchor links
-      DOM.navMenu.addEventListener('click', (e) => {
-        if (e.target.matches('a[href^="#"]')) {
-          setTimeout(() => this.close(), 100);
+      // Handle resize
+      window.addEventListener('resize', Utils.debounce(() => {
+        if (window.innerWidth > 768 && DOM.navMenu.classList.contains('active')) {
+          this.closeMenu();
         }
-      });
+      }, 150));
     },
     
-    toggle() {
-      const isOpen = DOM.navMenu.classList.contains('active');
-      if (isOpen) {
-        this.close();
+    toggleMenu() {
+      if (DOM.navMenu.classList.contains('active')) {
+        this.closeMenu();
       } else {
-        this.open();
+        this.openMenu();
       }
     },
     
-    open() {
+    openMenu() {
       DOM.navMenu.classList.add('active');
       DOM.navToggle.classList.add('active');
       DOM.navToggle.setAttribute('aria-expanded', 'true');
       document.body.style.overflow = 'hidden';
-      
-      // Focus first menu item
-      const firstMenuItem = DOM.navMenu.querySelector('a');
-      if (firstMenuItem) {
-        setTimeout(() => firstMenuItem.focus(), 100);
-      }
     },
     
-    close() {
+    closeMenu() {
       DOM.navMenu.classList.remove('active');
       DOM.navToggle.classList.remove('active');
       DOM.navToggle.setAttribute('aria-expanded', 'false');
@@ -329,29 +236,17 @@
     }
   };
   
-  // Back to top with enhanced UX
+  // 💪 Enhanced Back to Top
   const BackToTop = {
     init() {
       DOM.topBtn = document.getElementById('backToTop');
+      
       if (!DOM.topBtn) {
         this.createButton();
       }
       
-      this.updateVisibility = Performance.throttle(() => {
-        const visible = window.pageYOffset > CONFIG.SCROLL_THRESHOLD;
-        if (DOM.topBtn) {
-          DOM.topBtn.style.display = visible ? 'flex' : 'none';
-          DOM.topBtn.classList.toggle('show', visible);
-        }
-      }, 100);
-      
-      window.addEventListener('scroll', this.updateVisibility, { passive: true });
-      
-      if (DOM.topBtn) {
-        DOM.topBtn.addEventListener('click', this.scrollToTop.bind(this));
-      }
-      
-      this.updateVisibility();
+      this.bindEvents();
+      this.handleScroll();
     },
     
     createButton() {
@@ -364,407 +259,531 @@
       document.body.appendChild(DOM.topBtn);
     },
     
+    bindEvents() {
+      DOM.topBtn?.addEventListener('click', this.scrollToTop);
+      window.addEventListener('scroll', Utils.throttle(this.handleScroll, 100), { passive: true });
+    },
+    
+    handleScroll() {
+      const visible = window.pageYOffset > CONFIG.SCROLL_THRESHOLD;
+      if (DOM.topBtn) {
+        DOM.topBtn.style.display = visible ? 'flex' : 'none';
+        DOM.topBtn.classList.toggle('show', visible);
+      }
+    },
+    
     scrollToTop() {
       window.scrollTo({ 
         top: 0, 
         behavior: 'smooth' 
       });
-      
-      // Focus management for accessibility
-      setTimeout(() => {
-        const skipLink = document.querySelector('.skip-link');
-        if (skipLink) {
-          skipLink.focus();
-        }
-      }, 300);
     }
   };
   
-  // Enhanced lazy loading with intersection observer
-  const LazyLoading = {
+  // 📧 Enhanced Newsletter System
+  const NewsletterSystem = {
     init() {
-      if (!('IntersectionObserver' in window)) {
-        console.log('IntersectionObserver not supported, loading all images');
-        this.loadAllImages();
+      this.emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      this.bindEvents();
+    },
+    
+    bindEvents() {
+      document.querySelectorAll('form').forEach(form => {
+        const emailInput = form.querySelector('input[type="email"]');
+        if (emailInput) {
+          // Real-time validation
+          emailInput.addEventListener('input', () => {
+            this.validateInput(emailInput);
+          });
+          
+          // Form submission
+          form.addEventListener('submit', (e) => this.handleSubmission(e));
+        }
+      });
+    },
+    
+    validateInput(input) {
+      const email = input.value.trim();
+      if (email.length > 0) {
+        if (this.emailRegex.test(email)) {
+          input.style.borderColor = '#10b981';
+          input.style.boxShadow = '0 0 0 2px rgba(16, 185, 129, 0.1)';
+          input.classList.add('valid');
+          input.classList.remove('invalid');
+        } else {
+          input.style.borderColor = '#ef4444';
+          input.style.boxShadow = '0 0 0 2px rgba(239, 68, 68, 0.1)';
+          input.classList.add('invalid');
+          input.classList.remove('valid');
+        }
+      } else {
+        input.style.borderColor = '';
+        input.style.boxShadow = '';
+        input.classList.remove('valid', 'invalid');
+      }
+    },
+    
+    async handleSubmission(e) {
+      e.preventDefault();
+      
+      const form = e.target;
+      const emailInput = form.querySelector('input[type="email"]');
+      const submitBtn = form.querySelector('button[type="submit"]');
+      const email = emailInput?.value.trim();
+      
+      if (!email || !this.emailRegex.test(email)) {
+        this.showToast('يرجى إدخال بريد إلكتروني صحيح', 'error');
+        emailInput?.focus();
         return;
       }
       
-      this.imageObserver = new IntersectionObserver(
-        this.handleImageIntersection.bind(this),
-        {
-          rootMargin: CONFIG.LAZY_LOAD_MARGIN,
-          threshold: 0.1
-        }
-      );
-      
-      // Observe all images
-      document.querySelectorAll('img[data-src], img[loading="lazy"]').forEach(img => {
-        this.imageObserver.observe(img);
-      });
-      
-      // Preload critical images
-      this.preloadCriticalImages();
-    },
-    
-    handleImageIntersection(entries) {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          const img = entry.target;
-          this.loadImage(img);
-          this.imageObserver.unobserve(img);
-        }
-      });
-    },
-    
-    loadImage(img) {
-      if (img.dataset.src) {
-        img.src = img.dataset.src;
-        img.removeAttribute('data-src');
+      // Check if already subscribed
+      const subscribers = JSON.parse(localStorage.getItem('newsletter_subscribers') || '[]');
+      if (subscribers.includes(email.toLowerCase())) {
+        this.showToast('هذا البريد مسجل مسبقاً! شكراً لك', 'info');
+        return;
       }
       
-      img.addEventListener('load', () => {
-        img.style.filter = 'blur(0)';
-        img.classList.add('loaded');
-      }, { once: true });
+      // Loading state
+      this.setLoadingState(submitBtn, true);
       
-      img.addEventListener('error', () => {
-        this.handleImageError(img);
-      }, { once: true });
-    },
-    
-    loadAllImages() {
-      document.querySelectorAll('img[data-src]').forEach(img => {
-        this.loadImage(img);
-      });
-    },
-    
-    preloadCriticalImages() {
-      const criticalImages = [
-        'assets/images/logo.svg',
-        'assets/images/hero-bg.jpg',
-        'assets/images/services-bg.webp'
-      ];
-      
-      criticalImages.forEach(src => {
-        const link = document.createElement('link');
-        link.rel = 'preload';
-        link.as = 'image';
-        link.href = src;
-        link.crossOrigin = 'anonymous';
-        document.head.appendChild(link);
-      });
-    },
-    
-    handleImageError(img) {
-      if (!img.dataset.retried && img.src !== CONFIG.PLACEHOLDER_IMAGE) {
-        img.dataset.retried = 'true';
-        img.src = CONFIG.PLACEHOLDER_IMAGE;
-        img.alt = 'صورة من موقع مؤسسة إعلانات العرب للتسويق الرقمي';
+      try {
+        await this.submitToServices(email);
+        
+        // Save locally
+        subscribers.push(email.toLowerCase());
+        localStorage.setItem('newsletter_subscribers', JSON.stringify(subscribers));
+        
+        // Success
+        if (emailInput) {
+          emailInput.value = '';
+          this.validateInput(emailInput);
+        }
+        
+        this.showToast('✅ تم الاشتراك بنجاح! شكراً لك', 'success');
+        
+      } catch (error) {
+        this.showToast('تم حفظ اشتراكك محلياً. سنتواصل معك!', 'success');
+      } finally {
+        this.setLoadingState(submitBtn, false);
       }
+    },
+    
+    async submitToServices(email) {
+      // Method 1: FormSubmit.co
+      try {
+        const formData = new FormData();
+        formData.append('email', email);
+        formData.append('_subject', 'اشتراك جديد - arabsad.com');
+        formData.append('_template', 'table');
+        formData.append('_captcha', 'false');
+        
+        await fetch('https://formsubmit.co/sherow1982@gmail.com', {
+          method: 'POST',
+          body: formData,
+          mode: 'no-cors'
+        });
+      } catch (error) {
+        console.log('FormSubmit fallback used');
+      }
+      
+      // Backup storage
+      const backups = JSON.parse(localStorage.getItem('newsletter_backups') || '[]');
+      backups.push({
+        email,
+        timestamp: new Date().toISOString(),
+        page: window.location.pathname,
+        userAgent: navigator.userAgent.substring(0, 100)
+      });
+      
+      // Keep only last 100
+      if (backups.length > 100) {
+        backups.splice(0, backups.length - 100);
+      }
+      
+      localStorage.setItem('newsletter_backups', JSON.stringify(backups));
+    },
+    
+    setLoadingState(button, isLoading) {
+      if (!button) return;
+      
+      if (isLoading) {
+        button.disabled = true;
+        button.innerHTML = '🔄 جاري الإرسال...';
+        button.classList.add('loading');
+      } else {
+        button.disabled = false;
+        button.innerHTML = '✉️ اشترك مجاناً';
+        button.classList.remove('loading');
+      }
+    },
+    
+    showToast(message, type = 'info') {
+      DOM.toastContainer = DOM.toastContainer || this.createToastContainer();
+      
+      const toast = document.createElement('div');
+      toast.className = `toast toast-${type}`;
+      toast.textContent = message;
+      toast.setAttribute('role', 'alert');
+      toast.setAttribute('aria-live', 'polite');
+      
+      DOM.toastContainer.appendChild(toast);
+      
+      // Auto remove
+      setTimeout(() => {
+        toast.style.animation = 'slideOutToast 0.4s ease forwards';
+        setTimeout(() => {
+          if (toast.parentNode) {
+            toast.parentNode.removeChild(toast);
+          }
+        }, 400);
+      }, CONFIG.TOAST_DURATION);
+    },
+    
+    createToastContainer() {
+      const container = document.createElement('div');
+      container.id = 'toastContainer';
+      container.style.cssText = `
+        position: fixed;
+        top: 100px;
+        right: 20px;
+        z-index: 10001;
+        pointer-events: none;
+      `;
+      document.body.appendChild(container);
+      return container;
     }
   };
   
-  // SEO and Accessibility enhancements
-  const SEOEnhancements = {
+  // 📊 Reading Progress
+  const ReadingProgress = {
     init() {
-      this.enhanceImages();
-      this.enhanceLinks();
-      this.addStructuredData();
-      this.optimizeHeadings();
+      DOM.progress = document.getElementById('readingProgress') || this.createProgressBar();
+      
+      if (DOM.progress) {
+        this.updateProgress = Utils.throttle(() => {
+          const scrollPercent = (window.pageYOffset / (document.body.scrollHeight - window.innerHeight)) * 100;
+          DOM.progress.style.width = Math.min(Math.max(scrollPercent, 0), 100) + '%';
+        }, 16);
+        
+        window.addEventListener('scroll', this.updateProgress, { passive: true });
+        this.updateProgress();
+      }
     },
     
-    enhanceImages() {
+    createProgressBar() {
+      const progress = document.createElement('div');
+      progress.id = 'readingProgress';
+      progress.style.cssText = `
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 0;
+        height: 4px;
+        background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+        z-index: 1001;
+        transition: width 0.3s ease;
+      `;
+      document.body.insertBefore(progress, document.body.firstChild);
+      return progress;
+    }
+  };
+  
+  // 🎨 Enhanced UI Effects
+  const UIEffects = {
+    init() {
+      this.enhanceCards();
+      this.enhanceForms();
+      this.addSmoothScrolling();
+    },
+    
+    enhanceCards() {
+      document.querySelectorAll('.card, .service-card, .country-card').forEach(card => {
+        card.addEventListener('mouseenter', () => {
+          card.style.transform = 'translateY(-6px)';
+        });
+        
+        card.addEventListener('mouseleave', () => {
+          card.style.transform = '';
+        });
+      });
+    },
+    
+    enhanceForms() {
+      document.querySelectorAll('.form-group').forEach(formGroup => {
+        const input = formGroup.querySelector('input');
+        if (input) {
+          input.addEventListener('focus', () => {
+            formGroup.style.transform = 'scale(1.02)';
+            formGroup.style.boxShadow = '0 0 0 4px rgba(59, 130, 246, 0.1)';
+          });
+          
+          input.addEventListener('blur', () => {
+            formGroup.style.transform = '';
+            formGroup.style.boxShadow = '';
+          });
+        }
+      });
+    },
+    
+    addSmoothScrolling() {
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute('href'));
+          if (target) {
+            const offsetTop = target.offsetTop - 80;
+            window.scrollTo({ top: offsetTop, behavior: 'smooth' });
+          }
+        });
+      });
+    }
+  };
+  
+  // 🔍 Responsive Image Optimization
+  const ImageOptimizer = {
+    init() {
+      this.optimizeImages();
+      this.setupLazyLoading();
+    },
+    
+    optimizeImages() {
       document.querySelectorAll('img:not([alt])').forEach(img => {
         img.alt = 'صورة من موقع مؤسسة إعلانات العرب';
       });
       
-      // Add image optimization attributes
       document.querySelectorAll('img').forEach(img => {
-        if (!img.hasAttribute('loading') && !img.closest('.hero')) {
+        if (!img.hasAttribute('loading')) {
           img.setAttribute('loading', 'lazy');
         }
         
-        if (!img.hasAttribute('decoding')) {
-          img.setAttribute('decoding', 'async');
-        }
+        img.addEventListener('error', () => {
+          img.src = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KIDxyZWN0IHdpZHRoPSIzMDAiIGhlaWdodD0iMjAwIiBmaWxsPSIjZjFmNWY5Ii8+CiA8dGV4dCB4PSI1MCUiIHk9IjUwJSIgZG9taW5hbnQtYmFzZWxpbmU9Im1pZGRsZSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZmlsbD0iIzY0NzQ4YiIgZm9udC1mYW1pbHk9IkNhaXJvLEFyaWFsIiBmb250LXNpemU9IjE0Ij7YtdmI2LHYqSDZhNmGINmF2YjZgteiINil2LnZhNin2YbYp9iqINin2YTYudix2KggLSDYp9ix2KfYqNiz2KfYrC5jb208L3RleHQ+Cjwvc3ZnPg==';
+        }, { once: true });
       });
     },
     
-    enhanceLinks() {
-      // External links
-      document.querySelectorAll('a[href^="http"]:not([rel])').forEach(link => {
-        const url = new URL(link.href);
-        if (url.hostname !== location.hostname) {
-          if (link.href.includes('wa.me') || link.href.includes('whatsapp')) {
-            link.rel = 'nofollow noopener';
-            link.setAttribute('aria-label', link.textContent + ' - يفتح في تطبيق واتساب');
-          } else {
-            link.rel = 'noopener';
-            link.setAttribute('aria-label', link.textContent + ' - يفتح في نافذة جديدة');
+    setupLazyLoading() {
+      if ('IntersectionObserver' in window) {
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              const img = entry.target;
+              if (img.dataset.src) {
+                img.src = img.dataset.src;
+                img.removeAttribute('data-src');
+              }
+              observer.unobserve(img);
+            }
+          });
+        }, {
+          rootMargin: '50px 0px',
+          threshold: 0.1
+        });
+        
+        document.querySelectorAll('img[data-src]').forEach(img => {
+          observer.observe(img);
+        });
+      }
+    }
+  };
+  
+  // 🎯 Performance Monitor
+  const PerformanceMonitor = {
+    init() {
+      this.trackWebVitals();
+      this.optimizeAssets();
+    },
+    
+    trackWebVitals() {
+      // Simple performance tracking
+      window.addEventListener('load', () => {
+        if (performance.getEntriesByType) {
+          const navigation = performance.getEntriesByType('navigation')[0];
+          if (navigation) {
+            console.log(`⚙️ Page Load Time: ${Math.round(navigation.loadEventEnd - navigation.fetchStart)}ms`);
           }
         }
       });
-      
-      // Phone links
-      document.querySelectorAll('a[href^="tel:"]').forEach(link => {
-        link.setAttribute('aria-label', 'اتصال برقم ' + link.textContent);
-      });
     },
     
-    addStructuredData() {
-      // Add breadcrumb structured data if not exists
-      if (!document.querySelector('script[type="application/ld+json"]')) {
-        const breadcrumbData = {
-          "@context": "https://schema.org",
-          "@type": "BreadcrumbList",
-          "itemListElement": [
-            {
-              "@type": "ListItem",
-              "position": 1,
-              "name": "الرئيسية",
-              "item": "https://arabsad.com/"
-            }
-          ]
-        };
-        
-        const script = document.createElement('script');
-        script.type = 'application/ld+json';
-        script.textContent = JSON.stringify(breadcrumbData);
-        document.head.appendChild(script);
+    optimizeAssets() {
+      // Preload critical assets
+      const criticalAssets = [
+        { href: 'styles.css', as: 'style' },
+        { href: 'assets/fonts/cairo.woff2', as: 'font', type: 'font/woff2', crossOrigin: 'anonymous' }
+      ];
+      
+      criticalAssets.forEach(asset => {
+        if (!document.querySelector(`link[href="${asset.href}"]`)) {
+          const link = document.createElement('link');
+          link.rel = 'preload';
+          Object.assign(link, asset);
+          document.head.appendChild(link);
+        }
+      });
+    }
+  };
+  
+  // 🌐 Internationalization Support
+  const I18nSupport = {
+    init() {
+      this.addLanguageAttributes();
+      this.enhanceRTLSupport();
+    },
+    
+    addLanguageAttributes() {
+      if (!document.documentElement.lang) {
+        document.documentElement.lang = 'ar';
+      }
+      
+      if (!document.documentElement.dir) {
+        document.documentElement.dir = 'rtl';
       }
     },
     
-    optimizeHeadings() {
-      // Ensure proper heading hierarchy
-      const headings = document.querySelectorAll('h1, h2, h3, h4, h5, h6');
-      let currentLevel = 0;
+    enhanceRTLSupport() {
+      // Add RTL-specific enhancements
+      document.body.classList.add('rtl-layout');
       
-      headings.forEach(heading => {
-        const level = Number(heading.tagName.charAt(1));
-        
-        // Add ID for anchor links if missing
-        if (!heading.id && heading.textContent) {
-          const id = heading.textContent
-            .replace(/[^\w\s\u0600-\u06FF]/g, '')
-            .trim()
-            .split(/\s+/)
-            .slice(0, 3)
-            .join('-')
-            .toLowerCase();
-          
-          if (id) {
-            heading.id = id;
+      // Fix form input directions for Arabic
+      document.querySelectorAll('input[type="email"], input[type="text"], textarea').forEach(input => {
+        input.dir = 'ltr'; // Email addresses are LTR
+        if (input.type === 'email') {
+          input.style.textAlign = 'left';
+        }
+      });
+    }
+  };
+  
+  // 🔒 Security Enhancements
+  const Security = {
+    init() {
+      this.sanitizeContent();
+      this.enhanceExternalLinks();
+    },
+    
+    sanitizeContent() {
+      // Basic XSS protection for dynamic content
+      document.querySelectorAll('[data-content]').forEach(element => {
+        const content = element.dataset.content;
+        if (content) {
+          element.textContent = content; // Use textContent instead of innerHTML
+        }
+      });
+    },
+    
+    enhanceExternalLinks() {
+      document.querySelectorAll('a[href^="http"]').forEach(link => {
+        const url = new URL(link.href);
+        if (url.hostname !== location.hostname) {
+          if (!link.rel.includes('noopener')) {
+            link.rel += ' noopener';
           }
         }
       });
     }
   };
   
-  // Performance monitoring and optimization
-  const PerformanceOptimizer = {
-    init() {
-      this.measureInitialLoad();
-      this.optimizeButtons();
-      this.prefetchImportantPages();
-      this.setupErrorReporting();
-    },
-    
-    measureInitialLoad() {
-      Performance.mark('arabsad-init-start');
-      
-      window.addEventListener('load', () => {
-        Performance.mark('arabsad-init-end');
-        Performance.measure('arabsad-init', 'arabsad-init-start', 'arabsad-init-end');
-        
-        // Log Core Web Vitals if available
-        if ('web-vitals' in window) {
-          try {
-            getCLS(console.log);
-            getFID(console.log);
-            getLCP(console.log);
-          } catch (e) {
-            console.debug('Web Vitals not available');
-          }
-        }
-      });
-    },
-    
-    optimizeButtons() {
-      // Add loading states to buttons
-      document.querySelectorAll('.btn').forEach(btn => {
-        btn.addEventListener('click', function(e) {
-          if (this.href && !this.target && !this.href.includes('#')) {
-            this.classList.add('loading');
-            this.style.pointerEvents = 'none';
-            
-            // Remove loading state after timeout
-            setTimeout(() => {
-              this.classList.remove('loading');
-              this.style.pointerEvents = '';
-            }, 3000);
-          }
-        });
-      });
-    },
-    
-    prefetchImportantPages() {
-      const importantPages = [
-        '/services-page.html',
-        '/google-ads-service.html',
-        '/social-media-service.html'
-      ];
-      
-      // Prefetch on user interaction
-      let prefetched = false;
-      const prefetchPages = () => {
-        if (prefetched) return;
-        prefetched = true;
-        
-        importantPages.forEach(page => {
-          const link = document.createElement('link');
-          link.rel = 'prefetch';
-          link.href = page;
-          document.head.appendChild(link);
-        });
-      };
-      
-      ['mouseenter', 'touchstart', 'scroll'].forEach(event => {
-        document.addEventListener(event, prefetchPages, { once: true, passive: true });
-      });
-    },
-    
-    setupErrorReporting() {
-      window.addEventListener('error', (e) => {
-        // Log errors for debugging (could be sent to analytics)
-        console.error('Script Error:', {
-          message: e.message,
-          source: e.filename,
-          line: e.lineno,
-          column: e.colno,
-          error: e.error
-        });
-      });
-      
-      window.addEventListener('unhandledrejection', (e) => {
-        console.error('Unhandled Promise Rejection:', e.reason);
-      });
-    }
-  };
-  
-  // Skip link functionality
-  const SkipLink = {
-    init() {
-      const skipLink = document.querySelector('.skip-link');
-      const mainContent = document.getElementById('main-content');
-      
-      if (!skipLink || !mainContent) return;
-      
-      skipLink.addEventListener('click', (e) => {
-        if (skipLink.getAttribute('href') === '#main-content') {
-          e.preventDefault();
-          mainContent.setAttribute('tabindex', '-1');
-          mainContent.scrollIntoView({ 
-            behavior: 'smooth', 
-            block: 'start' 
-          });
-          
-          setTimeout(() => {
-            mainContent.focus({ preventScroll: true });
-          }, 300);
-        }
-      });
-    }
-  };
-  
-  // Enhanced form handling (if forms exist)
-  const FormEnhancer = {
-    init() {
-      document.querySelectorAll('form').forEach(form => {
-        this.enhanceForm(form);
-      });
-    },
-    
-    enhanceForm(form) {
-      // Add loading states
-      form.addEventListener('submit', (e) => {
-        const submitBtn = form.querySelector('button[type="submit"], input[type="submit"]');
-        if (submitBtn) {
-          submitBtn.classList.add('loading');
-          submitBtn.disabled = true;
-        }
-      });
-      
-      // Real-time validation
-      form.querySelectorAll('input, textarea, select').forEach(field => {
-        field.addEventListener('blur', () => {
-          this.validateField(field);
-        });
-      });
-    },
-    
-    validateField(field) {
-      const isValid = field.checkValidity();
-      field.classList.toggle('error', !isValid);
-      field.classList.toggle('success', isValid && field.value);
-    }
-  };
-  
-  // Main initialization
+  // 🎆 Main Initialization
   function initialize() {
-    Performance.mark('arabsad-init-start');
-    
     try {
-      // Core features
-      ScrollProgress.init();
-      Navigation.init();
+      // Core functionality
+      SocialMediaManager.init();
+      ResponsiveNavigation.init();
       BackToTop.init();
-      SkipLink.init();
-      RevSlider.init();
+      ReadingProgress.init();
+      NewsletterSystem.init();
       
       // Enhancement features
-      LazyLoading.init();
-      SEOEnhancements.init();
-      PerformanceOptimizer.init();
-      FormEnhancer.init();
+      UIEffects.init();
+      ImageOptimizer.init();
+      PerformanceMonitor.init();
+      I18nSupport.init();
+      Security.init();
       
-      console.log('✅ ArabSad.com initialized successfully');
+      console.log('✨ ArabSad.com fully initialized with responsive design and updated Facebook links!');
       
     } catch (error) {
       console.error('❌ Initialization error:', error);
     }
   }
   
-  // Initialize when DOM is ready
+  // 🚀 Smart Initialization
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', initialize);
   } else {
     initialize();
   }
   
-  // Global utilities
+  // 🌍 Global API for external use
   window.ArabSad = {
+    version: '3.0.0',
+    config: CONFIG,
+    
+    // Public methods
     scrollToSection: (sectionId) => {
       const section = document.getElementById(sectionId);
       if (section) {
-        section.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        section.focus();
+        const offsetTop = section.offsetTop - 80;
+        window.scrollTo({ top: offsetTop, behavior: 'smooth' });
       }
     },
     
-    openWhatsApp: (message = 'أريد استشارة تسويقية الآن') => {
-      const url = `https://wa.me/201110760081?text=${encodeURIComponent(message)}`;
+    openWhatsApp: (message = 'مرحباً! أريد استشارة مجانية') => {
+      const url = `${CONFIG.SOCIAL_MEDIA.whatsapp}?text=${encodeURIComponent(message)}`;
       window.open(url, '_blank', 'noopener');
     },
     
-    trackEvent: (eventName, properties = {}) => {
-      // Placeholder for analytics tracking
-      console.log('Event tracked:', eventName, properties);
-      
-      // Could integrate with Google Analytics, Facebook Pixel, etc.
-      if (typeof gtag !== 'undefined') {
-        gtag('event', eventName, properties);
-      }
+    updateSocialLinks: () => {
+      SocialMediaManager.updateAllSocialLinks();
+    },
+    
+    showNotification: (message, type = 'info') => {
+      NewsletterSystem.showToast(message, type);
     }
   };
   
 })();
+
+// 🎉 Page-specific enhancements
+document.addEventListener('DOMContentLoaded', function() {
+  // Add loading animation to all buttons
+  document.querySelectorAll('.btn').forEach(btn => {
+    btn.addEventListener('click', function(e) {
+      if (this.href && !this.href.includes('#') && !this.target) {
+        this.style.opacity = '0.7';
+        this.style.pointerEvents = 'none';
+        
+        setTimeout(() => {
+          this.style.opacity = '';
+          this.style.pointerEvents = '';
+        }, 2000);
+      }
+    });
+  });
+  
+  // Enhanced hover effects for mobile
+  if ('ontouchstart' in window) {
+    document.querySelectorAll('.card, .btn, .social-btn').forEach(element => {
+      element.addEventListener('touchstart', function() {
+        this.classList.add('touch-active');
+      }, { passive: true });
+      
+      element.addEventListener('touchend', function() {
+        setTimeout(() => {
+          this.classList.remove('touch-active');
+        }, 150);
+      }, { passive: true });
+    });
+  }
+});
+
+// 🛡️ Error handling and fallbacks
+window.addEventListener('error', function(e) {
+  console.error('Global error:', e.error);
+});
+
+window.addEventListener('unhandledrejection', function(e) {
+  console.error('Unhandled promise rejection:', e.reason);
+});
