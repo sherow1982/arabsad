@@ -1,26 +1,96 @@
-  <!-- المحتوى الأصلي يبقى كما هو -->
-  <section id="contact" class="contact" aria-labelledby="contact-title">
-    <div class="container">
-      <!-- المحتوى الأصلي لقسم الاتصال كما هو -->
-    </div>
-  </section>
-</main>
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>مؤسسة إعلانات العرب - للتسويق الإلكتروني والإعلانات الممولة | arabsad.com</title>
+  <meta name="description" content="مؤسسة إعلانات العرب للتسويق الإلكتروني والإعلانات الممولة في الخليج العربي. خدمات إعلانات جوجل، فيسبوك، إنستجرام، سناب شات، تيك توك وتصميم المواقع الإلكترونية والمتاجر. خبرة 10+ سنوات في السعودية والإمارات والكويت وقطر وعمان والبحرين.">
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <meta name="theme-color" content="#1e40af">
+  <link rel="canonical" href="https://arabsad.com/">
 
-<div class="cta-bar">
-  <a class="btn btn-primary" target="_blank" href="https://wa.me/201110760081?text=أريد استشارة تسويقية الآن">📞 استشارة فورية</a>
-  <a class="btn btn-success" target="_blank" href="https://wa.me/201110760081?text=أطلب عرض لخطة إعلانات شاملة">🧭 اطلب خطة إعلانات</a>
-</div>
+  <link rel="preload" href="assets/css/main.css" as="style">
+  <link rel="preload" href="assets/css/slider.css" as="style">
+  <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="stylesheet" href="assets/css/slider.css">
+  <link rel="stylesheet" href="assets/css/ux-enhancements.css">
+</head>
+<body>
+  <div class="reading-progress" id="progress"></div>
+  <a href="#main-content" class="skip-link">تخطي إلى المحتوى الرئيسي</a>
 
-<footer class="footer" role="contentinfo">
-  <div class="container">
-    <!-- محتوى الفوتر الأصلي يبقى كما هو -->
+  <header class="header" role="banner">
+    <nav class="nav" role="navigation" aria-label="التنقل الرئيسي">
+      <div class="container">
+        <div class="nav-brand">
+          <a href="index.html">
+            <img src="assets/images/logo.svg" alt="شعار مؤسسة إعلانات العرب" width="40" height="40" loading="eager">
+            <div>
+              <h1>مؤسسة إعلانات العرب</h1>
+              <span class="domain">arabsad.com</span>
+            </div>
+          </a>
+        </div>
+        <ul class="nav-menu" id="navMenu">
+          <li><a href="#home" class="nav-link" aria-current="page">🏠 الرئيسية</a></li>
+          <li><a href="services-page.html" class="nav-link" target="_blank">💼 خدماتنا</a></li>
+          <li><a href="google-ads-service.html" class="nav-link" target="_blank">🎯 Google Ads</a></li>
+          <li><a href="social-media-service.html" class="nav-link" target="_blank">📱 Social Ads</a></li>
+          <li><a href="seo-service.html" class="nav-link" target="_blank">🔍 SEO</a></li>
+          <li><a href="ecommerce-service.html" class="nav-link" target="_blank">🛒 المتاجر</a></li>
+          <li><a href="gulf-cities.html" class="nav-link" target="_blank">🌍 مدن الخليج</a></li>
+          <li><a href="blog/index.html" class="nav-link" target="_blank">📰 مدونتنا</a></li>
+          <li><a href="#contact" class="nav-link">☎️ اتصل بنا</a></li>
+        </ul>
+        <button class="nav-toggle" id="navToggle" aria-label="فتح/إغلاق القائمة" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main-content" role="main">
+    <section id="home" class="hero">
+      <div class="container">
+        <h2>وكالة تسويق رقمي لأسواق الخليج</h2>
+        <p>إدارة حملات Google Ads وSocial Ads وSEO باحترافية مع صفحات سريعة ومتاجر محسّنة للتحويل.</p>
+      </div>
+    </section>
+
+    <section id="features" class="features">
+      <div class="container">
+        <ul>
+          <li>أداء مرتفع وقياس احترافي</li>
+          <li>تجربة مستخدم متجاوبة</li>
+          <li>تخصيص واتساب ورسائل حسب الخدمة</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="contact" class="contact" aria-labelledby="contact-title">
+      <div class="container">
+        <h2 id="contact-title">تواصل معنا</h2>
+        <p>للاستشارة والعروض، راسلنا عبر واتساب أو النموذج.</p>
+      </div>
+    </section>
+  </main>
+
+  <div class="cta-bar">
+    <a class="btn btn-primary" target="_blank" href="https://wa.me/201110760081?text=أريد استشارة تسويقية الآن">📞 استشارة فورية</a>
+    <a class="btn btn-success" target="_blank" href="https://wa.me/201110760081?text=أطلب عرض لخطة إعلانات شاملة">🧭 اطلب خطة إعلانات</a>
   </div>
-</footer>
 
-<script src="script.js" defer></script>
-<script>
-  const progress=document.getElementById('progress');
-  window.addEventListener('scroll',()=>{const h=document.documentElement;const s=(h.scrollTop)/(h.scrollHeight-h.clientHeight)*100;progress.style.width=s+'%'});
-</script>
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <p>© 2025 مؤسسة إعلانات العرب</p>
+    </div>
+  </footer>
+
+  <script src="script.js" defer></script>
+  <script src="assets/js/boot.js" defer></script>
+  <script>
+    const progress=document.getElementById('progress');
+    window.addEventListener('scroll',()=>{const h=document.documentElement;const s=(h.scrollTop)/(h.scrollHeight-h.clientHeight)*100;progress.style.width=s+'%'});
+  </script>
 </body>
 </html>
