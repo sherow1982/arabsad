@@ -1,31 +1,32 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>الصفحة غير موجودة | مؤسسة إعلانات العرب</title>
-  <meta name="description" content="عذرًا، الصفحة التي تبحث عنها غير موجودة. يمكنك العودة للصفحة الرئيسية أو تصفح خدماتنا.">
-  <link rel="stylesheet" href="assets/css/main.css">
-  <style>
-    body { background: #fff; color: #444; font-family: 'IBM Plex Sans Arabic', sans-serif; margin: 0; display: flex; align-items: center; justify-content: center; min-height: 100vh; flex-direction: column; }
-    h1 { font-size: 4rem; color: #e63946; }
-    .message { font-size: 1.25rem; margin: 20px 0; color: #333; }
-    .actions { margin-top: 30px; }
-    .actions a { background: #0073e6; color: #fff; padding: 12px 28px; border-radius: 6px; text-decoration: none; margin: 0 10px; transition: background 0.3s; font-size: 1rem; }
-    .actions a:hover { background: #005bb5; }
-    .logo { margin-bottom: 1.5rem; }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>عذراً - لم يتم العثور على الصفحة | مؤسسة إعلانات العرب</title>
+<link rel="stylesheet" href="assets/css/main.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="enhanced-arabic-fonts.css">
 </head>
 <body>
-  <div class="logo">
-    <img src="assets/images/logo-hero.jpg" alt="شعار مؤسسة إعلانات العرب" width="88" height="88">
+<div class="container" style="text-align: center; padding: 4rem 2rem; min-height: 60vh; display: flex; flex-direction: column; justify-content: center;">
+  <h1 style="font-size: 4rem; color: #1a365d; margin-bottom: 2rem;">🚫 404</h1>
+  <h2 style="color: #4a5568; margin-bottom: 2rem;">عذراً - لم يتم العثور على الصفحة</h2>
+  <p style="font-size: 1.2rem; color: #718096; margin-bottom: 3rem;">الصفحة التي تبحث عنها غير موجودة أو تم نقلها</p>
+  <div>
+    <a href="index.html" class="btn btn-primary" style="margin: 0.5rem;">🏠 العودة للرئيسية</a>
+    <a href="services-page.html" class="btn btn-success" style="margin: 0.5rem;">💼 تصفح خدماتنا</a>
+    <a href="https://wa.me/201110760081?text=لم%20أجد%20الصفحة%20المطلوبة" target="_blank" class="btn btn-warning" style="margin: 0.5rem;">📞 ابلاغ عن المشكلة</a>
   </div>
-  <h1>404</h1>
-  <div class="message">عذرًا، الصفحة التي تبحث عنها غير متوفرة.</div>
-  <div class="actions">
-    <a href="index.html">الصفحة الرئيسية</a>
-    <a href="blog/index.html">المدونة</a>
-    <a href="services-page.html">جميع الخدمات</a>
-  </div>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    fetch('./shared-header.html').then(r => r.ok ? r.text() : '').then(html => { if (html) document.body.insertAdjacentHTML('afterbegin', html); });
+    fetch('./shared-footer.html').then(r => r.ok ? r.text() : '').then(html => { if (html) document.body.insertAdjacentHTML('beforeend', html); });
+    fetch('./whatsapp-button.html').then(r => r.ok ? r.text() : '').then(html => { if (html) document.body.insertAdjacentHTML('beforeend', html); });
+});
+</script>
 </body>
 </html>
