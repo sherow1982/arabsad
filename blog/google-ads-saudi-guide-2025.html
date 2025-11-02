@@ -17,20 +17,35 @@
   <meta name="twitter:description" content="استراتيجيات Google Ads 2025 في السعودية + Performance Max + كلمات عربية عالية النية." />
   <meta name="twitter:image" content="https://arabsad.com/assets/images/google-ads-ksa-2025.webp" />
 
-  <link rel="stylesheet" href="../assets/css/main.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css" />
   <style>
-    .blog-article{max-width:980px;margin:0 auto;padding:16px}
-    .toc{background:#fafafa;border:1px solid #eee;border-radius:8px;padding:12px;margin:16px 0}
-    .toc a{color:#0a66c2;text-decoration:none}
-    .note{background:#f5fbff;border:1px solid #d9efff;padding:12px;border-radius:8px;margin:14px 0}
-    .cta{display:inline-block;background:#0a66c2;color:#fff;padding:10px 16px;border-radius:8px;text-decoration:none;font-weight:600;margin:10px 0}
+    .blog-article{max-width:980px;margin:2rem auto;padding:2rem;background:#fff;border-radius:8px;box-shadow:0 2px 10px rgba(0,0,0,0.1)}
+    .blog-article h1{color:#1a365d;font-size:2.2rem;margin-bottom:1.5rem;text-align:center;border-bottom:3px solid #3182ce;padding-bottom:1rem}
+    .blog-article h2{color:#2c5282;font-size:1.8rem;margin:2.5rem 0 1rem 0;border-bottom:2px solid #3182ce;padding-bottom:0.5rem}
+    .blog-article h3{color:#2a4365;font-size:1.4rem;margin:2rem 0 1rem 0}
+    .blog-article p{margin-bottom:1.5rem;color:#2d3748;font-size:1.1rem;line-height:1.7}
+    .blog-article strong{color:#1a365d;font-weight:700}
+    .toc{background:#f8f9fa;border:1px solid #e9ecef;border-radius:8px;padding:1.5rem;margin:2rem 0}
+    .toc a{color:#007bff;text-decoration:none;font-weight:500}
+    .toc a:hover{color:#0056b3;text-decoration:underline}
+    .note{background:#f5fbff;border:1px solid #d9efff;padding:1.2rem;border-radius:8px;margin:1.4rem 0}
+    .cta{display:inline-block;background:#0a66c2;color:#fff;padding:1rem 1.6rem;border-radius:8px;text-decoration:none;font-weight:600;margin:1rem 0.5rem;transition:all 0.3s}
+    .cta:hover{transform:translateY(-2px);box-shadow:0 4px 12px rgba(10,102,194,0.3)}
     .cta.secondary{background:#0e9f6e}
-    .cta-row{display:flex;gap:10px;flex-wrap:wrap;margin:14px 0}
-    .faq-item{border-top:1px solid #eee;padding:12px 0}
-    .lead{font-size:18px;color:#333;margin:10px 0 18px}
-    .breadcrumbs{font-size:14px;color:#666;margin:12px 0}
-    .breadcrumbs a{color:#666;text-decoration:none}
-    img{max-width:100%;height:auto}
+    .cta-row{display:flex;gap:1rem;flex-wrap:wrap;margin:1.4rem 0;justify-content:center}
+    .faq-item{border-top:1px solid #eee;padding:1.2rem 0}
+    .lead{font-size:1.2rem;color:#333;margin:1rem 0 1.8rem;text-align:center;background:#f0f4f8;padding:1.5rem;border-radius:8px}
+    .breadcrumbs{font-size:0.9rem;color:#666;margin:1.2rem 0;text-align:center}
+    .breadcrumbs a{color:#007bff;text-decoration:none}
+    img{max-width:100%;height:auto;border-radius:8px}
+    
+    @media (max-width: 768px) {
+      .blog-article{padding:1rem;margin:1rem}
+      .blog-article h1{font-size:1.8rem}
+      .blog-article h2{font-size:1.4rem}
+      .cta-row{flex-direction:column;align-items:center}
+    }
   </style>
 
   <script type="application/ld+json">
@@ -48,91 +63,66 @@
     "mainEntityOfPage":{"@type":"WebPage","@id":"https://arabsad.com/blog/google-ads-saudi-guide-2025.html"}
   }
   </script>
-
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"FAQPage",
-    "mainEntity":[
-      {"@type":"Question","name":"كم تكلفة إعلانات جوجل في السعودية؟","acceptedAnswer":{"@type":"Answer","text":"تعتمد على القطاع والمنافسة وجودة الصفحة وتتبع التحويل. ابدأ بميزانية اختبار لقياس تكلفة العميل المحتمل/العائد ثم وسّع وفق النتائج."}},
-      {"@type":"Question","name":"متى أستخدم Performance Max بدل Search؟","acceptedAnswer":{"@type":"Answer","text":"استخدم Search لالتقاط نية عالية على كلمات محددة، وPMax للتوسع متعدد القنوات عندما تتوفر أصول قوية وتتبع تحويل موثوق."}},
-      {"@type":"Question","name":"كيف أحسّن جودة العملاء المحتملين؟","acceptedAnswer":{"@type":"Answer","text":"كلمات عالية النية، سالبات دقيقة، اتساق الرسائل مع صفحة هبوط سريعة RTL ونموذج مختصر، وتتبع ما بعد التحويل إن أمكن."}}
-    ]
-  }
-  </script>
 </head>
 <body>
-  <script>
-  document.addEventListener('DOMContentLoaded', function() {
-      fetch('../shared-header.html')
-          .then(response => response.ok ? response.text() : '')
-          .then(html => {
-              if (html) {
-                  document.body.insertAdjacentHTML('afterbegin', html);
-              }
-          })
-          .catch(() => console.log('لم يتم العثور على ملف الهيدر'));
 
-      fetch('../shared-footer.html')
-          .then(response => response.ok ? response.text() : '')
-          .then(html => {
-              if (html) {
-                  document.body.insertAdjacentHTML('beforeend', html);
-              }
-          })
-          .catch(() => console.log('لم يتم العثور على ملف الفوتر'));
-
-      fetch('../whatsapp-button.html')
-          .then(response => response.ok ? response.text() : '')
-          .then(html => {
-              if (html) {
-                  document.body.insertAdjacentHTML('beforeend', html);
-              }
-          })
-          .catch(() => console.log('لم يتم العثور على زر واتساب'));
-  });
-  </script>
+  <!-- هيدر فاخر وموحد لجميع الصفحات -->
+  <div class="shared-header" style="background: linear-gradient(135deg, #1a365d 0%, #2c5aa0 100%); color: white; padding: 1rem 0; box-shadow: 0 4px 15px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 1000; font-family: 'Cairo', 'IBM Plex Sans Arabic', sans-serif;">
+      <div class="header-content" style="max-width: 1200px; margin: 0 auto; padding: 0 1rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;">
+          <a href="/" class="brand-link" style="font-size: 1.6rem; font-weight: 800; color: white; text-decoration: none; display: flex; align-items: center; gap: 0.5rem;">
+              <span>📢</span>
+              مؤسسة إعلانات العرب
+          </a>
+          
+          <nav class="header-nav" style="display: flex; gap: 1.5rem; align-items: center;">
+              <a href="/" style="color: white; font-weight: 500; padding: 0.5rem 1rem; border-radius: 8px; text-decoration: none; transition: all 0.3s ease;" onmouseover="this.style.background='rgba(255,255,255,0.15)'" onmouseout="this.style.background='transparent'">الرئيسية</a>
+              <a href="/services-page.html" style="color: white; font-weight: 500; padding: 0.5rem 1rem; border-radius: 8px; text-decoration: none; transition: all 0.3s ease;" onmouseover="this.style.background='rgba(255,255,255,0.15)'" onmouseout="this.style.background='transparent'">خدماتنا</a>
+              <a href="/seo-service.html" style="color: white; font-weight: 500; padding: 0.5rem 1rem; border-radius: 8px; text-decoration: none; transition: all 0.3s ease;" onmouseover="this.style.background='rgba(255,255,255,0.15)'" onmouseout="this.style.background='transparent'">خدمة SEO</a>
+              <a href="https://wa.me/201110760081" target="_blank" class="whatsapp-cta" style="background: linear-gradient(135deg, #25D366 0%, #128C7E 100%); color: white; padding: 0.6rem 1.2rem; border-radius: 12px; font-weight: 700; text-decoration: none; transition: all 0.3s ease; box-shadow: 0 2px 8px rgba(37, 211, 102, 0.3);" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 6px 20px rgba(37, 211, 102, 0.4)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 2px 8px rgba(37, 211, 102, 0.3)';"> 💬 واتساب</a>
+          </nav>
+      </div>
+  </div>
 
   <article class="blog-article">
     <div class="container">
       <nav class="breadcrumbs" aria-label="Breadcrumb">
-        <a href="/blog/">المدونة</a> › دليل إعلانات جوجل في السعودية 2025
+        <a href="/blog/index.html">المدونة</a> › دليل إعلانات جوجل في السعودية 2025
       </nav>
 
       <h1>دليل شامل لإعلانات جوجل في السعودية 2025</h1>
       <p class="lead">تعرف على كيفية توظيف الذكاء الاصطناعي وSmart Bidding وPerformance Max للوصول إلى عملاء مؤهلين في <strong>الرياض وجدة والدمام</strong> عبر صفحات هبوط RTL سريعة وقياس دقيق للعائد.</p>
 
       <aside class="toc" aria-label="جدول المحتويات">
-        <strong>محتويات الدليل</strong>
-        <ul>
-          <li><a href="#why-ksa-2025">لماذا Google Ads حاسم في السعودية 2025؟</a></li>
-          <li><a href="#whats-new-2025">ما الجديد في Google Ads؟ الذكاء الاصطناعي وSmart Bidding</a></li>
-          <li><a href="#ksa-specifics">خصوصية السوق السعودي: اللغة، المدن، والسلوك</a></li>
-          <li><a href="#account-structure">هيكلة حملات 2025 الموصى بها</a></li>
-          <li><a href="#keywords-ar">الكلمات المفتاحية العربية عالية النية</a></li>
-          <li><a href="#campaign-types">أنواع الحملات حسب الهدف</a></li>
-          <li><a href="#creative-landing">الإبداع الإعلاني وصفحات الهبوط RTL</a></li>
-          <li><a href="#measurement">القياس والتحسين وتجارب 2025</a></li>
-          <li><a href="#case-studies">حالات نجاح موثّقة</a></li>
-          <li><a href="#faq">الأسئلة الشائعة</a></li>
+        <strong>📋 محتويات الدليل</strong>
+        <ul style="list-style:none;padding-right:0;margin-top:1rem">
+          <li style="margin:0.5rem 0"><a href="#why-ksa-2025">🎯 لماذا Google Ads حاسم في السعودية 2025؟</a></li>
+          <li style="margin:0.5rem 0"><a href="#whats-new-2025">🤖 ما الجديد في Google Ads؟ الذكاء الاصطناعي وSmart Bidding</a></li>
+          <li style="margin:0.5rem 0"><a href="#ksa-specifics">🇸🇦 خصوصية السوق السعودي: اللغة، المدن، والسلوك</a></li>
+          <li style="margin:0.5rem 0"><a href="#account-structure">🏗️ هيكلة حملات 2025 الموصى بها</a></li>
+          <li style="margin:0.5rem 0"><a href="#keywords-ar">🔍 الكلمات المفتاحية العربية عالية النية</a></li>
+          <li style="margin:0.5rem 0"><a href="#campaign-types">🔄 أنواع الحملات حسب الهدف</a></li>
+          <li style="margin:0.5rem 0"><a href="#creative-landing">🎨 الإبداع الإعلاني وصفحات الهبوط RTL</a></li>
+          <li style="margin:0.5rem 0"><a href="#measurement">📊 القياس والتحسين وتجارب 2025</a></li>
+          <li style="margin:0.5rem 0"><a href="#case-studies">🏆 حالات نجاح موثّقة</a></li>
+          <li style="margin:0.5rem 0"><a href="#faq">❓ الأسئلة الشائعة</a></li>
         </ul>
       </aside>
 
       <section id="why-ksa-2025">
-        <h2>لماذا Google Ads حاسم في السعودية 2025؟</h2>
+        <h2>🎯 لماذا Google Ads حاسم في السعودية 2025؟</h2>
         <p>تزايد الاعتماد على الهواتف الذكية ونمو التجارة الإلكترونية ضمن إطار الرؤية 2030 يجعل Google Ads قناة أسرع للوصول لطلب فعّال على مستوى المدن. ركّز على <strong>نية البحث</strong> وتوافق الرسالة مع الصفحة لتقليل تكلفة العميل المحتمل وزيادة العائد.</p>
         <div class="note">تنبيه: أي رقم سوقي يُذكر يجب دعمه بمصدر وتاريخ بيانات واضح داخل الفقرة.</div>
       </section>
 
       <section id="whats-new-2025">
-        <h2>ما الجديد في Google Ads؟ الذكاء الاصطناعي وSmart Bidding</h2>
+        <h2>🤖 ما الجديد في Google Ads؟ الذكاء الاصطناعي وSmart Bidding</h2>
         <p>في 2025، الأتمتة هي محور الأداء: Smart Bidding (Target CPA/ROAS، Maximize Conversions) و<strong>Performance Max</strong> عبر قنوات جوجل. احرص على بيانات تحويل نظيفة، وأصول إبداعية عربية قوية، وإشارات جمهور ذات صلة.</p>
         <h3>متى تختار Search؟ ومتى Performance Max؟</h3>
         <p><strong>Search</strong> لالتقاط النية العالية (خدمة + مدينة). <strong>PMax</strong> للتوسّع متعدد القنوات عند توفر أصول قوية وتتبع موثوق. امزج بينهما وحرّك الميزانيات وفق كفاءة تكلفة التحويل.</p>
       </section>
 
       <section id="ksa-specifics">
-        <h2>خصوصية السوق السعودي: اللغة، المدن، والسلوك</h2>
+        <h2>🇸🇦 خصوصية السوق السعودي: اللغة، المدن، والسلوك</h2>
         <h3>استهداف اللغة بشكل صحيح</h3>
         <p>اعتمد العربية الفصحى في الإعلانات وصفحات الهبوط، مع لمسات لهجية سعودية في الأمثلة. تأكد من توافق اللغة بين الإعلان والصفحة، وتجنّب الترجمة الحرفية.</p>
         <h3>المدن والتوقيت</h3>
@@ -140,7 +130,7 @@
       </section>
 
       <section id="account-structure">
-        <h2>هيكلة حملات 2025 الموصى بها</h2>
+        <h2>🏗️ هيكلة حملات 2025 الموصى بها</h2>
         <h3>تقليل التشتت وتحسين تعلّم الخوارزمية</h3>
         <p>اعتمد تجميعًا منطقيًا للكلمات والمجموعات، وتجنّب التفريع المفرط الذي يشتت التعلم. حافظ على اتساق بين <strong>الكلمة – الإعلان – الصفحة</strong>.</p>
         <h3>الكلمات السلبية وإدارة مصطلحات البحث</h3>
@@ -148,7 +138,7 @@
       </section>
 
       <section id="keywords-ar">
-        <h2>الكلمات المفتاحية العربية عالية النية</h2>
+        <h2>🔍 الكلمات المفتاحية العربية عالية النية</h2>
         <ul>
           <li>شركة إدارة اعلانات جوجل الرياض/جدة/الدمام</li>
           <li>إدارة حملات Google Ads السعودية</li>
@@ -160,12 +150,12 @@
       </section>
 
       <section id="campaign-types">
-        <h2>أنواع الحملات حسب الهدف</h2>
+        <h2>🔄 أنواع الحملات حسب الهدف</h2>
         <p><strong>Leads:</strong> Search + PMax + Remarketing. <strong>E‑commerce:</strong> PMax + Shopping + Search دعمًا. <strong>Local:</strong> Search + Call/Maps، مع تحسين Google Business Profile.</p>
       </section>
 
       <section id="creative-landing">
-        <h2>الإبداع الإعلاني وصفحات الهبوط RTL</h2>
+        <h2>🎨 الإبداع الإعلاني وصفحات الهبوط RTL</h2>
         <h3>نماذج عناوين إعلانية</h3>
         <ul>
           <li>احصل على عملاء جدد في الرياض خلال 7 أيام</li>
@@ -177,17 +167,17 @@
       </section>
 
       <section id="measurement">
-        <h2>القياس والتحسين وتجارب 2025</h2>
-        <p>فعِّل أهداف تحويل ذات جودة، استخدم تجارب A/B، نظّف السالبات، اختبر العروض والصفحات والأصول الإبداعية، وحسّن الميزانيات حسب CPA/ROAS.</p>
+        <h2>📊 القياس والتحسين وتجارب 2025</h2>
+        <p>فعّل أهداف تحويل ذات جودة، استخدم تجارب A/B، نظّف السالبات، اختبر العروض والصفحات والأصول الإبداعية، وحسّن الميزانيات حسب CPA/ROAS.</p>
       </section>
 
       <section id="case-studies">
-        <h2>حالات نجاح موثّقة</h2>
+        <h2>🏆 حالات نجاح موثّقة</h2>
         <p>حوّل أي قصة نجاح إلى دراسة حالة مكتملة: الهدف، الميزانية، خط الأساس، الاستراتيجية، النتائج بالأرقام والفترة، والدروس.</p>
       </section>
 
       <section id="faq">
-        <h2>الأسئلة الشائعة</h2>
+        <h2>❓ الأسئلة الشائعة</h2>
         <div class="faq-item">
           <h3>كم تكلفة إعلانات جوجل في السعودية؟</h3>
           <p>تختلف حسب القطاع والمنافسة وجودة الصفحة وتتبع التحويل. ابدأ بميزانية اختبار، ثم وسّع وفق النتائج.</p>
@@ -203,46 +193,120 @@
       </section>
 
       <section id="contact">
-        <h2>احصل على تدقيق Google Ads مجاني خلال 48 ساعة</h2>
-        <p>سيتضمن: مراجعة بنية الحساب، الكلمات والسالبات، جودة الصفحات، وأفكار تحسين فورية.</p>
-        <div class="cta-row">
-          <a class="cta" href="https://wa.me/201110760081" target="_blank" rel="noopener">تواصل عبر واتساب الآن</a>
-          <a class="cta secondary" href="/contact.html">اطلب اتصال خبير</a>
+        <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 2rem; margin: 3rem 0; border-radius: 12px; text-align: center;">
+          <h2 style="color: white; margin-bottom: 1rem;">🚀 احصل على تدقيق Google Ads مجاني خلال 48 ساعة</h2>
+          <p style="color: rgba(255,255,255,0.9); margin-bottom: 1.5rem; font-size: 1.1rem;">سيتضمن: مراجعة بنية الحساب، الكلمات والسالبات، جودة الصفحات، وأفكار تحسين فورية.</p>
+          <div class="cta-row">
+            <a class="cta" href="https://wa.me/201110760081?text=أريد تدقيق Google Ads مجاني لحسابي في السعودية" target="_blank" rel="noopener" style="background: white; color: #667eea;">💬 تواصل عبر واتساب الآن</a>
+            <a class="cta secondary" href="/google-ads-service.html" style="background: rgba(255,255,255,0.2); color: white;">📝 اطلب اتصال خبير</a>
+          </div>
         </div>
       </section>
     </div>
   </article>
 
-  <script>
-  document.addEventListener('DOMContentLoaded', function() {
-      fetch('../shared-header.html')
-          .then(response => response.ok ? response.text() : '')
-          .then(html => {
-              if (html) {
-                  document.body.insertAdjacentHTML('afterbegin', html);
-              }
-          })
-          .catch(() => console.log('لم يتم العثور على ملف الهيدر'));
+  <!-- فوتر موحد واحترافي لجميع الصفحات -->
+  <footer class="shared-footer" style="background: linear-gradient(135deg, #2d3748 0%, #1a202c 100%); color: white; padding: 3rem 0 1rem; margin-top: 3rem; font-family: 'IBM Plex Sans Arabic', sans-serif;">
+      <div style="max-width: 1200px; margin: 0 auto; padding: 0 1rem;">
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2.5rem; margin-bottom: 2rem;">
+              
+              <!-- قسم معلومات الشركة -->
+              <div>
+                  <h3 style="color: white; font-size: 1.4rem; margin-bottom: 1.2rem; font-weight: 700; font-family: 'Cairo', sans-serif;">📢 مؤسسة إعلانات العرب</h3>
+                  <p style="color: #e2e8f0; margin-bottom: 1rem; line-height: 1.7; font-size: 1rem;">وكالة تسويق رقمي متخصصة في الإعلانات الممولة وتصميم المواقع في العالم العربي.</p>
+                  <div class="contact-info">
+                      <p style="color: #e2e8f0; margin-bottom: 0.6rem; display: flex; align-items: center; gap: 0.5rem;"><span>📞</span><a href="tel:+201110760081" style="color: #e2e8f0; text-decoration: none;">+20 111 076 0081</a></p>
+                      <p style="color: #e2e8f0; margin-bottom: 0.6rem; display: flex; align-items: center; gap: 0.5rem;"><span>📧</span><a href="mailto:info@arabsad.com" style="color: #e2e8f0; text-decoration: none;">info@arabsad.com</a></p>
+                      <p style="color: #e2e8f0; margin-bottom: 0.6rem; display: flex; align-items: center; gap: 0.5rem;"><span>🌐</span><a href="https://arabsad.com" style="color: #e2e8f0; text-decoration: none;">www.arabsad.com</a></p>
+                  </div>
+              </div>
 
-      fetch('../shared-footer.html')
-          .then(response => response.ok ? response.text() : '')
-          .then(html => {
-              if (html) {
-                  document.body.insertAdjacentHTML('beforeend', html);
-              }
-          })
-          .catch(() => console.log('لم يتم العثور على ملف الفوتر'));
+              <!-- قسم الخدمات الرئيسية -->
+              <div>
+                  <h3 style="color: white; font-size: 1.3rem; margin-bottom: 1.2rem; font-weight: 600; font-family: 'Cairo', sans-serif;">💼 خدماتنا الرئيسية</h3>
+                  <ul style="list-style: none; padding: 0; margin: 0;">
+                      <li style="margin-bottom: 0.7rem;"><a href="/seo-service.html" style="color: #e2e8f0; text-decoration: none; transition: all 0.3s ease; display: flex; align-items: center; gap: 0.5rem;" onmouseover="this.style.color='#ffd700'; this.style.transform='translateX(5px)';" onmouseout="this.style.color='#e2e8f0'; this.style.transform='translateX(0)';"><span>🔍</span>تحسين محركات البحث SEO</a></li>
+                      <li style="margin-bottom: 0.7rem;"><a href="/google-ads-service.html" style="color: #e2e8f0; text-decoration: none; transition: all 0.3s ease; display: flex; align-items: center; gap: 0.5rem;" onmouseover="this.style.color='#ffd700'; this.style.transform='translateX(5px)';" onmouseout="this.style.color='#e2e8f0'; this.style.transform='translateX(0)';"><span>🎯</span>إعلانات جوجل</a></li>
+                      <li style="margin-bottom: 0.7rem;"><a href="/social-media-service.html" style="color: #e2e8f0; text-decoration: none; transition: all 0.3s ease; display: flex; align-items: center; gap: 0.5rem;" onmouseover="this.style.color='#ffd700'; this.style.transform='translateX(5px)';" onmouseout="this.style.color='#e2e8f0'; this.style.transform='translateX(0)';"><span>📱</span>إعلانات وسائل التواصل</a></li>
+                      <li style="margin-bottom: 0.7rem;"><a href="/ecommerce-service.html" style="color: #e2e8f0; text-decoration: none; transition: all 0.3s ease; display: flex; align-items: center; gap: 0.5rem;" onmouseover="this.style.color='#ffd700'; this.style.transform='translateX(5px)';" onmouseout="this.style.color='#e2e8f0'; this.style.transform='translateX(0)';"><span>🎨</span>تصميم المواقع</a></li>
+                  </ul>
+              </div>
 
-      fetch('../whatsapp-button.html')
-          .then(response => response.ok ? response.text() : '')
-          .then(html => {
-              if (html) {
-                  document.body.insertAdjacentHTML('beforeend', html);
-              }
-          })
-          .catch(() => console.log('لم يتم العثور على زر واتساب'));
-  });
-  </script>
+              <!-- قسم روابط مهمة -->
+              <div>
+                  <h3 style="color: white; font-size: 1.3rem; margin-bottom: 1.2rem; font-weight: 600; font-family: 'Cairo', sans-serif;">🔗 روابط مهمة</h3>
+                  <ul style="list-style: none; padding: 0; margin: 0;">
+                      <li style="margin-bottom: 0.7rem;"><a href="/blog/index.html" style="color: #e2e8f0; text-decoration: none; transition: all 0.3s ease; display: flex; align-items: center; gap: 0.5rem;" onmouseover="this.style.color='#ffd700'; this.style.transform='translateX(5px)';" onmouseout="this.style.color='#e2e8f0'; this.style.transform='translateX(0)';"><span>📰</span>مدونتنا</a></li>
+                      <li style="margin-bottom: 0.7rem;"><a href="/blog/ecommerce-seo-gulf-optimization.html" style="color: #e2e8f0; text-decoration: none; transition: all 0.3s ease; display: flex; align-items: center; gap: 0.5rem;" onmouseover="this.style.color='#ffd700'; this.style.transform='translateX(5px)';" onmouseout="this.style.color='#e2e8f0'; this.style.transform='translateX(0)';"><span>📊</span>سيو المتاجر الإلكترونية</a></li>
+                      <li style="margin-bottom: 0.7rem;"><a href="/services-page.html" style="color: #e2e8f0; text-decoration: none; transition: all 0.3s ease; display: flex; align-items: center; gap: 0.5rem;" onmouseover="this.style.color='#ffd700'; this.style.transform='translateX(5px)';" onmouseout="this.style.color='#e2e8f0'; this.style.transform='translateX(0)';"><span>💰</span>باقات الأسعار</a></li>
+                      <li style="margin-bottom: 0.7rem;"><a href="https://arabsad.com" target="_blank" style="color: #e2e8f0; text-decoration: none; transition: all 0.3s ease; display: flex; align-items: center; gap: 0.5rem;" onmouseover="this.style.color='#ffd700'; this.style.transform='translateX(5px)';" onmouseout="this.style.color='#e2e8f0'; this.style.transform='translateX(0)';"><span>🌐</span>الموقع الرسمي</a></li>
+                  </ul>
+              </div>
+
+              <!-- قسم تابعنا -->
+              <div>
+                  <h3 style="color: white; font-size: 1.3rem; margin-bottom: 1.2rem; font-weight: 600; font-family: 'Cairo', sans-serif;">👥 تابعنا</h3>
+                  <div class="social-links" style="display: flex; flex-direction: column; gap: 0.8rem;">
+                      <a href="https://wa.me/201110760081" target="_blank" class="social-link" style="color: #e2e8f0; text-decoration: none; transition: all 0.3s ease; display: flex; align-items: center; gap: 0.5rem; padding: 0.4rem; border-radius: 6px;" onmouseover="this.style.backgroundColor='rgba(37, 211, 102, 0.2)'; this.style.color='#25D366';" onmouseout="this.style.backgroundColor='transparent'; this.style.color='#e2e8f0';"><span>💬</span>واتساب</a>
+                      <a href="#" target="_blank" style="color: #e2e8f0; text-decoration: none; transition: all 0.3s ease; display: flex; align-items: center; gap: 0.5rem; padding: 0.4rem; border-radius: 6px;" onmouseover="this.style.backgroundColor='rgba(24, 119, 242, 0.2)'; this.style.color='#1877F2';" onmouseout="this.style.backgroundColor='transparent'; this.style.color='#e2e8f0';"><span>📸</span>فيسبوك</a>
+                      <a href="#" target="_blank" style="color: #e2e8f0; text-decoration: none; transition: all 0.3s ease; display: flex; align-items: center; gap: 0.5rem; padding: 0.4rem; border-radius: 6px;" onmouseover="this.style.backgroundColor='rgba(228, 64, 95, 0.2)'; this.style.color='#E4405F';" onmouseout="this.style.backgroundColor='transparent'; this.style.color='#e2e8f0';"><span>📷</span>إنستجرام</a>
+                      <a href="#" target="_blank" style="color: #e2e8f0; text-decoration: none; transition: all 0.3s ease; display: flex; align-items: center; gap: 0.5rem; padding: 0.4rem; border-radius: 6px;" onmouseover="this.style.backgroundColor='rgba(255, 0, 80, 0.2)'; this.style.color='#ff0050';" onmouseout="this.style.backgroundColor='transparent'; this.style.color='#e2e8f0';"><span>🎬</span>تيك توك</a>
+                  </div>
+                  
+                  <!-- نشرة بريدية -->
+                  <div style="margin-top: 1.5rem; padding: 1.2rem; background: rgba(255, 255, 255, 0.05); border-radius: 10px; border: 1px solid rgba(255, 255, 255, 0.1);">
+                      <h4 style="color: white; font-size: 1.1rem; margin-bottom: 0.8rem; font-weight: 600;">📩 اشترك في نشرتنا</h4>
+                      <div style="display: flex; gap: 0.5rem;">
+                          <input type="email" placeholder="بريدك الإلكتروني" style="flex: 1; padding: 0.6rem; border: none; border-radius: 6px; font-family: inherit; direction: rtl;">
+                          <button type="submit" style="background: linear-gradient(135deg, #ffd700 0%, #ffb700 100%); color: #2d3748; border: none; padding: 0.6rem 1rem; border-radius: 6px; font-weight: 600; cursor: pointer; transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">اشتراك</button>
+                      </div>
+                  </div>
+              </div>
+          </div>
+
+          <!-- قسم الحقوق والشارات -->
+          <div style="border-top: 1px solid rgba(255, 255, 255, 0.1); padding-top: 1.5rem; text-align: center;">
+              <div style="display: flex; justify-content: center; gap: 1.5rem; margin-bottom: 1rem; flex-wrap: wrap;">
+                  <span style="color: #a0aec0; font-size: 0.9rem;">✓ مرخص رسمياً</span>
+                  <span style="color: #a0aec0; font-size: 0.9rem;">✓ معتمد Google Partner</span>
+                  <span style="color: #a0aec0; font-size: 0.9rem;">✓ خبرة +7 سنوات</span>
+                  <span style="color: #a0aec0; font-size: 0.9rem;">✓ دعم 24/7</span>
+              </div>
+              <p style="margin: 0; color: #a0aec0; font-size: 0.95rem;">&copy; 2025 مؤسسة إعلانات العرب. جميع الحقوق محفوظة.</p>
+          </div>
+      </div>
+  </footer>
+
+  <!-- تحسينات الجوال -->
+  <style>
+  @media (max-width: 768px) {
+      .shared-header .header-content {
+          flex-direction: column !important;
+          gap: 1rem !important;
+      }
+      
+      .shared-header .header-nav {
+          flex-wrap: wrap !important;
+          justify-content: center !important;
+      }
+      
+      .shared-footer > div > div {
+          grid-template-columns: 1fr !important;
+          gap: 2rem !important;
+      }
+      
+      .social-links {
+          flex-direction: row !important;
+          flex-wrap: wrap !important;
+          gap: 0.5rem !important;
+      }
+      
+      .shared-footer h3 {
+          font-size: 1.2rem !important;
+      }
+  }
+  </style>
+
   <script src="../script.js" defer></script>
 </body>
 </html>
