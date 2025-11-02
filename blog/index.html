@@ -1,79 +1,61 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>مدونة إعلانات العرب</title>
-  <link rel="stylesheet" href="../assets/css/blog.css">
-  <style>
-    body { font-family: 'IBM Plex Sans Arabic', sans-serif; direction: rtl; background: #f9f9f9; margin: 0; padding: 0; }
-    header { text-align: center; margin: 0 0 30px 0; padding: 30px 10px 0 10px; background: #fff; border-bottom: 1px solid #eee; }
-    nav ul { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; }
-    nav ul li { display: block; }
-    nav ul li a { text-decoration: none; padding: 8px 15px; background: #0073e6; color: #fff; border-radius: 4px; transition: background 0.3s; font-size: 1rem; display: block; }
-    nav ul li a:hover { background: #005bb5; }
-    main { max-width: 1200px; margin: 40px auto 0 auto; padding: 0 16px; display: grid; grid-template-columns: repeat(auto-fit, minmax(270px, 1fr)); gap: 24px; }
-    .card { background: #fff; border-radius: 10px; box-shadow: 0 2px 12px rgba(0,0,0,0.08); cursor: pointer; padding: 28px 22px 26px 22px; text-align: center; transition: transform 0.2s ease, box-shadow 0.2s ease; }
-    .card:hover { transform: translateY(-5px); box-shadow: 0 6px 24px rgba(0,0,0,0.20); }
-    .card h3 { margin: 0 0 10px 0; color: #0073e6; font-size: 1.22rem; font-weight: 600; letter-spacing: 1px; }
-    .card p { margin: 0; color: #444; font-size: 0.98rem; line-height: 1.7; }
-    footer { text-align: center; padding: 30px 0 10px 0; color: #999; font-size: 0.97rem; background: #fff; border-top: 1px solid #eee; margin-top: 40px; }
-    @media (max-width: 600px) {
-      header { padding: 18px 5px 0 5px; }
-      main { grid-template-columns: 1fr; gap: 16px; }
-      .card { padding: 20px 10px 18px 10px; }
-    }
-  </style>
-  <script>
-    function openArticle(url) {
-      window.open(url, '_blank');
-    }
-  </script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>مدونة إعلانات العرب | نصائح التسويق الرقمي</title>
+<meta name="description" content="مدونة متخصصة في التسويق الرقمي والإعلانات الممولة. نصائح وأدلة شاملة لتحسين حملاتك الإعلانية.">
+<link rel="stylesheet" href="../assets/css/main.css">
+<link rel="stylesheet" href="../assets/css/ux-enhancements.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="../enhanced-arabic-fonts.css">
 </head>
 <body>
-  <header>
-    <h1>مدونة إعلانات العرب</h1>
-    <nav>
-      <ul>
-        <li><a href="#google-search">إعلانات جوجل بحث</a></li>
-        <li><a href="#google-display">إعلانات جوجل شبكة</a></li>
-        <li><a href="#google-youtube">إعلانات يوتيوب</a></li>
-        <li><a href="#google-shopping">إعلانات شوبنج</a></li>
-        <li><a href="#facebook">إعلانات فيسبوك</a></li>
-        <li><a href="#instagram">إعلانات إنستجرام</a></li>
-        <li><a href="#tiktok">إعلانات تيك توك</a></li>
-        <li><a href="#snapchat">إعلانات سناب شات</a></li>
-      </ul>
-    </nav>
-  </header>
-  <main>
-    <div class="card" onclick="openArticle('articles/google-search-ads.html')">
-      <h3>إعلانات جوجل بحث</h3>
-    </div>
-    <div class="card" onclick="openArticle('articles/google-display-ads.html')">
-      <h3>إعلانات جوجل شبكة</h3>
-    </div>
-    <div class="card" onclick="openArticle('articles/youtube-ads.html')">
-      <h3>إعلانات يوتيوب</h3>
-    </div>
-    <div class="card" onclick="openArticle('articles/google-shopping-ads.html')">
-      <h3>إعلانات شوبنج</h3>
-    </div>
-    <div class="card" onclick="openArticle('articles/facebook-ads.html')">
-      <h3>إعلانات فيسبوك</h3>
-    </div>
-    <div class="card" onclick="openArticle('articles/instagram-ads.html')">
-      <h3>إعلانات إنستجرام</h3>
-    </div>
-    <div class="card" onclick="openArticle('articles/tiktok-ads.html')">
-      <h3>إعلانات تيك توك</h3>
-    </div>
-    <div class="card" onclick="openArticle('articles/snapchat-ads.html')">
-      <h3>إعلانات سناب شات</h3>
-    </div>
-  </main>
-  <footer>
-    <p>© مؤسسة إعلانات العرب 2025</p>
-  </footer>
+<div class="reading-progress" id="progress"></div>
+<main class="container">
+<div style="text-align: center; padding: 3rem; background: linear-gradient(135deg, #667eea, #764ba2); color: white; border-radius: 20px; margin: 2rem 0;">
+  <h1 style="font-size: 3rem;">📰 مدونة إعلانات العرب</h1>
+  <p style="font-size: 1.2rem;">نصائح وأدلة متخصصة في التسويق الرقمي</p>
+</div>
+
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 2rem; margin: 3rem 0;">
+  <article style="background: white; padding: 2rem; border-radius: 15px; box-shadow: 0 8px 25px rgba(0,0,0,0.08);">
+    <h3>🇸🇦 دليل إعلانات جوجل السعودية 2025</h3>
+    <p>استراتيجيات متقدمة للنجاح في السوق السعودي</p>
+    <a href="google-ads-saudi-guide-2025.html" class="btn btn-primary">اقرأ المقال</a>
+  </article>
+  
+  <article style="background: white; padding: 2rem; border-radius: 15px; box-shadow: 0 8px 25px rgba(0,0,0,0.08);">
+    <h3>🛍️ تحسين SEO للمتاجر الخليجية</h3>
+    <p>كيفية تصدر نتائج البحث في أسواق الخليج</p>
+    <a href="ecommerce-seo-gulf-optimization.html" class="btn btn-primary">اقرأ المقال</a>
+  </article>
+  
+  <article style="background: white; padding: 2rem; border-radius: 15px; box-shadow: 0 8px 25px rgba(0,0,0,0.08);">
+    <h3>🎵 تسويق تيك توك وسناب شات 2025</h3>
+    <p>الوصول للجيل الجديد في منطقة الخليج</p>
+    <a href="tiktok-snapchat-gulf-marketing-2025.html" class="btn btn-primary">اقرأ المقال</a>
+  </article>
+</div>
+
+<div style="text-align: center; padding: 3rem; background: linear-gradient(135deg, #25D366, #128C7E); color: white; border-radius: 20px; margin: 3rem 0;">
+  <h2>💡 هل تحتاج استشارة تسويقية؟</h2>
+  <p style="font-size: 1.2rem; margin: 2rem 0;">فريقنا المتخصص جاهز لمساعدتك</p>
+  <a class="btn btn-primary" href="https://wa.me/201110760081?text=أحتاج%20استشارة%20تسويقية%20متخصصة" target="_blank">📞 استشارة مجانية</a>
+</div>
+
+</main>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    fetch('../shared-header.html').then(r => r.ok ? r.text() : '').then(html => { if (html) document.body.insertAdjacentHTML('afterbegin', html); });
+    fetch('../shared-footer.html').then(r => r.ok ? r.text() : '').then(html => { if (html) document.body.insertAdjacentHTML('beforeend', html); });
+    fetch('../whatsapp-button.html').then(r => r.ok ? r.text() : '').then(html => { if (html) document.body.insertAdjacentHTML('beforeend', html); });
+});
+
+const p=document.getElementById('progress');
+window.addEventListener('scroll',()=>{const h=document.documentElement;const s=h.scrollTop/(h.scrollHeight-h.clientHeight)*100;p.style.width=s+'%'});
+</script>
 </body>
 </html>
