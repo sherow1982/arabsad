@@ -33,7 +33,6 @@ body{font-family:var(--font);line-height:1.6;color:var(--text);background:var(--
 .nav-toggle{display:none}
 .nav-menu{display:flex;list-style:none;gap:2rem;align-items:center}
 .nav-menu a{color:var(--text);text-decoration:none;padding:.5rem 1rem;border-radius:8px;font-weight:600}
-@media(max-width:768px){.nav-menu{display:none;position:fixed;top:80px;left:0;right:0;background:#fff;flex-direction:column;padding:2rem;gap:1rem;box-shadow:var(--shadow)}.nav-menu.active{display:flex}.nav-toggle{display:flex;flex-direction:column;gap:4px;background:none;border:none;cursor:pointer;padding:8px}.nav-toggle span{width:24px;height:3px;background:var(--text);border-radius:2px}}
 /* dots & arrows */
 .ctrl{position:absolute;top:50%;transform:translateY(-50%);width:66px;height:66px;background:rgba(255,255,255,.95);border:none;border-radius:50%;font-size:1.8rem;color:var(--primary);cursor:pointer;box-shadow:var(--shadow);transition:var(--transition);z-index:20}
 .ctrl:hover{background:var(--primary);color:#fff;transform:translateY(-50%) scale(1.08)}
@@ -41,9 +40,85 @@ body{font-family:var(--font);line-height:1.6;color:var(--text);background:var(--
 .dots{position:absolute;bottom:1.5rem;left:50%;transform:translateX(-50%);display:flex;gap:.75rem;background:rgba(255,255,255,.25);padding:.75rem 1.25rem;border-radius:40px;backdrop-filter:blur(12px)}
 .dots button{width:14px;height:14px;border-radius:50%;background:rgba(255,255,255,.7);border:2px solid rgba(255,255,255,.9);cursor:pointer;transition:var(--transition)}
 .dots button.active{background:#fff;transform:scale(1.3)}
-/* remove any background images explicitly */
 .slide{background:none !important}
-@media(max-width:768px){.slider-container{min-height:calc(100vh - 80px)}.slide{padding:2rem 1rem}.btn{width:100%;max-width:300px}}
+
+/* 🔧 إصلاح التراكب على الجوال */
+@media (max-width: 480px) {
+  .header { min-height: 70px; z-index: 1001; }
+  .hero { margin-top: 78px !important; padding-top: 12px; }
+  .slider-container { min-height: calc(100vh - 90px); }
+  
+  /* إصلاح CTA العلوي */
+  .cta-header { 
+    padding: 0.6rem 1.1rem !important; 
+    font-size: 0.85rem !important;
+    border-radius: 18px !important;
+    white-space: nowrap;
+  }
+  
+  /* إصلاح الأزرار العائمة */
+  div[style*="position:fixed"][style*="bottom:20px"] {
+    bottom: 90px !important;
+  }
+  
+  #backTop {
+    bottom: 90px !important;
+    right: 16px !important;
+    width: 45px !important;
+    height: 45px !important;
+    font-size: 1.2rem !important;
+  }
+  
+  /* مسافة آمنة للـCTAs السفلية */
+  section[style*="text-align:center"] .ctas,
+  section[style*="text-align:center"] div[style*="gap:2rem"] {
+    padding-bottom: 100px !important;
+  }
+  
+  /* تحسين السلايدر */
+  .slide { padding: 1.8rem 0.8rem !important; }
+  .btn { 
+    width: 100% !important; 
+    max-width: 260px !important; 
+    padding: 0.9rem 1.8rem !important;
+    font-size: 0.95rem !important;
+  }
+  
+  .ctrl { 
+    width: 50px !important; 
+    height: 50px !important; 
+    font-size: 1.4rem !important; 
+  }
+  
+  #prevBtn { left: 0.8rem !important; }
+  #nextBtn { right: 0.8rem !important; }
+  
+  .dots { 
+    bottom: 0.8rem !important; 
+    padding: 0.6rem 1rem !important; 
+  }
+}
+
+@media (max-width: 390px) {
+  .hero { margin-top: 84px !important; }
+  .brand { font-size: 1.3rem !important; }
+  
+  .nav-menu.active {
+    top: 74px !important;
+    padding: 1.5rem !important;
+  }
+  
+  .slide-title { font-size: clamp(1.6rem, 7vw, 2.2rem) !important; }
+  .slide-subtitle { font-size: clamp(0.95rem, 4vw, 1.2rem) !important; }
+  .slide p.lead { font-size: clamp(0.85rem, 4.5vw, 1rem) !important; }
+}
+
+@media (max-width: 768px) {
+  .nav-menu{display:none;position:fixed;top:80px;left:0;right:0;background:#fff;flex-direction:column;padding:2rem;gap:1rem;box-shadow:var(--shadow)}
+  .nav-menu.active{display:flex}
+  .nav-toggle{display:flex;flex-direction:column;gap:4px;background:none;border:none;cursor:pointer;padding:8px}
+  .nav-toggle span{width:24px;height:3px;background:var(--text);border-radius:2px}
+}
 </style>
 </head>
 <body>
@@ -377,7 +452,7 @@ body{font-family:var(--font);line-height:1.6;color:var(--text);background:var(--
 <section style="padding:4rem 0;background:linear-gradient(135deg,var(--primary),#8b5cf6);text-align:center">
   <div class="container">
     <h2 style="font-size:clamp(1.8rem,4vw,2.5rem);font-weight:700;margin-bottom:1rem;color:white">📧 نصائح التسويق الحصرية</h2>
-    <p style="color:rgba(255,255,255,0.9);margin-bottom:2rem;font-size:clamp(1rem,2.5vw,1.2rem)">استراتيجيات سرية من خبراء يحققون الملياراتراتيجيات سرية من خبراء يحققون الملياراتx - مجاناً لك</p>
+    <p style="color:rgba(255,255,255,0.9);margin-bottom:2rem;font-size:clamp(1rem,2.5vw,1.2rem)">استراتيجيات سرية من خبراء يحققون المليارات - مجاناً لك</p>
     
     <form id="newsletter" style="max-width:500px;margin:0 auto">
       <div style="display:flex;gap:0.5rem;background:white;padding:0.75rem;border-radius:50px;box-shadow:0 8px 30px rgba(0,0,0,0.1)">
@@ -401,7 +476,7 @@ body{font-family:var(--font);line-height:1.6;color:var(--text);background:var(--
     <h2 style="font-size:clamp(2rem,5vw,3rem);font-weight:900;margin-bottom:1rem;background:linear-gradient(135deg,#1e293b,#3b82f6);-webkit-background-clip:text;-webkit-text-fill-color:transparent">🔥 جاهز لمضاعفة أرباحك؟</h2>
     <p style="color:var(--text-light);margin-bottom:2.5rem;font-size:clamp(1.1rem,3vw,1.4rem);font-weight:600">عملاؤنا يحققون أرباحاً من اليوم الأول - انضم إليهم الآن</p>
     
-    <div style="display:flex;gap:2rem;justify-content:center;flex-wrap:wrap;margin-bottom:2rem">
+    <div style="display:flex;gap:2rem;justify-content:center;flex-wrap:wrap;margin-bottom:2rem;padding-bottom:120px">
       <a href="https://wa.me/201110760081?text=أريد مضاعفة أرباحي الآن! 🚀💰" target="_blank" 
          style="background:linear-gradient(135deg,var(--success),#059669);color:white;padding:1.5rem 3.5rem;border-radius:50px;text-decoration:none;font-weight:800;font-size:1.3rem;box-shadow:0 12px 40px rgba(16,185,129,0.3);transition:var(--transition);display:inline-flex;align-items:center;gap:0.75rem" 
          onmouseover="this.style.transform='translateY(-5px) scale(1.08)';this.style.boxShadow='0 20px 60px rgba(16,185,129,0.4)'" 
@@ -441,8 +516,8 @@ body{font-family:var(--font);line-height:1.6;color:var(--text);background:var(--
   </div>
 </section>
 
-<!-- 💬 WhatsApp Float -->
-<div style="position:fixed;bottom:20px;left:20px;z-index:1000">
+<!-- 💬 WhatsApp Float - FIXED POSITIONING -->
+<div style="position:fixed;bottom:20px;left:20px;z-index:1000" id="whatsappFloat">
   <a href="https://wa.me/201110760081?text=مرحباً! أريد مضاعفة أرباحي فوراً 💰" target="_blank" 
      style="background:linear-gradient(135deg,#25d366,#20b858);color:white;padding:1rem 1.5rem;border-radius:50px;text-decoration:none;font-weight:700;box-shadow:0 8px 30px rgba(37,211,102,0.4);transition:var(--transition);display:flex;align-items:center;gap:0.5rem"
      onmouseover="this.style.transform='translateY(-3px) scale(1.05)'" 
@@ -451,7 +526,7 @@ body{font-family:var(--font);line-height:1.6;color:var(--text);background:var(--
   </a>
 </div>
 
-<!-- 📊 Back to Top -->
+<!-- 📊 Back to Top - FIXED POSITIONING -->
 <button id="backTop" style="position:fixed;bottom:20px;right:20px;width:50px;height:50px;background:linear-gradient(135deg,var(--primary),#8b5cf6);color:white;border:none;border-radius:50%;font-size:1.5rem;cursor:pointer;box-shadow:0 8px 30px rgba(59,130,246,0.3);transition:var(--transition);z-index:999;display:none" onclick="window.scrollTo({top:0,behavior:'smooth'})" onmouseover="this.style.transform='translateY(-3px) scale(1.1)'" onmouseout="this.style.transform=''">↑</button>
 
 <!-- Toast Container -->
@@ -485,18 +560,108 @@ document.addEventListener('DOMContentLoaded',()=>{
   initBackTop();
   
   console.log('🚀 ArabSad.com - Ultra Performance Mode Activated!');
-  console.log('📱 Fully responsive on all devices');
+  console.log('📱 Mobile overlap issues fixed');
   console.log('🔗 Facebook updated to: https://www.facebook.com/arabads.me');
   console.log('📝 Blog linked and accessible');
 });
 
-// Add CSS animations
+// Add CSS animations + Mobile Fixes
 const style=document.createElement('style');
 style.textContent=`
 @keyframes slideIn{from{transform:translateX(100%);opacity:0}to{transform:translateX(0);opacity:1}}
 @keyframes slideOut{from{transform:translateX(0);opacity:1}to{transform:translateX(100%);opacity:0}}
-@media(max-width:768px){.slide{padding:2rem 1rem !important}.slide-content{max-width:100% !important}.slide-title{font-size:clamp(1.8rem,6vw,2.5rem) !important}.slide-subtitle{font-size:clamp(1rem,3.5vw,1.3rem) !important}.slide a[style*="padding"]{width:100% !important;max-width:280px !important;margin:0.5rem auto !important;justify-content:center !important;padding:1rem 2rem !important;font-size:1rem !important}#prevBtn,#nextBtn{width:50px !important;height:50px !important;font-size:1.5rem !important}#prevBtn{left:1rem !important}#nextBtn{right:1rem !important}#dots{bottom:1rem !important;padding:0.75rem 1.5rem !important;gap:0.75rem !important}.container{padding:0 0.75rem !important}}
-@media(max-width:480px){.hero{min-height:calc(100vh - 80px) !important}.slide{padding:1.5rem 0.75rem !important}#toasts{right:10px !important;left:10px !important;top:90px !important}.toast{font-size:0.9rem !important}.slide p.lead{font-size:clamp(0.9rem,4vw,1.1rem) !important}}
+
+/* 🔧 CRITICAL MOBILE FIXES */
+@media (max-width: 480px) {
+  /* Header safe zone */
+  .header { min-height: 72px; z-index: 1001; }
+  .hero { margin-top: 82px !important; padding-top: 8px; }
+  .slider-container { min-height: calc(100vh - 90px); }
+  
+  /* CTA Header compact */
+  .cta-header { 
+    padding: 0.6rem 1.1rem !important; 
+    font-size: 0.85rem !important;
+    border-radius: 18px !important;
+    white-space: nowrap;
+  }
+  
+  /* Fixed floating elements - NO OVERLAP */
+  #whatsappFloat {
+    bottom: 90px !important;
+    left: 16px !important;
+    transform: translateZ(0);
+  }
+  
+  #backTop {
+    bottom: 90px !important;
+    right: 16px !important;
+    width: 45px !important;
+    height: 45px !important;
+    font-size: 1.2rem !important;
+  }
+  
+  /* Safe padding for bottom CTAs */
+  section[style*="text-align:center"] div[style*="gap:2rem"] {
+    padding-bottom: 100px !important;
+  }
+  
+  /* Slider improvements */
+  .slide { padding: 1.8rem 0.8rem !important; }
+  .btn { 
+    width: 100% !important; 
+    max-width: 260px !important; 
+    padding: 0.9rem 1.8rem !important;
+    font-size: 0.95rem !important;
+    margin: 0.25rem auto !important;
+  }
+  
+  .ctrl { 
+    width: 52px !important; 
+    height: 52px !important; 
+    font-size: 1.5rem !important; 
+  }
+  
+  #prevBtn { left: 0.8rem !important; }
+  #nextBtn { right: 0.8rem !important; }
+  
+  .dots { 
+    bottom: 0.8rem !important; 
+    padding: 0.6rem 1rem !important; 
+    gap: 0.6rem !important;
+  }
+}
+
+@media (max-width: 390px) {
+  .hero { margin-top: 86px !important; }
+  .brand { font-size: 1.25rem !important; }
+  
+  .nav-menu.active {
+    top: 76px !important;
+    padding: 1.5rem !important;
+  }
+  
+  .slide-title { font-size: clamp(1.5rem, 7vw, 2.1rem) !important; }
+  .slide-subtitle { font-size: clamp(0.9rem, 4vw, 1.15rem) !important; }
+  .slide p.lead { font-size: clamp(0.8rem, 4.5vw, 0.95rem) !important; }
+  
+  /* Extra safe bottom spacing */
+  #whatsappFloat { bottom: 95px !important; left: 12px !important; }
+  #backTop { bottom: 95px !important; right: 12px !important; }
+}
+
+@media (max-width: 768px) {
+  .nav-menu{display:none;position:fixed;top:82px;left:0;right:0;background:#fff;flex-direction:column;padding:2rem;gap:1rem;box-shadow:var(--shadow)}
+  .nav-menu.active{display:flex}
+  .nav-toggle{display:flex;flex-direction:column;gap:4px;background:none;border:none;cursor:pointer;padding:8px}
+  .nav-toggle span{width:24px;height:3px;background:var(--text);border-radius:2px}
+  
+  .slide { padding: 2rem 1rem !important; }
+  .slide-content { max-width: 100% !important; }
+  .container { padding: 0 0.75rem !important; }
+}
+
+/* Performance optimizations */
 *{-webkit-tap-highlight-color:transparent}
 .slide-content>*{will-change:transform,opacity}
 .slider-track{will-change:transform;transform:translateZ(0)}
