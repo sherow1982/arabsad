@@ -1,198 +1,119 @@
 {
-  "name": "مؤسسة إعلانات العرب - للتسويق الرقمي والإعلانات الممولة",
+  "name": "🚀 مؤسسة إعلانات العرب - الوكالة الرقمية #1",
   "short_name": "إعلانات العرب",
-  "description": "وكالة تسويق رقمي متخصصة في Google Ads وFacebook Ads وInstagram وSEO وتصميم المواقع في الخليج العربي. نضمن لك أفضل عائد على الاستثمار في إعلاناتك.",
-  "start_url": "/?utm_source=pwa",
+  "description": "الوكالة الرقمية #1 في الخليج - Google Ads والسوشيال ميديا وSEO والمتاجر الإلكترونية مع ضمان النتائج",
+  "start_url": "/",
   "scope": "/",
   "display": "standalone",
-  "display_override": ["window-controls-overlay", "standalone", "minimal-ui"],
-  "background_color": "#f8fafc",
-  "theme_color": "#3b82f6",
   "orientation": "portrait-primary",
-  "dir": "rtl",
+  "theme_color": "#3b82f6",
+  "background_color": "#ffffff",
   "lang": "ar",
-  "categories": ["business", "marketing", "advertising", "finance", "productivity"],
-  "iarc_rating_id": "GENERAL",
-  "edge_side_panel": {
-    "preferred_width": 400
-  },
+  "dir": "rtl",
+  
   "icons": [
     {
-      "src": "/favicon.ico",
-      "sizes": "48x48",
+      "src": "favicon.ico",
+      "sizes": "16x16 32x32",
       "type": "image/x-icon",
       "purpose": "any"
     },
     {
-      "src": "/favicon.svg",
+      "src": "favicon.svg",
       "sizes": "any",
       "type": "image/svg+xml",
-      "purpose": "any"
+      "purpose": "any maskable"
     },
     {
-      "src": "/apple-touch-icon.png",
+      "src": "apple-touch-icon.png",
       "sizes": "180x180",
       "type": "image/png",
       "purpose": "any"
-    },
-    {
-      "src": "/assets/images/logo.svg",
-      "sizes": "any",
-      "type": "image/svg+xml",
-      "purpose": "any maskable"
-    },
-    {
-      "src": "/assets/images/icon-192.png",
-      "sizes": "192x192",
-      "type": "image/png",
-      "purpose": "any maskable"
-    },
-    {
-      "src": "/assets/images/icon-512.png",
-      "sizes": "512x512",
-      "type": "image/png",
-      "purpose": "any maskable"
     }
   ],
+  
   "screenshots": [
     {
-      "src": "/assets/images/screenshot-desktop.png",
-      "sizes": "1280x720",
-      "type": "image/png",
+      "src": "assets/images/desktop-screenshot.webp",
+      "sizes": "1920x1080",
+      "type": "image/webp",
       "form_factor": "wide",
-      "label": "الصفحة الرئيسية - نسخة سطح المكتب - الثيم الفاتح الجديد"
+      "label": "واجهة الحاسوب - مؤسسة إعلانات العرب"
     },
     {
-      "src": "/assets/images/screenshot-mobile.png",
-      "sizes": "390x844",
-      "type": "image/png",
+      "src": "assets/images/mobile-screenshot.webp",
+      "sizes": "430x932",
+      "type": "image/webp",
       "form_factor": "narrow",
-      "label": "الصفحة الرئيسية - نسخة الجوال - واجهة مبهرة وسهلة"
-    },
-    {
-      "src": "/assets/images/services-screenshot.png",
-      "sizes": "1280x720",
-      "type": "image/png",
-      "form_factor": "wide",
-      "label": "صفحة الخدمات - Google Ads وSocial Media وSEO"
+      "label": "واجهة الجوال - مؤسسة إعلانات العرب"
     }
   ],
+  
+  "categories": [
+    "business",
+    "productivity",
+    "marketing",
+    "finance"
+  ],
+  
   "shortcuts": [
     {
-      "name": "💬 تواصل واتساب - استشارة فورية",
-      "short_name": "واتساب",
-      "description": "تواصل مع فريق مؤسسة إعلانات العرب للحصول على استشارة مجانية فورية",
-      "url": "https://wa.me/201110760081?text=أريد استشارة مجانية فورية&utm_source=pwa_shortcut",
-      "icons": [
-        {
-          "src": "/assets/images/whatsapp-icon.png",
-          "sizes": "96x96",
-          "type": "image/png"
-        }
-      ]
-    },
-    {
-      "name": "🎯 خدمات Google Ads المتقدمة",
+      "name": "🎯 Google Ads",
       "short_name": "Google Ads",
-      "description": "إدارة حملات Google Ads احترافية مع ضمان أفضل عائد على الاستثمار",
+      "description": "خدمة Google Ads مع ضمان النتائج",
       "url": "/google-ads-service.html",
-      "icons": [
-        {
-          "src": "/assets/images/google-ads-icon.png",
-          "sizes": "96x96",
-          "type": "image/png"
-        }
-      ]
+      "icons": [{
+        "src": "favicon.svg",
+        "sizes": "96x96"
+      }]
     },
     {
-      "name": "📱 إعلانات السوشيال ميديا",
-      "short_name": "Social Ads",
-      "description": "إعلانات فيسبوك وإنستجرام وسناب شات وتيك توك لزيادة المبيعات",
+      "name": "📱 سوشيال ميديا",
+      "short_name": "سوشيال ميديا",
+      "description": "خدمات إدارة ونمو السوشيال ميديا",
       "url": "/social-media-service.html",
-      "icons": [
-        {
-          "src": "/assets/images/social-media-icon.png",
-          "sizes": "96x96",
-          "type": "image/png"
-        }
-      ]
+      "icons": [{
+        "src": "favicon.svg",
+        "sizes": "96x96"
+      }]
     },
     {
-      "name": "🔍 تحسين محركات البحث SEO",
-      "short_name": "SEO",
-      "description": "تحسين ترتيب موقعك في نتائج بحث Google لزيادة الزيارات المجانية",
-      "url": "/seo-service.html",
-      "icons": [
-        {
-          "src": "/assets/images/seo-icon.png",
-          "sizes": "96x96",
-          "type": "image/png"
-        }
-      ]
+      "name": "📝 المدونة",
+      "short_name": "المدونة",
+      "description": "مقالات ونصائح تسويقية متخصصة",
+      "url": "/blog/",
+      "icons": [{
+        "src": "favicon.svg",
+        "sizes": "96x96"
+      }]
     },
     {
-      "name": "📋 احصل على عرض سعر مخصص",
-      "short_name": "عرض سعر",
-      "description": "احصل على عرض سعر مخصص ومجاني لمشروعك التسويقي",
-      "url": "https://wa.me/201110760081?text=أطلب عرض سعر مخصص لمشروعي&utm_source=pwa_shortcut",
-      "icons": [
-        {
-          "src": "/assets/images/quote-icon.png",
-          "sizes": "96x96",
-          "type": "image/png"
-        }
-      ]
-    },
-    {
-      "name": "🌍 خدماتنا في دول الخليج",
-      "short_name": "الخليج",
-      "description": "تصفح خدماتنا المتميزة في جميع دول الخليج العربي",
-      "url": "/#countries",
-      "icons": [
-        {
-          "src": "/assets/images/gulf-icon.png",
-          "sizes": "96x96",
-          "type": "image/png"
-        }
-      ]
+      "name": "💬 تواصل فوري",
+      "short_name": "تواصل",
+      "description": "تواصل معنا عبر واتساب لاستشارة مجانية",
+      "url": "https://wa.me/201110760081?text=مرحباً! أريد استشارة فورية 🚀",
+      "icons": [{
+        "src": "favicon.svg",
+        "sizes": "96x96"
+      }]
     }
   ],
-  "related_applications": [
-    {
-      "platform": "web",
-      "url": "https://arabsad.com",
-      "id": "arabsad-web-app"
-    }
-  ],
+  
   "prefer_related_applications": false,
-  "file_handlers": [
-    {
-      "action": "/",
-      "accept": {
-        "text/csv": [".csv"],
-        "application/pdf": [".pdf"],
-        "image/jpeg": [".jpg", ".jpeg"],
-        "image/png": [".png"]
-      }
-    }
-  ],
+  "edge_side_panel": {
+    "preferred_width": 400
+  },
+  
+  "launch_handler": {
+    "client_mode": "navigate-existing"
+  },
+  
+  "handle_links": "preferred",
+  
   "protocol_handlers": [
     {
       "protocol": "web+arabsad",
-      "url": "/?utm_source=pwa&utm_medium=protocol&action=%s"
+      "url": "/contact?utm_source=pwa&ref=%s"
     }
-  ],
-  "share_target": {
-    "action": "/share",
-    "method": "GET",
-    "params": {
-      "title": "title",
-      "text": "text",
-      "url": "url"
-    }
-  },
-  "launch_handler": {
-    "client_mode": ["navigate-existing", "auto"]
-  },
-  "handle_links": "preferred"
+  ]
 }
