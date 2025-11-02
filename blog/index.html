@@ -1,72 +1,79 @@
 <!DOCTYPE html>
 <html lang="ar">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>مدونة إعلانات العرب</title>
-<link rel="stylesheet" href="../assets/css/blog.css">
-<script>
-function openArticle(url) {
-  window.open(url, '_blank');
-}
-</script>
-<style>
-  body { font-family: 'IBM Plex Sans Arabic', sans-serif; direction: rtl; padding: 20px; background: #f9f9f9; }
-  header { text-align: center; margin-bottom: 30px; }
-  nav ul { list-style: none; padding: 0; display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; }
-  nav ul li a { text-decoration: none; padding: 8px 15px; background: #0073e6; color: white; border-radius: 4px; transition: background 0.3s; }
-  nav ul li a:hover { background: #005bb5; }
-  main { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; max-width: 1200px; margin: 0 auto; }
-  .card { background: white; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); cursor: pointer; padding: 20px; transition: transform 0.2s ease, box-shadow 0.2s ease; }
-  .card:hover { transform: translateY(-5px); box-shadow: 0 4px 12px rgba(0,0,0,0.2); }
-  .card h3 { margin-top: 0; margin-bottom: 10px; color: #0073e6; }
-  .card p { margin: 0; color: #555; }
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>مدونة إعلانات العرب</title>
+  <link rel="stylesheet" href="../assets/css/blog.css">
+  <style>
+    body { font-family: 'IBM Plex Sans Arabic', sans-serif; direction: rtl; background: #f9f9f9; margin: 0; padding: 0; }
+    header { text-align: center; margin: 0 0 30px 0; padding: 30px 10px 0 10px; background: #fff; border-bottom: 1px solid #eee; }
+    nav ul { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; }
+    nav ul li { display: block; }
+    nav ul li a { text-decoration: none; padding: 8px 15px; background: #0073e6; color: #fff; border-radius: 4px; transition: background 0.3s; font-size: 1rem; display: block; }
+    nav ul li a:hover { background: #005bb5; }
+    main { max-width: 1200px; margin: 40px auto 0 auto; padding: 0 16px; display: grid; grid-template-columns: repeat(auto-fit, minmax(270px, 1fr)); gap: 24px; }
+    .card { background: #fff; border-radius: 10px; box-shadow: 0 2px 12px rgba(0,0,0,0.08); cursor: pointer; padding: 28px 22px 26px 22px; text-align: center; transition: transform 0.2s ease, box-shadow 0.2s ease; }
+    .card:hover { transform: translateY(-5px); box-shadow: 0 6px 24px rgba(0,0,0,0.20); }
+    .card h3 { margin: 0 0 10px 0; color: #0073e6; font-size: 1.22rem; font-weight: 600; letter-spacing: 1px; }
+    .card p { margin: 0; color: #444; font-size: 0.98rem; line-height: 1.7; }
+    footer { text-align: center; padding: 30px 0 10px 0; color: #999; font-size: 0.97rem; background: #fff; border-top: 1px solid #eee; margin-top: 40px; }
+    @media (max-width: 600px) {
+      header { padding: 18px 5px 0 5px; }
+      main { grid-template-columns: 1fr; gap: 16px; }
+      .card { padding: 20px 10px 18px 10px; }
+    }
+  </style>
+  <script>
+    function openArticle(url) {
+      window.open(url, '_blank');
+    }
+  </script>
 </head>
 <body>
-<header>
-<h1>مدونة إعلانات العرب</h1>
-<nav>
-<ul>
-<li><a href="#google-search">إعلانات جوجل بحث</a></li>
-<li><a href="#google-display">إعلانات جوجل شبكة</a></li>
-<li><a href="#google-youtube">إعلانات يوتيوب</a></li>
-<li><a href="#google-shopping">إعلانات شوبنج</a></li>
-<li><a href="#facebook">إعلانات فيسبوك</a></li>
-<li><a href="#instagram">إعلانات إنستجرام</a></li>
-<li><a href="#tiktok">إعلانات تيك توك</a></li>
-<li><a href="#snapchat">إعلانات سناب شات</a></li>
-</ul>
-</nav>
-</header>
-<main>
-<div class="card" onclick="openArticle('articles/google-search-ads.html')">
-<h3>إعلانات جوجل بحث</h3>
-</div>
-<div class="card" onclick="openArticle('articles/google-display-ads.html')">
-<h3>إعلانات جوجل شبكة</h3>
-</div>
-<div class="card" onclick="openArticle('articles/youtube-ads.html')">
-<h3>إعلانات يوتيوب</h3>
-</div>
-<div class="card" onclick="openArticle('articles/google-shopping-ads.html')">
-<h3>إعلانات شوبنج</h3>
-</div>
-<div class="card" onclick="openArticle('articles/facebook-ads.html')">
-<h3>إعلانات فيسبوك</h3>
-</div>
-<div class="card" onclick="openArticle('articles/instagram-ads.html')">
-<h3>إعلانات إنستجرام</h3>
-</div>
-<div class="card" onclick="openArticle('articles/tiktok-ads.html')">
-<h3>إعلانات تيك توك</h3>
-</div>
-<div class="card" onclick="openArticle('articles/snapchat-ads.html')">
-<h3>إعلانات سناب شات</h3>
-</div>
-</main>
-<footer>
-<p>© مؤسسة إعلانات العرب 2025</p>
-</footer>
+  <header>
+    <h1>مدونة إعلانات العرب</h1>
+    <nav>
+      <ul>
+        <li><a href="#google-search">إعلانات جوجل بحث</a></li>
+        <li><a href="#google-display">إعلانات جوجل شبكة</a></li>
+        <li><a href="#google-youtube">إعلانات يوتيوب</a></li>
+        <li><a href="#google-shopping">إعلانات شوبنج</a></li>
+        <li><a href="#facebook">إعلانات فيسبوك</a></li>
+        <li><a href="#instagram">إعلانات إنستجرام</a></li>
+        <li><a href="#tiktok">إعلانات تيك توك</a></li>
+        <li><a href="#snapchat">إعلانات سناب شات</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <div class="card" onclick="openArticle('articles/google-search-ads.html')">
+      <h3>إعلانات جوجل بحث</h3>
+    </div>
+    <div class="card" onclick="openArticle('articles/google-display-ads.html')">
+      <h3>إعلانات جوجل شبكة</h3>
+    </div>
+    <div class="card" onclick="openArticle('articles/youtube-ads.html')">
+      <h3>إعلانات يوتيوب</h3>
+    </div>
+    <div class="card" onclick="openArticle('articles/google-shopping-ads.html')">
+      <h3>إعلانات شوبنج</h3>
+    </div>
+    <div class="card" onclick="openArticle('articles/facebook-ads.html')">
+      <h3>إعلانات فيسبوك</h3>
+    </div>
+    <div class="card" onclick="openArticle('articles/instagram-ads.html')">
+      <h3>إعلانات إنستجرام</h3>
+    </div>
+    <div class="card" onclick="openArticle('articles/tiktok-ads.html')">
+      <h3>إعلانات تيك توك</h3>
+    </div>
+    <div class="card" onclick="openArticle('articles/snapchat-ads.html')">
+      <h3>إعلانات سناب شات</h3>
+    </div>
+  </main>
+  <footer>
+    <p>© مؤسسة إعلانات العرب 2025</p>
+  </footer>
 </body>
 </html>
