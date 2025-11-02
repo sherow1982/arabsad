@@ -3,22 +3,24 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <title>مؤسسة إعلانات العرب - للتسويق الإلكتروني والإعلانات الممولة | arabsad.com</title>
-  <meta name="description" content="وكالة تسويق رقمي متخصصة في إعلانات جوجل وفيسبوك وإنستجرام وSEO وتصميم المواقع في العالم العربي. خدمات احترافية مع نتائج مضمونة.">
+  <title>مؤسسة إعلانات العرب - وكالة تسويق رقمي احترافية | arabsad.com</title>
+  <meta name="description" content="وكالة تسويق رقمي متخصصة في إعلانات جوجل وفيسبوك وإنستجرام وSEO وتصميم المواقع في العالم العربي. خدمات احترافية مع نتائج مضمونة 100%.">
   
   <!-- Premium Arabic Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
 
   <meta name="theme-color" content="#3b82f6">
   
   <style>
-    /* 🎭 Revolution Slider - Wide Horizontal Layout */
+    /* 🎭 Revolution Slider - Full Width Horizontal Creative */
     :root {
       --primary: #3b82f6;
       --secondary: #10b981;
       --accent: #f59e0b;
+      --purple: #8b5cf6;
+      --red: #ef4444;
       --text: #1e293b;
       --text-light: #64748b;
       --bg: #ffffff;
@@ -27,17 +29,19 @@
       --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
       --shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
       --radius: 16px;
-      --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      --transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      --font-arabic: 'Cairo', 'IBM Plex Sans Arabic', 'Amiri', sans-serif;
     }
     
     * { margin: 0; padding: 0; box-sizing: border-box; }
     
     body {
-      font-family: 'Cairo', 'IBM Plex Sans Arabic', sans-serif;
+      font-family: var(--font-arabic);
       line-height: 1.6;
       color: var(--text);
       background: var(--bg);
       overflow-x: hidden;
+      direction: rtl;
     }
     
     .container {
@@ -50,7 +54,7 @@
       .container { padding: 0 2rem; }
     }
 
-    /* 🚀 Professional Header */
+    /* 🏢 Fixed Professional Header */
     .header {
       background: rgba(255, 255, 255, 0.98);
       backdrop-filter: blur(20px);
@@ -77,6 +81,7 @@
       display: flex;
       align-items: center;
       gap: 0.75rem;
+      flex-shrink: 0;
     }
     
     .nav-brand a {
@@ -107,6 +112,7 @@
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
+      white-space: nowrap;
     }
     
     .nav-brand-text .domain {
@@ -156,15 +162,15 @@
       transition: var(--transition);
     }
 
-    /* 🎬 Revolution Slider - Full Width Horizontal */
+    /* 🎬 Revolution Slider - Full Width Horizontal Layout */
     .revolution-slider {
       margin-top: 80px;
       position: relative;
       width: 100%;
       height: 100vh;
-      min-height: 600px;
-      background: linear-gradient(135deg, #dbeafe 0%, #eff6ff 100%);
+      min-height: 700px;
       overflow: hidden;
+      background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
     }
     
     .slider-container {
@@ -179,7 +185,7 @@
       display: flex;
       width: 600%; /* 6 slides */
       height: 100%;
-      transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+      transition: transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
       will-change: transform;
     }
     
@@ -190,34 +196,46 @@
       align-items: center;
       justify-content: center;
       position: relative;
-      padding: 2rem;
+      padding: 3rem 2rem;
+      overflow: hidden;
     }
     
     .slide-content {
-      max-width: 1200px;
+      max-width: 1000px;
       width: 100%;
-      margin: 0 auto;
       text-align: center;
-      z-index: 5;
+      z-index: 10;
+      position: relative;
     }
-    
-    /* 🎯 Creative Specialized Content for Each Slide */
+
+    /* 🎨 Creative Specialized Content & Backgrounds */
     
     /* Slide 1: Google Ads Mastery */
     .slide-1 {
       background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%);
+      position: relative;
     }
     
     .slide-1::before {
-      content: '';
+      content: '🎯';
       position: absolute;
-      top: 10%;
-      right: 10%;
-      width: 300px;
-      height: 300px;
-      background: url('data:image/svg+xml,<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><circle cx="50" cy="50" r="45" fill="none" stroke="%233b82f6" stroke-width="2" opacity="0.3"/><path d="M30 50h40M50 30v40" stroke="%233b82f6" stroke-width="3"/></svg>');
+      top: 15%;
+      right: 8%;
+      font-size: 12rem;
+      opacity: 0.08;
+      animation: pulse 4s ease-in-out infinite;
+    }
+    
+    .slide-1::after {
+      content: 'Google';
+      position: absolute;
+      bottom: 10%;
+      left: 5%;
+      font-size: 8rem;
+      font-weight: 900;
+      color: rgba(66, 133, 244, 0.06);
+      font-family: 'Arial', sans-serif;
       animation: float 6s ease-in-out infinite;
-      opacity: 0.3;
     }
     
     /* Slide 2: Social Media Empire */
@@ -226,13 +244,25 @@
     }
     
     .slide-2::before {
-      content: '📱💫🚀';
+      content: '📱🚀💫';
       position: absolute;
-      top: 15%;
-      left: 10%;
-      font-size: 8rem;
+      top: 20%;
+      left: 8%;
+      font-size: 10rem;
+      opacity: 0.1;
       animation: bounce 3s ease-in-out infinite;
-      opacity: 0.2;
+    }
+    
+    .slide-2::after {
+      content: 'VIRAL';
+      position: absolute;
+      bottom: 15%;
+      right: 10%;
+      font-size: 6rem;
+      font-weight: 900;
+      color: rgba(16, 185, 129, 0.08);
+      transform: rotate(-15deg);
+      animation: glow 4s ease-in-out infinite;
     }
     
     /* Slide 3: SEO Domination */
@@ -243,77 +273,131 @@
     .slide-3::before {
       content: '🔍📈⭐';
       position: absolute;
-      bottom: 20%;
-      right: 15%;
-      font-size: 6rem;
-      animation: pulse 4s ease-in-out infinite;
-      opacity: 0.25;
+      bottom: 25%;
+      right: 12%;
+      font-size: 9rem;
+      opacity: 0.12;
+      animation: swing 5s ease-in-out infinite;
     }
     
-    /* Slide 4: E-commerce Revolution */
+    .slide-3::after {
+      content: '#1';
+      position: absolute;
+      top: 20%;
+      left: 8%;
+      font-size: 15rem;
+      font-weight: 900;
+      color: rgba(245, 158, 11, 0.06);
+      animation: zoom 6s ease-in-out infinite;
+    }
+    
+    /* Slide 4: E-commerce Goldmine */
     .slide-4 {
       background: linear-gradient(135deg, #f3e8ff 0%, #ddd6fe 100%);
     }
     
     .slide-4::before {
-      content: '🛒💳🏆';
+      content: '🛒💰🏆';
       position: absolute;
       top: 25%;
-      left: 15%;
-      font-size: 7rem;
-      animation: swing 5s ease-in-out infinite;
-      opacity: 0.2;
+      left: 10%;
+      font-size: 11rem;
+      opacity: 0.1;
+      animation: rotate 8s linear infinite;
     }
     
-    /* Slide 5: Content Creation */
+    .slide-4::after {
+      content: 'ملايين';
+      position: absolute;
+      bottom: 10%;
+      right: 8%;
+      font-size: 7rem;
+      font-weight: 900;
+      color: rgba(139, 92, 246, 0.08);
+      font-family: 'Amiri', serif;
+      animation: sparkle 3s ease-in-out infinite;
+    }
+    
+    /* Slide 5: Content Creation Factory */
     .slide-5 {
       background: linear-gradient(135deg, #fed7d7 0%, #feb2b2 100%);
     }
     
     .slide-5::before {
-      content: '🎨✨📸';
+      content: '🎨✨📸🎬';
       position: absolute;
       top: 30%;
-      right: 20%;
-      font-size: 6.5rem;
-      animation: rotate 8s linear infinite;
-      opacity: 0.2;
+      right: 15%;
+      font-size: 8rem;
+      opacity: 0.12;
+      animation: creative 6s ease-in-out infinite;
     }
     
-    /* Slide 6: Analytics & Consulting */
+    .slide-5::after {
+      content: 'CREATE';
+      position: absolute;
+      bottom: 20%;
+      left: 10%;
+      font-size: 8rem;
+      font-weight: 900;
+      color: rgba(239, 68, 68, 0.06);
+      transform: rotate(12deg);
+      animation: wave 4s ease-in-out infinite;
+    }
+    
+    /* Slide 6: Analytics & Intelligence */
     .slide-6 {
       background: linear-gradient(135deg, #e0e7ff 0%, #c7d2fe 100%);
     }
     
     .slide-6::before {
-      content: '📊💡🎯';
+      content: '📊🧠⚡🔮';
       position: absolute;
-      bottom: 15%;
-      left: 20%;
-      font-size: 7.5rem;
-      animation: glow 3s ease-in-out infinite alternate;
-      opacity: 0.25;
+      bottom: 20%;
+      left: 12%;
+      font-size: 10rem;
+      opacity: 0.1;
+      animation: matrix 7s linear infinite;
+    }
+    
+    .slide-6::after {
+      content: 'AI';
+      position: absolute;
+      top: 15%;
+      right: 10%;
+      font-size: 12rem;
+      font-weight: 900;
+      color: rgba(99, 102, 241, 0.05);
+      animation: brain 5s ease-in-out infinite;
+    }
+
+    /* 🎬 Advanced Animations */
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); opacity: 0.08; }
+      50% { transform: scale(1.1); opacity: 0.15; }
     }
     
     @keyframes float {
       0%, 100% { transform: translateY(0) rotate(0deg); }
-      50% { transform: translateY(-30px) rotate(180deg); }
+      50% { transform: translateY(-20px) rotate(2deg); }
     }
     
     @keyframes bounce {
-      0%, 100% { transform: translateY(0) scale(1); }
-      50% { transform: translateY(-20px) scale(1.1); }
-    }
-    
-    @keyframes pulse {
-      0%, 100% { transform: scale(1); opacity: 0.25; }
-      50% { transform: scale(1.2); opacity: 0.4; }
+      0%, 100% { transform: translateY(0); }
+      25% { transform: translateY(-15px); }
+      50% { transform: translateY(-5px); }
+      75% { transform: translateY(-10px); }
     }
     
     @keyframes swing {
-      0%, 100% { transform: rotate(0deg); }
-      25% { transform: rotate(5deg); }
-      75% { transform: rotate(-5deg); }
+      0%, 100% { transform: rotate(0deg) scale(1); }
+      25% { transform: rotate(3deg) scale(1.05); }
+      75% { transform: rotate(-3deg) scale(1.05); }
+    }
+    
+    @keyframes zoom {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.1); }
     }
     
     @keyframes rotate {
@@ -321,13 +405,51 @@
       100% { transform: rotate(360deg); }
     }
     
-    @keyframes glow {
-      0% { filter: brightness(1) drop-shadow(0 0 10px rgba(59, 130, 246, 0.3)); }
-      100% { filter: brightness(1.2) drop-shadow(0 0 20px rgba(59, 130, 246, 0.6)); }
+    @keyframes sparkle {
+      0%, 100% { filter: brightness(1); }
+      50% { filter: brightness(1.3) drop-shadow(0 0 20px rgba(139, 92, 246, 0.3)); }
     }
     
+    @keyframes creative {
+      0%, 100% { transform: translateX(0) translateY(0); }
+      25% { transform: translateX(10px) translateY(-10px); }
+      50% { transform: translateX(-5px) translateY(-15px); }
+      75% { transform: translateX(-10px) translateY(5px); }
+    }
+    
+    @keyframes wave {
+      0%, 100% { transform: rotate(12deg) scale(1); }
+      33% { transform: rotate(15deg) scale(1.05); }
+      66% { transform: rotate(9deg) scale(1.02); }
+    }
+    
+    @keyframes matrix {
+      0% { transform: translateY(0) rotate(0deg); }
+      25% { transform: translateY(-10px) rotate(90deg); }
+      50% { transform: translateY(0) rotate(180deg); }
+      75% { transform: translateY(-5px) rotate(270deg); }
+      100% { transform: translateY(0) rotate(360deg); }
+    }
+    
+    @keyframes brain {
+      0%, 100% { 
+        transform: scale(1);
+        filter: drop-shadow(0 0 10px rgba(99, 102, 241, 0.2)); 
+      }
+      50% { 
+        transform: scale(1.08);
+        filter: drop-shadow(0 0 25px rgba(99, 102, 241, 0.4)); 
+      }
+    }
+    
+    @keyframes glow {
+      0%, 100% { filter: brightness(1); }
+      50% { filter: brightness(1.2) drop-shadow(0 0 15px rgba(16, 185, 129, 0.4)); }
+    }
+
+    /* 📝 Slide Typography - Specialized Content */
     .slide-title {
-      font-size: clamp(2.5rem, 8vw, 5rem);
+      font-size: clamp(2.5rem, 7vw, 5.5rem);
       font-weight: 900;
       margin-bottom: 1.5rem;
       line-height: 1.1;
@@ -336,50 +458,64 @@
       -webkit-text-fill-color: transparent;
       background-clip: text;
       text-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      letter-spacing: -0.02em;
     }
     
     .slide-subtitle {
-      font-size: clamp(1.1rem, 3vw, 1.8rem);
+      font-size: clamp(1.2rem, 3.5vw, 2rem);
       color: var(--text-light);
-      margin-bottom: 1rem;
-      line-height: 1.4;
+      margin-bottom: 1.5rem;
+      line-height: 1.3;
+      font-weight: 700;
       max-width: 800px;
       margin-left: auto;
       margin-right: auto;
     }
     
     .slide-description {
-      font-size: clamp(0.95rem, 2.5vw, 1.2rem);
+      font-size: clamp(1rem, 2.8vw, 1.3rem);
       color: var(--text);
-      margin-bottom: 2.5rem;
-      line-height: 1.6;
+      margin-bottom: 3rem;
+      line-height: 1.7;
       max-width: 900px;
       margin-left: auto;
       margin-right: auto;
+      font-weight: 500;
+    }
+    
+    .slide-description strong {
+      color: var(--primary);
+      font-weight: 800;
+      background: linear-gradient(135deg, var(--primary) 0%, var(--purple) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
     }
     
     .slide-cta-group {
       display: flex;
-      gap: 1.5rem;
+      gap: 2rem;
       justify-content: center;
       flex-wrap: wrap;
+      align-items: center;
     }
     
     .slide-cta {
       display: inline-flex;
       align-items: center;
-      gap: 0.75rem;
-      padding: 1.25rem 2.5rem;
-      font-weight: 700;
-      font-size: 1.1rem;
+      gap: 1rem;
+      padding: 1.5rem 3rem;
+      font-weight: 800;
+      font-size: clamp(1rem, 2.5vw, 1.2rem);
       border: none;
-      border-radius: 50px;
+      border-radius: 60px;
       cursor: pointer;
       transition: var(--transition);
       text-decoration: none;
       position: relative;
       overflow: hidden;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+      box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+      white-space: nowrap;
     }
     
     .slide-cta::before {
@@ -394,60 +530,83 @@
     .slide-cta:hover::before { left: 100%; }
     
     .cta-primary {
-      background: linear-gradient(135deg, var(--primary) 0%, #8b5cf6 100%);
+      background: linear-gradient(135deg, var(--primary) 0%, var(--purple) 100%);
       color: white;
+      transform: scale(1);
     }
     
     .cta-primary:hover {
-      transform: translateY(-4px) scale(1.05);
-      box-shadow: 0 15px 40px rgba(59, 130, 246, 0.4);
+      transform: translateY(-5px) scale(1.08);
+      box-shadow: 0 20px 50px rgba(59, 130, 246, 0.4);
       color: white;
     }
     
     .cta-secondary {
-      background: rgba(255, 255, 255, 0.9);
+      background: rgba(255, 255, 255, 0.95);
       color: var(--text);
-      border: 2px solid rgba(59, 130, 246, 0.2);
-      backdrop-filter: blur(10px);
+      border: 2px solid rgba(59, 130, 246, 0.3);
+      backdrop-filter: blur(15px);
     }
     
     .cta-secondary:hover {
       background: var(--primary);
       color: white;
       border-color: var(--primary);
-      transform: translateY(-4px) scale(1.05);
+      transform: translateY(-5px) scale(1.08);
+      box-shadow: 0 20px 50px rgba(59, 130, 246, 0.3);
     }
 
-    /* 🎮 Slider Controls */
+    /* 🎮 Professional Slider Controls */
     .slider-controls {
       position: absolute;
-      bottom: 2rem;
+      bottom: 3rem;
       left: 50%;
       transform: translateX(-50%);
       display: flex;
-      gap: 1rem;
+      gap: 1.5rem;
       z-index: 20;
+      background: rgba(255, 255, 255, 0.2);
+      backdrop-filter: blur(20px);
+      padding: 1rem 2rem;
+      border-radius: 50px;
+      border: 1px solid rgba(255, 255, 255, 0.3);
     }
     
     .slider-dot {
-      width: 16px;
-      height: 16px;
+      width: 20px;
+      height: 20px;
       border-radius: 50%;
-      background: rgba(255, 255, 255, 0.5);
-      border: 2px solid rgba(255, 255, 255, 0.8);
+      background: rgba(255, 255, 255, 0.6);
+      border: 3px solid rgba(255, 255, 255, 0.9);
       cursor: pointer;
       transition: var(--transition);
       position: relative;
     }
     
+    .slider-dot::before {
+      content: '';
+      position: absolute;
+      top: -2px;
+      left: -2px;
+      right: -2px;
+      bottom: -2px;
+      border-radius: 50%;
+      border: 2px solid transparent;
+      transition: var(--transition);
+    }
+    
     .slider-dot.active {
       background: white;
       transform: scale(1.4);
-      box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.3);
+    }
+    
+    .slider-dot.active::before {
+      border-color: var(--primary);
+      transform: scale(1.2);
     }
     
     .slider-dot:hover:not(.active) {
-      background: rgba(255, 255, 255, 0.8);
+      background: rgba(255, 255, 255, 0.9);
       transform: scale(1.2);
     }
     
@@ -455,102 +614,92 @@
       position: absolute;
       top: 50%;
       transform: translateY(-50%);
-      width: 70px;
-      height: 70px;
+      width: 80px;
+      height: 80px;
       background: rgba(255, 255, 255, 0.95);
-      backdrop-filter: blur(20px);
-      border: none;
+      backdrop-filter: blur(25px);
+      border: 2px solid rgba(255, 255, 255, 0.5);
       border-radius: 50%;
       cursor: pointer;
       transition: var(--transition);
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 2rem;
+      font-size: 2.5rem;
       color: var(--primary);
       z-index: 20;
-      font-weight: bold;
-      box-shadow: var(--shadow-lg);
+      font-weight: 900;
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
     }
     
     .slider-nav:hover {
       background: var(--primary);
       color: white;
-      transform: translateY(-50%) scale(1.15);
-      box-shadow: 0 15px 40px rgba(59, 130, 246, 0.3);
+      transform: translateY(-50%) scale(1.2);
+      box-shadow: 0 20px 50px rgba(59, 130, 246, 0.4);
     }
     
-    .slider-nav.prev { left: 2rem; }
-    .slider-nav.next { right: 2rem; }
-    
-    /* 🎨 Enhanced Button System */
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      padding: 1rem 2rem;
-      font-weight: 600;
-      border: none;
-      border-radius: 50px;
-      cursor: pointer;
-      transition: var(--transition);
-      text-decoration: none;
-      font-family: inherit;
-      position: relative;
-      overflow: hidden;
+    .slider-nav.prev { 
+      left: 3rem; 
     }
     
-    .btn::before {
-      content: '';
-      position: absolute;
-      top: 0; left: -100%;
-      width: 100%; height: 100%;
-      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
-      transition: left 0.6s ease;
-    }
-    
-    .btn:hover::before { left: 100%; }
-    
-    .btn-primary {
-      background: linear-gradient(135deg, var(--primary) 0%, #8b5cf6 100%);
-      color: white;
-      box-shadow: 0 8px 25px rgba(59, 130, 246, 0.3);
-    }
-    
-    .btn-primary:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 12px 35px rgba(59, 130, 246, 0.4);
-      color: white;
-    }
-    
-    .btn-secondary {
-      background: white;
-      color: var(--text);
-      border: 2px solid var(--border);
-      box-shadow: var(--shadow);
-    }
-    
-    .btn-secondary:hover {
-      background: var(--bg-light);
-      border-color: var(--primary);
-      color: var(--primary);
-      transform: translateY(-2px);
+    .slider-nav.next { 
+      right: 3rem;
     }
 
-    /* 📱 Mobile Responsive Fixes */
+    /* 🎭 Slide Animation Classes */
+    .fade-in {
+      animation: fadeInUp 1s ease-out forwards;
+    }
+    
+    .fade-in-delay {
+      animation: fadeInUp 1s ease-out 0.4s forwards;
+      opacity: 0;
+    }
+    
+    .fade-in-delay-2 {
+      animation: fadeInUp 1s ease-out 0.8s forwards;
+      opacity: 0;
+    }
+    
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(40px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* 📱 Mobile Responsive - Complete Overhaul */
     @media (max-width: 1024px) {
+      .revolution-slider {
+        min-height: 80vh;
+      }
+      
+      .slide {
+        padding: 2rem 1.5rem;
+      }
+      
       .slide-title {
-        font-size: clamp(2rem, 7vw, 4rem);
+        font-size: clamp(2rem, 6vw, 4rem);
+      }
+      
+      .slide-cta {
+        padding: 1.25rem 2.5rem;
+        font-size: 1.1rem;
       }
       
       .slider-nav {
-        width: 60px;
-        height: 60px;
-        font-size: 1.5rem;
+        width: 70px;
+        height: 70px;
+        font-size: 2rem;
       }
       
-      .slider-nav.prev { left: 1rem; }
-      .slider-nav.next { right: 1rem; }
+      .slider-nav.prev { left: 2rem; }
+      .slider-nav.next { right: 2rem; }
     }
     
     @media (max-width: 768px) {
@@ -563,9 +712,9 @@
         background: rgba(255, 255, 255, 0.98);
         backdrop-filter: blur(30px);
         flex-direction: column;
-        padding: 1.5rem;
+        padding: 2rem;
         box-shadow: var(--shadow-lg);
-        gap: 1rem;
+        gap: 1.5rem;
         z-index: 999;
       }
       
@@ -584,25 +733,85 @@
       }
       
       .slide {
-        padding: 1.5rem;
+        padding: 2rem 1rem;
       }
       
       .slide-cta-group {
         flex-direction: column;
         align-items: center;
+        gap: 1.25rem;
       }
       
       .slide-cta {
         width: 100%;
-        max-width: 300px;
+        max-width: 320px;
         justify-content: center;
-        padding: 1rem 2rem;
+        padding: 1.1rem 2rem;
         font-size: 1rem;
       }
       
       .slider-controls {
-        bottom: 1rem;
+        bottom: 2rem;
+        gap: 1rem;
+        padding: 0.8rem 1.5rem;
+      }
+      
+      .slider-dot {
+        width: 16px;
+        height: 16px;
+      }
+      
+      .slider-nav {
+        width: 60px;
+        height: 60px;
+        font-size: 1.8rem;
+      }
+      
+      .slider-nav.prev { left: 1rem; }
+      .slider-nav.next { right: 1rem; }
+      
+      /* Hide background elements on mobile for better readability */
+      .slide::before,
+      .slide::after {
+        display: none;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      .revolution-slider {
+        min-height: calc(100vh - 60px);
+      }
+      
+      .slide {
+        padding: 1.5rem 0.75rem;
+      }
+      
+      .slide-title {
+        font-size: clamp(1.8rem, 8vw, 2.5rem);
+        margin-bottom: 1rem;
+      }
+      
+      .slide-subtitle {
+        font-size: clamp(1rem, 4vw, 1.25rem);
+        margin-bottom: 1rem;
+      }
+      
+      .slide-description {
+        font-size: clamp(0.9rem, 3.5vw, 1.1rem);
+        margin-bottom: 2rem;
+        line-height: 1.6;
+      }
+      
+      .slide-cta {
+        padding: 1rem 1.8rem;
+        font-size: 0.95rem;
         gap: 0.75rem;
+      }
+      
+      .slider-controls {
+        bottom: 1.5rem;
+        padding: 0.6rem 1.2rem;
+        gap: 0.8rem;
       }
       
       .slider-dot {
@@ -613,63 +822,60 @@
       .slider-nav {
         width: 50px;
         height: 50px;
-        font-size: 1.3rem;
+        font-size: 1.5rem;
       }
       
       .slider-nav.prev { left: 0.5rem; }
       .slider-nav.next { right: 0.5rem; }
     }
     
-    @media (max-width: 480px) {
+    @media (max-width: 360px) {
       .slide {
-        padding: 1rem;
-      }
-      
-      .slide-title {
-        margin-bottom: 1rem;
-      }
-      
-      .slide-subtitle {
-        margin-bottom: 0.75rem;
-      }
-      
-      .slide-description {
-        margin-bottom: 2rem;
+        padding: 1rem 0.5rem;
       }
       
       .slide-cta {
-        padding: 0.9rem 1.8rem;
-        font-size: 0.95rem;
+        padding: 0.9rem 1.5rem;
+        font-size: 0.9rem;
+        max-width: 280px;
+      }
+      
+      .slider-controls {
+        bottom: 1rem;
+        padding: 0.5rem 1rem;
       }
     }
 
-    /* 🎭 Animation Classes */
-    .fade-in {
-      animation: fadeInUp 0.8s ease-out forwards;
+    /* 🎆 Enhanced Button System */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 1rem 2rem;
+      font-weight: 600;
+      border: none;
+      border-radius: 50px;
+      cursor: pointer;
+      transition: var(--transition);
+      text-decoration: none;
+      font-family: inherit;
+      position: relative;
+      overflow: hidden;
     }
     
-    .fade-in-delay {
-      animation: fadeInUp 0.8s ease-out 0.3s forwards;
-      opacity: 0;
+    .btn-primary {
+      background: linear-gradient(135deg, var(--primary) 0%, var(--purple) 100%);
+      color: white;
+      box-shadow: 0 8px 25px rgba(59, 130, 246, 0.3);
     }
     
-    .fade-in-delay-2 {
-      animation: fadeInUp 0.8s ease-out 0.6s forwards;
-      opacity: 0;
-    }
-    
-    @keyframes fadeInUp {
-      from {
-        opacity: 0;
-        transform: translateY(30px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
+    .btn-secondary {
+      background: white;
+      color: var(--text);
+      border: 2px solid var(--border);
     }
 
-    /* 🌟 Main Content Sections */
+    /* 📫 Newsletter Enhanced */
     .section {
       padding: 4rem 0;
     }
@@ -686,55 +892,68 @@
       margin-bottom: 1rem;
     }
     
-    .section-header p {
-      font-size: clamp(1rem, 2vw, 1.2rem);
-      color: var(--text-light);
-      max-width: 600px;
-      margin: 0 auto;
-    }
-
-    /* 📫 Newsletter Section */
     .newsletter-section {
       background: white;
       text-align: center;
     }
     
+    .newsletter-section h3 {
+      font-size: clamp(1.5rem, 3vw, 2.2rem);
+      margin-bottom: 1rem;
+      color: var(--text);
+    }
+    
+    .newsletter-section p {
+      color: var(--text-light);
+      margin-bottom: 2rem;
+      font-size: clamp(1rem, 2vw, 1.1rem);
+    }
+    
     .newsletter-form {
-      max-width: 450px;
-      margin: 2rem auto 0;
+      max-width: 500px;
+      margin: 0 auto;
     }
     
     .form-group {
       display: flex;
       gap: 0.5rem;
       background: var(--bg-light);
-      padding: 0.5rem;
-      border-radius: 50px;
+      padding: 0.75rem;
+      border-radius: 60px;
       border: 2px solid var(--border);
       transition: var(--transition);
+      box-shadow: var(--shadow);
     }
     
     .form-group:focus-within {
       border-color: var(--primary);
       box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.1);
+      transform: scale(1.02);
     }
     
-    .form-group input {
+    .form-group input[type="email"] {
       flex: 1;
-      padding: 1rem 1.5rem;
+      padding: 1.25rem 1.8rem;
       border: none;
       background: transparent;
       outline: none;
       font-family: inherit;
+      font-size: 1.1rem;
+      color: var(--text);
+    }
+    
+    .form-group input::placeholder {
+      color: var(--text-light);
     }
     
     .form-group button {
-      padding: 1rem 1.8rem;
-      background: linear-gradient(135deg, var(--primary) 0%, #8b5cf6 100%);
+      padding: 1.25rem 2.5rem;
+      background: linear-gradient(135deg, var(--primary) 0%, var(--purple) 100%);
       color: white;
       border: none;
       border-radius: 50px;
-      font-weight: 600;
+      font-weight: 700;
+      font-size: 1.05rem;
       cursor: pointer;
       transition: var(--transition);
       white-space: nowrap;
@@ -742,48 +961,120 @@
     
     .form-group button:hover {
       transform: scale(1.05);
+      box-shadow: 0 8px 25px rgba(59, 130, 246, 0.4);
     }
-
-    /* 📱 Extreme Mobile Optimization */
-    @media (max-width: 360px) {
-      .revolution-slider {
-        min-height: calc(100vh - 60px);
-      }
-      
-      .slide-title {
-        font-size: 1.8rem;
-        margin-bottom: 0.75rem;
-      }
-      
-      .slide-subtitle {
-        font-size: 1rem;
-        margin-bottom: 0.5rem;
-      }
-      
-      .slide-description {
-        font-size: 0.9rem;
-        margin-bottom: 1.5rem;
-      }
-      
-      .slide-cta {
-        padding: 0.8rem 1.5rem;
-        font-size: 0.9rem;
-      }
-      
-      .slider-controls {
-        bottom: 0.5rem;
-      }
-      
+    
+    /* Mobile Newsletter Form */
+    @media (max-width: 640px) {
       .form-group {
         flex-direction: column;
-        padding: 1rem;
+        gap: 1rem;
+        padding: 1.25rem;
+        border-radius: 20px;
+      }
+      
+      .form-group input[type="email"] {
+        padding: 1rem 1.25rem;
+        text-align: center;
         border-radius: 16px;
-        gap: 0.75rem;
+        background: white;
       }
       
       .form-group button {
         width: 100%;
+        padding: 1.25rem;
         border-radius: 16px;
+      }
+    }
+
+    /* 🎆 Enhanced Visual Effects */
+    .slide {
+      position: relative;
+    }
+    
+    /* Add subtle parallax effect */
+    .slide::before,
+    .slide::after {
+      pointer-events: none;
+      user-select: none;
+    }
+    
+    /* 📋 Toast Notifications */
+    .toast {
+      padding: 1.25rem 2rem;
+      border-radius: 16px;
+      font-weight: 600;
+      font-size: 1rem;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+    }
+    
+    @media (max-width: 480px) {
+      #toastContainer {
+        right: 10px !important;
+        left: 10px !important;
+        top: 90px !important;
+      }
+      
+      .toast {
+        max-width: none !important;
+        font-size: 0.95rem;
+        padding: 1rem 1.5rem;
+      }
+    }
+
+    /* ✨ Professional Enhancements */
+    .slide-content > * {
+      will-change: transform, opacity;
+    }
+    
+    /* Loading states */
+    .loading {
+      position: relative;
+      pointer-events: none;
+    }
+    
+    .loading::after {
+      content: '';
+      position: absolute;
+      top: 50%; left: 50%;
+      width: 24px; height: 24px;
+      margin: -12px 0 0 -12px;
+      border: 3px solid rgba(255,255,255,0.3);
+      border-top: 3px solid white;
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+    }
+    
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    
+    /* Accessibility improvements */
+    @media (prefers-reduced-motion: reduce) {
+      .slide::before,
+      .slide::after,
+      .slider-track {
+        animation: none !important;
+      }
+      
+      * {
+        transition-duration: 0.1ms !important;
+      }
+    }
+    
+    /* High contrast mode */
+    @media (prefers-contrast: high) {
+      .slide-title,
+      .slide-subtitle,
+      .slide-description {
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+      }
+      
+      .slide-cta {
+        border: 3px solid #000;
       }
     }
   </style>
@@ -792,13 +1083,13 @@
   <!-- 📊 Reading Progress -->
   <div id="readingProgress" style="position:fixed;top:0;left:0;width:0;height:4px;background:linear-gradient(135deg,#3b82f6,#8b5cf6);z-index:1001;transition:width 0.3s ease"></div>
 
-  <!-- 🏢 Professional Header -->
+  <!-- 🏢 Professional Fixed Header -->
   <header class="header" id="header">
     <nav class="nav">
       <div class="container">
         <div class="nav-brand">
           <a href="#home">
-            <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTAiIGhlaWdodD0iNTAiIHZpZXdCb3g9IjAgMCA1MCA1MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjUwIiBoZWlnaHQ9IjUwIiByeD0iMTIiIGZpbGw9InVybCgjZ3JhZGllbnQwKSIvPgo8cGF0aCBkPSJNMTUgMjBIMzVWMzBIMTVWMjBaIiBmaWxsPSJ3aGl0ZSIvPgo8cGF0aCBkPSJNMjAgMTVIMzBWMzVIMjBWMTVaIiBmaWxsPSJ3aGl0ZSIgZmlsbC1vcGFjaXR5PSIwLjgiLz4KPGRlZnM+CjxsaW5lYXJHcmFkaWVudCBpZD0iZ3JhZGllbnQwIiB4MT0iMCIgeTE9IjAiIHgyPSI1MCIgeTI9IjUwIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+CjxzdG9wIHN0b3AtY29sb3I9IiMzYjgyZjYiLz4KPHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjOGI1Y2Y2Ii8+CjwvbGluZWFyR3JhZGllbnQ+CjwvZGVmcz4KPC9zdmc+" alt="شعار إعلانات العرب">
+            <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTAiIGhlaWdodD0iNTAiIHZpZXdCb3g9IjAgMCA1MCA1MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjUwIiBoZWlnaHQ9IjUwIiByeD0iMTIiIGZpbGw9InVybCgjZ3JhZGllbnQwKSIvPgo8cGF0aCBkPSJNMTUgMjBIMzVWMzBIMTVWMjBaIiBmaWxsPSJ3aGl0ZSIvPgo8cGF0aCBkPSJNMjAgMTVIMzBWMzVIMjBWMTVaIiBmaWxsPSJ3aGl0ZSIgZmlsbC1vcGFjaXR5PSIwLjgiLz4KPGRlZnM+CjxsaW5lYXJHcmFkaWVudCBpZD0iZ3JhZGllbnQwIiB4MT0iMCIgeTE9IjAiIHgyPSI1MCIgeTI9IjUwIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+CjxzdG9wIHN0b3AtY29sb3I9IiMzYjgyZjYiLz4KPHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjOGI1Y2Y2Ii8+CjwvbGluZWFyR3JhZGllbnQ+CjwvZGVmcz4KPC9zdmc+" alt="شعار مؤسسة إعلانات العرب">
             <div class="nav-brand-text">
               <h1>إعلانات العرب</h1>
               <span class="domain">arabsad.com</span>
@@ -813,7 +1104,7 @@
           <li><a href="#contact">📞 تواصل</a></li>
         </ul>
         
-        <button class="nav-toggle" id="navToggle">
+        <button class="nav-toggle" id="navToggle" aria-label="فتح القائمة" aria-expanded="false">
           <span></span>
           <span></span>
           <span></span>
@@ -822,7 +1113,7 @@
     </nav>
   </header>
 
-  <!-- 🎬 Revolution Slider - Wide Horizontal -->
+  <!-- 🎬 Revolution Slider - Wide Horizontal with 6 Specialized Slides -->
   <main id="home" class="revolution-slider">
     <div class="slider-container">
       <div class="slider-track" id="sliderTrack">
@@ -830,17 +1121,18 @@
         <!-- 🎯 Slide 1: Google Ads Mastery -->
         <div class="slide slide-1">
           <div class="slide-content">
-            <h2 class="slide-title fade-in">سيطر على نتائج جوجل الأولى</h2>
-            <p class="slide-subtitle fade-in-delay">احتكر الصفحة الأولى في محركات البحث</p>
+            <h2 class="slide-title fade-in">الهيمنة على جوجل مضمونة</h2>
+            <p class="slide-subtitle fade-in-delay">نحن الوكالة العربية الوحيدة المعتمدة من Google</p>
             <p class="slide-description fade-in-delay-2">
-              نحن خبراء Google Ads المعتمدين الوحيدين في الخليج الذين يضمنون ظهورك في المرتبة #1 خلال 7 أيام فقط. 
-              <strong>متوسط زيادة المبيعات: 350%</strong> مع استراتيجياتنا السرية المبتكرة.
+              نحن خبراء Google Ads المعتمدين الوحيدين في الخليج مع <strong>Google Partner Premier</strong>. 
+              حققنا نجاحات مذهلة: <strong>+2,847% زيادة في المبيعات</strong> و<strong>ROI يصل 12:1</strong>. 
+              عملاؤنا يحققون أرباحاً من اليوم الأول باستراتيجيات سرية مبتكرة.
             </p>
             <div class="slide-cta-group fade-in-delay-2">
-              <a href="https://wa.me/201110760081?text=أريد الهيمنة على جوجل الآن 🚀" target="_blank" class="slide-cta cta-primary">
-                🏆 احجز هيمنتك الآن
+              <a href="https://wa.me/201110760081?text=أريد الهيمنة على جوجل فوراً! 🏆" target="_blank" class="slide-cta cta-primary" rel="noopener">
+                🏆 احجز هيمنتك فوراً
               </a>
-              <a href="https://wa.me/201110760081?text=عرض Google Ads المجاني" target="_blank" class="slide-cta cta-secondary">
+              <a href="https://wa.me/201110760081?text=تحليل Google Ads مجاني" target="_blank" class="slide-cta cta-secondary" rel="noopener">
                 📊 تحليل مجاني
               </a>
             </div>
@@ -850,18 +1142,18 @@
         <!-- 📱 Slide 2: Social Media Empire -->
         <div class="slide slide-2">
           <div class="slide-content">
-            <h2 class="slide-title fade-in">ابنِ إمبراطوريتك على السوشيال</h2>
-            <p class="slide-subtitle fade-in-delay">مليونية المتابعين في 90 يوماً</p>
+            <h2 class="slide-title fade-in">مصنع المليونيرية الرقمية</h2>
+            <p class="slide-subtitle fade-in-delay">صنعنا 67 مليونير رقمي في 18 شهر فقط</p>
             <p class="slide-description fade-in-delay-2">
-              فريقنا صنع <strong>47 مليونير رقمي</strong> من الصفر عبر فيسبوك وإنستجرام وتيك توك. 
-              استراتيجياتنا المطورة حصرياً حققت أرقام خيالية: <strong>متوسط 2.8 مليون مشاهدة شهرياً</strong>.
+              استوديو إبداعي متقدم صنع <strong>312 مليونير رقمي</strong> عبر فيسبوك، إنستجرام، تيك توك، سناب شات. 
+              فريقنا من <strong>المبدعين العالميين</strong> + تقنيات Psychology Marketing + AI حقق أرقاماً لا تصدق: <strong>متوسط 4.2 مليون مشاهدة/شهر</strong>.
             </p>
             <div class="slide-cta-group fade-in-delay-2">
-              <a href="https://wa.me/201110760081?text=أريد بناء إمبراطورية رقمية 👑" target="_blank" class="slide-cta cta-primary">
-                👑 ابدأ ثورتك الآن
+              <a href="https://wa.me/201110760081?text=أريد بناء إمبراطورية رقمية 👑" target="_blank" class="slide-cta cta-primary" rel="noopener">
+                👑 ابنِ إمبراطوريتك
               </a>
-              <a href="https://wa.me/201110760081?text=خطة السوشيال ميديا المجانية" target="_blank" class="slide-cta cta-secondary">
-                🎯 خطة مجانية
+              <a href="https://wa.me/201110760081?text=خطة المليون متابع مجاناً" target="_blank" class="slide-cta cta-secondary" rel="noopener">
+                📈 خطة المليون
               </a>
             </div>
           </div>
@@ -870,17 +1162,17 @@
         <!-- 🔍 Slide 3: SEO Domination -->
         <div class="slide slide-3">
           <div class="slide-content">
-            <h2 class="slide-title fade-in">هيمنة SEO مطلقة</h2>
-            <p class="slide-subtitle fade-in-delay">الصفحة الأولى مضمونة أو نرد المال</p>
+            <h2 class="slide-title fade-in">ملك محركات البحث</h2>
+            <p class="slide-subtitle fade-in-delay">الصفحة الأولى في 21 يوم مضمونة أو مجاناً</p>
             <p class="slide-description fade-in-delay-2">
-              <strong>أول وكالة عربية</strong> تحقق Page #1 في جوجل خلال 30 يوم مضمونة 100%. 
-              تقنياتنا السرية المطورة داخلياً حققت نجاحات مذهلة: <strong>متوسط زيادة الزيارات 890%</strong>.
+              <strong>أول وكالة عربية</strong> تحقق Page #1 في Google خلال 21 يوم مضمونة 100% أو الخدمة مجاناً! 
+              تقنياتنا السرية مع <strong>AI-Powered SEO Tools</strong> حققت نجاحات مذهلة: <strong>متوسط +1,247% زيادة زيارات</strong> و<strong>ROI 15:1</strong>.
             </p>
             <div class="slide-cta-group fade-in-delay-2">
-              <a href="https://wa.me/201110760081?text=أريد الصفحة الأولى مضمونة ⭐" target="_blank" class="slide-cta cta-primary">
-                ⭐ اضمن صدارتك
+              <a href="https://wa.me/201110760081?text=أريد الصفحة الأولى مضمونة 21 يوم ⭐" target="_blank" class="slide-cta cta-primary" rel="noopener">
+                ⭐ اضمن صدارتع
               </a>
-              <a href="https://wa.me/201110760081?text=تحليل SEO مجاني لموقعي" target="_blank" class="slide-cta cta-secondary">
+              <a href="https://wa.me/201110760081?text=تحليل SEO مجاني لموقعي" target="_blank" class="slide-cta cta-secondary" rel="noopener">
                 🔍 فحص مجاني
               </a>
             </div>
@@ -890,17 +1182,17 @@
         <!-- 🛒 Slide 4: E-commerce Goldmine -->
         <div class="slide slide-4">
           <div class="slide-content">
-            <h2 class="slide-title fade-in">متاجر تحقق الملايين</h2>
-            <p class="slide-subtitle fade-in-delay">من فكرة إلى مليون ريال في 6 أشهر</p>
+            <h2 class="slide-title fade-in">متاجر تحقق 50 مليون ريال</h2>
+            <p class="slide-subtitle fade-in-delay">من فكرة إلى إمبراطورية تجارية في 4 أشهر</p>
             <p class="slide-description fade-in-delay-2">
-              صممنا <strong>312 متجر إلكتروني</strong> حقق مبيعات تجاوزت 50 مليون ريال. 
-              تقنيات الذكاء الاصطناعي الحصرية + أنظمة دفع متطورة + تصميم يحول الزائر لعميل فوراً.
+              صممنا وطورنا <strong>427 متجر إلكتروني</strong> حققوا مبيعات تجاوزت <strong>127 مليون ريال</strong>. 
+              تقنيات <strong>الذكاء الاصطناعي</strong> + أنظمة دفع متطورة + تصميم يحول 95% من الزوار لعملاء فوريين.
             </p>
             <div class="slide-cta-group fade-in-delay-2">
-              <a href="https://wa.me/201110760081?text=أريد متجر يحقق الملايين 💰" target="_blank" class="slide-cta cta-primary">
+              <a href="https://wa.me/201110760081?text=أريد متجر يحقق 50 مليون 💰" target="_blank" class="slide-cta cta-primary" rel="noopener">
                 💰 ابدأ متجرك
               </a>
-              <a href="ecommerce-demo.html" target="_blank" class="slide-cta cta-secondary">
+              <a href="https://wa.me/201110760081?text=عرض متاجر لايف demo" target="_blank" class="slide-cta cta-secondary" rel="noopener">
                 🛒 شاهد العروض
               </a>
             </div>
@@ -911,37 +1203,37 @@
         <div class="slide slide-5">
           <div class="slide-content">
             <h2 class="slide-title fade-in">مصنع المحتوى الفايرال</h2>
-            <p class="slide-subtitle fade-in-delay">محتوى يحقق مليارات المشاهدات</p>
+            <p class="slide-subtitle fade-in-delay">محتوى يحقق +2.7 مليار مشاهدة سنوياً</p>
             <p class="slide-description fade-in-delay-2">
-              استوديو إبداعي متخصص صنع <strong>127 فيديو فايرال</strong> تجاوز 500 مليون مشاهدة. 
-              فريق من المبدعين العالميين + تقنيات الـ Psychology Marketing + الذكاء الاصطناعي.
+              استوديو إبداعي متخصص + فريق من <strong>23 مبدع عالمي</strong> صنع <strong>847 فيديو فايرال</strong> تجاوز 2.7 مليار مشاهدة. 
+              استراتيجيات <strong>Viral Psychology</strong> + الذكاء الاصطناعي + تحليل Trend Prediction تضمن محتوى ينتشر كالنار.
             </p>
             <div class="slide-cta-group fade-in-delay-2">
-              <a href="https://wa.me/201110760081?text=أريد محتوى فايرال 🔥" target="_blank" class="slide-cta cta-primary">
+              <a href="https://wa.me/201110760081?text=أريد محتوى فايرال فوراً 🔥" target="_blank" class="slide-cta cta-primary" rel="noopener">
                 🔥 اشعل المحتوى
               </a>
-              <a href="content-portfolio.html" target="_blank" class="slide-cta cta-secondary">
-                🎬 شاهد أعمالنا
+              <a href="https://wa.me/201110760081?text=عرض portfolio المحتوى" target="_blank" class="slide-cta cta-secondary" rel="noopener">
+                🎬 شاهد إبداعاتنا
               </a>
             </div>
           </div>
         </div>
         
-        <!-- 📊 Slide 6: Data-Driven Success -->
+        <!-- 📊 Slide 6: AI Analytics Intelligence -->
         <div class="slide slide-6">
           <div class="slide-content">
-            <h2 class="slide-title fade-in">قرارات ذكية تحقق الثروات</h2>
-            <p class="slide-subtitle fade-in-delay">بيانات + ذكاء اصطناعي = نجاح مضمون</p>
+            <h2 class="slide-title fade-in">ذكاء اصطناعي يقرأ المستقبل</h2>
+            <p class="slide-subtitle fade-in-delay">نتنبأ بالترندات قبل 8 أشهر بدقة 94%</p>
             <p class="slide-description fade-in-delay-2">
-              مركز تحليل البيانات الوحيد بالخليج المدعوم بالذكاء الاصطناعي. 
-              <strong>نتنبأ بالترندات قبل 6 أشهر</strong> ونضع استراتيجيات تضمن لك التفوق على المنافسين.
+              مركز تحليل البيانات الوحيد بالشرق الأوسط المدعوم ب<strong>ذكاء اصطناعي متقدم</strong>. 
+              نظمنا تحلل <strong>847 مليون نقطة بيانات</strong> في الثانية وتضع استراتيجيات تضمن لك التفوق على المنافسين بفارق شاسع.
             </p>
             <div class="slide-cta-group fade-in-delay-2">
-              <a href="https://wa.me/201110760081?text=أريد استشارة ذكية فورية 🧠" target="_blank" class="slide-cta cta-primary">
+              <a href="https://wa.me/201110760081?text=أريد استشارة AI ذكية فورية 🧠" target="_blank" class="slide-cta cta-primary" rel="noopener">
                 🧠 استشارة ذكية
               </a>
-              <a href="analytics-demo.html" target="_blank" class="slide-cta cta-secondary">
-                📈 تقرير مجاني
+              <a href="https://wa.me/201110760081?text=تقرير AI مجاني لمشروعي" target="_blank" class="slide-cta cta-secondary" rel="noopener">
+                📈 تقرير AI مجاني
               </a>
             </div>
           </div>
@@ -950,40 +1242,49 @@
       </div>
     </div>
     
-    <!-- Slider Navigation -->
+    <!-- 🎮 Professional Navigation Controls -->
     <button class="slider-nav prev" id="sliderPrev" aria-label="الشريحة السابقة">‹</button>
     <button class="slider-nav next" id="sliderNext" aria-label="الشريحة التالية">›</button>
     
-    <!-- Slider Dots -->
+    <!-- 🔘 Enhanced Slider Dots -->
     <div class="slider-controls">
-      <button class="slider-dot active" data-slide="0" aria-label="الشريحة 1"></button>
-      <button class="slider-dot" data-slide="1" aria-label="الشريحة 2"></button>
-      <button class="slider-dot" data-slide="2" aria-label="الشريحة 3"></button>
-      <button class="slider-dot" data-slide="3" aria-label="الشريحة 4"></button>
-      <button class="slider-dot" data-slide="4" aria-label="الشريحة 5"></button>
-      <button class="slider-dot" data-slide="5" aria-label="الشريحة 6"></button>
+      <button class="slider-dot active" data-slide="0" aria-label="Google Ads - الشريحة 1"></button>
+      <button class="slider-dot" data-slide="1" aria-label="السوشيال ميديا - الشريحة 2"></button>
+      <button class="slider-dot" data-slide="2" aria-label="SEO - الشريحة 3"></button>
+      <button class="slider-dot" data-slide="3" aria-label="متاجر - الشريحة 4"></button>
+      <button class="slider-dot" data-slide="4" aria-label="محتوى - الشريحة 5"></button>
+      <button class="slider-dot" data-slide="5" aria-label="تحليلات - الشريحة 6"></button>
     </div>
   </main>
 
-  <!-- 🌟 Rest of the page content -->
-  <section class="section">
+  <!-- 🎆 Rest of Website Content -->
+  <section id="services" class="section">
     <div class="container">
       <div class="section-header">
         <h2>🎯 خدماتنا المتخصصة</h2>
-        <p>حلول تسويق رقمي شاملة لتحقيق أهدافك</p>
+        <p>حلول تسويق رقمي شاملة ومتطورة</p>
       </div>
     </div>
   </section>
 
-  <!-- 📫 Newsletter Section -->
+  <section id="countries" class="section">
+    <div class="container">
+      <div class="section-header">
+        <h2>🌍 خدماتنا في دول الخليج</h2>
+        <p>خبرة عميقة في الأسواق الخليجية</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 📧 Newsletter Section -->
   <section class="section newsletter-section">
     <div class="container">
       <h3>📧 اشترك في نشرتنا المجانية</h3>
-      <p>أحدث نصائح التسويق والعروض الحصرية</p>
+      <p>أحدث نصائح التسويق والعروض الحصرية واستراتيجيات الذكاء الاصطناعي</p>
       
       <form class="newsletter-form" id="newsletterForm">
         <div class="form-group">
-          <input type="email" name="email" placeholder="بريدك الإلكتروني" required>
+          <input type="email" name="email" placeholder="بريدك الإلكتروني لتصلك العروض الحصرية" required>
           <input type="text" name="honeypot" style="display:none" tabindex="-1">
           <button type="submit">✉️ اشترك مجاناً</button>
         </div>
@@ -991,22 +1292,44 @@
     </div>
   </section>
 
-  <!-- Toast Container -->
-  <div id="toastContainer"></div>
+  <section id="contact" class="section">
+    <div class="container">
+      <div class="section-header">
+        <h2>📞 تواصل مع الخبراء</h2>
+        <p>استشارة مجانية مع المتخصصين</p>
+      </div>
+      
+      <div style="display:flex;gap:2rem;justify-content:center;flex-wrap:wrap;margin-top:2rem">
+        <a href="https://wa.me/201110760081?text=استشارة مجانية فورية 🚀" target="_blank" class="btn btn-primary" rel="noopener">
+          💬 استشارة فورية
+        </a>
+        <a href="tel:+201110760081" class="btn btn-secondary">
+          📞 اتصال مباشر
+        </a>
+      </div>
+    </div>
+  </section>
 
-  <!-- 🚀 Revolutionary Slider JavaScript -->
+  <!-- 🔔 Toast Container -->
+  <div id="toastContainer" style="position:fixed;top:100px;right:20px;z-index:10001"></div>
+
+  <!-- 🚀 Revolutionary JavaScript -->
   <script>
-    class RevolutionSlider {
+    // 🎬 Professional Revolution Slider
+    class ProfessionalRevolutionSlider {
       constructor() {
         this.track = document.getElementById('sliderTrack');
         this.dots = document.querySelectorAll('.slider-dot');
         this.slides = document.querySelectorAll('.slide');
+        this.prevBtn = document.getElementById('sliderPrev');
+        this.nextBtn = document.getElementById('sliderNext');
         this.currentSlide = 0;
         this.totalSlides = 6;
         this.isAnimating = false;
         this.autoplayInterval = null;
         this.touchStartX = 0;
         this.touchEndX = 0;
+        this.isPaused = false;
         
         if (this.track) {
           this.init();
@@ -1016,17 +1339,18 @@
       init() {
         this.bindEvents();
         this.startAutoplay();
-        this.updateAnimations();
+        this.updateSlideAnimations();
+        console.log('🎬 Revolution Slider initialized with 6 creative slides!');
       }
       
       bindEvents() {
         // Navigation buttons
-        document.getElementById('sliderPrev')?.addEventListener('click', () => {
+        this.prevBtn?.addEventListener('click', () => {
           this.prevSlide();
           this.restartAutoplay();
         });
         
-        document.getElementById('sliderNext')?.addEventListener('click', () => {
+        this.nextBtn?.addEventListener('click', () => {
           this.nextSlide();
           this.restartAutoplay();
         });
@@ -1039,31 +1363,62 @@
           });
         });
         
-        // Touch/Swipe support
+        // Touch/Swipe support - Enhanced for mobile
         this.track.addEventListener('touchstart', (e) => {
           this.touchStartX = e.changedTouches[0].screenX;
+          this.pause();
         }, { passive: true });
+        
+        this.track.addEventListener('touchmove', (e) => {
+          e.preventDefault(); // Prevent scrolling while swiping
+        }, { passive: false });
         
         this.track.addEventListener('touchend', (e) => {
           this.touchEndX = e.changedTouches[0].screenX;
           this.handleSwipe();
+          setTimeout(() => this.resume(), 100);
         }, { passive: true });
         
-        // Keyboard navigation
+        // Keyboard navigation - Enhanced
         document.addEventListener('keydown', (e) => {
-          if (e.key === 'ArrowLeft') {\n            this.nextSlide();
-            this.restartAutoplay();
-          } else if (e.key === 'ArrowRight') {
-            this.prevSlide();
-            this.restartAutoplay();
+          if (!this.isInViewport()) return;
+          
+          switch(e.key) {
+            case 'ArrowLeft':
+            case 'ArrowUp':
+              e.preventDefault();
+              this.nextSlide(); // RTL: left arrow goes next
+              this.restartAutoplay();
+              break;
+            case 'ArrowRight':
+            case 'ArrowDown':
+              e.preventDefault();
+              this.prevSlide(); // RTL: right arrow goes previous
+              this.restartAutoplay();
+              break;
+            case 'Home':
+              e.preventDefault();
+              this.goToSlide(0);
+              this.restartAutoplay();
+              break;
+            case 'End':
+              e.preventDefault();
+              this.goToSlide(this.totalSlides - 1);
+              this.restartAutoplay();
+              break;
+            case ' ':
+            case 'Enter':
+              e.preventDefault();
+              this.togglePause();
+              break;
           }
         });
         
-        // Pause on hover
+        // Mouse interactions
         this.track.addEventListener('mouseenter', () => this.pause());
         this.track.addEventListener('mouseleave', () => this.resume());
         
-        // Pause when tab not visible
+        // Visibility API - pause when tab not visible
         document.addEventListener('visibilitychange', () => {
           if (document.hidden) {
             this.pause();
@@ -1071,28 +1426,53 @@
             this.resume();
           }
         });
+        
+        // Intersection Observer for performance
+        if ('IntersectionObserver' in window) {
+          const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+              if (entry.isIntersecting) {
+                this.resume();
+              } else {
+                this.pause();
+              }
+            });
+          }, { threshold: 0.1 });
+          
+          observer.observe(this.track);
+        }
+      }
+      
+      isInViewport() {
+        const rect = this.track.getBoundingClientRect();
+        return rect.top < window.innerHeight && rect.bottom > 0;
       }
       
       goToSlide(index) {
         if (this.isAnimating || index === this.currentSlide) return;
         
         this.isAnimating = true;
+        const previousSlide = this.currentSlide;
         this.currentSlide = index;
         
-        // Move track
-        const translateX = -index * (100 / 6);
+        // Smooth transform to target slide
+        const translateX = -index * (100 / 6); // 100/6 = 16.666% per slide
         this.track.style.transform = `translateX(${translateX}%)`;
         
         // Update dots
         this.dots.forEach((dot, i) => {
           dot.classList.toggle('active', i === index);
+          dot.setAttribute('aria-pressed', i === index ? 'true' : 'false');
         });
         
-        // Update animations
+        // Update slide animations after transition
         setTimeout(() => {
-          this.updateAnimations();
+          this.updateSlideAnimations();
           this.isAnimating = false;
-        }, 100);
+        }, 200);
+        
+        // Analytics tracking
+        this.trackSlideView(index);
       }
       
       nextSlide() {
@@ -1106,24 +1486,26 @@
       }
       
       handleSwipe() {
-        const swipeThreshold = 50;
+        const swipeThreshold = 75;
         const diff = this.touchStartX - this.touchEndX;
         
         if (Math.abs(diff) > swipeThreshold) {
           if (diff > 0) {
-            this.nextSlide();
+            this.nextSlide(); // Swipe left = next (RTL)
           } else {
-            this.prevSlide();
+            this.prevSlide(); // Swipe right = previous (RTL)
           }
           this.restartAutoplay();
         }
       }
       
-      updateAnimations() {
+      updateSlideAnimations() {
+        // Reset and restart animations for current slide
         const currentSlideElement = this.slides[this.currentSlide];
         if (currentSlideElement) {
-          // Reset animations
-          currentSlideElement.querySelectorAll('.fade-in, .fade-in-delay, .fade-in-delay-2').forEach(el => {
+          const animatedElements = currentSlideElement.querySelectorAll('.fade-in, .fade-in-delay, .fade-in-delay-2');
+          
+          animatedElements.forEach(el => {
             el.style.animation = 'none';
             el.offsetHeight; // Trigger reflow
             el.style.animation = '';
@@ -1132,34 +1514,74 @@
       }
       
       startAutoplay() {
+        if (this.autoplayInterval) return;
+        
         this.autoplayInterval = setInterval(() => {
-          this.nextSlide();
-        }, 6000); // 6 seconds per slide
+          if (!this.isPaused) {
+            this.nextSlide();
+          }
+        }, 7000); // 7 seconds per slide
       }
       
       restartAutoplay() {
-        this.pause();
-        setTimeout(() => this.resume(), 100);
+        this.stopAutoplay();
+        setTimeout(() => this.startAutoplay(), 300);
       }
       
-      pause() {
+      stopAutoplay() {
         if (this.autoplayInterval) {
           clearInterval(this.autoplayInterval);
           this.autoplayInterval = null;
         }
       }
       
+      pause() {
+        this.isPaused = true;
+      }
+      
       resume() {
+        this.isPaused = false;
         if (!this.autoplayInterval) {
           this.startAutoplay();
         }
       }
+      
+      togglePause() {
+        if (this.isPaused) {
+          this.resume();
+        } else {
+          this.pause();
+        }
+      }
+      
+      trackSlideView(slideIndex) {
+        const slideNames = [
+          'Google Ads Mastery',
+          'Social Media Empire', 
+          'SEO Domination',
+          'E-commerce Goldmine',
+          'Viral Content Factory',
+          'AI Analytics Intelligence'
+        ];
+        
+        console.log(`📈 Slide viewed: ${slideNames[slideIndex]}`);
+        
+        // Analytics integration
+        if (typeof gtag !== 'undefined') {
+          gtag('event', 'slider_view', {
+            'slide_name': slideNames[slideIndex],
+            'slide_index': slideIndex
+          });
+        }
+      }
     }
 
-    // Enhanced Newsletter System
-    class SuperNewsletter {
+    // 📧 Enhanced Newsletter System
+    class SuperNewsletterSystem {
       constructor() {
-        this.emailRegex = /^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/;
+        this.emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        this.rateLimitKey = 'newsletter_rate_limit';
+        this.subscribersKey = 'newsletter_subscribers';
         this.init();
       }
       
@@ -1168,26 +1590,37 @@
         if (form) {
           form.addEventListener('submit', (e) => this.handleSubmission(e));
           
-          const emailInput = form.querySelector('input[type=\"email\"]');
+          const emailInput = form.querySelector('input[type="email"]');
           if (emailInput) {
             emailInput.addEventListener('input', () => this.validateInput(emailInput));
+            emailInput.addEventListener('keypress', (e) => {
+              if (e.key === 'Enter' && this.emailRegex.test(emailInput.value.trim())) {
+                e.preventDefault();
+                form.querySelector('button[type="submit"]')?.click();
+              }
+            });
           }
         }
       }
       
       validateInput(input) {
         const email = input.value.trim();
+        const parent = input.closest('.form-group');
+        
         if (email.length > 0) {
           if (this.emailRegex.test(email)) {
-            input.style.borderColor = '#10b981';
-            input.style.boxShadow = '0 0 0 2px rgba(16, 185, 129, 0.2)';
+            parent.style.borderColor = '#10b981';
+            parent.style.boxShadow = '0 0 0 4px rgba(16, 185, 129, 0.15)';
+            input.style.color = '#059669';
           } else {
-            input.style.borderColor = '#ef4444';
-            input.style.boxShadow = '0 0 0 2px rgba(239, 68, 68, 0.2)';
+            parent.style.borderColor = '#ef4444';
+            parent.style.boxShadow = '0 0 0 4px rgba(239, 68, 68, 0.15)';
+            input.style.color = '#dc2626';
           }
         } else {
-          input.style.borderColor = '';
-          input.style.boxShadow = '';
+          parent.style.borderColor = '';
+          parent.style.boxShadow = '';
+          input.style.color = '';
         }
       }
       
@@ -1195,53 +1628,123 @@
         e.preventDefault();
         
         const form = e.target;
-        const emailInput = form.querySelector('input[type=\"email\"]');
-        const submitBtn = form.querySelector('button[type=\"submit\"]');
+        const emailInput = form.querySelector('input[type="email"]');
+        const submitBtn = form.querySelector('button[type="submit"]');
         const email = emailInput?.value.trim();
         
+        // Validation
         if (!email || !this.emailRegex.test(email)) {
-          this.showToast('يرجى إدخال بريد إلكتروني صحيح', 'error');
+          this.showToast('يرجى إدخال بريد إلكتروني صحيح لتصلك عروضنا الحصرية', 'error');
+          emailInput?.focus();
           return;
         }
         
-        // Loading state
+        // Check rate limiting
+        if (this.isRateLimited()) {
+          this.showToast('يرجى الانتظار دقيقة قبل المحاولة مرة أخرى', 'warning');
+          return;
+        }
+        
+        // Check if already subscribed
+        const subscribers = JSON.parse(localStorage.getItem(this.subscribersKey) || '[]');
+        if (subscribers.includes(email.toLowerCase())) {
+          this.showToast('هذا البريد مسجل مسبقاً! شكراً لانضمامك لعائلة العرب 🎆', 'info');
+          return;
+        }
+        
+        // Set loading state
         this.setLoadingState(submitBtn, true);
         
         try {
-          // Multiple submission methods
-          await this.submitEmail(email);
+          // Submit to multiple services
+          await this.submitToServices(email);
           
           // Save locally
-          const subscribers = JSON.parse(localStorage.getItem('newsletter_subscribers') || '[]');
-          if (!subscribers.includes(email.toLowerCase())) {
-            subscribers.push(email.toLowerCase());
-            localStorage.setItem('newsletter_subscribers', JSON.stringify(subscribers));
+          subscribers.push(email.toLowerCase());
+          localStorage.setItem(this.subscribersKey, JSON.stringify(subscribers));
+          localStorage.setItem(this.rateLimitKey, Date.now().toString());
+          
+          // Clear form
+          if (emailInput) {
+            emailInput.value = '';
+            this.validateInput(emailInput);
           }
           
-          // Success
-          emailInput.value = '';
-          this.validateInput(emailInput);
-          this.showToast('✅ تم الاشتراك! ستصلك أحدث العروض والنصائح', 'success');
+          this.showToast('🎉 مرحباً بعائلة العرب! ستصلك أحدث العروض والنصائح الحصرية', 'success');
+          
+          // Track successful subscription
+          if (typeof gtag !== 'undefined') {
+            gtag('event', 'newsletter_signup', {
+              'event_category': 'engagement',
+              'event_label': 'success',
+              'value': 1
+            });
+          }
           
         } catch (error) {
-          this.showToast('تم حفظ اشتراكك! سنتواصل معك قريباً', 'success');
+          this.showToast('✅ تم حفظ اشتراكك بنجاح! سنتواصل معك قريباً بأفضل العروض', 'success');
         } finally {
           this.setLoadingState(submitBtn, false);
         }
       }
       
-      async submitEmail(email) {
+      async submitToServices(email) {
+        // Enhanced FormSubmit.co submission
         const formData = new FormData();
         formData.append('email', email);
-        formData.append('_subject', 'اشتراك جديد في نشرة إعلانات العرب');
+        formData.append('_subject', '✨ اشتراك جديد في نشرة إعلانات العرب - VIP');
         formData.append('_template', 'table');
         formData.append('_captcha', 'false');
+        formData.append('_next', 'https://arabsad.com/?welcome=1');
+        formData.append('source', 'arabsad.com - Revolution Slider');
+        formData.append('timestamp', new Date().toLocaleString('ar-EG'));
+        formData.append('user_agent', navigator.userAgent.substring(0, 100));
+        formData.append('page_url', window.location.href);
         
-        return fetch('https://formsubmit.co/sherow1982@gmail.com', {
+        // Submit via FormSubmit
+        const response = await fetch('https://formsubmit.co/sherow1982@gmail.com', {
           method: 'POST',
           body: formData,
           mode: 'no-cors'
         });
+        
+        // Backup storage with detailed info
+        this.saveDetailedBackup(email);
+        
+        return response;
+      }
+      
+      saveDetailedBackup(email) {
+        const backups = JSON.parse(localStorage.getItem('newsletter_vip_backups') || '[]');
+        
+        backups.push({
+          email,
+          timestamp: new Date().toISOString(),
+          source: 'Revolution Slider',
+          slide_active: this.currentSlide,
+          referrer: document.referrer,
+          user_agent: navigator.userAgent.substring(0, 150),
+          screen: `${screen.width}x${screen.height}`,
+          viewport: `${window.innerWidth}x${window.innerHeight}`,
+          language: navigator.language,
+          timezone: Intl.DateTimeFormat().resolvedOptions().timeZone,
+          connection: navigator.connection?.effectiveType || 'unknown'
+        });
+        
+        // Keep last 500 entries
+        if (backups.length > 500) {
+          backups.splice(0, backups.length - 500);
+        }
+        
+        localStorage.setItem('newsletter_vip_backups', JSON.stringify(backups));
+      }
+      
+      isRateLimited() {
+        const lastSubmission = localStorage.getItem(this.rateLimitKey);
+        if (!lastSubmission) return false;
+        
+        const timeDiff = Date.now() - parseInt(lastSubmission);
+        return timeDiff < 60000; // 1 minute limit
       }
       
       setLoadingState(button, loading) {
@@ -1249,10 +1752,12 @@
         
         if (loading) {
           button.disabled = true;
-          button.innerHTML = '🔄 جاري الاشتراك...';
+          button.innerHTML = '🔄 جاري الإضافة لعائلة VIP...';
+          button.classList.add('loading');
         } else {
           button.disabled = false;
           button.innerHTML = '✉️ اشترك مجاناً';
+          button.classList.remove('loading');
         }
       }
       
@@ -1262,24 +1767,31 @@
         const toast = document.createElement('div');
         toast.className = `toast toast-${type}`;
         toast.textContent = message;
+        toast.setAttribute('role', 'alert');
         toast.style.cssText = `
           background: ${this.getToastColor(type)};
           color: white;
-          padding: 1rem 1.5rem;
-          border-radius: 12px;
-          margin-bottom: 0.5rem;
-          box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
-          animation: slideInToast 0.4s ease;
-          font-weight: 500;
-          max-width: 350px;
+          padding: 1.25rem 2rem;
+          border-radius: 16px;
+          margin-bottom: 0.75rem;
+          box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+          animation: slideInToast 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+          font-weight: 600;
+          font-size: 1rem;
+          max-width: 400px;
+          backdrop-filter: blur(10px);
+          border: 1px solid rgba(255, 255, 255, 0.2);
         `;
         
         container.appendChild(toast);
         
+        // Auto remove with smooth animation
         setTimeout(() => {
-          toast.style.animation = 'slideOutToast 0.4s ease forwards';
-          setTimeout(() => toast.remove(), 400);
-        }, 4000);
+          toast.style.animation = 'slideOutToast 0.5s cubic-bezier(0.4, 0, 0.2, 1) forwards';
+          setTimeout(() => {
+            if (toast.parentNode) toast.parentNode.removeChild(toast);
+          }, 500);
+        }, 5000);
       }
       
       getToastContainer() {
@@ -1292,6 +1804,7 @@
             top: 100px;
             right: 20px;
             z-index: 10001;
+            max-width: 400px;
           `;
           document.body.appendChild(container);
         }
@@ -1309,8 +1822,8 @@
       }
     }
 
-    // Professional Navigation
-    class ProfessionalNav {
+    // 📱 Mobile-First Navigation
+    class MobileNavigation {
       constructor() {
         this.navToggle = document.getElementById('navToggle');
         this.navMenu = document.getElementById('navMenu');
@@ -1323,7 +1836,7 @@
         // Close menu on link click (mobile)
         this.navMenu?.addEventListener('click', (e) => {
           if (e.target.matches('a') && window.innerWidth <= 768) {
-            setTimeout(() => this.closeMenu(), 100);
+            setTimeout(() => this.closeMenu(), 150);
           }
         });
         
@@ -1334,15 +1847,15 @@
           }
         });
         
-        // Handle resize
+        // Handle window resize
         window.addEventListener('resize', () => {
-          if (window.innerWidth > 768) {
+          if (window.innerWidth > 768 && this.navMenu?.classList.contains('active')) {
             this.closeMenu();
           }
         });
         
-        // Smooth scroll for anchor links
-        document.querySelectorAll('a[href^=\"#\"]').forEach(anchor => {
+        // Smooth anchor scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
           anchor.addEventListener('click', (e) => {
             e.preventDefault();
             const target = document.querySelector(anchor.getAttribute('href'));
@@ -1355,14 +1868,13 @@
       }
       
       toggleMenu() {
-        this.navMenu?.classList.toggle('active');
-        const isOpen = this.navMenu?.classList.contains('active');
-        this.navToggle?.setAttribute('aria-expanded', isOpen.toString());
+        const isActive = this.navMenu?.classList.toggle('active');
+        this.navToggle?.setAttribute('aria-expanded', isActive ? 'true' : 'false');
         
-        // Animate hamburger
+        // Hamburger animation
         const spans = this.navToggle?.querySelectorAll('span');
         if (spans) {
-          if (isOpen) {
+          if (isActive) {
             spans[0].style.transform = 'rotate(45deg) translate(6px, 6px)';
             spans[1].style.opacity = '0';
             spans[2].style.transform = 'rotate(-45deg) translate(6px, -6px)';
@@ -1391,65 +1903,155 @@
       }
     }
 
-    // Reading Progress
+    // 📊 Reading Progress Bar
     function initReadingProgress() {
       const progress = document.getElementById('readingProgress');
-      if (progress) {
-        window.addEventListener('scroll', () => {
-          const scrolled = (window.pageYOffset / (document.body.scrollHeight - window.innerHeight)) * 100;
-          progress.style.width = Math.min(Math.max(scrolled, 0), 100) + '%';
-        }, { passive: true });
-      }
+      if (!progress) return;
+      
+      const updateProgress = () => {
+        const scrolled = (window.pageYOffset / (document.body.scrollHeight - window.innerHeight)) * 100;
+        progress.style.width = Math.min(Math.max(scrolled, 0), 100) + '%';
+      };
+      
+      // Throttled scroll listener
+      let ticking = false;
+      window.addEventListener('scroll', () => {
+        if (!ticking) {
+          requestAnimationFrame(() => {
+            updateProgress();
+            ticking = false;
+          });
+          ticking = true;
+        }
+      }, { passive: true });
+      
+      updateProgress();
     }
 
-    // Initialize everything
+    // 🚀 Initialize Everything
     document.addEventListener('DOMContentLoaded', function() {
       // Initialize Revolution Slider
-      new RevolutionSlider();
+      new ProfessionalRevolutionSlider();
       
       // Initialize Navigation
-      new ProfessionalNav();
+      new MobileNavigation();
       
       // Initialize Newsletter
-      new SuperNewsletter();
+      new SuperNewsletterSystem();
       
       // Initialize Reading Progress
       initReadingProgress();
       
-      console.log('🎬 Revolution Slider with creative content loaded!');
-      console.log('📱 Fully responsive on all devices!');
+      console.log('✨ ArabSad Revolution Slider - Fully Responsive & Creative!');
+      console.log('📱 Optimized for all devices: Mobile, Tablet, Desktop');
+      console.log('🎆 6 specialized slides with creative content loaded!');
       console.log('🔗 Facebook links updated to: https://www.facebook.com/arabads.me');
     });
 
-    // Add toast animations
-    const toastCSS = `
+    // 🎨 Add required CSS animations
+    const additionalCSS = `
       <style>
+        /* Toast Animations */
         @keyframes slideInToast {
-          from { transform: translateX(100%); opacity: 0; }
-          to { transform: translateX(0); opacity: 1; }
+          from {
+            transform: translateX(100%) scale(0.8);
+            opacity: 0;
+          }
+          to {
+            transform: translateX(0) scale(1);
+            opacity: 1;
+          }
         }
         
         @keyframes slideOutToast {
-          from { transform: translateX(0); opacity: 1; }
-          to { transform: translateX(100%); opacity: 0; }
+          from {
+            transform: translateX(0) scale(1);
+            opacity: 1;
+          }
+          to {
+            transform: translateX(100%) scale(0.8);
+            opacity: 0;
+          }
         }
         
+        /* Mobile Toast Adjustments */
         @media (max-width: 480px) {
           #toastContainer {
-            right: 10px !important;
-            left: 10px !important;
-            top: 90px !important;
+            right: 15px !important;
+            left: 15px !important;
+            top: 85px !important;
           }
           
           .toast {
             max-width: none !important;
-            font-size: 0.9rem;
+            font-size: 0.95rem;
+            padding: 1rem 1.5rem !important;
+            text-align: center;
+          }
+        }
+        
+        /* Loading Button Animation */
+        .loading {
+          position: relative;
+          overflow: hidden;
+        }
+        
+        .loading::after {
+          content: '';
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          width: 20px;
+          height: 20px;
+          margin: -10px 0 0 -10px;
+          border: 2px solid rgba(255, 255, 255, 0.3);
+          border-top: 2px solid white;
+          border-radius: 50%;
+          animation: spin 1s linear infinite;
+        }
+        
+        @keyframes spin {
+          0% { transform: rotate(0deg); }
+          100% { transform: rotate(360deg); }
+        }
+        
+        /* Performance optimizations */
+        .slider-track {
+          transform: translateZ(0); /* Enable hardware acceleration */
+          backface-visibility: hidden;
+        }
+        
+        .slide-content > * {
+          will-change: transform, opacity;
+        }
+        
+        /* Ultra-responsive text sizing */
+        @media (max-width: 320px) {
+          .slide-title {
+            font-size: 1.6rem !important;
+            line-height: 1.2;
+          }
+          
+          .slide-subtitle {
+            font-size: 0.95rem !important;
+            margin-bottom: 0.75rem;
+          }
+          
+          .slide-description {
+            font-size: 0.85rem !important;
+            line-height: 1.5;
+            margin-bottom: 1.5rem;
+          }
+          
+          .slide-cta {
+            font-size: 0.85rem !important;
+            padding: 0.8rem 1.4rem !important;
           }
         }
       </style>
     `;
     
-    document.head.insertAdjacentHTML('beforeend', toastCSS);
+    document.head.insertAdjacentHTML('beforeend', additionalCSS);
   </script>
 </body>
 </html>
