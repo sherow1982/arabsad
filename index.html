@@ -11,56 +11,67 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preload" href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
   
+  <!-- OpenGraph & Social -->
+  <meta property="og:title" content="مؤسسة إعلانات العرب - وكالة تسويق رقمي #1">
+  <meta property="og:description" content="نضمن الصفحة الأولى في جوجل خلال 7 أيام أو نعيد المال">
+  <meta property="og:image" content="https://arabsad.com/assets/images/og-arabsad.jpg">
+  <meta property="og:url" content="https://arabsad.com">
+  <meta name="twitter:card" content="summary_large_image">
+  
   <!-- Critical CSS Inline -->
   <style>
-    /* 🎯 Critical CSS - Above the fold */
+    /* 🎯 Critical Performance CSS */
     :root {
       --primary: #3b82f6;
       --success: #10b981;
       --warning: #f59e0b;
+      --purple: #8b5cf6;
+      --red: #ef4444;
       --text: #1e293b;
       --text-light: #64748b;
       --bg: #ffffff;
       --bg-light: #f8fafc;
       --shadow: 0 4px 20px rgba(0,0,0,0.08);
+      --shadow-lg: 0 20px 40px rgba(0,0,0,0.1);
       --radius: 12px;
-      --transition: all 0.3s ease;
-      --font: 'Cairo', -apple-system, sans-serif;
+      --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      --font: 'Cairo', -apple-system, BlinkMacSystemFont, sans-serif;
     }
     
-    *{margin:0;padding:0;box-sizing:border-box}
-    body{font-family:var(--font);line-height:1.6;color:var(--text);background:var(--bg);overflow-x:hidden}
-    .container{max-width:1200px;margin:0 auto;padding:0 1rem}
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: var(--font); line-height: 1.6; color: var(--text); background: var(--bg); overflow-x: hidden; }
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 1rem; }
     
     /* Header Critical */
-    .header{position:fixed;top:0;left:0;right:0;background:rgba(255,255,255,0.98);backdrop-filter:blur(20px);z-index:1000;border-bottom:1px solid rgba(59,130,246,0.1)}
-    .nav{padding:1rem 0}.nav .container{display:flex;align-items:center;justify-content:space-between}
-    .brand{font-size:1.5rem;font-weight:900;background:linear-gradient(135deg,#3b82f6,#8b5cf6);-webkit-background-clip:text;-webkit-text-fill-color:transparent;text-decoration:none}
-    .cta-header{background:linear-gradient(135deg,var(--success),#059669);color:white;padding:0.75rem 1.5rem;border-radius:25px;text-decoration:none;font-weight:600;box-shadow:var(--shadow);transition:var(--transition)}
-    .cta-header:hover{transform:translateY(-2px);box-shadow:0 8px 30px rgba(16,185,129,0.3);color:white}
+    .header { position: fixed; top: 0; left: 0; right: 0; background: rgba(255,255,255,0.98); backdrop-filter: blur(20px); z-index: 1000; border-bottom: 1px solid rgba(59,130,246,0.1); }
+    .nav { padding: 1rem 0; }
+    .nav .container { display: flex; align-items: center; justify-content: space-between; }
+    .brand { font-size: 1.5rem; font-weight: 900; background: linear-gradient(135deg, #3b82f6, #8b5cf6); -webkit-background-clip: text; -webkit-text-fill-color: transparent; text-decoration: none; }
+    .cta-header { background: linear-gradient(135deg, var(--success), #059669); color: white; padding: 0.75rem 1.5rem; border-radius: 25px; text-decoration: none; font-weight: 600; box-shadow: var(--shadow); transition: var(--transition); }
+    .cta-header:hover { transform: translateY(-2px); box-shadow: 0 8px 30px rgba(16,185,129,0.3); color: white; }
     
-    /* Hero Critical */
-    .hero{margin-top:80px;position:relative;overflow:hidden;background:linear-gradient(135deg,#f8fafc 0%,#e2e8f0 100%)}
-    .slider-container{position:relative;width:100%;height:100vh;min-height:600px}
-    .slider-track{display:flex;width:600%;height:100%;transition:transform 0.8s cubic-bezier(0.4,0,0.2,1)}
-    .slide{width:calc(100%/6);height:100%;display:flex;align-items:center;justify-content:center;padding:2rem;text-align:center}
-    .slide-content{max-width:900px;z-index:10}
-    .slide-title{font-size:clamp(2rem,6vw,4.5rem);font-weight:900;line-height:1.1;margin-bottom:1rem;background:linear-gradient(135deg,#1e293b,#3b82f6);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
-    .slide-subtitle{font-size:clamp(1.1rem,3vw,1.8rem);color:var(--text-light);margin-bottom:1.5rem;font-weight:600}
+    /* Revolution Slider Critical */
+    .hero { margin-top: 80px; position: relative; overflow: hidden; background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%); }
+    .slider-container { position: relative; width: 100%; height: 100vh; min-height: 700px; }
+    .slider-track { display: flex; width: 600%; height: 100%; transition: transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94); will-change: transform; }
+    .slide { width: calc(100% / 6); height: 100%; display: flex; align-items: center; justify-content: center; padding: 3rem 2rem; text-align: center; position: relative; }
+    .slide-content { max-width: 900px; z-index: 10; position: relative; }
+    .slide-title { font-size: clamp(2.5rem, 6vw, 4.5rem); font-weight: 900; line-height: 1.1; margin-bottom: 1rem; background: linear-gradient(135deg, #1e293b, #3b82f6); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+    .slide-subtitle { font-size: clamp(1.2rem, 3vw, 1.8rem); color: var(--text-light); margin-bottom: 1.5rem; font-weight: 600; }
     
-    /* Mobile Navigation */
-    .nav-toggle{display:none;flex-direction:column;gap:4px;background:none;border:none;cursor:pointer;padding:8px}
-    .nav-toggle span{width:24px;height:3px;background:var(--text);border-radius:2px;transition:var(--transition)}
-    .nav-menu{display:flex;list-style:none;gap:2rem;align-items:center}
-    .nav-menu a{color:var(--text);text-decoration:none;padding:0.5rem 1rem;border-radius:8px;transition:var(--transition);font-weight:600}
-    .nav-menu a:hover{color:var(--primary);background:rgba(59,130,246,0.1)}
+    /* Navigation */
+    .nav-toggle { display: none; flex-direction: column; gap: 4px; background: none; border: none; cursor: pointer; padding: 8px; }
+    .nav-toggle span { width: 24px; height: 3px; background: var(--text); border-radius: 2px; transition: var(--transition); }
+    .nav-menu { display: flex; list-style: none; gap: 2rem; align-items: center; }
+    .nav-menu a { color: var(--text); text-decoration: none; padding: 0.5rem 1rem; border-radius: 8px; transition: var(--transition); font-weight: 600; }
+    .nav-menu a:hover { color: var(--primary); background: rgba(59,130,246,0.1); }
     
-    @media (max-width:768px){
-      .nav-menu{display:none;position:fixed;top:80px;left:0;right:0;background:white;flex-direction:column;padding:2rem;box-shadow:var(--shadow);gap:1rem}
-      .nav-menu.active{display:flex}
-      .nav-toggle{display:flex}
-      .hero{margin-top:80px}
-      .cta-header{padding:0.6rem 1.2rem;font-size:0.9rem}
+    @media (max-width: 768px) {
+      .nav-menu { display: none; position: fixed; top: 80px; left: 0; right: 0; background: white; flex-direction: column; padding: 2rem; box-shadow: var(--shadow-lg); gap: 1rem; }
+      .nav-menu.active { display: flex; }
+      .nav-toggle { display: flex; }
+      .hero { margin-top: 80px; }
+      .cta-header { padding: 0.6rem 1.2rem; font-size: 0.9rem; }
     }
   </style>
 </head>
@@ -95,7 +106,7 @@
     </nav>
   </header>
 
-  <!-- 🎬 Revolution Slider - Wide Horizontal -->
+  <!-- 🎬 Revolution Slider - 6 Slides Full Width -->
   <section id="home" class="hero">
     <div class="slider-container">
       <div class="slider-track" id="sliderTrack">
@@ -130,7 +141,7 @@
         <!-- 📱 Slide 2: Social Media Empire -->
         <div class="slide slide-2" style="background:linear-gradient(135deg,#dcfce7 0%,#bbf7d0 100%);background-image:url('https://user-gen-media-assets.s3.amazonaws.com/seedream_images/677b7c01-676d-4433-9c5f-fcb2babafc3a.png');background-size:contain;background-position:right center;background-repeat:no-repeat;background-blend-mode:soft-light">
           <div class="slide-content">
-            <h2 class="slide-title">📱 مصنع الملايين الرقمية</h2>
+            <h2 class="slide-title">📱 مصنع الملايينية الرقمية</h2>
             <p class="slide-subtitle">من 0 إلى مليون متابع في 90 يوماً - استراتيجية مثبتة</p>
             <p style="font-size:clamp(1rem,2.5vw,1.2rem);margin-bottom:2rem;color:var(--text)">
               صنعنا <strong>67 مليونير رقمي</strong> عبر فيسبوك وإنستجرام وتيك توك وسناب. 
@@ -161,11 +172,11 @@
             <p class="slide-subtitle">المرتبة #1 في جوجل خلال 21 يوماً مضمونة أو الخدمة مجاناً</p>
             <p style="font-size:clamp(1rem,2.5vw,1.2rem);margin-bottom:2rem;color:var(--text)">
               <strong>أول وكالة عربية</strong> تحقق Page #1 خلال 21 يوماً مضمونة أو نعمل مجاناً! 
-              تقنياتنا المطورة حققت <strong>+1,247% زيادة زيارات</strong> لعملائنا.
-              ✅ تقنيات AI حصرية ✅ نتائج قابلة للقياس ✅ ضمان مكتوب
+              تقنياتنا المطورة مع <strong>AI-Powered SEO Tools</strong> حققت نجاحات مذهلة: <strong>متوسط +1,247% زيادة زيارات</strong> و<strong>ROI 15:1</strong>.
+              ✅ تنبؤ بالترندات ✅ قرارات مبنية على البيانات ✅ ROI 15:1
             </p>
             <div style="display:flex;gap:1.5rem;justify-content:center;flex-wrap:wrap">
-              <a href="https://wa.me/201110760081?text=أريد المرتبة الأولى مضمونة ⭐" target="_blank" 
+              <a href="https://wa.me/201110760081?text=أريد المرتبة الأولى مضمونة 21 يوم ⭐" target="_blank" 
                  style="background:linear-gradient(135deg,var(--warning),#d97706);color:white;padding:1rem 2.5rem;border-radius:50px;text-decoration:none;font-weight:700;box-shadow:0 8px 30px rgba(245,158,11,0.3);transition:var(--transition)" 
                  onmouseover="this.style.transform='translateY(-3px) scale(1.05)'" 
                  onmouseout="this.style.transform=''">
@@ -184,15 +195,15 @@
         <!-- 🛒 Slide 4: E-commerce Empire -->
         <div class="slide slide-4" style="background:linear-gradient(135deg,#f3e8ff 0%,#ddd6fe 100%);background-image:url('https://user-gen-media-assets.s3.amazonaws.com/seedream_images/f00970fb-d989-4b0c-826b-470652de1244.png');background-size:contain;background-position:right center;background-repeat:no-repeat;background-blend-mode:soft-light">
           <div class="slide-content">
-            <h2 class="slide-title">🛒 متاجر تحقق الملايين</h2>
-            <p class="slide-subtitle">من فكرة إلى 7 أرقام في 6 أشهر - نظام مثبت ومضمون</p>
+            <h2 class="slide-title">🛒 متاجر تحقق 50 مليون ريال</h2>
+            <p class="slide-subtitle">من فكرة إلى إمبراطورية تجارية في 4 أشهر</p>
             <p style="font-size:clamp(1rem,2.5vw,1.2rem);margin-bottom:2rem;color:var(--text)">
-              طورنا <strong>427 متجر إلكتروني</strong> حقق مبيعات تجاوزت 127 مليون ريال. 
+              طورنا <strong>427 متجر إلكتروني</strong> حققوا مبيعات تجاوزت <strong>127 مليون ريال</strong>. 
               <strong>نظام ذكي متكامل:</strong> تصميم + تسويق + دفع + شحن + خدمة عملاء.
               ✅ تحويل 95% من الزوار ✅ دعم فني 24/7 ✅ ضمان الأرباح
             </p>
             <div style="display:flex;gap:1.5rem;justify-content:center;flex-wrap:wrap">
-              <a href="https://wa.me/201110760081?text=أريد متجر يحقق 7 أرقام 💰" target="_blank" 
+              <a href="https://wa.me/201110760081?text=أريد متجر يحقق 50 مليون 💰" target="_blank" 
                  style="background:linear-gradient(135deg,#8b5cf6,#6366f1);color:white;padding:1rem 2.5rem;border-radius:50px;text-decoration:none;font-weight:700;box-shadow:0 8px 30px rgba(139,92,246,0.3);transition:var(--transition)" 
                  onmouseover="this.style.transform='translateY(-3px) scale(1.05)'" 
                  onmouseout="this.style.transform=''">
@@ -212,10 +223,10 @@
         <div class="slide slide-5" style="background:linear-gradient(135deg,#fed7d7 0%,#fca5a5 100%);background-image:url('https://user-gen-media-assets.s3.amazonaws.com/seedream_images/677b7c01-676d-4433-9c5f-fcb2babafc3a.png');background-size:contain;background-position:left center;background-repeat:no-repeat;background-blend-mode:soft-light">
           <div class="slide-content">
             <h2 class="slide-title">🎨 مصنع المحتوى الفايرال</h2>
-            <p class="slide-subtitle">محتوى يحقق مليارات المشاهدات - سيكولوجيا + إبداع + AI</p>
+            <p class="slide-subtitle">محتوى يحقق +2.7 مليار مشاهدة سنوياً - سيكولوجيا + إبداع + AI</p>
             <p style="font-size:clamp(1rem,2.5vw,1.2rem);margin-bottom:2rem;color:var(--text)">
-              استوديو إبداعي متطور صنع <strong>847 فيديو فايرال</strong> تجاوز 2.7 مليار مشاهدة. 
-              <strong>23 مبدع عالمي</strong> + تقنيات Psychology Marketing + AI تنبؤ بالترندات.
+              استوديو إبداعي متطور + فريق من <strong>23 مبدع عالمي</strong> صنع <strong>847 فيديو فايرال</strong> تجاوز 2.7 مليار مشاهدة. 
+              استراتيجيات <strong>Viral Psychology</strong> + الذكاء الاصطناعي + تحليل Trend Prediction تضمن محتوى ينتشر كالنار.
               ✅ محتوى يومي احترافي ✅ فايرال مضمون ✅ نمو سريع
             </p>
             <div style="display:flex;gap:1.5rem;justify-content:center;flex-wrap:wrap">
@@ -242,7 +253,7 @@
             <p class="slide-subtitle">نتنبأ بالترندات قبل 8 أشهر بدقة 94% - قرارات ذكية مربحة</p>
             <p style="font-size:clamp(1rem,2.5vw,1.2rem);margin-bottom:2rem;color:var(--text)">
               <strong>مركز البيانات الوحيد</strong> بالشرق الأوسط المدعوم بالذكاء الاصطناعي المتقدم. 
-              نحلل <strong>847 مليون نقطة بيانات</strong> ونضع استراتيجيات تضمن تفوقك على المنافسين.
+              نحلل <strong>847 مليون نقطة بيانات</strong> ونضع استراتيجيات تضمن تفوقك على المنافسين بفارق شاسع.
               ✅ تنبؤ بالترندات ✅ قرارات مبنية على البيانات ✅ ROI 15:1
             </p>
             <div style="display:flex;gap:1.5rem;justify-content:center;flex-wrap:wrap">
@@ -271,16 +282,16 @@
     
     <!-- Dots -->
     <div id="sliderDots" style="position:absolute;bottom:2rem;left:50%;transform:translateX(-50%);display:flex;gap:1rem;background:rgba(255,255,255,0.2);padding:1rem 2rem;border-radius:50px;backdrop-filter:blur(20px)">
-      <button class="dot active" onclick="goToSlide(0)" style="width:16px;height:16px;border-radius:50%;background:white;border:2px solid rgba(255,255,255,0.5);cursor:pointer;transition:var(--transition)"></button>
-      <button class="dot" onclick="goToSlide(1)" style="width:16px;height:16px;border-radius:50%;background:rgba(255,255,255,0.5);border:2px solid rgba(255,255,255,0.8);cursor:pointer;transition:var(--transition)"></button>
-      <button class="dot" onclick="goToSlide(2)" style="width:16px;height:16px;border-radius:50%;background:rgba(255,255,255,0.5);border:2px solid rgba(255,255,255,0.8);cursor:pointer;transition:var(--transition)"></button>
-      <button class="dot" onclick="goToSlide(3)" style="width:16px;height:16px;border-radius:50%;background:rgba(255,255,255,0.5);border:2px solid rgba(255,255,255,0.8);cursor:pointer;transition:var(--transition)"></button>
-      <button class="dot" onclick="goToSlide(4)" style="width:16px;height:16px;border-radius:50%;background:rgba(255,255,255,0.5);border:2px solid rgba(255,255,255,0.8);cursor:pointer;transition:var(--transition)"></button>
-      <button class="dot" onclick="goToSlide(5)" style="width:16px;height:16px;border-radius:50%;background:rgba(255,255,255,0.5);border:2px solid rgba(255,255,255,0.8);cursor:pointer;transition:var(--transition)"></button>
+      <button class="dot active" onclick="goToSlide(0)" style="width:16px;height:16px;border-radius:50%;background:white;border:2px solid rgba(255,255,255,0.5);cursor:pointer;transition:var(--transition)" onmouseover="this.style.transform='scale(1.2)'" onmouseout="this.classList.contains('active')?this.style.transform='scale(1.3)':this.style.transform=''"></button>
+      <button class="dot" onclick="goToSlide(1)" style="width:16px;height:16px;border-radius:50%;background:rgba(255,255,255,0.5);border:2px solid rgba(255,255,255,0.8);cursor:pointer;transition:var(--transition)" onmouseover="this.style.transform='scale(1.2)'" onmouseout="this.classList.contains('active')?this.style.transform='scale(1.3)':this.style.transform=''"></button>
+      <button class="dot" onclick="goToSlide(2)" style="width:16px;height:16px;border-radius:50%;background:rgba(255,255,255,0.5);border:2px solid rgba(255,255,255,0.8);cursor:pointer;transition:var(--transition)" onmouseover="this.style.transform='scale(1.2)'" onmouseout="this.classList.contains('active')?this.style.transform='scale(1.3)':this.style.transform=''"></button>
+      <button class="dot" onclick="goToSlide(3)" style="width:16px;height:16px;border-radius:50%;background:rgba(255,255,255,0.5);border:2px solid rgba(255,255,255,0.8);cursor:pointer;transition:var(--transition)" onmouseover="this.style.transform='scale(1.2)'" onmouseout="this.classList.contains('active')?this.style.transform='scale(1.3)':this.style.transform=''"></button>
+      <button class="dot" onclick="goToSlide(4)" style="width:16px;height:16px;border-radius:50%;background:rgba(255,255,255,0.5);border:2px solid rgba(255,255,255,0.8);cursor:pointer;transition:var(--transition)" onmouseover="this.style.transform='scale(1.2)'" onmouseout="this.classList.contains('active')?this.style.transform='scale(1.3)':this.style.transform=''"></button>
+      <button class="dot" onclick="goToSlide(5)" style="width:16px;height:16px;border-radius:50%;background:rgba(255,255,255,0.5);border:2px solid rgba(255,255,255,0.8);cursor:pointer;transition:var(--transition)" onmouseover="this.style.transform='scale(1.2)'" onmouseout="this.classList.contains('active')?this.style.transform='scale(1.3)':this.style.transform=''"></button>
     </div>
   </section>
 
-  <!-- 🎯 Why Choose Us -->
+  <!-- 🏆 Why Choose Us -->
   <section id="results" style="padding:4rem 0;background:white">
     <div class="container">
       <div style="text-align:center;margin-bottom:3rem">
@@ -289,25 +300,25 @@
       </div>
       
       <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:2rem;margin:3rem 0">
-        <div style="text-align:center;padding:2rem;background:linear-gradient(135deg,#dbeafe,#bfdbfe);border-radius:var(--radius);box-shadow:var(--shadow)">
+        <div style="text-align:center;padding:2rem;background:linear-gradient(135deg,#dbeafe,#bfdbfe);border-radius:var(--radius);box-shadow:var(--shadow);transition:var(--transition)" onmouseover="this.style.transform='translateY(-5px) scale(1.02)'" onmouseout="this.style.transform=''">
           <div style="font-size:3rem;margin-bottom:1rem">📈</div>
           <h3 style="font-size:2.5rem;font-weight:900;color:var(--primary);margin-bottom:0.5rem">+347%</h3>
           <p style="color:var(--text);font-weight:600">متوسط زيادة المبيعات<br>خلال 30 يوم</p>
         </div>
         
-        <div style="text-align:center;padding:2rem;background:linear-gradient(135deg,#dcfce7,#bbf7d0);border-radius:var(--radius);box-shadow:var(--shadow)">
+        <div style="text-align:center;padding:2rem;background:linear-gradient(135deg,#dcfce7,#bbf7d0);border-radius:var(--radius);box-shadow:var(--shadow);transition:var(--transition)" onmouseover="this.style.transform='translateY(-5px) scale(1.02)'" onmouseout="this.style.transform=''">
           <div style="font-size:3rem;margin-bottom:1rem">🎯</div>
           <h3 style="font-size:2.5rem;font-weight:900;color:var(--success);margin-bottom:0.5rem">7 أيام</h3>
           <p style="color:var(--text);font-weight:600">الصفحة الأولى في جوجل<br>مضمونة أو مجاناً</p>
         </div>
         
-        <div style="text-align:center;padding:2rem;background:linear-gradient(135deg,#fef3c7,#fde68a);border-radius:var(--radius);box-shadow:var(--shadow)">
+        <div style="text-align:center;padding:2rem;background:linear-gradient(135deg,#fef3c7,#fde68a);border-radius:var(--radius);box-shadow:var(--shadow);transition:var(--transition)" onmouseover="this.style.transform='translateY(-5px) scale(1.02)'" onmouseout="this.style.transform=''">
           <div style="font-size:3rem;margin-bottom:1rem">💰</div>
           <h3 style="font-size:2.5rem;font-weight:900;color:var(--warning);margin-bottom:0.5rem">127M+</h3>
           <p style="color:var(--text);font-weight:600">ريال مبيعات عملائنا<br>في آخر 12 شهر</p>
         </div>
         
-        <div style="text-align:center;padding:2rem;background:linear-gradient(135deg,#f3e8ff,#ddd6fe);border-radius:var(--radius);box-shadow:var(--shadow)">
+        <div style="text-align:center;padding:2rem;background:linear-gradient(135deg,#f3e8ff,#ddd6fe);border-radius:var(--radius);box-shadow:var(--shadow);transition:var(--transition)" onmouseover="this.style.transform='translateY(-5px) scale(1.02)'" onmouseout="this.style.transform=''">
           <div style="font-size:3rem;margin-bottom:1rem">🔥</div>
           <h3 style="font-size:2.5rem;font-weight:900;color:#8b5cf6;margin-bottom:0.5rem">2.7B+</h3>
           <p style="color:var(--text);font-weight:600">مشاهدة لمحتوانا<br>الفايرال سنوياً</p>
@@ -341,7 +352,7 @@
           <h3 style="font-size:1.5rem;font-weight:700;margin-bottom:1rem;text-align:center">Google Ads</h3>
           <p style="color:var(--text-light);margin-bottom:1.5rem;text-align:center">الصفحة الأولى خلال 7 أيام مضمونة أو استرداد كامل. خبراء معتمدين من Google.</p>
           <div style="text-align:center">
-            <a href="google-ads-service.html" style="color:var(--primary);font-weight:600;text-decoration:none;padding:0.5rem 1rem;border-radius:25px;background:rgba(59,130,246,0.1);transition:var(--transition)" onmouseover="this.style.background='var(--primary)';this.style.color='white'" onmouseout="this.style.background='rgba(59,130,246,0.1)';this.style.color='var(--primary)'">تفاصيل الخدمة →</a>
+            <a href="https://wa.me/201110760081?text=أريد خدمة Google Ads الآن 🎯" style="color:var(--primary);font-weight:600;text-decoration:none;padding:0.75rem 1.5rem;border-radius:25px;background:rgba(59,130,246,0.1);transition:var(--transition);display:inline-block" onmouseover="this.style.background='var(--primary)';this.style.color='white'" onmouseout="this.style.background='rgba(59,130,246,0.1)';this.style.color='var(--primary)'">اطلب الخدمة →</a>
           </div>
         </div>
         
@@ -351,7 +362,7 @@
           <h3 style="font-size:1.5rem;font-weight:700;margin-bottom:1rem;text-align:center">السوشيال ميديا</h3>
           <p style="color:var(--text-light);margin-bottom:1.5rem;text-align:center">من 0 إلى مليون متابع خلال 90 يوماً. فريق مبدعين حائز على جوائز دولية.</p>
           <div style="text-align:center">
-            <a href="social-media-service.html" style="color:var(--success);font-weight:600;text-decoration:none;padding:0.5rem 1rem;border-radius:25px;background:rgba(16,185,129,0.1);transition:var(--transition)" onmouseover="this.style.background='var(--success)';this.style.color='white'" onmouseout="this.style.background='rgba(16,185,129,0.1)';this.style.color='var(--success)'">تفاصيل الخدمة →</a>
+            <a href="https://wa.me/201110760081?text=أريد المليون متابع الآن 👑" style="color:var(--success);font-weight:600;text-decoration:none;padding:0.75rem 1.5rem;border-radius:25px;background:rgba(16,185,129,0.1);transition:var(--transition);display:inline-block" onmouseover="this.style.background='var(--success)';this.style.color='white'" onmouseout="this.style.background='rgba(16,185,129,0.1)';this.style.color='var(--success)'">اطلب الخدمة →</a>
           </div>
         </div>
         
@@ -361,7 +372,7 @@
           <h3 style="font-size:1.5rem;font-weight:700;margin-bottom:1rem;text-align:center">تحسين محركات البحث</h3>
           <p style="color:var(--text-light);margin-bottom:1.5rem;text-align:center">المرتبة #1 في جوجل خلال 21 يوماً مضمونة. تقنيات AI حصرية.</p>
           <div style="text-align:center">
-            <a href="seo-service.html" style="color:var(--warning);font-weight:600;text-decoration:none;padding:0.5rem 1rem;border-radius:25px;background:rgba(245,158,11,0.1);transition:var(--transition)" onmouseover="this.style.background='var(--warning)';this.style.color='white'" onmouseout="this.style.background='rgba(245,158,11,0.1)';this.style.color='var(--warning)'">تفاصيل الخدمة →</a>
+            <a href="https://wa.me/201110760081?text=أريد المرتبة الأولى الآن ⭐" style="color:var(--warning);font-weight:600;text-decoration:none;padding:0.75rem 1.5rem;border-radius:25px;background:rgba(245,158,11,0.1);transition:var(--transition);display:inline-block" onmouseover="this.style.background='var(--warning)';this.style.color='white'" onmouseout="this.style.background='rgba(245,158,11,0.1)';this.style.color='var(--warning)'">اطلب الخدمة →</a>
           </div>
         </div>
         
@@ -371,7 +382,7 @@
           <h3 style="font-size:1.5rem;font-weight:700;margin-bottom:1rem;text-align:center">المتاجر الإلكترونية</h3>
           <p style="color:var(--text-light);margin-bottom:1.5rem;text-align:center">من فكرة إلى 7 أرقام خلال 6 أشهر. متاجر ذكية تحول الزوار لعملاء.</p>
           <div style="text-align:center">
-            <a href="ecommerce-service.html" style="color:#8b5cf6;font-weight:600;text-decoration:none;padding:0.5rem 1rem;border-radius:25px;background:rgba(139,92,246,0.1);transition:var(--transition)" onmouseover="this.style.background='#8b5cf6';this.style.color='white'" onmouseout="this.style.background='rgba(139,92,246,0.1)';this.style.color='#8b5cf6'">تفاصيل الخدمة →</a>
+            <a href="https://wa.me/201110760081?text=أريد متجر يحقق الملايين 🛒" style="color:#8b5cf6;font-weight:600;text-decoration:none;padding:0.75rem 1.5rem;border-radius:25px;background:rgba(139,92,246,0.1);transition:var(--transition);display:inline-block" onmouseover="this.style.background='#8b5cf6';this.style.color='white'" onmouseout="this.style.background='rgba(139,92,246,0.1)';this.style.color='#8b5cf6'">اطلب الخدمة →</a>
           </div>
         </div>
         
@@ -381,7 +392,7 @@
           <h3 style="font-size:1.5rem;font-weight:700;margin-bottom:1rem;text-align:center">المحتوى الفايرال</h3>
           <p style="color:var(--text-light);margin-bottom:1.5rem;text-align:center">محتوى يحقق مليارات المشاهدات. فريق مبدعين + سيكولوجيا التسويق.</p>
           <div style="text-align:center">
-            <a href="content-service.html" style="color:#ef4444;font-weight:600;text-decoration:none;padding:0.5rem 1rem;border-radius:25px;background:rgba(239,68,68,0.1);transition:var(--transition)" onmouseover="this.style.background='#ef4444';this.style.color='white'" onmouseout="this.style.background='rgba(239,68,68,0.1)';this.style.color='#ef4444'">تفاصيل الخدمة →</a>
+            <a href="https://wa.me/201110760081?text=أريد محتوى فايرال الآن 🔥" style="color:#ef4444;font-weight:600;text-decoration:none;padding:0.75rem 1.5rem;border-radius:25px;background:rgba(239,68,68,0.1);transition:var(--transition);display:inline-block" onmouseover="this.style.background='#ef4444';this.style.color='white'" onmouseout="this.style.background='rgba(239,68,68,0.1)';this.style.color='#ef4444'">اطلب الخدمة →</a>
           </div>
         </div>
         
@@ -391,7 +402,7 @@
           <h3 style="font-size:1.5rem;font-weight:700;margin-bottom:1rem;text-align:center">ذكاء اصطناعي</h3>
           <p style="color:var(--text-light);margin-bottom:1.5rem;text-align:center">قرارات ذكية مبنية على البيانات. نتنبأ بالترندات قبل 8 أشهر.</p>
           <div style="text-align:center">
-            <a href="ai-service.html" style="color:#6366f1;font-weight:600;text-decoration:none;padding:0.5rem 1rem;border-radius:25px;background:rgba(99,102,241,0.1);transition:var(--transition)" onmouseover="this.style.background='#6366f1';this.style.color='white'" onmouseout="this.style.background='rgba(99,102,241,0.1)';this.style.color='#6366f1'">تفاصيل الخدمة →</a>
+            <a href="https://wa.me/201110760081?text=أريد استشارة AI ذكية الآن 🧠" style="color:#6366f1;font-weight:600;text-decoration:none;padding:0.75rem 1.5rem;border-radius:25px;background:rgba(99,102,241,0.1);transition:var(--transition);display:inline-block" onmouseover="this.style.background='#6366f1';this.style.color='white'" onmouseout="this.style.background='rgba(99,102,241,0.1)';this.style.color='#6366f1'">اطلب الخدمة →</a>
           </div>
         </div>
         
@@ -403,7 +414,7 @@
   <section style="padding:3rem 0;background:white;text-align:center">
     <div class="container">
       <h2 style="font-size:clamp(1.8rem,3.5vw,2.4rem);font-weight:700;margin-bottom:2rem;color:var(--text)">🏆 عملاؤنا يثقون بنا</h2>
-      <div style="display:flex;gap:2rem;justify-content:center;align-items:center;flex-wrap:wrap;opacity:0.7">
+      <div style="display:flex;gap:2rem;justify-content:center;align-items:center;flex-wrap:wrap;opacity:0.8">
         <div style="padding:1rem 2rem;background:var(--bg-light);border-radius:var(--radius);font-weight:600">🏪 427+ متجر</div>
         <div style="padding:1rem 2rem;background:var(--bg-light);border-radius:var(--radius);font-weight:600">📱 67 مليونير</div>
         <div style="padding:1rem 2rem;background:var(--bg-light);border-radius:var(--radius);font-weight:600">🎯 847 حملة</div>
@@ -544,9 +555,9 @@
   <!-- Toast Container -->
   <div id="toasts" style="position:fixed;top:100px;right:20px;z-index:10000;max-width:400px"></div>
 
-  <!-- 🚀 Optimized JavaScript -->
+  <!-- 🚀 Ultra-Optimized JavaScript -->
   <script>
-    // Critical JavaScript - Inline for performance
+    // 🎬 Ultra-Performance Slider
     class UltraSlider {
       constructor() {
         this.track = document.getElementById('sliderTrack');
@@ -566,13 +577,23 @@
         
         // Touch support
         let startX = 0;
-        this.track.ontouchstart = e => startX = e.touches[0].clientX;
+        this.track.ontouchstart = e => {
+          startX = e.touches[0].clientX;
+          this.stopAuto();
+        };
         this.track.ontouchend = e => {
           const endX = e.changedTouches[0].clientX;
           const diff = startX - endX;
           if (Math.abs(diff) > 50) {
             diff > 0 ? this.next() : this.prev();
           }
+          this.startAuto();
+        };
+        
+        // Keyboard navigation
+        document.onkeydown = e => {
+          if (e.key === 'ArrowLeft') this.next();
+          if (e.key === 'ArrowRight') this.prev();
         };
         
         // Auto-play
@@ -584,16 +605,19 @@
       }
       
       goTo(index) {
-        if (this.isAnimating) return;
+        if (this.isAnimating || index === this.current) return;
+        
         this.isAnimating = true;
         this.current = index;
         
+        // Move track
         this.track.style.transform = `translateX(-${index * (100/6)}%)`;
         
         // Update dots
         document.querySelectorAll('.dot').forEach((dot, i) => {
           dot.style.background = i === index ? 'white' : 'rgba(255,255,255,0.5)';
           dot.style.transform = i === index ? 'scale(1.3)' : 'scale(1)';
+          dot.classList.toggle('active', i === index);
         });
         
         setTimeout(() => this.isAnimating = false, 300);
@@ -626,7 +650,7 @@
     // Global functions
     window.goToSlide = (index) => window.slider?.goTo(index);
     
-    // Mobile Navigation
+    // 📱 Mobile Navigation
     function initNav() {
       const toggle = document.getElementById('navToggle');
       const menu = document.getElementById('navMenu');
@@ -639,11 +663,13 @@
           spans[0].style.transform = 'rotate(45deg) translate(6px, 6px)';
           spans[1].style.opacity = '0';
           spans[2].style.transform = 'rotate(-45deg) translate(6px, -6px)';
+          document.body.style.overflow = 'hidden';
         } else {
           spans.forEach(s => {
             s.style.transform = '';
             s.style.opacity = '1';
           });
+          document.body.style.overflow = '';
         }
       };
       
@@ -655,11 +681,24 @@
             s.style.transform = '';
             s.style.opacity = '1';
           });
+          document.body.style.overflow = '';
+        }
+      };
+      
+      // Close on outside click
+      document.onclick = e => {
+        if (!e.target.closest('.nav') && menu.classList.contains('active')) {
+          menu.classList.remove('active');
+          toggle.querySelectorAll('span').forEach(s => {
+            s.style.transform = '';
+            s.style.opacity = '1';
+          });
+          document.body.style.overflow = '';
         }
       };
     }
 
-    // Newsletter System
+    // 📧 Newsletter System
     function initNewsletter() {
       const form = document.getElementById('newsletter');
       if (!form) return;
@@ -693,6 +732,7 @@
           formData.append('_subject', '🎯 اشتراك جديد VIP - إعلانات العرب');
           formData.append('_template', 'table');
           formData.append('_captcha', 'false');
+          formData.append('_next', 'https://arabsad.com/?welcome=1');
           
           await fetch('https://formsubmit.co/sherow1982@gmail.com', {
             method: 'POST',
@@ -742,7 +782,7 @@
       }, 4000);
     }
 
-    // Reading Progress
+    // 📊 Reading Progress
     function initProgress() {
       const progress = document.getElementById('progress');
       window.onscroll = () => {
@@ -751,15 +791,15 @@
       };
     }
 
-    // Back to Top
+    // 📊 Back to Top
     function initBackTop() {
       const btn = document.getElementById('backTop');
-      window.onscroll = () => {
+      window.addEventListener('scroll', () => {
         btn.style.display = window.pageYOffset > 300 ? 'block' : 'none';
-      };
+      });
     }
 
-    // Initialize everything
+    // 🚀 Initialize everything
     document.addEventListener('DOMContentLoaded', () => {
       window.slider = new UltraSlider();
       initNav();
@@ -770,6 +810,7 @@
       console.log('🚀 ArabSad.com - Ultra Performance Mode Activated!');
       console.log('📱 Fully responsive on all devices');
       console.log('🔗 Facebook updated to: https://www.facebook.com/arabads.me');
+      console.log('🎬 Revolution Slider: 6 slides loaded with marketing illustrations');
     });
 
     // Add CSS animations
@@ -784,13 +825,12 @@
         to { transform: translateX(100%); opacity: 0; }
       }
       
-      /* Mobile fixes */
+      /* 📱 Mobile Responsive Fixes */
       @media (max-width: 768px) {
-        .slide { padding: 1.5rem 1rem !important; }
+        .slide { padding: 2rem 1rem !important; }
         .slide-content { max-width: 100% !important; }
         .slide-title { font-size: clamp(1.8rem, 6vw, 2.5rem) !important; }
         .slide-subtitle { font-size: clamp(1rem, 3.5vw, 1.3rem) !important; }
-        .slide .cta-header,
         .slide a[style*="padding"] { 
           width: 100% !important; 
           max-width: 280px !important; 
@@ -799,26 +839,51 @@
           padding: 1rem 2rem !important;
           font-size: 1rem !important;
         }
-        #prevBtn, #nextBtn { width: 50px !important; height: 50px !important; font-size: 1.5rem !important; }
+        #prevBtn, #nextBtn { 
+          width: 50px !important; 
+          height: 50px !important; 
+          font-size: 1.5rem !important; 
+        }
         #prevBtn { left: 1rem !important; }
         #nextBtn { right: 1rem !important; }
-        #sliderDots { bottom: 1rem !important; padding: 0.75rem 1.5rem !important; }
+        #sliderDots { 
+          bottom: 1rem !important; 
+          padding: 0.75rem 1.5rem !important; 
+          gap: 0.75rem !important;
+        }
         .container { padding: 0 0.75rem !important; }
       }
       
       @media (max-width: 480px) {
         .hero { min-height: calc(100vh - 80px) !important; }
-        .slide { padding: 1rem 0.75rem !important; }
+        .slide { padding: 1.5rem 0.75rem !important; }
         #toasts { right: 10px !important; left: 10px !important; top: 90px !important; }
         .toast { font-size: 0.9rem !important; }
+        .slide p[style*="font-size"] { font-size: clamp(0.9rem, 4vw, 1.1rem) !important; }
       }
       
-      /* Ultra smooth animations */
+      /* ⚡ Performance Optimizations */
       * { -webkit-tap-highlight-color: transparent; }
       .slide-content > * { will-change: transform, opacity; }
-      .slider-track { will-change: transform; }
+      .slider-track { will-change: transform; transform: translateZ(0); }
+      
+      /* Hover animations for desktop */
+      @media (hover: hover) {
+        .slide:hover { background-size: 105% !important; }
+      }
     `;
     document.head.appendChild(style);
+  </script>
+  
+  <!-- 🎯 Meta Tags Update -->
+  <script>
+    // Auto-update all Facebook links
+    document.querySelectorAll('a[href*="facebook.com"]').forEach(link => {
+      if (!link.href.includes('arabads.me')) {
+        link.href = 'https://www.facebook.com/arabads.me';
+        console.log('✅ Facebook link updated:', link.href);
+      }
+    });
   </script>
 </body>
 </html>
