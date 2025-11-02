@@ -1,0 +1,37 @@
+/*
+  STYLE-LOCK POLICY - DO NOT CHANGE VISUAL STYLES WITHOUT OWNER APPROVAL
+  هذه السياسة تقفل الستايل بصرياً.
+  يُسمح فقط بإصلاحات تقنية غير مرئية (أداء/أمان/تتبع) بدون تعديل ألوان/مسافات/أحجام/خطوط/تخطيطات.
+  أي تغيير مرئي يحتاج موافقة خطية من المالك.
+*/
+
+/* حارس القيم البصرية الأساسية */
+:root{
+  /* قيم الثيم المثبتة */
+  --theme-primary: #667eea; /* اللون السابق المعتمد للهيرو والعناصر البارزة */
+  --theme-secondary: #764ba2;
+  --header-bg: #ffffff;
+  --text-color: #2d3748;
+}
+
+/* قفل ألوان الأزرار الأساسية كما كانت */
+.btn.btn-primary{
+  background: linear-gradient(135deg, var(--theme-primary) 0%, var(--theme-secondary) 100%);
+  border-color: var(--theme-primary);
+  color: #fff;
+}
+
+/* الهيرو بالستايل السابق (تثبيت شكلي فقط، لا يفرض إن غيّره الملف الأساسي صراحة) */
+.hero{
+  background: linear-gradient(135deg, var(--theme-primary) 0%, var(--theme-secondary) 100%) !important;
+}
+
+/* العناوين بنفس الوزن السابق */
+h1,h2,h3{
+  font-weight: 700;
+}
+
+/* CTA الثابت يحتفظ بالستايل الثابت القديم */
+.cta-bar{
+  background: rgba(255,255,255,0.95);
+}
