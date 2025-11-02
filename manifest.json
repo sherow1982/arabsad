@@ -1,13 +1,13 @@
 {
   "name": "مؤسسة إعلانات العرب - للتسويق الرقمي والإعلانات الممولة",
-  "short_name": "ARABS AD",
+  "short_name": "إعلانات العرب",
   "description": "وكالة تسويق رقمي متخصصة في Google Ads وFacebook Ads وInstagram وSEO وتصميم المواقع في الخليج العربي. نضمن لك أفضل عائد على الاستثمار في إعلاناتك.",
-  "start_url": "/",
+  "start_url": "/?utm_source=pwa",
   "scope": "/",
   "display": "standalone",
   "display_override": ["window-controls-overlay", "standalone", "minimal-ui"],
-  "background_color": "#ffffff",
-  "theme_color": "#667eea",
+  "background_color": "#f8fafc",
+  "theme_color": "#3b82f6",
   "orientation": "portrait-primary",
   "dir": "rtl",
   "lang": "ar",
@@ -60,26 +60,39 @@
       "sizes": "1280x720",
       "type": "image/png",
       "form_factor": "wide",
-      "label": "الصفحة الرئيسية - نسخة سطح المكتب"
+      "label": "الصفحة الرئيسية - نسخة سطح المكتب - الثيم الفاتح الجديد"
     },
     {
       "src": "/assets/images/screenshot-mobile.png",
       "sizes": "390x844",
       "type": "image/png",
       "form_factor": "narrow",
-      "label": "الصفحة الرئيسية - نسخة الجوال"
+      "label": "الصفحة الرئيسية - نسخة الجوال - واجهة مبهرة وسهلة"
     },
     {
       "src": "/assets/images/services-screenshot.png",
       "sizes": "1280x720",
       "type": "image/png",
       "form_factor": "wide",
-      "label": "صفحة الخدمات - Google Ads وSocial Media"
+      "label": "صفحة الخدمات - Google Ads وSocial Media وSEO"
     }
   ],
   "shortcuts": [
     {
-      "name": "خدمات Google Ads",
+      "name": "💬 تواصل واتساب - استشارة فورية",
+      "short_name": "واتساب",
+      "description": "تواصل مع فريق مؤسسة إعلانات العرب للحصول على استشارة مجانية فورية",
+      "url": "https://wa.me/201110760081?text=أريد استشارة مجانية فورية&utm_source=pwa_shortcut",
+      "icons": [
+        {
+          "src": "/assets/images/whatsapp-icon.png",
+          "sizes": "96x96",
+          "type": "image/png"
+        }
+      ]
+    },
+    {
+      "name": "🎯 خدمات Google Ads المتقدمة",
       "short_name": "Google Ads",
       "description": "إدارة حملات Google Ads احترافية مع ضمان أفضل عائد على الاستثمار",
       "url": "/google-ads-service.html",
@@ -92,9 +105,9 @@
       ]
     },
     {
-      "name": "إعلانات السوشيال ميديا",
+      "name": "📱 إعلانات السوشيال ميديا",
       "short_name": "Social Ads",
-      "description": "إعلانات فيسبوك وإنستجرام وسناب شات وتيق توق لزيادة المبيعات",
+      "description": "إعلانات فيسبوك وإنستجرام وسناب شات وتيك توك لزيادة المبيعات",
       "url": "/social-media-service.html",
       "icons": [
         {
@@ -105,7 +118,7 @@
       ]
     },
     {
-      "name": "تحسين محركات البحث SEO",
+      "name": "🔍 تحسين محركات البحث SEO",
       "short_name": "SEO",
       "description": "تحسين ترتيب موقعك في نتائج بحث Google لزيادة الزيارات المجانية",
       "url": "/seo-service.html",
@@ -118,13 +131,26 @@
       ]
     },
     {
-      "name": "اتصل بنا عبر واتساب",
-      "short_name": "واتساب",
-      "description": "تواصل مع فريق مؤسسة إعلانات العرب للحصول على استشارة مجانية",
-      "url": "https://wa.me/201110760081?text=أريد استشارة مجانية",
+      "name": "📋 احصل على عرض سعر مخصص",
+      "short_name": "عرض سعر",
+      "description": "احصل على عرض سعر مخصص ومجاني لمشروعك التسويقي",
+      "url": "https://wa.me/201110760081?text=أطلب عرض سعر مخصص لمشروعي&utm_source=pwa_shortcut",
       "icons": [
         {
-          "src": "/assets/images/whatsapp-icon.png",
+          "src": "/assets/images/quote-icon.png",
+          "sizes": "96x96",
+          "type": "image/png"
+        }
+      ]
+    },
+    {
+      "name": "🌍 خدماتنا في دول الخليج",
+      "short_name": "الخليج",
+      "description": "تصفح خدماتنا المتميزة في جميع دول الخليج العربي",
+      "url": "/#countries",
+      "icons": [
+        {
+          "src": "/assets/images/gulf-icon.png",
           "sizes": "96x96",
           "type": "image/png"
         }
@@ -144,7 +170,9 @@
       "action": "/",
       "accept": {
         "text/csv": [".csv"],
-        "application/pdf": [".pdf"]
+        "application/pdf": [".pdf"],
+        "image/jpeg": [".jpg", ".jpeg"],
+        "image/png": [".png"]
       }
     }
   ],
