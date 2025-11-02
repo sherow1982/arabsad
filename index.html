@@ -4,11 +4,17 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>مؤسسة إعلانات العرب - للتسويق الإلكتروني والإعلانات الممولة | arabsad.com</title>
+  <meta name="description" content="وكالة تسويق رقمي متخصصة في إعلانات جوجل وفيسبوك وإنستجرام وSEO وتصميم المواقع في العالم العربي.">
   <link rel="preload" href="assets/css/main.css" as="style">
   <link rel="preload" href="assets/css/slider.css" as="style">
   <link rel="stylesheet" href="assets/css/main.css">
   <link rel="stylesheet" href="assets/css/slider.css">
   <link rel="stylesheet" href="assets/css/ux-enhancements.css">
+  
+  <!-- الخطوط العربية الفاخرة -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="enhanced-arabic-fonts.css">
 </head>
 <body>
   <div class="reading-progress" id="progress"></div>
@@ -29,6 +35,7 @@
         <ul class="nav-menu" id="navMenu">
           <li><a href="#home" class="nav-link" aria-current="page">🏠 الرئيسية</a></li>
           <li><a href="services-page.html" class="nav-link" target="_blank">💼 خدماتنا</a></li>
+          <li><a href="seo-service.html" class="nav-link">🔍 SEO</a></li>
           <li><a href="blog/index.html" class="nav-link" target="_blank">📰 مدونتنا</a></li>
           <li><a href="#contact" class="nav-link">☎️ اتصل بنا</a></li>
         </ul>
@@ -40,7 +47,6 @@
   </header>
 
   <main id="main-content" role="main">
-    <!-- Slider Section Restored -->
     <section id="home" class="hero">
       <div id="revSlider" class="rev-slider" tabindex="0" aria-label="سلايدر رئيسي">
         <div class="rev-slide active" data-interval="6000">
@@ -95,7 +101,7 @@
 
   <footer class="footer" role="contentinfo">
     <div class="container">
-      <p>© 2025 مؤسسة إعلانات العرب</p>
+      <p>&copy; 2025 مؤسسة إعلانات العرب</p>
     </div>
   </footer>
 
@@ -105,5 +111,46 @@
     const progress=document.getElementById('progress');
     window.addEventListener('scroll',()=>{const h=document.documentElement;const s=(h.scrollTop)/(h.scrollHeight-h.clientHeight)*100;progress.style.width=s+'%'});
   </script>
+  
+  <!-- تحميل الهيدر والفوتر ديناميكياً -->
+  <script>
+  document.addEventListener('DOMContentLoaded', function() {
+      // تحميل الهيدر
+      fetch('./shared-header.html')
+          .then(response => response.ok ? response.text() : '')
+          .then(html => {
+              if (html) {
+                  document.body.insertAdjacentHTML('afterbegin', html);
+              }
+          })
+          .catch(() => console.log('لم يتم العثور على ملف الهيدر'));
+
+      // تحميل الفوتر قبل الفوتر الحالي
+      fetch('./shared-footer.html')
+          .then(response => response.ok ? response.text() : '')
+          .then(html => {
+              if (html) {
+                  const currentFooter = document.querySelector('.footer');
+                  if (currentFooter) {
+                      currentFooter.insertAdjacentHTML('beforebegin', html);
+                  } else {
+                      document.body.insertAdjacentHTML('beforeend', html);
+                  }
+              }
+          })
+          .catch(() => console.log('لم يتم العثور على ملف الفوتر'));
+
+      // تحميل زر واتساب
+      fetch('./whatsapp-button.html')
+          .then(response => response.ok ? response.text() : '')
+          .then(html => {
+              if (html) {
+                  document.body.insertAdjacentHTML('beforeend', html);
+              }
+          })
+          .catch(() => console.log('لم يتم العثور على زر واتساب'));
+  });
+  </script>
+  
 </body>
 </html>
