@@ -80,24 +80,98 @@
 
         .nav-links {
             display: flex;
-            gap: 30px;
+            gap: 15px;
             list-style: none;
             flex-wrap: wrap;
+            align-items: center;
         }
 
-        .nav-links a {
+        .nav-links li {
+            position: relative;
+        }
+
+        .nav-links > li > a {
             color: #fff;
             text-decoration: none;
             font-weight: 600;
             transition: all 0.3s;
-            padding: 8px 15px;
+            padding: 10px 18px;
             border-radius: 5px;
+            display: flex;
+            align-items: center;
+            gap: 5px;
         }
 
-        .nav-links a:hover {
+        .nav-links > li > a:hover {
             background: linear-gradient(135deg, #f6b93b, #26de81);
             color: #1a1a2e;
             transform: translateY(-2px);
+        }
+
+        /* Dropdown Menu Styles */
+        .dropdown {
+            position: relative;
+        }
+
+        .dropdown-toggle {
+            cursor: pointer;
+        }
+
+        .dropdown-menu {
+            position: absolute;
+            top: 100%;
+            right: 0;
+            background: rgba(15, 32, 39, 0.98);
+            min-width: 250px;
+            border-radius: 10px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-10px);
+            transition: all 0.3s ease;
+            margin-top: 10px;
+            border: 2px solid #f6b93b;
+            max-height: 400px;
+            overflow-y: auto;
+        }
+
+        .dropdown:hover .dropdown-menu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .dropdown-menu li {
+            list-style: none;
+        }
+
+        .dropdown-menu a {
+            display: block;
+            padding: 12px 20px;
+            color: #ddd;
+            text-decoration: none;
+            transition: all 0.3s;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            font-size: 0.95rem;
+        }
+
+        .dropdown-menu a:hover {
+            background: linear-gradient(90deg, #f6b93b, #26de81);
+            color: #1a1a2e;
+            padding-right: 25px;
+        }
+
+        .dropdown-menu li:last-child a {
+            border-bottom: none;
+        }
+
+        .dropdown-icon {
+            font-size: 0.75rem;
+            transition: transform 0.3s;
+        }
+
+        .dropdown:hover .dropdown-icon {
+            transform: rotate(180deg);
         }
 
         .hero {
@@ -498,6 +572,18 @@
             box-shadow: 0 15px 40px rgba(37, 211, 102, 0.7);
         }
 
+        /* Mobile Menu Toggle */
+        .mobile-menu-toggle {
+            display: none;
+            background: linear-gradient(135deg, #f6b93b, #26de81);
+            color: #1a1a2e;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
         @media (max-width: 768px) {
             .hero-title {
                 font-size: 2.2rem;
@@ -515,9 +601,31 @@
                 font-size: 1.3rem;
             }
             
+            .mobile-menu-toggle {
+                display: block;
+            }
+            
             .nav-links {
+                display: none;
                 flex-direction: column;
-                gap: 15px;
+                width: 100%;
+                background: rgba(15, 32, 39, 0.98);
+                padding: 20px;
+                border-radius: 10px;
+                margin-top: 20px;
+            }
+            
+            .nav-links.active {
+                display: flex;
+            }
+            
+            .dropdown-menu {
+                position: static;
+                opacity: 1;
+                visibility: visible;
+                transform: none;
+                margin-top: 0;
+                max-height: none;
             }
             
             .services-grid,
@@ -550,12 +658,43 @@
             <div class="logo">
                 <i class="fas fa-bullhorn"></i> مؤسسة إعلانات العرب<br>للتسويق الإلكتروني
             </div>
-            <ul class="nav-links">
+            <button class="mobile-menu-toggle" onclick="toggleMobileMenu()">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav-links" id="navLinks">
                 <li><a href="#home">الرئيسية</a></li>
-                <li><a href="#services">خدماتنا</a></li>
+                
+                <!-- Services Dropdown -->
+                <li class="dropdown">
+                    <a href="#services" class="dropdown-toggle">
+                        الخدمات <i class="fas fa-chevron-down dropdown-icon"></i>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="services/google-ads-service.html"><i class="fab fa-google"></i> إعلانات جوجل</a></li>
+                        <li><a href="services/social-media-service.html"><i class="fas fa-hashtag"></i> وسائل التواصل</a></li>
+                        <li><a href="services/seo-service.html"><i class="fas fa-search"></i> تحسين محركات البحث</a></li>
+                        <li><a href="services/ecommerce-service.html"><i class="fas fa-shopping-cart"></i> المتاجر الإلكترونية</a></li>
+                    </ul>
+                </li>
+                
+                <!-- Countries Dropdown -->
+                <li class="dropdown">
+                    <a href="#countries" class="dropdown-toggle">
+                        الدول <i class="fas fa-chevron-down dropdown-icon"></i>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="countries/sa.html"><i class="fas fa-map-marker-alt"></i> 🇸🇦 السعودية</a></li>
+                        <li><a href="countries/ae.html"><i class="fas fa-map-marker-alt"></i> 🇦🇪 الإمارات</a></li>
+                        <li><a href="countries/kw.html"><i class="fas fa-map-marker-alt"></i> 🇰🇼 الكويت</a></li>
+                        <li><a href="countries/qa.html"><i class="fas fa-map-marker-alt"></i> 🇶🇦 قطر</a></li>
+                        <li><a href="countries/bh.html"><i class="fas fa-map-marker-alt"></i> 🇧🇭 البحرين</a></li>
+                        <li><a href="countries/om.html"><i class="fas fa-map-marker-alt"></i> 🇴🇲 عمان</a></li>
+                    </ul>
+                </li>
+                
                 <li><a href="#stats">إنجازاتنا</a></li>
                 <li><a href="#testimonials">آراء العملاء</a></li>
-                <li><a href="#contact">تواصل معنا</a></li>
+                <li><a href="https://wa.me/201110760081">تواصل معنا</a></li>
             </ul>
         </nav>
     </header>
@@ -571,7 +710,7 @@
                 على جوجل • فيسبوك • إنستجرام • سناب شات • تيك توك
             </p>
             <div class="cta-buttons">
-                <a href="https://wa.me/YOUR_PHONE_NUMBER" class="btn btn-primary">
+                <a href="https://wa.me/201110760081" class="btn btn-primary">
                     <i class="fab fa-whatsapp"></i> احجز استشارتك المجانية
                 </a>
                 <a href="#services" class="btn btn-secondary">
@@ -586,7 +725,7 @@
         <div class="container">
             <h2 class="section-title">خدماتنا الاحترافية</h2>
             <div class="services-grid">
-                <div class="service-card" onclick="window.location.href='#contact'">
+                <div class="service-card" onclick="window.location.href='https://wa.me/201110760081'">
                     <div class="service-icon">
                         <i class="fab fa-google"></i>
                     </div>
@@ -597,7 +736,7 @@
                     <button class="btn-service">اطلب الخدمة الآن</button>
                 </div>
 
-                <div class="service-card" onclick="window.location.href='#contact'">
+                <div class="service-card" onclick="window.location.href='https://wa.me/201110760081'">
                     <div class="service-icon">
                         <i class="fab fa-facebook"></i>
                     </div>
@@ -608,7 +747,7 @@
                     <button class="btn-service">اطلب الخدمة الآن</button>
                 </div>
 
-                <div class="service-card" onclick="window.location.href='#contact'">
+                <div class="service-card" onclick="window.location.href='https://wa.me/201110760081'">
                     <div class="service-icon">
                         <i class="fab fa-instagram"></i>
                     </div>
@@ -619,7 +758,7 @@
                     <button class="btn-service">اطلب الخدمة الآن</button>
                 </div>
 
-                <div class="service-card" onclick="window.location.href='#contact'">
+                <div class="service-card" onclick="window.location.href='https://wa.me/201110760081'">
                     <div class="service-icon">
                         <i class="fab fa-snapchat"></i>
                     </div>
@@ -630,7 +769,7 @@
                     <button class="btn-service">اطلب الخدمة الآن</button>
                 </div>
 
-                <div class="service-card" onclick="window.location.href='#contact'">
+                <div class="service-card" onclick="window.location.href='https://wa.me/201110760081'">
                     <div class="service-icon">
                         <i class="fab fa-tiktok"></i>
                     </div>
@@ -641,7 +780,7 @@
                     <button class="btn-service">اطلب الخدمة الآن</button>
                 </div>
 
-                <div class="service-card" onclick="window.location.href='#contact'">
+                <div class="service-card" onclick="window.location.href='https://wa.me/201110760081'">
                     <div class="service-icon">
                         <i class="fas fa-chart-line"></i>
                     </div>
@@ -724,18 +863,16 @@
                 </div>
                 <div class="footer-section">
                     <h3>خدماتنا</h3>
-                    <a href="#services">إعلانات جوجل الممولة</a>
-                    <a href="#services">إعلانات فيسبوك الممولة</a>
-                    <a href="#services">إعلانات إنستجرام الممولة</a>
-                    <a href="#services">إعلانات سناب شات الممولة</a>
-                    <a href="#services">إعلانات تيك توك الممولة</a>
-                    <a href="#services">تحليل وتقارير مفصلة</a>
+                    <a href="services/google-ads-service.html">إعلانات جوجل الممولة</a>
+                    <a href="services/social-media-service.html">إعلانات فيسبوك الممولة</a>
+                    <a href="services/seo-service.html">إعلانات إنستجرام الممولة</a>
+                    <a href="services/ecommerce-service.html">إعلانات سناب شات الممولة</a>
                 </div>
                 <div class="footer-section">
                     <h3>تواصل معنا</h3>
                     <p><i class="fas fa-envelope"></i> info@arabads-marketing.com</p>
-                    <p><i class="fab fa-whatsapp"></i> +966 XX XXX XXXX</p>
-                    <p><i class="fas fa-map-marker-alt"></i> الرياض، المملكة العربية السعودية</p>
+                    <p><i class="fab fa-whatsapp"></i> <a href="https://wa.me/201110760081" style="color: #ddd;">+20 111 076 0081</a></p>
+                    <p><i class="fas fa-map-marker-alt"></i> مصر - الجيزة - حدائق أكتوبر</p>
                 </div>
             </div>
 
@@ -755,11 +892,18 @@
 
     <!-- WhatsApp Float Button -->
     <div class="whatsapp-float">
-        <a href="https://wa.me/YOUR_PHONE_NUMBER" class="whatsapp-btn" target="_blank">
+        <a href="https://wa.me/201110760081" class="whatsapp-btn" target="_blank">
             <i class="fab fa-whatsapp"></i>
             تواصل واتساب
         </a>
     </div>
+
+    <script>
+        function toggleMobileMenu() {
+            const navLinks = document.getElementById('navLinks');
+            navLinks.classList.toggle('active');
+        }
+    </script>
 
 </body>
 </html>
