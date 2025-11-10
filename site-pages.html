@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>جميع صفحات موقع إعلانات العرب - 39 صفحة</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'Cairo', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .header {
+            text-align: center;
+            background: white;
+            padding: 40px 20px;
+            border-radius: 20px;
+            margin-bottom: 40px;
+            box-shadow: 0 10px 50px rgba(0,0,0,0.2);
+        }
+        
+        .header h1 {
+            font-size: 2.5rem;
+            color: #667eea;
+            margin-bottom: 10px;
+        }
+        
+        .header p {
+            color: #666;
+            font-size: 1.1rem;
+        }
+        
+        .search {
+            max-width: 500px;
+            margin: 20px auto 0;
+            position: relative;
+        }
+        
+        .search input {
+            width: 100%;
+            padding: 15px 50px 15px 20px;
+            border: 2px solid #667eea;
+            border-radius: 50px;
+            font-size: 1rem;
+            font-family: 'Cairo', sans-serif;
+        }
+        
+        .search input:focus {
+            outline: none;
+            box-shadow: 0 0 20px rgba(102, 126, 234, 0.3);
+        }
+        
+        .search i {
+            position: absolute;
+            left: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #667eea;
+            font-size: 1.2rem;
+        }
+        
+        .stats {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            margin-bottom: 30px;
+        }
+        
+        .stat {
+            background: white;
+            padding: 20px 40px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+        
+        .stat-num {
+            font-size: 2.5rem;
+            font-weight: 900;
+            color: #667eea;
+        }
+        
+        .stat-label {
+            color: #666;
+            margin-top: 5px;
+        }
+        
+        .category {
+            background: white;
+            padding: 30px;
+            border-radius: 20px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+        }
+        
+        .category h2 {
+            color: #667eea;
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #764ba2;
+        }
+        
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        
+        .card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 25px;
+            border-radius: 15px;
+            text-decoration: none;
+            display: block;
+            transition: all 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .card::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 200%;
+            height: 200%;
+            background: rgba(255,255,255,0.1);
+            transform: rotate(45deg);
+            transition: all 0.5s;
+        }
+        
+        .card:hover {
+            transform: translateY(-10px) scale(1.03);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        }
+        
+        .card:hover::before {
+            right: -100%;
+        }
+        
+        .card-icon {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            opacity: 0.9;
+        }
+        
+        .card-title {
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+        
+        .card-desc {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+        
+        .card-link {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background: rgba(255,255,255,0.2);
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.9rem;
+        }
+        
+        .back {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            background: white;
+            color: #667eea;
+            padding: 15px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+            z-index: 1000;
+            transition: all 0.3s;
+        }
+        
+        .back:hover {
+            transform: scale(1.1);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+        
+        @media (max-width: 768px) {
+            .grid { grid-template-columns: 1fr; }
+            .header h1 { font-size: 1.8rem; }
+            .stats { flex-direction: column; }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>🌐 جميع صفحات الموقع</h1>
+        <p>تصفح جميع صفحات موقع إعلانات العرب (39 صفحة)</p>
+        <div class="search">
+            <input type="text" id="search" placeholder="🔍 ابحث عن صفحة معينة..." onkeyup="doSearch()">
+            <i class="fas fa-search"></i>
+        </div>
+    </div>
+    
+    <div class="stats">
+        <div class="stat">
+            <div class="stat-num" id="total">39</div>
+            <div class="stat-label">إجمالي الصفحات</div>
+        </div>
+        <div class="stat">
+            <div class="stat-num">7</div>
+            <div class="stat-label">خدمات</div>
+        </div>
+        <div class="stat">
+            <div class="stat-num">6</div>
+            <div class="stat-label">دول</div>
+        </div>
+        <div class="stat">
+            <div class="stat-num">9</div>
+            <div class="stat-label">مقالات</div>
+        </div>
+    </div>
+    
+    <div class="category">
+        <h2>🏠 الصفحة الرئيسية</h2>
+        <div class="grid">
+            <a href="index.html" target="_blank" class="card">
+                <i class="fas fa-external-link-alt card-link"></i>
+                <div class="card-icon"><i class="fas fa-home"></i></div>
+                <div class="card-title">الرئيسية</div>
+                <div class="card-desc">الصفحة الرئيسية للموقع</div>
+            </a>
+        </div>
+    </div>
+    
+    <div class="category">
+        <h2>🛠️ الخدمات (7 صفحات)</h2>
+        <div class="grid">
+            <a href="services/index.html" target="_blank" class="card">
+                <i class="fas fa-external-link-alt card-link"></i>
+                <div class="card-icon"><i class="fas fa-list"></i></div>
+                <div class="card-title">جميع الخدمات</div>
+                <div class="card-desc">قائمة شاملة بخدماتنا</div>
+            </a>
+            <a href="services/google-ads-complete.html" target="_blank" class="card">
+                <i class="fas fa-external-link-alt card-link"></i>
+                <div class="card-icon"><i class="fab fa-google"></i></div>
+                <div class="card-title">إعلانات Google</div>
+                <div class="card-desc">خدمات إعلانات جوجل</div>
+            </a>
+            <a href="services/seo-complete.html" target="_blank" class="card">
+                <i class="fas fa-external-link-alt card-link"></i>
+                <div class="card-icon"><i class="fas fa-search"></i></div>
+                <div class="card-title">تحسين SEO</div>
+                <div class="card-desc">تحسين محركات البحث</div>
+            </a>
+            <a href="services/ecommerce.html" target="_blank" class="card">
+                <i class="fas fa-external-link-alt card-link"></i>
+                <div class="card-icon"><i class="fas fa-shopping-cart"></i></div>
+                <div class="card-title">المتاجر الإلكترونية</div>
+                <div class="card-desc">تصميم المتاجر</div>
+            </a>
+            <a href="services/social-media-ads.html" target="_blank" class="card">
+                <i class="fas fa-external-link-alt card-link"></i>
+                <div class="card-icon"><i class="fas fa-hashtag"></i></div>
+                <div class="card-title">السوشيال ميديا</div>
+                <div class="card-desc">إدارة الحسابات</div>
+            </a>
+            <a href="services/website-design-complete.html" target="_blank" class="card">
+                <i class="fas fa-external-link-alt card-link"></i>
+                <div class="card-icon"><i class="fas fa-palette"></i></div>
+                <div class="card-title">تصميم المواقع</div>
+                <div class="card-desc">تصميم احترافي</div>
+            </a>
+            <a href="services/gulf-cities.html" target="_blank" class="card">
+                <i class="fas fa-external-link-alt card-link"></i>
+                <div class="card-icon"><i class="fas fa-city"></i></div>
+                <div class="card-title">خدمات المدن</div>
+                <div class="card-desc">خدمات المدن الخليجية</div>
+            </a>
+        </div>
+    </div>
+    
+    <div class="category">
+        <h2>🏳️ الدول (6 صفحات)</h2>
+        <div class="grid">
+            <a href="sa.html" target="_blank" class="card">
+                <i class="fas fa-external-link-alt card-link"></i>
+                <div class="card-icon">🇸🇦</div>
+                <div class="card-title">السعودية</div>
+                <div class="card-desc">خدماتنا في المملكة</div>
+            </a>
+            <a href="ae.html" target="_blank" class="card">
+                <i class="fas fa-external-link-alt card-link"></i>
+                <div class="card-icon">🇦🇪</div>
+                <div class="card-title">الإمارات</div>
+                <div class="card-desc">خدماتنا في الإمارات</div>
+            </a>
+            <a href="kw.html" target="_blank" class="card">
+                <i class="fas fa-external-link-alt card-link"></i>
+                <div class="card-icon">🇰🇼</div>
+                <div class="card-title">الكويت</div>
+                <div class="card-desc">خدماتنا في الكويت</div>
+            </a>
+            <a href="qa.html" target="_blank" class="card">
+                <i class="fas fa-external-link-alt card-link"></i>
+                <div class="card-icon">🇶🇦</div>
+                <div class="card-title">قطر</div>
+                <div class="card-desc">خدماتنا في قطر</div>
+            </a>
+            <a href="bh.html" target="_blank" class="card">
+                <i class="fas fa-external-link-alt card-link"></i>
+                <div class="card-icon">🇧🇭</div>
+                <div class="card-title">البحرين</div>
+                <div class="card-desc">خدماتنا في البحرين</div>
+            </a>
+            <a href="om.html" target="_blank" class="card">
+                <i class="fas fa-external-link-alt card-link"></i>
+                <div class="card-icon">🇴🇲</div>
+                <div class="card-title">عمان</div>
+                <div class="card-desc">خدماتنا في عمان</div>
+            </a>
+        </div>
+    </div>
+    
+    <div class="category">
+        <h2>🏙️ المدن (8 صفحات)</h2>
+        <div class="grid">
+            <a href="cities/dubai-digital-marketing.html" target="_blank" class="card">
+                <i class="fas fa-external-link-alt card-link"></i>
+                <div class="card-icon"><i class="fas fa-building"></i></div>
+                <div class="card-title">دبي</div>
+                <div class="card-desc">التسويق في دبي</div>
+            </a>
+            <a href="cities/abudhabi-digital-marketing.html" target="_blank" class="card">
+                <i class="fas fa-external-link-alt card-link"></i>
+                <div class="card-icon"><i class="fas fa-building"></i></div>
+                <div class="card-title">أبوظبي</div>
+                <div class="card-desc">التسويق في أبوظبي</div>
+            </a>
+            <a href="cities/riyadh-google-ads.html" target="_blank" class="card">
+                <i class="fas fa-external-link-alt card-link"></i>
+                <div class="card-icon"><i class="fas fa-building"></i></div>
+                <div class="card-title">الرياض</div>
+                <div class="card-desc">Google Ads الرياض</div>
+            </a>
+            <a href="cities/jeddah-google-ads.html" target="_blank" class="card">
+                <i class="fas fa-external-link-alt card-link"></i>
+                <div class="card-icon"><i class="fas fa-building"></i></div>
+                <div class="card-title">جدة</div>
+                <div class="card-desc">Google Ads جدة</div>
+            </a>
+            <a href="cities/dammam-google-ads.html" target="_blank" class="card">
+                <i class="fas fa-external-link-alt card-link"></i>
+                <div class="card-icon"><i class="fas fa-building"></i></div>
+                <div class="card-title">الدمام</div>
+                <div class="card-desc">Google Ads الدمام</div>
+            </a>
+            <a href="cities/doha-digital-marketing.html" target="_blank" class="card">
+                <i class="fas fa-external-link-alt card-link"></i>
+                <div class="card-icon"><i class="fas fa-building"></i></div>
+                <div class="card-title">الدوحة</div>
+                <div class="card-desc">التسويق في الدوحة</div>
+            </a>
+            <a href="cities/kuwait-digital-marketing.html" target="_blank" class="card">
+                <i class="fas fa-external-link-alt card-link"></i>
+                <div class="card-icon"><i class="fas fa-building"></i></div>
+                <div class="card-title">مدينة الكويت</div>
+                <div class="card-desc">التسويق في الكويت</div>
+            </a>
+            <a href="cities/manama-digital-marketing.html" target="_blank" class="card">
+                <i class="fas fa-external-link-alt card-link"></i>
+                <div class="card-icon"><i class="fas fa-building"></i></div>
+                <div class="card-title">المنامة</div>
+                <div class="card-desc">التسويق في المنامة</div>
+            </a>
+        </div>
+    </div>
+    
+    <div class="category">
+        <h2>📝 المدونة (9 مقالات)</h2>
+        <div class="grid">
+            <a href="blog/index.html" target="_blank" class="card">
+                <i class="fas fa-external-link-alt card-link"></i>
+                <div class="card-icon"><i class="fas fa-blog"></i></div>
+                <div class="card-title">جميع المقالات</div>
+                <div class="card-desc">مدونة إعلانات العرب</div>
+            </a>
+            <a href="blog/google-ads-saudi-guide-2025.html" target="_blank" class="card">
+                <i class="fas fa-external-link-alt card-link"></i>
+                <div class="card-icon"><i class="fas fa-newspaper"></i></div>
+                <div class="card-title">Google Ads السعودية</div>
+                <div class="card-desc">دليل شامل 2025</div>
+            </a>
+            <a href="blog/google-ads-uae-guide-2025.html" target="_blank" class="card">
+                <i class="fas fa-external-link-alt card-link"></i>
+                <div class="card-icon"><i class="fas fa-newspaper"></i></div>
+                <div class="card-title">Google Ads الإمارات</div>
+                <div class="card-desc">دليل شامل 2025</div>
+            </a>
+            <a href="blog/google-ads-kuwait-guide-2025.html" target="_blank" class="card">
+                <i class="fas fa-external-link-alt card-link"></i>
+                <div class="card-icon"><i class="fas fa-newspaper"></i></div>
+                <div class="card-title">Google Ads الكويت</div>
+                <div class="card-desc">دليل شامل 2025</div>
+            </a>
+            <a href="blog/google-ads-qatar-guide-2025.html" target="_blank" class="card">
+                <i class="fas fa-external-link-alt card-link"></i>
+                <div class="card-icon"><i class="fas fa-newspaper"></i></div>
+                <div class="card-title">Google Ads قطر</div>
+                <div class="card-desc">دليل شامل 2025</div>
+            </a>
+            <a href="blog/google-ads-bahrain-guide-2025.html" target="_blank" class="card">
+                <i class="fas fa-external-link-alt card-link"></i>
+                <div class="card-icon"><i class="fas fa-newspaper"></i></div>
+                <div class="card-title">Google Ads البحرين</div>
+                <div class="card-desc">دليل شامل 2025</div>
+            </a>
+            <a href="blog/google-ads-oman-guide-2025.html" target="_blank" class="card">
+                <i class="fas fa-external-link-alt card-link"></i>
+                <div class="card-icon"><i class="fas fa-newspaper"></i></div>
+                <div class="card-title">Google Ads عمان</div>
+                <div class="card-desc">دليل شامل 2025</div>
+            </a>
+            <a href="blog/ecommerce-seo-gulf-optimization.html" target="_blank" class="card">
+                <i class="fas fa-external-link-alt card-link"></i>
+                <div class="card-icon"><i class="fas fa-newspaper"></i></div>
+                <div class="card-title">SEO للمتاجر</div>
+                <div class="card-desc">تحسين المتاجر الخليجية</div>
+            </a>
+            <a href="blog/tiktok-snapchat-gulf-marketing-2025.html" target="_blank" class="card">
+                <i class="fas fa-external-link-alt card-link"></i>
+                <div class="card-icon"><i class="fas fa-newspaper"></i></div>
+                <div class="card-title">TikTok وSnapchat</div>
+                <div class="card-desc">التسويق عبر المنصات</div>
+            </a>
+        </div>
+    </div>
+    
+    <div class="category">
+        <h2>🔧 أدوات وصفحات أخرى (8 صفحات)</h2>
+        <div class="grid">
+            <a href="analytics-dashboard.html" target="_blank" class="card">
+                <i class="fas fa-external-link-alt card-link"></i>
+                <div class="card-icon"><i class="fas fa-chart-bar"></i></div>
+                <div class="card-title">لوحة التحليلات</div>
+                <div class="card-desc">تحليلات الأداء</div>
+            </a>
+            <a href="chatbot.html" target="_blank" class="card">
+                <i class="fas fa-external-link-alt card-link"></i>
+                <div class="card-icon"><i class="fas fa-robot"></i></div>
+                <div class="card-title">Chatbot</div>
+                <div class="card-desc">المساعد الذكي</div>
+            </a>
+            <a href="google-ads.html" target="_blank" class="card">
+                <i class="fas fa-external-link-alt card-link"></i>
+                <div class="card-icon"><i class="fab fa-google"></i></div>
+                <div class="card-title">Google Ads</div>
+                <div class="card-desc">صفحة Google Ads</div>
+            </a>
+            <a href="gulf-cities.html" target="_blank" class="card">
+                <i class="fas fa-external-link-alt card-link"></i>
+                <div class="card-icon"><i class="fas fa-city"></i></div>
+                <div class="card-title">مدن الخليج</div>
+                <div class="card-desc">خدمات المدن</div>
+            </a>
+            <a href="social-media-management.html" target="_blank" class="card">
+                <i class="fas fa-external-link-alt card-link"></i>
+                <div class="card-icon"><i class="fas fa-users"></i></div>
+                <div class="card-title">إدارة السوشيال</div>
+                <div class="card-desc">إدارة الحسابات</div>
+            </a>
+            <a href="services-page.html" target="_blank" class="card">
+                <i class="fas fa-external-link-alt card-link"></i>
+                <div class="card-icon"><i class="fas fa-concierge-bell"></i></div>
+                <div class="card-title">صفحة الخدمات</div>
+                <div class="card-desc">قائمة الخدمات</div>
+            </a>
+            <a href="privacy-policy.html" target="_blank" class="card">
+                <i class="fas fa-external-link-alt card-link"></i>
+                <div class="card-icon"><i class="fas fa-shield-alt"></i></div>
+                <div class="card-title">سياسة الخصوصية</div>
+                <div class="card-desc">سياسة حماية البيانات</div>
+            </a>
+            <a href="terms-of-service.html" target="_blank" class="card">
+                <i class="fas fa-external-link-alt card-link"></i>
+                <div class="card-icon"><i class="fas fa-file-contract"></i></div>
+                <div class="card-title">شروط الخدمة</div>
+                <div class="card-desc">الشروط والأحكام</div>
+            </a>
+        </div>
+    </div>
+    
+    <a href="index.html" class="back">
+        <i class="fas fa-home"></i> الرجوع للرئيسية
+    </a>
+    
+    <script>
+        function doSearch() {
+            const val = document.getElementById('search').value.toLowerCase();
+            const cards = document.querySelectorAll('.card');
+            let count = 0;
+            
+            cards.forEach(c => {
+                const title = c.querySelector('.card-title').textContent.toLowerCase();
+                const desc = c.querySelector('.card-desc').textContent.toLowerCase();
+                if (title.includes(val) || desc.includes(val)) {
+                    c.style.display = 'block';
+                    count++;
+                } else {
+                    c.style.display = 'none';
+                }
+            });
+            
+            document.getElementById('total').textContent = count;
+        }
+    </script>
+</body>
+</html>
