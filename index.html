@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>عرب سعد للإعلانات - خبراء التسويق الرقمي في الخليج</title>
-    <meta name="description" content="وكالة إعلانات رقمية متخصصة في إدارة الحملات الإعلانية على جوجل وفيسبوك وإنستجرام وسناب شات وتيك توك">
+    <title>مؤسسة إعلانات العرب للتسويق الإلكتروني والإعلانات الممولة</title>
+    <meta name="description" content="مؤسسة متخصصة في التسويق الإلكتروني وإدارة الحملات الإعلانية الممولة على جوجل وفيسبوك وإنستجرام وسناب شات وتيك توك">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&display=swap" rel="stylesheet">
@@ -69,12 +69,13 @@
         }
 
         .logo {
-            font-size: 2rem;
+            font-size: 1.8rem;
             font-weight: 900;
             background: linear-gradient(135deg, #f6b93b, #26de81);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
+            line-height: 1.4;
         }
 
         .nav-links {
@@ -96,6 +97,7 @@
         .nav-links a:hover {
             background: linear-gradient(135deg, #f6b93b, #26de81);
             color: #1a1a2e;
+            transform: translateY(-2px);
         }
 
         .hero {
@@ -216,17 +218,39 @@
             padding: 45px 30px;
             border-radius: 25px;
             text-align: center;
-            transition: all 0.4s ease;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
             cursor: pointer;
             backdrop-filter: blur(10px);
             border: 2px solid transparent;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(246, 185, 59, 0.1), rgba(38, 222, 129, 0.1));
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+
+        .service-card:hover::before {
+            opacity: 1;
         }
 
         .service-card:hover {
-            transform: translateY(-15px) scale(1.03);
-            background: rgba(255, 255, 255, 0.12);
-            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.4);
+            transform: translateY(-20px) scale(1.05);
+            background: rgba(255, 255, 255, 0.15);
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5);
             border-color: #f6b93b;
+        }
+
+        .service-card:active {
+            transform: translateY(-15px) scale(1.02);
         }
 
         .service-icon {
@@ -236,6 +260,13 @@
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
+            transition: all 0.3s ease;
+            position: relative;
+            z-index: 1;
+        }
+
+        .service-card:hover .service-icon {
+            transform: scale(1.2) rotate(5deg);
         }
 
         .service-title {
@@ -243,12 +274,48 @@
             font-weight: 700;
             margin: 20px 0;
             color: #fff;
+            position: relative;
+            z-index: 1;
+            transition: all 0.3s ease;
+        }
+
+        .service-card:hover .service-title {
+            color: #f6b93b;
         }
 
         .service-desc {
             color: #ddd;
             line-height: 1.8;
             font-size: 1rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .service-card .btn-service {
+            margin-top: 20px;
+            padding: 12px 30px;
+            background: linear-gradient(135deg, #f6b93b, #26de81);
+            color: #1a1a2e;
+            border: none;
+            border-radius: 30px;
+            font-weight: 700;
+            font-size: 0.95rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            opacity: 0;
+            transform: translateY(10px);
+            position: relative;
+            z-index: 1;
+        }
+
+        .service-card:hover .btn-service {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .btn-service:hover {
+            transform: scale(1.1);
+            box-shadow: 0 5px 20px rgba(246, 185, 59, 0.5);
         }
 
         .stats-section {
@@ -268,13 +335,15 @@
             padding: 40px 25px;
             border-radius: 20px;
             text-align: center;
-            transition: all 0.3s;
+            transition: all 0.4s ease;
             backdrop-filter: blur(10px);
+            cursor: pointer;
         }
 
         .stat-box:hover {
-            transform: translateY(-10px);
+            transform: translateY(-15px) scale(1.05);
             background: rgba(255, 255, 255, 0.15);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
         }
 
         .stat-number {
@@ -305,12 +374,14 @@
             padding: 35px;
             border-radius: 20px;
             border-right: 5px solid #f6b93b;
-            transition: all 0.3s;
+            transition: all 0.4s ease;
+            cursor: pointer;
         }
 
         .testimonial-card:hover {
-            transform: translateX(-10px);
+            transform: translateX(-15px) scale(1.03);
             background: rgba(255, 255, 255, 0.12);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
         }
 
         .testimonial-text {
@@ -365,6 +436,7 @@
 
         .footer-section a:hover {
             color: #26de81;
+            transform: translateX(-5px);
         }
 
         .social-links {
@@ -382,7 +454,7 @@
 
         .social-links a:hover {
             color: #f6b93b;
-            transform: scale(1.2);
+            transform: scale(1.3) rotate(10deg);
         }
 
         .copyright {
@@ -422,7 +494,7 @@
 
         .whatsapp-btn:hover {
             background: #128c7e;
-            transform: translateY(-5px);
+            transform: translateY(-5px) scale(1.1);
             box-shadow: 0 15px 40px rgba(37, 211, 102, 0.7);
         }
 
@@ -437,6 +509,10 @@
             
             .section-title {
                 font-size: 2rem;
+            }
+            
+            .logo {
+                font-size: 1.3rem;
             }
             
             .nav-links {
@@ -472,14 +548,14 @@
     <header>
         <nav class="container">
             <div class="logo">
-                <i class="fas fa-bullhorn"></i> عرب سعد للإعلانات
+                <i class="fas fa-bullhorn"></i> مؤسسة إعلانات العرب<br>للتسويق الإلكتروني
             </div>
             <ul class="nav-links">
                 <li><a href="#home">الرئيسية</a></li>
                 <li><a href="#services">خدماتنا</a></li>
                 <li><a href="#stats">إنجازاتنا</a></li>
                 <li><a href="#testimonials">آراء العملاء</a></li>
-                <li><a href="#contact">تواصل معنا</a></li>
+                <li><a href="https://wa.me/201110760081">تواصل معنا</a></li>
             </ul>
         </nav>
     </header>
@@ -488,14 +564,14 @@
     <section class="hero" id="home">
         <div class="container">
             <h1 class="hero-title">
-                🚀 نحول إعلاناتك إلى مبيعات حقيقية
+                🚀 نحول إعلاناتك الممولة إلى مبيعات حقيقية
             </h1>
             <p class="hero-subtitle">
-                وكالة إعلانات رقمية متخصصة في إدارة الحملات الإعلانية على<br>
-                جوجل • فيسبوك • إنستجرام • سناب شات • تيك توك
+                مؤسسة متخصصة في التسويق الإلكتروني وإدارة الحملات الإعلانية الممولة<br>
+                على جوجل • فيسبوك • إنستجرام • سناب شات • تيك توك
             </p>
             <div class="cta-buttons">
-                <a href="https://wa.me/YOUR_PHONE_NUMBER" class="btn btn-primary">
+                <a href="https://wa.me/201110760081" class="btn btn-primary">
                     <i class="fab fa-whatsapp"></i> احجز استشارتك المجانية
                 </a>
                 <a href="#services" class="btn btn-secondary">
@@ -510,64 +586,70 @@
         <div class="container">
             <h2 class="section-title">خدماتنا الاحترافية</h2>
             <div class="services-grid">
-                <div class="service-card">
+                <div class="service-card" onclick="window.location.href='https://wa.me/201110760081'">
                     <div class="service-icon">
                         <i class="fab fa-google"></i>
                     </div>
-                    <h3 class="service-title">إعلانات جوجل</h3>
+                    <h3 class="service-title">إعلانات جوجل الممولة</h3>
                     <p class="service-desc">
-                        حملات Google Ads احترافية لتصدر نتائج البحث وزيادة المبيعات
+                        حملات Google Ads احترافية لتصدر نتائج البحث وزيادة المبيعات بعائد استثمار مضمون
                     </p>
+                    <button class="btn-service">اطلب الخدمة الآن</button>
                 </div>
 
-                <div class="service-card">
+                <div class="service-card" onclick="window.location.href='https://wa.me/201110760081'">
                     <div class="service-icon">
                         <i class="fab fa-facebook"></i>
                     </div>
-                    <h3 class="service-title">إعلانات فيسبوك</h3>
+                    <h3 class="service-title">إعلانات فيسبوك الممولة</h3>
                     <p class="service-desc">
-                        استهداف دقيق للجمهور المناسب وزيادة التفاعل والمبيعات
+                        استهداف دقيق للجمهور المناسب وزيادة التفاعل والمبيعات بميزانيات مدروسة
                     </p>
+                    <button class="btn-service">اطلب الخدمة الآن</button>
                 </div>
 
-                <div class="service-card">
+                <div class="service-card" onclick="window.location.href='https://wa.me/201110760081'">
                     <div class="service-icon">
                         <i class="fab fa-instagram"></i>
                     </div>
-                    <h3 class="service-title">إعلانات إنستجرام</h3>
+                    <h3 class="service-title">إعلانات إنستجرام الممولة</h3>
                     <p class="service-desc">
-                        محتوى بصري جذاب يحقق أعلى معدلات التحويل والمشاركة
+                        محتوى بصري جذاب يحقق أعلى معدلات التحويل والمشاركة من جمهورك المستهدف
                     </p>
+                    <button class="btn-service">اطلب الخدمة الآن</button>
                 </div>
 
-                <div class="service-card">
+                <div class="service-card" onclick="window.location.href='https://wa.me/201110760081'">
                     <div class="service-icon">
                         <i class="fab fa-snapchat"></i>
                     </div>
-                    <h3 class="service-title">إعلانات سناب شات</h3>
+                    <h3 class="service-title">إعلانات سناب شات الممولة</h3>
                     <p class="service-desc">
-                        الوصول للشباب الخليجي بحملات إبداعية وفعّالة
+                        الوصول للشباب الخليجي بحملات إبداعية وفعّالة تحقق نتائج فورية
                     </p>
+                    <button class="btn-service">اطلب الخدمة الآن</button>
                 </div>
 
-                <div class="service-card">
+                <div class="service-card" onclick="window.location.href='https://wa.me/201110760081'">
                     <div class="service-icon">
                         <i class="fab fa-tiktok"></i>
                     </div>
-                    <h3 class="service-title">إعلانات تيك توك</h3>
+                    <h3 class="service-title">إعلانات تيك توك الممولة</h3>
                     <p class="service-desc">
-                        فيديوهات فيرال ترند لملايين المشاهدات والعملاء
+                        فيديوهات فيرال ترند تصل لملايين المشاهدات وتجلب آلاف العملاء المحتملين
                     </p>
+                    <button class="btn-service">اطلب الخدمة الآن</button>
                 </div>
 
-                <div class="service-card">
+                <div class="service-card" onclick="window.location.href='https://wa.me/201110760081'">
                     <div class="service-icon">
                         <i class="fas fa-chart-line"></i>
                     </div>
-                    <h3 class="service-title">تحليل وتقارير</h3>
+                    <h3 class="service-title">تحليل وتقارير مفصلة</h3>
                     <p class="service-desc">
-                        تقارير شاملة ومفصّلة عن أداء حملاتك وعائد الاستثمار
+                        تقارير شاملة ومفصّلة عن أداء حملاتك الممولة وعائد الاستثمار بشفافية كاملة
                     </p>
+                    <button class="btn-service">اطلب الخدمة الآن</button>
                 </div>
             </div>
         </div>
@@ -584,15 +666,15 @@
                 </div>
                 <div class="stat-box">
                     <div class="stat-number">2000+</div>
-                    <div class="stat-label">حملة ناجحة</div>
+                    <div class="stat-label">حملة إعلانية ناجحة</div>
                 </div>
                 <div class="stat-box">
                     <div class="stat-number">15M+</div>
-                    <div class="stat-label">ميزانية مُدارة</div>
+                    <div class="stat-label">ميزانية إعلانات مُدارة</div>
                 </div>
                 <div class="stat-box">
                     <div class="stat-number">350%</div>
-                    <div class="stat-label">متوسط العائد</div>
+                    <div class="stat-label">متوسط عائد الاستثمار</div>
                 </div>
             </div>
         </div>
@@ -605,7 +687,7 @@
             <div class="testimonials-grid">
                 <div class="testimonial-card">
                     <p class="testimonial-text">
-                        "تعاملت مع عرب سعد للإعلانات لمدة 6 أشهر وكانت النتائج مذهلة! زادت مبيعاتنا 400% والحملات كانت دقيقة جداً في الاستهداف."
+                        "تعاملت مع مؤسسة إعلانات العرب لمدة 6 أشهر وكانت النتائج مذهلة! زادت مبيعاتنا 400% والحملات الممولة كانت دقيقة جداً في الاستهداف."
                     </p>
                     <div class="testimonial-author">أحمد العتيبي</div>
                     <div class="testimonial-role">مدير تسويق - متجر إلكتروني</div>
@@ -613,7 +695,7 @@
 
                 <div class="testimonial-card">
                     <p class="testimonial-text">
-                        "فريق محترف جداً ومتابعة مستمرة، استطاعوا تحقيق نتائج لم نتوقعها. الآن نعتمد عليهم بشكل كامل في كل حملاتنا الإعلانية."
+                        "فريق محترف جداً ومتابعة مستمرة، استطاعوا تحقيق نتائج لم نتوقعها من الإعلانات الممولة. الآن نعتمد عليهم بشكل كامل في كل حملاتنا."
                     </p>
                     <div class="testimonial-author">سارة المطيري</div>
                     <div class="testimonial-role">صاحبة عمل - خدمات تعليمية</div>
@@ -621,7 +703,7 @@
 
                 <div class="testimonial-card">
                     <p class="testimonial-text">
-                        "أفضل استثمار قمت به! التقارير التفصيلية والشفافية الكاملة في العمل جعلتني أثق بهم تماماً. ننصح بهم بشدة."
+                        "أفضل استثمار قمت به في التسويق الإلكتروني! التقارير التفصيلية والشفافية الكاملة في إدارة الإعلانات الممولة جعلتني أثق بهم تماماً."
                     </p>
                     <div class="testimonial-author">محمد السالم</div>
                     <div class="testimonial-role">رائد أعمال - قطاع العقارات</div>
@@ -635,44 +717,45 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
-                    <h3>عن عرب سعد للإعلانات</h3>
+                    <h3>عن مؤسسة إعلانات العرب</h3>
                     <p>
-                        وكالة إعلانات رقمية متخصصة في السوق الخليجي، نساعد الشركات على النمو والتوسع من خلال حملات إعلانية مدروسة واحترافية.
+                        مؤسسة متخصصة في التسويق الإلكتروني والإعلانات الممولة في السوق الخليجي، نساعد الشركات على النمو والتوسع من خلال حملات إعلانية مدروسة واحترافية.
                     </p>
                 </div>
                 <div class="footer-section">
                     <h3>خدماتنا</h3>
-                    <a href="#services">إعلانات جوجل</a>
-                    <a href="#services">إعلانات فيسبوك</a>
-                    <a href="#services">إعلانات إنستجرام</a>
-                    <a href="#services">إعلانات سناب شات</a>
-                    <a href="#services">إعلانات تيك توك</a>
+                    <a href="#services">إعلانات جوجل الممولة</a>
+                    <a href="#services">إعلانات فيسبوك الممولة</a>
+                    <a href="#services">إعلانات إنستجرام الممولة</a>
+                    <a href="#services">إعلانات سناب شات الممولة</a>
+                    <a href="#services">إعلانات تيك توك الممولة</a>
+                    <a href="#services">تحليل وتقارير مفصلة</a>
                 </div>
                 <div class="footer-section">
                     <h3>تواصل معنا</h3>
-                    <p><i class="fas fa-envelope"></i> info@arabsad-ads.com</p>
-                    <p><i class="fab fa-whatsapp"></i> +966 XX XXX XXXX</p>
+                    <p><i class="fas fa-envelope"></i> info@arabads-marketing.com</p>
+                    <p><i class="fab fa-whatsapp"></i> <a href="https://wa.me/201110760081" style="color: #ddd;">+20 111 076 0081</a></p>
                     <p><i class="fas fa-map-marker-alt"></i> الرياض، المملكة العربية السعودية</p>
                 </div>
             </div>
 
             <div class="social-links">
-                <a href="#"><i class="fab fa-facebook"></i></a>
-                <a href="#"><i class="fab fa-twitter"></i></a>
-                <a href="#"><i class="fab fa-instagram"></i></a>
-                <a href="#"><i class="fab fa-linkedin"></i></a>
-                <a href="#"><i class="fab fa-youtube"></i></a>
+                <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
             </div>
 
             <div class="copyright">
-                <p>&copy; 2025 عرب سعد للإعلانات. جميع الحقوق محفوظة.</p>
+                <p>&copy; 2025 مؤسسة إعلانات العرب للتسويق الإلكتروني والإعلانات الممولة. جميع الحقوق محفوظة.</p>
             </div>
         </div>
     </footer>
 
     <!-- WhatsApp Float Button -->
     <div class="whatsapp-float">
-        <a href="https://wa.me/YOUR_PHONE_NUMBER" class="whatsapp-btn" target="_blank">
+        <a href="https://wa.me/201110760081" class="whatsapp-btn" target="_blank">
             <i class="fab fa-whatsapp"></i>
             تواصل واتساب
         </a>
