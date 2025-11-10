@@ -1,55 +1,0 @@
-<!DOCTYPE html>
-<html lang="ar" dir="rtl">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>تصميم المتاجر الإلكترونية | مؤسسة إعلانات العرب</title>
-<meta name="description" content="تصميم وإعداد متاجر إلكترونية احترافية مع تكامل الدفع والشحن. حلول e-commerce شاملة للأسواق العربية.">
-<link rel="stylesheet" href="assets/css/main.css">
-<link rel="stylesheet" href="assets/css/ux-enhancements.css">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="enhanced-arabic-fonts.css">
-</head>
-<body>
-<div class="reading-progress" id="progress"></div>
-<main class="container">
-<div style="background: linear-gradient(135deg, #f093fb, #f5576c); color: white; padding: 4rem 2rem; text-align: center; border-radius: 25px; margin: 2rem 0;">
-  <h1 style="font-size: 3.2rem; margin-bottom: 2rem;">🛍️ تصميم المتاجر الإلكترونية</h1>
-  <p style="font-size: 1.3rem; margin-bottom: 3rem;">متاجر عصرية سريعة مع تكامل الدفع والشحن</p>
-  <a class="btn btn-success" href="https://wa.me/201110760081?text=أريد%20تصميم%20متجر%20إلكتروني" target="_blank" style="font-size: 1.2rem; padding: 1.2rem 2.5rem;">🏪 اطلب متجرك الآن</a>
-</div>
-
-<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin: 3rem 0;">
-  <div style="background: white; padding: 2rem; border-radius: 15px; box-shadow: 0 8px 25px rgba(0,0,0,0.08);">
-    <h3>🎨 التصميم</h3>
-    <p>واجهات عصرية متجاوبة مع جميع الأجهزة</p>
-  </div>
-  <div style="background: white; padding: 2rem; border-radius: 15px; box-shadow: 0 8px 25px rgba(0,0,0,0.08);">
-    <h3>💳 الدفع</h3>
-    <p>تكامل مع جميع بوابات الدفع المحلية</p>
-  </div>
-  <div style="background: white; padding: 2rem; border-radius: 15px; box-shadow: 0 8px 25px rgba(0,0,0,0.08);">
-    <h3>🚚 الشحن</h3>
-    <p>ربط مع شركات الشحن وحساب التكاليف</p>
-  </div>
-  <div style="background: white; padding: 2rem; border-radius: 15px; box-shadow: 0 8px 25px rgba(0,0,0,0.08);">
-    <h3>📊 الإدارة</h3>
-    <p>لوحة تحكم شاملة لإدارة المنتجات والطلبات</p>
-  </div>
-</div>
-
-</main>
-
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-    fetch('./shared-header.html').then(r => r.ok ? r.text() : '').then(html => { if (html) document.body.insertAdjacentHTML('afterbegin', html); });
-    fetch('./shared-footer.html').then(r => r.ok ? r.text() : '').then(html => { if (html) document.body.insertAdjacentHTML('beforeend', html); });
-    fetch('./whatsapp-button.html').then(r => r.ok ? r.text() : '').then(html => { if (html) document.body.insertAdjacentHTML('beforeend', html); });
-});
-
-const p=document.getElementById('progress');
-window.addEventListener('scroll',()=>{const h=document.documentElement;const s=h.scrollTop/(h.scrollHeight-h.clientHeight)*100;p.style.width=s+'%'});
-</script>
-</body>
-</html>
