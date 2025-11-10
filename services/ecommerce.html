@@ -1,362 +1,313 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>تصميم متاجر إلكترونية في الخليج | 8 متاجر جاهزة للعرض المباشر | مؤسسة إعلانات العرب</title>
-    <meta name="description" content="شاهد 8 متاجر إلكترونية احترافية صممناها للخليج والأردن: تصميم متاجر السعودية، الإمارات، الكويت، عمان، الأردن. عروض حية Live Demo على GitHub، MyEasyOrders، SellSite. أنظمة دفع محلية، شحن، واتساب.">
-    <meta name="keywords" content="تصميم متاجر إلكترونية السعودية، متجر الإمارات، متجر إلكتروني الكويت، متجر عمان، متجر قطر، متجر البحرين، متجر الأردن، Live Demo، MyEasyOrders، SellSite، GitHub Pages، متاجر جاهزة، متجر عربي، متجر RTL">
-    <link rel="canonical" href="https://arabsad.com/services/ecommerce.html">
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../styles.css">
-    <style>
-    .live-demos{padding:80px 0;background:linear-gradient(135deg,#f8fafc 0%,#e2e8f0 100%)}
-    .live-demos h2{text-align:center;color:#1e40af;font-size:2.8rem;margin-bottom:20px;text-shadow:0 2px 4px rgba(0,0,0,0.05)}
-    .section-desc{text-align:center;color:#64748b;max-width:720px;margin:0 auto 50px;font-size:1.1rem;line-height:1.7}
-    .country-filter{text-align:center;margin-bottom:40px}
-    .filter-btn{background:#fff;color:#475569;padding:8px 16px;margin:0 8px;border-radius:25px;border:2px solid #e2e8f0;cursor:pointer;transition:all .3s ease}
-    .filter-btn.active,.filter-btn:hover{background:#1e40af;color:#fff;border-color:#1e40af}
-    .demos-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(360px,1fr));gap:28px;margin:50px 0}
-    .demo-card{background:#fff;border-radius:20px;overflow:hidden;box-shadow:0 10px 30px rgba(0,0,0,0.08);border:1px solid rgba(226,232,240,0.6);transition:all .35s ease;position:relative}
-    .demo-card::before{content:'LIVE';position:absolute;top:12px;right:12px;background:#dc2626;color:#fff;padding:4px 10px;border-radius:12px;font-size:.75rem;font-weight:700;z-index:2;animation:liveFlash 2s infinite}
-    @keyframes liveFlash{0%,100%{opacity:1}50%{opacity:.7}}
-    .demo-card:hover{transform:translateY(-12px) scale(1.02);box-shadow:0 20px 50px rgba(0,0,0,0.15)}
-    .demo-image{height:240px;position:relative;overflow:hidden;cursor:pointer}
-    .demo-image a{position:absolute;inset:0;display:block;z-index:1}
-    .flag-cover{position:absolute;inset:0;background-size:cover;background-position:center;filter:saturate(1.1) contrast(1.08);transition:transform .35s ease}
-    .demo-card:hover .flag-cover{transform:scale(1.05)}
-    .flag-wave-layer{position:absolute;inset:-15%;background:radial-gradient(circle at 15% 50%,rgba(255,255,255,.3),transparent 45%),radial-gradient(circle at 85% 50%,rgba(0,0,0,.25),transparent 45%);mix-blend-mode:soft-light;opacity:.4;animation:waveMove 8s ease-in-out infinite}
-    @keyframes waveMove{0%{transform:translateX(0) skewX(0)}25%{transform:translateX(-3%) skewX(1deg)}75%{transform:translateX(3%) skewX(-1deg)}100%{transform:translateX(0) skewX(0)}}
-    .flag-overlay{position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.02),rgba(0,0,0,.28));pointer-events:none}
-    .demo-content{padding:22px}
-    .demo-content h3{margin:0 0 8px;color:#0f172a;font-weight:700;font-size:1.35rem}
-    .demo-platform{color:#64748b;font-size:.9rem;margin-bottom:12px}
-    .price-ask{background:linear-gradient(135deg,#fef3c7,#fde68a);color:#7c2d12;padding:8px 16px;border-radius:25px;display:inline-block;margin:12px 0 16px;font-weight:700;box-shadow:0 2px 8px rgba(252,211,77,0.3)}
-    .demo-buttons{display:flex;gap:12px}
-    .demo-buttons .btn{flex:1;padding:14px 18px;border-radius:12px;font-weight:700;transition:all .3s ease}
-    .btn-primary{background:linear-gradient(135deg,#1e40af,#3b82f6);color:#fff;border:none}
-    .btn-primary:hover{background:linear-gradient(135deg,#1d4ed8,#2563eb);transform:translateY(-2px);box-shadow:0 8px 20px rgba(30,64,175,0.4)}
-    .btn-outline{background:#fff;color:#1e40af;border:2px solid #1e40af}
-    .btn-outline:hover{background:#1e40af;color:#fff;transform:translateY(-2px);box-shadow:0 8px 20px rgba(30,64,175,0.3)}
-    .live-demo-cta{text-align:center;margin-top:60px;padding:50px;background:linear-gradient(135deg,#1e40af,#3b82f6);color:#fff;border-radius:20px;box-shadow:0 15px 40px rgba(30,64,175,0.2)}
-    .live-demo-cta h3{color:#fff;margin-bottom:20px;font-size:1.8rem}
-    .live-demo-cta p{color:rgba(255,255,255,0.92);margin-bottom:30px;font-size:1.1rem}
-    .live-demo-cta .btn{background:#fff;color:#1e40af;font-weight:700;padding:16px 32px}
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>تصميم متاجر إلكترونية خليجية احترافية | مؤسسة إعلانات العرب</title>
+<meta name="description" content="شاهد متاجر إلكترونية فعلية نعمل عليها عبر منصات مختلفة في الخليج العربي. جميع المتاجر مصممة باحتراف لأنظمة دفع وشحن محلية مع تجربة فاخرة. يمكنك الحصول على متجر مماثل خلال 7-14 يوم.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+html{font-size:16px;scroll-behavior:smooth}
+body{font-family:'Cairo',-apple-system,BlinkMacSystemFont,sans-serif;background:#1a2238;color:#fff;margin:0;line-height:1.7;overflow-x:hidden;}
+.container{max-width:1200px;margin:0 auto;padding:0 1rem;position:relative;z-index:1}
+.header{background:rgba(26,34,56,.95);position:fixed;top:0;left:0;right:0;z-index:1000;padding:0.7rem 0;border-bottom:1px solid rgba(255,255,255,.08)}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:2rem;}
+.logo{font-size:1.5rem;font-weight:900;display:flex;gap:8px;background:linear-gradient(135deg,#f6b93b,#26de81);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;transition:.3s}
+.logo img{height:32px;margin-left:6px;filter:drop-shadow(0 1px 5px #fad390)}
+.nav-menu{display:flex;list-style:none;gap:2rem}
+.nav-menu a{color:#fff;text-decoration:none;font-weight:700;padding:8px 18px;border-radius:14px;transition:.3s;position:relative;}
+.nav-menu a.active,.nav-menu a:hover{background:rgba(246,185,59,0.09);color:#f6b93b}
+.btn-main{background:linear-gradient(135deg,#f6b93b,#fad390);color:#1a2238;padding:11px 26px;border-radius:40px;font-weight:800;text-decoration:none;border:none;box-shadow:0 4px 18px #fad39065;transition:.3s;margin-right:10px}
+.btn-main:hover{transform:translateY(-2px);box-shadow:0 8px 40px #fad390cc;}
+.hero-demo{background:#16213e;padding:120px 0 0 0;min-height:40vh;display:flex;justify-content:center;align-items:center;flex-direction:column;box-shadow:0 6px 32px rgba(26,34,56,0.14)}
+.hero-demo h1{font-size:2.9rem;font-weight:900;margin-bottom:1rem;background:linear-gradient(135deg,#f6b93b,#fff);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.hero-demo .desc{color:#fad390;font-size:1.1rem;margin-bottom:2rem;text-align:center;max-width:600px}
+.live-badge{display:inline-block;background:linear-gradient(135deg,#dc2626,#eb3b5a);color:#fff;padding:6px 18px;border-radius:30px;font-weight:800;font-size:1.1rem;animation:pulse 1.7s infinite;margin-bottom:1.2rem}@keyframes pulse{0%,100%{transform:scale(.97)}50%{transform:scale(1.09)}}
+/* Cards */
+.demos-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:2rem;margin:40px auto 60px auto;position:relative}
+.demo-card{background:#fff;border-radius:24px;box-shadow:0 10px 30px rgba(0,0,0,.10);position:relative;transition:.35s;border:1.5px solid #fad39028;overflow:hidden;display:flex;flex-direction:column;align-items:center}
+.demo-card::after{content:'LIVE';position:absolute;top:14px;right:16px;background:#dc2626;color:#fff;padding:5px 14px;border-radius:16px;font-weight:900;font-size:.92rem;animation:blink 2s infinite}@keyframes blink{0%,100%{opacity:1}50%{opacity:.6}}
+.demo-image{width:100%;height:210px;position:relative;display:flex;align-items:center;justify-content:center;overflow:hidden}
+.demo-image .flag-cover{width:85px;height:66px;background-size:cover;background-position:center;border-radius:24px 4px 24px 4px;box-shadow:0 4px 22px #fad39028;border:3px solid #fad39065;position:absolute;top:28px;right:24px}
+.demo-image .flag-badge{font-size:2rem;position:absolute;top:18px;left:23px;}
+.demo-content{padding:26px 18px 20px 18px;text-align:center;width:100%}
+.demo-content h3{font-size:1.33rem;color:#1a2238;font-weight:900;margin:0 0 10px 0}
+.demo-platform{color:#4a69bd;font-weight:600;font-size:.98rem;margin-bottom:8px}
+.price-ask{background:linear-gradient(135deg,#fef3c7,#fde68a);color:#7c2d12;padding:6px 14px;border-radius:22px;display:inline-block;margin-bottom:10px;font-weight:800;box-shadow:0 2px 8px #fad39034}
+.demo-buttons{display:flex;gap:12px;margin-top:10px}
+.demo-buttons .btn-demo{flex:1;padding:13px 0;border-radius:16px;font-weight:700;background:linear-gradient(135deg,#f6b93b,#fad390);color:#16213e;border:none;transition:.3s;box-shadow:0 2px 12px #fad39022;text-decoration:none}
+.demo-buttons .btn-demo:hover{transform:translateY(-3px);background:linear-gradient(135deg,#f6b93b,#dc2626);color:#fff}
+.demo-buttons .btn-outline{flex:1;background:#fff;color:#4a69bd;border:2px solid #4a69bd;border-radius:16px;font-weight:700;padding:13px 0;transition:.3s;text-decoration:none}
+.demo-buttons .btn-outline:hover{background:linear-gradient(135deg,#4a69bd,#6a89cc);color:#fff;border-color:#6a89cc}
+.live-demo-cta{text-align:center;margin:60px auto 0 auto;padding:50px;background:linear-gradient(135deg,#4a69bd,#6a89cc);color:#fff;border-radius:30px;box-shadow:0 15px 40px #4a69bd18;max-width:600px}
+.live-demo-cta h3{font-size:1.8rem;font-weight:900;margin-bottom:20px;color:#fff}
+.live-demo-cta p{color:rgba(255,255,255,0.92);margin-bottom:30px;font-size:1.1rem}
+.live-demo-cta .btn-main{background:#fff;color:#4a69bd;font-weight:900;padding:16px 38px}
+/* Footer */
+.footer{background:rgba(0,0,0,.15);padding:40px 0 24px 0;margin-top:80px;border-top:1.5px solid #fad39018}
+.footer-content{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:2rem;margin-bottom:28px}
+.footer-section h3{font-size:1.3rem;margin-bottom:16px;color:#f6b93b;font-weight:900}
+.footer-section p, .footer-section a{color:#e8eaf0;text-decoration:none;display:block;margin-bottom:8px;transition:.3s}
+.footer-section a:hover{color:#fad390;padding-right:5px}
+.social-links{display:flex;gap:14px;margin-top:16px}
+.social-link{width:35px;height:35px;background:rgba(255,255,255,.08);border-radius:12px;display:flex;align-items:center;justify-content:center;color:#fff;text-decoration:none;transition:.3s;font-size:1.15rem}
+.social-link:hover{background:linear-gradient(135deg,#f6b93b,#26de81);transform:translateY(-2px);}
+.footer-bottom{text-align:center;padding-top:24px;border-top:1px solid rgba(255,255,255,.05);color:#e8eaf0;font-size:.99rem}
+/* WhatsApp */
+.whatsapp-float{position:fixed;bottom:26px;left:32px;z-index:999}
+.whatsapp-btn{display:flex;align-items:center;gap:8px;background:linear-gradient(135deg,#25d366,#20bf6b);color:#fff;padding:13px 21px;border-radius:33px;text-decoration:none;font-weight:900;box-shadow:0 7px 22px #20bf6b44;transition:.3s;font-size:1.09rem}
+.whatsapp-btn:hover{transform:translateY(-3px);box-shadow:0 15px 33px #20bf6b77;}
+@media(max-width:650px){.demos-grid{grid-template-columns:1fr;}.footer-content{grid-template-columns:1fr;}.hero-demo h1{font-size:2rem}.live-demo-cta{padding:30px 8px}.demo-image .flag-cover{right:50%;top:20px;transform:translateX(50%);}}
+</style>
 </head>
 <body>
-    <header class="header">
-        <nav class="nav">
-            <div class="container">
-                <div class="nav-brand">
-                    <img src="../assets/images/logo-arabsad.png" alt="لوجو مؤسسة إعلانات العرب" style="height:35px;margin-left:10px;">
-                    <div>
-                        <h1><a href="../index.html" style="text-decoration:none;color:inherit">مؤسسة إعلانات العرب</a></h1>
-                        <span class="domain">arabsad.com</span>
-                    </div>
-                </div>
-                <ul class="nav-menu">
-                    <li><a href="../index.html">الرئيسية</a></li>
-                    <li><a href="index.html">خدماتنا</a></li>
-                    <li><a href="#contact">اتصل بنا</a></li>
-                </ul>
-            </div>
-        </nav>
-    </header>
-
-    <div class="whatsapp-float">
-        <a href="https://wa.me/201110760081?text=أريد استشارة عن تصميم متجر إلكتروني" target="_blank" class="whatsapp-btn">
-            <svg viewBox="0 0 24 24" width="24" height="24"><path fill="currentColor" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347"/></svg>
-            <span>متاجر مجانية</span>
-        </a>
+<header class="header">
+  <div class="container">
+    <nav class="nav">
+      <a href="../index.html" class="logo"><img src="../assets/images/logo-arabsad.png" alt="لوجو مؤسسة إعلانات العرب"><span>إعلانات العرب</span></a>
+      <ul class="nav-menu">
+        <li><a href="../index.html">الرئيسية</a></li>
+        <li><a href="../index.html#services">خدماتنا</a></li>
+        <li><a href="#">متاجرنا</a></li>
+        <li><a href="#contact">اتصل بنا</a></li>
+      </ul>
+      <a href="https://wa.me/201110760081?text=أريد استشارة متاجر إلكترونية" class="btn-main" target="_blank">استشارة مجانية</a>
+    </nav>
+  </div>
+</header>
+<!-- Hero Section -->
+<section class="hero-demo">
+  <span class="live-badge">🛒 8 متاجر فعلية LIVE</span>
+  <h1>متاجر إلكترونية احترافية خليجية</h1>
+  <div class="desc">شاهد متاجر حقيقية وفعالة تم تصميمها خصيصاً لسوقك المحلي بأنظمة دفع/شحن متكاملة وتجربة فاخره.<br>يمكنك الحصول على متجر بنفس الجودة خلال <b>7-14 يوم عمل</b>.</div>
+</section>
+<div class="container">
+  <div class="demos-grid">
+    <!-- Saudi Arabia - GitHub -->
+    <div class="demo-card">
+      <div class="demo-image">
+        <span class="flag-badge">🇸🇦</span>
+        <div class="flag-cover" style="background-image:url('https://flagcdn.com/w1600/sa.png')"></div>
+      </div>
+      <div class="demo-content">
+        <h3>متجر السعودية</h3>
+        <p class="demo-platform">منصة GitHub Pages</p>
+        <div class="price-ask">اطلب السعر</div>
+        <div class="demo-buttons">
+          <a href="https://sherow1982.github.io/saudi-matjar.arabsad.com/" class="btn-demo" target="_blank">🔴 عرض مباشر</a>
+          <a href="https://wa.me/201110760081?text=أريد متجر مثل متجر السعودية GitHub" class="btn-outline" target="_blank">💬 اطلب السعر</a>
+        </div>
+      </div>
     </div>
-
-    <section class="live-demos">
-        <div class="container">
-            <h2>🛒 متاجرنا الجاهزة - عروض مباظرة 🔴</h2>
-            <p class="section-desc">شاهد متاجر إلكترونية حقيقية وفعالة نعمل عليها عبر منصات مختلفة. كل متجر مصمم خصيصاً لسوقه المحلي بأنظمة دفع محلية وشحن ولوجستية متكاملة.</p>
-            
-            <div class="country-filter">
-                <button class="filter-btn active" data-country="all">الكل (8)</button>
-                <button class="filter-btn" data-country="sa">🇸🇦 السعودية (2)</button>
-                <button class="filter-btn" data-country="ae">🇦🇪 الإمارات (3)</button>
-                <button class="filter-btn" data-country="kw">🇰🇼 الكويت (2)</button>
-                <button class="filter-btn" data-country="om">🇴🇲 عمان (1)</button>
-                <button class="filter-btn" data-country="jo">🇯🇴 الأردن (1)</button>
-            </div>
-            
-            <div class="demos-grid">
-                <!-- Saudi Arabia - GitHub -->
-                <div class="demo-card" data-country="sa">
-                    <div class="demo-image">
-                        <a href="https://sherow1982.github.io/saudi-matjar.arabsad.com/" target="_blank" aria-label="عرض متجر السعودية GitHub"></a>
-                        <div class="flag-cover" style="background-image:url('https://flagcdn.com/w1600/sa.png')"></div>
-                        <div class="flag-wave-layer"></div>
-                        <div class="flag-overlay"></div>
-                    </div>
-                    <div class="demo-content">
-                        <h3>متجر السعودية</h3>
-                        <p class="demo-platform">منصة GitHub Pages</p>
-                        <div class="price-ask">اطلب السعر</div>
-                        <div class="demo-buttons">
-                            <a href="https://sherow1982.github.io/saudi-matjar.arabsad.com/" class="btn btn-primary" target="_blank">🔴 عرض مباشر</a>
-                            <a href="https://wa.me/201110760081?text=أريد متجر مثل متجر السعودية GitHub" class="btn btn-outline" target="_blank">💬 اطلب السعر</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Saudi Arabia - MyEasyOrders -->
-                <div class="demo-card" data-country="sa">
-                    <div class="demo-image">
-                        <a href="https://tagerksa.myeasyorders.com/" target="_blank" aria-label="عرض تاجر السعودية MyEasyOrders"></a>
-                        <div class="flag-cover" style="background-image:url('https://flagcdn.com/w1600/sa.png')"></div>
-                        <div class="flag-wave-layer"></div>
-                        <div class="flag-overlay"></div>
-                    </div>
-                    <div class="demo-content">
-                        <h3>تاجر السعودية</h3>
-                        <p class="demo-platform">منصة MyEasyOrders</p>
-                        <div class="price-ask">اطلب السعر</div>
-                        <div class="demo-buttons">
-                            <a href="https://tagerksa.myeasyorders.com/" class="btn btn-primary" target="_blank">🔴 عرض مباشر</a>
-                            <a href="https://wa.me/201110760081?text=أريد متجر مثل تاجر السعودية MyEasyOrders" class="btn btn-outline" target="_blank">💬 اطلب السعر</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- UAE - MyEasyOrders -->
-                <div class="demo-card" data-country="ae">
-                    <div class="demo-image">
-                        <a href="https://tageruae.myeasyorders.com/" target="_blank" aria-label="عرض تاجر الإمارات MyEasyOrders"></a>
-                        <div class="flag-cover" style="background-image:url('https://flagcdn.com/w1600/ae.png')"></div>
-                        <div class="flag-wave-layer"></div>
-                        <div class="flag-overlay"></div>
-                    </div>
-                    <div class="demo-content">
-                        <h3>تاجر الإمارات</h3>
-                        <p class="demo-platform">منصة MyEasyOrders</p>
-                        <div class="price-ask">اطلب السعر</div>
-                        <div class="demo-buttons">
-                            <a href="https://tageruae.myeasyorders.com/" class="btn btn-primary" target="_blank">🔴 عرض مباشر</a>
-                            <a href="https://wa.me/201110760081?text=أريد متجر مثل تاجر الإمارات MyEasyOrders" class="btn btn-outline" target="_blank">💬 اطلب السعر</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- UAE - SellSite Noskha -->
-                <div class="demo-card" data-country="ae">
-                    <div class="demo-image">
-                        <a href="https://noskha-emeratis.sellsite.net/" target="_blank" aria-label="عرض نسخة إماراتية SellSite"></a>
-                        <div class="flag-cover" style="background-image:url('https://flagcdn.com/w1600/ae.png')"></div>
-                        <div class="flag-wave-layer"></div>
-                        <div class="flag-overlay"></div>
-                    </div>
-                    <div class="demo-content">
-                        <h3>نسخة إماراتية</h3>
-                        <p class="demo-platform">منصة SellSite</p>
-                        <div class="price-ask">اطلب السعر</div>
-                        <div class="demo-buttons">
-                            <a href="https://noskha-emeratis.sellsite.net/" class="btn btn-primary" target="_blank">🔴 عرض مباشر</a>
-                            <a href="https://wa.me/201110760081?text=أريد متجر مثل نسخة إماراتية SellSite" class="btn btn-outline" target="_blank">💬 اطلب السعر</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- UAE Shopping - SellSite -->
-                <div class="demo-card" data-country="ae">
-                    <div class="demo-image">
-                        <a href="https://emirates-shopping.sellsite.net/" target="_blank" aria-label="عرض Emirates Shopping SellSite"></a>
-                        <div class="flag-cover" style="background-image:url('https://flagcdn.com/w1600/ae.png')"></div>
-                        <div class="flag-wave-layer"></div>
-                        <div class="flag-overlay"></div>
-                    </div>
-                    <div class="demo-content">
-                        <h3>Emirates Shopping</h3>
-                        <p class="demo-platform">منصة SellSite</p>
-                        <div class="price-ask">اطلب السعر</div>
-                        <div class="demo-buttons">
-                            <a href="https://emirates-shopping.sellsite.net/" class="btn btn-primary" target="_blank">🔴 عرض مباشر</a>
-                            <a href="https://wa.me/201110760081?text=أريد متجر مثل Emirates Shopping SellSite" class="btn btn-outline" target="_blank">💬 اطلب السعر</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Kuwait - GitHub -->
-                <div class="demo-card" data-country="kw">
-                    <div class="demo-image">
-                        <a href="https://sherow1982.github.io/Kuwait-matjar/" target="_blank" aria-label="عرض Kuwait-matjar GitHub"></a>
-                        <div class="flag-cover" style="background-image:url('https://flagcdn.com/w1600/kw.png')"></div>
-                        <div class="flag-wave-layer"></div>
-                        <div class="flag-overlay"></div>
-                    </div>
-                    <div class="demo-content">
-                        <h3>متجر الكويت</h3>
-                        <p class="demo-platform">منصة GitHub Pages</p>
-                        <div class="price-ask">اطلب السعر</div>
-                        <div class="demo-buttons">
-                            <a href="https://sherow1982.github.io/Kuwait-matjar/" class="btn btn-primary" target="_blank">🔴 عرض مباشر</a>
-                            <a href="https://wa.me/201110760081?text=أريد متجر مثل Kuwait-matjar GitHub" class="btn btn-outline" target="_blank">💬 اطلب السعر</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Kuwait - SellSite -->
-                <div class="demo-card" data-country="kw">
-                    <div class="demo-image">
-                        <a href="https://tagerkwait.sellsite.net/" target="_blank" aria-label="عرض تاجر الكويت SellSite"></a>
-                        <div class="flag-cover" style="background-image:url('https://flagcdn.com/w1600/kw.png')"></div>
-                        <div class="flag-wave-layer"></div>
-                        <div class="flag-overlay"></div>
-                    </div>
-                    <div class="demo-content">
-                        <h3>تاجر الكويت</h3>
-                        <p class="demo-platform">منصة SellSite</p>
-                        <div class="price-ask">اطلب السعر</div>
-                        <div class="demo-buttons">
-                            <a href="https://tagerkwait.sellsite.net/" class="btn btn-primary" target="_blank">🔴 عرض مباشر</a>
-                            <a href="https://wa.me/201110760081?text=أريد متجر مثل تاجر الكويت SellSite" class="btn btn-outline" target="_blank">💬 اطلب السعر</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Oman - GitHub -->
-                <div class="demo-card" data-country="om">
-                    <div class="demo-image">
-                        <a href="https://sherow1982.github.io/matjar-oman/" target="_blank" aria-label="عرض متجر عمان GitHub"></a>
-                        <div class="flag-cover" style="background-image:url('https://flagcdn.com/w1600/om.png')"></div>
-                        <div class="flag-wave-layer"></div>
-                        <div class="flag-overlay"></div>
-                    </div>
-                    <div class="demo-content">
-                        <h3>متجر عمان</h3>
-                        <p class="demo-platform">منصة GitHub Pages</p>
-                        <div class="price-ask">اطلب السعر</div>
-                        <div class="demo-buttons">
-                            <a href="https://sherow1982.github.io/matjar-oman/" class="btn btn-primary" target="_blank">🔴 عرض مباشر</a>
-                            <a href="https://wa.me/201110760081?text=أريد متجر مثل متجر عمان GitHub" class="btn btn-outline" target="_blank">💬 اطلب السعر</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- UAE Gifts - GitHub -->
-                <div class="demo-card" data-country="ae">
-                    <div class="demo-image">
-                        <a href="https://sherow1982.github.io/hadaya-emirates.arabsad.com/" target="_blank" aria-label="عرض هدايا الإمارات GitHub"></a>
-                        <div class="flag-cover" style="background-image:url('https://flagcdn.com/w1600/ae.png')"></div>
-                        <div class="flag-wave-layer"></div>
-                        <div class="flag-overlay"></div>
-                    </div>
-                    <div class="demo-content">
-                        <h3>هدايا الإمارات</h3>
-                        <p class="demo-platform">منصة GitHub Pages</p>
-                        <div class="price-ask">اطلب السعر</div>
-                        <div class="demo-buttons">
-                            <a href="https://sherow1982.github.io/hadaya-emirates.arabsad.com/" class="btn btn-primary" target="_blank">🔴 عرض مباشر</a>
-                            <a href="https://wa.me/201110760081?text=أريد متجر مثل هدايا الإمارات GitHub" class="btn btn-outline" target="_blank">💬 اطلب السعر</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Jordan - SellSite -->
-                <div class="demo-card" data-country="jo">
-                    <div class="demo-image">
-                        <a href="https://jordan-shopping.sellsite.net/" target="_blank" aria-label="عرض متجر الأردن SellSite"></a>
-                        <div class="flag-cover" style="background-image:url('https://flagcdn.com/w1600/jo.png')"></div>
-                        <div class="flag-wave-layer"></div>
-                        <div class="flag-overlay"></div>
-                    </div>
-                    <div class="demo-content">
-                        <h3>متجر الأردن</h3>
-                        <p class="demo-platform">منصة SellSite</p>
-                        <div class="price-ask">اطلب السعر</div>
-                        <div class="demo-buttons">
-                            <a href="https://jordan-shopping.sellsite.net/" class="btn btn-primary" target="_blank">🔴 عرض مباشر</a>
-                            <a href="https://wa.me/201110760081?text=أريد متجر مثل متجر الأردن SellSite" class="btn btn-outline" target="_blank">💬 اطلب السعر</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- ArabsAD - MyEasyOrders -->
-                <div class="demo-card" data-country="eg">
-                    <div class="demo-image">
-                        <a href="https://arabsad.myeasyorders.com/" target="_blank" aria-label="عرض متجر عربساد MyEasyOrders"></a>
-                        <div class="flag-cover" style="background-image:url('https://flagcdn.com/w1600/eg.png')"></div>
-                        <div class="flag-wave-layer"></div>
-                        <div class="flag-overlay"></div>
-                    </div>
-                    <div class="demo-content">
-                        <h3>متجر عربساد</h3>
-                        <p class="demo-platform">منصة MyEasyOrders</p>
-                        <div class="price-ask">اطلب السعر</div>
-                        <div class="demo-buttons">
-                            <a href="https://arabsad.myeasyorders.com/" class="btn btn-primary" target="_blank">🔴 عرض مباشر</a>
-                            <a href="https://wa.me/201110760081?text=أريد متجر مثل متجر عربساد MyEasyOrders" class="btn btn-outline" target="_blank">💬 اطلب السعر</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="live-demo-cta">
-                <h3>🚀 جاهز لمتجر إلكتروني مثل هذه المشاريع؟</h3>
-                <p>كل المتاجر المعروضة حقيقية وتعمل على منصات مختلفة. يمكنك الحصول على متجر مماثل بنفس الجودة خلال 7-14 يوم عمل.</p>
-                <a href="https://wa.me/201110760081?text=شاهدت 8 متاجر جاهزة وأريد متجر مماثل لبلدي" class="btn btn-large" target="_blank">🛒 اطلب متجرك الآن</a>
-            </div>
+    <!-- Saudi Arabia - MyEasyOrders -->
+    <div class="demo-card">
+      <div class="demo-image">
+        <span class="flag-badge">🇸🇦</span>
+        <div class="flag-cover" style="background-image:url('https://flagcdn.com/w1600/sa.png')"></div>
+      </div>
+      <div class="demo-content">
+        <h3>تاجر السعودية</h3>
+        <p class="demo-platform">منصة MyEasyOrders</p>
+        <div class="price-ask">اطلب السعر</div>
+        <div class="demo-buttons">
+          <a href="https://tagerksa.myeasyorders.com/" class="btn-demo" target="_blank">🔴 عرض مباشر</a>
+          <a href="https://wa.me/201110760081?text=أريد متجر مثل تاجر السعودية MyEasyOrders" class="btn-outline" target="_blank">💬 اطلب السعر</a>
         </div>
-    </section>
-
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-brand">
-                    <img src="../assets/images/logo-arabsad.png" alt="لوجو مؤسسة إعلانات العرب" style="height:35px;margin-bottom:10px;">
-                    <h3>مؤسسة إعلانات العرب</h3>
-                    <p>للتسويق الإلكتروني والإعلانات الممولة</p>
-                </div>
-                <div class="footer-contact">
-                    <h4>تواصل معنا</h4>
-                    <p>📞 <a href="https://wa.me/201110760081" target="_blank">00201110760081</a></p>
-                    <p>📞 <a href="https://wa.me/201093304677" target="_blank">00201093304677</a></p>
-                    <p>✉️ sherow1982@gmail.com</p>
-                    <p>🌐 arabsad.com</p>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 مؤسسة إعلانات العرب - جميع الحقوق محفوظة</p>
-                <p><a href="https://wa.me/201110760081?text=أريد استشارة عن متجر إلكتروني" target="_blank" style="color:#25d366;font-weight:600">📞 تواصل عبر الواتساب</a></p>
-            </div>
+      </div>
+    </div>
+    <!-- UAE - MyEasyOrders -->
+    <div class="demo-card">
+      <div class="demo-image">
+        <span class="flag-badge">🇦🇪</span>
+        <div class="flag-cover" style="background-image:url('https://flagcdn.com/w1600/ae.png')"></div>
+      </div>
+      <div class="demo-content">
+        <h3>تاجر الإمارات</h3>
+        <p class="demo-platform">منصة MyEasyOrders</p>
+        <div class="price-ask">اطلب السعر</div>
+        <div class="demo-buttons">
+          <a href="https://tageruae.myeasyorders.com/" class="btn-demo" target="_blank">🔴 عرض مباشر</a>
+          <a href="https://wa.me/201110760081?text=أريد متجر مثل تاجر الإمارات MyEasyOrders" class="btn-outline" target="_blank">💬 اطلب السعر</a>
         </div>
-    </footer>
-
-    <script>
-    // Country filter functionality
-    document.querySelectorAll('.filter-btn').forEach(btn => {
-        btn.addEventListener('click', () => {
-            document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
-            btn.classList.add('active');
-            
-            const country = btn.dataset.country;
-            document.querySelectorAll('.demo-card').forEach(card => {
-                if (country === 'all' || card.dataset.country === country) {
-                    card.style.display = 'block';
-                } else {
-                    card.style.display = 'none';
-                }
-            });
-        });
-    });
-    
-    // GTM Events
-    document.querySelectorAll('.demo-image a').forEach(link => {
-        link.addEventListener('click', () => {
-            if (typeof gtag !== 'undefined') {
-                gtag('event', 'demo_image_click', {
-                    'event_category': 'engagement',
-                    'event_label': link.href
-                });
-            }
-        });
-    });
-    </script>
-    <script src="../script.js"></script>
+      </div>
+    </div>
+    <!-- UAE - SellSite Noskha -->
+    <div class="demo-card">
+      <div class="demo-image">
+        <span class="flag-badge">🇦🇪</span>
+        <div class="flag-cover" style="background-image:url('https://flagcdn.com/w1600/ae.png')"></div>
+      </div>
+      <div class="demo-content">
+        <h3>نسخة إماراتية</h3>
+        <p class="demo-platform">منصة SellSite</p>
+        <div class="price-ask">اطلب السعر</div>
+        <div class="demo-buttons">
+          <a href="https://noskha-emeratis.sellsite.net/" class="btn-demo" target="_blank">🔴 عرض مباشر</a>
+          <a href="https://wa.me/201110760081?text=أريد متجر مثل نسخة إماراتية SellSite" class="btn-outline" target="_blank">💬 اطلب السعر</a>
+        </div>
+      </div>
+    </div>
+    <!-- UAE Shopping - SellSite -->
+    <div class="demo-card">
+      <div class="demo-image">
+        <span class="flag-badge">🇦🇪</span>
+        <div class="flag-cover" style="background-image:url('https://flagcdn.com/w1600/ae.png')"></div>
+      </div>
+      <div class="demo-content">
+        <h3>Emirates Shopping</h3>
+        <p class="demo-platform">منصة SellSite</p>
+        <div class="price-ask">اطلب السعر</div>
+        <div class="demo-buttons">
+          <a href="https://emirates-shopping.sellsite.net/" class="btn-demo" target="_blank">🔴 عرض مباشر</a>
+          <a href="https://wa.me/201110760081?text=أريد متجر مثل Emirates Shopping SellSite" class="btn-outline" target="_blank">💬 اطلب السعر</a>
+        </div>
+      </div>
+    </div>
+    <!-- Kuwait - GitHub -->
+    <div class="demo-card">
+      <div class="demo-image">
+        <span class="flag-badge">🇰🇼</span>
+        <div class="flag-cover" style="background-image:url('https://flagcdn.com/w1600/kw.png')"></div>
+      </div>
+      <div class="demo-content">
+        <h3>متجر الكويت</h3>
+        <p class="demo-platform">منصة GitHub Pages</p>
+        <div class="price-ask">اطلب السعر</div>
+        <div class="demo-buttons">
+          <a href="https://sherow1982.github.io/Kuwait-matjar/" class="btn-demo" target="_blank">🔴 عرض مباشر</a>
+          <a href="https://wa.me/201110760081?text=أريد متجر مثل Kuwait-matjar GitHub" class="btn-outline" target="_blank">💬 اطلب السعر</a>
+        </div>
+      </div>
+    </div>
+    <!-- Kuwait - SellSite -->
+    <div class="demo-card">
+      <div class="demo-image">
+        <span class="flag-badge">🇰🇼</span>
+        <div class="flag-cover" style="background-image:url('https://flagcdn.com/w1600/kw.png')"></div>
+      </div>
+      <div class="demo-content">
+        <h3>تاجر الكويت</h3>
+        <p class="demo-platform">منصة SellSite</p>
+        <div class="price-ask">اطلب السعر</div>
+        <div class="demo-buttons">
+          <a href="https://tagerkwait.sellsite.net/" class="btn-demo" target="_blank">🔴 عرض مباشر</a>
+          <a href="https://wa.me/201110760081?text=أريد متجر مثل تاجر الكويت SellSite" class="btn-outline" target="_blank">💬 اطلب السعر</a>
+        </div>
+      </div>
+    </div>
+    <!-- Oman - GitHub -->
+    <div class="demo-card">
+      <div class="demo-image">
+        <span class="flag-badge">🇴🇲</span>
+        <div class="flag-cover" style="background-image:url('https://flagcdn.com/w1600/om.png')"></div>
+      </div>
+      <div class="demo-content">
+        <h3>متجر عمان</h3>
+        <p class="demo-platform">منصة GitHub Pages</p>
+        <div class="price-ask">اطلب السعر</div>
+        <div class="demo-buttons">
+          <a href="https://sherow1982.github.io/matjar-oman/" class="btn-demo" target="_blank">🔴 عرض مباشر</a>
+          <a href="https://wa.me/201110760081?text=أريد متجر مثل متجر عمان GitHub" class="btn-outline" target="_blank">💬 اطلب السعر</a>
+        </div>
+      </div>
+    </div>
+    <!-- UAE Gifts - GitHub -->
+    <div class="demo-card">
+      <div class="demo-image">
+        <span class="flag-badge">🇦🇪</span>
+        <div class="flag-cover" style="background-image:url('https://flagcdn.com/w1600/ae.png')"></div>
+      </div>
+      <div class="demo-content">
+        <h3>هدايا الإمارات</h3>
+        <p class="demo-platform">منصة GitHub Pages</p>
+        <div class="price-ask">اطلب السعر</div>
+        <div class="demo-buttons">
+          <a href="https://sherow1982.github.io/hadaya-emirates.arabsad.com/" class="btn-demo" target="_blank">🔴 عرض مباشر</a>
+          <a href="https://wa.me/201110760081?text=أريد متجر مثل هدايا الإمارات GitHub" class="btn-outline" target="_blank">💬 اطلب السعر</a>
+        </div>
+      </div>
+    </div>
+    <!-- Jordan - SellSite -->
+    <div class="demo-card">
+      <div class="demo-image">
+        <span class="flag-badge">🇯🇴</span>
+        <div class="flag-cover" style="background-image:url('https://flagcdn.com/w1600/jo.png')"></div>
+      </div>
+      <div class="demo-content">
+        <h3>متجر الأردن</h3>
+        <p class="demo-platform">منصة SellSite</p>
+        <div class="price-ask">اطلب السعر</div>
+        <div class="demo-buttons">
+          <a href="https://jordan-shopping.sellsite.net/" class="btn-demo" target="_blank">🔴 عرض مباشر</a>
+          <a href="https://wa.me/201110760081?text=أريد متجر مثل متجر الأردن SellSite" class="btn-outline" target="_blank">💬 اطلب السعر</a>
+        </div>
+      </div>
+    </div>
+    <!-- ArabsAD - MyEasyOrders -->
+    <div class="demo-card">
+      <div class="demo-image">
+        <span class="flag-badge">🇪🇬</span>
+        <div class="flag-cover" style="background-image:url('https://flagcdn.com/w1600/eg.png')"></div>
+      </div>
+      <div class="demo-content">
+        <h3>متجر عربساد</h3>
+        <p class="demo-platform">منصة MyEasyOrders</p>
+        <div class="price-ask">اطلب السعر</div>
+        <div class="demo-buttons">
+          <a href="https://arabsad.myeasyorders.com/" class="btn-demo" target="_blank">🔴 عرض مباشر</a>
+          <a href="https://wa.me/201110760081?text=أريد متجر مثل متجر عربساد MyEasyOrders" class="btn-outline" target="_blank">💬 اطلب السعر</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="live-demo-cta">
+    <h3>🚀 جاهز لمتجر إلكتروني فاخر مثل المشاريع أعلاه؟</h3>
+    <p>كل المتاجر المعروضة تعمل فعلياً على منصات خليجية.  احجز متجرك خلال أقل من 14 يوم عمل.</p>
+    <a href="https://wa.me/201110760081?text=شاهدت 8 متاجر جاهزة وأريد متجر مماثل لبلدي" class="btn-main" target="_blank">🛒 اطلب متجرك الآن</a>
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>🚀 إعلانات العرب</h3>
+        <p>الوكالة الرقمية الرائدة في الخليج العربي</p>
+        <div class="social-links">
+          <a href="https://www.facebook.com/arabads.me" class="social-link" target="_blank">📘</a>
+          <a href="https://instagram.com/arabsadads" class="social-link" target="_blank">📷</a>
+          <a href="https://tiktok.com/@arabsadads" class="social-link" target="_blank">🎵</a>
+        </div>
+      </div>
+      <div class="footer-section">
+        <h3>خدماتنا</h3>
+        <a href="../index.html#services">إعلانات Google</a>
+        <a href="../index.html#services">السوشيال ميديا</a>
+        <a href="#">المتاجر الإلكترونية</a>
+        <a href="../index.html#services">تحسين SEO</a>
+      </div>
+      <div class="footer-section">
+        <h3>روابط سريعة</h3>
+        <a href="../index.html">الرئيسية</a>
+        <a href="../index.html#services">خدماتنا</a>
+        <a href="#">متاجرنا</a>
+      </div>
+      <div class="footer-section">
+        <h3>تواصل معنا</h3>
+        <a href="https://wa.me/201110760081" target="_blank">📱 00201110760081</a>
+        <a href="mailto:sherow1982@gmail.com">✉️ sherow1982@gmail.com</a>
+        <p>🌐 arabsad.com</p>
+        <p>📍 مصر - الجيزة - حدائق أكتوبر</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 مؤسسة إعلانات العرب - جميع الحقوق محفوظة</p>
+    </div>
+  </div>
+</footer>
+<div class="whatsapp-float">
+  <a href="https://wa.me/201110760081?text=أريد استشارة متجر إلكتروني احترافي" class="whatsapp-btn" target="_blank"><span>💬</span><span>راسلنا الآن</span></a>
+</div>
 </body>
 </html>
