@@ -3,64 +3,718 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>خدماتنا | مؤسسة إعلانات العرب</title>
-    <meta name="description" content="كل خدمات التسويق الإلكتروني وإعلانات جوجل والسوشيال ميديا وتصميم المواقع والمتاجر - إعلانات العرب">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&family=Almarai:wght@700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/modern-arabic-theme.css">
-    <style>body{background:var(--bg-gradient)}.hero-services{text-align:center;margin:60px 0 40px}.hero-title{font-size:2.5rem;font-weight:900;margin-bottom:22px}.hero-subtitle{font-size:1.18rem;color:var(--text-muted);max-width:700px;margin:auto;margin-bottom:25px}.cta-btns{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}.section-title{font-size:2.1rem;color:var(--primary-color);margin-bottom:40px}.services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:32px}.card{background:white;padding:36px 30px;border-radius:16px;box-shadow:var(--shadow-sm);transition:.3s;}.card:hover{box-shadow:var(--shadow-lg);transform:translateY(-7px)}.card-icon{font-size:2.5rem;color:var(--accent-color);margin-bottom:18px}.card-title{font-weight:800;font-size:1.2rem;margin-bottom:10px;font-family:'Almarai',sans-serif}.card-desc{color:var(--text-secondary);font-size:1.05rem;line-height:1.7}.wa-float{position:fixed;bottom:27px;left:27px;z-index:999}.wa-float a{background:#25d366;color:#fff;padding:12px 26px;border-radius:35px;display:inline-flex;align-items:center;gap:8px;font-weight:700;box-shadow:0 4px 22px rgba(37,211,102,.25);transition:.3s}.wa-float a:hover{background:#128c7e;transform:scale(1.05)}@media(max-width:600px){.hero-title{font-size:1.45rem}.services-grid{grid-template-columns:1fr}.section-title{font-size:1.1rem}}</style>
+    <meta name="description" content="خدمات التسويق الرقمي الشاملة - إعلانات جوجل وسوشيال ميديا وSEO وتصميم المواقع والمتاجر الإلكترونية">
+    <title>خدماتنا الرئيسية - التسويق الرقمي الاحترافي | ArabSad</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Tajawal', 'Cairo', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #2d3748;
+            line-height: 1.8;
+            overflow-x: hidden;
+        }
+
+        .hero-section {
+            background: linear-gradient(135deg, rgba(102, 126, 234, 0.95) 0%, rgba(118, 75, 162, 0.95) 100%);
+            color: white;
+            padding: 80px 20px 100px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="%23ffffff" fill-opacity="0.1" d="M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,112C672,96,768,96,864,112C960,128,1056,160,1152,160C1248,160,1344,128,1392,112L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>') no-repeat bottom;
+            background-size: cover;
+            opacity: 0.3;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .hero-title {
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+            animation: fadeInDown 1s ease;
+        }
+
+        .hero-subtitle {
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+            opacity: 0.95;
+            animation: fadeInUp 1s ease 0.2s both;
+        }
+
+        .hero-description {
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+            line-height: 1.9;
+            opacity: 0.9;
+            animation: fadeInUp 1s ease 0.4s both;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+            animation: fadeInUp 1s ease 0.6s both;
+        }
+
+        .cta-button {
+            padding: 18px 45px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        .cta-primary {
+            background: white;
+            color: #667eea;
+        }
+
+        .cta-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+        }
+
+        .cta-secondary {
+            background: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+
+        .cta-secondary:hover {
+            background: white;
+            color: #667eea;
+            transform: translateY(-3px);
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .services-section {
+            background: #f7fafc;
+            padding: 80px 20px;
+            margin-top: -50px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 70px;
+        }
+
+        .section-title {
+            font-size: 2.8rem;
+            font-weight: 800;
+            color: #2d3748;
+            margin-bottom: 15px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 4px;
+            background: linear-gradient(90deg, #667eea, #764ba2);
+            border-radius: 2px;
+        }
+
+        .section-subtitle {
+            font-size: 1.2rem;
+            color: #718096;
+            margin-top: 25px;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+            margin-top: 50px;
+        }
+
+        .service-card {
+            background: white;
+            border-radius: 20px;
+            padding: 0;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+            transition: all 0.4s ease;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 60px rgba(102, 126, 234, 0.2);
+        }
+
+        .service-image {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 20px 20px 0 0;
+        }
+
+        .service-content {
+            padding: 35px;
+        }
+
+        .service-icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            display: inline-block;
+        }
+
+        .service-title {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #2d3748;
+            margin-bottom: 15px;
+        }
+
+        .service-description {
+            font-size: 1.1rem;
+            color: #4a5568;
+            margin-bottom: 25px;
+            line-height: 1.8;
+        }
+
+        .service-features {
+            list-style: none;
+            margin-bottom: 25px;
+        }
+
+        .service-features li {
+            padding: 10px 0;
+            color: #4a5568;
+            position: relative;
+            padding-right: 30px;
+        }
+
+        .service-features li::before {
+            content: '✓';
+            position: absolute;
+            right: 0;
+            color: #48bb78;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .service-link {
+            display: inline-block;
+            padding: 12px 30px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .service-link:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 25px rgba(102, 126, 234, 0.3);
+        }
+
+        .stats-section {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 50px;
+            max-width: 1200px;
+            margin: 50px auto 0;
+        }
+
+        .stat-item {
+            padding: 30px;
+        }
+
+        .stat-number {
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+
+        .stat-label {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+
+        .why-us-section {
+            background: white;
+            padding: 80px 20px;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 40px;
+            margin-top: 50px;
+        }
+
+        .feature-card {
+            text-align: center;
+            padding: 40px 30px;
+            background: #f7fafc;
+            border-radius: 15px;
+            transition: all 0.3s ease;
+        }
+
+        .feature-card:hover {
+            background: white;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+            transform: translateY(-5px);
+        }
+
+        .feature-icon {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+        }
+
+        .feature-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #2d3748;
+            margin-bottom: 15px;
+        }
+
+        .feature-description {
+            font-size: 1.05rem;
+            color: #4a5568;
+            line-height: 1.7;
+        }
+
+        .cta-section {
+            background: linear-gradient(135deg, #2d3748 0%, #1a202c 100%);
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        .cta-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .cta-section p {
+            font-size: 1.3rem;
+            margin-bottom: 40px;
+            opacity: 0.9;
+        }
+
+        .whatsapp-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 15px;
+            padding: 20px 50px;
+            background: #25D366;
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-size: 1.2rem;
+            font-weight: 700;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 30px rgba(37, 211, 102, 0.3);
+        }
+
+        .whatsapp-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(37, 211, 102, 0.4);
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 2.2rem;
+            }
+
+            .hero-subtitle {
+                font-size: 1.2rem;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+        }
+    </style>
 </head>
 <body>
-    <div class="hero-services">
-        <div class="hero-title">كل خدماتنا في التسويق الرقمي</div>
-        <div class="hero-subtitle">نحن شريكك في تحقيق النجاح الرقمي، نقدم لك جميع خدمات الإعلانات الممولة والسيو وتصميم المواقع والمتاجر وحملات السوشيال ميديا وكل ما تحتاجه لمضاعفة أرباحك</div>
-        <div class="cta-btns">
-            <a href="https://wa.me/201110760081" class="btn btn-primary"><i class="fab fa-whatsapp"></i> استشارة مجانية</a>
-            <a href="all-pages.html" class="btn btn-secondary"><i class="fas fa-th"></i> تصفح كل الصفحات</a>
-        </div>
-    </div>
-    <div class="container">
-        <h2 class="section-title">خدماتنا الرئيسية</h2>
-        <div class="services-grid">
-            <div class="card">
-                <div class="card-icon"><i class="fab fa-google"></i></div>
-                <div class="card-title">إعلانات Google Ads</div>
-                <div class="card-desc">حملات احترافية تزيد مبيعاتك وتظهرك في الصفحة الأولى على جوجل بالوطن العربي</div>
-            </div>
-            <div class="card">
-                <div class="card-icon"><i class="fab fa-facebook"></i></div>
-                <div class="card-title">إعلانات السوشيال ميديا</div>
-                <div class="card-desc">إعلانات ممولة على فيسبوك وإنستجرام وسناب شات وتيك توك باحتراف</div>
-            </div>
-            <div class="card">
-                <div class="card-icon"><i class="fas fa-search"></i></div>
-                <div class="card-title">تحسين SEO للمواقع والمتاجر</div>
-                <div class="card-desc">رفع متجرك وموقعك في نتائج البحث لزيادة الزيارات ورفع علامة العلامة التجارية</div>
-            </div>
-            <div class="card">
-                <div class="card-icon"><i class="fas fa-shopping-cart"></i></div>
-                <div class="card-title">المتاجر الإلكترونية</div>
-                <div class="card-desc">تصميم وتطوير متاجر عصرية جاهزة للتسويق والمبيعات داخل الخليج ومصر</div>
-            </div>
-            <div class="card">
-                <div class="card-icon"><i class="fas fa-palette"></i></div>
-                <div class="card-title">تصميم المواقع</div>
-                <div class="card-desc">مواقع ويب سريعة متجاوبة بتصميمات عربية جذابة لتجربة مستخدم أفضل</div>
-            </div>
-            <div class="card">
-                <div class="card-icon"><i class="fas fa-chart-bar"></i></div>
-                <div class="card-title">تحليلات وتقارير الأداء</div>
-                <div class="card-desc">لوحات تحكم مع تقارير وبيانات مفصلة وتحليل الحملات والتوصيات للتحسين المستمر</div>
-            </div>
-            <div class="card">
-                <div class="card-icon"><i class="fas fa-users"></i></div>
-                <div class="card-title">إدارة الحسابات والسوشيال</div>
-                <div class="card-desc">إدارة شاملة لحسابات التواصل الاجتماعي وزيادة عدد المتابعين والتفاعل</div>
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-content">
+            <h1 class="hero-title">🚀 كل خدماتنا في التسويق الرقمي</h1>
+            <p class="hero-subtitle">نحن شريكك الموثوق في تحقيق النجاح الرقمي</p>
+            <p class="hero-description">
+                نقدم لك جميع خدمات الإعلانات الممولة والسيو وتصميم المواقع والمتاجر وحملات السوشيال ميديا 
+                وكل ما تحتاجه لمضاعفة أرباحك وتحقيق أهدافك التسويقية في الوطن العربي
+            </p>
+            <div class="cta-buttons">
+                <a href="#services" class="cta-button cta-primary">تصفح خدماتنا</a>
+                <a href="#contact" class="cta-button cta-secondary">استشارة مجانية</a>
             </div>
         </div>
-    </div>
-    <div class="wa-float">
-        <a href="https://wa.me/201110760081" target="_blank"><i class="fab fa-whatsapp"></i> تواصل واتساب</a>
-    </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats-section">
+        <div class="container">
+            <h2 class="section-title" style="color: white;">أرقامنا تتحدث عن نفسها</h2>
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-number">500+</div>
+                    <div class="stat-label">عميل راضٍ</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">1200+</div>
+                    <div class="stat-label">حملة ناجحة</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">350%</div>
+                    <div class="stat-label">متوسط زيادة المبيعات</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">8+</div>
+                    <div class="stat-label">سنوات خبرة</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">خدماتنا الرئيسية</h2>
+                <p class="section-subtitle">حلول تسويقية متكاملة لنمو أعمالك الرقمية</p>
+            </div>
+
+            <div class="services-grid">
+                <!-- Google Ads Service -->
+                <div class="service-card">
+                    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800" alt="إعلانات جوجل" class="service-image">
+                    <div class="service-content">
+                        <div class="service-icon">📊</div>
+                        <h3 class="service-title">إعلانات Google Ads</h3>
+                        <p class="service-description">
+                            حملات احترافية على محرك البحث الأول عالمياً تضمن لك الظهور في الصفحة الأولى وزيادة المبيعات بشكل مباشر
+                        </p>
+                        <ul class="service-features">
+                            <li>إعلانات شبكة البحث Search Ads</li>
+                            <li>إعلانات الشبكة الإعلانية Display Network</li>
+                            <li>إعلانات يوتيوب وجوجل شوبنج</li>
+                            <li>استهداف دقيق حسب الموقع والاهتمامات</li>
+                            <li>تحسين الحملات وتقليل التكلفة</li>
+                            <li>تقارير أداء تفصيلية يومية</li>
+                        </ul>
+                        <a href="/services/google-ads.html" class="service-link">اعرف المزيد ←</a>
+                    </div>
+                </div>
+
+                <!-- Social Media Ads -->
+                <div class="service-card">
+                    <img src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=800" alt="إعلانات السوشيال ميديا" class="service-image">
+                    <div class="service-content">
+                        <div class="service-icon">📱</div>
+                        <h3 class="service-title">إعلانات السوشيال ميديا</h3>
+                        <p class="service-description">
+                            إعلانات ممولة احترافية على فيسبوك وإنستجرام وسناب شات وتيك توك تصل لجمهورك المستهدف بدقة عالية
+                        </p>
+                        <ul class="service-features">
+                            <li>حملات فيسبوك وإنستجرام Meta Ads</li>
+                            <li>إعلانات سناب شات Snapchat Ads</li>
+                            <li>إعلانات تيك توك TikTok Ads</li>
+                            <li>تصميم محتوى إبداعي جذاب</li>
+                            <li>استهداف دقيق للجمهور المثالي</li>
+                            <li>إعادة استهداف للزوار Retargeting</li>
+                        </ul>
+                        <a href="/services/social-media-ads.html" class="service-link">اعرف المزيد ←</a>
+                    </div>
+                </div>
+
+                <!-- SEO Service -->
+                <div class="service-card">
+                    <img src="https://images.unsplash.com/photo-1571721795195-a2ca2d3370a9?w=800" alt="تحسين SEO" class="service-image">
+                    <div class="service-content">
+                        <div class="service-icon">🔍</div>
+                        <h3 class="service-title">تحسين SEO للمواقع والمتاجر</h3>
+                        <p class="service-description">
+                            رفع موقعك ومتجرك في نتائج البحث الأولى على جوجل لزيادة الزيارات المجانية ورفع الوعي بعلامتك التجارية
+                        </p>
+                        <ul class="service-features">
+                            <li>تحليل وتدقيق SEO شامل</li>
+                            <li>بحث الكلمات المفتاحية المربحة</li>
+                            <li>تحسين داخلي On-Page SEO</li>
+                            <li>بناء روابط خارجية قوية Backlinks</li>
+                            <li>تحسين السرعة والأداء التقني</li>
+                            <li>تقارير ترتيب شهرية</li>
+                        </ul>
+                        <a href="/services/seo.html" class="service-link">اعرف المزيد ←</a>
+                    </div>
+                </div>
+
+                <!-- E-commerce Stores -->
+                <div class="service-card">
+                    <img src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=800" alt="المتاجر الإلكترونية" class="service-image">
+                    <div class="service-content">
+                        <div class="service-icon">🛒</div>
+                        <h3 class="service-title">المتاجر الإلكترونية</h3>
+                        <p class="service-description">
+                            تصميم وتطوير متاجر إلكترونية عصرية ومتكاملة جاهزة للتسويق والمبيعات في الخليج ومصر والوطن العربي
+                        </p>
+                        <ul class="service-features">
+                            <li>تصميم متاجر حديثة متجاوبة</li>
+                            <li>لوحة تحكم سهلة الإدارة</li>
+                            <li>ربط بوابات الدفع الإلكتروني</li>
+                            <li>نظام إدارة المخزون والطلبات</li>
+                            <li>تكامل مع شركات الشحن</li>
+                            <li>محسنة للسيو وسرعة التصفح</li>
+                        </ul>
+                        <a href="/services/ecommerce.html" class="service-link">اعرف المزيد ←</a>
+                    </div>
+                </div>
+
+                <!-- Web Design -->
+                <div class="service-card">
+                    <img src="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=800" alt="تصميم المواقع" class="service-image">
+                    <div class="service-content">
+                        <div class="service-icon">💻</div>
+                        <h3 class="service-title">تصميم المواقع</h3>
+                        <p class="service-description">
+                            مواقع ويب احترافية سريعة ومتجاوبة بتصميمات عربية جذابة لتجربة مستخدم استثنائية وتحويل أعلى
+                        </p>
+                        <ul class="service-features">
+                            <li>تصميم عصري متجاوب Responsive</li>
+                            <li>تجربة مستخدم متميزة UX/UI</li>
+                            <li>سرعة تحميل فائقة</li>
+                            <li>محسنة لمحركات البحث</li>
+                            <li>تكامل مع أدوات التسويق</li>
+                            <li>استضافة وصيانة شاملة</li>
+                        </ul>
+                        <a href="/services/web-design.html" class="service-link">اعرف المزيد ←</a>
+                    </div>
+                </div>
+
+                <!-- Analytics & Reports -->
+                <div class="service-card">
+                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800" alt="التحليلات والتقارير" class="service-image">
+                    <div class="service-content">
+                        <div class="service-icon">📈</div>
+                        <h3 class="service-title">تحليلات وتقارير الأداء</h3>
+                        <p class="service-description">
+                            لوحات تحكم تفاعلية مع تقارير مفصلة وتحليلات دقيقة للحملات والتوصيات الفعالة للتحسين المستمر
+                        </p>
+                        <ul class="service-features">
+                            <li>لوحات تحكم Google Analytics</li>
+                            <li>تتبع التحويلات والمبيعات</li>
+                            <li>تقارير أداء الحملات</li>
+                            <li>تحليل سلوك الزوار</li>
+                            <li>توصيات تحسين مخصصة</li>
+                            <li>مقارنات الأداء الشهرية</li>
+                        </ul>
+                        <a href="/services/analytics.html" class="service-link">اعرف المزيد ←</a>
+                    </div>
+                </div>
+
+                <!-- Social Media Management -->
+                <div class="service-card">
+                    <img src="https://images.unsplash.com/photo-1611162616305-c69b3fa7fbe0?w=800" alt="إدارة السوشيال ميديا" class="service-image">
+                    <div class="service-content">
+                        <div class="service-icon">👥</div>
+                        <h3 class="service-title">إدارة الحسابات والسوشيال</h3>
+                        <p class="service-description">
+                            إدارة شاملة ومحترفة لحسابات التواصل الاجتماعي لزيادة عدد المتابعين والتفاعل وبناء مجتمع قوي
+                        </p>
+                        <ul class="service-features">
+                            <li>إنشاء محتوى إبداعي جذاب</li>
+                            <li>جدولة ونشر منتظم للمحتوى</li>
+                            <li>إدارة التعليقات والرسائل</li>
+                            <li>تصميم جرافيك وفيديوهات</li>
+                            <li>استراتيجية محتوى مدروسة</li>
+                            <li>تقارير أداء وتفاعل شهرية</li>
+                        </ul>
+                        <a href="/services/social-media-management.html" class="service-link">اعرف المزيد ←</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="why-us-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">لماذا تختار ArabSad؟</h2>
+                <p class="section-subtitle">نحن نقدم قيمة حقيقية لأعمالك الرقمية</p>
+            </div>
+
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">⚡</div>
+                    <h3 class="feature-title">خبرة مُثبتة</h3>
+                    <p class="feature-description">
+                        أكثر من 8 سنوات من الخبرة في التسويق الرقمي وإدارة الحملات الناجحة في الوطن العربي
+                    </p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">🎯</div>
+                    <h3 class="feature-title">نتائج قابلة للقياس</h3>
+                    <p class="feature-description">
+                        نركز على تحقيق نتائج ملموسة وقابلة للقياس بتقارير دورية شفافة ومفصلة
+                    </p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">💡</div>
+                    <h3 class="feature-title">حلول مبتكرة</h3>
+                    <p class="feature-description">
+                        نستخدم أحدث التقنيات والأدوات والاستراتيجيات المبتكرة لتحقيق أفضل النتائج
+                    </p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">🤝</div>
+                    <h3 class="feature-title">دعم مستمر</h3>
+                    <p class="feature-description">
+                        فريق متخصص متاح للرد على استفساراتك ودعمك في أي وقت طوال فترة العمل معنا
+                    </p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">💰</div>
+                    <h3 class="feature-title">أسعار تنافسية</h3>
+                    <p class="feature-description">
+                        نقدم باقات مرنة وأسعار تنافسية تناسب جميع الميزانيات مع جودة عالية مضمونة
+                    </p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">🌍</div>
+                    <h3 class="feature-title">تغطية شاملة</h3>
+                    <p class="feature-description">
+                        نخدم عملاء في جميع أنحاء الوطن العربي بخبرة عميقة في الأسواق المحلية
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section id="contact" class="cta-section">
+        <div class="container">
+            <h2>هل أنت مستعد لمضاعفة مبيعاتك؟</h2>
+            <p>تواصل معنا الآن واحصل على استشارة مجانية من خبرائنا</p>
+            <a href="https://wa.me/YOUR_NUMBER" class="whatsapp-button" target="_blank">
+                <svg width="30" height="30" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+                </svg>
+                تواصل واتساب
+            </a>
+        </div>
+    </section>
+
+    <script>
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Add animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.service-card, .feature-card').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(30px)';
+            el.style.transition = 'all 0.6s ease';
+            observer.observe(el);
+        });
+    </script>
 </body>
 </html>
