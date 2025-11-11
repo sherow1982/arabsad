@@ -7,25 +7,91 @@
 <link rel="stylesheet" href="assets/css/main.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="enhanced-arabic-fonts.css">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+<style>
+body {
+    font-family: 'Cairo', sans-serif;
+    background: linear-gradient(135deg, #0f2027 0%, #203a43 50%, #2c5364 100%);
+    color: #fff;
+    margin: 0;
+    padding: 0;
+}
+.container {
+    text-align: center;
+    padding: 4rem 2rem;
+    min-height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.btn {
+    display: inline-block;
+    padding: 12px 30px;
+    margin: 0.5rem;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+}
+.btn-primary {
+    background: #26de81;
+    color: #fff;
+}
+.btn-primary:hover {
+    background: #20c970;
+    transform: translateY(-2px);
+}
+.btn-success {
+    background: #f6b93b;
+    color: #0f2027;
+}
+.btn-success:hover {
+    background: #e0a629;
+    transform: translateY(-2px);
+}
+.btn-warning {
+    background: #25d366;
+    color: #fff;
+}
+.btn-warning:hover {
+    background: #1fb856;
+    transform: translateY(-2px);
+}
+h1 {
+    font-size: 4rem;
+    color: #f6b93b;
+    margin-bottom: 2rem;
+}
+h2 {
+    color: #26de81;
+    margin-bottom: 2rem;
+    font-size: 1.8rem;
+}
+p {
+    font-size: 1.2rem;
+    color: #e0e0e0;
+    margin-bottom: 3rem;
+}
+</style>
 </head>
 <body>
-<div class="container" style="text-align: center; padding: 4rem 2rem; min-height: 60vh; display: flex; flex-direction: column; justify-content: center;">
-  <h1 style="font-size: 4rem; color: #1a365d; margin-bottom: 2rem;">🚫 404</h1>
-  <h2 style="color: #4a5568; margin-bottom: 2rem;">عذراً - لم يتم العثور على الصفحة</h2>
-  <p style="font-size: 1.2rem; color: #718096; margin-bottom: 3rem;">الصفحة التي تبحث عنها غير موجودة أو تم نقلها</p>
+<div class="container">
+  <h1>🚫 404</h1>
+  <h2>عذراً - لم يتم العثور على الصفحة</h2>
+  <p>الصفحة التي تبحث عنها غير موجودة أو تم نقلها</p>
   <div>
-    <a href="index.html" class="btn btn-primary" style="margin: 0.5rem;">🏠 العودة للرئيسية</a>
-    <a href="services-page.html" class="btn btn-success" style="margin: 0.5rem;">💼 تصفح خدماتنا</a>
-    <a href="https://wa.me/201110760081?text=لم%20أجد%20الصفحة%20المطلوبة" target="_blank" class="btn btn-warning" style="margin: 0.5rem;">📞 ابلاغ عن المشكلة</a>
+    <a href="index.html" class="btn btn-primary">🏠 العودة للرئيسية</a>
+    <a href="services/index.html" class="btn btn-success">💼 تصفح خدماتنا</a>
+    <a href="https://wa.me/201110760081?text=لم%20أجد%20الصفحة%20المطلوبة" target="_blank" class="btn btn-warning">📞 ابلاغ عن المشكلة</a>
   </div>
 </div>
 
 <script>
 document.addEventListener('DOMContentLoaded', function() {
-    fetch('./shared-header.html').then(r => r.ok ? r.text() : '').then(html => { if (html) document.body.insertAdjacentHTML('afterbegin', html); });
-    fetch('./shared-footer.html').then(r => r.ok ? r.text() : '').then(html => { if (html) document.body.insertAdjacentHTML('beforeend', html); });
-    fetch('./whatsapp-button.html').then(r => r.ok ? r.text() : '').then(html => { if (html) document.body.insertAdjacentHTML('beforeend', html); });
+    fetch('./shared-header.html').then(r => r.ok ? r.text() : '').then(html => { if (html) document.body.insertAdjacentHTML('afterbegin', html); }).catch(() => {});
+    fetch('./shared-footer.html').then(r => r.ok ? r.text() : '').then(html => { if (html) document.body.insertAdjacentHTML('beforeend', html); }).catch(() => {});
+    fetch('./whatsapp-button.html').then(r => r.ok ? r.text() : '').then(html => { if (html) document.body.insertAdjacentHTML('beforeend', html); }).catch(() => {});
 });
 </script>
 </body>
