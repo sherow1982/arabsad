@@ -1,18 +1,13 @@
 // Service Worker for ArabSad.com PWA
-const CACHE_NAME = 'arabsad-v1.0.0';
-const CACHE_VERSION = '2025-11-02';
+const CACHE_NAME = 'arabsad-v1.0.1';
+const CACHE_VERSION = '2025-11-11';
 
 // قائمة الملفات المهمة للتخزين المؤقت
 const CORE_CACHE = [
   '/',
   '/index.html',
   '/assets/css/main.css',
-  '/assets/css/slider.css',
-  '/assets/css/ux-enhancements.css',
-  '/enhanced-arabic-fonts.css',
-  '/script.js',
-  '/assets/js/boot.js',
-  '/assets/images/logo.svg',
+  '/assets/css/navigation-system.css',
   '/favicon.ico',
   '/favicon.svg',
   '/manifest.json'
@@ -20,11 +15,12 @@ const CORE_CACHE = [
 
 // ملفات الصفحات المهمة
 const PAGES_CACHE = [
-  '/services-page.html',
-  '/google-ads-service.html',
-  '/social-media-service.html',
-  '/seo-service.html',
-  '/ecommerce-service.html',
+  '/services/google-ads.html',
+  '/services/seo.html',
+  '/services/website-design.html',
+  '/services/ecommerce.html',
+  '/services/social-media-ads.html',
+  '/services/social-management.html',
   '/sa.html',
   '/ae.html',
   '/kw.html',
@@ -44,13 +40,17 @@ self.addEventListener('install', event => {
       // تخزين الملفات الأساسية
       caches.open(CACHE_NAME).then(cache => {
         console.log('Service Worker: Caching core files');
-        return cache.addAll(CORE_CACHE);
+        return cache.addAll(CORE_CACHE.map(url => new Request(url, { credentials: 'same-origin' }))).catch(err => {
+          console.log('Service Worker: Failed to cache some core files', err);
+        });
       }),
       
       // تخزين الصفحات المهمة
       caches.open(CACHE_NAME + '-pages').then(cache => {
         console.log('Service Worker: Caching pages');
-        return cache.addAll(PAGES_CACHE.map(url => new Request(url, { credentials: 'omit' })));
+        return cache.addAll(PAGES_CACHE.map(url => new Request(url, { credentials: 'same-origin' }))).catch(err => {
+          console.log('Service Worker: Failed to cache some pages', err);
+        });
       })
     ]).then(() => {
       console.log('Service Worker: Installation complete');
@@ -186,22 +186,10 @@ self.addEventListener('push', event => {
   const data = event.data.json();
   const options = {
     body: data.body || 'لديك إشعار جديد من مؤسسة إعلانات العرب',
-    icon: '/assets/images/logo.svg',
-    badge: '/assets/images/badge.svg',
+    icon: '/favicon.svg',
+    badge: '/favicon.ico',
     tag: 'arabsad-notification',
-    requireInteraction: true,
-    actions: [
-      {
-        action: 'open',
-        title: 'فتح الموقع',
-        icon: '/assets/images/open-icon.svg'
-      },
-      {
-        action: 'close',
-        title: 'إغلاق',
-        icon: '/assets/images/close-icon.svg'
-      }
-    ]
+    requireInteraction: true
   };
   
   event.waitUntil(
