@@ -3,50 +3,326 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>دبي - التسويق الرقمي | إعلانات العرب</title>
-    <meta name="description" content="خدمات تسويق رقمي وإعلانات جوجل في دبي، حملات احترافية للمتاجر والشركات العربية.">
+    <title>التسويق الرقمي في دبي | إعلانات العرب</title>
+    <meta name="description" content="أفضل وكالة تسويق رقمي في دبي. Google Ads، SEO، سوشيال ميديا، تصميم مواقع. خبرة محلية وعالمية لنجاح أعمالك في دبي والإمارات.">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&family=Almarai:wght@700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/modern-arabic-theme.css">
-    <style>body{background:var(--bg-gradient)}.hero-city{text-align:center;margin:60px 0 30px}.hero-flag{font-size:2.6rem;margin-bottom:14px}.hero-title{font-size:2rem;font-weight:900;margin-bottom:15px}.hero-subtitle{font-size:1.05rem;color:var(--text-muted);max-width:600px;margin:auto;margin-bottom:20px}.cta-btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}.section-title{font-size:1.35rem;color:var(--primary-color);margin-bottom:30px}.services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:26px}.card{background:white;padding:26px 18px;border-radius:11px;box-shadow:var(--shadow-sm);transition:.3s}.card:hover{box-shadow:var(--shadow-lg);transform:translateY(-7px)}.card-icon{font-size:2.23rem;color:var(--accent-color);margin-bottom:10px}.card-title{font-weight:700;font-size:.95rem;margin-bottom:7px;font-family:'Almarai',sans-serif}.card-desc{color:var(--text-secondary);font-size:.92rem;line-height:1.65}.wa-float{position:fixed;bottom:24px;left:24px;z-index:999}.wa-float a{background:#25d366;color:#fff;padding:8px 18px;border-radius:35px;display:inline-flex;align-items:center;gap:7px;font-weight:700;box-shadow:0 4px 22px rgba(37,211,102,.25);transition:.3s}.wa-float a:hover{background:#128c7e;transform:scale(1.05)}@media(max-width:600px){.hero-title{font-size:1.1rem}.services-grid{grid-template-columns:1fr}.section-title{font-size:.97rem}}</style>
+    <link rel="stylesheet" href="../assets/css/modern-arabic-theme.css">
+    <style>
+        body{background:linear-gradient(135deg,#ede9fe 0%,#ddd6fe 100%);min-height:100vh}
+        .city-hero{background:linear-gradient(135deg,#8b5cf6 0%,#7c3aed 100%);color:#fff;text-align:center;padding:80px 20px 70px;margin-bottom:50px;border-radius:0 0 35px 35px;box-shadow:0 10px 40px rgba(139,92,246,.3);position:relative;overflow:hidden}
+        .city-hero::before{content:'';position:absolute;top:-50%;right:-10%;width:500px;height:500px;background:rgba(255,255,255,.1);border-radius:50%;z-index:0}
+        .city-hero::after{content:'';position:absolute;bottom:-30%;left:-5%;width:400px;height:400px;background:rgba(255,255,255,.08);border-radius:50%;z-index:0}
+        .hero-content{position:relative;z-index:1}
+        .hero-badge{display:inline-block;background:rgba(255,255,255,.2);padding:10px 25px;border-radius:50px;font-size:1rem;font-weight:700;margin-bottom:20px;backdrop-filter:blur(10px)}
+        .hero-title{font-size:3rem;font-weight:900;margin-bottom:20px;text-shadow:2px 2px 4px rgba(0,0,0,.2)}
+        .hero-subtitle{font-size:1.4rem;margin-bottom:35px;opacity:.95;line-height:1.8;max-width:850px;margin-left:auto;margin-right:auto}
+        .hero-btns{display:flex;gap:15px;justify-content:center;flex-wrap:wrap}
+        .hero-btns .btn{padding:15px 35px;font-size:1.15rem;border-radius:50px;font-weight:700;transition:.3s;text-decoration:none;display:inline-flex;align-items:center;gap:12px;box-shadow:0 4px 20px rgba(0,0,0,.2)}
+        .btn-light{background:#fff;color:#8b5cf6}
+        .btn-light:hover{background:#f3f4f6;transform:translateY(-3px)}
+        .btn-outline{background:transparent;color:#fff;border:2px solid #fff}
+        .btn-outline:hover{background:#fff;color:#8b5cf6;transform:translateY(-3px)}
+        
+        .dubai-image{margin:50px 0;text-align:center}
+        .dubai-image img{max-width:100%;height:auto;border-radius:25px;box-shadow:0 15px 50px rgba(0,0,0,.2)}
+        
+        .services-section{margin:60px 0}
+        .section-title{font-size:2.5rem;font-weight:900;text-align:center;margin-bottom:20px;color:#1f2937}
+        .section-subtitle{font-size:1.2rem;text-align:center;color:#6b7280;margin-bottom:50px;max-width:700px;margin-left:auto;margin-right:auto}
+        .services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:30px}
+        .service-card{background:#fff;padding:40px 30px;border-radius:20px;box-shadow:0 4px 25px rgba(0,0,0,.08);transition:.4s;border-top:5px solid #8b5cf6;position:relative;overflow:hidden}
+        .service-card::before{content:'';position:absolute;top:-50%;left:-50%;width:200%;height:200%;background:radial-gradient(circle,rgba(139,92,246,.05) 0%,transparent 70%);transform:scale(0);transition:.5s}
+        .service-card:hover::before{transform:scale(1)}
+        .service-card:hover{transform:translateY(-12px);box-shadow:0 10px 35px rgba(139,92,246,.25)}
+        .service-icon{font-size:3.5rem;color:#8b5cf6;margin-bottom:25px;display:block}
+        .service-title{font-size:1.5rem;font-weight:800;margin-bottom:15px;color:#1f2937;font-family:'Almarai',sans-serif}
+        .service-desc{font-size:1.1rem;color:#6b7280;line-height:1.8;margin-bottom:20px}
+        .service-features{list-style:none;padding:0;margin:20px 0 0 0}
+        .service-features li{padding:10px 0;font-size:1.05rem;color:#4b5563;display:flex;align-items:center;gap:12px}
+        .service-features li i{color:#8b5cf6;font-size:1.2rem}
+        
+        .why-dubai-section{background:#fff;padding:70px 20px;margin:70px 0;border-radius:35px;box-shadow:0 5px 35px rgba(0,0,0,.1)}
+        .why-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:30px;margin-top:50px}
+        .why-card{padding:30px;background:linear-gradient(135deg,#ede9fe 0%,#ddd6fe 100%);border-radius:18px;border-right:5px solid #8b5cf6;transition:.3s;text-align:center}
+        .why-card:hover{transform:scale(1.05);box-shadow:0 6px 25px rgba(139,92,246,.2)}
+        .why-icon{font-size:3rem;color:#8b5cf6;margin-bottom:20px}
+        .why-title{font-size:1.3rem;font-weight:800;color:#1f2937;margin-bottom:12px}
+        .why-desc{font-size:1.05rem;color:#4b5563;line-height:1.7}
+        
+        .industries-section{margin:70px 0}
+        .industries-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:20px;margin-top:40px}
+        .industry-badge{background:#fff;padding:20px 15px;border-radius:15px;text-align:center;box-shadow:0 4px 15px rgba(0,0,0,.08);transition:.3s;border:2px solid transparent}
+        .industry-badge:hover{border-color:#8b5cf6;transform:translateY(-5px);box-shadow:0 6px 20px rgba(139,92,246,.2)}
+        .industry-icon{font-size:2.5rem;color:#8b5cf6;margin-bottom:12px}
+        .industry-name{font-size:1.1rem;font-weight:700;color:#1f2937}
+        
+        .stats-section{background:linear-gradient(135deg,#8b5cf6 0%,#7c3aed 100%);padding:70px 20px;margin:70px 0;border-radius:35px;box-shadow:0 10px 40px rgba(139,92,246,.3);color:#fff}
+        .stats-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:30px;margin-top:50px}
+        .stat-card{background:rgba(255,255,255,.15);padding:35px 25px;border-radius:18px;text-align:center;backdrop-filter:blur(10px);transition:.3s}
+        .stat-card:hover{background:rgba(255,255,255,.25);transform:scale(1.05)}
+        .stat-number{font-size:3rem;font-weight:900;margin-bottom:12px}
+        .stat-label{font-size:1.2rem;font-weight:600;opacity:.95}
+        
+        .testimonials-section{margin:70px 0}
+        .testimonials-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:30px;margin-top:40px}
+        .testimonial-card{background:#fff;padding:35px 30px;border-radius:20px;box-shadow:0 4px 20px rgba(0,0,0,.08);position:relative}
+        .quote-icon{font-size:3rem;color:#8b5cf6;opacity:.2;position:absolute;top:20px;right:20px}
+        .testimonial-text{font-size:1.1rem;color:#4b5563;line-height:1.8;margin-bottom:20px;position:relative;z-index:1}
+        .testimonial-author{display:flex;align-items:center;gap:15px}
+        .author-avatar{width:50px;height:50px;background:linear-gradient(135deg,#8b5cf6 0%,#7c3aed 100%);border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-size:1.3rem;font-weight:700}
+        .author-info{flex:1}
+        .author-name{font-size:1.1rem;font-weight:800;color:#1f2937;margin-bottom:3px}
+        .author-position{font-size:.95rem;color:#6b7280}
+        
+        .cta-section{background:linear-gradient(135deg,#fbbf24 0%,#f59e0b 100%);padding:60px 30px;text-align:center;border-radius:30px;margin:70px 0;box-shadow:0 10px 40px rgba(251,191,36,.3)}
+        .cta-title{font-size:2.3rem;font-weight:900;color:#1f2937;margin-bottom:18px}
+        .cta-subtitle{font-size:1.3rem;color:#374151;margin-bottom:35px;line-height:1.7}
+        .cta-btn{background:#8b5cf6;color:#fff;padding:18px 45px;border-radius:50px;font-size:1.25rem;font-weight:700;text-decoration:none;display:inline-flex;align-items:center;gap:15px;transition:.3s;box-shadow:0 6px 25px rgba(139,92,246,.4)}
+        .cta-btn:hover{background:#7c3aed;transform:translateY(-4px);box-shadow:0 8px 30px rgba(139,92,246,.5)}
+        
+        @media(max-width:768px){
+            .hero-title{font-size:2rem}
+            .hero-subtitle{font-size:1.1rem}
+            .section-title{font-size:1.8rem}
+            .services-grid,.why-grid,.industries-grid,.stats-grid,.testimonials-grid{grid-template-columns:1fr}
+        }
+    </style>
 </head>
 <body>
-    <div class="hero-city">
-        <div class="hero-flag">🏙️</div>
-        <div class="hero-title">دبي - حلول التسويق الرقمية</div>
-        <div class="hero-subtitle">احصل على خدمات إعلانات جوجل وحملات السوشيال وتصميم المواقع والمتاجر بدبي بأحدث المعايير</div>
-        <div class="cta-btns">
-            <a href="https://wa.me/201110760081" class="btn btn-primary"><i class="fab fa-whatsapp"></i> استشارة دبي</a>
-            <a href="services/index.html" class="btn btn-secondary"><i class="fas fa-list"></i> كل الخدمات</a>
+    <div class="city-hero">
+        <div class="hero-content">
+            <div class="hero-badge"><i class="fas fa-map-marker-alt"></i> دبي - الإمارات العربية المتحدة</div>
+            <div class="hero-title">وكالة التسويق الرقمي الرائدة في دبي</div>
+            <div class="hero-subtitle">نساعد الشركات والأنشطة التجارية في دبي والإمارات على النمو والتوسع من خلال استراتيجيات تسويق رقمية مبتكرة ومدروسة تناسب السوق المحلي والعالمي</div>
+            <div class="hero-btns">
+                <a href="https://wa.me/201110760081" class="btn btn-light"><i class="fab fa-whatsapp"></i> تواصل معنا الآن</a>
+                <a href="../index.html" class="btn btn-outline"><i class="fas fa-th"></i> جميع خدماتنا</a>
+            </div>
         </div>
     </div>
+
     <div class="container">
-        <h2 class="section-title">خدماتنا في دبي</h2>
-        <div class="services-grid">
-            <div class="card">
-                <div class="card-icon"><i class="fab fa-google"></i></div>
-                <div class="card-title">إعلانات Google Ads</div>
-                <div class="card-desc">حملات قوية ومحددة للبحث والشبكة الإعلانية بدبي</div>
-            </div>
-            <div class="card">
-                <div class="card-icon"><i class="fab fa-instagram"></i></div>
-                <div class="card-title">سوشيال ميديا</div>
-                <div class="card-desc">إعلانات انستجرام وفيسبوك وسناب للجمهور المحلي</div>
-            </div>
-            <div class="card">
-                <div class="card-icon"><i class="fas fa-shopping-cart"></i></div>
-                <div class="card-title">تصميم متاجر إلكترونية</div>
-                <div class="card-desc">متاجر متوافقة مع دبي ودول الخليج</div>
-            </div>
-            <div class="card">
-                <div class="card-icon"><i class="fas fa-laptop-code"></i></div>
-                <div class="card-title">تصميم مواقع عصرية</div>
-                <div class="card-desc">مواقع سريعة متجاوبة للمؤسسات والمتاجر</div>
-            </div>
+        <div class="dubai-image">
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1000 500'%3E%3Cdefs%3E%3ClinearGradient id='skyline' x1='0%25' y1='0%25' x2='0%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%238b5cf6'/%3E%3Cstop offset='100%25' style='stop-color:%237c3aed'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect fill='%23e0e7ff' width='1000' height='500'/%3E%3Crect fill='url(%23skyline)' y='350' width='1000' height='150'/%3E%3Crect fill='%23c4b5fd' x='100' y='250' width='80' height='250'/%3E%3Crect fill='%23a78bfa' x='220' y='180' width='100' height='320'/%3E%3Crect fill='%238b5cf6' x='360' y='120' width='120' height='380'/%3E%3Crect fill='%237c3aed' x='520' y='100' width='90' height='400'/%3E%3Crect fill='%236d28d9' x='650' y='150' width='110' height='350'/%3E%3Crect fill='%235b21b6' x='800' y='200' width='95' height='300'/%3E%3Ctext x='500' y='470' font-family='Arial' font-size='28' font-weight='bold' fill='white' text-anchor='middle'%3Eدبي - مدينة الفرص والنجاح%3C/text%3E%3C/svg%3E" alt="منظر أفق دبي يُظهر ناطحات السحاب الشهيرة مثل برج خليفة والمباني الحديثة في قلب المدينة، يعكس روح الابتكار والتقدم في دبي">
         </div>
-    </div>
-    <div class="wa-float">
-        <a href="https://wa.me/201110760081" target="_blank"><i class="fab fa-whatsapp"></i> تواصل واتساب</a>
+
+        <section class="services-section">
+            <h2 class="section-title">خدمات التسويق الرقمي في دبي</h2>
+            <p class="section-subtitle">حلول تسويقية متكاملة ومصممة خصيصاً لتناسب سوق دبي المتنوع والديناميكي</p>
+            <div class="services-grid">
+                <div class="service-card">
+                    <i class="fab fa-google service-icon"></i>
+                    <div class="service-title">إعلانات Google Ads</div>
+                    <div class="service-desc">حملات إعلانية احترافية على جوجل لاستهداف العملاء في دبي والإمارات بدقة عالية</div>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check-circle"></i> استهداف محلي دقيق لدبي والإمارات</li>
+                        <li><i class="fas fa-check-circle"></i> إعلانات بحث، شبكة، فيديو، تسوق</li>
+                        <li><i class="fas fa-check-circle"></i> تحسين مستمر لأعلى عائد استثمار</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-search service-icon"></i>
+                    <div class="service-title">تحسين محركات البحث SEO</div>
+                    <div class="service-desc">رفع ترتيب موقعك في نتائج البحث لجذب المزيد من العملاء المحليين في دبي</div>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check-circle"></i> SEO محلي لدبي والإمارات</li>
+                        <li><i class="fas fa-check-circle"></i> تحسين تقني وبنية الموقع</li>
+                        <li><i class="fas fa-check-circle"></i> محتوى مُحسّن باللغتين العربية والإنجليزية</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-share-alt service-icon"></i>
+                    <div class="service-title">إدارة السوشيال ميديا</div>
+                    <div class="service-desc">إنشاء وإدارة حسابات احترافية على جميع منصات التواصل الاجتماعي</div>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check-circle"></i> محتوى إبداعي يناسب الجمهور الإماراتي</li>
+                        <li><i class="fas fa-check-circle"></i> إعلانات مستهدفة على فيسبوك وانستجرام</li>
+                        <li><i class="fas fa-check-circle"></i> تفاعل يومي وإدارة التعليقات</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-laptop-code service-icon"></i>
+                    <div class="service-title">تصميم وتطوير المواقع</div>
+                    <div class="service-desc">مواقع عصرية وسريعة ومتوافقة مع جميع الأجهزة لتعزيز حضورك الرقمي</div>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check-circle"></i> تصاميم عصرية تناسب السوق الإماراتي</li>
+                        <li><i class="fas fa-check-circle"></i> متاجر إلكترونية متكاملة</li>
+                        <li><i class="fas fa-check-circle"></i> تكامل مع بوابات الدفع المحلية</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-video service-icon"></i>
+                    <div class="service-title">إنتاج المحتوى المرئي</div>
+                    <div class="service-desc">تصوير وإنتاج فيديوهات احترافية وتصاميم جرافيك مميزة لعلامتك</div>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check-circle"></i> فيديوهات ترويجية عالية الجودة</li>
+                        <li><i class="fas fa-check-circle"></i> تصوير منتجات واستديو احترافي</li>
+                        <li><i class="fas fa-check-circle"></i> تصاميم جرافيك ومحتوى بصري</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-chart-line service-icon"></i>
+                    <div class="service-title">التحليلات والتقارير</div>
+                    <div class="service-desc">تقارير تفصيلية عن أداء حملاتك التسويقية وتحليل شامل للنتائج</div>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check-circle"></i> تقارير أسبوعية وشهرية مفصلة</li>
+                        <li><i class="fas fa-check-circle"></i> تحليل سلوك الزوار والعملاء</li>
+                        <li><i class="fas fa-check-circle"></i> توصيات لتحسين الأداء</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="why-dubai-section">
+            <h2 class="section-title">لماذا نحن الخيار الأفضل في دبي؟</h2>
+            <div class="why-grid">
+                <div class="why-card">
+                    <i class="fas fa-globe-asia why-icon"></i>
+                    <div class="why-title">خبرة محلية عميقة</div>
+                    <div class="why-desc">نعرف السوق الإماراتي جيداً وخصائص الجمهور في دبي وسلوكه الشرائي</div>
+                </div>
+                <div class="why-card">
+                    <i class="fas fa-language why-icon"></i>
+                    <div class="why-title">محتوى ثنائي اللغة</div>
+                    <div class="why-desc">نتقن إنشاء محتوى متميز باللغتين العربية والإنجليزية</div>
+                </div>
+                <div class="why-card">
+                    <i class="fas fa-users why-icon"></i>
+                    <div class="why-title">فريق محترف ومتخصص</div>
+                    <div class="why-desc">خبراء تسويق رقمي حاصلون على شهادات دولية معتمدة</div>
+                </div>
+                <div class="why-card">
+                    <i class="fas fa-trophy why-icon"></i>
+                    <div class="why-title">سجل حافل بالنجاحات</div>
+                    <div class="why-desc">أكثر من 150 مشروع ناجح في دبي والإمارات</div>
+                </div>
+                <div class="why-card">
+                    <i class="fas fa-dollar-sign why-icon"></i>
+                    <div class="why-title">أسعار تنافسية</div>
+                    <div class="why-desc">باقات مرنة تناسب جميع الميزانيات وأحجام الأعمال</div>
+                </div>
+                <div class="why-card">
+                    <i class="fas fa-headset why-icon"></i>
+                    <div class="why-title">دعم فني 24/7</div>
+                    <div class="why-desc">فريق دعم متاح على مدار الساعة للرد على استفساراتك</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="industries-section">
+            <h2 class="section-title">القطاعات التي نخدمها في دبي</h2>
+            <p class="section-subtitle">خبرة واسعة في التسويق لمختلف القطاعات والصناعات</p>
+            <div class="industries-grid">
+                <div class="industry-badge">
+                    <i class="fas fa-shopping-bag industry-icon"></i>
+                    <div class="industry-name">التجارة الإلكترونية</div>
+                </div>
+                <div class="industry-badge">
+                    <i class="fas fa-building industry-icon"></i>
+                    <div class="industry-name">العقارات</div>
+                </div>
+                <div class="industry-badge">
+                    <i class="fas fa-utensils industry-icon"></i>
+                    <div class="industry-name">المطاعم والكافيهات</div>
+                </div>
+                <div class="industry-badge">
+                    <i class="fas fa-spa industry-icon"></i>
+                    <div class="industry-name">التجميل والصحة</div>
+                </div>
+                <div class="industry-badge">
+                    <i class="fas fa-graduation-cap industry-icon"></i>
+                    <div class="industry-name">التعليم والتدريب</div>
+                </div>
+                <div class="industry-badge">
+                    <i class="fas fa-car industry-icon"></i>
+                    <div class="industry-name">السيارات</div>
+                </div>
+                <div class="industry-badge">
+                    <i class="fas fa-plane industry-icon"></i>
+                    <div class="industry-name">السياحة والسفر</div>
+                </div>
+                <div class="industry-badge">
+                    <i class="fas fa-tshirt industry-icon"></i>
+                    <div class="industry-name">الأزياء والموضة</div>
+                </div>
+                <div class="industry-badge">
+                    <i class="fas fa-hospital industry-icon"></i>
+                    <div class="industry-name">الطب والعيادات</div>
+                </div>
+                <div class="industry-badge">
+                    <i class="fas fa-dumbbell industry-icon"></i>
+                    <div class="industry-name">الرياضة واللياقة</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="stats-section">
+            <h2 class="section-title" style="color:#fff">إنجازاتنا في دبي بالأرقام</h2>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-number">150+</div>
+                    <div class="stat-label">مشروع ناجح في دبي</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">+380%</div>
+                    <div class="stat-label">متوسط زيادة المبيعات</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">95%</div>
+                    <div class="stat-label">رضا العملاء</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">10M+</div>
+                    <div class="stat-label">وصول إعلاني شهري</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="testimonials-section">
+            <h2 class="section-title">ماذا يقول عملاؤنا في دبي</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <i class="fas fa-quote-right quote-icon"></i>
+                    <div class="testimonial-text">فريق محترف جداً ساعدونا في مضاعفة مبيعاتنا خلال 3 أشهر فقط. الحملات الإعلانية كانت مستهدفة بدقة والنتائج فاقت توقعاتنا.</div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">A</div>
+                        <div class="author-info">
+                            <div class="author-name">أحمد الشامسي</div>
+                            <div class="author-position">مدير تسويق - متجر إلكتروني</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <i class="fas fa-quote-right quote-icon"></i>
+                    <div class="testimonial-text">خدمة SEO ممتازة، موقعنا الآن في الصفحة الأولى على جوجل لأهم الكلمات المفتاحية. زادت الزيارات العضوية بشكل ملحوظ.</div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">S</div>
+                        <div class="author-info">
+                            <div class="author-name">سارة المنصوري</div>
+                            <div class="author-position">مالكة عيادة تجميل</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <i class="fas fa-quote-right quote-icon"></i>
+                    <div class="testimonial-text">أفضل وكالة تسويق تعاملت معها. فهمهم للسوق المحلي وإبداعهم في المحتوى ساعدنا على بناء علامة تجارية قوية في دبي.</div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">K</div>
+                        <div class="author-info">
+                            <div class="author-name">خالد العتيبة</div>
+                            <div class="author-position">مؤسس مطعم</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta-section">
+            <div class="cta-title">جاهز للنمو والتوسع في دبي؟</div>
+            <div class="cta-subtitle">احصل على استشارة مجانية وخطة تسويقية متكاملة مصممة خصيصاً لنشاطك التجاري في دبي والإمارات</div>
+            <a href="https://wa.me/201110760081" class="cta-btn"><i class="fab fa-whatsapp"></i> تواصل معنا على واتساب</a>
+        </section>
     </div>
 </body>
 </html>
