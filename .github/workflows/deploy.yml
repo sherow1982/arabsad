@@ -1,0 +1,32 @@
+name: Force Deploy to GitHub Pages
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+        
+      - name: Deploy
+        run: |
+          echo "Forcing GitHub Pages deployment"
+          git config user.name "GitHub Actions"
+          git config user.email "actions@github.com"
+          
+      - name: Touch files to trigger rebuild
+        run: |
+          touch services/google-ads.html
+          touch services/seo.html
+          git add .
+          git diff --quiet && git diff --staged --quiet || git commit -m "Force rebuild [skip ci]"
+          
+Permissions:
+  contents: write
+  pages: write
+  id-token: write
