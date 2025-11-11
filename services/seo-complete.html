@@ -3,49 +3,211 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SEO وتحسين محركات البحث | مؤسسة إعلانات العرب</title>
-    <meta name="description" content="خدمات SEO SEO المتاجر والمواقع العربية لاحتلال نتائج البحث وزيادة ظهور علامتك التجارية">
+    <title>خدمات SEO وتحسين محركات البحث | إعلانات العرب</title>
+    <meta name="description" content="خدمات SEO احترافية لتحسين ترتيب موقعك في جوجل. دراسة كلمات مفتاحية، تحسين داخلي وخارجي، وتقارير دورية شاملة.">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&family=Almarai:wght@700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/modern-arabic-theme.css">
-    <style>body{background:var(--bg-gradient)}.hero-seo{text-align:center;margin:58px 0 30px}.hero-title{font-size:2.4rem;font-weight:900;margin-bottom:18px}.hero-subtitle{font-size:1.12rem;color:var(--text-muted);max-width:640px;margin:auto;margin-bottom:22px}.cta-btns{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}.section-title{font-size:2.1rem;color:var(--primary-color);margin-bottom:40px}.features-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:32px}.card{background:white;padding:32px 30px;border-radius:16px;box-shadow:var(--shadow-sm);transition:.3s}.card:hover{box-shadow:var(--shadow-lg);transform:translateY(-7px)}.card-icon{font-size:2.5rem;color:var(--accent-color);margin-bottom:18px}.card-title{font-weight:800;font-size:1.2rem;margin-bottom:10px;font-family:'Almarai',sans-serif}.card-desc{color:var(--text-secondary);font-size:1.05rem;line-height:1.7}.wa-float{position:fixed;bottom:27px;left:27px;z-index:999}.wa-float a{background:#25d366;color:#fff;padding:12px 26px;border-radius:35px;display:inline-flex;align-items:center;gap:8px;font-weight:700;box-shadow:0 4px 22px rgba(37,211,102,.25);transition:.3s}.wa-float a:hover{background:#128c7e;transform:scale(1.05)}@media(max-width:600px){.hero-title{font-size:1.38rem}.features-grid{grid-template-columns:1fr}.section-title{font-size:1.1rem}}</style>
+    <link rel="stylesheet" href="../assets/css/modern-arabic-theme.css">
+    <style>
+        body{background:linear-gradient(135deg,#eff6ff 0%,#dbeafe 100%);min-height:100vh}
+        .service-hero{background:linear-gradient(135deg,#3b82f6 0%,#2563eb 100%);color:#fff;text-align:center;padding:70px 20px 60px;margin-bottom:50px;border-radius:0 0 30px 30px;box-shadow:0 10px 40px rgba(59,130,246,.3)}
+        .hero-title{font-size:2.8rem;font-weight:900;margin-bottom:20px;text-shadow:2px 2px 4px rgba(0,0,0,.2)}
+        .hero-subtitle{font-size:1.3rem;margin-bottom:30px;opacity:.95;line-height:1.8;max-width:800px;margin-left:auto;margin-right:auto}
+        .hero-btns{display:flex;gap:15px;justify-content:center;flex-wrap:wrap;margin-top:30px}
+        .hero-btns .btn{padding:14px 32px;font-size:1.1rem;border-radius:50px;font-weight:700;transition:.3s;text-decoration:none;display:inline-flex;align-items:center;gap:10px}
+        .btn-light{background:#fff;color:#3b82f6;box-shadow:0 4px 15px rgba(255,255,255,.3)}
+        .btn-light:hover{background:#dbeafe;transform:translateY(-3px)}
+        .btn-outline{background:transparent;color:#fff;border:2px solid #fff}
+        .btn-outline:hover{background:#fff;color:#3b82f6;transform:translateY(-3px)}
+        
+        .features-section{margin:60px 0}
+        .section-title{font-size:2.2rem;font-weight:900;text-align:center;margin-bottom:45px;color:#1f2937}
+        .features-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:30px}
+        .feature-card{background:#fff;padding:35px 25px;border-radius:18px;box-shadow:0 4px 20px rgba(0,0,0,.08);transition:.4s;border-top:4px solid #3b82f6}
+        .feature-card:hover{transform:translateY(-10px);box-shadow:0 8px 30px rgba(59,130,246,.2)}
+        .feature-icon{font-size:3rem;color:#3b82f6;margin-bottom:20px;display:block}
+        .feature-title{font-size:1.4rem;font-weight:800;margin-bottom:12px;color:#1f2937;font-family:'Almarai',sans-serif}
+        .feature-desc{font-size:1.05rem;color:#6b7280;line-height:1.8}
+        
+        .seo-services{background:#fff;padding:60px 20px;margin:60px 0;border-radius:30px;box-shadow:0 4px 30px rgba(0,0,0,.1)}
+        .service-item{padding:25px;margin-bottom:20px;background:linear-gradient(135deg,#eff6ff 0%,#dbeafe 100%);border-radius:15px;border-right:5px solid #3b82f6;transition:.3s}
+        .service-item:hover{transform:translateX(-8px);box-shadow:0 4px 20px rgba(59,130,246,.15)}
+        .service-item-title{font-size:1.3rem;font-weight:800;color:#1f2937;margin-bottom:10px;display:flex;align-items:center;gap:12px}
+        .service-item-title i{color:#3b82f6;font-size:1.5rem}
+        .service-item-desc{font-size:1.05rem;color:#4b5563;line-height:1.7}
+        
+        .process-section{margin:60px 0}
+        .process-timeline{position:relative;padding:20px 0}
+        .timeline-item{display:flex;gap:25px;margin-bottom:40px;position:relative}
+        .timeline-number{min-width:70px;height:70px;background:linear-gradient(135deg,#3b82f6 0%,#2563eb 100%);color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.8rem;font-weight:900;box-shadow:0 4px 20px rgba(59,130,246,.3);flex-shrink:0}
+        .timeline-content{background:#fff;padding:25px;border-radius:15px;flex:1;box-shadow:0 4px 15px rgba(0,0,0,.08)}
+        .timeline-title{font-size:1.3rem;font-weight:800;margin-bottom:10px;color:#1f2937}
+        .timeline-desc{font-size:1.05rem;color:#6b7280;line-height:1.7}
+        
+        .results-section{background:linear-gradient(135deg,#fbbf24 0%,#f59e0b 100%);padding:60px 20px;margin:60px 0;border-radius:30px;box-shadow:0 8px 30px rgba(251,191,36,.3)}
+        .results-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:25px;margin-top:40px}
+        .result-card{background:#fff;padding:30px 20px;border-radius:15px;text-align:center;box-shadow:0 4px 20px rgba(0,0,0,.1)}
+        .result-number{font-size:2.5rem;font-weight:900;color:#3b82f6;margin-bottom:10px}
+        .result-label{font-size:1.1rem;color:#1f2937;font-weight:600}
+        
+        .cta-section{background:linear-gradient(135deg,#3b82f6 0%,#2563eb 100%);padding:50px 20px;text-align:center;border-radius:25px;margin:60px 0;box-shadow:0 8px 30px rgba(59,130,246,.3);color:#fff}
+        .cta-title{font-size:2rem;font-weight:900;margin-bottom:15px}
+        .cta-subtitle{font-size:1.2rem;margin-bottom:30px;opacity:.95}
+        .cta-btn{background:#fbbf24;color:#1f2937;padding:16px 40px;border-radius:50px;font-size:1.2rem;font-weight:700;text-decoration:none;display:inline-flex;align-items:center;gap:12px;transition:.3s;box-shadow:0 4px 20px rgba(251,191,36,.3)}
+        .cta-btn:hover{background:#f59e0b;transform:translateY(-3px)}
+        
+        @media(max-width:768px){
+            .hero-title{font-size:1.8rem}
+            .hero-subtitle{font-size:1.05rem}
+            .section-title{font-size:1.6rem}
+            .features-grid{grid-template-columns:1fr}
+            .timeline-item{flex-direction:column;align-items:center;text-align:center}
+        }
+    </style>
 </head>
 <body>
-    <div class="hero-seo">
+    <div class="service-hero">
         <div class="hero-title">تحسين محركات البحث (SEO)</div>
-        <div class="hero-subtitle">احتل الصدارة في نتائج البحث وزد ظهور علامتك التجارية مع خدمات SEO الشاملة للمتاجر والمواقع العربية</div>
-        <div class="cta-btns">
-            <a href="https://wa.me/201110760081" class="btn btn-primary"><i class="fab fa-whatsapp"></i> استشارة مجانية</a>
-            <a href="services/index.html" class="btn btn-secondary"><i class="fas fa-list"></i> تصفح كل خدماتنا</a>
+        <div class="hero-subtitle">احتل الصدارة في نتائج البحث وزد ظهور علامتك التجارية مع خدمات SEO الشاملة للمتاجر والمواقع العربية والخليجية</div>
+        <div class="hero-btns">
+            <a href="https://wa.me/201110760081" class="btn btn-light"><i class="fab fa-whatsapp"></i> استشارة مجانية</a>
+            <a href="../index.html" class="btn btn-outline"><i class="fas fa-list"></i> تصفح كل خدماتنا</a>
         </div>
     </div>
+
     <div class="container">
-        <h2 class="section-title">مميزات خدمة SEO لدينا</h2>
-        <div class="features-grid">
-            <div class="card">
-                <div class="card-icon"><i class="fas fa-search"></i></div>
-                <div class="card-title">دراسة الكلمات المفتاحية</div>
-                <div class="card-desc">استهداف أهم وأقوى الكلمات لضمان تحقيق أعلى معدلات ظهور</div>
+        <section class="features-section">
+            <h2 class="section-title">مميزات خدمة SEO لدينا</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <i class="fas fa-key feature-icon"></i>
+                    <div class="feature-title">دراسة الكلمات المفتاحية</div>
+                    <div class="feature-desc">بحث وتحليل شامل لأهم وأقوى الكلمات المفتاحية في مجالك لضمان تحقيق أعلى معدلات ظهور وجذب الجمهور المستهدف بدقة.</div>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-chart-line feature-icon"></i>
+                    <div class="feature-title">رفع ترتيب ظهور الموقع</div>
+                    <div class="feature-desc">تحسين جميع عوامل السيو الداخلي والخارجي (On-Page & Off-Page SEO) لتحصل على أعلى ترتيب في نتائج جوجل والمحركات الأخرى.</div>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-rocket feature-icon"></i>
+                    <div class="feature-title">تقنيات SEO حديثة</div>
+                    <div class="feature-desc">استخدام أحدث الأدوات والمعايير العالمية لتحسين سرعة الموقع، المحتوى، البنية التقنية، وتجربة المستخدم بشكل كامل.</div>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-analytics feature-icon"></i>
+                    <div class="feature-title">تحليل النتائج والمتابعة</div>
+                    <div class="feature-desc">تقارير أداء تفصيلية، توصيات دورية، وتحديثات مستمرة حسب تغيرات السوق وخوارزميات محركات البحث الجديدة.</div>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-link feature-icon"></i>
+                    <div class="feature-title">بناء الروابط الخلفية</div>
+                    <div class="feature-desc">استراتيجيات متقدمة لبناء روابط خلفية عالية الجودة (Backlinks) من مواقع موثوقة لزيادة قوة وترتيب موقعك.</div>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-mobile-alt feature-icon"></i>
+                    <div class="feature-title">تحسين للجوال</div>
+                    <div class="feature-desc">تحسين كامل لتجربة الجوال (Mobile SEO) لضمان ظهور ممتاز في نتائج بحث الهواتف الذكية والأجهزة اللوحية.</div>
+                </div>
             </div>
-            <div class="card">
-                <div class="card-icon"><i class="fas fa-rocket"></i></div>
-                <div class="card-title">رفع ترتيب ظهور الموقع</div>
-                <div class="card-desc">تحسين كل عوامل السيو الداخلي والخارجي لتحصل على أعلى ترتيب ونتائج</div>
+        </section>
+
+        <section class="seo-services">
+            <h2 class="section-title">خدمات SEO الشاملة التي نقدمها</h2>
+            <div class="service-item">
+                <div class="service-item-title"><i class="fas fa-search"></i> تحليل وتدقيق SEO شامل</div>
+                <div class="service-item-desc">فحص تقني كامل لموقعك لاكتشاف جميع المشاكل التي تؤثر على ترتيبك، مع تقرير مفصل وخطة عمل واضحة للتحسين.</div>
             </div>
-            <div class="card">
-                <div class="card-icon"><i class="fas fa-cogs"></i></div>
-                <div class="card-title">تقنيات SEO حديثة</div>
-                <div class="card-desc">استخدام أحدث الأدوات والمعايير العالمية لتحسين سرعة الموقع والمحتوى وتجربة المستخدم</div>
+            <div class="service-item">
+                <div class="service-item-title"><i class="fas fa-edit"></i> تحسين المحتوى والنصوص</div>
+                <div class="service-item-desc">كتابة وتحسين المحتوى بطريقة احترافية مع دمج الكلمات المفتاحية بشكل طبيعي لزيادة جودة المحتوى وجاذبيته للزوار ومحركات البحث.</div>
             </div>
-            <div class="card">
-                <div class="card-icon"><i class="fas fa-chart-bar"></i></div>
-                <div class="card-title">تحليل النتائج والمتابعة</div>
-                <div class="card-desc">تقارير أداء، توصيات دورية وتحديثات مستمرة حسب تغيرات السوق والخوارزميات</div>
+            <div class="service-item">
+                <div class="service-item-title"><i class="fas fa-code"></i> تحسين البنية التقنية</div>
+                <div class="service-item-desc">تحسين سرعة التحميل، تصحيح أكواد HTML، تحسين العناوين والوصف، خريطة الموقع، وملف robots.txt لتحسين أداء الموقع التقني.</div>
             </div>
-        </div>
-    </div>
-    <div class="wa-float">
-        <a href="https://wa.me/201110760081" target="_blank"><i class="fab fa-whatsapp"></i> تواصل واتساب</a>
+            <div class="service-item">
+                <div class="service-item-title"><i class="fas fa-map-marker-alt"></i> SEO محلي (Local SEO)</div>
+                <div class="service-item-desc">تحسين ظهور نشاطك التجاري في نتائج البحث المحلية، تحسين Google My Business، وجذب العملاء من منطقتك الجغرافية.</div>
+            </div>
+            <div class="service-item">
+                <div class="service-item-title"><i class="fas fa-shopping-cart"></i> SEO للمتاجر الإلكترونية</div>
+                <div class="service-item-desc">استراتيجيات SEO متخصصة للمتاجر الإلكترونية، تحسين صفحات المنتجات، والفئات لزيادة المبيعات والتحويلات من محركات البحث.</div>
+            </div>
+            <div class="service-item">
+                <div class="service-item-title"><i class="fas fa-shield-alt"></i> إصلاح العقوبات</div>
+                <div class="service-item-desc">تشخيص وإصلاح أي عقوبات من جوجل (Google Penalties) واستعادة ترتيب موقعك في نتائج البحث بسرعة وفعالية.</div>
+            </div>
+        </section>
+
+        <section class="process-section">
+            <h2 class="section-title">كيف نعمل على تحسين موقعك؟</h2>
+            <div class="process-timeline">
+                <div class="timeline-item">
+                    <div class="timeline-number">1</div>
+                    <div class="timeline-content">
+                        <div class="timeline-title">التحليل والتدقيق الأولي</div>
+                        <div class="timeline-desc">نبدأ بفحص شامل لموقعك، تحليل المنافسين، ودراسة الكلمات المفتاحية لوضع استراتيجية SEO دقيقة ومخصصة.</div>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-number">2</div>
+                    <div class="timeline-content">
+                        <div class="timeline-title">التحسين الداخلي (On-Page)</div>
+                        <div class="timeline-desc">تحسين العناوين، الأوصاف، البنية، المحتوى، الصور، والروابط الداخلية لكل صفحة بشكل احترافي.</div>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-number">3</div>
+                    <div class="timeline-content">
+                        <div class="timeline-title">التحسين التقني (Technical SEO)</div>
+                        <div class="timeline-desc">تحسين سرعة الموقع، إصلاح الأخطاء التقنية، تحسين خريطة الموقع، وضمان التوافق الكامل مع الجوال.</div>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-number">4</div>
+                    <div class="timeline-content">
+                        <div class="timeline-title">بناء الروابط (Off-Page)</div>
+                        <div class="timeline-desc">بناء روابط خلفية قوية من مواقع موثوقة، تسويق المحتوى، والترويج عبر القنوات الرقمية لزيادة سلطة الموقع.</div>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-number">5</div>
+                    <div class="timeline-content">
+                        <div class="timeline-title">المتابعة والتحسين المستمر</div>
+                        <div class="timeline-desc">مراقبة دورية للأداء، تحديث الاستراتيجيات حسب التغيرات، وتقديم تقارير شهرية مفصلة عن التقدم والنتائج.</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="results-section">
+            <h2 class="section-title" style="color:#1f2937">النتائج التي حققناها لعملائنا</h2>
+            <div class="results-grid">
+                <div class="result-card">
+                    <div class="result-number">+350%</div>
+                    <div class="result-label">زيادة الزيارات العضوية</div>
+                </div>
+                <div class="result-card">
+                    <div class="result-number">TOP 3</div>
+                    <div class="result-label">ترتيب في نتائج جوجل</div>
+                </div>
+                <div class="result-card">
+                    <div class="result-number">+280%</div>
+                    <div class="result-label">زيادة التحويلات</div>
+                </div>
+                <div class="result-card">
+                    <div class="result-number">90+</div>
+                    <div class="result-label">عميل راضٍ ومتميز</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta-section">
+            <div class="cta-title">جاهز لتصدر نتائج البحث؟</div>
+            <div class="cta-subtitle">احصل على استشارة SEO مجانية الآن وابدأ رحلتك للصدارة</div>
+            <a href="https://wa.me/201110760081" class="cta-btn"><i class="fab fa-whatsapp"></i> تواصل معنا على واتساب</a>
+        </section>
     </div>
 </body>
 </html>
