@@ -1,0 +1,152 @@
+[
+  {
+    "id": "BH_المنامة",
+    "business_name": "مؤسسة إعلانات العرب - المنامة",
+    "country_code": "BH",
+    "country_name": "مملكة البحرين",
+    "city": "المنامة",
+    "phone": "+201110760081",
+    "website": "https://sherow1982.github.io/arabsad-ads/",
+    "latitude": 26.129,
+    "longitude": 50.5826,
+    "services": [
+      "Google Ads",
+      "Facebook Ads",
+      "Instagram Ads",
+      "SEO",
+      "تصميم المواقع",
+      "التسويق الرقمي",
+      "تطوير المتاجر"
+    ],
+    "address": "المنامة, البحرين",
+    "opening_hours": {
+      "saturday": "08:00-23:00",
+      "sunday": "08:00-23:00",
+      "monday": "08:00-23:00",
+      "tuesday": "08:00-23:00",
+      "wednesday": "08:00-23:00",
+      "thursday": "08:00-23:00",
+      "friday": "08:00-23:00"
+    }
+  },
+  {
+    "id": "BH_المحرق",
+    "business_name": "مؤسسة إعلانات العرب - المحرق",
+    "country_code": "BH",
+    "country_name": "مملكة البحرين",
+    "city": "المحرق",
+    "phone": "+201110760081",
+    "website": "https://sherow1982.github.io/arabsad-ads/",
+    "latitude": 26.1667,
+    "longitude": 50.5833,
+    "services": [
+      "Google Ads",
+      "Facebook Ads",
+      "Instagram Ads",
+      "SEO",
+      "تصميم المواقع",
+      "التسويق الرقمي",
+      "تطوير المتاجر"
+    ],
+    "address": "المحرق, البحرين",
+    "opening_hours": {
+      "saturday": "08:00-23:00",
+      "sunday": "08:00-23:00",
+      "monday": "08:00-23:00",
+      "tuesday": "08:00-23:00",
+      "wednesday": "08:00-23:00",
+      "thursday": "08:00-23:00",
+      "friday": "08:00-23:00"
+    }
+  },
+  {
+    "id": "BH_الرفاع",
+    "business_name": "مؤسسة إعلانات العرب - الرفاع",
+    "country_code": "BH",
+    "country_name": "مملكة البحرين",
+    "city": "الرفاع",
+    "phone": "+201110760081",
+    "website": "https://sherow1982.github.io/arabsad-ads/",
+    "latitude": 26.1333,
+    "longitude": 50.4167,
+    "services": [
+      "Google Ads",
+      "Facebook Ads",
+      "Instagram Ads",
+      "SEO",
+      "تصميم المواقع",
+      "التسويق الرقمي",
+      "تطوير المتاجر"
+    ],
+    "address": "الرفاع, البحرين",
+    "opening_hours": {
+      "saturday": "08:00-23:00",
+      "sunday": "08:00-23:00",
+      "monday": "08:00-23:00",
+      "tuesday": "08:00-23:00",
+      "wednesday": "08:00-23:00",
+      "thursday": "08:00-23:00",
+      "friday": "08:00-23:00"
+    }
+  },
+  {
+    "id": "BH_الجفير",
+    "business_name": "مؤسسة إعلانات العرب - الجفير",
+    "country_code": "BH",
+    "country_name": "مملكة البحرين",
+    "city": "الجفير",
+    "phone": "+201110760081",
+    "website": "https://sherow1982.github.io/arabsad-ads/",
+    "latitude": 26.1778,
+    "longitude": 50.4389,
+    "services": [
+      "Google Ads",
+      "Facebook Ads",
+      "Instagram Ads",
+      "SEO",
+      "تصميم المواقع",
+      "التسويق الرقمي",
+      "تطوير المتاجر"
+    ],
+    "address": "الجفير, البحرين",
+    "opening_hours": {
+      "saturday": "08:00-23:00",
+      "sunday": "08:00-23:00",
+      "monday": "08:00-23:00",
+      "tuesday": "08:00-23:00",
+      "wednesday": "08:00-23:00",
+      "thursday": "08:00-23:00",
+      "friday": "08:00-23:00"
+    }
+  },
+  {
+    "id": "BH_سلمان_آباد",
+    "business_name": "مؤسسة إعلانات العرب - سلمان آباد",
+    "country_code": "BH",
+    "country_name": "مملكة البحرين",
+    "city": "سلمان آباد",
+    "phone": "+201110760081",
+    "website": "https://sherow1982.github.io/arabsad-ads/",
+    "latitude": 26.0833,
+    "longitude": 50.5,
+    "services": [
+      "Google Ads",
+      "Facebook Ads",
+      "Instagram Ads",
+      "SEO",
+      "تصميم المواقع",
+      "التسويق الرقمي",
+      "تطوير المتاجر"
+    ],
+    "address": "سلمان آباد, البحرين",
+    "opening_hours": {
+      "saturday": "08:00-23:00",
+      "sunday": "08:00-23:00",
+      "monday": "08:00-23:00",
+      "tuesday": "08:00-23:00",
+      "wednesday": "08:00-23:00",
+      "thursday": "08:00-23:00",
+      "friday": "08:00-23:00"
+    }
+  }
+]

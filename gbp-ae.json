@@ -1,0 +1,212 @@
+[
+  {
+    "id": "AE_دبي",
+    "business_name": "مؤسسة إعلانات العرب - دبي",
+    "country_code": "AE",
+    "country_name": "الإمارات العربية المتحدة",
+    "city": "دبي",
+    "phone": "+201110760081",
+    "website": "https://sherow1982.github.io/arabsad-ads/",
+    "latitude": 25.2048,
+    "longitude": 55.2708,
+    "services": [
+      "Google Ads",
+      "Facebook Ads",
+      "Instagram Ads",
+      "SEO",
+      "تصميم المواقع",
+      "التسويق الرقمي",
+      "تطوير المتاجر"
+    ],
+    "address": "دبي, الإمارات",
+    "opening_hours": {
+      "saturday": "08:00-23:00",
+      "sunday": "08:00-23:00",
+      "monday": "08:00-23:00",
+      "tuesday": "08:00-23:00",
+      "wednesday": "08:00-23:00",
+      "thursday": "08:00-23:00",
+      "friday": "08:00-23:00"
+    }
+  },
+  {
+    "id": "AE_أبوظبي",
+    "business_name": "مؤسسة إعلانات العرب - أبوظبي",
+    "country_code": "AE",
+    "country_name": "الإمارات العربية المتحدة",
+    "city": "أبوظبي",
+    "phone": "+201110760081",
+    "website": "https://sherow1982.github.io/arabsad-ads/",
+    "latitude": 24.4539,
+    "longitude": 54.3773,
+    "services": [
+      "Google Ads",
+      "Facebook Ads",
+      "Instagram Ads",
+      "SEO",
+      "تصميم المواقع",
+      "التسويق الرقمي",
+      "تطوير المتاجر"
+    ],
+    "address": "أبوظبي, الإمارات",
+    "opening_hours": {
+      "saturday": "08:00-23:00",
+      "sunday": "08:00-23:00",
+      "monday": "08:00-23:00",
+      "tuesday": "08:00-23:00",
+      "wednesday": "08:00-23:00",
+      "thursday": "08:00-23:00",
+      "friday": "08:00-23:00"
+    }
+  },
+  {
+    "id": "AE_الشارقة",
+    "business_name": "مؤسسة إعلانات العرب - الشارقة",
+    "country_code": "AE",
+    "country_name": "الإمارات العربية المتحدة",
+    "city": "الشارقة",
+    "phone": "+201110760081",
+    "website": "https://sherow1982.github.io/arabsad-ads/",
+    "latitude": 25.3548,
+    "longitude": 55.3944,
+    "services": [
+      "Google Ads",
+      "Facebook Ads",
+      "Instagram Ads",
+      "SEO",
+      "تصميم المواقع",
+      "التسويق الرقمي",
+      "تطوير المتاجر"
+    ],
+    "address": "الشارقة, الإمارات",
+    "opening_hours": {
+      "saturday": "08:00-23:00",
+      "sunday": "08:00-23:00",
+      "monday": "08:00-23:00",
+      "tuesday": "08:00-23:00",
+      "wednesday": "08:00-23:00",
+      "thursday": "08:00-23:00",
+      "friday": "08:00-23:00"
+    }
+  },
+  {
+    "id": "AE_عجمان",
+    "business_name": "مؤسسة إعلانات العرب - عجمان",
+    "country_code": "AE",
+    "country_name": "الإمارات العربية المتحدة",
+    "city": "عجمان",
+    "phone": "+201110760081",
+    "website": "https://sherow1982.github.io/arabsad-ads/",
+    "latitude": 25.3986,
+    "longitude": 55.4501,
+    "services": [
+      "Google Ads",
+      "Facebook Ads",
+      "Instagram Ads",
+      "SEO",
+      "تصميم المواقع",
+      "التسويق الرقمي",
+      "تطوير المتاجر"
+    ],
+    "address": "عجمان, الإمارات",
+    "opening_hours": {
+      "saturday": "08:00-23:00",
+      "sunday": "08:00-23:00",
+      "monday": "08:00-23:00",
+      "tuesday": "08:00-23:00",
+      "wednesday": "08:00-23:00",
+      "thursday": "08:00-23:00",
+      "friday": "08:00-23:00"
+    }
+  },
+  {
+    "id": "AE_أم_القيوين",
+    "business_name": "مؤسسة إعلانات العرب - أم القيوين",
+    "country_code": "AE",
+    "country_name": "الإمارات العربية المتحدة",
+    "city": "أم القيوين",
+    "phone": "+201110760081",
+    "website": "https://sherow1982.github.io/arabsad-ads/",
+    "latitude": 25.5645,
+    "longitude": 55.5597,
+    "services": [
+      "Google Ads",
+      "Facebook Ads",
+      "Instagram Ads",
+      "SEO",
+      "تصميم المواقع",
+      "التسويق الرقمي",
+      "تطوير المتاجر"
+    ],
+    "address": "أم القيوين, الإمارات",
+    "opening_hours": {
+      "saturday": "08:00-23:00",
+      "sunday": "08:00-23:00",
+      "monday": "08:00-23:00",
+      "tuesday": "08:00-23:00",
+      "wednesday": "08:00-23:00",
+      "thursday": "08:00-23:00",
+      "friday": "08:00-23:00"
+    }
+  },
+  {
+    "id": "AE_رأس_الخيمة",
+    "business_name": "مؤسسة إعلانات العرب - رأس الخيمة",
+    "country_code": "AE",
+    "country_name": "الإمارات العربية المتحدة",
+    "city": "رأس الخيمة",
+    "phone": "+201110760081",
+    "website": "https://sherow1982.github.io/arabsad-ads/",
+    "latitude": 25.7482,
+    "longitude": 55.9754,
+    "services": [
+      "Google Ads",
+      "Facebook Ads",
+      "Instagram Ads",
+      "SEO",
+      "تصميم المواقع",
+      "التسويق الرقمي",
+      "تطوير المتاجر"
+    ],
+    "address": "رأس الخيمة, الإمارات",
+    "opening_hours": {
+      "saturday": "08:00-23:00",
+      "sunday": "08:00-23:00",
+      "monday": "08:00-23:00",
+      "tuesday": "08:00-23:00",
+      "wednesday": "08:00-23:00",
+      "thursday": "08:00-23:00",
+      "friday": "08:00-23:00"
+    }
+  },
+  {
+    "id": "AE_الفجيرة",
+    "business_name": "مؤسسة إعلانات العرب - الفجيرة",
+    "country_code": "AE",
+    "country_name": "الإمارات العربية المتحدة",
+    "city": "الفجيرة",
+    "phone": "+201110760081",
+    "website": "https://sherow1982.github.io/arabsad-ads/",
+    "latitude": 25.1242,
+    "longitude": 56.354,
+    "services": [
+      "Google Ads",
+      "Facebook Ads",
+      "Instagram Ads",
+      "SEO",
+      "تصميم المواقع",
+      "التسويق الرقمي",
+      "تطوير المتاجر"
+    ],
+    "address": "الفجيرة, الإمارات",
+    "opening_hours": {
+      "saturday": "08:00-23:00",
+      "sunday": "08:00-23:00",
+      "monday": "08:00-23:00",
+      "tuesday": "08:00-23:00",
+      "wednesday": "08:00-23:00",
+      "thursday": "08:00-23:00",
+      "friday": "08:00-23:00"
+    }
+  }
+]

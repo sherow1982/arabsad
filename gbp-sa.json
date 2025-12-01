@@ -1,0 +1,392 @@
+[
+  {
+    "id": "SA_الرياض",
+    "business_name": "مؤسسة إعلانات العرب - الرياض",
+    "country_code": "SA",
+    "country_name": "المملكة العربية السعودية",
+    "city": "الرياض",
+    "phone": "+201110760081",
+    "website": "https://sherow1982.github.io/arabsad-ads/",
+    "latitude": 24.7136,
+    "longitude": 46.6753,
+    "services": [
+      "Google Ads",
+      "Facebook Ads",
+      "Instagram Ads",
+      "SEO",
+      "تصميم المواقع",
+      "التسويق الرقمي",
+      "تطوير المتاجر"
+    ],
+    "address": "الرياض, السعودية",
+    "opening_hours": {
+      "saturday": "08:00-23:00",
+      "sunday": "08:00-23:00",
+      "monday": "08:00-23:00",
+      "tuesday": "08:00-23:00",
+      "wednesday": "08:00-23:00",
+      "thursday": "08:00-23:00",
+      "friday": "08:00-23:00"
+    }
+  },
+  {
+    "id": "SA_جدة",
+    "business_name": "مؤسسة إعلانات العرب - جدة",
+    "country_code": "SA",
+    "country_name": "المملكة العربية السعودية",
+    "city": "جدة",
+    "phone": "+201110760081",
+    "website": "https://sherow1982.github.io/arabsad-ads/",
+    "latitude": 21.5485,
+    "longitude": 39.1721,
+    "services": [
+      "Google Ads",
+      "Facebook Ads",
+      "Instagram Ads",
+      "SEO",
+      "تصميم المواقع",
+      "التسويق الرقمي",
+      "تطوير المتاجر"
+    ],
+    "address": "جدة, السعودية",
+    "opening_hours": {
+      "saturday": "08:00-23:00",
+      "sunday": "08:00-23:00",
+      "monday": "08:00-23:00",
+      "tuesday": "08:00-23:00",
+      "wednesday": "08:00-23:00",
+      "thursday": "08:00-23:00",
+      "friday": "08:00-23:00"
+    }
+  },
+  {
+    "id": "SA_الدمام",
+    "business_name": "مؤسسة إعلانات العرب - الدمام",
+    "country_code": "SA",
+    "country_name": "المملكة العربية السعودية",
+    "city": "الدمام",
+    "phone": "+201110760081",
+    "website": "https://sherow1982.github.io/arabsad-ads/",
+    "latitude": 26.3989,
+    "longitude": 50.2048,
+    "services": [
+      "Google Ads",
+      "Facebook Ads",
+      "Instagram Ads",
+      "SEO",
+      "تصميم المواقع",
+      "التسويق الرقمي",
+      "تطوير المتاجر"
+    ],
+    "address": "الدمام, السعودية",
+    "opening_hours": {
+      "saturday": "08:00-23:00",
+      "sunday": "08:00-23:00",
+      "monday": "08:00-23:00",
+      "tuesday": "08:00-23:00",
+      "wednesday": "08:00-23:00",
+      "thursday": "08:00-23:00",
+      "friday": "08:00-23:00"
+    }
+  },
+  {
+    "id": "SA_الخبر",
+    "business_name": "مؤسسة إعلانات العرب - الخبر",
+    "country_code": "SA",
+    "country_name": "المملكة العربية السعودية",
+    "city": "الخبر",
+    "phone": "+201110760081",
+    "website": "https://sherow1982.github.io/arabsad-ads/",
+    "latitude": 26.2156,
+    "longitude": 50.2106,
+    "services": [
+      "Google Ads",
+      "Facebook Ads",
+      "Instagram Ads",
+      "SEO",
+      "تصميم المواقع",
+      "التسويق الرقمي",
+      "تطوير المتاجر"
+    ],
+    "address": "الخبر, السعودية",
+    "opening_hours": {
+      "saturday": "08:00-23:00",
+      "sunday": "08:00-23:00",
+      "monday": "08:00-23:00",
+      "tuesday": "08:00-23:00",
+      "wednesday": "08:00-23:00",
+      "thursday": "08:00-23:00",
+      "friday": "08:00-23:00"
+    }
+  },
+  {
+    "id": "SA_القطيف",
+    "business_name": "مؤسسة إعلانات العرب - القطيف",
+    "country_code": "SA",
+    "country_name": "المملكة العربية السعودية",
+    "city": "القطيف",
+    "phone": "+201110760081",
+    "website": "https://sherow1982.github.io/arabsad-ads/",
+    "latitude": 26.1801,
+    "longitude": 50.0157,
+    "services": [
+      "Google Ads",
+      "Facebook Ads",
+      "Instagram Ads",
+      "SEO",
+      "تصميم المواقع",
+      "التسويق الرقمي",
+      "تطوير المتاجر"
+    ],
+    "address": "القطيف, السعودية",
+    "opening_hours": {
+      "saturday": "08:00-23:00",
+      "sunday": "08:00-23:00",
+      "monday": "08:00-23:00",
+      "tuesday": "08:00-23:00",
+      "wednesday": "08:00-23:00",
+      "thursday": "08:00-23:00",
+      "friday": "08:00-23:00"
+    }
+  },
+  {
+    "id": "SA_مكة",
+    "business_name": "مؤسسة إعلانات العرب - مكة",
+    "country_code": "SA",
+    "country_name": "المملكة العربية السعودية",
+    "city": "مكة",
+    "phone": "+201110760081",
+    "website": "https://sherow1982.github.io/arabsad-ads/",
+    "latitude": 21.4225,
+    "longitude": 39.8262,
+    "services": [
+      "Google Ads",
+      "Facebook Ads",
+      "Instagram Ads",
+      "SEO",
+      "تصميم المواقع",
+      "التسويق الرقمي",
+      "تطوير المتاجر"
+    ],
+    "address": "مكة, السعودية",
+    "opening_hours": {
+      "saturday": "08:00-23:00",
+      "sunday": "08:00-23:00",
+      "monday": "08:00-23:00",
+      "tuesday": "08:00-23:00",
+      "wednesday": "08:00-23:00",
+      "thursday": "08:00-23:00",
+      "friday": "08:00-23:00"
+    }
+  },
+  {
+    "id": "SA_المدينة",
+    "business_name": "مؤسسة إعلانات العرب - المدينة",
+    "country_code": "SA",
+    "country_name": "المملكة العربية السعودية",
+    "city": "المدينة",
+    "phone": "+201110760081",
+    "website": "https://sherow1982.github.io/arabsad-ads/",
+    "latitude": 24.4647,
+    "longitude": 39.6074,
+    "services": [
+      "Google Ads",
+      "Facebook Ads",
+      "Instagram Ads",
+      "SEO",
+      "تصميم المواقع",
+      "التسويق الرقمي",
+      "تطوير المتاجر"
+    ],
+    "address": "المدينة, السعودية",
+    "opening_hours": {
+      "saturday": "08:00-23:00",
+      "sunday": "08:00-23:00",
+      "monday": "08:00-23:00",
+      "tuesday": "08:00-23:00",
+      "wednesday": "08:00-23:00",
+      "thursday": "08:00-23:00",
+      "friday": "08:00-23:00"
+    }
+  },
+  {
+    "id": "SA_الطائف",
+    "business_name": "مؤسسة إعلانات العرب - الطائف",
+    "country_code": "SA",
+    "country_name": "المملكة العربية السعودية",
+    "city": "الطائف",
+    "phone": "+201110760081",
+    "website": "https://sherow1982.github.io/arabsad-ads/",
+    "latitude": 21.2745,
+    "longitude": 40.4158,
+    "services": [
+      "Google Ads",
+      "Facebook Ads",
+      "Instagram Ads",
+      "SEO",
+      "تصميم المواقع",
+      "التسويق الرقمي",
+      "تطوير المتاجر"
+    ],
+    "address": "الطائف, السعودية",
+    "opening_hours": {
+      "saturday": "08:00-23:00",
+      "sunday": "08:00-23:00",
+      "monday": "08:00-23:00",
+      "tuesday": "08:00-23:00",
+      "wednesday": "08:00-23:00",
+      "thursday": "08:00-23:00",
+      "friday": "08:00-23:00"
+    }
+  },
+  {
+    "id": "SA_تبوك",
+    "business_name": "مؤسسة إعلانات العرب - تبوك",
+    "country_code": "SA",
+    "country_name": "المملكة العربية السعودية",
+    "city": "تبوك",
+    "phone": "+201110760081",
+    "website": "https://sherow1982.github.io/arabsad-ads/",
+    "latitude": 28.3852,
+    "longitude": 36.5627,
+    "services": [
+      "Google Ads",
+      "Facebook Ads",
+      "Instagram Ads",
+      "SEO",
+      "تصميم المواقع",
+      "التسويق الرقمي",
+      "تطوير المتاجر"
+    ],
+    "address": "تبوك, السعودية",
+    "opening_hours": {
+      "saturday": "08:00-23:00",
+      "sunday": "08:00-23:00",
+      "monday": "08:00-23:00",
+      "tuesday": "08:00-23:00",
+      "wednesday": "08:00-23:00",
+      "thursday": "08:00-23:00",
+      "friday": "08:00-23:00"
+    }
+  },
+  {
+    "id": "SA_أبها",
+    "business_name": "مؤسسة إعلانات العرب - أبها",
+    "country_code": "SA",
+    "country_name": "المملكة العربية السعودية",
+    "city": "أبها",
+    "phone": "+201110760081",
+    "website": "https://sherow1982.github.io/arabsad-ads/",
+    "latitude": 18.2155,
+    "longitude": 42.5054,
+    "services": [
+      "Google Ads",
+      "Facebook Ads",
+      "Instagram Ads",
+      "SEO",
+      "تصميم المواقع",
+      "التسويق الرقمي",
+      "تطوير المتاجر"
+    ],
+    "address": "أبها, السعودية",
+    "opening_hours": {
+      "saturday": "08:00-23:00",
+      "sunday": "08:00-23:00",
+      "monday": "08:00-23:00",
+      "tuesday": "08:00-23:00",
+      "wednesday": "08:00-23:00",
+      "thursday": "08:00-23:00",
+      "friday": "08:00-23:00"
+    }
+  },
+  {
+    "id": "SA_جيزان",
+    "business_name": "مؤسسة إعلانات العرب - جيزان",
+    "country_code": "SA",
+    "country_name": "المملكة العربية السعودية",
+    "city": "جيزان",
+    "phone": "+201110760081",
+    "website": "https://sherow1982.github.io/arabsad-ads/",
+    "latitude": 16.8892,
+    "longitude": 42.5521,
+    "services": [
+      "Google Ads",
+      "Facebook Ads",
+      "Instagram Ads",
+      "SEO",
+      "تصميم المواقع",
+      "التسويق الرقمي",
+      "تطوير المتاجر"
+    ],
+    "address": "جيزان, السعودية",
+    "opening_hours": {
+      "saturday": "08:00-23:00",
+      "sunday": "08:00-23:00",
+      "monday": "08:00-23:00",
+      "tuesday": "08:00-23:00",
+      "wednesday": "08:00-23:00",
+      "thursday": "08:00-23:00",
+      "friday": "08:00-23:00"
+    }
+  },
+  {
+    "id": "SA_نجران",
+    "business_name": "مؤسسة إعلانات العرب - نجران",
+    "country_code": "SA",
+    "country_name": "المملكة العربية السعودية",
+    "city": "نجران",
+    "phone": "+201110760081",
+    "website": "https://sherow1982.github.io/arabsad-ads/",
+    "latitude": 17.6927,
+    "longitude": 44.186,
+    "services": [
+      "Google Ads",
+      "Facebook Ads",
+      "Instagram Ads",
+      "SEO",
+      "تصميم المواقع",
+      "التسويق الرقمي",
+      "تطوير المتاجر"
+    ],
+    "address": "نجران, السعودية",
+    "opening_hours": {
+      "saturday": "08:00-23:00",
+      "sunday": "08:00-23:00",
+      "monday": "08:00-23:00",
+      "tuesday": "08:00-23:00",
+      "wednesday": "08:00-23:00",
+      "thursday": "08:00-23:00",
+      "friday": "08:00-23:00"
+    }
+  },
+  {
+    "id": "SA_حفر_الباطن",
+    "business_name": "مؤسسة إعلانات العرب - حفر الباطن",
+    "country_code": "SA",
+    "country_name": "المملكة العربية السعودية",
+    "city": "حفر الباطن",
+    "phone": "+201110760081",
+    "website": "https://sherow1982.github.io/arabsad-ads/",
+    "latitude": 28.4347,
+    "longitude": 45.3569,
+    "services": [
+      "Google Ads",
+      "Facebook Ads",
+      "Instagram Ads",
+      "SEO",
+      "تصميم المواقع",
+      "التسويق الرقمي",
+      "تطوير المتاجر"
+    ],
+    "address": "حفر الباطن, السعودية",
+    "opening_hours": {
+      "saturday": "08:00-23:00",
+      "sunday": "08:00-23:00",
+      "monday": "08:00-23:00",
+      "tuesday": "08:00-23:00",
+      "wednesday": "08:00-23:00",
+      "thursday": "08:00-23:00",
+      "friday": "08:00-23:00"
+    }
+  }
+]

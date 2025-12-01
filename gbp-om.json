@@ -1,0 +1,212 @@
+[
+  {
+    "id": "OM_مسقط",
+    "business_name": "مؤسسة إعلانات العرب - مسقط",
+    "country_code": "OM",
+    "country_name": "سلطنة عمان",
+    "city": "مسقط",
+    "phone": "+201110760081",
+    "website": "https://sherow1982.github.io/arabsad-ads/",
+    "latitude": 21.4735,
+    "longitude": 55.9754,
+    "services": [
+      "Google Ads",
+      "Facebook Ads",
+      "Instagram Ads",
+      "SEO",
+      "تصميم المواقع",
+      "التسويق الرقمي",
+      "تطوير المتاجر"
+    ],
+    "address": "مسقط, عمان",
+    "opening_hours": {
+      "saturday": "08:00-23:00",
+      "sunday": "08:00-23:00",
+      "monday": "08:00-23:00",
+      "tuesday": "08:00-23:00",
+      "wednesday": "08:00-23:00",
+      "thursday": "08:00-23:00",
+      "friday": "08:00-23:00"
+    }
+  },
+  {
+    "id": "OM_صلالة",
+    "business_name": "مؤسسة إعلانات العرب - صلالة",
+    "country_code": "OM",
+    "country_name": "سلطنة عمان",
+    "city": "صلالة",
+    "phone": "+201110760081",
+    "website": "https://sherow1982.github.io/arabsad-ads/",
+    "latitude": 17.0151,
+    "longitude": 54.0924,
+    "services": [
+      "Google Ads",
+      "Facebook Ads",
+      "Instagram Ads",
+      "SEO",
+      "تصميم المواقع",
+      "التسويق الرقمي",
+      "تطوير المتاجر"
+    ],
+    "address": "صلالة, عمان",
+    "opening_hours": {
+      "saturday": "08:00-23:00",
+      "sunday": "08:00-23:00",
+      "monday": "08:00-23:00",
+      "tuesday": "08:00-23:00",
+      "wednesday": "08:00-23:00",
+      "thursday": "08:00-23:00",
+      "friday": "08:00-23:00"
+    }
+  },
+  {
+    "id": "OM_صحار",
+    "business_name": "مؤسسة إعلانات العرب - صحار",
+    "country_code": "OM",
+    "country_name": "سلطنة عمان",
+    "city": "صحار",
+    "phone": "+201110760081",
+    "website": "https://sherow1982.github.io/arabsad-ads/",
+    "latitude": 24.2795,
+    "longitude": 56.9366,
+    "services": [
+      "Google Ads",
+      "Facebook Ads",
+      "Instagram Ads",
+      "SEO",
+      "تصميم المواقع",
+      "التسويق الرقمي",
+      "تطوير المتاجر"
+    ],
+    "address": "صحار, عمان",
+    "opening_hours": {
+      "saturday": "08:00-23:00",
+      "sunday": "08:00-23:00",
+      "monday": "08:00-23:00",
+      "tuesday": "08:00-23:00",
+      "wednesday": "08:00-23:00",
+      "thursday": "08:00-23:00",
+      "friday": "08:00-23:00"
+    }
+  },
+  {
+    "id": "OM_نزوى",
+    "business_name": "مؤسسة إعلانات العرب - نزوى",
+    "country_code": "OM",
+    "country_name": "سلطنة عمان",
+    "city": "نزوى",
+    "phone": "+201110760081",
+    "website": "https://sherow1982.github.io/arabsad-ads/",
+    "latitude": 22.9342,
+    "longitude": 57.5364,
+    "services": [
+      "Google Ads",
+      "Facebook Ads",
+      "Instagram Ads",
+      "SEO",
+      "تصميم المواقع",
+      "التسويق الرقمي",
+      "تطوير المتاجر"
+    ],
+    "address": "نزوى, عمان",
+    "opening_hours": {
+      "saturday": "08:00-23:00",
+      "sunday": "08:00-23:00",
+      "monday": "08:00-23:00",
+      "tuesday": "08:00-23:00",
+      "wednesday": "08:00-23:00",
+      "thursday": "08:00-23:00",
+      "friday": "08:00-23:00"
+    }
+  },
+  {
+    "id": "OM_السويق",
+    "business_name": "مؤسسة إعلانات العرب - السويق",
+    "country_code": "OM",
+    "country_name": "سلطنة عمان",
+    "city": "السويق",
+    "phone": "+201110760081",
+    "website": "https://sherow1982.github.io/arabsad-ads/",
+    "latitude": 23.8069,
+    "longitude": 57.4074,
+    "services": [
+      "Google Ads",
+      "Facebook Ads",
+      "Instagram Ads",
+      "SEO",
+      "تصميم المواقع",
+      "التسويق الرقمي",
+      "تطوير المتاجر"
+    ],
+    "address": "السويق, عمان",
+    "opening_hours": {
+      "saturday": "08:00-23:00",
+      "sunday": "08:00-23:00",
+      "monday": "08:00-23:00",
+      "tuesday": "08:00-23:00",
+      "wednesday": "08:00-23:00",
+      "thursday": "08:00-23:00",
+      "friday": "08:00-23:00"
+    }
+  },
+  {
+    "id": "OM_شناص",
+    "business_name": "مؤسسة إعلانات العرب - شناص",
+    "country_code": "OM",
+    "country_name": "سلطنة عمان",
+    "city": "شناص",
+    "phone": "+201110760081",
+    "website": "https://sherow1982.github.io/arabsad-ads/",
+    "latitude": 24.7167,
+    "longitude": 56.7833,
+    "services": [
+      "Google Ads",
+      "Facebook Ads",
+      "Instagram Ads",
+      "SEO",
+      "تصميم المواقع",
+      "التسويق الرقمي",
+      "تطوير المتاجر"
+    ],
+    "address": "شناص, عمان",
+    "opening_hours": {
+      "saturday": "08:00-23:00",
+      "sunday": "08:00-23:00",
+      "monday": "08:00-23:00",
+      "tuesday": "08:00-23:00",
+      "wednesday": "08:00-23:00",
+      "thursday": "08:00-23:00",
+      "friday": "08:00-23:00"
+    }
+  },
+  {
+    "id": "OM_هيماء",
+    "business_name": "مؤسسة إعلانات العرب - هيماء",
+    "country_code": "OM",
+    "country_name": "سلطنة عمان",
+    "city": "هيماء",
+    "phone": "+201110760081",
+    "website": "https://sherow1982.github.io/arabsad-ads/",
+    "latitude": 24.2,
+    "longitude": 56.6,
+    "services": [
+      "Google Ads",
+      "Facebook Ads",
+      "Instagram Ads",
+      "SEO",
+      "تصميم المواقع",
+      "التسويق الرقمي",
+      "تطوير المتاجر"
+    ],
+    "address": "هيماء, عمان",
+    "opening_hours": {
+      "saturday": "08:00-23:00",
+      "sunday": "08:00-23:00",
+      "monday": "08:00-23:00",
+      "tuesday": "08:00-23:00",
+      "wednesday": "08:00-23:00",
+      "thursday": "08:00-23:00",
+      "friday": "08:00-23:00"
+    }
+  }
+]
