@@ -1,52 +1,22 @@
-# Robots.txt for ArabSad.com - مؤسسة إعلانات العرب
 User-agent: *
-Allow: /services/index.html
-Allow: /services/google-ads.html
-Allow: /services/seo.html
-Allow: /services/website-design.html
-Allow: /services/ecommerce.html
-Allow: /services/social-management.html
-Allow: /services/social-media-ads.html
-Allow: /index.html
-Allow: /blog/
-Allow: /assets/css/
-Allow: /assets/js/
-Allow: /assets/images/
-Disallow: /404.html
-Disallow: /500.html
-Disallow: /*-service.html
-Disallow: /*.md
-Disallow: /NOTICE-*
-Disallow: /IMPROVEMENTS-*
-Disallow: /update-all-facebook-links.js
-Disallow: /global-config.js
-Disallow: /script.js
-Disallow: /pwa-installer*.js
-Disallow: /newsletter-handler.php
-Disallow: /chatbot*.html
-Disallow: /shared-*.html
-Disallow: /whatsapp-button.html
-Disallow: /index-professional.html
-Sitemap: https://arabsad.com/sitemap.xml
-User-agent: bingbot
 Allow: /
+Disallow: /admin/
+Disallow: /private/
+Disallow: /?*
+Disallow: /*?*
+Disallow: /*.js$
+Disallow: /*.css$
+
+# Google Bot
+User-agent: Googlebot
+Allow: /
+
+# Bing Bot
+User-agent: Bingbot
+Allow: /
+
+# Sitemap
+Sitemap: https://sherow1982.github.io/arabsad-ads/sitemap.xml
+
+# Crawl Delay
 Crawl-delay: 1
-User-agent: Yandex
-Allow: /
-Crawl-delay: 1
-User-agent: facebookexternalhit
-Allow: /
-User-agent: Twitterbot
-Allow: /
-User-agent: LinkedInBot
-Allow: /
-User-agent: WhatsApp
-Allow: /
-User-agent: AhrefsBot
-Disallow: /
-User-agent: MJ12bot
-Disallow: /
-User-agent: SemrushBot
-Disallow: /
-User-agent: DotBot
-Disallow: /
