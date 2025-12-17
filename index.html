@@ -3,354 +3,622 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>مؤسسة إعلانات العرب | أفضل وكالة تسويق رقمي وخدمات الإعلانات في الخليج ومصر</title>
-    <meta name="description" content="موقع متكامل للتسويق الرقمي وإدارة الحملات الإعلانية: Google Ads، سيو، تصميم مواقع ومتاجر، إعلانات سوشيال، استشارات مباشرة عبر واتساب.">
-    <meta name="keywords" content="إعلانات جوجل, تسويق الكتروني, خدمات سيو, تصميم مواقع, حملات فيسبوك, متاجر إلكترونية, حملات سناب شات, Google Ads, SEO, Facebook Ads, Instagram Ads, TikTok Ads, Snap Ads">
-    <meta property="og:title" content="مؤسسة إعلانات العرب | وكالات التسويق الرقمي الرائدة في الخليج ومصر">
-    <meta property="og:description" content="خدمات متكاملة لإعلانات جوجل, حملات السوشيال, تحسين السيو, تصميم وبرمجة المواقع والمتاجر، استشارات مجانية للنجاح الرقمي.">
-    <meta property="og:image" content="https://arabsad.com/assets/images/og-main.png">
-    <meta property="og:url" content="https://arabsad.com/index.html">
-    <meta property="og:type" content="website">
-    <link rel="canonical" href="https://arabsad.com/index.html">
-    
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+    <title>مؤسسة إعلانات العرب - الوكالة الرقمية الأولى في الخليج</title>
+    <meta name="description" content="وكالة تسويق رقمي متخصصة في Google Ads, SEO, تصميم مواقع ومتاجر إلكترونية، وإدارة الحملات الإعلانية مع دعم مباشر.">
     <style>
-    body {
-        font-family: 'Cairo', sans-serif;
-        background: linear-gradient(135deg, #0f2027 0%, #203a43 50%, #2c5364 100%);
-        color: #fff;
-        margin:0;
-        padding:0;
-    }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #FFB800;
+            --primary-dark: #FF9500;
+            --dark-bg: #0a0e27;
+            --dark-secondary: #1a1f3a;
+            --text-light: #e8edf5;
+            --text-muted: #a8b3c1;
+            --accent: #00d4aa;
+            --danger: #ff6b6b;
+        }
+
+        html, body {
+            font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+            background: var(--dark-bg);
+            color: var(--text-light);
+            line-height: 1.6;
+            scroll-behavior: smooth;
+        }
+
+        /* Header */
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            background: rgba(10, 14, 39, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(255, 184, 0, 0.1);
+            padding: 1.2rem 2rem;
+        }
+
+        .header-wrapper {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 2rem;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            min-width: max-content;
+        }
+
+        nav {
+            display: flex;
+            gap: 3rem;
+            list-style: none;
+            flex: 1;
+            justify-content: center;
+        }
+
+        nav a {
+            color: var(--text-light);
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            position: relative;
+            font-size: 0.95rem;
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--primary);
+            transition: width 0.3s ease;
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        nav a:hover {
+            color: var(--primary);
+        }
+
+        .cta-header {
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            color: #000;
+            padding: 0.8rem 1.8rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(255, 184, 0, 0.3);
+            white-space: nowrap;
+        }
+
+        .cta-header:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 25px rgba(255, 184, 0, 0.4);
+        }
+
+        /* Hero Section */
+        main {
+            margin-top: 80px;
+        }
+
+        .hero {
+            min-height: 90vh;
+            background: linear-gradient(135deg, var(--dark-bg) 0%, var(--dark-secondary) 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 3rem 2rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(255, 184, 0, 0.1) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: -30%;
+            left: -10%;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(0, 212, 170, 0.08) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .hero-content {
+            max-width: 1000px;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.5rem, 8vw, 4.5rem);
+            font-weight: 900;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+            background: linear-gradient(135deg, var(--primary), var(--accent), var(--primary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            letter-spacing: -1px;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            color: var(--text-muted);
+            margin-bottom: 3rem;
+            line-height: 1.8;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 4rem;
+        }
+
+        .btn {
+            padding: 1.1rem 2.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: none;
+            display: inline-block;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            color: #000;
+            box-shadow: 0 4px 15px rgba(255, 184, 0, 0.3);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 30px rgba(255, 184, 0, 0.5);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--primary);
+            border: 2px solid var(--primary);
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255, 184, 0, 0.1);
+            transform: translateY(-3px);
+        }
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-top: 4rem;
+            padding-top: 4rem;
+            border-top: 1px solid rgba(255, 184, 0, 0.1);
+        }
+
+        .stat {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        /* Services Section */
+        .services {
+            padding: 6rem 2rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            font-size: clamp(2rem, 6vw, 3.5rem);
+            font-weight: 900;
+            margin-bottom: 1rem;
+            text-align: center;
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 1.1rem;
+            margin-bottom: 4rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+        }
+
+        .service-card {
+            background: rgba(255, 184, 0, 0.05);
+            border: 1px solid rgba(255, 184, 0, 0.2);
+            border-radius: 15px;
+            padding: 2.5rem;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--primary), var(--accent));
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.3s ease;
+        }
+
+        .service-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .service-card:hover {
+            background: rgba(255, 184, 0, 0.1);
+            border-color: rgba(255, 184, 0, 0.4);
+            transform: translateY(-8px);
+        }
+
+        .service-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .service-card h3 {
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+            color: var(--text-light);
+        }
+
+        .service-card p {
+            color: var(--text-muted);
+            line-height: 1.8;
+            font-size: 0.95rem;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--dark-secondary);
+            border-top: 1px solid rgba(255, 184, 0, 0.1);
+            padding: 4rem 2rem 2rem;
+            margin-top: 6rem;
+        }
+
+        .footer-content {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-column h4 {
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+        }
+
+        .footer-column ul {
+            list-style: none;
+        }
+
+        .footer-column ul li {
+            margin-bottom: 0.8rem;
+        }
+
+        .footer-column a {
+            color: var(--text-muted);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-column a:hover {
+            color: var(--primary);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        .social-links a {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: rgba(255, 184, 0, 0.1);
+            border: 1px solid rgba(255, 184, 0, 0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary);
+            transition: all 0.3s ease;
+        }
+
+        .social-links a:hover {
+            background: var(--primary);
+            color: #000;
+            transform: translateY(-3px);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 184, 0, 0.1);
+            padding-top: 2rem;
+            text-align: center;
+            color: var(--text-muted);
+        }
+
+        .legal-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .legal-links a {
+            font-size: 0.85rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            header {
+                padding: 1rem;
+            }
+
+            .header-wrapper {
+                gap: 1rem;
+            }
+
+            nav {
+                display: none;
+            }
+
+            .hero {
+                min-height: 70vh;
+                padding: 2rem 1rem;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .btn {
+                width: 100%;
+            }
+
+            .services {
+                padding: 4rem 1rem;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+        }
     </style>
-
-
-    <!-- SEO Meta Tags (Auto) -->
-    <meta charset="UTF-8">
-    <title>مؤسسة إعلانات العرب - مؤسسة إعلانات العرب</title>
-    <meta name="description" content="موقع متكامل للتسويق الرقمي وإدارة الحملات الإعلانية: Google Ads، سيو، تصميم مواقع ومتاجر، إعلانات سوشيال، استشارات مباشرة عبر واتساب.">
-    <meta name="keywords" content="مؤسسة إعلانات العرب, تسويق رقمي, Google Ads, Facebook Ads, SEO, مؤسسة إعلانات العرب">
-    <meta name="robots" content="index, follow">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="geo.region" content="EG">
-    <meta name="geo.placename" content="مصر">
-    <meta name="geo.position" content="30.0031;31.2089">
-    <link rel="canonical" href="https://sherow1982.github.io/arabsad-ads/index.html">
-    <!-- Open Graph -->
-    <meta property="og:title" content="مؤسسة إعلانات العرب - مؤسسة إعلانات العرب">
-    <meta property="og:description" content="موقع متكامل للتسويق الرقمي وإدارة الحملات الإعلانية: Google Ads، سيو، تصميم مواقع ومتاجر، إعلانات سوشيال، استشارات مباشرة عبر واتساب.">
-    <meta property="og:image" content="https://sherow1982.github.io/arabsad-ads/assets/images/logo.svg">
-    <meta property="og:url" content="https://sherow1982.github.io/arabsad-ads/index.html">
-    <meta property="og:type" content="website">
-    <meta property="og:site_name" content="مؤسسة إعلانات العرب">
-    <meta property="og:locale" content="ar_EG">
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="مؤسسة إعلانات العرب - مؤسسة إعلانات العرب">
-    <meta name="twitter:description" content="موقع متكامل للتسويق الرقمي وإدارة الحملات الإعلانية: Google Ads، سيو، تصميم مواقع ومتاجر، إعلانات سوشيال، استشارات مباشرة عبر واتساب.">
-    <meta name="twitter:image" content="https://sherow1982.github.io/arabsad-ads/assets/images/logo.svg">
-    
-
-<!-- Service Schema JSON-LD (Auto) -->
-
-
-<!-- Organization Schema JSON-LD (Auto) -->
-
-
-<!-- LocalBusiness Schema JSON-LD (Auto) -->
-
-
-<!-- Breadcrumb Schema JSON-LD (Auto) -->
-
-
-
-
-    <!-- SEO Meta Tags (Auto) -->
-    <meta charset="UTF-8">
-    <title>مؤسسة إعلانات العرب - مؤسسة إعلانات العرب | وكالة تسويق رقمي الخليج</title>
-    <meta name="description" content="موقع متكامل للتسويق الرقمي وإدارة الحملات الإعلانية: Google Ads، سيو، تصميم مواقع ومتاجر، إعلانات سوشيال، استشارات مباشرة عبر واتساب.">
-    <meta name="keywords" content="تسويق رقمي قطر, تسويق رقمي الكويت, إعلانات جوجل البحرين, تسويق رقمي عمان, إعلانات جوجل السعودية, إعلانات جوجل دبي, إعلانات جوجل الكويت, تسويق رقمي السعودية, مؤسسة إعلانات العرب, تسويق رقمي البحرين">
-    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="language" content="ar">
-    <meta name="author" content="مؤسسة إعلانات العرب">
-    <meta name="geo.region" content="EG">
-    <meta name="geo.placename" content="مصر">
-    <link rel="canonical" href="https://sherow1982.github.io/arabsad-ads/index.html">
-    <link rel="alternate" hreflang="ar" href="https://sherow1982.github.io/arabsad-ads/index.html">
-    <!-- Open Graph -->
-    <meta property="og:title" content="مؤسسة إعلانات العرب - مؤسسة إعلانات العرب">
-    <meta property="og:description" content="موقع متكامل للتسويق الرقمي وإدارة الحملات الإعلانية: Google Ads، سيو، تصميم مواقع ومتاجر، إعلانات سوشيال، استشارات مباشرة عبر واتساب.">
-    <meta property="og:image" content="https://sherow1982.github.io/arabsad-ads/assets/images/logo.svg">
-    <meta property="og:url" content="https://sherow1982.github.io/arabsad-ads/index.html">
-    <meta property="og:type" content="website">
-    <meta property="og:site_name" content="مؤسسة إعلانات العرب">
-    <meta property="og:locale" content="ar_EG">
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="مؤسسة إعلانات العرب">
-    <meta name="twitter:description" content="موقع متكامل للتسويق الرقمي وإدارة الحملات الإعلانية: Google Ads، سيو، تصميم مواقع ومتاجر، إعلانات سوشيال، استشارات مباشرة عبر واتساب.">
-    <meta name="twitter:image" content="https://sherow1982.github.io/arabsad-ads/assets/images/logo.svg">
-    
-
-<!-- Service/Article Schema JSON-LD (Auto) -->
-
-
-<!-- Organization Schema JSON-LD (Auto) -->
-
-
-<!-- LocalBusiness Schema - Gulf Countries (Auto) -->
-
-
-<!-- Breadcrumb Schema JSON-LD (Auto) -->
-
-
-
-
-    <!-- SEO Meta Tags (Auto) -->
-    <meta charset="UTF-8">
-    <title>مؤسسة إعلانات العرب - مؤسسة إعلانات العرب | وكالة تسويق رقمي الخليج</title>
-    <meta name="description" content="موقع متكامل للتسويق الرقمي وإدارة الحملات الإعلانية: Google Ads، سيو، تصميم مواقع ومتاجر، إعلانات سوشيال، استشارات مباشرة عبر واتساب.">
-    <meta name="keywords" content="تسويق رقمي الرياض, تسويق رقمي صلالة, تسويق رقمي الإمارات, تسويق رقمي دبي, تسويق رقمي السعودية, إعلانات جوجل دبي, تسويق رقمي المحرق, إعلانات جوجل الكويت, تسويق رقمي جدة, مؤسسة إعلانات العرب, تسويق رقمي البحرين, إعلانات جوجل الدوحة, إعلانات جوجل مسقط, تسويق رقمي المنامة, تسويق رقمي الكويت">
-    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="language" content="ar">
-    <meta name="author" content="مؤسسة إعلانات العرب">
-    <meta name="geo.region" content="EG">
-    <meta name="geo.placename" content="مصر">
-    <link rel="canonical" href="https://sherow1982.github.io/arabsad-ads/index.html">
-    <link rel="alternate" hreflang="ar" href="https://sherow1982.github.io/arabsad-ads/index.html">
-    <!-- Open Graph -->
-    <meta property="og:title" content="مؤسسة إعلانات العرب - مؤسسة إعلانات العرب">
-    <meta property="og:description" content="موقع متكامل للتسويق الرقمي وإدارة الحملات الإعلانية: Google Ads، سيو، تصميم مواقع ومتاجر، إعلانات سوشيال، استشارات مباشرة عبر واتساب.">
-    <meta property="og:image" content="https://sherow1982.github.io/arabsad-ads/assets/images/logo.svg">
-    <meta property="og:url" content="https://sherow1982.github.io/arabsad-ads/index.html">
-    <meta property="og:type" content="website">
-    <meta property="og:site_name" content="مؤسسة إعلانات العرب">
-    <meta property="og:locale" content="ar_EG">
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="مؤسسة إعلانات العرب">
-    <meta name="twitter:description" content="موقع متكامل للتسويق الرقمي وإدارة الحملات الإعلانية: Google Ads، سيو، تصميم مواقع ومتاجر، إعلانات سوشيال، استشارات مباشرة عبر واتساب.">
-    <meta name="twitter:image" content="https://sherow1982.github.io/arabsad-ads/assets/images/logo.svg">
-    
-
-<!-- Service/Article Schema JSON-LD (Auto) -->
-
-
-<!-- Organization Schema JSON-LD (Auto) -->
-
-
-<!-- LocalBusiness Schemas - Gulf Countries (Auto) -->
-
-
-
-
-
-
-<!-- Breadcrumb Schema JSON-LD (Auto) -->
-
-
-
-
-    <!-- SEO Meta Tags (Auto) -->
-    <meta charset="UTF-8">
-    <title>مؤسسة إعلانات العرب - مؤسسة إعلانات العرب | وكالة تسويق رقمي الخليج</title>
-    <meta name="description" content="موقع متكامل للتسويق الرقمي وإدارة الحملات الإعلانية: Google Ads، سيو، تصميم مواقع ومتاجر، إعلانات سوشيال، استشارات مباشرة عبر واتساب.">
-    <meta name="keywords" content="تسويق رقمي الرياض, تسويق رقمي أبوظبي, Google Ads, إعلانات جوجل, تسويق رقمي صلالة, مؤسسة إعلانات العرب, إعلانات جوجل الإمارات, Google Ads جدة, إعلانات جوجل البحرين, إعلانات فيسبوك, Google Ads المنامة, إعلانات جوجل الكويت, التسويق الرقمي, Google Ads صلالة, تسويق رقمي قطر">
-    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="language" content="ar">
-    <meta name="author" content="مؤسسة إعلانات العرب">
-    <link rel="canonical" href="https://sherow1982.github.io/arabsad-ads/index.html">
-    <!-- Open Graph -->
-    <meta property="og:title" content="مؤسسة إعلانات العرب - مؤسسة إعلانات العرب">
-    <meta property="og:description" content="موقع متكامل للتسويق الرقمي وإدارة الحملات الإعلانية: Google Ads، سيو، تصميم مواقع ومتاجر، إعلانات سوشيال، استشارات مباشرة عبر واتساب.">
-    <meta property="og:image" content="https://sherow1982.github.io/arabsad-ads/assets/images/logo.svg">
-    <meta property="og:url" content="https://sherow1982.github.io/arabsad-ads/index.html">
-    <meta property="og:type" content="website">
-    <meta property="og:locale" content="ar_EG">
-    
-
-<!-- Main Schema (Auto) -->
-
-
-<!-- Organization Schema (Auto) -->
-
-
-<!-- LocalBusiness Schemas - Gulf Countries (Auto) -->
-
-
-
-
-
-
-
-
-
-
-
-<!-- Breadcrumb Schema (Auto) -->
-
-
-
-
-    <!-- SEO Meta Tags (Auto) -->
-    <meta charset="UTF-8">
-    <title>مؤسسة إعلانات العرب - مؤسسة إعلانات العرب</title>
-    <meta name="description" content="موقع متكامل للتسويق الرقمي وإدارة الحملات الإعلانية: Google Ads، سيو، تصميم مواقع ومتاجر، إعلانات سوشيال، استشارات مباشرة عبر واتساب.">
-    <meta name="keywords" content="تسويق الريان, تسويق الدوحة, إعلانات فيسبوك, Web Design, إعلانات جوجل السعودية, تسويق جدة, SEO, إعلانات جوجل الإمارات, تسويق رقمي عمان, Social Media Ads, تسويق رقمي الإمارات, تسويق دبي, تسويق أبوظبي, إعلانات جوجل, التسويق الرقمي">
-    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="canonical" href="https://sherow1982.github.io/arabsad-ads/index.html">
-    <!-- Open Graph -->
-    <meta property="og:title" content="مؤسسة إعلانات العرب - مؤسسة إعلانات العرب">
-    <meta property="og:description" content="موقع متكامل للتسويق الرقمي وإدارة الحملات الإعلانية: Google Ads، سيو، تصميم مواقع ومتاجر، إعلانات سوشيال، استشارات مباشرة عبر واتساب.">
-    <meta property="og:image" content="https://sherow1982.github.io/arabsad-ads/assets/images/logo.svg">
-    <meta property="og:url" content="https://sherow1982.github.io/arabsad-ads/index.html">
-    
-
-<!-- Main Schema (Auto) -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org/",
-  "@type": "Service",
-  "name": "مؤسسة إعلانات العرب",
-  "image": "https://sherow1982.github.io/arabsad-ads/assets/images/logo.svg",
-  "description": "موقع متكامل للتسويق الرقمي وإدارة الحملات الإعلانية: Google Ads، سيو، تصميم مواقع ومتاجر، إعلانات سوشيال، استشارات مباشرة عبر واتساب.",
-  "provider": {
-    "@type": "Organization",
-    "name": "مؤسسة إعلانات العرب",
-    "url": "https://sherow1982.github.io/arabsad-ads/",
-    "logo": "https://sherow1982.github.io/arabsad-ads/assets/images/logo.svg",
-    "telephone": "+201110760081"
-  },
-  "url": "https://sherow1982.github.io/arabsad-ads/index.html",
-  "areaServed": [
-    {
-      "@type": "Country",
-      "name": "المملكة العربية السعودية"
-    },
-    {
-      "@type": "Country",
-      "name": "الإمارات العربية المتحدة"
-    },
-    {
-      "@type": "Country",
-      "name": "دولة الكويت"
-    },
-    {
-      "@type": "Country",
-      "name": "دولة قطر"
-    },
-    {
-      "@type": "Country",
-      "name": "مملكة البحرين"
-    },
-    {
-      "@type": "Country",
-      "name": "سلطنة عمان"
-    }
-  ],
-  "priceRange": "$$-$$$"
-}
-</script>
-
-<!-- Organization Schema (Auto) -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "مؤسسة إعلانات العرب",
-  "url": "https://sherow1982.github.io/arabsad-ads/",
-  "telephone": "+201110760081",
-  "email": "info@arabsad.com"
-}
-</script>
-
-<!-- Breadcrumb Schema (Auto) -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position": 1,
-      "name": "الرئيسية",
-      "item": "https://sherow1982.github.io/arabsad-ads"
-    }
-  ]
-}
-</script>
-
 </head>
 <body>
-    <header style="background:#15243b;box-shadow:0 4px 30px #1a1a2e22;padding:40px 0 18px 0;text-align:center">
-        <h1 style="font-size:2.6rem;font-weight:900;margin-bottom:11px;letter-spacing:-2px;color:#f6b93b;">مؤسسة إعلانات العرب</h1>
-        <div style="color:#fff;font-size:1.4rem;opacity:.93;">أفضل وكالة للتسويق الرقمي والإعلانات الممولة في الخليج ومصر</div>
-        <div style="margin-top:14px;">
-         <a href="https://wa.me/201110760081" style="background:#25d366;color:#fff;padding:10px 35px;border-radius:38px;text-decoration:none;font-weight:900;font-size:1.2rem;margin:0 5px;display:inline-block;">تواصل واتساب</a>
-         <a href="all-pages.html" target="_blank" style="background:transparent;border:2px solid #f6b93b;color:#f6b93b;padding:10px 35px;border-radius:38px;text-decoration:none;font-weight:900;font-size:1.1rem;margin:0 5px;display:inline-block;">كل الصفحات</a>
+    <!-- Header -->
+    <header>
+        <div class="header-wrapper">
+            <a href="/" class="logo">🌐 إعلانات العرب</a>
+            <nav>
+                <a href="#home">الرئيسية</a>
+                <a href="#services">الخدمات</a>
+                <a href="#stats">الإحصائيات</a>
+                <a href="#contact">التواصل</a>
+            </nav>
+            <a href="https://wa.me/201110760081" target="_blank" class="cta-header">💬 تواصل الآن</a>
         </div>
     </header>
-    <section style="text-align:center;padding:70px 0 45px 0;">
-        <h2 style="font-size:2.15rem;color:#26de81;font-weight:900;">نحو نتائج إعلان ملموسة ونجاح أعمالك</h2>
-        <p style="font-size:1.15rem;color:#fff;max-width:700px;margin:38px auto 18px auto;opacity:.92;">خدماتنا تشمل: <b style="color:#f6b93b">Google Ads</b>، <b style="color:#f6b93b">SEO</b>، تصميم مواقع ومتاجر إلكترونية، إعلانات سوشيال ميديا وإدارة الحملات بدعم مباشر.</p>
-    </section>
-    <section style="max-width:1220px;margin:0 auto 45px auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(275px,1fr));gap:32px;padding:5px 12px;">
-      <div style="background:#203a43;padding:26px;border-radius:20px;box-shadow:0 5px 30px #26de8142;text-align:center;">
-        <h3 style="color:#f6b93b;font-size:1.5rem;font-weight:900;margin-bottom:16px;">إعلانات Google</h3>
-        <div style="color:#fff;opacity:.95;font-size:1.08rem;">حملات مدفوعة احترافية واستهداف دقيق لرفع المبيعات</div>
-        <a href="services/google-ads.html" style="display:inline-block;margin:16px 0 0 0;padding:8px 25px;background:#25d366;color:#fff;border-radius:28px;font-weight:900;text-decoration:none;font-size:1.08rem;">تفاصيل الخدمة</a>
-      </div>
-      <div style="background:#203a43;padding:26px;border-radius:20px;box-shadow:0 5px 30px #26de8142;text-align:center;">
-        <h3 style="color:#f6b93b;font-size:1.5rem;font-weight:900;margin-bottom:16px;">تحسين SEO</h3>
-        <div style="color:#fff;opacity:.95;font-size:1.08rem;">تصدر نتائج البحث وزيادة الزيارات المجانية بشكل مستدام</div>
-        <a href="services/seo.html" style="display:inline-block;margin:16px 0 0 0;padding:8px 25px;background:#25d366;color:#fff;border-radius:28px;font-weight:900;text-decoration:none;font-size:1.08rem;">تفاصيل الخدمة</a>
-      </div>
-      <div style="background:#203a43;padding:26px;border-radius:20px;box-shadow:0 5px 30px #26de8142;text-align:center;">
-        <h3 style="color:#f6b93b;font-size:1.5rem;font-weight:900;margin-bottom:16px;">تصميم المواقع</h3>
-        <div style="color:#fff;opacity:.95;font-size:1.08rem;">مواقع احترافية وتجربة استخدام مذهلة على جميع الأجهزة</div>
-        <a href="services/website-design.html" style="display:inline-block;margin:16px 0 0 0;padding:8px 25px;background:#25d366;color:#fff;border-radius:28px;font-weight:900;text-decoration:none;font-size:1.08rem;">تفاصيل الخدمة</a>
-      </div>
-      <div style="background:#203a43;padding:26px;border-radius:20px;box-shadow:0 5px 30px #26de8142;text-align:center;">
-        <h3 style="color:#f6b93b;font-size:1.5rem;font-weight:900;margin-bottom:16px;">متاجر إلكترونية</h3>
-        <div style="color:#fff;opacity:.95;font-size:1.08rem;">برمجة وتصميم متاجر إلكترونية متكاملة الدفع والشحن والسيو</div>
-        <a href="services/ecommerce.html" style="display:inline-block;margin:16px 0 0 0;padding:8px 25px;background:#25d366;color:#fff;border-radius:28px;font-weight:900;text-decoration:none;font-size:1.08rem;">تفاصيل الخدمة</a>
-      </div>
-      <div style="background:#203a43;padding:26px;border-radius:20px;box-shadow:0 5px 30px #26de8142;text-align:center;">
-        <h3 style="color:#f6b93b;font-size:1.5rem;font-weight:900;margin-bottom:16px;">سوشيال وإعلانات ممولة</h3>
-        <div style="color:#fff;opacity:.95;font-size:1.08rem;">إعلانات سوشيال ميديا بكامل المنصات واستراتيجيات نمو فعلي</div>
-        <a href="services/social-media-ads.html" style="display:inline-block;margin:16px 0 0 0;padding:8px 25px;background:#25d366;color:#fff;border-radius:28px;font-weight:900;text-decoration:none;font-size:1.08rem;">تفاصيل الخدمة</a>
-      </div>
-      <div style="background:#203a43;padding:26px;border-radius:20px;box-shadow:0 5px 30px #26de8142;text-align:center;">
-        <h3 style="color:#f6b93b;font-size:1.5rem;font-weight:900;margin-bottom:16px;">إدارة الحسابات</h3>
-        <div style="color:#fff;opacity:.95;font-size:1.08rem;">إدارة محتوى وتفاعل السوشيال وخدمة دعم فوري ومدعوم بالتقارير</div>
-        <a href="services/social-management.html" style="display:inline-block;margin:16px 0 0 0;padding:8px 25px;background:#25d366;color:#fff;border-radius:28px;font-weight:900;text-decoration:none;font-size:1.08rem;">تفاصيل الخدمة</a>
-      </div>
-    </section>
-    <section style="text-align:center;padding:45px 0 38px 0;">
-        <h2 style="color:#f6b93b;font-size:1.6rem;font-weight:900;margin-bottom:30px;">نتائجنا بالأرقام</h2>
-        <div style="display:flex;flex-wrap:wrap;gap:40px;justify-content:center;">
-          <div style="background:#26de81;padding:30px 25px;border-radius:18px;min-width:180px;font-weight:900;font-size:1.8rem;color:#fff;box-shadow:0 6px 24px #26de8149;">+500 عميل</div>
-          <div style="background:#f6b93b;padding:30px 25px;border-radius:18px;min-width:180px;font-weight:900;font-size:1.8rem;color:#0f2027;box-shadow:0 6px 24px #f6b93b49;">+2000 حملة ناجحة</div>
-          <div style="background:#203a43;padding:30px 25px;border-radius:18px;min-width:180px;font-weight:900;font-size:1.8rem;color:#fff;box-shadow:0 6px 24px #26de8155;">15 مليون دولار ميزانية</div>
-          <div style="background:#f6b93b;padding:30px 25px;border-radius:18px;min-width:180px;font-weight:900;font-size:1.8rem;color:#203a43;box-shadow:0 6px 24px #f6b93b44;">350% عائد الاستثمار</div>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero" id="home">
+            <div class="hero-content">
+                <h1>نحو نتائج إعلان ملموسة ونجاح أعمالك</h1>
+                <p>خدماتنا تشمل: Google Ads، SEO، تصميم مواقع ومتاجر إلكترونية، إعلانات سوشيال ميديا وإدارة الحملات بدعم مباشر</p>
+                
+                <div class="hero-buttons">
+                    <a href="https://wa.me/201110760081" target="_blank" class="btn btn-primary">💬 تواصل واتساب</a>
+                    <a href="#services" class="btn btn-secondary">📋 اعرف خدماتنا</a>
+                </div>
+
+                <div class="stats" id="stats">
+                    <div class="stat">
+                        <div class="stat-number">+500</div>
+                        <div class="stat-label">حملة ناجحة</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">+50M</div>
+                        <div class="stat-label">وصول شهري</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">98%</div>
+                        <div class="stat-label">رضا العملاء</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">24/7</div>
+                        <div class="stat-label">دعم فني</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section class="services" id="services">
+            <h2 class="section-title">🎯 خدماتنا الرئيسية</h2>
+            <p class="section-subtitle">حلول تسويقية متكاملة تضمن نمو عملك بشكل مستدام</p>
+
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">📊</div>
+                    <h3>إعلانات Google Ads</h3>
+                    <p>حملات إعلانية موجهة عبر محرك البحث الأقوى عالمياً مع ضمان أفضل ROI</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">📱</div>
+                    <h3>إدارة السوشيال ميديا</h3>
+                    <p>إعلانات Facebook, Instagram, TikTok و Snapchat بتصميم احترافي وموجه للجمهور</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🔍</div>
+                    <h3>تحسين محركات البحث</h3>
+                    <p>استراتيجيات SEO متقدمة لتصدر نتائج البحث الطبيعية والحصول على زيارات عضوية</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🛒</div>
+                    <h3>تصميم المتاجر الإلكترونية</h3>
+                    <p>متاجر احترافية جاهزة للبيع مع تكاملات الدفع والشحن وإدارة المخزون</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">💻</div>
+                    <h3>تصميم المواقع الويب</h3>
+                    <p>مواقع حديثة وسريعة الأداء مع تصميم متجاوب ومتوافق مع جميع الأجهزة</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">📈</div>
+                    <h3>تحليل البيانات</h3>
+                    <p>تقارير مفصلة وتحليل شامل للحملات لقياس الأداء واتخاذ قرارات مبنية على البيانات</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="footer-content">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <h4>🌐 عن الموقع</h4>
+                    <p style="color: var(--text-muted); margin-bottom: 1rem;">مؤسسة إعلانات العرب متخصصة في التسويق الرقمي وإدارة الحملات الإعلانية مع دعم مباشر 24/7</p>
+                    <div class="social-links">
+                        <a href="https://facebook.com" target="_blank" title="Facebook">f</a>
+                        <a href="https://instagram.com" target="_blank" title="Instagram">📷</a>
+                        <a href="https://twitter.com" target="_blank" title="Twitter">𝕏</a>
+                        <a href="https://tiktok.com" target="_blank" title="TikTok">♪</a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h4>📋 الخدمات</h4>
+                    <ul>
+                        <li><a href="#">إعلانات Google</a></li>
+                        <li><a href="#">إدارة السوشيال ميديا</a></li>
+                        <li><a href="#">تحسين محركات البحث</a></li>
+                        <li><a href="#">تصميم المتاجر</a></li>
+                        <li><a href="#">تصميم المواقع</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>ℹ️ معلومات مهمة</h4>
+                    <ul>
+                        <li><a href="#">من نحن</a></li>
+                        <li><a href="#">لماذا نحن</a></li>
+                        <li><a href="#">تواصل معنا</a></li>
+                        <li><a href="#">الصفحات القانونية</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>📞 تواصل معنا</h4>
+                    <ul>
+                        <li><a href="tel:+201110760081">☎️ +201110760081</a></li>
+                        <li><a href="https://wa.me/201110760081" target="_blank">💬 واتساب</a></li>
+                        <li><a href="mailto:info@arabsad.com">📧 info@arabsad.com</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 مؤسسة إعلانات العرب - جميع الحقوق محفوظة</p>
+                <p style="font-size: 0.85rem; margin-top: 0.5rem;">وكالة تسويق رقمي متخصصة في الخليج ومصر</p>
+                <div class="legal-links">
+                    <a href="#">سياسة الخصوصية</a>
+                    <a href="#">شروط الاستخدام</a>
+                    <a href="#">الإبلاغ عن مشكلة</a>
+                </div>
+            </div>
         </div>
-    </section>
-    <section style="background:#203a43;text-align:center;padding:42px 0 32px 0;">
-        <h2 style="color:#26de81;font-size:1.45rem;font-weight:900;margin-bottom:30px;">ماذا يقول عملاؤنا؟</h2>
-        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px;max-width:960px;margin:0 auto;">
-          <div style="background:#15243b;padding:23px 18px;border-radius:15px;color:#fff;font-size:1.05rem;">"زادت مبيعاتنا بشكل كبير وتحسنت الاستهدافات والتقارير فورية."<br/><span style="color:#f6b93b;font-weight:900;display:block;margin-top:12px;">أحمد العتيبي</span></div>
-          <div style="background:#15243b;padding:23px 18px;border-radius:15px;color:#fff;font-size:1.05rem;">"خدمة مهنية ونتائج ملموسة في أول شهر. أعتمد عليهم بكل شيء إعلاناتي."<br/><span style="color:#f6b93b;font-weight:900;display:block;margin-top:12px;">سارة المطيري</span></div>
-          <div style="background:#15243b;padding:23px 18px;border-radius:15px;color:#fff;font-size:1.05rem;">"خبرة تقنية ودعم عربي استثنائي وشفافية في كل خطوة."<br/><span style="color:#f6b93b;font-weight:900;display:block;margin-top:12px;">محمد السالم</span></div>
-        </div>
-    </section>
-    <div style="position:fixed;bottom:28px;left:28px;z-index:99;"><a href="https://wa.me/201110760081" style="background:#25d366;color:#fff;padding:14px 38px;border-radius:40px;text-decoration:none;font-weight:900;font-size:1.1rem;box-shadow:0 8px 36px #25d3667c;">واتساب مباشر</a></div>
-    <footer style="background:#15243b;padding:35px 0 18px 0;text-align:center;color:#fff;opacity:.95;font-size:1.13rem;letter-spacing:-1px;">
-      جميع الحقوق محفوظة © مؤسسة إعلانات العرب 2025 | التسويق الرقمي
     </footer>
+
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(link => {
+            link.addEventListener('click', e => {
+                if (link.getAttribute('href') !== '#') {
+                    e.preventDefault();
+                    document.querySelector(link.getAttribute('href'))?.scrollIntoView({behavior: 'smooth'});
+                }
+            });
+        });
+    </script>
 </body>
 </html>
