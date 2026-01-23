@@ -1,177 +1,177 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>إعلانات السوشيال ميديا - مؤسسة إعلانات العرب</title>
-    <meta name="description" content="خدمات إعلانات فيسبوك وإنستجرام وسناب وتيك توك. حملات إبداعية مع محتوى وفيديو احترافية.">
-    <link rel="canonical" href="https://sherow1982.github.io/arabsad/services/social-media-ads.html">
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Service",
-      "name": "إعلانات السوشيال ميديا",
-      "description": "إعلانات Meta (Facebook, Instagram) وTikTok وSnapchat، محتوى إبداعي متطور لبناء براند قوي",
-      "serviceType": "تسويق رقمي سوشيال"
-    }
-    </script>
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        :root {
-            --primary: #FFB800;
-            --primary-dark: #FF9500;
-            --dark-bg: #0a0e27;
-            --dark-secondary: #1a1f3a;
-            --text-light: #e8edf5;
-            --text-muted: #a8b3c1;
-            --accent: #00d4aa;
-        }
-        html, body { font-family: 'Segoe UI', sans-serif; background: var(--dark-bg); color: var(--text-light); line-height: 1.6; scroll-behavior: smooth; }
-        header { position: fixed; top: 0; width: 100%; z-index: 1000; background: rgba(10, 14, 39, 0.95); backdrop-filter: blur(10px); border-bottom: 1px solid rgba(255, 184, 0, 0.1); padding: 1.2rem 2rem; }
-        .header-wrapper { max-width: 1400px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; gap: 2rem; }
-        .logo { font-size: 1.5rem; font-weight: 800; background: linear-gradient(135deg, var(--primary), var(--accent)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; text-decoration: none; }
-        nav { display: flex; gap: 3rem; list-style: none; flex: 1; justify-content: center; }
-        nav a { color: var(--text-light); text-decoration: none; font-weight: 500; transition: color 0.3s ease; }
-        nav a:hover { color: var(--primary); }
-        .cta-header { background: linear-gradient(135deg, var(--primary), var(--primary-dark)); color: #000; padding: 0.8rem 1.8rem; border-radius: 50px; text-decoration: none; font-weight: 600; transition: all 0.3s ease; white-space: nowrap; }
-        .cta-header:hover { transform: translateY(-2px); }
-        main { margin-top: 80px; }
-        .breadcrumb { padding: 1rem 2rem; background: rgba(255, 184, 0, 0.05); border-bottom: 1px solid rgba(255, 184, 0, 0.1); }
-        .breadcrumb-content { max-width: 1400px; margin: 0 auto; color: var(--text-muted); font-size: 0.9rem; }
-        .breadcrumb a { color: var(--primary); text-decoration: none; }
-        .hero { padding: 4rem 2rem; background: linear-gradient(135deg, rgba(255, 184, 0, 0.05), rgba(0, 212, 170, 0.03)); }
-        .hero-content { max-width: 1200px; margin: 0 auto; }
-        .hero h1 { font-size: clamp(2rem, 6vw, 3.5rem); margin-bottom: 1.5rem; background: linear-gradient(135deg, var(--primary), var(--accent)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
-        .hero p { font-size: 1.1rem; color: var(--text-muted); margin-bottom: 2rem; max-width: 700px; }
-        .content-section { padding: 4rem 2rem; max-width: 1200px; margin: 0 auto; }
-        h2 { font-size: 2rem; margin-bottom: 2rem; color: var(--text-light); border-right: 4px solid var(--primary); padding-right: 1rem; }
-        .features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; margin-bottom: 4rem; }
-        .feature-card { background: linear-gradient(135deg, rgba(255, 184, 0, 0.08), rgba(0, 212, 170, 0.05)); border: 2px solid rgba(255, 184, 0, 0.2); border-radius: 15px; padding: 2rem; transition: all 0.3s ease; }
-        .feature-card:hover { border-color: rgba(255, 184, 0, 0.5); transform: translateY(-10px); }
-        .feature-icon { font-size: 2.5rem; margin-bottom: 1rem; }
-        .feature-card h3 { font-size: 1.2rem; margin-bottom: 0.8rem; color: var(--primary); }
-        .feature-card p { color: var(--text-muted); font-size: 0.95rem; }
-        .process { background: rgba(255, 184, 0, 0.03); border-top: 2px solid rgba(255, 184, 0, 0.1); border-bottom: 2px solid rgba(255, 184, 0, 0.1); }
-        .process-steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 3rem; }
-        .step { text-align: center; }
-        .step-number { width: 50px; height: 50px; background: linear-gradient(135deg, var(--primary), var(--primary-dark)); color: #000; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 1.5rem; margin: 0 auto 1.5rem; }
-        .step h3 { font-size: 1.1rem; margin-bottom: 0.5rem; }
-        .step p { color: var(--text-muted); font-size: 0.9rem; }
-        .cta-section { padding: 4rem 2rem; background: linear-gradient(135deg, rgba(255, 184, 0, 0.1), rgba(0, 212, 170, 0.05)); text-align: center; border-radius: 20px; margin-top: 4rem; }
-        .cta-section h2 { border: none; padding: 0; margin-bottom: 1rem; color: var(--text-light); }
-        .cta-section p { color: var(--text-muted); margin-bottom: 2rem; max-width: 600px; margin-left: auto; margin-right: auto; }
-        .btn { display: inline-flex; align-items: center; gap: 0.5rem; padding: 1.1rem 2.5rem; background: linear-gradient(135deg, var(--primary), var(--primary-dark)); color: #000; text-decoration: none; border-radius: 50px; font-weight: 600; transition: all 0.3s ease; border: none; cursor: pointer; font-size: 1rem; }
-        .btn:hover { transform: translateY(-3px); box-shadow: 0 10px 30px rgba(255, 184, 0, 0.3); }
-        footer { background: var(--dark-secondary); border-top: 2px solid rgba(255, 184, 0, 0.1); padding: 3rem 2rem 1.5rem; margin-top: 4rem; }
-        .footer-grid { max-width: 1400px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 3rem; margin-bottom: 2rem; }
-        .footer-column h4 { color: var(--primary); margin-bottom: 1rem; }
-        .footer-column ul { list-style: none; }
-        .footer-column ul li { margin-bottom: 0.5rem; }
-        .footer-column a { color: var(--text-muted); text-decoration: none; transition: color 0.3s ease; }
-        .footer-column a:hover { color: var(--primary); }
-        .footer-bottom { border-top: 1px solid rgba(255, 184, 0, 0.1); padding-top: 1.5rem; text-align: center; color: var(--text-muted); font-size: 0.85rem; }
-        @media (max-width: 768px) { header { padding: 1rem; } nav { display: none; } .hero { padding: 3rem 1.5rem; } .content-section { padding: 3rem 1.5rem; } h2 { font-size: 1.5rem; } }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>إعلانات السوشيال ميديا - مؤسسة إعلانات العرب</title>
+<meta name="description" content="خدمات إعلانات فيسبوك وإنستجرام وسناب وتيك توك. حملات إبداعية مع محتوى وفيديو احترافية.">
+<link rel="canonical" href="https://sherow1982.github.io/arabsad/services/social-media-ads.html">
+<script type="application/ld+json">
+{
+"@context": "https://schema.org",
+"@type": "Service",
+"name": "إعلانات السوشيال ميديا",
+"description": "إعلانات Meta (Facebook, Instagram) وTikTok وSnapchat، محتوى إبداعي متطور لبناء براند قوي",
+"serviceType": "تسويق رقمي سوشيال"
+}
+</script>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+:root {
+--primary: #FFB800;
+--primary-dark: #FF9500;
+--dark-bg: #0a0e27;
+--dark-secondary: #1a1f3a;
+--text-light: #e8edf5;
+--text-muted: #a8b3c1;
+--accent: #00d4aa;
+}
+html, body { font-family: 'Segoe UI', sans-serif; background: var(--dark-bg); color: var(--text-light); line-height: 1.6; scroll-behavior: smooth; }
+header { position: fixed; top: 0; width: 100%; z-index: 1000; background: rgba(10, 14, 39, 0.95); backdrop-filter: blur(10px); border-bottom: 1px solid rgba(255, 184, 0, 0.1); padding: 1.2rem 2rem; }
+.header-wrapper { max-width: 1400px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; gap: 2rem; }
+.logo { font-size: 1.5rem; font-weight: 800; background: linear-gradient(135deg, var(--primary), var(--accent)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; text-decoration: none; }
+nav { display: flex; gap: 3rem; list-style: none; flex: 1; justify-content: center; }
+nav a { color: var(--text-light); text-decoration: none; font-weight: 500; transition: color 0.3s ease; }
+nav a:hover { color: var(--primary); }
+.cta-header { background: linear-gradient(135deg, var(--primary), var(--primary-dark)); color: #000; padding: 0.8rem 1.8rem; border-radius: 50px; text-decoration: none; font-weight: 600; transition: all 0.3s ease; white-space: nowrap; }
+.cta-header:hover { transform: translateY(-2px); }
+main { margin-top: 80px; }
+.breadcrumb { padding: 1rem 2rem; background: rgba(255, 184, 0, 0.05); border-bottom: 1px solid rgba(255, 184, 0, 0.1); }
+.breadcrumb-content { max-width: 1400px; margin: 0 auto; color: var(--text-muted); font-size: 0.9rem; }
+.breadcrumb a { color: var(--primary); text-decoration: none; }
+.hero { padding: 4rem 2rem; background: linear-gradient(135deg, rgba(255, 184, 0, 0.05), rgba(0, 212, 170, 0.03)); }
+.hero-content { max-width: 1200px; margin: 0 auto; }
+.hero h1 { font-size: clamp(2rem, 6vw, 3.5rem); margin-bottom: 1.5rem; background: linear-gradient(135deg, var(--primary), var(--accent)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+.hero p { font-size: 1.1rem; color: var(--text-muted); margin-bottom: 2rem; max-width: 700px; }
+.content-section { padding: 4rem 2rem; max-width: 1200px; margin: 0 auto; }
+h2 { font-size: 2rem; margin-bottom: 2rem; color: var(--text-light); border-right: 4px solid var(--primary); padding-right: 1rem; }
+.features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; margin-bottom: 4rem; }
+.feature-card { background: linear-gradient(135deg, rgba(255, 184, 0, 0.08), rgba(0, 212, 170, 0.05)); border: 2px solid rgba(255, 184, 0, 0.2); border-radius: 15px; padding: 2rem; transition: all 0.3s ease; }
+.feature-card:hover { border-color: rgba(255, 184, 0, 0.5); transform: translateY(-10px); }
+.feature-icon { font-size: 2.5rem; margin-bottom: 1rem; }
+.feature-card h3 { font-size: 1.2rem; margin-bottom: 0.8rem; color: var(--primary); }
+.feature-card p { color: var(--text-muted); font-size: 0.95rem; }
+.process { background: rgba(255, 184, 0, 0.03); border-top: 2px solid rgba(255, 184, 0, 0.1); border-bottom: 2px solid rgba(255, 184, 0, 0.1); }
+.process-steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 3rem; }
+.step { text-align: center; }
+.step-number { width: 50px; height: 50px; background: linear-gradient(135deg, var(--primary), var(--primary-dark)); color: #000; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 1.5rem; margin: 0 auto 1.5rem; }
+.step h3 { font-size: 1.1rem; margin-bottom: 0.5rem; }
+.step p { color: var(--text-muted); font-size: 0.9rem; }
+.cta-section { padding: 4rem 2rem; background: linear-gradient(135deg, rgba(255, 184, 0, 0.1), rgba(0, 212, 170, 0.05)); text-align: center; border-radius: 20px; margin-top: 4rem; }
+.cta-section h2 { border: none; padding: 0; margin-bottom: 1rem; color: var(--text-light); }
+.cta-section p { color: var(--text-muted); margin-bottom: 2rem; max-width: 600px; margin-left: auto; margin-right: auto; }
+.btn { display: inline-flex; align-items: center; gap: 0.5rem; padding: 1.1rem 2.5rem; background: linear-gradient(135deg, var(--primary), var(--primary-dark)); color: #000; text-decoration: none; border-radius: 50px; font-weight: 600; transition: all 0.3s ease; border: none; cursor: pointer; font-size: 1rem; }
+.btn:hover { transform: translateY(-3px); box-shadow: 0 10px 30px rgba(255, 184, 0, 0.3); }
+footer { background: var(--dark-secondary); border-top: 2px solid rgba(255, 184, 0, 0.1); padding: 3rem 2rem 1.5rem; margin-top: 4rem; }
+.footer-grid { max-width: 1400px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 3rem; margin-bottom: 2rem; }
+.footer-column h4 { color: var(--primary); margin-bottom: 1rem; }
+.footer-column ul { list-style: none; }
+.footer-column ul li { margin-bottom: 0.5rem; }
+.footer-column a { color: var(--text-muted); text-decoration: none; transition: color 0.3s ease; }
+.footer-column a:hover { color: var(--primary); }
+.footer-bottom { border-top: 1px solid rgba(255, 184, 0, 0.1); padding-top: 1.5rem; text-align: center; color: var(--text-muted); font-size: 0.85rem; }
+@media (max-width: 768px) { header { padding: 1rem; } nav { display: none; } .hero { padding: 3rem 1.5rem; } .content-section { padding: 3rem 1.5rem; } h2 { font-size: 1.5rem; } }
+</style>
 </head>
 <body>
-    <header>
-        <div class="header-wrapper">
-            <a href="/arabsad/" class="logo">🌐 إعلانات العرب</a>
-            <nav>
-                <a href="/arabsad/#services">الخدمات</a>
-                <a href="/arabsad/#contact">اتصل بنا</a>
-            </nav>
-            <a href="https://wa.me/201110760081?text=%D8%B1%D9%8A%D8%AF%20%D8%A7%D8%B3%D8%AA%D8%B9%D9%84%D8%A7%D9%85%D8%A9%20%D8%B9%D9%86%20%D8%AE%D8%AF%D9%85%D8%A9%20%D8%A5%D8%B9%D9%84%D8%A7%D9%86%D8%A7%D8%AA%20Social%20Media" target="_blank" class="cta-header">💬 استفسر</a>
-        </div>
-    </header>
-    <main>
-        <div class="breadcrumb"><div class="breadcrumb-content"><a href="/arabsad/">الرئيسية</a> / إعلانات السوشيال ميديا</div></div>
-        <section class="hero">
-            <div class="hero-content">
-                <h1>📱 إعلانات Meta وTikTok للعببالم</h1>
-                <p>علامات فيسبوك وإنستجرام وTikTok مع محتوى إبداعي يصل إلى ملايين المستعملين</p>
-            </div>
-        </section>
-        <section class="content-section">
-            <h2>المميزات</h2>
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">🎞</div>
-                    <h3>فيديوهات إبداعية</h3>
-                    <p>فيديوهات باحترافية عالية جودة ييلفت عينك مباشرة على التسلسل الزمني</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">🎆</div>
-                    <h3>وصول بالمليونات</h3>
-                    <p>ربط علاماتك بالمليارات من المستخدمين عبر العالم</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">💵</div>
-                    <h3>بيع مباشر</h3>
-                    <p>البيع مباشرة مع المعرض الفوري عبر Instagram Shopping</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">24📚</div>
-                    <h3>دعم الفريق</h3>
-                    <p>فريق متخصص يمح الساعة ومتابعة الأداء لحظة</p>
-                </div>
-            </div>
-        </section>
-        <section class="content-section process">
-            <h2 style="border-right: none; padding-right: 0; color: var(--text-light); text-align: center; margin-bottom: 3rem;">عملية الإعلانات</h2>
-            <div class="process-steps">
-                <div class="step">
-                    <div class="step-number">1</div>
-                    <h3>إنشاء إبداعي</h3>
-                    <p>التصاميم والفيديوهات رائعة</p>
-                </div>
-                <div class="step">
-                    <div class="step-number">2</div>
-                    <h3>بلان الاستهداف</h3>
-                    <p>استهداف مبيعاتك بدقة</p>
-                </div>
-                <div class="step">
-                    <div class="step-number">3</div>
-                    <h3>بدء الحملات</h3>
-                    <p>بعاجلة وبرع بالحملات</p>
-                </div>
-                <div class="step">
-                    <div class="step-number">4</div>
-                    <h3>تحسين عبور</h3>
-                    <p>سبع صوره لتقليل أربعة</p>
-                </div>
-            </div>
-        </section>
-        <section class="content-section cta-section">
-            <h2 style="border: none; padding: 0; margin-bottom: 1rem;">لأرسل عرشا مدررته</h2>
-            <p>ريت يريتب عرض مناسب لعملك? استفسر عبر الواتساب</p>
-            <a href="https://wa.me/201110760081?text=%D8%B1%D9%8A%D8%AF%20%D8%A7%D8%B3%D8%AA%D8%B9%D9%84%D8%A7%D9%85%D8%A9%20%D8%B9%D9%86%20%D8%AE%D8%AF%D9%85%D8%A9%20%D8%A5%D8%B9%D9%84%D8%A7%D9%86%D8%A7%D8%AA%20Social%20Media" target="_blank" class="btn">💬 استفسر مباشرة</a>
-        </section>
-    </main>
-    <footer>
-        <div class="footer-grid">
-            <div class="footer-column">
-                <h4>الخدمات</h4>
-                <ul>
-                    <li><a href="/arabsad/services/google-ads.html" target="_blank">Google Ads</a></li>
-                    <li><a href="/arabsad/services/social-media-ads.html" target="_blank">رسالة السورا</a></li>
-                    <li><a href="/arabsad/services/seo.html" target="_blank">SEO</a></li>
-                    <li><a href="/arabsad/services/ecommerce.html" target="_blank">E-commerce</a></li>
-                    <li><a href="/arabsad/services/website-design.html" target="_blank">مواقع</a></li>
-                </ul>
-            </div>
-            <div class="footer-column">
-                <h4>اتصل بنا</h4>
-                <ul>
-                    <li><a href="tel:+201110760081">☎ +201110760081</a></li>
-                    <li><a href="https://wa.me/201110760081" target="_blank">💬 WhatsApp</a></li>
-                    <li><a href="mailto:info@arabsad.com">Email</a></li>
-                </ul>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2025 مؤسسة إعلانات العرب</p>
-        </div>
-    </footer>
+<header>
+<div class="header-wrapper">
+<a href="/arabsad/" class="logo">🌐 إعلانات العرب</a>
+<nav>
+<a href="/arabsad/#services">الخدمات</a>
+<a href="/arabsad/#contact">اتصل بنا</a>
+</nav>
+<a href="https://wa.me/201110760081?text=%D8%B1%D9%8A%D8%AF%20%D8%A7%D8%B3%D8%AA%D8%B9%D9%84%D8%A7%D9%85%D8%A9%20%D8%B9%D9%86%20%D8%AE%D8%AF%D9%85%D8%A9%20%D8%A5%D8%B9%D9%84%D8%A7%D9%86%D8%A7%D8%AA%20Social%20Media" target="_blank" class="cta-header">💬 استفسر</a>
+</div>
+</header>
+<main>
+<div class="breadcrumb"><div class="breadcrumb-content"><a href="/arabsad/">الرئيسية</a> / إعلانات السوشيال ميديا</div></div>
+<section class="hero">
+<div class="hero-content">
+<h1>📱 إعلانات Meta وTikTok للعالم</h1>
+<p>إعلانات فيسبوك وإنستجرام وTikTok مع محتوى إبداعي يصل إلى ملايين المستخدمين</p>
+</div>
+</section>
+<section class="content-section">
+<h2>المميزات</h2>
+<div class="features-grid">
+<div class="feature-card">
+<div class="feature-icon">🎞️</div>
+<h3>فيديوهات إبداعية</h3>
+<p>فيديوهات بجودة عالية احترافية تجذب انتباه المستخدمين على الفور</p>
+</div>
+<div class="feature-card">
+<div class="feature-icon">🎆</div>
+<h3>وصول بالملايين</h3>
+<p>وصول إلى ملايين المستخدمين عبر منصات التواصل الاجتماعي حول العالم</p>
+</div>
+<div class="feature-card">
+<div class="feature-icon">💵</div>
+<h3>بيع مباشر</h3>
+<p>البيع المباشر عبر Instagram Shopping والمعرض الفوري</p>
+</div>
+<div class="feature-card">
+<div class="feature-icon">📚</div>
+<h3>دعم 24/7</h3>
+<p>فريق متخصص يعمل على مدار الساعة ومتابعة الأداء لحظة بلحظة</p>
+</div>
+</div>
+</section>
+<section class="content-section process">
+<h2 style="border-right: none; padding-right: 0; color: var(--text-light); text-align: center; margin-bottom: 3rem;">عملية الإعلانات</h2>
+<div class="process-steps">
+<div class="step">
+<div class="step-number">1</div>
+<h3>إنشاء إبداعي</h3>
+<p>تصاميم وفيديوهات احترافية رائعة</p>
+</div>
+<div class="step">
+<div class="step-number">2</div>
+<h3>خطة الاستهداف</h3>
+<p>استهداف جمهورك بدقة عالية</p>
+</div>
+<div class="step">
+<div class="step-number">3</div>
+<h3>بدء الحملات</h3>
+<p>إطلاق الحملات بسرعة واحترافية</p>
+</div>
+<div class="step">
+<div class="step-number">4</div>
+<h3>تحسين الأداء</h3>
+<p>تحسين الحملات لزيادة العائد على الاستثمار</p>
+</div>
+</div>
+</section>
+<section class="content-section cta-section">
+<h2 style="border: none; padding: 0; margin-bottom: 1rem;">احصل على عرض مخصص</h2>
+<p>تريد عرض مناسب لعملك؟ استفسر عبر الواتساب والحصول على استشارة مجانية</p>
+<a href="https://wa.me/201110760081?text=%D8%B1%D9%8A%D8%AF%20%D8%A7%D8%B3%D8%AA%D8%B9%D9%84%D8%A7%D9%85%D8%A9%20%D8%B9%D9%86%20%D8%AE%D8%AF%D9%85%D8%A9%20%D8%A5%D8%B9%D9%84%D8%A7%D9%86%D8%A7%D8%AA%20Social%20Media" target="_blank" class="btn">💬 استفسر مباشرة</a>
+</section>
+</main>
+<footer>
+<div class="footer-grid">
+<div class="footer-column">
+<h4>الخدمات</h4>
+<ul>
+<li><a href="/arabsad/services/google-ads.html" target="_blank">Google Ads</a></li>
+<li><a href="/arabsad/services/social-media-ads.html" target="_blank">إعلانات السوشيال ميديا</a></li>
+<li><a href="/arabsad/services/seo.html" target="_blank">SEO</a></li>
+<li><a href="/arabsad/services/ecommerce.html" target="_blank">E-commerce</a></li>
+<li><a href="/arabsad/services/website-design.html" target="_blank">تصميم المواقع</a></li>
+</ul>
+</div>
+<div class="footer-column">
+<h4>اتصل بنا</h4>
+<ul>
+<li><a href="tel:+201110760081">☎ +201110760081</a></li>
+<li><a href="https://wa.me/201110760081" target="_blank">💬 WhatsApp</a></li>
+<li><a href="mailto:info@arabsad.com">📧 البريد الإلكتروني</a></li>
+</ul>
+</div>
+</div>
+<div class="footer-bottom">
+<p>&copy; 2025 مؤسسة إعلانات العرب</p>
+</div>
+</footer>
 </body>
 </html>
