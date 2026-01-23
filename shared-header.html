@@ -28,7 +28,8 @@
         top: 44px;
         z-index: 9999;
         backdrop-filter: blur(10px);
-        border-bottom: 3px solid #f6b93b;
+        border-bottom: 1px solid rgba(246, 185, 59, 0.2);
+        box-shadow: 0 4px 30px rgba(0,0,0,0.1);
     }
 
     .header-container {
@@ -59,32 +60,27 @@
     }
 
     .nav-menu {
-        display: none;
-        width: 100%;
-        flex-direction: column;
-        background: rgba(15, 32, 39, 0.98);
-        padding: 15px;
-        border-radius: 10px;
-        margin-top: 15px;
-        gap: 10px;
+        display: flex;
         list-style: none;
+        gap: 5px;
+        margin: 0;
+        padding: 0;
     }
 
-    .nav-menu.active { display: flex; }
-    .nav-item { width: 100%; position: relative; }
+    .nav-item { position: relative; }
 
     .nav-link {
         color: #fff;
         text-decoration: none;
         font-weight: 600;
         padding: 12px;
-        width: 100%;
         border-radius: 8px;
         display: flex;
         align-items: center;
         gap: 6px;
         transition: all 0.3s;
         font-size: 0.95rem;
+        white-space: nowrap;
     }
 
     .nav-link:hover {
@@ -107,20 +103,27 @@
     }
 
     .dropdown-menu {
-        position: static;
-        opacity: 1;
-        visibility: visible;
-        transform: none;
-        box-shadow: none;
-        border: 1px solid rgba(255,255,255,0.1);
-        background: rgba(0,0,0,0.2);
-        margin-top: 5px;
-        display: none;
-        max-height: none;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        background: rgba(15, 32, 39, 0.98);
+        min-width: 260px;
+        box-shadow: 0 10px 40px rgba(0,0,0,0.4);
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(15px);
+        display: block;
+        border-top: 3px solid #f6b93b;
+        z-index: 10001;
+        margin-top: 15px;
+        border-radius: 0 0 8px 8px;
+        transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
     }
 
-    .nav-item.active .dropdown-menu {
-        display: block;
+    .nav-item:hover .dropdown-menu {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
     }
 
     .dropdown-menu::-webkit-scrollbar {
@@ -246,8 +249,10 @@
                 </div>
             </a>
             
-            <button class="mobile-toggle" onclick="toggleMobileNav()">
-                <i class="fas fa-bars"></i>
+            <button class="mobile-toggle" id="mobileToggle" onclick="toggleMobileNav()" aria-label="القائمة">
+                <span></span>
+                <span></span>
+                <span></span>
             </button>
             
             <ul class="nav-menu" id="navMenu">
@@ -466,7 +471,15 @@
 <script>
     function toggleMobileNav() {
         const navMenu = document.getElementById('navMenu');
+        const toggleBtn = document.getElementById('mobileToggle');
+        const overlay = document.getElementById('menuOverlay');
+        
         navMenu.classList.toggle('active');
+        toggleBtn.classList.toggle('active');
+        overlay.classList.toggle('active');
+        
+        // Prevent body scroll when menu is open
+        document.body.style.overflow = navMenu.classList.contains('active') ? 'hidden' : '';
     }
     
     // Mobile Dropdown Toggle
