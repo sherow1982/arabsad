@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مؤسسة إعلانات العرب - الوكالة الرقمية الأولى</title>
+    <meta name="description" content="وكالة تسويق رقمي احترافية - Google Ads, SEO, إعلانات سوشيال، متاجر إلكترونية">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "مؤسسة إعلانات العرب",
+      "image": "https://sherow1982.github.io/arabsad/og_image_arabsad.png",
+      "description": "وكالة تسويق رقمي",
+      "areaServed": ["EG", "SA", "AE", "KW", "QA"],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "الخدمات",
+        "itemListElement": [
+          {"@type": "Offer", "name": "إعلانات Google Ads", "url": "https://sherow1982.github.io/arabsad/services/google-ads.html"},
+          {"@type": "Offer", "name": "إعلانات السوشيال ميديا", "url": "https://sherow1982.github.io/arabsad/services/social-media-ads.html"},
+          {"@type": "Offer", "name": "SEO", "url": "https://sherow1982.github.io/arabsad/services/seo.html"},
+          {"@type": "Offer", "name": "متاجر إلكترونية", "url": "https://sherow1982.github.io/arabsad/services/ecommerce.html"},
+          {"@type": "Offer", "name": "تصميم مواقع", "url": "https://sherow1982.github.io/arabsad/services/website-design.html"},
+          {"@type": "Offer", "name": "إدارة سوشيال ميديا", "url": "https://sherow1982.github.io/arabsad/services/social-management.html"}
+        ]
+      }
+    }
+    </script>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        :root {
+            --primary: #FFB800;
+            --primary-dark: #FF9500;
+            --dark-bg: #0a0e27;
+            --dark-secondary: #1a1f3a;
+            --text-light: #e8edf5;
+            --text-muted: #a8b3c1;
+            --accent: #00d4aa;
+        }
+        html, body { font-family: 'Segoe UI', sans-serif; background: var(--dark-bg); color: var(--text-light); line-height: 1.6; }
+        header { position: fixed; top: 0; width: 100%; z-index: 1000; background: rgba(10, 14, 39, 0.95); padding: 1.2rem 2rem; border-bottom: 1px solid rgba(255, 184, 0, 0.1); }
+        .header-wrapper { max-width: 1400px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; gap: 2rem; }
+        .logo { font-size: 1.8rem; font-weight: 800; background: linear-gradient(135deg, var(--primary), var(--accent)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; text-decoration: none; }
+        nav { display: flex; gap: 3rem; flex: 1; justify-content: center; }
+        nav a { color: var(--text-light); text-decoration: none; font-weight: 500; transition: color 0.3s ease; }
+        nav a:hover { color: var(--primary); }
+        .cta-header { background: linear-gradient(135deg, var(--primary), var(--primary-dark)); color: #000; padding: 0.8rem 1.8rem; border-radius: 50px; text-decoration: none; font-weight: 600; }
+        main { margin-top: 80px; }
+        .hero { padding: 5rem 2rem; background: linear-gradient(135deg, rgba(255, 184, 0, 0.05), rgba(0, 212, 170, 0.03)); text-align: center; }
+        .hero h1 { font-size: clamp(2.5rem, 8vw, 4rem); margin-bottom: 1.5rem; background: linear-gradient(135deg, var(--primary), var(--accent)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .hero p { font-size: 1.2rem; color: var(--text-muted); max-width: 700px; margin: 0 auto 2rem; }
+        .hero-buttons { display: flex; gap: 1.5rem; justify-content: center; flex-wrap: wrap; margin-bottom: 3rem; }
+        .btn { padding: 1rem 2.5rem; background: linear-gradient(135deg, var(--primary), var(--primary-dark)); color: #000; text-decoration: none; border-radius: 50px; font-weight: 600; transition: all 0.3s ease; border: none; cursor: pointer; }
+        .btn:hover { transform: translateY(-3px); }
+        .btn-secondary { background: transparent; color: var(--primary); border: 2px solid var(--primary); }
+        .btn-secondary:hover { background: rgba(255, 184, 0, 0.1); }
+        .services-section { padding: 6rem 2rem; max-width: 1400px; margin: 0 auto; }
+        .section-title { font-size: clamp(2rem, 6vw, 3.5rem); font-weight: 900; margin-bottom: 3rem; text-align: center; background: linear-gradient(135deg, var(--primary), var(--accent)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; }
+        .service-btn { background: linear-gradient(135deg, rgba(255, 184, 0, 0.15), rgba(0, 212, 170, 0.08)); border: 2px solid rgba(255, 184, 0, 0.3); border-radius: 20px; padding: 2rem 1.5rem; text-decoration: none; color: inherit; transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1); display: flex; flex-direction: column; align-items: center; text-align: center; cursor: pointer; }
+        .service-btn:hover { background: linear-gradient(135deg, rgba(255, 184, 0, 0.25), rgba(0, 212, 170, 0.15)); border-color: rgba(255, 184, 0, 0.6); transform: translateY(-15px); box-shadow: 0 20px 60px rgba(255, 184, 0, 0.2); }
+        .service-icon { font-size: 3rem; margin-bottom: 1rem; transition: transform 0.4s ease; }
+        .service-btn:hover .service-icon { transform: scale(1.2) rotate(-5deg); }
+        .service-name { font-size: 1.3rem; font-weight: 700; margin-bottom: 0.5rem; color: var(--primary); }
+        .service-desc { font-size: 0.9rem; color: var(--text-muted); }
+        footer { background: var(--dark-secondary); padding: 4rem 2rem 2rem; margin-top: 6rem; border-top: 2px solid rgba(255, 184, 0, 0.1); }
+        .footer-grid { max-width: 1400px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 3rem; margin-bottom: 3rem; }
+        .footer-column h4 { color: var(--primary); margin-bottom: 1rem; }
+        .footer-column ul { list-style: none; }
+        .footer-column a { color: var(--text-muted); text-decoration: none; }
+        .footer-column a:hover { color: var(--primary); }
+        .footer-bottom { border-top: 1px solid rgba(255, 184, 0, 0.1); padding-top: 2rem; text-align: center; color: var(--text-muted); font-size: 0.85rem; }
+        @media (max-width: 768px) { header { padding: 1rem; } nav { display: none; } .hero { padding: 3rem 1rem; } .hero-buttons { flex-direction: column; } .services-grid { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-wrapper">
+            <a href="/arabsad/" class="logo">🌐 إعلانات العرب</a>
+            <nav>
+                <a href="#services">الخدمات</a>
+                <a href="/arabsad/about.html">عنا</a>
+                <a href="/arabsad/faq.html">FAQ</a>
+            </nav>
+            <a href="https://wa.me/201110760081" target="_blank" class="cta-header">💬 اتصل بنا</a>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1>🚀 حول عملك لنجاح رقمي</h1>
+            <p>خدمات تسويق رقمي مبتكرة لزيادة مبيعاتك بسرعة</p>
+            <div class="hero-buttons">
+                <a href="https://wa.me/201110760081" target="_blank" class="btn">💬 ابدأ الآن</a>
+                <a href="#services" class="btn btn-secondary">📙 استكشف الخدمات</a>
+            </div>
+        </section>
+
+        <section class="services-section" id="services">
+            <h2 class="section-title">📋 الخدمات</h2>
+            <div class="services-grid">
+                <a href="/arabsad/services/google-ads.html" target="_blank" class="service-btn">
+                    <div class="service-icon">📊</div>
+                    <div class="service-name">إعلانات Google</div>
+                    <div class="service-desc">حملات احترافية</div>
+                </a>
+                <a href="/arabsad/services/social-media-ads.html" target="_blank" class="service-btn">
+                    <div class="service-icon">📱</div>
+                    <div class="service-name">إعلانات Social</div>
+                    <div class="service-desc">Facebook, Instagram, TikTok</div>
+                </a>
+                <a href="/arabsad/services/seo.html" target="_blank" class="service-btn">
+                    <div class="service-icon">🔍</div>
+                    <div class="service-name">SEO</div>
+                    <div class="service-desc">تحسين البحث</div>
+                </a>
+                <a href="/arabsad/services/ecommerce.html" target="_blank" class="service-btn">
+                    <div class="service-icon">🛒</div>
+                    <div class="service-name">متاجر</div>
+                    <div class="service-desc">متاجر إلكترونية</div>
+                </a>
+                <a href="/arabsad/services/website-design.html" target="_blank" class="service-btn">
+                    <div class="service-icon">💻</div>
+                    <div class="service-name">تصميم</div>
+                    <div class="service-desc">تصميم مواقع</div>
+                </a>
+                <a href="/arabsad/services/social-management.html" target="_blank" class="service-btn">
+                    <div class="service-icon">👥</div>
+                    <div class="service-name">إدارة</div>
+                    <div class="service-desc">سوشيال ميديا</div>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-column">
+                <h4>روابط</h4>
+                <ul>
+                    <li><a href="/arabsad/">الرئيسية</a></li>
+                    <li><a href="/arabsad/about.html">عنا</a></li>
+                    <li><a href="/arabsad/faq.html">FAQ</a></li>
+                    <li><a href="/arabsad/legal.html">الشروط</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>الخدمات</h4>
+                <ul>
+                    <li><a href="/arabsad/services/google-ads.html" target="_blank">Google Ads</a></li>
+                    <li><a href="/arabsad/services/social-media-ads.html" target="_blank">Social Media</a></li>
+                    <li><a href="/arabsad/services/seo.html" target="_blank">SEO</a></li>
+                    <li><a href="/arabsad/services/ecommerce.html" target="_blank">E-commerce</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>اتصل بنا</h4>
+                <ul>
+                    <li><a href="tel:+201110760081">☎ +201110760081</a></li>
+                    <li><a href="https://wa.me/201110760081" target="_blank">💬 WhatsApp</a></li>
+                    <li><a href="mailto:info@arabsad.com">📧 Email</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 إعلانات العرب - جميع الحقوق محفوظة</p>
+        </div>
+    </footer>
+    <script src="/arabsad/js/bfcache-fix.js"></script>
+</body>
+</html>
