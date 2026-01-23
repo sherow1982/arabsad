@@ -254,32 +254,6 @@
             margin-top: 15px;
         }
 
-
-        .whatsapp-float {
-            position: fixed;
-            bottom: 30px;
-            left: 30px;
-            z-index: 1000;
-        }
-
-        .whatsapp-float a {
-            background: #25D366;
-            color: #fff;
-            padding: 16px 30px;
-            border-radius: 50px;
-            text-decoration: none;
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            font-weight: 700;
-            box-shadow: 0 10px 30px rgba(37, 211, 102, 0.3);
-            transition: 0.3s;
-        }
-
-        .whatsapp-float a:hover {
-            transform: translateY(-5px);
-        }
-
         /* Demos Section Styles */
         .demos-grid {
             display: grid;
@@ -711,13 +685,6 @@
 
     <div data-include="shared-footer.html"></div>
 
-    <div class="whatsapp-float">
-        <a href="#" id="whatsappFloat" target="_blank">
-            <span>💬</span>
-            <span>استشارة تجارة</span>
-        </a>
-    </div>
-
     <script>
         // Load Shared Header/Footer
         document.addEventListener('DOMContentLoaded', function() {
@@ -739,7 +706,7 @@
         const encodedMessage = encodeURIComponent(whatsappMessage);
         const whatsappUrl = `https://wa.me/${phone}?text=${encodedMessage}`;
 
-        document.querySelectorAll('#whatsappFloat, #finalWa, .cta-nav-wa, .btn-package-wa').forEach(btn => {
+        document.querySelectorAll('#finalWa, .cta-nav-wa, .btn-package-wa').forEach(btn => {
             btn.href = whatsappUrl;
         });
 

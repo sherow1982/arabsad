@@ -289,32 +289,6 @@
             margin-bottom: 15px;
         }
 
-        .whatsapp-float {
-            position: fixed;
-            bottom: 20px;
-            left: 20px;
-            z-index: 1000;
-        }
-
-        .whatsapp-float a {
-            background: #25D366;
-            color: #fff;
-            padding: 15px 25px;
-            border-radius: 50px;
-            text-decoration: none;
-            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            transition: all 0.3s;
-            font-weight: 600;
-        }
-
-        .whatsapp-float a:hover {
-            transform: scale(1.05);
-            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.6);
-        }
-
         ul {
             list-style: none;
         }
@@ -813,14 +787,6 @@
 
     <div data-include="shared-footer.html"></div>
 
-    <!-- Floating WhatsApp Button -->
-    <div class="whatsapp-float">
-        <a href="#" id="whatsappFloat" target="_blank">
-            <span style="font-size: 1.5em;">💬</span>
-            <span>تحدث معنا</span>
-        </a>
-    </div>
-
     <!-- Dynamic WhatsApp Script -->
     <script>
         // Load Shared Header/Footer
@@ -849,7 +815,7 @@
         const whatsappUrl = `https://wa.me/${phone}?text=${encodedMessage}`;
 
         // Update all CTA buttons
-        document.querySelectorAll('.cta-wa-btn, #whatsappFloat, #heroBtn, #finalCta').forEach(btn => {
+        document.querySelectorAll('.cta-wa-btn, #heroBtn, #finalCta').forEach(btn => {
             btn.href = whatsappUrl;
         });
     </script>
