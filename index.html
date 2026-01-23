@@ -327,16 +327,17 @@
 
         .services-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
             gap: 2.5rem;
+            margin-bottom: 4rem;
         }
 
         .service-card {
-            background: rgba(255, 184, 0, 0.05);
-            border: 1px solid rgba(255, 184, 0, 0.2);
-            border-radius: 15px;
+            background: linear-gradient(135deg, rgba(255, 184, 0, 0.08), rgba(0, 212, 170, 0.05));
+            border: 2px solid rgba(255, 184, 0, 0.2);
+            border-radius: 20px;
             padding: 2.5rem;
-            transition: all 0.3s ease;
+            transition: all 0.4s cubic-bezier(0.23, 1, 0.320, 1);
             position: relative;
             overflow: hidden;
             cursor: pointer;
@@ -344,6 +345,8 @@
             color: inherit;
             display: flex;
             flex-direction: column;
+            height: 100%;
+            min-height: 400px;
         }
 
         .service-card::before {
@@ -352,32 +355,57 @@
             top: 0;
             left: 0;
             right: 0;
-            height: 3px;
+            height: 4px;
             background: linear-gradient(90deg, var(--primary), var(--accent));
             transform: scaleX(0);
             transform-origin: left;
-            transition: transform 0.3s ease;
+            transition: transform 0.4s ease;
+        }
+
+        .service-card::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at right top, rgba(255, 184, 0, 0.1), transparent 70%);
+            opacity: 0;
+            transition: opacity 0.4s ease;
+            pointer-events: none;
         }
 
         .service-card:hover::before {
             transform: scaleX(1);
         }
 
+        .service-card:hover::after {
+            opacity: 1;
+        }
+
         .service-card:hover {
-            background: rgba(255, 184, 0, 0.1);
-            border-color: rgba(255, 184, 0, 0.4);
-            transform: translateY(-8px);
+            background: linear-gradient(135deg, rgba(255, 184, 0, 0.15), rgba(0, 212, 170, 0.1));
+            border-color: rgba(255, 184, 0, 0.5);
+            transform: translateY(-15px);
+            box-shadow: 0 20px 60px rgba(255, 184, 0, 0.2);
         }
 
         .service-icon {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+            display: inline-block;
+            transition: transform 0.4s ease;
+        }
+
+        .service-card:hover .service-icon {
+            transform: scale(1.2) rotate(5deg);
         }
 
         .service-card h3 {
-            font-size: 1.4rem;
+            font-size: 1.5rem;
             margin-bottom: 1rem;
             color: var(--text-light);
+            font-weight: 700;
         }
 
         .service-card p {
@@ -385,24 +413,51 @@
             line-height: 1.8;
             font-size: 0.95rem;
             flex-grow: 1;
+            margin-bottom: 1.5rem;
+        }
+
+        .service-card-features {
+            list-style: none;
+            margin: 1.5rem 0;
+            flex-grow: 1;
+        }
+
+        .service-card-features li {
+            padding: 0.6rem 0;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            padding-right: 1.5rem;
+            position: relative;
+        }
+
+        .service-card-features li::before {
+            content: '✓';
+            position: absolute;
+            right: 0;
+            color: var(--accent);
+            font-weight: bold;
         }
 
         .service-card-arrow {
-            display: inline-block;
-            margin-top: 1rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
             color: var(--primary);
-            font-weight: 600;
-            transition: transform 0.3s ease;
+            font-weight: 700;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            margin-top: auto;
         }
 
         .service-card:hover .service-card-arrow {
             transform: translateX(-8px);
+            color: var(--accent);
         }
 
         /* Footer */
         footer {
             background: var(--dark-secondary);
-            border-top: 1px solid rgba(255, 184, 0, 0.1);
+            border-top: 2px solid rgba(255, 184, 0, 0.1);
             padding: 4rem 2rem 2rem;
             margin-top: 6rem;
         }
@@ -460,6 +515,7 @@
             justify-content: center;
             color: var(--primary);
             transition: all 0.3s ease;
+            font-size: 1.1rem;
         }
 
         .social-links a:hover {
@@ -521,6 +577,10 @@
 
             .services-grid {
                 grid-template-columns: 1fr;
+            }
+
+            .service-card {
+                min-height: auto;
             }
 
             .footer-grid {
@@ -598,58 +658,88 @@
             <p class="section-subtitle">حلول تسويقية متكاملة تضمن نمو عملك بشكل مستدام</p>
 
             <div class="services-grid">
-                <a href="/arabsad/services/ecommerce.html" class="service-card">
-                    <div class="service-icon">📐</div>
-                    <h3>متاجر إلكترونية</h3>
-                    <p>الحصول على متجر احترافي جاهز للبيع مع تكاملات الدفع والشحن مباشرة</p>
-                    <span class="service-card-arrow">اعرض النماذج ←</span>
-                </a>
-                
-                <a href="/arabsad/services/" class="service-card">
-                    <div class="service-icon">🔍</div>
-                    <h3>تحسين محركات البحث</h3>
-                    <p>استراتيجيات SEO متقدمة لتصدر نتائج البحث والحصول على زيارات عضوية</p>
-                    <span class="service-card-arrow">اعرف المزيد ←</span>
-                </a>
-                
-                <a href="/arabsad/services/" class="service-card">
-                    <div class="service-icon">📄</div>
+                <a href="/arabsad/services/google-ads.html" class="service-card">
+                    <div class="service-icon">📊</div>
                     <h3>إعلانات Google Ads</h3>
-                    <p>حملات إعلانية موجهة عبر محرك البحث الأقوى مع ضمان أفضل ROI</p>
+                    <p>حملات احترافية على محرك البحث الأقوى عالمياً لزيادة مبيعاتك بشكل مباشر وفوري</p>
+                    <ul class="service-card-features">
+                        <li>إعلانات البحث والشبكة الإعلانية</li>
+                        <li>استهداف دقيق حسب الكلمات المفتاحية</li>
+                        <li>تحسين ROI وتقليل التكلفة</li>
+                    </ul>
                     <span class="service-card-arrow">ابدأ الآن ←</span>
                 </a>
                 
-                <a href="/arabsad/services/" class="service-card">
+                <a href="/arabsad/services/social-media-ads.html" class="service-card">
                     <div class="service-icon">📱</div>
+                    <h3>إعلانات السوشيال ميديا</h3>
+                    <p>إعلانات ممولة على فيسبوك وإنستجرام وسناب وتيك توك لجمهورك المستهدف</p>
+                    <ul class="service-card-features">
+                        <li>حملات Meta Ads متقدمة</li>
+                        <li>إعلانات TikTok و Snapchat</li>
+                        <li>محتوى إبداعي وتصاميم احترافية</li>
+                    </ul>
+                    <span class="service-card-arrow">اعرف المزيد ←</span>
+                </a>
+                
+                <a href="/arabsad/services/seo.html" class="service-card">
+                    <div class="service-icon">🔍</div>
+                    <h3>تحسين SEO</h3>
+                    <p>رفع موقعك في نتائج البحث الأولى لزيادة الزيارات المجانية والعضوية</p>
+                    <ul class="service-card-features">
+                        <li>تحليل وتدقيق SEO شامل</li>
+                        <li>بحث الكلمات المفتاحية المربحة</li>
+                        <li>بناء روابط خارجية قوية</li>
+                    </ul>
+                    <span class="service-card-arrow">اعرف المزيد ←</span>
+                </a>
+                
+                <a href="/arabsad/services/ecommerce.html" class="service-card">
+                    <div class="service-icon">🛒</div>
+                    <h3>المتاجر الإلكترونية</h3>
+                    <p>متاجر إلكترونية عصرية وجاهزة للتسويق والمبيعات في الخليج ومصر والعالم</p>
+                    <ul class="service-card-features">
+                        <li>تصميم متاجر حديثة متجاوبة</li>
+                        <li>لوحة تحكم سهلة الإدارة</li>
+                        <li>ربط بوابات الدفع والشحن</li>
+                    </ul>
+                    <span class="service-card-arrow">تصفح النماذج ←</span>
+                </a>
+                
+                <a href="/arabsad/services/website-design.html" class="service-card">
+                    <div class="service-icon">💻</div>
+                    <h3>تصميم المواقع</h3>
+                    <p>مواقع ويب احترافية سريعة ومتجاوبة بتصاميم عربية جذابة وفعالة</p>
+                    <ul class="service-card-features">
+                        <li>تصميم متجاوب Responsive</li>
+                        <li>سرعة تحميل فائقة</li>
+                        <li>محسنة لمحركات البحث SEO</li>
+                    </ul>
+                    <span class="service-card-arrow">شاهد أمثلة ←</span>
+                </a>
+                
+                <a href="/arabsad/services/social-management.html" class="service-card">
+                    <div class="service-icon">👥</div>
                     <h3>إدارة السوشيال ميديا</h3>
-                    <p>إعلانات Facebook, Instagram, TikTok وSnapchat بتصميم احترافي وموجه للجمهور</p>
-                    <span class="service-card-arrow">البداية ←</span>
-                </a>
-                
-                <a href="/arabsad/services/" class="service-card">
-                    <div class="service-icon">🖥️</div>
-                    <h3>تصميم المواقع الرقمية</h3>
-                    <p>مواقع حديثة وسريعة الأداء مع تصميم متجاوب ومتوافق مع جميع الأجهزة</p>
-                    <span class="service-card-arrow">الأمثلة ←</span>
-                </a>
-                
-                <a href="/arabsad/services/" class="service-card">
-                    <div class="service-icon">📋</div>
-                    <h3>تحليل البيانات</h3>
-                    <p>الثقرارير مفصلة ومراقبة الأداء لاتخاذ قرارات واعية بختم مخطط</p>
-                    <span class="service-card-arrow">البداية ←</span>
+                    <p>إدارة محترفة لحسابات التواصل لزيادة المتابعين والتفاعل وبناء مجتمع قوي</p>
+                    <ul class="service-card-features">
+                        <li>محتوى إبداعي وجذاب يومي</li>
+                        <li>إدارة التفاعلات والرسائل</li>
+                        <li>تقارير أداء شهرية مفصلة</li>
+                    </ul>
+                    <span class="service-card-arrow">ابدأ الآن ←</span>
                 </a>
             </div>
         </section>
     </main>
 
     <!-- Footer -->
-    <footer>
+    <footer id="contact">
         <div class="footer-content">
             <div class="footer-grid">
                 <div class="footer-column">
                     <h4>🌐 عن الموقع</h4>
-                    <p style="color: var(--text-muted); margin-bottom: 1rem;">مؤسسة إعلانات العرب متخصصة في التسويق الرقمي وإدارة الحملات الإعلانية مع دعم مباشر 24/7</p>
+                    <p style="color: var(--text-muted); margin-bottom: 1rem;">مؤسسة إعلانات العرب متخصصة في التسويق الرقمي وإدارة الحملات الإعلانية مع دعم مباشر 24/7 في جميع أنحاء الخليج ومصر</p>
                     <div class="social-links">
                         <a href="https://facebook.com" target="_blank" title="Facebook">f</a>
                         <a href="https://instagram.com" target="_blank" title="Instagram">📷</a>
@@ -660,10 +750,12 @@
                 <div class="footer-column">
                     <h4>📋 الخدمات</h4>
                     <ul>
-                        <li><a href="/arabsad/services/ecommerce.html">متاجر إلكترونية</a></li>
-                        <li><a href="/arabsad/services/">إعلانات Google</a></li>
-                        <li><a href="/arabsad/services/">إدارة السوشيال</a></li>
-                        <li><a href="/arabsad/services/">تحسين محركات البحث</a></li>
+                        <li><a href="#services">إعلانات Google Ads</a></li>
+                        <li><a href="#services">إعلانات السوشيال ميديا</a></li>
+                        <li><a href="#services">تحسين SEO</a></li>
+                        <li><a href="#services">المتاجر الإلكترونية</a></li>
+                        <li><a href="#services">تصميم المواقع</a></li>
+                        <li><a href="#services">إدارة السوشيال</a></li>
                     </ul>
                 </div>
                 <div class="footer-column">
@@ -672,7 +764,8 @@
                         <li><a href="#home">من نحن</a></li>
                         <li><a href="#services">لماذا نحن</a></li>
                         <li><a href="#contact">تواصل معنا</a></li>
-                        <li><a href="#">الصفحات القانونية</a></li>
+                        <li><a href="#">الأسئلة الشائعة</a></li>
+                        <li><a href="#">الشروط والسياسات</a></li>
                     </ul>
                 </div>
                 <div class="footer-column">
@@ -680,14 +773,15 @@
                     <ul>
                         <li><a href="tel:+201110760081">☎️ +201110760081</a></li>
                         <li><a href="https://wa.me/201110760081" target="_blank">💬 واتساب</a></li>
-                        <li><a href="mailto:info@arabsad.com">📧 البريد الإلكتروني</a></li>
+                        <li><a href="mailto:info@arabsad.com">📧 info@arabsad.com</a></li>
+                        <li style="margin-top: 1rem; padding-top: 1rem; border-top: 1px solid rgba(255, 184, 0, 0.1);"><strong>ساعات العمل:</strong><br>السبت - الخميس<br>من 9 صباحاً إلى 6 مساءً</li>
                     </ul>
                 </div>
             </div>
 
             <div class="footer-bottom">
                 <p>&copy; 2025 مؤسسة إعلانات العرب - جميع الحقوق محفوظة</p>
-                <p style="font-size: 0.85rem; margin-top: 0.5rem;">وكالة تسويق رقمي متخصصة في الخليج ومصر</p>
+                <p style="font-size: 0.85rem; margin-top: 0.5rem;">وكالة تسويق رقمي متخصصة في الخليج ومصر والعالم العربي</p>
                 <div class="legal-links">
                     <a href="#">سياسة الخصوصية</a>
                     <a href="#">شروط الاستخدام</a>
@@ -705,6 +799,28 @@
                     document.querySelector(link.getAttribute('href'))?.scrollIntoView({behavior: 'smooth'});
                 }
             });
+        });
+
+        // Add scroll animation to service cards
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.service-card').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(30px)';
+            el.style.transition = 'all 0.6s ease';
+            observer.observe(el);
         });
     </script>
 </body>
