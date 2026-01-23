@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="خدمات التسويق الرقمي الشاملة - إعلانات جوجل وسوشيال ميديا وSEO وتصميم مواقع ومتاجر">
+    <meta name="description" content="خدمات التسويق الرقمي الشاملة - إعلانات جوجل ووسائل التواصل و SEO وتصميم مواقع ومتاجر">
     <title>خدماتنا الرئيسية - التسويق الرقمي الاحترافي | ArabSad</title>
     <link rel="canonical" href="https://sherow1982.github.io/arabsad/services/">
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "ProfessionalService",
-      "name": "خدمات التسويق الرقمي - إعلانات العرب",
+      "name": "خدمات التسويق الرقمي",
       "description": "وكالة متخصصة في التسويق الرقمي",
       "areaServed": ["EG", "SA", "AE", "KW", "QA", "OM"]
     }
@@ -55,12 +55,16 @@
         .service-features { list-style: none; text-align: right; margin: 1rem 0; font-size: 0.85rem; color: var(--text-muted); }
         .service-features li { padding: 0.4rem 0; padding-right: 1.2rem; position: relative; }
         .service-features li::before { content: '✓'; position: absolute; right: 0; color: var(--accent); font-weight: bold; }
-        .stats-section { background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%); color: #000; padding: 4rem 2rem; text-align: center; }
-        .stats-section h2 { font-size: 2rem; margin-bottom: 3rem; font-weight: 900; }
-        .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; max-width: 1200px; margin: 0 auto; }
-        .stat-item { padding: 2rem; }
-        .stat-number { font-size: 2.8rem; font-weight: 900; margin-bottom: 0.5rem; }
-        .stat-label { font-size: 1rem; opacity: 0.9; }
+        /* FAQ Section */
+        .faq-section { padding: 6rem 2rem; max-width: 1200px; margin: 0 auto; }
+        .faq-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(500px, 1fr)); gap: 2rem; }
+        .faq-item { background: linear-gradient(135deg, rgba(255, 184, 0, 0.1), rgba(0, 212, 170, 0.05)); border: 1px solid rgba(255, 184, 0, 0.2); border-radius: 15px; padding: 1.8rem; cursor: pointer; transition: all 0.3s ease; }
+        .faq-item:hover { background: linear-gradient(135deg, rgba(255, 184, 0, 0.15), rgba(0, 212, 170, 0.1)); border-color: rgba(255, 184, 0, 0.4); transform: translateY(-5px); box-shadow: 0 10px 30px rgba(255, 184, 0, 0.1); }
+        .faq-question { font-size: 1.1rem; font-weight: 600; color: var(--primary); margin-bottom: 0.8rem; display: flex; align-items: center; gap: 0.8rem; }
+        .faq-question::before { content: '▶'; font-size: 0.8rem; transition: transform 0.3s ease; }
+        .faq-item.active .faq-question::before { transform: rotate(90deg); }
+        .faq-answer { color: var(--text-muted); font-size: 0.95rem; line-height: 1.8; max-height: 0; overflow: hidden; transition: max-height 0.3s ease; }
+        .faq-item.active .faq-answer { max-height: 300px; }
         footer { background: var(--dark-secondary); border-top: 2px solid rgba(255, 184, 0, 0.1); padding: 4rem 2rem 2rem; }
         .footer-content { max-width: 1400px; margin: 0 auto; }
         .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 3rem; margin-bottom: 3rem; }
@@ -70,7 +74,7 @@
         .footer-column a { color: var(--text-muted); text-decoration: none; transition: color 0.3s ease; }
         .footer-column a:hover { color: var(--primary); }
         .footer-bottom { border-top: 1px solid rgba(255, 184, 0, 0.1); padding-top: 2rem; text-align: center; color: var(--text-muted); }
-        @media (max-width: 768px) { header { padding: 1rem; } .header-wrapper { gap: 1rem; } nav { display: none; } main { margin-top: 70px; } .hero { padding: 2rem 1rem; } .services-section { padding: 3rem 1rem; } .services-grid { grid-template-columns: 1fr; } .service-btn { min-height: auto; } }
+        @media (max-width: 768px) { header { padding: 1rem; } nav { display: none; } .services-grid { grid-template-columns: 1fr; } .faq-grid { grid-template-columns: 1fr; } }
     </style>
 </head>
 <body>
@@ -89,32 +93,8 @@
     <main>
         <section class="hero">
             <div class="container">
-                <h1>🚀 كل خدماتنا في التسويق الرقمي</h1>
+                <h1>🚀 مجموعة خدماتنا الرئيسية</h1>
                 <p>نحن شريكك الموثوق في تحقيق النجاح الرقمي ومضاعفة أرباحك</p>
-            </div>
-        </section>
-
-        <section class="stats-section">
-            <div class="container">
-                <h2>أرقامنا تتحدث عن نفسها</h2>
-                <div class="stats-grid">
-                    <div class="stat-item">
-                        <div class="stat-number">500+</div>
-                        <div class="stat-label">عميل راضٍ</div>
-                    </div>
-                    <div class="stat-item">
-                        <div class="stat-number">1200+</div>
-                        <div class="stat-label">حملة ناجحة</div>
-                    </div>
-                    <div class="stat-item">
-                        <div class="stat-number">350%</div>
-                        <div class="stat-label">متوسط زيادة المبيعات</div>
-                    </div>
-                    <div class="stat-item">
-                        <div class="stat-number">8+</div>
-                        <div class="stat-label">سنوات خبرة</div>
-                    </div>
-                </div>
             </div>
         </section>
 
@@ -130,9 +110,9 @@
                             <h3 class="service-name">إعلانات Google Ads</h3>
                             <p class="service-desc">حملات احترافية على محرك البحث</p>
                             <ul class="service-features">
-                                <li>Search Ads</li>
-                                <li>Display Network</li>
-                                <li>تقارير دقيقة</li>
+                                <li>إعلانات البحث</li>
+                                <li>الشبكة الإعلانية</li>
+                                <li>استهداف دقيق</li>
                             </ul>
                         </div>
                     </a>
@@ -140,12 +120,12 @@
                     <a href="/arabsad/services/social-media-ads.html" target="_blank" class="service-btn">
                         <div>
                             <div class="service-icon">📱</div>
-                            <h3 class="service-name">إعلانات السوشيال ميديا</h3>
-                            <p class="service-desc">إعلانات ممولة احترافية على جميع المنصات</p>
+                            <h3 class="service-name">إعلانات وسائل التواصل</h3>
+                            <p class="service-desc">إعلانات ممولة على المنصات</p>
                             <ul class="service-features">
                                 <li>Facebook & Instagram</li>
                                 <li>TikTok & Snapchat</li>
-                                <li>Retargeting</li>
+                                <li>محتوى إبداعي</li>
                             </ul>
                         </div>
                     </a>
@@ -153,12 +133,12 @@
                     <a href="/arabsad/services/seo.html" target="_blank" class="service-btn">
                         <div>
                             <div class="service-icon">🔍</div>
-                            <h3 class="service-name">تحسين SEO</h3>
-                            <p class="service-desc">رفع موقعك في نتائج البحث الأولى</p>
+                            <h3 class="service-name">تحسين محركات البحث</h3>
+                            <p class="service-desc">رفع موقعك بالبحث</p>
                             <ul class="service-features">
-                                <li>On-Page SEO</li>
-                                <li>Backlinks قوية</li>
-                                <li>تحليل شامل</li>
+                                <li>تحليل SEO</li>
+                                <li>بحث كلمات</li>
+                                <li>بناء روابط</li>
                             </ul>
                         </div>
                     </a>
@@ -167,10 +147,10 @@
                         <div>
                             <div class="service-icon">🛒</div>
                             <h3 class="service-name">المتاجر الإلكترونية</h3>
-                            <p class="service-desc">متاجر حديثة ومتكاملة جاهزة للمبيعات</p>
+                            <p class="service-desc">متاجر حديثة ومتكاملة</p>
                             <ul class="service-features">
-                                <li>تصميم عصري</li>
-                                <li>نظام الطلبات</li>
+                                <li>تصميم حديث</li>
+                                <li>لوحة تحكم</li>
                                 <li>بوابات دفع</li>
                             </ul>
                         </div>
@@ -180,11 +160,11 @@
                         <div>
                             <div class="service-icon">💻</div>
                             <h3 class="service-name">تصميم المواقع</h3>
-                            <p class="service-desc">مواقع سريعة ومتجاوبة محسّنة للبحث</p>
+                            <p class="service-desc">مواقع سريعة ومتجاوبة</p>
                             <ul class="service-features">
                                 <li>Responsive Design</li>
-                                <li>سرعة فائقة</li>
-                                <li>محسّن للـ SEO</li>
+                                <li>سرعة تحميل</li>
+                                <li>SEO محسّنة</li>
                             </ul>
                         </div>
                     </a>
@@ -192,15 +172,50 @@
                     <a href="/arabsad/services/social-management.html" target="_blank" class="service-btn">
                         <div>
                             <div class="service-icon">👥</div>
-                            <h3 class="service-name">إدارة السوشيال ميديا</h3>
-                            <p class="service-desc">إدارة احترافية لحساباتك على التواصل</p>
+                            <h3 class="service-name">إدارة وسائل التواصل</h3>
+                            <p class="service-desc">إدارة احترافية لحساباتك</p>
                             <ul class="service-features">
                                 <li>محتوى إبداعي</li>
-                                <li>تفاعل مستمر</li>
-                                <li>نمو عضوي</li>
+                                <li>إدارة الرد</li>
+                                <li>تقارير أداء</li>
                             </ul>
                         </div>
                     </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="faq-section">
+            <div class="container">
+                <h2 class="section-title">❓ الأسئلة الشائعة</h2>
+                <p class="section-subtitle">إجابات على أكثر الاستفسارات عن الخدمات</p>
+
+                <div class="faq-grid">
+                    <div class="faq-item">
+                        <div class="faq-question">أية خدمة أبدأ بها أولاً؟</div>
+                        <div class="faq-answer">لا توجد إجابة موحدة! اختر الخدمة المناسبة لاحتياجاتك. معظم العملاء يبدأون بـ Google Ads أو SEO، ثم يضيفون خدمات أخرى لاحقاً.</div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">ماذا يجب أن أتوقع من النتائج؟</div>
+                        <div class="faq-answer">يتعتمد على الخدمة. إعلانات Google تظهر نتائج بسرعة، بينما SEO يحتاج إلى صبر ولكن النتائج أطول أمداً. سنوضح لك التوقعات في الباية.</div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">هل تحتاج إلى موقع أو متجر حلياً؟</div>
+                        <div class="faq-answer">البرامج رائعة هلل عمل بدون لا موقع بارديه. لكن موقع محترف يزيد حظوظك عبر الإنترنيت. نقدم خدمتنا لتصميم المواقع بأسعار منافسة.</div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">كم هو البخ، هل يناسب ميزانية الإعلانات؟</div>
+                        <div class="faq-answer">البخ يبدأ من مبلغ نازع جداً ويزيد حسب نطاق تنافسية الكلمات. لا ميزانية البخ الأقل مادياً للامتباع المجانية. تكلم معنا لنعدل البخ لميزانيتك.</div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">هل يمكن الضمان على النتائج؟</div>
+                        <div class="faq-answer">نعم، لكن ليس بمبلغ ثابت. نضمن أفضل نواج ببذل أقصى الجهود. إذا لم نحقق نتائج حسب المادة، سنقرر الحَل لمعالجة المشكلة بلا رسوم إضافية.</div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -222,9 +237,9 @@
                     <h4>الخدمات</h4>
                     <ul>
                         <li><a href="/arabsad/services/google-ads.html" target="_blank">Google Ads</a></li>
-                        <li><a href="/arabsad/services/social-media-ads.html" target="_blank">Social Media</a></li>
+                        <li><a href="/arabsad/services/social-media-ads.html" target="_blank">وسائل التواصل</a></li>
                         <li><a href="/arabsad/services/seo.html" target="_blank">SEO</a></li>
-                        <li><a href="/arabsad/services/ecommerce.html" target="_blank">E-commerce</a></li>
+                        <li><a href="/arabsad/services/ecommerce.html" target="_blank">متاجر</a></li>
                     </ul>
                 </div>
                 <div class="footer-column">
@@ -242,5 +257,13 @@
         </div>
     </footer>
     <script src="/arabsad/js/bfcache-fix.js"></script>
+    <script>
+        // FAQ Toggle
+        document.querySelectorAll('.faq-item').forEach(item => {
+            item.addEventListener('click', () => {
+                item.classList.toggle('active');
+            });
+        });
+    </script>
 </body>
 </html>
