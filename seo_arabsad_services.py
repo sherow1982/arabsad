@@ -9,6 +9,7 @@
 import sys
 import re
 import json
+import html
 from pathlib import Path
 from datetime import datetime
 
@@ -176,7 +177,6 @@ def extract_page_keywords(file_path: Path, title: str) -> list:
 # ================== Schema ==================
 
 def create_service_schema(title: str, image: str, url: str, description: str) -> str:
-    import json
     area_served = [{"@type": "Country", "name": country_data['arabic_name']} for country_data in GULF_COUNTRIES.values()]
     
     schema = {
@@ -199,7 +199,6 @@ def create_service_schema(title: str, image: str, url: str, description: str) ->
     return json.dumps(schema, ensure_ascii=False, indent=2)
 
 def create_article_schema(title: str, image: str, url: str, description: str, file_path: Path) -> str:
-    import json
     try:
         date_modified = datetime.fromtimestamp(file_path.stat().st_mtime).isoformat()
     except:
@@ -219,7 +218,6 @@ def create_article_schema(title: str, image: str, url: str, description: str, fi
     return json.dumps(schema, ensure_ascii=False, indent=2)
 
 def create_organization_schema() -> str:
-    import json
     schema = {
         "@context": "https://schema.org",
         "@type": "Organization",
@@ -231,7 +229,6 @@ def create_organization_schema() -> str:
     return json.dumps(schema, ensure_ascii=False, indent=2)
 
 def create_breadcrumb_schema(file_path: Path) -> str:
-    import json
     relative = file_path.relative_to(Path("."))
     parts = relative.parts
     breadcrumb_items = [{"@type": "ListItem", "position": 1, "name": "الرئيسية", "item": "https://sherow1982.github.io/arabsad"}]
@@ -251,8 +248,6 @@ def create_breadcrumb_schema(file_path: Path) -> str:
     return json.dumps(schema, ensure_ascii=False, indent=2)
 
 def create_meta_tags(title: str, image: str, url: str, description: str, keywords: list) -> str:
-    import html
-    
     if len(description) > 155:
         desc_short = description[:152] + "..."
     else:
@@ -383,6 +378,12 @@ def inject_seo(html: str, title: str, image: str, url: str, description: str, fi
         else:
             html = html + '</head>'
     
+    # تنظيف الوسوم القديمة لمنع التكرار
+    html = re.sub(r'<title[^>]*>.*?</title>', '', html, flags=re.DOTALL | re.IGNORECASE)
+    html = re.sub(r'<meta\s+(?:name|property)=["\'](?:description|keywords|robots|viewport|og:[^"\']+)["\'][^>]*>', '', html, flags=re.IGNORECASE)
+    html = re.sub(r'<link\s+rel=["\']canonical["\'][^>]*>', '', html, flags=re.IGNORECASE)
+    
+    # تنظيف السكيما القديمة
     html = re.sub(r'<script\s+type=["\']?application/ld\+json["\']?\s*>.*?</script>', '', html, flags=re.DOTALL | re.IGNORECASE)
     
     meta = create_meta_tags(title, image, url, description, keywords)
@@ -436,6 +437,7 @@ def process_file(file_path: Path) -> tuple:
         
         return (True, file_path.relative_to(Path(".")))
     except Exception as e:
+        print(f"   ⚠️ خطأ في الملف: {e}")
         return (False, file_path.relative_to(Path(".")))
 
 def main():
