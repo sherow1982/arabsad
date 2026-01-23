@@ -3,75 +3,89 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>عذراً - لم يتم العثور على الصفحة | مؤسسة إعلانات العرب</title>
-<link rel="stylesheet" href="assets/css/main.css">
+<title>عذراً - الصفحة غير موجودة | مؤسسة إعلانات العرب</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&display=swap" rel="stylesheet">
 <style>
+:root {
+    --primary: #FFB800;
+    --dark-bg: #0a0e27;
+    --text-light: #ffffff;
+    --text-muted: #94a3b8;
+}
 body {
     font-family: 'Cairo', sans-serif;
-    background: linear-gradient(135deg, #0f2027 0%, #203a43 50%, #2c5364 100%);
-    color: #fff;
+    background-color: var(--dark-bg);
+    color: var(--text-light);
     margin: 0;
     padding: 0;
-}
-.container {
-    text-align: center;
-    padding: 4rem 2rem;
-    min-height: 60vh;
     display: flex;
     flex-direction: column;
+    min-height: 100vh;
+    background-image: radial-gradient(circle at 50% 50%, rgba(255, 184, 0, 0.05) 0%, transparent 50%);
+}
+.container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
+    text-align: center;
+    padding: 2rem;
 }
 .btn {
     display: inline-block;
     padding: 12px 30px;
     margin: 0.5rem;
-    border-radius: 30px;
+    border-radius: 50px;
     text-decoration: none;
     font-weight: 700;
-    font-size: 1.1rem;
     transition: all 0.3s ease;
+    border: 2px solid transparent;
 }
 .btn-primary {
-    background: #26de81;
-    color: #fff;
+    background: var(--primary);
+    color: #000;
 }
 .btn-primary:hover {
-    background: #20c970;
+    background: #fff;
     transform: translateY(-2px);
 }
-.btn-success {
-    background: #f6b93b;
-    color: #0f2027;
+.btn-outline {
+    border-color: var(--primary);
+    color: var(--primary);
 }
-.btn-success:hover {
-    background: #e0a629;
-    transform: translateY(-2px);
-}
-.btn-warning {
-    background: #25d366;
-    color: #fff;
-}
-.btn-warning:hover {
-    background: #1fb856;
+.btn-outline:hover {
+    background: var(--primary);
+    color: #000;
     transform: translateY(-2px);
 }
 h1 {
-    font-size: 4rem;
-    color: #f6b93b;
-    margin-bottom: 2rem;
+    font-size: 8rem;
+    margin: 0;
+    color: var(--primary);
+    line-height: 1;
+    text-shadow: 0 0 30px rgba(255, 184, 0, 0.2);
 }
 h2 {
-    color: #26de81;
-    margin-bottom: 2rem;
-    font-size: 1.8rem;
+    font-size: 2rem;
+    margin-bottom: 1rem;
 }
 p {
+    color: var(--text-muted);
     font-size: 1.2rem;
-    color: #e0e0e0;
-    margin-bottom: 3rem;
+    max-width: 600px;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+}
+.countdown {
+    margin-top: 3rem;
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    background: rgba(255, 255, 255, 0.05);
+    padding: 10px 20px;
+    border-radius: 20px;
 }
 </style>
 
@@ -339,16 +353,31 @@ p {
 <body>
 <div class="container">
   <h1>🚫 404</h1>
-  <h2>عذراً - لم يتم العثور على الصفحة</h2>
-  <p>الصفحة التي تبحث عنها غير موجودة أو تم نقلها</p>
+  <h2>عذراً، الصفحة غير موجودة</h2>
+  <p>يبدو أنك ضللت الطريق. الصفحة التي تبحث عنها قد تكون حذفت، تم تغيير اسمها، أو غير متاحة مؤقتاً.</p>
   <div>
     <a href="index.html" class="btn btn-primary">🏠 العودة للرئيسية</a>
-    <a href="services/index.html" class="btn btn-success">💼 تصفح خدماتنا</a>
-    <a href="https://wa.me/201110760081?text=لم%20أجد%20الصفحة%20المطلوبة" target="_blank" class="btn btn-warning">📞 ابلاغ عن المشكلة</a>
+    <a href="services/index.html" class="btn btn-outline">💼 تصفح الخدمات</a>
+    <a href="https://wa.me/201110760081?text=لم%20أجد%20الصفحة%20المطلوبة" target="_blank" class="btn btn-outline">📞 مساعدة فورية</a>
+  </div>
+  <div class="countdown">
+    سيتم تحويلك تلقائياً للصفحة الرئيسية خلال <span id="timer" style="color: var(--primary); font-weight: bold;">15</span> ثانية...
   </div>
 </div>
 
 <script>
+// Auto Redirect
+let seconds = 15;
+const timerEl = document.getElementById('timer');
+const interval = setInterval(() => {
+    seconds--;
+    if (timerEl) timerEl.textContent = seconds;
+    if (seconds <= 0) {
+        clearInterval(interval);
+        window.location.href = 'index.html';
+    }
+}, 1000);
+
 document.addEventListener('DOMContentLoaded', function() {
     fetch('./shared-header.html').then(r => r.ok ? r.text() : '').then(html => { if (html) document.body.insertAdjacentHTML('afterbegin', html); }).catch(() => {});
     fetch('./shared-footer.html').then(r => r.ok ? r.text() : '').then(html => { if (html) document.body.insertAdjacentHTML('beforeend', html); }).catch(() => {});

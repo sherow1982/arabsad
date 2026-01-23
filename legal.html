@@ -5,63 +5,142 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>الشروط والسياسات - إعلانات العرب</title>
     <meta name="description" content="الشروط العامة وسياسة الخصوصية لمؤسسة إعلانات العرب">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&family=Almarai:wght@700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/modern-arabic-theme.css">
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        :root {
-            --primary: #FFB800;
-            --primary-dark: #FF9500;
-            --dark-bg: #0a0e27;
-            --dark-secondary: #1a1f3a;
-            --text-light: #e8edf5;
-            --text-muted: #a8b3c1;
-            --accent: #00d4aa;
+        /* Custom styles for legal page */
+        .legal-header {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+            border-radius: 0 0 50px 50px;
+            margin-bottom: 60px;
         }
-        html, body { font-family: 'Segoe UI', sans-serif; background: var(--dark-bg); color: var(--text-light); line-height: 1.6; }
-        header { position: fixed; top: 0; width: 100%; z-index: 1000; background: rgba(10, 14, 39, 0.95); padding: 1.2rem 2rem; }
-        .header-wrapper { max-width: 1400px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
-        .logo { font-size: 1.8rem; font-weight: 800; background: linear-gradient(135deg, var(--primary), var(--accent)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; text-decoration: none; }
-        main { margin-top: 80px; padding: 4rem 2rem; max-width: 1000px; margin-left: auto; margin-right: auto; }
-        h1 { font-size: 2.5rem; margin-bottom: 2rem; color: var(--primary); }
-        h2 { font-size: 1.5rem; margin-top: 2.5rem; margin-bottom: 1rem; color: var(--primary); }
-        p { margin-bottom: 1rem; color: var(--text-muted); line-height: 1.9; }
-        ul { margin: 1.5rem 0; padding-right: 2rem; }
-        li { margin-bottom: 0.8rem; color: var(--text-muted); }
-        footer { background: var(--dark-secondary); padding: 3rem 2rem 1.5rem; margin-top: 4rem; text-align: center; border-top: 2px solid rgba(255, 184, 0, 0.1); color: var(--text-muted); font-size: 0.85rem; }
+        
+        .legal-content {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .legal-card {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            margin-bottom: 30px;
+            border: 1px solid var(--border-light);
+            transition: transform 0.3s ease;
+        }
+        
+        .legal-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+        }
+        
+        .legal-card h2 {
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--bg-secondary);
+            padding-bottom: 15px;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .legal-card ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .legal-card li {
+            margin-bottom: 15px;
+            padding-right: 25px;
+            position: relative;
+            color: var(--text-secondary);
+        }
+        
+        .legal-card li::before {
+            content: '✓';
+            color: var(--accent-color);
+            position: absolute;
+            right: 0;
+            font-weight: bold;
+        }
+        
+        .last-updated {
+            text-align: center;
+            color: var(--text-muted);
+            margin-top: 40px;
+            font-size: 0.9rem;
+            margin-bottom: 40px;
+        }
     </style>
 </head>
 <body>
-    <header>
-        <div class="header-wrapper">
-            <a href="/arabsad/" class="logo">🌐 إعلانات العرب</a>
+    <div data-include="shared-header.html"></div>
+
+    <div class="legal-header">
+        <div class="container">
+            <h1 style="color: white; margin-bottom: 15px;">⚖️ الشروط والسياسات</h1>
+            <p style="color: rgba(255,255,255,0.9); font-size: 1.2rem;">نلتزم بالشفافية والوضوح في جميع تعاملاتنا</p>
         </div>
-    </header>
+    </div>
 
-    <main>
-        <h1>الشروط والسياسات</h1>
+    <main class="legal-content">
+        <div class="legal-card">
+            <h2><i class="fas fa-shield-alt"></i> سياسة الخصوصية</h2>
+            <p>نحن في مؤسسة إعلانات العرب نولي أهمية قصوى لحماية بياناتك الشخصية وخصوصيتك. نلتزم بالمعايير الدولية في جمع ومعالجة البيانات.</p>
+            <ul>
+                <li>نحن لا نشارك بياناتك الشخصية مع أي أطراف ثالثة لأغراض تسويقية دون موافقتك.</li>
+                <li>نستخدم أحدث تقنيات التشفير (SSL) لحماية بياناتك أثناء النقل والتخزين.</li>
+                <li>نجمع فقط البيانات الضرورية لتقديم خدماتنا وتحسين تجربتك.</li>
+                <li>لديك الحق الكامل في طلب حذف أو تعديل بياناتك في أي وقت.</li>
+            </ul>
+        </div>
 
-        <h2>سياسة الخصوصية</h2>
-        <p>نحن نلتزم بحماية بياناتك الشخصية بموجب القوانين الدولية</p>
-        <ul>
-            <li>لا نشارك بياناتك مع أطراف ثالثة</li>
-            <li>استخدام التشفير بمستويات عالية</li>
-            <li>حقوقك محمية بالكامل</li>
-        </ul>
+        <div class="legal-card">
+            <h2><i class="fas fa-file-contract"></i> الشروط العامة</h2>
+            <p>باستخدامك لخدماتنا، فإنك توافق على الالتزام بالشروط والأحكام التالية لضمان بيئة عمل احترافية:</p>
+            <ul>
+                <li>استخدام الخدمات لأغراض قانونية ومشروعة فقط.</li>
+                <li>احترام حقوق الملكية الفكرية والعلامات التجارية لمؤسسة إعلانات العرب.</li>
+                <li>الالتزام بجداول الدفع المتفق عليها في العقود المبرمة.</li>
+                <li>التعاون في تقديم المعلومات اللازمة لتنفيذ الحملات الإعلانية بنجاح.</li>
+            </ul>
+        </div>
 
-        <h2>الشروط العامة</h2>
-        <p>باستخدامك لخدماتنا، أنت وافقت على:</p>
-        <ul>
-            <li>استخدام الخدمات بشكل قانوني بحت</li>
-            <li>عدم المساس بالعلامات التجارية والحقوق</li>
-            <li>دفع الرسوم بحسب الاتفاق بدون اعتراضات</li>
-        </ul>
-
-        <h2>الضمانات والعروض</h2>
-        <p>نضمن رضاك عن العرض وعودة المبلغ إذا لم تتحقق نتائج معينة موطا أخري بالاتفاق.</p>
+        <div class="legal-card">
+            <h2><i class="fas fa-hand-holding-usd"></i> الضمانات والاسترداد</h2>
+            <p>نحن واثقون من جودة خدماتنا ونقدم ضمانات لراحة بالك:</p>
+            <ul>
+                <li>نضمن تنفيذ الحملات الإعلانية وفقاً للمعايير المتفق عليها.</li>
+                <li>سياسة استرداد مرنة في حال عدم البدء في تنفيذ الخدمة أو وجود خلل جوهري من جانبنا.</li>
+                <li>تقارير شفافة ودورية توضح أداء الحملات والميزانيات المصروفة.</li>
+            </ul>
+        </div>
+        
+        <div class="last-updated">
+            آخر تحديث: يناير 2026
+        </div>
     </main>
 
-    <footer>
-        <p>&copy; 2025 إعلانات العرب - جميع الحقوق محفوظة</p>
-    </footer>
-    <script src="/arabsad/js/bfcache-fix.js"></script>
+    <div data-include="shared-footer.html"></div>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelectorAll('[data-include]').forEach(async function(el) {
+                try {
+                    const file = el.getAttribute('data-include');
+                    const response = await fetch(file);
+                    if (response.ok) el.innerHTML = await response.text();
+                } catch (e) { console.log(e); }
+            });
+        });
+    </script>
 </body>
 </html>

@@ -1,57 +1,93 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>خطأ داخلي في المخدم - مؤسسة إعلانات العرب</title>
-  <meta name="description" content="حدث خطأ مؤقت في المخدم. نعمل على حل المشكلة. يرجى المحاولة مرة أخرى لاحقاً.">
-  <meta name="robots" content="noindex, nofollow">
-  <link rel="icon" href="/favicon.ico">
-  <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body {
-      height: 100vh;
-      font-family: 'Cairo', Arial, sans-serif;
-      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-      color: #fff;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      direction: rtl;
-      padding: 20px;
-    }
-    .error-container {
-      max-width: 600px;
-      padding: 3rem 2rem;
-      background: rgba(255, 255, 255, 0.1);
-      border-radius: 20px;
-      backdrop-filter: blur(10px);
-    }
-    .error-code {
-      font-size: 8rem;
-      font-weight: 800;
-      margin-bottom: 1rem;
-    }
-    .error-title {
-      font-size: 2rem;
-      margin-bottom: 1rem;
-    }
-    .btn {
-      display: inline-block;
-      padding: 12px 24px;
-      background: rgba(255, 255, 255, 0.2);
-      color: #fff;
-      text-decoration: none;
-      border-radius: 25px;
-      margin: 0.5rem;
-      transition: all 0.3s ease;
-    }
-    .btn:hover {
-      background: rgba(255, 255, 255, 0.3);
-      transform: translateY(-2px);
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>عذراً - خطأ في الخادم | مؤسسة إعلانات العرب</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+<style>
+:root {
+    --primary: #FFB800;
+    --dark-bg: #0a0e27;
+    --text-light: #ffffff;
+    --text-muted: #94a3b8;
+}
+body {
+    font-family: 'Cairo', sans-serif;
+    background-color: var(--dark-bg);
+    color: var(--text-light);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-image: radial-gradient(circle at 50% 50%, rgba(255, 184, 0, 0.05) 0%, transparent 50%);
+}
+.container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 2rem;
+}
+.btn {
+    display: inline-block;
+    padding: 12px 30px;
+    margin: 0.5rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 700;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+.btn-primary {
+    background: var(--primary);
+    color: #000;
+}
+.btn-primary:hover {
+    background: #fff;
+    transform: translateY(-2px);
+}
+.btn-outline {
+    border-color: var(--primary);
+    color: var(--primary);
+}
+.btn-outline:hover {
+    background: var(--primary);
+    color: #000;
+    transform: translateY(-2px);
+}
+h1 {
+    font-size: 8rem;
+    margin: 0;
+    color: var(--primary);
+    line-height: 1;
+    text-shadow: 0 0 30px rgba(255, 184, 0, 0.2);
+}
+h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+p {
+    color: var(--text-muted);
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+}
+.countdown {
+    margin-top: 3rem;
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    background: rgba(255, 255, 255, 0.05);
+    padding: 10px 20px;
+    border-radius: 20px;
+}
+</style>
 
 
     <!-- SEO Meta Tags (Auto) -->
