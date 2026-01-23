@@ -117,6 +117,16 @@
             border-bottom: 1px solid rgba(255, 184, 0, 0.1);
         }
 
+        /* Animations */
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .animate-up {
+            animation: fadeInUp 0.6s ease-out forwards;
+        }
+
         .header-wrapper {
             display: flex;
             justify-content: space-between;
@@ -138,6 +148,7 @@
             text-align: center;
             padding: 80px 0;
             background: radial-gradient(circle, rgba(255,184,0,0.05) 0%, transparent 70%);
+            animation: fadeInUp 0.8s ease-out;
         }
 
         .hero h1 {
@@ -231,20 +242,22 @@
         }
 
         .pricing-box {
-            background: rgba(255,255,255,0.03);
-            padding: 15px;
-            border-radius: 10px;
+            background: linear-gradient(145deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.01) 100%);
+            padding: 20px;
+            border-radius: 12px;
             margin: 20px 0;
             text-align: right;
             font-size: 0.95rem;
+            border: 1px solid rgba(255, 184, 0, 0.1);
         }
 
         .pricing-item {
             display: flex;
             justify-content: space-between;
-            margin-bottom: 8px;
+            margin-bottom: 10px;
             border-bottom: 1px solid rgba(255,255,255,0.05);
-            padding-bottom: 8px;
+            padding-bottom: 10px;
+            color: #ccc;
         }
 
         .pricing-item:last-child {
@@ -252,7 +265,9 @@
             margin: 0;
             padding: 0;
             font-weight: 700;
-            color: var(--primary);
+            color: var(--success);
+            font-size: 1.1rem;
+            padding-top: 5px;
         }
 
         .btn {
@@ -305,6 +320,31 @@
             margin-top: 50px;
             border-top: 1px solid rgba(255,255,255,0.05);
             color: var(--text-muted);
+        }
+
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            left: 30px;
+            z-index: 1000;
+        }
+
+        .whatsapp-float a {
+            background: #25D366;
+            color: #fff;
+            padding: 12px 25px;
+            border-radius: 50px;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 700;
+            box-shadow: 0 5px 20px rgba(37, 211, 102, 0.3);
+            transition: 0.3s;
+        }
+
+        .whatsapp-float a:hover {
+            transform: translateY(-5px);
         }
     </style>
 </head>
@@ -372,7 +412,7 @@
         </section>
 
         <section class="container">
-            <h2 class="section-title">🏆 نماذج مواقع تغنيك عن الخرائط</h2>
+            <h2 class="section-title animate-up">🏆 نماذج مواقع تغنيك عن الخرائط</h2>
             <p style="text-align: center; margin-bottom: 40px; color: var(--text-muted);">اضغط على البطاقة لزيارة الموقع، أو اضغط على الزر لطلبه فوراً</p>
             
             <div class="demos-grid">
@@ -383,6 +423,12 @@
                         <span class="features-badge">🎁 دومين مجاني</span>
                         <h3>شركة عزل خزانات</h3>
                         <p style="color: var(--text-muted); font-size: 0.9rem;">تصميم يبرز الخدمات والضمانات</p>
+                        
+                        <div class="pricing-box">
+                            <div class="pricing-item"><span>📅 إيجار شهري:</span> <span>$100</span></div>
+                            <div class="pricing-item"><span>🗓️ إيجار سنوي:</span> <span>$600</span></div>
+                            <div class="pricing-item"><span>💎 امتلاك كامل:</span> <span>$1000</span></div>
+                        </div>
 
                         <a href="https://wa.me/201110760081?text=أريد طلب موقع عزل خزانات مثل النموذج المعروض" class="btn" onclick="event.stopPropagation()">
                             <i class="fab fa-whatsapp"></i> اطلب هذا الموقع
@@ -397,6 +443,12 @@
                         <span class="features-badge">🎁 دومين مجاني</span>
                         <h3>شركة نقل عفش</h3>
                         <p style="color: var(--text-muted); font-size: 0.9rem;">تصميم سريع مع زر اتصال عائم</p>
+                        
+                        <div class="pricing-box">
+                            <div class="pricing-item"><span>📅 إيجار شهري:</span> <span>$100</span></div>
+                            <div class="pricing-item"><span>🗓️ إيجار سنوي:</span> <span>$600</span></div>
+                            <div class="pricing-item"><span>💎 امتلاك كامل:</span> <span>$1000</span></div>
+                        </div>
 
                         <a href="https://wa.me/201110760081?text=أريد طلب موقع نقل عفش مثل النموذج المعروض" class="btn" onclick="event.stopPropagation()">
                             <i class="fab fa-whatsapp"></i> اطلب هذا الموقع
@@ -411,6 +463,12 @@
                         <span class="features-badge">🎁 دومين مجاني</span>
                         <h3>شركة تنظيف منازل</h3>
                         <p style="color: var(--text-muted); font-size: 0.9rem;">عرض باقات التنظيف بشكل جذاب</p>
+                        
+                        <div class="pricing-box">
+                            <div class="pricing-item"><span>📅 إيجار شهري:</span> <span>$100</span></div>
+                            <div class="pricing-item"><span>🗓️ إيجار سنوي:</span> <span>$600</span></div>
+                            <div class="pricing-item"><span>💎 امتلاك كامل:</span> <span>$1000</span></div>
+                        </div>
 
                         <a href="https://wa.me/201110760081?text=أريد طلب موقع شركة نظافة مثل النموذج المعروض" class="btn" onclick="event.stopPropagation()">
                             <i class="fab fa-whatsapp"></i> اطلب هذا الموقع
@@ -443,5 +501,12 @@
             <p>📞 +201110760081 | 📧 info@arabsad.com</p>
         </div>
     </footer>
+
+    <div class="whatsapp-float">
+        <a href="https://wa.me/201110760081" target="_blank">
+            <i class="fab fa-whatsapp"></i>
+            <span>استشارة مجانية</span>
+        </a>
+    </div>
 </body>
 </html>
