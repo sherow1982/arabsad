@@ -175,11 +175,24 @@
             transition: all 0.4s ease;
             overflow: hidden;
             position: relative;
+            cursor: pointer;
+            text-decoration: none;
+            color: inherit;
+            display: flex;
+            flex-direction: column;
         }
 
         .service-card:hover {
             transform: translateY(-10px);
             box-shadow: 0 20px 60px rgba(102, 126, 234, 0.2);
+        }
+
+        .service-card a {
+            text-decoration: none;
+            color: inherit;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
         }
 
         .service-image {
@@ -191,6 +204,9 @@
 
         .service-content {
             padding: 35px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
         }
 
         .service-icon {
@@ -216,6 +232,7 @@
         .service-features {
             list-style: none;
             margin-bottom: 25px;
+            flex: 1;
         }
 
         .service-features li {
@@ -243,6 +260,7 @@
             border-radius: 50px;
             font-weight: 600;
             transition: all 0.3s ease;
+            align-self: flex-start;
         }
 
         .service-link:hover {
@@ -569,7 +587,6 @@
 
 
 
-
 <!-- Breadcrumb Schema (Auto) -->
 
 
@@ -720,143 +737,135 @@
 
             <div class="services-grid">
                 <div class="service-card">
-                    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800" alt="إعلانات جوجل" class="service-image">
-                    <div class="service-content">
-                        <div class="service-icon">📊</div>
-                        <h3 class="service-title">إعلانات Google Ads</h3>
-                        <p class="service-description">
-                            حملات احترافية على محرك البحث الأول عالمياً تضمن لك الظهور في الصفحة الأولى وزيادة المبيعات بشكل مباشر
-                        </p>
-                        <ul class="service-features">
-                            <li>إعلانات شبكة البحث Search Ads</li>
-                            <li>إعلانات الشبكة الإعلانية Display Network</li>
-                            <li>إعلانات يوتيوب وجوجل شوبنج</li>
-                            <li>استهداف دقيق حسب الموقع والاهتمامات</li>
-                            <li>تحسين الحملات وتقليل التكلفة</li>
-                            <li>تقارير أداء تفصيلية يومية</li>
-                        </ul>
-                        <a href="google-ads.html" class="service-link">اعرف المزيد ←</a>
-                    </div>
+                    <a href="google-ads.html">
+                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800" alt="إعلانات جوجل" class="service-image">
+                        <div class="service-content">
+                            <div class="service-icon">📊</div>
+                            <h3 class="service-title">إعلانات Google Ads</h3>
+                            <p class="service-description">
+                                حملات احترافية على محرك البحث الأول عالمياً تضمن لك الظهور في الصفحة الأولى وزيادة المبيعات بشكل مباشر
+                            </p>
+                            <ul class="service-features">
+                                <li>إعلانات شبكة البحث Search Ads</li>
+                                <li>إعلانات الشبكة الإعلانية Display Network</li>
+                                <li>إعلانات يوتيوب وجوجل شوبنج</li>
+                                <li>استهداف دقيق حسب الموقع والاهتمامات</li>
+                                <li>تحسين الحملات وتقليل التكلفة</li>
+                                <li>تقارير أداء تفصيلية يومية</li>
+                            </ul>
+                            <span class="service-link">اعرف المزيد ←</span>
+                        </div>
+                    </a>
                 </div>
 
                 <div class="service-card">
-                    <img src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=800" alt="إعلانات السوشيال ميديا" class="service-image">
-                    <div class="service-content">
-                        <div class="service-icon">📱</div>
-                        <h3 class="service-title">إعلانات السوشيال ميديا</h3>
-                        <p class="service-description">
-                            إعلانات ممولة احترافية على فيسبوك وإنستجرام وسناب شات وتيك توك تصل لجمهورك المستهدف بدقة عالية
-                        </p>
-                        <ul class="service-features">
-                            <li>حملات فيسبوك وإنستجرام Meta Ads</li>
-                            <li>إعلانات سناب شات Snapchat Ads</li>
-                            <li>إعلانات تيك توك TikTok Ads</li>
-                            <li>تصميم محتوى إبداعي جذاب</li>
-                            <li>استهداف دقيق للجمهور المثالي</li>
-                            <li>إعادة استهداف للزوار Retargeting</li>
-                        </ul>
-                        <a href="social-media-ads.html" class="service-link">اعرف المزيد ←</a>
-                    </div>
+                    <a href="social-media-ads.html">
+                        <img src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=800" alt="إعلانات السوشيال ميديا" class="service-image">
+                        <div class="service-content">
+                            <div class="service-icon">📱</div>
+                            <h3 class="service-title">إعلانات السوشيال ميديا</h3>
+                            <p class="service-description">
+                                إعلانات ممولة احترافية على فيسبوك وإنستجرام وسناب شات وتيك توك تصل لجمهورك المستهدف بدقة عالية
+                            </p>
+                            <ul class="service-features">
+                                <li>حملات فيسبوك وإنستجرام Meta Ads</li>
+                                <li>إعلانات سناب شات Snapchat Ads</li>
+                                <li>إعلانات تيك توك TikTok Ads</li>
+                                <li>تصميم محتوى إبداعي جذاب</li>
+                                <li>استهداف دقيق للجمهور المثالي</li>
+                                <li>إعادة استهداف للزوار Retargeting</li>
+                            </ul>
+                            <span class="service-link">اعرف المزيد ←</span>
+                        </div>
+                    </a>
                 </div>
 
                 <div class="service-card">
-                    <img src="https://images.unsplash.com/photo-1571721795195-a2ca2d3370a9?w=800" alt="تحسين SEO" class="service-image">
-                    <div class="service-content">
-                        <div class="service-icon">🔍</div>
-                        <h3 class="service-title">تحسين SEO للمواقع والمتاجر</h3>
-                        <p class="service-description">
-                            رفع موقعك ومتجرك في نتائج البحث الأولى على جوجل لزيادة الزيارات المجانية ورفع الوعي بعلامتك التجارية
-                        </p>
-                        <ul class="service-features">
-                            <li>تحليل وتدقيق SEO شامل</li>
-                            <li>بحث الكلمات المفتاحية المربحة</li>
-                            <li>تحسين داخلي On-Page SEO</li>
-                            <li>بناء روابط خارجية قوية Backlinks</li>
-                            <li>تحسين السرعة والأداء التقني</li>
-                            <li>تقارير ترتيب شهرية</li>
-                        </ul>
-                        <a href="seo.html" class="service-link">اعرف المزيد ←</a>
-                    </div>
+                    <a href="seo.html">
+                        <img src="https://images.unsplash.com/photo-1571721795195-a2ca2d3370a9?w=800" alt="تحسين SEO" class="service-image">
+                        <div class="service-content">
+                            <div class="service-icon">🔍</div>
+                            <h3 class="service-title">تحسين SEO للمواقع والمتاجر</h3>
+                            <p class="service-description">
+                                رفع موقعك ومتجرك في نتائج البحث الأولى على جوجل لزيادة الزيارات المجانية ورفع الوعي بعلامتك التجارية
+                            </p>
+                            <ul class="service-features">
+                                <li>تحليل وتدقيق SEO شامل</li>
+                                <li>بحث الكلمات المفتاحية المربحة</li>
+                                <li>تحسين داخلي On-Page SEO</li>
+                                <li>بناء روابط خارجية قوية Backlinks</li>
+                                <li>تحسين السرعة والأداء التقني</li>
+                                <li>تقارير ترتيب شهرية</li>
+                            </ul>
+                            <span class="service-link">اعرف المزيد ←</span>
+                        </div>
+                    </a>
                 </div>
 
                 <div class="service-card">
-                    <img src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=800" alt="المتاجر الإلكترونية" class="service-image">
-                    <div class="service-content">
-                        <div class="service-icon">🛒</div>
-                        <h3 class="service-title">المتاجر الإلكترونية</h3>
-                        <p class="service-description">
-                            تصميم وتطوير متاجر إلكترونية عصرية ومتكاملة جاهزة للتسويق والمبيعات في الخليج ومصر والوطن العربي
-                        </p>
-                        <ul class="service-features">
-                            <li>تصميم متاجر حديثة متجاوبة</li>
-                            <li>لوحة تحكم سهلة الإدارة</li>
-                            <li>ربط بوابات الدفع الإلكتروني</li>
-                            <li>نظام إدارة المخزون والطلبات</li>
-                            <li>تكامل مع شركات الشحن</li>
-                            <li>محسنة للسيو وسرعة التصفح</li>
-                        </ul>
-                        <a href="ecommerce.html" class="service-link">اعرف المزيد ←</a>
-                    </div>
+                    <a href="ecommerce.html">
+                        <img src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=800" alt="المتاجر الإلكترونية" class="service-image">
+                        <div class="service-content">
+                            <div class="service-icon">🛒</div>
+                            <h3 class="service-title">المتاجر الإلكترونية</h3>
+                            <p class="service-description">
+                                تصميم وتطوير متاجر إلكترونية عصرية ومتكاملة جاهزة للتسويق والمبيعات في الخليج ومصر والوطن العربي
+                            </p>
+                            <ul class="service-features">
+                                <li>تصميم متاجر حديثة متجاوبة</li>
+                                <li>لوحة تحكم سهلة الإدارة</li>
+                                <li>ربط بوابات الدفع الإلكتروني</li>
+                                <li>نظام إدارة المخزون والطلبات</li>
+                                <li>تكامل مع شركات الشحن</li>
+                                <li>محسنة للسيو وسرعة التصفح</li>
+                            </ul>
+                            <span class="service-link">اعرف المزيد ←</span>
+                        </div>
+                    </a>
                 </div>
 
                 <div class="service-card">
-                    <img src="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=800" alt="تصميم المواقع" class="service-image">
-                    <div class="service-content">
-                        <div class="service-icon">💻</div>
-                        <h3 class="service-title">تصميم المواقع</h3>
-                        <p class="service-description">
-                            مواقع ويب احترافية سريعة ومتجاوبة بتصميمات عربية جذابة لتجربة مستخدم استثنائية وتحويل أعلى
-                        </p>
-                        <ul class="service-features">
-                            <li>تصميم عصري متجاوب Responsive</li>
-                            <li>تجربة مستخدم متميزة UX/UI</li>
-                            <li>سرعة تحميل فائقة</li>
-                            <li>محسنة لمحركات البحث</li>
-                            <li>تكامل مع أدوات التسويق</li>
-                            <li>استضافة وصيانة شاملة</li>
-                        </ul>
-                        <a href="web-design.html" class="service-link">اعرف المزيد ←</a>
-                    </div>
+                    <a href="website-design.html">
+                        <img src="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=800" alt="تصميم المواقع" class="service-image">
+                        <div class="service-content">
+                            <div class="service-icon">💻</div>
+                            <h3 class="service-title">تصميم المواقع</h3>
+                            <p class="service-description">
+                                مواقع ويب احترافية سريعة ومتجاوبة بتصميمات عربية جذابة لتجربة مستخدم استثنائية وتحويل أعلى
+                            </p>
+                            <ul class="service-features">
+                                <li>تصميم عصري متجاوب Responsive</li>
+                                <li>تجربة مستخدم متميزة UX/UI</li>
+                                <li>سرعة تحميل فائقة</li>
+                                <li>محسنة لمحركات البحث</li>
+                                <li>تكامل مع أدوات التسويق</li>
+                                <li>استضافة وصيانة شاملة</li>
+                            </ul>
+                            <span class="service-link">اعرف المزيد ←</span>
+                        </div>
+                    </a>
                 </div>
 
                 <div class="service-card">
-                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800" alt="التحليلات والتقارير" class="service-image">
-                    <div class="service-content">
-                        <div class="service-icon">📈</div>
-                        <h3 class="service-title">تحليلات وتقارير الأداء</h3>
-                        <p class="service-description">
-                            لوحات تحكم تفاعلية مع تقارير مفصلة وتحليلات دقيقة للحملات والتوصيات الفعالة للتحسين المستمر
-                        </p>
-                        <ul class="service-features">
-                            <li>لوحات تحكم Google Analytics</li>
-                            <li>تتبع التحويلات والمبيعات</li>
-                            <li>تقارير أداء الحملات</li>
-                            <li>تحليل سلوك الزوار</li>
-                            <li>توصيات تحسين مخصصة</li>
-                            <li>مقارنات الأداء الشهرية</li>
-                        </ul>
-                        <a href="analytics.html" class="service-link">اعرف المزيد ←</a>
-                    </div>
-                </div>
-
-                <div class="service-card">
-                    <img src="https://images.unsplash.com/photo-1611162616305-c69b3fa7fbe0?w=800" alt="إدارة السوشيال ميديا" class="service-image">
-                    <div class="service-content">
-                        <div class="service-icon">👥</div>
-                        <h3 class="service-title">إدارة الحسابات والسوشيال</h3>
-                        <p class="service-description">
-                            إدارة شاملة ومحترفة لحسابات التواصل الاجتماعي لزيادة عدد المتابعين والتفاعل وبناء مجتمع قوي
-                        </p>
-                        <ul class="service-features">
-                            <li>إنشاء محتوى إبداعي جذاب</li>
-                            <li>جدولة ونشر منتظم للمحتوى</li>
-                            <li>إدارة التعليقات والرسائل</li>
-                            <li>تصميم جرافيك وفيديوهات</li>
-                            <li>استراتيجية محتوى مدروسة</li>
-                            <li>تقارير أداء وتفاعل شهرية</li>
-                        </ul>
-                        <a href="social-media-management.html" class="service-link">اعرف المزيد ←</a>
-                    </div>
+                    <a href="social-management.html">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800" alt="إدارة السوشيال ميديا" class="service-image">
+                        <div class="service-content">
+                            <div class="service-icon">👥</div>
+                            <h3 class="service-title">إدارة الحسابات والسوشيال</h3>
+                            <p class="service-description">
+                                إدارة شاملة ومحترفة لحسابات التواصل الاجتماعي لزيادة عدد المتابعين والتفاعل وبناء مجتمع قوي
+                            </p>
+                            <ul class="service-features">
+                                <li>إنشاء محتوى إبداعي جذاب</li>
+                                <li>جدولة ونشر منتظم للمحتوى</li>
+                                <li>إدارة التعليقات والرسائل</li>
+                                <li>تصميم جرافيك وفيديوهات</li>
+                                <li>استراتيجية محتوى مدروسة</li>
+                                <li>تقارير أداء وتفاعل شهرية</li>
+                            </ul>
+                            <span class="service-link">اعرف المزيد ←</span>
+                        </div>
+                    </a>
                 </div>
             </div>
         </div>
