@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>مؤسسة إعلانات العرب - الوكالة الرقمية الأولى في الخليج</title>
-    <meta name="description" content="وكالة تسويق رقمي متخصصة في Google Ads, SEO, تصميم مواقع ومتاجر إلكترونية، وإدارة الحملات الإعلانية مع دعم مباشر.">
+    <meta name="description" content="وكالة تسويق رقمي متخصصة في Google Ads و SEO وتصميم مواقع ومتاجر إلكترونية، وإدارة الحملات الإعلانية مع دعم مباشر.">
     <meta property="og:title" content="مؤسسة إعلانات العرب - الوكالة الرقمية">
     <meta property="og:description" content="علامات رقمية للشركات والمتاجر">
     <link rel="canonical" href="https://sherow1982.github.io/arabsad/">
@@ -469,6 +469,70 @@
             color: var(--accent);
         }
 
+        /* FAQ Section */
+        .faq-section {
+            padding: 6rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            background: rgba(255, 184, 0, 0.02);
+        }
+
+        .faq-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+            gap: 2rem;
+        }
+
+        .faq-item {
+            background: linear-gradient(135deg, rgba(255, 184, 0, 0.1), rgba(0, 212, 170, 0.05));
+            border: 1px solid rgba(255, 184, 0, 0.2);
+            border-radius: 15px;
+            padding: 1.8rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .faq-item:hover {
+            background: linear-gradient(135deg, rgba(255, 184, 0, 0.15), rgba(0, 212, 170, 0.1));
+            border-color: rgba(255, 184, 0, 0.4);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(255, 184, 0, 0.1);
+        }
+
+        .faq-question {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--primary);
+            margin-bottom: 0.8rem;
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+        }
+
+        .faq-question::before {
+            content: '▶';
+            font-size: 0.8rem;
+            transition: transform 0.3s ease;
+        }
+
+        .faq-item.active .faq-question::before {
+            transform: rotate(90deg);
+        }
+
+        .faq-answer {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            line-height: 1.8;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 300px;
+        }
+
         /* Footer */
         footer {
             background: var(--dark-secondary);
@@ -580,6 +644,7 @@
             .services-grid { grid-template-columns: 1fr; }
             .service-card { min-height: auto; }
             .footer-grid { grid-template-columns: 1fr; }
+            .faq-grid { grid-template-columns: 1fr; }
         }
     </style>
 </head>
@@ -591,7 +656,7 @@
             <nav>
                 <a href="#home">الرئيسية</a>
                 <a href="#services">الخدمات</a>
-                <a href="#contact">اتصل بنا</a>
+                <a href="#faq">الأسئلة</a>
             </nav>
             <a href="https://wa.me/201110760081" target="_blank" class="cta-header">💬 تواصل الآن</a>
         </div>
@@ -601,8 +666,8 @@
         <!-- Hero Section -->
         <section class="hero" id="home">
             <div class="hero-content">
-                <h1>🚀 نحو نتائج إعلان ملموسة ونجاح أعمالك</h1>
-                <p>خدماتنا تشمل: Google Ads‎، SEO، تصميم مواقع ومتاجر إلكترونية، إعلانات سوشيال ميديا وإدارة الحملات بدعم مباشر.</p>
+                <h1>🚀 نحو نتائج إعلانية ملموسة ونجاح أعمالك</h1>
+                <p>خدماتنا تشمل: Google Ads، SEO، تصميم مواقع ومتاجر إلكترونية، إعلانات وسائل التواصل الاجتماعي، وإدارة الحملات بدعم مباشر.</p>
                 
                 <div class="hero-buttons">
                     <a href="https://wa.me/201110760081" target="_blank" class="btn btn-primary">💬 ابدأ الآن</a>
@@ -643,14 +708,14 @@
                     <ul class="service-card-features">
                         <li>إعلانات البحث والشبكة الإعلانية</li>
                         <li>استهداف دقيق حسب الكلمات المفتاحية</li>
-                        <li>تحسين ROI وتقليل التكلفة</li>
+                        <li>تحسين العائد على الاستثمار وتقليل التكلفة</li>
                     </ul>
                     <span class="service-card-arrow">ابدأ الآن ←</span>
                 </a>
                 
                 <a href="/arabsad/services/social-media-ads.html" target="_blank" class="service-card">
                     <div class="service-icon">📱</div>
-                    <h3>إعلانات السوشيال ميديا</h3>
+                    <h3>إعلانات وسائل التواصل</h3>
                     <p>إعلانات ممولة على فيسبوك وإنستجرام وسناب وتيك توك لجمهورك المستهدف</p>
                     <ul class="service-card-features">
                         <li>حملات Meta Ads متقدمة</li>
@@ -662,7 +727,7 @@
                 
                 <a href="/arabsad/services/seo.html" target="_blank" class="service-card">
                     <div class="service-icon">🔍</div>
-                    <h3>تحسين SEO</h3>
+                    <h3>تحسين محركات البحث</h3>
                     <p>رفع موقعك في نتائج البحث الأولى لزيادة الزيارات المجانية والعضوية</p>
                     <ul class="service-card-features">
                         <li>تحليل وتدقيق SEO شامل</li>
@@ -691,14 +756,14 @@
                     <ul class="service-card-features">
                         <li>تصميم متجاوب Responsive</li>
                         <li>سرعة تحميل فائقة</li>
-                        <li>محسنة لمحركات البحث SEO</li>
+                        <li>محسّنة لمحركات البحث</li>
                     </ul>
                     <span class="service-card-arrow">شاهد أمثلة ←</span>
                 </a>
                 
                 <a href="/arabsad/services/social-management.html" target="_blank" class="service-card">
                     <div class="service-icon">👥</div>
-                    <h3>إدارة السوشيال ميديا</h3>
+                    <h3>إدارة وسائل التواصل</h3>
                     <p>إدارة محترفة لحسابات التواصل لزيادة المتابعين والتفاعل وبناء مجتمع قوي</p>
                     <ul class="service-card-features">
                         <li>محتوى إبداعي وجذاب يومي</li>
@@ -709,6 +774,44 @@
                 </a>
             </div>
         </section>
+
+        <!-- FAQ Section -->
+        <section class="faq-section" id="faq">
+            <h2 class="section-title">❓ الأسئلة الشائعة</h2>
+            <p class="section-subtitle">إجابات على أكثر الأسئلة التي يطرحها عملاؤنا</p>
+
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <div class="faq-question">كم تكون تكاليف خدماتكم؟</div>
+                    <div class="faq-answer">التكاليف تتعتمد على حجم وطبيعة مشروعك. نقدم باقات مرنة تناسب جميع الميزانيات، من الشركات الناشئة إلى المؤسسات الكبرى. يمكنك التواصل معنا للحصول على عرض سعر مخصص.</div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">ما هي مدة تنفيذ الحملات؟</div>
+                    <div class="faq-answer">مدة الخدمة تختلف حسب نوع المشروع. إعلانات Google Ads تظهر نتائجها بسرعة (أيام)، بينما SEO يحتاج من 3 إلى 6 أشهر لظهور نتائج ملموسة. سنحدد لك الجدول الزمني بدقة قبل البدء.</div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">هل ستحصل على تقارير دورية؟</div>
+                    <div class="faq-answer">نعم، نرسل لك تقارير مفصلة كل أسبوع أو شهر حسب الحاجة. التقارير تشمل الأداء والنتائج والتحسينات والبيانات التحليلية. سهولة الوصول والشفافية من أولوياتنا.</div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">هل تقدمون دعم فني 24/7؟</div>
+                    <div class="faq-answer">نعم، فريقنا متاح طوال الوقت للإجابة على استفساراتك. يمكنك التواصل معنا عبر واتساب أو البريد الإلكتروني أو الهاتف. متوسط وقت الرد أقل من ساعة واحدة.</div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">كيف تختلفون عن الوكالات الأخرى؟</div>
+                    <div class="faq-answer">لدينا فريق متخصص بسنوات من الخبرة في الأسواق العربية. نركز على النتائج الملموسة وليس فقط الوعود. عملاؤنا يحققون معنا متوسط نمو بنسبة 350% في المبيعات.</div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">هل يمكن بدء خدمة واحدة أولاً؟</div>
+                    <div class="faq-answer">بالطبع! يمكنك البدء بأي خدمة تختارها. معظم عملاؤنا يبدأون بـ Google Ads أو SEO، ثم يضيفون خدمات أخرى لاحقاً. نحن هنا لدعمك في كل خطوة من الرحلة.</div>
+                </div>
+            </div>
+        </section>
     </main>
 
     <!-- Footer -->
@@ -717,7 +820,7 @@
             <div class="footer-grid">
                 <div class="footer-column">
                     <h4>🌐 عن الموقع</h4>
-                    <p>مؤسسة إعلانات العرب متخصصة في التسويق الرقمي وإدارة الحملات الإعلانية مع دعم مباشر 24/7 في جميع أنحاء الخليج ومصر</p>
+                    <p>مؤسسة إعلانات العرب متخصصة في التسويق الرقمي وإدارة الحملات الإعلانية مع دعم مباشر 24/7 في جميع أنحاء الخليج ومصر.</p>
                     <div class="social-links">
                         <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" title="Facebook">f</a>
                         <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" title="Instagram">📷</a>
@@ -729,11 +832,11 @@
                     <h4>📋 الخدمات</h4>
                     <ul>
                         <li><a href="/arabsad/services/google-ads.html" target="_blank">إعلانات Google Ads</a></li>
-                        <li><a href="/arabsad/services/social-media-ads.html" target="_blank">إعلانات السوشيال</a></li>
-                        <li><a href="/arabsad/services/seo.html" target="_blank">تحسين SEO</a></li>
+                        <li><a href="/arabsad/services/social-media-ads.html" target="_blank">إعلانات وسائل التواصل</a></li>
+                        <li><a href="/arabsad/services/seo.html" target="_blank">تحسين محركات البحث</a></li>
                         <li><a href="/arabsad/services/ecommerce.html" target="_blank">المتاجر الإلكترونية</a></li>
                         <li><a href="/arabsad/services/website-design.html" target="_blank">تصميم المواقع</a></li>
-                        <li><a href="/arabsad/services/social-management.html" target="_blank">إدارة السوشيال</a></li>
+                        <li><a href="/arabsad/services/social-management.html" target="_blank">إدارة وسائل التواصل</a></li>
                     </ul>
                 </div>
                 <div class="footer-column">
@@ -743,7 +846,7 @@
                         <li><a href="/arabsad/about.html">عنا</a></li>
                         <li><a href="/arabsad/faq.html">الأسئلة الشائعة</a></li>
                         <li><a href="/arabsad/legal.html" target="_blank">الشروط والسياسات</a></li>
-                        <li><a href="#contact">تواصل معنا</a></li>
+                        <li><a href="#faq">استفسارات</a></li>
                     </ul>
                 </div>
                 <div class="footer-column">
@@ -753,7 +856,7 @@
                         <li><a href="https://wa.me/201110760081" target="_blank" rel="noopener noreferrer">💬 واتساب</a></li>
                         <li><a href="mailto:info@arabsad.com">📧 info@arabsad.com</a></li>
                     </ul>
-                    <p style="margin-top: 1rem; padding-top: 1rem; border-top: 1px solid rgba(255, 184, 0, 0.1);"><strong>ساعات العمل:</strong><br>السبت - الخميس<br>من 9 صباحاً إلى 6 مساؤً</p>
+                    <p style="margin-top: 1rem; padding-top: 1rem; border-top: 1px solid rgba(255, 184, 0, 0.1);"><strong>ساعات العمل:</strong><br>السبت - الخميس<br>من 9 صباحاً إلى 6 مساءً</p>
                 </div>
             </div>
 
@@ -771,6 +874,13 @@
 
     <script src="/arabsad/js/bfcache-fix.js"></script>
     <script>
+        // FAQ Toggle
+        document.querySelectorAll('.faq-item').forEach(item => {
+            item.addEventListener('click', () => {
+                item.classList.toggle('active');
+            });
+        });
+
         // Smooth scroll navigation
         document.querySelectorAll('a[href^="#"]').forEach(link => {
             link.addEventListener('click', function(e) {
