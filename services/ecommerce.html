@@ -1,368 +1,133 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>تصميم متاجر إلكترونية خليجية احترافية | مؤسسة إعلانات العرب</title>
-<meta name="description" content="شاهد متاجر إلكترونية فعلية نعمل عليها عبر منصات مختلفة في الخليج العربي. جميع المتاجر مصممة باحتراف لأنظمة دفع وشحن محلية مع تجربة فاخره. يمكنك الحصول على متجر بنفس الجودة خلال 7-14 يوم عمل.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
-<style>
-html{font-size:16px;scroll-behavior:smooth}
-body{font-family:'Cairo',-apple-system,BlinkMacSystemFont,sans-serif;background:#1a2238;color:#fff;margin:0;line-height:1.7;overflow-x:hidden;}
-.container{max-width:1200px;margin:0 auto;padding:0 1rem;position:relative;z-index:1}
-.header{background:rgba(26,34,56,.95);position:fixed;top:0;left:0;right:0;z-index:1000;padding:0.7rem 0;border-bottom:1px solid rgba(255,255,255,.08)}
-.nav{display:flex;align-items:center;justify-content:space-between;gap:2rem;}
-.logo{font-size:1.5rem;font-weight:900;display:flex;gap:8px;background:linear-gradient(135deg,#f6b93b,#26de81);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;transition:.3s}
-.nav-menu{display:flex;list-style:none;gap:2rem}
-.nav-menu a{color:#fff;text-decoration:none;font-weight:700;padding:8px 18px;border-radius:14px;transition:.3s;position:relative;}
-.nav-menu a.active,.nav-menu a:hover{background:rgba(246,185,59,0.09);color:#f6b93b}
-.btn-main{background:linear-gradient(135deg,#f6b93b,#fad390);color:#1a2238;padding:11px 26px;border-radius:40px;font-weight:800;text-decoration:none;border:none;box-shadow:0 4px 18px #fad39065;transition:.3s;margin-right:10px}
-.btn-main:hover{transform:translateY(-2px);box-shadow:0 8px 40px #fad390cc;}
-.hero-demo{background:#16213e;padding:120px 0 0 0;min-height:40vh;display:flex;justify-content:center;align-items:center;flex-direction:column;box-shadow:0 6px 32px rgba(26,34,56,0.14)}
-.hero-demo h1{font-size:2.9rem;font-weight:900;margin-bottom:1rem;background:linear-gradient(135deg,#f6b93b,#fff);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
-.hero-demo .desc{color:#fad390;font-size:1.1rem;margin-bottom:2rem;text-align:center;max-width:600px}
-.live-badge{display:inline-block;background:linear-gradient(135deg,#dc2626,#eb3b5a);color:#fff;padding:6px 18px;border-radius:30px;font-weight:800;font-size:1.1rem;animation:pulse 1.7s infinite;margin-bottom:1.2rem}@keyframes pulse{0%,100%{transform:scale(.97)}50%{transform:scale(1.09)}}
-.demos-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:2rem;margin:40px auto 60px auto;position:relative}
-.demo-card{background:#fff;border-radius:24px;box-shadow:0 10px 30px rgba(0,0,0,.10);position:relative;transition:.35s;border:1.5px solid #fad39028;overflow:hidden;display:flex;flex-direction:column;align-items:center;cursor:pointer}
-.demo-card::after{content:'LIVE';position:absolute;top:14px;right:16px;background:#dc2626;color:#fff;padding:5px 14px;border-radius:16px;font-weight:900;font-size:.92rem;animation:blink 2s infinite;z-index:10}@keyframes blink{0%,100%{opacity:1}50%{opacity:.6}}
-.demo-card:hover{transform:translateY(-8px);box-shadow:0 16px 45px rgba(246,185,59,.25);border-color:#f6b93b}
-.demo-image{width:100%;height:210px;position:relative;display:flex;align-items:center;justify-content:center;overflow:hidden;background:linear-gradient(135deg,#f6b93b15,#26de8115)}
-.demo-image .flag-cover{width:100%;height:100%;background-size:cover;background-position:center;opacity:0.85;position:absolute;top:0;left:0}
-.demo-image .flag-badge{font-size:3.5rem;position:relative;z-index:5;text-shadow:0 3px 12px rgba(0,0,0,.3)}
-.demo-content{padding:26px 18px 20px 18px;text-align:center;width:100%}
-.demo-content h3{font-size:1.33rem;color:#1a2238;font-weight:900;margin:0 0 10px 0}
-.demo-platform{color:#4a69bd;font-weight:600;font-size:.98rem;margin-bottom:8px}
-.price-ask{background:linear-gradient(135deg,#fef3c7,#fde68a);color:#7c2d12;padding:6px 14px;border-radius:22px;display:inline-block;margin-bottom:10px;font-weight:800;box-shadow:0 2px 8px #fad39034}
-.demo-buttons{display:flex;gap:12px;margin-top:10px}
-.demo-buttons .btn-demo{flex:1;padding:13px 0;border-radius:16px;font-weight:700;background:linear-gradient(135deg,#f6b93b,#fad390);color:#16213e;border:none;transition:.3s;box-shadow:0 2px 12px #fad39022;text-decoration:none;text-align:center}
-.demo-buttons .btn-demo:hover{transform:translateY(-3px);background:linear-gradient(135deg,#f6b93b,#dc2626);color:#fff}
-.demo-buttons .btn-outline{flex:1;background:#fff;color:#4a69bd;border:2px solid #4a69bd;border-radius:16px;font-weight:700;padding:13px 0;transition:.3s;text-decoration:none;text-align:center}
-.demo-buttons .btn-outline:hover{background:linear-gradient(135deg,#4a69bd,#6a89cc);color:#fff;border-color:#6a89cc}
-.live-demo-cta{text-align:center;margin:60px auto 0 auto;padding:50px;background:linear-gradient(135deg,#4a69bd,#6a89cc);color:#fff;border-radius:30px;box-shadow:0 15px 40px #4a69bd18;max-width:600px}
-.live-demo-cta h3{font-size:1.8rem;font-weight:900;margin-bottom:20px;color:#fff}
-.live-demo-cta p{color:rgba(255,255,255,0.92);margin-bottom:30px;font-size:1.1rem}
-.live-demo-cta .btn-main{background:#fff;color:#4a69bd;font-weight:900;padding:16px 38px}
-.footer{background:rgba(0,0,0,.15);padding:40px 0 24px 0;margin-top:80px;border-top:1.5px solid #fad39018}
-.footer-content{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:2rem;margin-bottom:28px}
-.footer-section h3{font-size:1.3rem;margin-bottom:16px;color:#f6b93b;font-weight:900}
-.footer-section p, .footer-section a{color:#e8eaf0;text-decoration:none;display:block;margin-bottom:8px;transition:.3s}
-.footer-section a:hover{color:#fad390;padding-right:5px}
-.social-links{display:flex;gap:14px;margin-top:16px}
-.social-link{width:35px;height:35px;background:rgba(255,255,255,.08);border-radius:12px;display:flex;align-items:center;justify-content:center;color:#fff;text-decoration:none;transition:.3s;font-size:1.15rem}
-.social-link:hover{background:linear-gradient(135deg,#f6b93b,#26de81);transform:translateY(-2px;)}
-.footer-bottom{text-align:center;padding-top:24px;border-top:1px solid rgba(255,255,255,.05);color:#e8eaf0;font-size:.99rem}
-.whatsapp-float{position:fixed;bottom:26px;left:32px;z-index:999}
-.whatsapp-btn{display:flex;align-items:center;gap:8px;background:linear-gradient(135deg,#25d366,#20bf6b);color:#fff;padding:13px 21px;border-radius:33px;text-decoration:none;font-weight:900;box-shadow:0 7px 22px #20bf6b44;transition:.3s;font-size:1.09rem}
-.whatsapp-btn:hover{transform:translateY(-3px);box-shadow:0 15px 33px #20bf6b77;}
-@media(max-width:650px){.demos-grid{grid-template-columns:1fr;}.footer-content{grid-template-columns:1fr;}.hero-demo h1{font-size:2rem}.live-demo-cta{padding:30px 8px}.demo-image .flag-cover{right:50%;top:20px;transform:translateX(50%);}}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>المتاجر الإلكترونية - مؤسسة إعلانات العرب</title>
+    <meta name="description" content="متاجر إلكترونية احترافية جاهزة للمبيعات مع تكامل الدفع والشحن وإدارة متقدمة.">
+    <link rel="canonical" href="https://sherow1982.github.io/arabsad/services/ecommerce.html">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "name": "المتاجر الإلكترونية",
+      "description": "تصميم وتطوير متاجر إلكترونية احترافية مع كل الخدمات المرتبطة",
+      "serviceType": "E-commerce Store Development"
+    }
+    </script>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        :root {
+            --primary: #FFB800;
+            --primary-dark: #FF9500;
+            --dark-bg: #0a0e27;
+            --dark-secondary: #1a1f3a;
+            --text-light: #e8edf5;
+            --text-muted: #a8b3c1;
+            --accent: #00d4aa;
+        }
+        html, body { font-family: 'Segoe UI', sans-serif; background: var(--dark-bg); color: var(--text-light); line-height: 1.6; }
+        header { position: fixed; top: 0; width: 100%; z-index: 1000; background: rgba(10, 14, 39, 0.95); backdrop-filter: blur(10px); border-bottom: 1px solid rgba(255, 184, 0, 0.1); padding: 1.2rem 2rem; }
+        .header-wrapper { max-width: 1400px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; gap: 2rem; }
+        .logo { font-size: 1.5rem; font-weight: 800; background: linear-gradient(135deg, var(--primary), var(--accent)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; text-decoration: none; }
+        nav { display: flex; gap: 3rem; list-style: none; flex: 1; justify-content: center; }
+        nav a { color: var(--text-light); text-decoration: none; font-weight: 500; }
+        nav a:hover { color: var(--primary); }
+        .cta-header { background: linear-gradient(135deg, var(--primary), var(--primary-dark)); color: #000; padding: 0.8rem 1.8rem; border-radius: 50px; text-decoration: none; font-weight: 600; white-space: nowrap; }
+        main { margin-top: 80px; }
+        .breadcrumb { padding: 1rem 2rem; background: rgba(255, 184, 0, 0.05); }
+        .breadcrumb-content { max-width: 1400px; margin: 0 auto; color: var(--text-muted); font-size: 0.9rem; }
+        .breadcrumb a { color: var(--primary); text-decoration: none; }
+        .hero { padding: 4rem 2rem; }
+        .hero-content { max-width: 1200px; margin: 0 auto; }
+        .hero h1 { font-size: clamp(2rem, 6vw, 3.5rem); margin-bottom: 1.5rem; background: linear-gradient(135deg, var(--primary), var(--accent)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .hero p { font-size: 1.1rem; color: var(--text-muted); margin-bottom: 2rem; }
+        .content-section { padding: 4rem 2rem; max-width: 1200px; margin: 0 auto; }
+        h2 { font-size: 2rem; margin-bottom: 2rem; border-right: 4px solid var(--primary); padding-right: 1rem; }
+        .features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; }
+        .feature-card { background: linear-gradient(135deg, rgba(255, 184, 0, 0.08), rgba(0, 212, 170, 0.05)); border: 2px solid rgba(255, 184, 0, 0.2); border-radius: 15px; padding: 2rem; }
+        .feature-card:hover { border-color: rgba(255, 184, 0, 0.5); transform: translateY(-10px); }
+        .feature-icon { font-size: 2.5rem; margin-bottom: 1rem; }
+        .feature-card h3 { font-size: 1.2rem; margin-bottom: 0.8rem; color: var(--primary); }
+        .feature-card p { color: var(--text-muted); font-size: 0.95rem; }
+        .cta-section { padding: 4rem 2rem; background: linear-gradient(135deg, rgba(255, 184, 0, 0.1), rgba(0, 212, 170, 0.05)); text-align: center; border-radius: 20px; margin-top: 4rem; }
+        .btn { display: inline-flex; align-items: center; gap: 0.5rem; padding: 1.1rem 2.5rem; background: linear-gradient(135deg, var(--primary), var(--primary-dark)); color: #000; text-decoration: none; border-radius: 50px; font-weight: 600; }
+        footer { background: var(--dark-secondary); border-top: 2px solid rgba(255, 184, 0, 0.1); padding: 3rem 2rem 1.5rem; margin-top: 4rem; }
+        .footer-grid { max-width: 1400px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 3rem; margin-bottom: 2rem; }
+        .footer-column h4 { color: var(--primary); margin-bottom: 1rem; }
+        .footer-column ul { list-style: none; }
+        .footer-column a { color: var(--text-muted); text-decoration: none; }
+        .footer-bottom { border-top: 1px solid rgba(255, 184, 0, 0.1); padding-top: 1.5rem; text-align: center; color: var(--text-muted); font-size: 0.85rem; }
+    </style>
 </head>
 <body>
-<header class="header">
-  <div class="container nav">
-    <a href="/arabsad/" class="logo">🌐 إعلانات العرب</a>
-    <nav class="nav-menu">
-      <a href="/arabsad/">الرئيسية</a>
-      <a href="#services">الخدمات</a>
-      <a href="https://wa.me/201110760081" target="_blank">اتصل بنا</a>
-    </nav>
-    <a href="https://wa.me/201110760081?text=أريد متجر إلكتروني" target="_blank" class="btn-main">اطلب متجرك</a>
-  </div>
-</header>
-
-<main>
-  <section class="hero-demo">
-    <span class="live-badge">⚡ متاجر مباشرة الآن</span>
-    <h1>متاجر إلكترونية خليجية احترافية</h1>
-    <p class="desc">نعرض أمثلة حقيقية لمتاجرنا تعمل الآن في أسواق الخليج مع أنظمة دفع وشحن محلية</p>
-  </section>
-
-  <div class="container">
-    <div class="demos-grid">
-      <!-- Hadaya Emirates (Vercel) -->
-      <div class="demo-card" onclick="window.open('https://hadaya-emirates-arabsad-com.vercel.app/', '_blank')">
-        <div class="demo-image">
-          <div class="flag-cover" style="background-image:url('https://flagcdn.com/w1600/ae.png')"></div>
-          <span class="flag-badge">🇦🇪</span>
+    <header>
+        <div class="header-wrapper">
+            <a href="/arabsad/" class="logo">🌐 إعلانات العرب</a>
+            <nav>
+                <a href="/arabsad/#services">الخدمات</a>
+                <a href="/arabsad/#contact">اتصل</a>
+            </nav>
+            <a href="https://wa.me/201110760081?text=%D8%B1%D9%8A%D8%AF%20%D9%85%D8%AA%D8%AC%D8%B1%20%D8%A7%D9%84%D9%83%D8%AA%D8%B1%D9%88%D9%86%D9%8A" target="_blank" class="cta-header">💬 استفسر</a>
         </div>
-        <div class="demo-content">
-          <h3>هدايا الإمارات</h3>
-          <p class="demo-platform">Vercel | HTML</p>
-          <div class="price-ask">اطلب السعر</div>
-          <div class="demo-buttons">
-            <a href="https://hadaya-emirates-arabsad-com.vercel.app/" class="btn-demo" target="_blank" onclick="event.stopPropagation()">🔴 عرض مباشر</a>
-            <a href="https://github.com/sherow1982/hadaya-emirates.arabsad.com" class="btn-outline" target="_blank" onclick="event.stopPropagation()">💻 GitHub</a>
-          </div>
+    </header>
+    <main>
+        <div class="breadcrumb"><div class="breadcrumb-content"><a href="/arabsad/">الرئيسية</a> / متاجر إلكترونية</div></div>
+        <section class="hero">
+            <div class="hero-content">
+                <h1>🛒 متاجر إلكترونية احترافية</h1>
+                <p>متاجر جاهزة للبيع مع جميع الميزات اللازمة لنجاح عملك</p>
+            </div>
+        </section>
+        <section class="content-section">
+            <h2>المميزات</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">⚡</div>
+                    <h3>سرعة عالية</h3>
+                    <p>متاجر سريعة التحميل وآمنة للدفع الإلكتروني</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">💳</div>
+                    <h3>تكامل الدفع</h3>
+                    <p>ربط بجميع وسائل الدفع المحلية والعالمية</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📦</div>
+                    <h3>إدارة الشحن</h3>
+                    <p>تكامل مع شركات الشحن الرئيسية لتسهيل العمليات</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📱</div>
+                    <h3>متجاوب</h3>
+                    <p>تصميم يعمل بشكل مثالي على جميع الأجهزة</p>
+                </div>
+            </div>
+        </section>
+        <section class="content-section cta-section">
+            <h2 style="border: none; padding: 0; margin-bottom: 1rem;">ابدأ متجرك الآن</h2>
+            <p>نحن هنا لمساعدتك في إطلاق متجرك الإلكتروني الاحترافي</p>
+            <a href="https://wa.me/201110760081?text=%D8%B1%D9%8A%D8%AF%20%D8%A8%D8%AF%D8%A1%20%D9%85%D8%AA%D8%AC%D8%B1" target="_blank" class="btn">💬 استفسر الآن</a>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-column">
+                <h4>الخدمات</h4>
+                <ul>
+                    <li><a href="/arabsad/services/ecommerce.html" target="_blank">متاجر</a></li>
+                    <li><a href="/arabsad/services/google-ads.html" target="_blank">إعلانات</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>اتصل</h4>
+                <ul>
+                    <li><a href="https://wa.me/201110760081" target="_blank">💬 WhatsApp</a></li>
+                </ul>
+            </div>
         </div>
-      </div>
-
-      <!-- Sooq Alemarat -->
-      <div class="demo-card" onclick="window.open('https://sherow1982.github.io/sooq-alemarat/', '_blank')">
-        <div class="demo-image">
-          <div class="flag-cover" style="background-image:url('https://flagcdn.com/w1600/ae.png')"></div>
-          <span class="flag-badge">🇦🇪</span>
-        </div>
-        <div class="demo-content">
-          <h3>سوق الإمارات</h3>
-          <p class="demo-platform">GitHub Pages | HTML</p>
-          <div class="price-ask">اطلب السعر</div>
-          <div class="demo-buttons">
-            <a href="https://sherow1982.github.io/sooq-alemarat/" class="btn-demo" target="_blank" onclick="event.stopPropagation()">🔴 عرض مباشر</a>
-            <a href="https://github.com/sherow1982/sooq-alemarat" class="btn-outline" target="_blank" onclick="event.stopPropagation()">💻 GitHub</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Emirates Shopping -->
-      <div class="demo-card" onclick="window.open('https://sherow1982.github.io/Emirates-shopping/', '_blank')">
-        <div class="demo-image">
-          <div class="flag-cover" style="background-image:url('https://flagcdn.com/w1600/ae.png')"></div>
-          <span class="flag-badge">🇦🇪</span>
-        </div>
-        <div class="demo-content">
-          <h3>Emirates Shopping</h3>
-          <p class="demo-platform">GitHub Pages | HTML</p>
-          <div class="price-ask">اطلب السعر</div>
-          <div class="demo-buttons">
-            <a href="https://sherow1982.github.io/Emirates-shopping/" class="btn-demo" target="_blank" onclick="event.stopPropagation()">🔴 عرض مباشر</a>
-            <a href="https://github.com/sherow1982/Emirates-shopping" class="btn-outline" target="_blank" onclick="event.stopPropagation()">💻 GitHub</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Matjar Makhzoon Alemarat -->
-      <div class="demo-card" onclick="window.open('https://sherow1982.github.io/matjar-makhzoon-alemarat/', '_blank')">
-        <div class="demo-image">
-          <div class="flag-cover" style="background-image:url('https://flagcdn.com/w1600/ae.png')"></div>
-          <span class="flag-badge">🇦🇪</span>
-        </div>
-        <div class="demo-content">
-          <h3>متجر مخزون الإمارات</h3>
-          <p class="demo-platform">GitHub Pages | HTML</p>
-          <div class="price-ask">اطلب السعر</div>
-          <div class="demo-buttons">
-            <a href="https://sherow1982.github.io/matjar-makhzoon-alemarat/" class="btn-demo" target="_blank" onclick="event.stopPropagation()">🔴 عرض مباشر</a>
-            <a href="https://github.com/sherow1982/matjar-makhzoon-alemarat" class="btn-outline" target="_blank" onclick="event.stopPropagation()">💻 GitHub</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Matager Makhzoon Alemarat -->
-      <div class="demo-card" onclick="window.open('https://sherow1982.github.io/matager-makhzoon-alemarat/', '_blank')">
-        <div class="demo-image">
-          <div class="flag-cover" style="background-image:url('https://flagcdn.com/w1600/ae.png')"></div>
-          <span class="flag-badge">🇦🇪</span>
-        </div>
-        <div class="demo-content">
-          <h3>مول مخزون الإمارات</h3>
-          <p class="demo-platform">GitHub Pages | HTML</p>
-          <div class="price-ask">اطلب السعر</div>
-          <div class="demo-buttons">
-            <a href="https://sherow1982.github.io/matager-makhzoon-alemarat/" class="btn-demo" target="_blank" onclick="event.stopPropagation()">🔴 عرض مباشر</a>
-            <a href="https://github.com/sherow1982/matager-makhzoon-alemarat" class="btn-outline" target="_blank" onclick="event.stopPropagation()">💻 GitHub</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Kuwait Matjar -->
-      <div class="demo-card" onclick="window.open('https://sherow1982.github.io/Kuwait-matjar/', '_blank')">
-        <div class="demo-image">
-          <div class="flag-cover" style="background-image:url('https://flagcdn.com/w1600/kw.png')"></div>
-          <span class="flag-badge">🇰🇼</span>
-        </div>
-        <div class="demo-content">
-          <h3>متجر الكويت</h3>
-          <p class="demo-platform">GitHub Pages | HTML</p>
-          <div class="price-ask">اطلب السعر</div>
-          <div class="demo-buttons">
-            <a href="https://sherow1982.github.io/Kuwait-matjar/" class="btn-demo" target="_blank" onclick="event.stopPropagation()">🔴 عرض مباشر</a>
-            <a href="https://github.com/sherow1982/Kuwait-matjar" class="btn-outline" target="_blank" onclick="event.stopPropagation()">💻 GitHub</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Sooq Alkuwait -->
-      <div class="demo-card" onclick="window.open('https://sherow1982.github.io/sooq-alkuwait/', '_blank')">
-        <div class="demo-image">
-          <div class="flag-cover" style="background-image:url('https://flagcdn.com/w1600/kw.png')"></div>
-          <span class="flag-badge">🇰🇼</span>
-        </div>
-        <div class="demo-content">
-          <h3>سوق الكويت</h3>
-          <p class="demo-platform">GitHub Pages | HTML</p>
-          <div class="price-ask">اطلب السعر</div>
-          <div class="demo-buttons">
-            <a href="https://sherow1982.github.io/sooq-alkuwait/" class="btn-demo" target="_blank" onclick="event.stopPropagation()">🔴 عرض مباشر</a>
-            <a href="https://github.com/sherow1982/sooq-alkuwait" class="btn-outline" target="_blank" onclick="event.stopPropagation()">💻 GitHub</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Saudi Matjar -->
-      <div class="demo-card" onclick="window.open('https://sherow1982.github.io/saudi-matjar.arabsad.com/', '_blank')">
-        <div class="demo-image">
-          <div class="flag-cover" style="background-image:url('https://flagcdn.com/w1600/sa.png')"></div>
-          <span class="flag-badge">🇸🇦</span>
-        </div>
-        <div class="demo-content">
-          <h3>متجر السعودية</h3>
-          <p class="demo-platform">GitHub Pages | HTML</p>
-          <div class="price-ask">اطلب السعر</div>
-          <div class="demo-buttons">
-            <a href="https://sherow1982.github.io/saudi-matjar.arabsad.com/" class="btn-demo" target="_blank" onclick="event.stopPropagation()">🔴 عرض مباشر</a>
-            <a href="https://github.com/sherow1982/saudi-matjar.arabsad.com" class="btn-outline" target="_blank" onclick="event.stopPropagation()">💻 GitHub</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Alsooq Alsaudi -->
-      <div class="demo-card" onclick="window.open('https://sherow1982.github.io/alsooq-alsaudi/', '_blank')">
-        <div class="demo-image">
-          <div class="flag-cover" style="background-image:url('https://flagcdn.com/w1600/sa.png')"></div>
-          <span class="flag-badge">🇸🇦</span>
-        </div>
-        <div class="demo-content">
-          <h3>السوق السعودي</h3>
-          <p class="demo-platform">GitHub Pages | HTML</p>
-          <div class="price-ask">اطلب السعر</div>
-          <div class="demo-buttons">
-            <a href="https://sherow1982.github.io/alsooq-alsaudi/" class="btn-demo" target="_blank" onclick="event.stopPropagation()">🔴 عرض مباشر</a>
-            <a href="https://github.com/sherow1982/alsooq-alsaudi" class="btn-outline" target="_blank" onclick="event.stopPropagation()">💻 GitHub</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Matjar Oman -->
-      <div class="demo-card" onclick="window.open('https://matjar-oman.vercel.app/', '_blank')">
-        <div class="demo-image">
-          <div class="flag-cover" style="background-image:url('https://flagcdn.com/w1600/om.png')"></div>
-          <span class="flag-badge">🇴🇲</span>
-        </div>
-        <div class="demo-content">
-          <h3>متجر عمان</h3>
-          <p class="demo-platform">Vercel | HTML</p>
-          <div class="price-ask">اطلب السعر</div>
-          <div class="demo-buttons">
-            <a href="https://matjar-oman.vercel.app/" class="btn-demo" target="_blank" onclick="event.stopPropagation()">🔴 عرض مباشر</a>
-            <a href="https://github.com/sherow1982/matjar-oman" class="btn-outline" target="_blank" onclick="event.stopPropagation()">💻 GitHub</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Iraq Store -->
-      <div class="demo-card" onclick="window.open('https://sherow1982.github.io/Iraq-Store/', '_blank')">
-        <div class="demo-image">
-          <div class="flag-cover" style="background-image:url('https://flagcdn.com/w1600/iq.png')"></div>
-          <span class="flag-badge">🇮🇶</span>
-        </div>
-        <div class="demo-content">
-          <h3>متجر العراق</h3>
-          <p class="demo-platform">GitHub Pages | HTML</p>
-          <div class="price-ask">اطلب السعر</div>
-          <div class="demo-buttons">
-            <a href="https://sherow1982.github.io/Iraq-Store/" class="btn-demo" target="_blank" onclick="event.stopPropagation()">🔴 عرض مباشر</a>
-            <a href="https://github.com/sherow1982/Iraq-Store" class="btn-outline" target="_blank" onclick="event.stopPropagation()">💻 GitHub</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Iraq Ninja Store -->
-      <div class="demo-card" onclick="window.open('https://sherow1982.github.io/iraq-ninja-store', '_blank')">
-        <div class="demo-image">
-          <div class="flag-cover" style="background-image:url('https://flagcdn.com/w1600/iq.png')"></div>
-          <span class="flag-badge">🇮🇶</span>
-        </div>
-        <div class="demo-content">
-          <h3>نينجا ستور العراق</h3>
-          <p class="demo-platform">GitHub Pages | HTML</p>
-          <div class="price-ask">اطلب السعر</div>
-          <div class="demo-buttons">
-            <a href="https://sherow1982.github.io/iraq-ninja-store" class="btn-demo" target="_blank" onclick="event.stopPropagation()">🔴 عرض مباشر</a>
-            <a href="https://github.com/sherow1982/iraq-ninja-store" class="btn-outline" target="_blank" onclick="event.stopPropagation()">💻 GitHub</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Arabic Ads Platform -->
-      <div class="demo-card" onclick="window.open('https://github.com/sherow1982/arabic-ads', '_blank')">
-        <div class="demo-image">
-          <div class="flag-cover" style="background:linear-gradient(135deg,#eb3b5a,#fc5c65)"></div>
-          <span class="flag-badge">📢</span>
-        </div>
-        <div class="demo-content">
-          <h3>منصة الإعلانات العربية</h3>
-          <p class="demo-platform">GitHub | HTML</p>
-          <div class="price-ask">منصة متقدمة</div>
-          <div class="demo-buttons">
-            <a href="https://github.com/sherow1982/arabic-ads" class="btn-demo" target="_blank" onclick="event.stopPropagation()">💻 GitHub</a>
-            <a href="https://wa.me/201110760081?text=أريد منصة إعلانات" class="btn-outline" target="_blank" onclick="event.stopPropagation()">💬 استفسر</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Aqarat Platform -->
-      <div class="demo-card" onclick="window.open('https://aqarat.arabsad.com/', '_blank')">
-        <div class="demo-image">
-          <div class="flag-cover" style="background:linear-gradient(135deg,#667eea,#764ba2)"></div>
-          <span class="flag-badge">🏢</span>
-        </div>
-        <div class="demo-content">
-          <h3>منصة العقارات</h3>
-          <p class="demo-platform">GitHub Pages | HTML</p>
-          <div class="price-ask">منصة متخصصة</div>
-          <div class="demo-buttons">
-            <a href="https://aqarat.arabsad.com/" class="btn-demo" target="_blank" onclick="event.stopPropagation()">🔴 عرض مباشر</a>
-            <a href="https://github.com/sherow1982/aqarat" class="btn-outline" target="_blank" onclick="event.stopPropagation()">💻 GitHub</a>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="live-demo-cta">
-      <h3>🚀 تريد متجراً مثل هذه؟</h3>
-      <p>احصل على متجر احترافي جاهز للبيع مع تكاملات الدفع والشحن والإعلانات</p>
-      <a href="https://wa.me/201110760081?text=أريد متجر إلكتروني احترافي" target="_blank" class="btn-main">اطلب الآن عبر واتساب</a>
-    </div>
-  </div>
-</main>
-
-<footer class="footer">
-  <div class="container footer-content">
-    <div class="footer-section">
-      <h3>🌐 إعلانات العرب</h3>
-      <p>وكالة تسويق رقمي متخصصة في تصميم متاجر إلكترونية واحترافية في الخليج العربي مع دعم 24/7</p>
-      <div class="social-links">
-        <a href="https://facebook.com" class="social-link" target="_blank">f</a>
-        <a href="https://instagram.com" class="social-link" target="_blank">📷</a>
-        <a href="https://twitter.com" class="social-link" target="_blank">𝕏</a>
-      </div>
-    </div>
-    <div class="footer-section">
-      <h3>📞 تواصل</h3>
-      <a href="tel:+201110760081">☎️ +201110760081</a>
-      <a href="https://wa.me/201110760081" target="_blank">💬 واتساب</a>
-      <a href="mailto:info@arabsad.com">📧 البريد الإلكتروني</a>
-    </div>
-    <div class="footer-section">
-      <h3>📋 الخدمات</h3>
-      <a href="/arabsad/">المتاجر الإلكترونية</a>
-      <a href="/arabsad/">إعلانات Google</a>
-      <a href="/arabsad/">إدارة السوشيال</a>
-      <a href="/arabsad/">تحسين محركات البحث</a>
-    </div>
-  </div>
-  <div class="footer-bottom">
-    <p>&copy; 2025 مؤسسة إعلانات العرب - جميع الحقوق محفوظة</p>
-  </div>
-</footer>
-
-<div class="whatsapp-float">
-  <a href="https://wa.me/201110760081" target="_blank" class="whatsapp-btn">
-    <span>💬</span>
-    <span>تواصل</span>
-  </a>
-</div>
+        <div class="footer-bottom"><p>&copy; 2025 إعلانات العرب</p></div>
+    </footer>
+    <script src="/arabsad/js/bfcache-fix.js"></script>
 </body>
 </html>
