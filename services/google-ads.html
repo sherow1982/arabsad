@@ -3,12 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="خدمة إعلانات Google Ads - حملات احترافية على محرك البحث بنتائج مضمونة وROI عالي.">
-    <title>إعلانات Google Ads - تسويق رقمي احترافي | ArabSad</title>
-    <meta name="keywords" content="Google Ads, إعلانات جوجل, تسويق رقمي, حملات البحث, PPC">
-    <meta property="og:title" content="إعلانات Google Ads - تسويق رقمي احترافي | ArabSad">
-    <meta property="og:description" content="خدمة إعلانات Google Ads - حملات احترافية على محرك البحث">
+    <title>إعلانات Google Ads - مؤسسة إعلانات العرب</title>
+    <meta name="description" content="خدمات إعلانات Google Ads مصر والخليج. حملات احترافية عالية الإذارة مع ROI مضمون.">
+    <meta property="og:title" content="إعلانات Google Ads محرفة">
+    <meta property="og:description" content="استراتيجيات إعلانية مربحة مع دعم مباشر">
     <link rel="canonical" href="https://sherow1982.github.io/arabsad/services/google-ads.html">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "name": "إعلانات Google Ads",
+      "description": "خدمات إعلانات Google Ads مخصصة لزيادة مبيعاتك ورلفع ROI",
+      "serviceType": "تسويق رقمي",
+      "areaServed": ["EG", "AE", "SA", "KW", "QA", "OM", "BH"],
+      "provider": {
+        "@type": "LocalBusiness",
+        "name": "مؤسسة إعلانات العرب",
+        "image": "https://sherow1982.github.io/arabsad/og_image_arabsad.png",
+        "telephone": "+201110760081",
+        "email": "info@arabsad.com"
+      }
+    }
+    </script>
     <style>
         * {
             margin: 0;
@@ -56,17 +72,13 @@
         }
 
         .logo {
-            font-size: 1.8rem;
+            font-size: 1.5rem;
             font-weight: 800;
             background: linear-gradient(135deg, var(--primary), var(--accent));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
             text-decoration: none;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            min-width: max-content;
         }
 
         nav {
@@ -81,9 +93,7 @@
             color: var(--text-light);
             text-decoration: none;
             font-weight: 500;
-            transition: all 0.3s ease;
-            position: relative;
-            font-size: 0.95rem;
+            transition: color 0.3s ease;
         }
 
         nav a:hover {
@@ -98,31 +108,50 @@
             text-decoration: none;
             font-weight: 600;
             transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(255, 184, 0, 0.3);
             white-space: nowrap;
         }
 
         .cta-header:hover {
             transform: translateY(-2px);
-            box-shadow: 0 6px 25px rgba(255, 184, 0, 0.4);
         }
 
-        /* Main Content */
+        /* Main */
         main {
             margin-top: 80px;
         }
 
-        .hero {
-            background: linear-gradient(135deg, rgba(255, 184, 0, 0.05) 0%, rgba(0, 212, 170, 0.03) 100%);
-            padding: 4rem 2rem;
-            text-align: center;
+        .breadcrumb {
+            padding: 1rem 2rem;
+            background: rgba(255, 184, 0, 0.05);
             border-bottom: 1px solid rgba(255, 184, 0, 0.1);
+        }
+
+        .breadcrumb-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        .breadcrumb a {
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 4rem 2rem;
+            background: linear-gradient(135deg, rgba(255, 184, 0, 0.05), rgba(0, 212, 170, 0.03));
+        }
+
+        .hero-content {
+            max-width: 1200px;
+            margin: 0 auto;
         }
 
         .hero h1 {
             font-size: clamp(2rem, 6vw, 3.5rem);
-            font-weight: 900;
-            margin-bottom: 1rem;
+            margin-bottom: 1.5rem;
             background: linear-gradient(135deg, var(--primary), var(--accent));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
@@ -132,172 +161,196 @@
         .hero p {
             font-size: 1.1rem;
             color: var(--text-muted);
-            max-width: 600px;
-            margin: 0 auto;
+            margin-bottom: 2rem;
+            max-width: 700px;
         }
 
-        .container {
+        /* Content Section */
+        .content-section {
+            padding: 4rem 2rem;
             max-width: 1200px;
             margin: 0 auto;
-            padding: 0 2rem;
         }
 
-        section {
-            padding: 4rem 2rem;
-        }
-
-        section h2 {
-            font-size: 2.2rem;
-            font-weight: 900;
+        h2 {
+            font-size: 2rem;
             margin-bottom: 2rem;
-            background: linear-gradient(135deg, var(--primary), var(--accent));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
+            color: var(--text-light);
+            border-right: 4px solid var(--primary);
+            padding-right: 1rem;
         }
 
-        .service-features {
+        .features-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 2rem;
-            margin-top: 2rem;
+            margin-bottom: 4rem;
         }
 
-        .feature {
-            background: rgba(255, 184, 0, 0.05);
-            border: 1px solid rgba(255, 184, 0, 0.2);
+        .feature-card {
+            background: linear-gradient(135deg, rgba(255, 184, 0, 0.08), rgba(0, 212, 170, 0.05));
+            border: 2px solid rgba(255, 184, 0, 0.2);
+            border-radius: 15px;
             padding: 2rem;
-            border-radius: 12px;
             transition: all 0.3s ease;
         }
 
-        .feature:hover {
-            background: rgba(255, 184, 0, 0.1);
-            border-color: rgba(255, 184, 0, 0.4);
-            transform: translateY(-5px);
+        .feature-card:hover {
+            border-color: rgba(255, 184, 0, 0.5);
+            transform: translateY(-10px);
         }
 
-        .feature h3 {
-            font-size: 1.3rem;
+        .feature-icon {
+            font-size: 2.5rem;
             margin-bottom: 1rem;
+        }
+
+        .feature-card h3 {
+            font-size: 1.2rem;
+            margin-bottom: 0.8rem;
             color: var(--primary);
         }
 
-        .feature p {
+        .feature-card p {
             color: var(--text-muted);
-            line-height: 1.8;
+            font-size: 0.95rem;
         }
 
-        .benefits-list {
-            list-style: none;
-            margin: 2rem 0;
+        /* Process Section */
+        .process {
+            background: rgba(255, 184, 0, 0.03);
+            border-top: 2px solid rgba(255, 184, 0, 0.1);
+            border-bottom: 2px solid rgba(255, 184, 0, 0.1);
         }
 
-        .benefits-list li {
-            padding: 0.8rem 0;
-            padding-right: 2rem;
+        .process-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+        }
+
+        .step {
+            text-align: center;
             position: relative;
-            color: var(--text-muted);
-            font-size: 1.05rem;
         }
 
-        .benefits-list li::before {
-            content: '✓';
+        .step::after {
+            content: '';
             position: absolute;
-            right: 0;
-            color: var(--accent);
-            font-weight: bold;
-            font-size: 1.2rem;
+            right: -1.5rem;
+            top: 30px;
+            width: 3rem;
+            height: 2px;
+            background: rgba(255, 184, 0, 0.2);
         }
 
-        .cta-button {
-            display: inline-block;
-            padding: 1rem 2.5rem;
+        .step:last-child::after {
+            display: none;
+        }
+
+        .step-number {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            color: #000;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            font-size: 1.5rem;
+            margin: 0 auto 1.5rem;
+        }
+
+        .step h3 {
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .step p {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            padding: 4rem 2rem;
+            background: linear-gradient(135deg, rgba(255, 184, 0, 0.1), rgba(0, 212, 170, 0.05));
+            text-align: center;
+            border-radius: 20px;
+            margin-top: 4rem;
+        }
+
+        .cta-section h2 {
+            border: none;
+            padding: 0;
+            margin-bottom: 1rem;
+            color: var(--text-light);
+        }
+
+        .cta-section p {
+            color: var(--text-muted);
+            margin-bottom: 2rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 1.1rem 2.5rem;
             background: linear-gradient(135deg, var(--primary), var(--primary-dark));
             color: #000;
             text-decoration: none;
             border-radius: 50px;
             font-weight: 600;
             transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(255, 184, 0, 0.3);
-            margin-top: 2rem;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
         }
 
-        .cta-button:hover {
+        .btn:hover {
             transform: translateY(-3px);
-            box-shadow: 0 8px 30px rgba(255, 184, 0, 0.5);
-        }
-
-        .pricing-section {
-            background: rgba(255, 184, 0, 0.02);
-        }
-
-        .pricing-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-top: 2rem;
-        }
-
-        .pricing-card {
-            background: var(--dark-secondary);
-            border: 2px solid rgba(255, 184, 0, 0.2);
-            border-radius: 12px;
-            padding: 2.5rem;
-            text-align: center;
-            transition: all 0.3s ease;
-        }
-
-        .pricing-card:hover {
-            border-color: var(--primary);
-            background: rgba(255, 184, 0, 0.05);
-            transform: translateY(-10px);
-        }
-
-        .pricing-card h4 {
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
-            color: var(--primary);
-        }
-
-        .price {
-            font-size: 2.5rem;
-            font-weight: 900;
-            color: var(--accent);
-            margin: 1rem 0;
+            box-shadow: 0 10px 30px rgba(255, 184, 0, 0.3);
         }
 
         /* Footer */
         footer {
             background: var(--dark-secondary);
             border-top: 2px solid rgba(255, 184, 0, 0.1);
-            padding: 4rem 2rem 2rem;
-        }
-
-        .footer-content {
-            max-width: 1400px;
-            margin: 0 auto;
+            padding: 3rem 2rem 1.5rem;
+            margin-top: 4rem;
         }
 
         .footer-grid {
+            max-width: 1400px;
+            margin: 0 auto;
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 3rem;
-            margin-bottom: 3rem;
+            margin-bottom: 2rem;
         }
 
         .footer-column h4 {
             color: var(--primary);
-            margin-bottom: 1.5rem;
-            font-size: 1.1rem;
+            margin-bottom: 1rem;
+        }
+
+        .footer-column ul {
+            list-style: none;
+        }
+
+        .footer-column ul li {
+            margin-bottom: 0.5rem;
         }
 
         .footer-column a {
             color: var(--text-muted);
             text-decoration: none;
             transition: color 0.3s ease;
-            display: block;
-            margin-bottom: 0.8rem;
         }
 
         .footer-column a:hover {
@@ -306,19 +359,22 @@
 
         .footer-bottom {
             border-top: 1px solid rgba(255, 184, 0, 0.1);
-            padding-top: 2rem;
+            padding-top: 1.5rem;
             text-align: center;
             color: var(--text-muted);
+            font-size: 0.85rem;
         }
 
+        /* Responsive */
         @media (max-width: 768px) {
             header { padding: 1rem; }
-            .header-wrapper { gap: 1rem; }
+            .header-wrapper { gap: 0.5rem; }
             nav { display: none; }
-            main { margin-top: 70px; }
-            section { padding: 2rem 1rem; }
-            .service-features { grid-template-columns: 1fr; }
-            .pricing-grid { grid-template-columns: 1fr; }
+            .hero { padding: 3rem 1.5rem; }
+            .content-section { padding: 3rem 1.5rem; }
+            h2 { font-size: 1.5rem; }
+            .process-steps { gap: 2rem; }
+            .step::after { display: none; }
         }
     </style>
 </head>
@@ -328,129 +384,139 @@
         <div class="header-wrapper">
             <a href="/arabsad/" class="logo">🌐 إعلانات العرب</a>
             <nav>
-                <a href="/arabsad/">الرئيسية</a>
-                <a href="/arabsad/services/">الخدمات</a>
+                <a href="/arabsad/#services">الخدمات</a>
                 <a href="/arabsad/#contact">اتصل بنا</a>
             </nav>
-            <a href="https://wa.me/201110760081" target="_blank" class="cta-header">💬 تواصل</a>
+            <a href="https://wa.me/201110760081?text=%D8%B1%D9%8A%D8%AF%20%D8%A7%D8%B3%D8%AA%D8%B9%D9%84%D8%A7%D9%85%D8%A9%20%D8%B9%D9%86%20%D8%AE%D8%AF%D9%85%D8%A9%20%D8%A5%D8%B9%D9%84%D8%A7%D9%86%D8%A7%D8%AA%20Google%20Ads" target="_blank" class="cta-header">💬 استفسر</a>
         </div>
     </header>
 
     <main>
+        <!-- Breadcrumb -->
+        <div class="breadcrumb">
+            <div class="breadcrumb-content">
+                <a href="/arabsad/">الرئيسية</a> / إعلانات Google Ads
+            </div>
+        </div>
+
         <!-- Hero Section -->
         <section class="hero">
-            <div class="container">
-                <h1>📊 إعلانات Google Ads‎</h1>
-                <p>حملات اعلانية احترافية على محرك البحث فبلا طلب لزيادة مبيعاتك وعملائك</p>
+            <div class="hero-content">
+                <h1>📊 إعلانات Google Ads المحرفة</h1>
+                <p>احبط أمام ملايين العملاء بإعلانات محترفة على جوجل وزيد المبيعات بسرعة وزيادة ROI</p>
             </div>
         </section>
 
         <!-- Features Section -->
-        <section>
-            <div class="container">
-                <h2>مزايا الخدمة</h2>
-                <div class="service-features">
-                    <article class="feature">
-                        <h3>🌈 استهداف دقيق</h3>
-                        <p>استهدف الجمهور المناسب بالضبط باستخدام كلمات مفتاحية واهتمامات محددة</p>
-                    </article>
-                    <article class="feature">
-                        <h3>📈 ROI عالي</h3>
-                        <p>حإن عليك بأعلى عائد على الاستثمار في الحملات الموجهة</p>
-                    </article>
-                    <article class="feature">
-                        <h3>⚡ سرعة النتائج</h3>
-                        <p>راهن مباشرة علانيك وزيارات لموقعك مثل البرق</p>
-                    </article>
-                    <article class="feature">
-                        <h3>📄 روابط تجربة Google</h3>
-                        <p>أعاد إعلاناتك واستهدف الزوار بعد مغادرتهم موقعك</p>
-                    </article>
-                    <article class="feature">
-                        <h3>📊 تقارير مفصلة</h3>
-                        <p>اتبع الربح والخسارة بتقارير بيانية فورية ومفصلة</p>
-                    </article>
-                    <article class="feature">
-                        <h3>🌟 دعم مستمر</h3>
-                        <p>فريق تتبع حملاتك ويقدم الاستشارات يوميا</p>
-                    </article>
+        <section class="content-section">
+            <h2>مميزات خدمتنا</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🎯</div>
+                    <h3>استهداف دقيق</h3>
+                    <p>استهداف مبيعات بأكبر دقة حسب الكلمات المفتاحية وموقع الجمهور</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📈</div>
+                    <h3>ROI مرتفع</h3>
+                    <p>زيادة الربحية عبر استراتيجيات تسعير متقدمة والتي تقلل التكلفة</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">⚡</div>
+                    <h3>سرعة النتائج</h3>
+                    <p>رؤية نتائج فورية وضبط الحملات باستمرار لتأثير أقصى</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">24📚</div>
+                    <h3>دعم مباشر</h3>
+                    <p>لا ترق وحدها - زال فريقنا هنا لرعايتك مباشرة 24/7</p>
                 </div>
             </div>
         </section>
 
-        <!-- Services Section -->
-        <section style="background: rgba(255, 184, 0, 0.02);">
-            <div class="container">
-                <h2>الخدمات المتضمنة</h2>
-                <ul class="benefits-list">
-                    <li>إعلانات شبكة البحث (Search Network)</li>
-                    <li>إعلانات الشبكة الإعلانية (Display Network)</li>
-                    <li>إعلانات فيديو يوتيوب (YouTube Ads)</li>
-                    <li>إعلانات التسوق بالمنتجات (Shopping Ads)</li>
-                    <li>إعادة استهداف الزوار (Remarketing)</li>
-                    <li>تحسين الحملات المستمرة (A/B Testing)</li>
-                    <li>التوزيع البالغر (Campaign Budget Optimization)</li>
-                    <li>مزامنة العرض والطلب (Bid Management)</li>
-                </ul>
-                <a href="https://wa.me/201110760081" class="cta-button" target="_blank">💬 البدء الآن</a>
+        <!-- Process Section -->
+        <section class="content-section process">
+            <h2 style="border-right: none; padding-right: 0; color: var(--text-light); text-align: center; margin-bottom: 3rem;">الخطوات العملية</h2>
+            <div class="process-steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3>تحليل شامل</h3>
+                    <p>دراسة عملك ومنافسيك بعمق</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3>استراتيجية مخصصة</h3>
+                    <p>بناء خطة عمل مفسلة لعملك</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3>تطبيق مباشر</h3>
+                    <p>بدء الحملات بكفاءة عالية</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <h3>مراقبة مستمرة</h3>
+                    <p>الأداء والتعديلات اللازمة</p>
+                </div>
             </div>
         </section>
 
-        <!-- Pricing Section -->
-        <section class="pricing-section">
-            <div class="container">
-                <h2>عرض أسعارنا</h2>
-                <div class="pricing-grid">
-                    <article class="pricing-card">
-                        <h4>باقة مبتدئة</h4>
-                        <p>للماجر الرقمي الجديد</p>
-                        <div class="price">مرن 1000 ج.م</div>
-                        <p style="color: var(--text-muted); margin-top: 1rem;">مشروع واحد وحتى عرزتين إعلانية</p>
-                    </article>
-                    <article class="pricing-card">
-                        <h4>باقة متوسطة</h4>
-                        <p>للمشاريع الناشئة</p>
-                        <div class="price">من 5000 ج.م</div>
-                        <p style="color: var(--text-muted); margin-top: 1rem;">ثلاثة مشاريع وعدة رابط إعادة استهداف</p>
-                    </article>
-                    <article class="pricing-card">
-                        <h4>باقة متقدمة</h4>
-                        <p>للمشروعات الكبرة</p>
-                        <div class="price">توازن</div>
-                        <p style="color: var(--text-muted); margin-top: 1rem;">حملات مخصصة فقط عليك الاتصال</p>
-                    </article>
-                </div>
-            </div>
+        <!-- CTA Section -->
+        <section class="content-section cta-section">
+            <h2 style="border: none; padding: 0; margin-bottom: 1rem;">بياناق الأسعار والعروض</h2>
+            <p>كل حالة فريدة ولها عرض مخصص. تواصل معنا عبر الواتساب للاستفسار عن عرض مخصص لعملك</p>
+            <a href="https://wa.me/201110760081?text=%D8%B1%D9%8A%D8%AF%20%D8%A7%D8%B3%D8%AA%D8%B9%D9%84%D8%A7%D9%85%D8%A9%20%D8%B9%D9%86%20%D8%AE%D8%AF%D9%85%D8%A9%20%D8%A5%D8%B9%D9%84%D8%A7%D9%86%D8%A7%D8%AA%20Google%20Ads" target="_blank" class="btn">💬 استفسر عبر الواتساب</a>
         </section>
     </main>
 
     <!-- Footer -->
     <footer>
-        <div class="footer-content">
-            <div class="footer-grid">
-                <nav>
-                    <h4>الخدمات</h4>
-                    <a href="/arabsad/services/">الخدمات الرئيسية</a>
-                    <a href="/arabsad/services/seo.html">تحسين SEO</a>
-                    <a href="/arabsad/services/social-media-ads.html">إعلانات السوشيال</a>
-                </nav>
-                <nav>
-                    <h4>روابط سريعة</h4>
-                    <a href="/arabsad/">الرئيسية</a>
-                    <a href="/arabsad/#contact">اتصل بنا</a>
-                    <a href="/arabsad/privacy-policy.html">سياسة الخصوصية</a>
-                </nav>
-                <nav>
-                    <h4>التواصل</h4>
-                    <a href="tel:+201110760081" aria-label="Phone number">☎️ +201110760081</a>
-                    <a href="https://wa.me/201110760081" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">💬 واتساب</a>
-                    <a href="mailto:info@arabsad.com" aria-label="Email">📧 info@arabsad.com</a>
-                </nav>
+        <div class="footer-grid">
+            <div class="footer-column">
+                <h4>الخدمات</h4>
+                <ul>
+                    <li><a href="/arabsad/services/google-ads.html" target="_blank">إعلانات Google Ads</a></li>
+                    <li><a href="/arabsad/services/social-media-ads.html" target="_blank">إعلانات السوشيال</a></li>
+                    <li><a href="/arabsad/services/seo.html" target="_blank">تحسين SEO</a></li>
+                    <li><a href="/arabsad/services/ecommerce.html" target="_blank">المتاجر الإلكترونية</a></li>
+                    <li><a href="/arabsad/services/website-design.html" target="_blank">تصميم المواقع</a></li>
+                    <li><a href="/arabsad/services/social-management.html" target="_blank">إدارة السوشيال</a></li>
+                </ul>
             </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 مؤسسة إعلانات العرب - جميع الحقوق محفوظة</p>
+            <div class="footer-column">
+                <h4>اتصل بنا</h4>
+                <ul>
+                    <li><a href="tel:+201110760081">☎ +201110760081</a></li>
+                    <li><a href="https://wa.me/201110760081" target="_blank" rel="noopener noreferrer">💬 واتساب</a></li>
+                    <li><a href="mailto:info@arabsad.com">📧 info@arabsad.com</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>رابط</h4>
+                <ul>
+                    <li><a href="/arabsad/">الرئيسية</a></li>
+                    <li><a href="/arabsad/#services">الخدمات</a></li>
+                    <li><a href="/arabsad/#contact">اتصل بنا</a></li>
+                </ul>
             </div>
         </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 مؤسسة إعلانات العرب - جميع الحقوق محفوظة</p>
+        </div>
     </footer>
+
+    <script>
+        // Prevent bfcache issues
+        window.addEventListener('beforeunload', () => {
+            // Clean up any listeners or timers
+        });
+
+        // Handle page show
+        window.addEventListener('pageshow', (event) => {
+            if (event.persisted) {
+                console.log('Page restored from bfcache');
+            }
+        });
+    </script>
 </body>
 </html>
