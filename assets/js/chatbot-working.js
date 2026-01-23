@@ -22,7 +22,7 @@ class ArabSadAIChatbot {
       ctas: [
         { text: '💬 تواصل مع خبير فوراً', url: 'https://wa.me/201110760081?text=أحتاج مساعدة خبير تسويق فوراً&utm_source=chatbot&utm_medium=greeting&utm_campaign=expert-now', target: '_blank' },
         { text: '📞 احجز مكالمة 15 دقيقة', url: 'https://wa.me/201110760081?text=أريد حجز مكالمة استشارة 15 دقيقة&utm_source=chatbot&utm_medium=greeting&utm_campaign=book-call', target: '_blank' },
-        { text: '📋 استعرض جميع الخدمات', url: 'services-page.html' }
+        { text: '📋 استعرض جميع الخدمات', url: '/arabsad/services-page.html' }
       ]
     };
   }
@@ -33,28 +33,28 @@ class ArabSadAIChatbot {
         message: '🎯 إعلانات Google Ads ترفع مبيعاتك بسرعة. نحدد الكلمات، نصيغ الإعلانات، ونقيس العائد. هل نشاطك محلي أم خليجي؟',
         actions: [
           { text: 'عرض Google Ads', url: 'https://wa.me/201110760081?text=عرض Google Ads&utm_source=chatbot&utm_medium=ai&utm_campaign=google-ads', target: '_blank' },
-          { text: 'تفاصيل الخدمة', url: 'google-ads-service.html' }
+          { text: 'تفاصيل الخدمة', url: '/arabsad/services/google-ads.html' }
         ]
       },
       'social-media': {
         message: '📱 حملات مدروسة على فيسبوك، إنستجرام، تيك توك، وسناب شات. اختبارات A/B وتحسين مستمر.',
         actions: [
           { text: 'خطة Social Media', url: 'https://wa.me/201110760081?text=خطة Social Media&utm_source=chatbot&utm_medium=ai&utm_campaign=social', target: '_blank' },
-          { text: 'استعرض الخدمة', url: 'social-media-service.html' }
+          { text: 'استعرض الخدمة', url: '/arabsad/services/social-media-ads.html' }
         ]
       },
       'seo': {
         message: '🔍 SEO يزيد الزيارات المجانية بشكل مستمر. تدقيق تقني، كلمات مربحة، محتوى وروابط آمنة.',
         actions: [
           { text: 'تحليل SEO مجاني', url: 'https://wa.me/201110760081?text=تحليل SEO مجاني&utm_source=chatbot&utm_medium=ai&utm_campaign=seo-audit', target: '_blank' },
-          { text: 'خدمة SEO', url: 'seo-service.html' }
+          { text: 'خدمة SEO', url: '/arabsad/services/seo.html' }
         ]
       },
       'ecommerce': {
         message: '🛒 متاجر سريعة وآمنة مع دفع محلي وتكامل شحن. نحسّن تجربة الشراء والتحويل.',
         actions: [
           { text: 'عرض متجر', url: 'https://wa.me/201110760081?text=عرض متجر إلكتروني&utm_source=chatbot&utm_medium=ai&utm_campaign=ecommerce', target: '_blank' },
-          { text: 'الخدمة', url: 'ecommerce-service.html' }
+          { text: 'الخدمة', url: '/arabsad/services/ecommerce.html' }
         ]
       },
       'default': {

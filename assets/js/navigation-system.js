@@ -6,36 +6,36 @@
 // بيانات جميع صفحات الموقع
 const SITE_PAGES = {
     main: [
-        { name: 'الرئيسية', url: 'index.html', icon: 'fa-home' }
+        { name: 'الرئيسية', url: '/arabsad/index.html', icon: 'fa-home' }
     ],
     services: [
-        { name: 'جميع الخدمات', url: 'services/index.html', icon: 'fa-list', desc: 'تصفح كافة خدماتنا الرقمية في مكان واحد' },
-        { name: 'إعلانات Google Ads', url: 'services/google-ads.html', icon: 'fab fa-google', desc: 'تصدر نتائج البحث وحقق مبيعات فورية' },
-        { name: 'SEO تحسين محركات البحث', url: 'services/seo.html', icon: 'fa-search', desc: 'زيارات مجانية مستدامة من جوجل' },
-        { name: 'المتاجر الإلكترونية', url: 'services/ecommerce.html', icon: 'fa-shopping-cart', desc: 'تصميم متاجر احترافية تبيع 24/7' },
-        { name: 'بديل خرائط جوجل', url: 'services/safahat-al5dmat.html', icon: 'fa-map-marked-alt', desc: 'صفحات هبوط خاصة تغنيك عن مشاكل الخرائط' },
-        { name: 'إدارة السوشيال ميديا', url: 'services/social-media-ads.html', icon: 'fa-hashtag', desc: 'حملات إعلانية على فيسبوك، انستجرام، وتيك توك' },
-        { name: 'تصميم المواقع', url: 'services/website-design.html', icon: 'fa-palette', desc: 'مواقع تعريفية تعكس احترافية نشاطك' },
-        { name: 'إدارة الحسابات', url: 'services/social-management.html', icon: 'fa-users', desc: 'إدارة شاملة لحسابات التواصل الاجتماعي' }
+        { name: 'جميع الخدمات', url: '/arabsad/services/index.html', icon: 'fa-list', desc: 'تصفح كافة خدماتنا الرقمية في مكان واحد' },
+        { name: 'إعلانات Google Ads', url: '/arabsad/services/google-ads.html', icon: 'fab fa-google', desc: 'تصدر نتائج البحث وحقق مبيعات فورية' },
+        { name: 'SEO تحسين محركات البحث', url: '/arabsad/services/seo.html', icon: 'fa-search', desc: 'زيارات مجانية مستدامة من جوجل' },
+        { name: 'المتاجر الإلكترونية', url: '/arabsad/services/ecommerce.html', icon: 'fa-shopping-cart', desc: 'تصميم متاجر احترافية تبيع 24/7' },
+        { name: 'بديل خرائط جوجل', url: '/arabsad/services/safahat-al5dmat.html', icon: 'fa-map-marked-alt', desc: 'صفحات هبوط خاصة تغنيك عن مشاكل الخرائط' },
+        { name: 'إدارة السوشيال ميديا', url: '/arabsad/services/social-media-ads.html', icon: 'fa-hashtag', desc: 'حملات إعلانية على فيسبوك، انستجرام، وتيك توك' },
+        { name: 'تصميم المواقع', url: '/arabsad/services/website-design.html', icon: 'fa-palette', desc: 'مواقع تعريفية تعكس احترافية نشاطك' },
+        { name: 'إدارة الحسابات', url: '/arabsad/services/social-management.html', icon: 'fa-users', desc: 'إدارة شاملة لحسابات التواصل الاجتماعي' }
     ],
     countries: [
-        { name: 'السعودية 🇸🇦', url: 'sa.html', icon: 'fa-map-marker-alt' },
-        { name: 'الإمارات 🇦🇪', url: 'ae.html', icon: 'fa-map-marker-alt' },
-        { name: 'الكويت 🇰🇼', url: 'kw.html', icon: 'fa-map-marker-alt' },
-        { name: 'قطر 🇶🇦', url: 'qa.html', icon: 'fa-map-marker-alt' },
-        { name: 'البحرين 🇧🇭', url: 'bh.html', icon: 'fa-map-marker-alt' },
-        { name: 'عمان 🇴🇲', url: 'om.html', icon: 'fa-map-marker-alt' }
+        { name: 'السعودية 🇸🇦', url: '/arabsad/sa.html', icon: 'fa-map-marker-alt' },
+        { name: 'الإمارات 🇦🇪', url: '/arabsad/ae.html', icon: 'fa-map-marker-alt' },
+        { name: 'الكويت 🇰🇼', url: '/arabsad/kw.html', icon: 'fa-map-marker-alt' },
+        { name: 'قطر 🇶🇦', url: '/arabsad/qa.html', icon: 'fa-map-marker-alt' },
+        { name: 'البحرين 🇧🇭', url: '/arabsad/bh.html', icon: 'fa-map-marker-alt' },
+        { name: 'عمان 🇴🇲', url: '/arabsad/om.html', icon: 'fa-map-marker-alt' }
     ],
     tools: [
-        { name: 'لوحة التحليلات', url: 'analytics-dashboard.html', icon: 'fa-chart-bar' },
-        { name: 'Chatbot', url: 'chatbot.html', icon: 'fa-robot' },
-        { name: 'Google Ads', url: 'google-ads.html', icon: 'fab fa-google' },
-        { name: 'إدارة السوشيال ميديا', url: 'social-media-management.html', icon: 'fa-users' },
-        { name: 'قائمة الخدمات', url: 'services-page.html', icon: 'fa-concierge-bell' }
+        { name: 'لوحة التحليلات', url: '/arabsad/analytics-dashboard.html', icon: 'fa-chart-bar' },
+        { name: 'Chatbot', url: '/arabsad/chatbot.html', icon: 'fa-robot' },
+        { name: 'Google Ads', url: '/arabsad/google-ads.html', icon: 'fab fa-google' },
+        { name: 'إدارة السوشيال ميديا', url: '/arabsad/social-media-management.html', icon: 'fa-users' },
+        { name: 'قائمة الخدمات', url: '/arabsad/services-page.html', icon: 'fa-concierge-bell' }
     ],
     legal: [
-        { name: 'سياسة الخصوصية', url: 'privacy-policy.html', icon: 'fa-shield-alt' },
-        { name: 'شروط الخدمة', url: 'terms-of-service.html', icon: 'fa-file-contract' }
+        { name: 'سياسة الخصوصية', url: '/arabsad/privacy-policy.html', icon: 'fa-shield-alt' },
+        { name: 'شروط الخدمة', url: '/arabsad/terms-of-service.html', icon: 'fa-file-contract' }
     ]
 };
 
