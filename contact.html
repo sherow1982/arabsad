@@ -3,81 +3,170 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="تواصل معنا بأي استفسار أو استفسار">
-    <title>اتصل بنا | ArabSad</title>
+    <meta name="description" content="تواصل مباشرة مع فريق مؤسسة إعلانات العرب. واتساب، اتصال هاتفي، أو بريد إلكتروني. نحن هنا لخدمتك 24/7.">
+    <title>تواصل معنا | مؤسسة إعلانات العرب</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        :root { --primary: #FFB800; --dark-bg: #0a0e27; --dark-secondary: #1a1f3a; --text-light: #e8edf5; --text-muted: #a8b3c1; }
-        body { font-family: 'Segoe UI', sans-serif; background: var(--dark-bg); color: var(--text-light); }
-        header { position: fixed; top: 0; width: 100%; z-index: 1000; background: rgba(10, 14, 39, 0.95); border-bottom: 2px solid var(--primary); padding: 1.2rem 2rem; }
+        :root {
+            --primary: #FFB800;
+            --primary-dark: #FF9500;
+            --dark-bg: #0a0e27;
+            --dark-secondary: #1a1f3a;
+            --text-light: #ffffff;
+            --text-muted: #94a3b8;
+            --success: #25D366;
+        }
+        body {
+            font-family: 'Cairo', sans-serif;
+            background-color: var(--dark-bg);
+            color: var(--text-light);
+            line-height: 1.6;
+        }
+        header { position: fixed; top: 0; width: 100%; z-index: 1000; background: rgba(10, 14, 39, 0.95); border-bottom: 1px solid rgba(255, 184, 0, 0.1); padding: 1rem 0; backdrop-filter: blur(10px); }
         .header-wrapper { max-width: 1400px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
-        .logo { font-size: 1.8rem; font-weight: 800; color: var(--primary); text-decoration: none; }
-        nav { display: flex; gap: 2rem; list-style: none; }
-        nav a { color: var(--text-light); text-decoration: none; transition: color 0.3s; }
+        .logo { font-size: 1.6rem; font-weight: 900; color: var(--primary); text-decoration: none; padding: 0 20px; }
+        nav { display: flex; gap: 2rem; }
+        nav a { color: var(--text-light); text-decoration: none; font-weight: 600; transition: 0.3s; }
         nav a:hover { color: var(--primary); }
         main { margin-top: 80px; }
-        .hero { background: linear-gradient(135deg, rgba(255, 184, 0, 0.05) 0%, rgba(255, 184, 0, 0.03) 100%); padding: 3rem 2rem; text-align: center; border-bottom: 2px solid rgba(255, 184, 0, 0.2); }
-        .hero h1 { font-size: clamp(1.5rem, 5vw, 2.5rem); font-weight: 900; color: var(--primary); margin-bottom: 1rem; }
-        .container { max-width: 1000px; margin: 0 auto; padding: 0 2rem; }
-        section { padding: 3rem 2rem; }
-        section h2 { font-size: 1.8rem; font-weight: 900; color: var(--primary); margin-bottom: 2rem; }
-        .contact-methods { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-top: 2rem; }
-        .contact-method { background: var(--dark-secondary); border: 2px solid rgba(255, 184, 0, 0.2); padding: 2rem; border-radius: 12px; text-align: center; }
-        .contact-method h3 { color: var(--primary); margin-bottom: 1rem; font-size: 1.2rem; }
-        .contact-method p { color: var(--text-muted); }
-        .contact-method a { color: var(--primary); text-decoration: none; font-weight: 600; }
-        footer { background: var(--dark-secondary); border-top: 2px solid rgba(255, 184, 0, 0.2); padding: 3rem 2rem 1rem; margin-top: 3rem; }
-        .footer-bottom { text-align: center; color: var(--text-muted); padding: 1rem 0; }
+        
+        .hero {
+            padding: 100px 20px;
+            text-align: center;
+            background: radial-gradient(circle at 50% 50%, rgba(255, 184, 0, 0.05) 0%, transparent 70%);
+        }
+        .hero h1 { font-size: 3rem; margin-bottom: 20px; color: var(--primary); font-weight: 900; }
+        .hero p { font-size: 1.2rem; color: var(--text-muted); max-width: 600px; margin: 0 auto 40px; }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 20px 60px;
+        }
+
+        .contact-card {
+            background: var(--dark-secondary);
+            padding: 40px;
+            border-radius: 20px;
+            text-align: center;
+            border: 1px solid rgba(255,255,255,0.05);
+            transition: 0.3s;
+        }
+        .contact-card:hover { transform: translateY(-10px); border-color: var(--primary); }
+        
+        .icon-box {
+            width: 80px;
+            height: 80px;
+            background: rgba(255,255,255,0.05);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
+            margin: 0 auto 25px;
+            color: var(--primary);
+        }
+
+        .contact-card h3 { font-size: 1.5rem; margin-bottom: 15px; }
+        .contact-card p { color: var(--text-muted); margin-bottom: 25px; }
+
+        .btn-contact {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 15px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.1rem;
+            transition: 0.3s;
+            width: 100%;
+            justify-content: center;
+        }
+
+        .btn-whatsapp {
+            background: var(--success);
+            color: #fff;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+        }
+        .btn-whatsapp:hover { background: #128C7E; transform: scale(1.05); }
+
+        .btn-phone {
+            background: var(--primary);
+            color: #000;
+            box-shadow: 0 4px 15px rgba(255, 184, 0, 0.3);
+        }
+        .btn-phone:hover { background: #fff; transform: scale(1.05); }
+
+        .btn-email {
+            background: transparent;
+            border: 2px solid rgba(255,255,255,0.1);
+            color: #fff;
+        }
+        .btn-email:hover { border-color: var(--primary); color: var(--primary); }
+
+        footer { text-align: center; padding: 40px 0; border-top: 1px solid rgba(255,255,255,0.05); color: var(--text-muted); }
     </style>
 </head>
 <body>
     <header>
         <div class="header-wrapper">
-            <a href="/arabsad/" class="logo">🌐 ArabSad</a>
+            <a href="/arabsad/" class="logo">🎯 إعلانات العرب</a>
             <nav>
                 <a href="/arabsad/">الرئيسية</a>
                 <a href="/arabsad/services/">الخدمات</a>
             </nav>
-            <a href="https://wa.me/201110760081" target="_blank" class="cta-header">تواصل</a>
         </div>
     </header>
 
     <main>
         <section class="hero">
-            <div class="container">
-                <h1>💬 اتصل بنا</h1>
-                <p>نحن هنا لإجابة على كل أسئلتك</p>
-            </div>
+            <h1>تواصل معنا مباشرة</h1>
+            <p>فريقنا متاح 24/7 للرد على استفساراتك ومساعدتك في بدء رحلة نجاحك الرقمي</p>
         </section>
 
-        <section>
-            <div class="container">
-                <h2>طرق التواصل</h2>
-                <div class="contact-methods">
-                    <article class="contact-method">
-                        <h3>💬 WhatsApp</h3>
-                        <p>رسالة وسريعة مباشرة</p>
-                        <a href="https://wa.me/201110760081" target="_blank">راسل</a>
-                    </article>
-                    <article class="contact-method">
-                        <h3>☎ الهاتف</h3>
-                        <p>اتصل مباشرة</p>
-                        <a href="tel:+201110760081">+201110760081</a>
-                    </article>
-                    <article class="contact-method">
-                        <h3>📧 البريد</h3>
-                        <p>ارسل رسالة بريدية</p>
-                        <a href="mailto:info@arabsad.com">info@arabsad.com</a>
-                    </article>
-                </div>
+        <div class="contact-grid">
+            <!-- WhatsApp -->
+            <div class="contact-card">
+                <div class="icon-box"><i class="fab fa-whatsapp"></i></div>
+                <h3>محادثة فورية</h3>
+                <p>أسرع طريقة للتواصل معنا. رد فوري من فريق المبيعات.</p>
+                <a href="https://wa.me/201110760081" target="_blank" class="btn-contact btn-whatsapp">
+                    <i class="fab fa-whatsapp"></i> راسلنا على واتساب
+                </a>
             </div>
-        </section>
+
+            <!-- Phone -->
+            <div class="contact-card">
+                <div class="icon-box"><i class="fas fa-phone-alt"></i></div>
+                <h3>اتصال هاتفي</h3>
+                <p>تحدث مباشرة مع أحد خبرائنا لمناقشة مشروعك.</p>
+                <a href="tel:00201110760081" class="btn-contact btn-phone">
+                    <i class="fas fa-phone"></i> 00201110760081
+                </a>
+            </div>
+
+            <!-- Email -->
+            <div class="contact-card">
+                <div class="icon-box"><i class="fas fa-envelope"></i></div>
+                <h3>البريد الإلكتروني</h3>
+                <p>للاستفسارات الرسمية وإرسال الملفات والتقارير.</p>
+                <a href="mailto:info@arabsad.com" class="btn-contact btn-email">
+                    <i class="fas fa-envelope"></i> info@arabsad.com
+                </a>
+            </div>
+        </div>
     </main>
 
     <footer>
-        <div class="footer-bottom">
-            <p>&copy; 2025 إعلانات العرب</p>
-        </div>
+        <p>&copy; 2026 مؤسسة إعلانات العرب. جميع الحقوق محفوظة.</p>
     </footer>
 </body>
 </html>

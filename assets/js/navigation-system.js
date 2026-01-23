@@ -97,9 +97,15 @@ function buildPageCards(category) {
  */
 function toggleMobileNav() {
     const navMenu = document.getElementById('navMenu');
-    if (navMenu) {
-        navMenu.classList.toggle('active');
-    }
+    const toggleBtn = document.getElementById('mobileToggle');
+    const overlay = document.getElementById('menuOverlay');
+    
+    if (navMenu) navMenu.classList.toggle('active');
+    if (toggleBtn) toggleBtn.classList.toggle('active');
+    if (overlay) overlay.classList.toggle('active');
+    
+    // Prevent body scroll when menu is open
+    document.body.style.overflow = (navMenu && navMenu.classList.contains('active')) ? 'hidden' : '';
 }
 
 /**
@@ -169,15 +175,13 @@ function addClickEffects() {
  * تفعيل القوائم المنسدلة على الجوال
  */
 function initMobileDropdowns() {
-    if (window.innerWidth <= 968) {
+    if (window.innerWidth <= 992) {
         document.querySelectorAll('.dropdown-toggle').forEach(toggle => {
-            toggle.addEventListener('click', function(e) {
+            // Use onclick to ensure it works even if added dynamically
+            toggle.onclick = function(e) {
                 e.preventDefault();
-                const dropdown = this.nextElementSibling;
-                if (dropdown && dropdown.classList.contains('dropdown-menu')) {
-                    dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
-                }
-            });
+                this.parentElement.classList.toggle('active');
+            };
         });
     }
 }

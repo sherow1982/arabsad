@@ -553,7 +553,6 @@
         @media (max-width: 768px) {
             header { padding: 1rem; }
             .header-wrapper { gap: 1rem; }
-            nav { display: none; }
             .hero { min-height: 70vh; padding: 2rem 1rem; }
             .hero-buttons { flex-direction: column; gap: 1rem; }
             .btn { width: 100%; }
@@ -737,6 +736,7 @@
     <div data-include="shared-footer.html"></div>
 
     <script src="/arabsad/js/bfcache-fix.js"></script>
+    <script src="assets/js/navigation-system.js"></script>
     <script>
         // Load Shared Header/Footer
         document.addEventListener('DOMContentLoaded', function() {
@@ -744,7 +744,11 @@
                 try {
                     const file = el.getAttribute('data-include');
                     const response = await fetch('/arabsad/' + file);
-                    if (response.ok) el.innerHTML = await response.text();
+                    if (response.ok) {
+                        el.innerHTML = await response.text();
+                        // Initialize navigation after header load
+                        if (file.includes('header') && typeof initMobileDropdowns === 'function') initMobileDropdowns();
+                    }
                 } catch (e) { console.log(e); }
             });
         });

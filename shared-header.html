@@ -105,6 +105,18 @@
         transform: translateY(0);
     }
 
+    /* Mobile Dropdown Fix */
+    .nav-item.active .dropdown-menu {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+        position: relative;
+        box-shadow: none;
+        background: rgba(255,255,255,0.05);
+        top: 0;
+        margin-top: 5px;
+    }
+
     .dropdown-menu::-webkit-scrollbar {
         width: 8px;
     }
@@ -466,6 +478,31 @@
                     </ul>
                 </li>
                 
+                <!-- Legal Dropdown -->
+                <li class="nav-item">
+                    <a href="#" class="nav-link dropdown-toggle">
+                        <i class="fas fa-balance-scale"></i> السياسات
+                        <i class="fas fa-chevron-down dropdown-icon"></i>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li class="dropdown-item">
+                            <a href="/arabsad/privacy-policy.html" target="_blank" class="dropdown-link">
+                                <i class="fas fa-user-shield"></i> سياسة الخصوصية
+                            </a>
+                        </li>
+                        <li class="dropdown-item">
+                            <a href="/arabsad/terms-of-service.html" target="_blank" class="dropdown-link">
+                                <i class="fas fa-file-contract"></i> شروط الخدمة
+                            </a>
+                        </li>
+                        <li class="dropdown-item">
+                            <a href="/arabsad/legal.html" target="_blank" class="dropdown-link">
+                                <i class="fas fa-gavel"></i> الشروط العامة
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
                 <li class="nav-item">
                     <a href="/arabsad/analytics-dashboard.html" class="nav-link" target="_blank">
                         <i class="fas fa-chart-bar"></i> لوحة التحليلات
@@ -482,33 +519,6 @@
     </nav>
 </header>
 
-<script>
-    function toggleMobileNav() {
-        const navMenu = document.getElementById('navMenu');
-        const toggleBtn = document.getElementById('mobileToggle');
-        const overlay = document.getElementById('menuOverlay');
-        
-        navMenu.classList.toggle('active');
-        toggleBtn.classList.toggle('active');
-        overlay.classList.toggle('active');
-        
-        // Prevent body scroll when menu is open
-        document.body.style.overflow = navMenu.classList.contains('active') ? 'hidden' : '';
-    }
-    
-    // Mobile Dropdown Toggle
-    document.addEventListener('DOMContentLoaded', function() {
-        if (window.innerWidth < 992) {
-            const dropdowns = document.querySelectorAll('.dropdown-toggle');
-            dropdowns.forEach(drop => {
-                drop.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    this.parentElement.classList.toggle('active');
-                });
-            });
-        }
-    });
-</script>
 
     <!-- SEO Meta Tags (Auto) -->
     <meta charset="UTF-8">
