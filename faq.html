@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>الأسئلة الشائعة - إعلانات العرب</title>
-    <meta name="description" content="u0627لأسئلة المتكررة عن خدماتنا والردود ليها">
+    <meta name="description" content="الأسئلة المتكررة عن خدماتنا والردود عليها">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         :root {
@@ -22,10 +22,13 @@
         .logo { font-size: 1.8rem; font-weight: 800; background: linear-gradient(135deg, var(--primary), var(--accent)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; text-decoration: none; }
         main { margin-top: 80px; padding: 4rem 2rem; max-width: 1000px; margin-left: auto; margin-right: auto; }
         h1 { font-size: 2.5rem; margin-bottom: 2rem; color: var(--primary); }
-        .faq-item { background: linear-gradient(135deg, rgba(255, 184, 0, 0.08), rgba(0, 212, 170, 0.05)); border: 2px solid rgba(255, 184, 0, 0.2); border-radius: 15px; margin-bottom: 1.5rem; padding: 1.5rem; cursor: pointer; transition: all 0.3s ease; }
+        .faq-item { background: linear-gradient(135deg, rgba(255, 184, 0, 0.1), rgba(0, 212, 170, 0.05)); border: 2px solid rgba(255, 184, 0, 0.2); border-radius: 15px; margin-bottom: 1.5rem; padding: 1.5rem; cursor: pointer; transition: all 0.3s ease; }
         .faq-item:hover { border-color: rgba(255, 184, 0, 0.5); background: linear-gradient(135deg, rgba(255, 184, 0, 0.15), rgba(0, 212, 170, 0.1)); }
-        .faq-item h3 { color: var(--primary); margin-bottom: 0.5rem; font-size: 1.2rem; }
-        .faq-item p { color: var(--text-muted); margin-top: 0.8rem; }
+        .faq-item h3 { color: var(--primary); margin-bottom: 0.5rem; font-size: 1.2rem; display: flex; align-items: center; gap: 0.8rem; }
+        .faq-item h3::before { content: '▶'; font-size: 0.8rem; transition: transform 0.3s ease; }
+        .faq-item.active h3::before { transform: rotate(90deg); }
+        .faq-item p { color: var(--text-muted); margin-top: 0.8rem; max-height: 0; overflow: hidden; transition: max-height 0.3s ease; }
+        .faq-item.active p { max-height: 300px; }
         footer { background: var(--dark-secondary); padding: 3rem 2rem 1.5rem; margin-top: 4rem; text-align: center; border-top: 2px solid rgba(255, 184, 0, 0.1); color: var(--text-muted); font-size: 0.85rem; }
     </style>
 </head>
@@ -41,27 +44,32 @@
 
         <div class="faq-item">
             <h3>💵 كم سعر الخدمات؟</h3>
-            <p>الأسعار متعتمدة على حجم وطبيعة مروجتك. البيان التفاصيل عبر الواتساب</p>
+            <p>الأسعار مختلفة حسب نطاق العمل ومدة الخدمة. بيان التفاصيل نحضرها عبر الواتساب أو مع الاستشارة.</p>
         </div>
 
         <div class="faq-item">
-            <h3>⏱️ كم مدة الخدمة فقطأ؟</h3>
-            <p>مختلفة حسب مروجتك. ما بين شهر إلى 3 أشهر زائد. الاتفاقات ميسرة</p>
+            <h3>⏱️ كم مدة الخدمة؟</h3>
+            <p>مختلفة حسب نوع الخدمة. ما بين شهر واحد إلى 6 أشهر زائد. الارتباطات مرنة بحسب احتياجاتك.</p>
         </div>
 
         <div class="faq-item">
-            <h3>👀 هل تتظهر النتائج بسرعة؟</h3>
-            <p>نعم، لكن النتائج الحسابة أخذ وقتاً. SEO ياخد 3-6 عبلاام. Google Ads فوري</p>
+            <h3>هل تتظهر النتائج بسرعة؟</h3>
+            <p>نعم لا بد للانتظار. إعلانات Google بسرعة، البرامج دال لعدة أسابيع. SEO يخذ من 3-6 أشهر لطهور حقيقي بالبحث.</p>
         </div>
 
         <div class="faq-item">
             <h3>🔄 هل هناك ضمانات؟</h3>
-            <p>نعم نضمن قبولك عن هداف محددة. روج مصروف ام رجوع برامجارت</p>
+            <p>بالطبع هناك ضمانات للنتائج المتفق عليها. أفضل من رسوم الاسترجاع إذا لم نحقق الأهداف.</p>
         </div>
 
         <div class="faq-item">
-            <h3>📈 هل أرلي التقارير دورية؟</h3>
-            <p>بلة نأرسل لك حساب النتائج والأرقام كل أسبوع بالبريد وعبر الواتساب</p>
+            <h3>📈 هل نرسل تقارير دورية؟</h3>
+            <p>نعم نرسل كل أسبوع أو شهر حسب العقد. التقارير مفصلة قبع بيانات الأداء الكاملة.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>💬 هل أحصل على دعم 24/7؟</h3>
+            <p>نعم! فريقنا موجود ساعة و ساعة للإجابة. واتساب أو بريد إلكتروني. متوسط الرد أقل من ساعة.</p>
         </div>
     </main>
 
@@ -69,5 +77,12 @@
         <p>&copy; 2025 إعلانات العرب</p>
     </footer>
     <script src="/arabsad/js/bfcache-fix.js"></script>
+    <script>
+        document.querySelectorAll('.faq-item').forEach(item => {
+            item.addEventListener('click', () => {
+                item.classList.toggle('active');
+            });
+        });
+    </script>
 </body>
 </html>

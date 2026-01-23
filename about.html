@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>عنا - مؤسسة إعلانات العرب</title>
-    <meta name="description" content="المزيد عن مؤسسة إعلانات العرب وفريقنا المتخصص في التسويق الرقمي">
+    <meta name="description" content="المزيد عن مؤسسة إعلانات العرب وفريقنا المتخصص في التسويق الرقمي.">
     <link rel="canonical" href="https://sherow1982.github.io/arabsad/about.html">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -36,6 +36,16 @@
         .team-member { background: linear-gradient(135deg, rgba(255, 184, 0, 0.08), rgba(0, 212, 170, 0.05)); border: 2px solid rgba(255, 184, 0, 0.2); border-radius: 15px; padding: 2rem; text-align: center; }
         .team-member h3 { font-size: 1.3rem; margin-bottom: 0.5rem; color: var(--primary); }
         .team-member p { font-size: 0.9rem; color: var(--text-muted); }
+        /* FAQ Section */
+        .faq-section { padding: 4rem 2rem; max-width: 1200px; margin: 0 auto; }
+        .faq-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(500px, 1fr)); gap: 2rem; }
+        .faq-item { background: linear-gradient(135deg, rgba(255, 184, 0, 0.1), rgba(0, 212, 170, 0.05)); border: 1px solid rgba(255, 184, 0, 0.2); border-radius: 15px; padding: 1.8rem; cursor: pointer; transition: all 0.3s ease; }
+        .faq-item:hover { background: linear-gradient(135deg, rgba(255, 184, 0, 0.15), rgba(0, 212, 170, 0.1)); border-color: rgba(255, 184, 0, 0.4); transform: translateY(-5px); }
+        .faq-question { font-size: 1.1rem; font-weight: 600; color: var(--primary); margin-bottom: 0.8rem; display: flex; align-items: center; gap: 0.8rem; }
+        .faq-question::before { content: '▶'; font-size: 0.8rem; transition: transform 0.3s ease; }
+        .faq-item.active .faq-question::before { transform: rotate(90deg); }
+        .faq-answer { color: var(--text-muted); font-size: 0.95rem; line-height: 1.8; max-height: 0; overflow: hidden; transition: max-height 0.3s ease; }
+        .faq-item.active .faq-answer { max-height: 300px; }
         footer { background: var(--dark-secondary); padding: 3rem 2rem 1.5rem; margin-top: 4rem; border-top: 2px solid rgba(255, 184, 0, 0.1); }
         .footer-grid { max-width: 1400px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 3rem; margin-bottom: 2rem; }
         .footer-column h4 { color: var(--primary); margin-bottom: 1rem; }
@@ -43,7 +53,7 @@
         .footer-column a { color: var(--text-muted); text-decoration: none; }
         .footer-column a:hover { color: var(--primary); }
         .footer-bottom { border-top: 1px solid rgba(255, 184, 0, 0.1); padding-top: 1.5rem; text-align: center; color: var(--text-muted); font-size: 0.85rem; }
-        @media (max-width: 768px) { header { padding: 1rem; } nav { display: none; } .hero { padding: 3rem 1rem; } .content-section { padding: 3rem 1rem; } h2 { font-size: 1.5rem; } }
+        @media (max-width: 768px) { header { padding: 1rem; } nav { display: none; } .hero { padding: 3rem 1rem; } .content-section { padding: 3rem 1rem; } h2 { font-size: 1.5rem; } .faq-grid { grid-template-columns: 1fr; } }
     </style>
 </head>
 <body>
@@ -52,27 +62,59 @@
             <a href="/arabsad/" class="logo">🌐 إعلانات العرب</a>
             <nav>
                 <a href="/arabsad/">الرئيسية</a>
-                <a href="/arabsad/#services">الخدمات</a>
+                <a href="/arabsad/services/">الخدمات</a>
                 <a href="/arabsad/about.html">عنا</a>
             </nav>
-            <a href="https://wa.me/201110760081" target="_blank" class="cta-header">💬 اتصل بنا</a>
+            <a href="https://wa.me/201110760081" target="_blank" class="cta-header">💬 تواصل</a>
         </div>
     </header>
 
     <main>
         <section class="hero">
             <h1>🔍 عن مؤسستنا</h1>
-            <p>نحن فريق متخصص في التسويق الرقمي مع أكثر من 8 سنوات من الخبرة بالوطن العربي</p>
+            <p>نحن فريق متخصص في التسويق الرقمي مع أكثر من 8 سنوات من الخبرة بالأسواق العربية</p>
         </section>
 
         <section class="content-section">
             <h2>رسالتنا</h2>
-            <p>تمكين الشركات والمشروعات من تحقيق نجاح رقمي استثنائي مع برامج تسويقية مبتكرة وفعالة مع دعم مباشر 24/7</p>
+            <p>تمكين الشركات والمشروعات من تحقيق نجاح رقمي استثنائي مع برامج تسويقية مبتكرة وفعالة مع دعم مباشر 24/7.</p>
         </section>
 
         <section class="content-section">
             <h2>قيمنا</h2>
-            <p>نعمل بشفافية كاملة ونركز على نتائج قابلة للقياس توخقيق ROI أفضل لعملائنا</p>
+            <p>نعمل بشفافية كاملة ونركز على نتائج قابلة للقياس حلقيق أفضل عائد على الاستثمار لعملاؤنا.</p>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="faq-section">
+            <h2 style="text-align: center; border: none; padding: 0;">❓ الأسئلة الشائعة</h2>
+
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <div class="faq-question">من هو فريق ArabSad؟</div>
+                    <div class="faq-answer">فريق متخصص من خبراء التسويق الرقمي لديهم سنوات من الخبرة في الأسواق العربية.</div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">أين تقع مؤسستنا؟</div>
+                    <div class="faq-answer">على الرغم من مركزنا في القاهرة، نعمل مع عملاء من جميع الأسواق العربية.</div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">كم عام لديكم من الخبرة؟</div>
+                    <div class="faq-answer">8 سنوات على الأقل من خبرة عملية مباشرة مع عملاء مختلفين.</div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">هل لديكم عملاء بارزين؟</div>
+                    <div class="faq-answer">نعم، ما ببيط أن ننشر أسماءهم بدون إذنهم. لكننا نعرض حالات دراسة عند عليك.</div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">هل تعملون للشركات الناشئة أم الكبرة؟</div>
+                    <div class="faq-answer">نعمل مع الاثنين! لدينا حزم مرنة تتراوح بين البرامج المباشرة اللينة والمبارذ المطولة.</div>
+                </div>
+            </div>
         </section>
     </main>
 
@@ -82,8 +124,8 @@
                 <h4>روابط</h4>
                 <ul>
                     <li><a href="/arabsad/">الرئيسية</a></li>
+                    <li><a href="/arabsad/services/">الخدمات</a></li>
                     <li><a href="/arabsad/about.html">عنا</a></li>
-                    <li><a href="/arabsad/legal.html">الشروط</a></li>
                 </ul>
             </div>
             <div class="footer-column">
@@ -97,5 +139,12 @@
         <div class="footer-bottom"><p>&copy; 2025 إعلانات العرب</p></div>
     </footer>
     <script src="/arabsad/js/bfcache-fix.js"></script>
+    <script>
+        document.querySelectorAll('.faq-item').forEach(item => {
+            item.addEventListener('click', () => {
+                item.classList.toggle('active');
+            });
+        });
+    </script>
 </body>
 </html>
