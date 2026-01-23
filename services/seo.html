@@ -1,884 +1,376 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>تحسين محركات البحث (SEO) | تصدر نتائج البحث وزيادة الزيارات العضوية - مؤسسة إعلانات العرب</title>
-  <meta name="description" content="خدمة سيو احترافية لرفع ترتيب موقعك في جوجل، تحليل كلمات رئيسية، تحسين الصفحات، بناء روابط وتحليلات أداء متقدمة وخدمة دعم فوري عبر واتساب.">
-  <meta name="keywords" content="سيو, تحسين محركات البحث, SEO, نتائج البحث, كلمات مفتاحية, زيادة الزيارات">
-  <meta property="og:title" content="تحسين محركات البحث SEO - مؤسسة إعلانات العرب">
-  <meta property="og:description" content="ارفع موقعك إلى الصفحة الأولى وحقق نمو فعلي في الزيارات والأرباح من خلال حلول السيو الشاملة.">
-  <meta property="og:image" content="https://arabsad.com/assets/images/og-seo.jpg">
-  <meta property="og:url" content="https://arabsad.com/services/seo.html">
-  <meta property="og:type" content="website">
-  <link rel="canonical" href="https://arabsad.com/services/seo.html">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&display=swap" rel="stylesheet">
-  
-  
-  
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-    
-    body {
-      font-family: 'Cairo', sans-serif;
-      background: linear-gradient(135deg, #0f2027 0%, #203a43 50%, #2c5364 100%);
-      color: #fff;
-      line-height: 1.6;
-    }
-    
-    .container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 20px;
-    }
-    
-    header {
-      background: #15243b;
-      box-shadow: 0 4px 30px rgba(26, 26, 46, 0.15);
-      padding: 30px 0;
-      text-align: center;
-    }
-    
-    header h1 {
-      font-size: 2.5rem;
-      font-weight: 900;
-      color: #f6b93b;
-      margin-bottom: 10px;
-      letter-spacing: -1px;
-    }
-    
-    header p {
-      font-size: 1.2rem;
-      color: #26de81;
-      opacity: 0.95;
-    }
-    
-    .hero {
-      padding: 80px 0;
-      text-align: center;
-    }
-    
-    .hero h2 {
-      font-size: 2.8rem;
-      color: #26de81;
-      margin-bottom: 20px;
-      font-weight: 900;
-    }
-    
-    .hero p {
-      font-size: 1.3rem;
-      max-width: 800px;
-      margin: 0 auto 40px;
-      opacity: 0.9;
-    }
-    
-    .cta-button {
-      display: inline-block;
-      background: #25d366;
-      color: #fff;
-      padding: 18px 50px;
-      border-radius: 50px;
-      text-decoration: none;
-      font-size: 1.3rem;
-      font-weight: 900;
-      box-shadow: 0 10px 40px rgba(37, 211, 102, 0.4);
-      transition: all 0.3s ease;
-    }
-    
-    .cta-button:hover {
-      background: #1fb856;
-      transform: translateY(-3px);
-      box-shadow: 0 15px 50px rgba(37, 211, 102, 0.6);
-    }
-    
-    .features {
-      padding: 60px 0;
-    }
-    
-    .features h2 {
-      text-align: center;
-      font-size: 2.3rem;
-      color: #f6b93b;
-      margin-bottom: 50px;
-      font-weight: 900;
-    }
-    
-    .features-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 30px;
-    }
-    
-    .feature-card {
-      background: #203a43;
-      padding: 35px;
-      border-radius: 20px;
-      box-shadow: 0 8px 30px rgba(38, 222, 129, 0.15);
-      transition: all 0.3s ease;
-    }
-    
-    .feature-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 12px 40px rgba(38, 222, 129, 0.25);
-    }
-    
-    .feature-card i {
-      font-size: 3rem;
-      color: #26de81;
-      margin-bottom: 20px;
-    }
-    
-    .feature-card h3 {
-      font-size: 1.6rem;
-      color: #f6b93b;
-      margin-bottom: 15px;
-      font-weight: 700;
-    }
-    
-    .feature-card p {
-      font-size: 1.1rem;
-      opacity: 0.9;
-      line-height: 1.8;
-    }
-    
-    .pricing {
-      padding: 60px 0;
-      background: rgba(21, 36, 59, 0.5);
-    }
-    
-    .pricing h2 {
-      text-align: center;
-      font-size: 2.3rem;
-      color: #26de81;
-      margin-bottom: 50px;
-      font-weight: 900;
-    }
-    
-    .pricing-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 30px;
-    }
-    
-    .pricing-card {
-      background: linear-gradient(135deg, #203a43 0%, #2c5364 100%);
-      padding: 40px;
-      border-radius: 20px;
-      text-align: center;
-      box-shadow: 0 10px 40px rgba(246, 185, 59, 0.2);
-      transition: all 0.3s ease;
-      border: 2px solid transparent;
-    }
-    
-    .pricing-card:hover {
-      transform: translateY(-8px);
-      border-color: #f6b93b;
-      box-shadow: 0 15px 50px rgba(246, 185, 59, 0.35);
-    }
-    
-    .pricing-card.featured {
-      border-color: #26de81;
-      box-shadow: 0 15px 50px rgba(38, 222, 129, 0.3);
-    }
-    
-    .pricing-card h3 {
-      font-size: 1.8rem;
-      color: #f6b93b;
-      margin-bottom: 15px;
-      font-weight: 800;
-    }
-    
-    .pricing-card .price {
-      font-size: 3rem;
-      color: #26de81;
-      font-weight: 900;
-      margin: 20px 0;
-    }
-    
-    .pricing-card ul {
-      list-style: none;
-      margin: 30px 0;
-      text-align: right;
-    }
-    
-    .pricing-card li {
-      padding: 12px 0;
-      font-size: 1.1rem;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    }
-    
-    .pricing-card li i {
-      color: #26de81;
-      margin-left: 10px;
-    }
-    
-    .faq {
-      padding: 60px 0;
-    }
-    
-    .faq h2 {
-      text-align: center;
-      font-size: 2.3rem;
-      color: #f6b93b;
-      margin-bottom: 50px;
-      font-weight: 900;
-    }
-    
-    .faq-item {
-      background: #203a43;
-      padding: 25px;
-      border-radius: 15px;
-      margin-bottom: 20px;
-      box-shadow: 0 5px 20px rgba(38, 222, 129, 0.1);
-    }
-    
-    .faq-item h3 {
-      font-size: 1.4rem;
-      color: #26de81;
-      margin-bottom: 15px;
-      font-weight: 700;
-    }
-    
-    .faq-item p {
-      font-size: 1.1rem;
-      opacity: 0.9;
-      line-height: 1.8;
-    }
-    
-    .testimonials {
-      padding: 60px 0;
-      background: rgba(21, 36, 59, 0.5);
-    }
-    
-    .testimonials h2 {
-      text-align: center;
-      font-size: 2.3rem;
-      color: #26de81;
-      margin-bottom: 50px;
-      font-weight: 900;
-    }
-    
-    .testimonials-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 30px;
-    }
-    
-    .testimonial-card {
-      background: #15243b;
-      padding: 30px;
-      border-radius: 15px;
-      box-shadow: 0 8px 30px rgba(246, 185, 59, 0.15);
-    }
-    
-    .testimonial-card p {
-      font-size: 1.1rem;
-      font-style: italic;
-      margin-bottom: 20px;
-      line-height: 1.8;
-    }
-    
-    .testimonial-card .author {
-      color: #f6b93b;
-      font-weight: 700;
-      font-style: normal;
-    }
-    
-    .stats {
-      padding: 60px 0;
-      text-align: center;
-    }
-    
-    .stats h2 {
-      font-size: 2.3rem;
-      color: #f6b93b;
-      margin-bottom: 50px;
-      font-weight: 900;
-    }
-    
-    .stats-grid {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 40px;
-      justify-content: center;
-    }
-    
-    .stat-item {
-      background: #26de81;
-      padding: 35px 30px;
-      border-radius: 20px;
-      min-width: 200px;
-      box-shadow: 0 10px 40px rgba(38, 222, 129, 0.3);
-    }
-    
-    .stat-item .number {
-      font-size: 3rem;
-      font-weight: 900;
-      color: #fff;
-      display: block;
-      margin-bottom: 10px;
-    }
-    
-    .stat-item .label {
-      font-size: 1.1rem;
-      color: #0f2027;
-      font-weight: 700;
-    }
-    
-    footer {
-      background: #15243b;
-      padding: 40px 0 20px;
-      text-align: center;
-    }
-    
-    footer p {
-      font-size: 1.1rem;
-      opacity: 0.9;
-    }
-    
-    .whatsapp-float {
-      position: fixed;
-      bottom: 30px;
-      left: 30px;
-      z-index: 999;
-    }
-    
-    .whatsapp-float a {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      background: #25d366;
-      color: #fff;
-      padding: 15px 30px;
-      border-radius: 50px;
-      text-decoration: none;
-      font-size: 1.1rem;
-      font-weight: 900;
-      box-shadow: 0 8px 30px rgba(37, 211, 102, 0.5);
-      transition: all 0.3s ease;
-    }
-    
-    .whatsapp-float a:hover {
-      background: #1fb856;
-      transform: translateY(-3px);
-      box-shadow: 0 12px 40px rgba(37, 211, 102, 0.7);
-    }
-    
-    @media (max-width: 768px) {
-      header h1 {
-        font-size: 1.8rem;
-      }
-      
-      .hero h2 {
-        font-size: 2rem;
-      }
-      
-      .hero p {
-        font-size: 1.1rem;
-      }
-      
-      .cta-button {
-        padding: 15px 35px;
-        font-size: 1.1rem;
-      }
-      
-      .features h2,
-      .pricing h2,
-      .faq h2,
-      .testimonials h2,
-      .stats h2 {
-        font-size: 1.8rem;
-      }
-    }
-  </style>
-
-
-    <!-- SEO Meta Tags (Auto) -->
     <meta charset="UTF-8">
-    <title>تحسين محركات البحث (SEO) - مؤسسة إعلانات العرب</title>
-    <meta name="description" content="خدمة سيو احترافية لرفع ترتيب موقعك في جوجل، تحليل كلمات رئيسية، تحسين الصفحات، بناء روابط وتحليلات أداء متقدمة وخدمة دعم فوري عبر واتساب.">
-    <meta name="keywords" content="تحسين محركات البحث (SEO), تسويق رقمي, Google Ads, Facebook Ads, SEO, مؤسسة إعلانات العرب">
-    <meta name="robots" content="index, follow">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="geo.region" content="EG">
-    <meta name="geo.placename" content="مصر">
-    <meta name="geo.position" content="30.0031;31.2089">
-    <link rel="canonical" href="https://sherow1982.github.io/arabsad-ads/services/seo.html">
-    <!-- Open Graph -->
-    <meta property="og:title" content="تحسين محركات البحث (SEO) - مؤسسة إعلانات العرب">
-    <meta property="og:description" content="خدمة سيو احترافية لرفع ترتيب موقعك في جوجل، تحليل كلمات رئيسية، تحسين الصفحات، بناء روابط وتحليلات أداء متقدمة وخدمة دعم فوري عبر واتساب.">
-    <meta property="og:image" content="https://sherow1982.github.io/arabsad-ads/assets/images/logo.svg">
-    <meta property="og:url" content="https://sherow1982.github.io/arabsad-ads/services/seo.html">
-    <meta property="og:type" content="website">
-    <meta property="og:site_name" content="مؤسسة إعلانات العرب">
-    <meta property="og:locale" content="ar_EG">
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="تحسين محركات البحث (SEO) - مؤسسة إعلانات العرب">
-    <meta name="twitter:description" content="خدمة سيو احترافية لرفع ترتيب موقعك في جوجل، تحليل كلمات رئيسية، تحسين الصفحات، بناء روابط وتحليلات أداء متقدمة وخدمة دعم فوري عبر واتساب.">
-    <meta name="twitter:image" content="https://sherow1982.github.io/arabsad-ads/assets/images/logo.svg">
-    
+    <meta name="description" content="خدمة تحسين SEO - رفع ترتيبك بـ Google بالتحسين الداخلي والخارجي.">
+    <title>تحسين SEO - البحث العضوي | ArabSad</title>
+    <meta name="keywords" content="SEO, تحسين محركات البحث, On-page SEO, Link building">
+    <meta property="og:title" content="تحسين SEO - البحث العضوي">
+    <meta property="og:description" content="تحسين موقعك للظهور بجوجل بشكل عضوي">
+    <link rel="canonical" href="https://sherow1982.github.io/arabsad/services/seo.html">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-<!-- Service Schema JSON-LD (Auto) -->
+        :root {
+            --primary: #00d4aa;
+            --primary-dark: #00a885;
+            --dark-bg: #0a0e27;
+            --dark-secondary: #1a1f3a;
+            --text-light: #e8edf5;
+            --text-muted: #a8b3c1;
+            --accent: #FFB800;
+        }
 
+        html, body {
+            font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+            background: var(--dark-bg);
+            color: var(--text-light);
+            line-height: 1.6;
+            scroll-behavior: smooth;
+        }
 
-<!-- Organization Schema JSON-LD (Auto) -->
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            background: rgba(10, 14, 39, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(0, 212, 170, 0.1);
+            padding: 1.2rem 2rem;
+        }
 
+        .header-wrapper {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 2rem;
+        }
 
-<!-- LocalBusiness Schema JSON-LD (Auto) -->
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-decoration: none;
+            min-width: max-content;
+        }
 
+        nav {
+            display: flex;
+            gap: 3rem;
+            list-style: none;
+            flex: 1;
+            justify-content: center;
+        }
 
-<!-- Breadcrumb Schema JSON-LD (Auto) -->
+        nav a {
+            color: var(--text-light);
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            font-size: 0.95rem;
+        }
 
+        nav a:hover {
+            color: var(--primary);
+        }
 
+        .cta-header {
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            color: #000;
+            padding: 0.8rem 1.8rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 212, 170, 0.3);
+            white-space: nowrap;
+        }
 
+        .cta-header:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 25px rgba(0, 212, 170, 0.4);
+        }
 
-    <!-- SEO Meta Tags (Auto) -->
-    <meta charset="UTF-8">
-    <title>تحسين محركات البحث (SEO) - مؤسسة إعلانات العرب | وكالة تسويق رقمي الخليج</title>
-    <meta name="description" content="خدمة سيو احترافية لرفع ترتيب موقعك في جوجل، تحليل كلمات رئيسية، تحسين الصفحات، بناء روابط وتحليلات أداء متقدمة وخدمة دعم فوري عبر واتساب.">
-    <meta name="keywords" content="تسويق رقمي الكويت, تسويق رقمي عمان, تسويق رقمي البحرين, بناء الروابط, إعلانات جوجل قطر, إعلانات جوجل البحرين, تسويق رقمي السعودية, تحسين محركات البحث, SEO, تسويق رقمي الإمارات">
-    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="language" content="ar">
-    <meta name="author" content="مؤسسة إعلانات العرب">
-    <meta name="geo.region" content="EG">
-    <meta name="geo.placename" content="مصر">
-    <link rel="canonical" href="https://sherow1982.github.io/arabsad-ads/services/seo.html">
-    <link rel="alternate" hreflang="ar" href="https://sherow1982.github.io/arabsad-ads/services/seo.html">
-    <!-- Open Graph -->
-    <meta property="og:title" content="تحسين محركات البحث (SEO) - مؤسسة إعلانات العرب">
-    <meta property="og:description" content="خدمة سيو احترافية لرفع ترتيب موقعك في جوجل، تحليل كلمات رئيسية، تحسين الصفحات، بناء روابط وتحليلات أداء متقدمة وخدمة دعم فوري عبر واتساب.">
-    <meta property="og:image" content="https://sherow1982.github.io/arabsad-ads/assets/images/logo.svg">
-    <meta property="og:url" content="https://sherow1982.github.io/arabsad-ads/services/seo.html">
-    <meta property="og:type" content="website">
-    <meta property="og:site_name" content="مؤسسة إعلانات العرب">
-    <meta property="og:locale" content="ar_EG">
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="تحسين محركات البحث (SEO)">
-    <meta name="twitter:description" content="خدمة سيو احترافية لرفع ترتيب موقعك في جوجل، تحليل كلمات رئيسية، تحسين الصفحات، بناء روابط وتحليلات أداء متقدمة وخدمة دعم فوري عبر واتساب.">
-    <meta name="twitter:image" content="https://sherow1982.github.io/arabsad-ads/assets/images/logo.svg">
-    
+        main {
+            margin-top: 80px;
+        }
 
-<!-- Service/Article Schema JSON-LD (Auto) -->
+        .hero {
+            background: linear-gradient(135deg, rgba(0, 212, 170, 0.05) 0%, rgba(255, 184, 0, 0.03) 100%);
+            padding: 4rem 2rem;
+            text-align: center;
+            border-bottom: 1px solid rgba(0, 212, 170, 0.1);
+        }
 
+        .hero h1 {
+            font-size: clamp(2rem, 6vw, 3.5rem);
+            font-weight: 900;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
 
-<!-- Organization Schema JSON-LD (Auto) -->
+        .hero p {
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            max-width: 600px;
+            margin: 0 auto;
+        }
 
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
 
-<!-- LocalBusiness Schema - Gulf Countries (Auto) -->
+        section {
+            padding: 4rem 2rem;
+        }
 
+        section h2 {
+            font-size: 2.2rem;
+            font-weight: 900;
+            margin-bottom: 2rem;
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
 
-<!-- Breadcrumb Schema JSON-LD (Auto) -->
+        .service-features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
 
+        .feature {
+            background: rgba(0, 212, 170, 0.05);
+            border: 1px solid rgba(0, 212, 170, 0.2);
+            padding: 2rem;
+            border-radius: 12px;
+            transition: all 0.3s ease;
+        }
 
+        .feature:hover {
+            background: rgba(0, 212, 170, 0.1);
+            border-color: rgba(0, 212, 170, 0.4);
+            transform: translateY(-5px);
+        }
 
+        .feature h3 {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            color: var(--primary);
+        }
 
-    <!-- SEO Meta Tags (Auto) -->
-    <meta charset="UTF-8">
-    <title>تحسين محركات البحث (SEO) - مؤسسة إعلانات العرب | وكالة تسويق رقمي الخليج</title>
-    <meta name="description" content="خدمة سيو احترافية لرفع ترتيب موقعك في جوجل، تحليل كلمات رئيسية، تحسين الصفحات، بناء روابط وتحليلات أداء متقدمة وخدمة دعم فوري عبر واتساب.">
-    <meta name="keywords" content="تسويق رقمي الرياض, تسويق رقمي صلالة, تسويق رقمي الإمارات, تحسين محركات البحث (SEO), تسويق رقمي دبي, تسويق رقمي السعودية, محسن البحث, إعلانات جوجل دبي, تحسين محركات البحث, تسويق رقمي المحرق, إعلانات جوجل الكويت, تسويق رقمي جدة, Search Engine Optimization, تسويق رقمي البحرين, إعلانات جوجل الدوحة">
-    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="language" content="ar">
-    <meta name="author" content="مؤسسة إعلانات العرب">
-    <meta name="geo.region" content="EG">
-    <meta name="geo.placename" content="مصر">
-    <link rel="canonical" href="https://sherow1982.github.io/arabsad-ads/services/seo.html">
-    <link rel="alternate" hreflang="ar" href="https://sherow1982.github.io/arabsad-ads/services/seo.html">
-    <!-- Open Graph -->
-    <meta property="og:title" content="تحسين محركات البحث (SEO) - مؤسسة إعلانات العرب">
-    <meta property="og:description" content="خدمة سيو احترافية لرفع ترتيب موقعك في جوجل، تحليل كلمات رئيسية، تحسين الصفحات، بناء روابط وتحليلات أداء متقدمة وخدمة دعم فوري عبر واتساب.">
-    <meta property="og:image" content="https://sherow1982.github.io/arabsad-ads/assets/images/logo.svg">
-    <meta property="og:url" content="https://sherow1982.github.io/arabsad-ads/services/seo.html">
-    <meta property="og:type" content="website">
-    <meta property="og:site_name" content="مؤسسة إعلانات العرب">
-    <meta property="og:locale" content="ar_EG">
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="تحسين محركات البحث (SEO)">
-    <meta name="twitter:description" content="خدمة سيو احترافية لرفع ترتيب موقعك في جوجل، تحليل كلمات رئيسية، تحسين الصفحات، بناء روابط وتحليلات أداء متقدمة وخدمة دعم فوري عبر واتساب.">
-    <meta name="twitter:image" content="https://sherow1982.github.io/arabsad-ads/assets/images/logo.svg">
-    
+        .feature p {
+            color: var(--text-muted);
+            line-height: 1.8;
+        }
 
-<!-- Service/Article Schema JSON-LD (Auto) -->
+        .benefits-list {
+            list-style: none;
+            margin: 2rem 0;
+        }
 
+        .benefits-list li {
+            padding: 0.8rem 0;
+            padding-right: 2rem;
+            position: relative;
+            color: var(--text-muted);
+            font-size: 1.05rem;
+        }
 
-<!-- Organization Schema JSON-LD (Auto) -->
+        .benefits-list li::before {
+            content: '✓';
+            position: absolute;
+            right: 0;
+            color: var(--primary);
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
 
+        .cta-button {
+            display: inline-block;
+            padding: 1rem 2.5rem;
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            color: #000;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 212, 170, 0.3);
+            margin-top: 2rem;
+        }
 
-<!-- LocalBusiness Schemas - Gulf Countries (Auto) -->
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 30px rgba(0, 212, 170, 0.5);
+        }
 
+        footer {
+            background: var(--dark-secondary);
+            border-top: 2px solid rgba(0, 212, 170, 0.1);
+            padding: 4rem 2rem 2rem;
+        }
 
+        .footer-content {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
 
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
 
+        .footer-column h4 {
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+        }
 
+        .footer-column a {
+            color: var(--text-muted);
+            text-decoration: none;
+            transition: color 0.3s ease;
+            display: block;
+            margin-bottom: 0.8rem;
+        }
 
-<!-- Breadcrumb Schema JSON-LD (Auto) -->
+        .footer-column a:hover {
+            color: var(--primary);
+        }
 
+        .footer-bottom {
+            border-top: 1px solid rgba(0, 212, 170, 0.1);
+            padding-top: 2rem;
+            text-align: center;
+            color: var(--text-muted);
+        }
 
-
-
-    <!-- SEO Meta Tags (Auto) -->
-    <meta charset="UTF-8">
-    <title>تحسين محركات البحث (SEO) - مؤسسة إعلانات العرب | وكالة تسويق رقمي الخليج</title>
-    <meta name="description" content="خدمة سيو احترافية لرفع ترتيب موقعك في جوجل، تحليل كلمات رئيسية، تحسين الصفحات، بناء روابط وتحليلات أداء متقدمة وخدمة دعم فوري عبر واتساب.">
-    <meta name="keywords" content="تسويق رقمي الرياض, تسويق رقمي أبوظبي, Google Ads, إعلانات جوجل, تسويق رقمي صلالة, إعلانات جوجل الإمارات, Google Ads جدة, إعلانات جوجل البحرين, إعلانات فيسبوك, Google Ads المنامة, إعلانات جوجل الكويت, التسويق الرقمي, Google Ads صلالة, تسويق رقمي قطر, تسويق رقمي الريان">
-    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="language" content="ar">
-    <meta name="author" content="مؤسسة إعلانات العرب">
-    <link rel="canonical" href="https://sherow1982.github.io/arabsad-ads/services/seo.html">
-    <!-- Open Graph -->
-    <meta property="og:title" content="تحسين محركات البحث (SEO) - مؤسسة إعلانات العرب">
-    <meta property="og:description" content="خدمة سيو احترافية لرفع ترتيب موقعك في جوجل، تحليل كلمات رئيسية، تحسين الصفحات، بناء روابط وتحليلات أداء متقدمة وخدمة دعم فوري عبر واتساب.">
-    <meta property="og:image" content="https://sherow1982.github.io/arabsad-ads/assets/images/logo.svg">
-    <meta property="og:url" content="https://sherow1982.github.io/arabsad-ads/services/seo.html">
-    <meta property="og:type" content="website">
-    <meta property="og:locale" content="ar_EG">
-    
-
-<!-- Main Schema (Auto) -->
-
-
-<!-- Organization Schema (Auto) -->
-
-
-<!-- LocalBusiness Schemas - Gulf Countries (Auto) -->
-
-
-
-
-
-
-
-
-
-
-
-<!-- Breadcrumb Schema (Auto) -->
-
-
-
-
-    <!-- SEO Meta Tags (Auto) -->
-    <meta charset="UTF-8">
-    <title>تحسين محركات البحث (SEO) - مؤسسة إعلانات العرب</title>
-    <meta name="description" content="خدمة سيو احترافية لرفع ترتيب موقعك في جوجل، تحليل كلمات رئيسية، تحسين الصفحات، بناء روابط وتحليلات أداء متقدمة وخدمة دعم فوري عبر واتساب.">
-    <meta name="keywords" content="تسويق الريان, تسويق الدوحة, إعلانات فيسبوك, Web Design, إعلانات جوجل السعودية, تسويق جدة, SEO, إعلانات جوجل الإمارات, تسويق رقمي عمان, Social Media Ads, تسويق رقمي الإمارات, تسويق دبي, تسويق أبوظبي, إعلانات جوجل, التسويق الرقمي">
-    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="canonical" href="https://sherow1982.github.io/arabsad-ads/services/seo.html">
-    <!-- Open Graph -->
-    <meta property="og:title" content="تحسين محركات البحث (SEO) - مؤسسة إعلانات العرب">
-    <meta property="og:description" content="خدمة سيو احترافية لرفع ترتيب موقعك في جوجل، تحليل كلمات رئيسية، تحسين الصفحات، بناء روابط وتحليلات أداء متقدمة وخدمة دعم فوري عبر واتساب.">
-    <meta property="og:image" content="https://sherow1982.github.io/arabsad-ads/assets/images/logo.svg">
-    <meta property="og:url" content="https://sherow1982.github.io/arabsad-ads/services/seo.html">
-    
-
-<!-- Main Schema (Auto) -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org/",
-  "@type": "Service",
-  "name": "تحسين محركات البحث (SEO)",
-  "image": "https://sherow1982.github.io/arabsad-ads/assets/images/logo.svg",
-  "description": "خدمة سيو احترافية لرفع ترتيب موقعك في جوجل، تحليل كلمات رئيسية، تحسين الصفحات، بناء روابط وتحليلات أداء متقدمة وخدمة دعم فوري عبر واتساب.",
-  "provider": {
-    "@type": "Organization",
-    "name": "مؤسسة إعلانات العرب",
-    "url": "https://sherow1982.github.io/arabsad-ads/",
-    "logo": "https://sherow1982.github.io/arabsad-ads/assets/images/logo.svg",
-    "telephone": "+201110760081"
-  },
-  "url": "https://sherow1982.github.io/arabsad-ads/services/seo.html",
-  "areaServed": [
-    {
-      "@type": "Country",
-      "name": "المملكة العربية السعودية"
-    },
-    {
-      "@type": "Country",
-      "name": "الإمارات العربية المتحدة"
-    },
-    {
-      "@type": "Country",
-      "name": "دولة الكويت"
-    },
-    {
-      "@type": "Country",
-      "name": "دولة قطر"
-    },
-    {
-      "@type": "Country",
-      "name": "مملكة البحرين"
-    },
-    {
-      "@type": "Country",
-      "name": "سلطنة عمان"
-    }
-  ],
-  "priceRange": "$$-$$$"
-}
-</script>
-
-<!-- Organization Schema (Auto) -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "مؤسسة إعلانات العرب",
-  "url": "https://sherow1982.github.io/arabsad-ads/",
-  "telephone": "+201110760081",
-  "email": "info@arabsad.com"
-}
-</script>
-
-<!-- Breadcrumb Schema (Auto) -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position": 1,
-      "name": "الرئيسية",
-      "item": "https://sherow1982.github.io/arabsad-ads"
-    },
-    {
-      "@type": "ListItem",
-      "position": 2,
-      "name": "Services",
-      "item": "https://sherow1982.github.io/arabsad-ads/services"
-    }
-  ]
-}
-</script>
-
+        @media (max-width: 768px) {
+            header { padding: 1rem; }
+            .header-wrapper { gap: 1rem; }
+            nav { display: none; }
+            main { margin-top: 70px; }
+            section { padding: 2rem 1rem; }
+            .service-features { grid-template-columns: 1fr; }
+        }
+    </style>
 </head>
 <body>
-  <header>
-    <div class="container">
-      <h1>🔍 خدمة تحسين محركات البحث SEO</h1>
-      <p>تصدر نتائج البحث وحقق زيارات عضوية مستدامة</p>
-    </div>
-  </header>
+    <header>
+        <div class="header-wrapper">
+            <a href="/arabsad/" class="logo">🌐 إعلانات العرب</a>
+            <nav>
+                <a href="/arabsad/">الرئيسية</a>
+                <a href="/arabsad/services/">الخدمات</a>
+                <a href="/arabsad/#contact">اتصل بنا</a>
+            </nav>
+            <a href="https://wa.me/201110760081" target="_blank" class="cta-header">💬 تواصل</a>
+        </div>
+    </header>
 
-  <section class="hero">
-    <div class="container">
-      <h2>اجعل موقعك في الصفحة الأولى من جوجل</h2>
-      <p>نساعدك على تحسين ظهور موقعك في نتائج البحث، زيادة الزيارات العضوية المجانية، وتحقيق نمو مستدام في أعمالك. فريقنا من خبراء SEO معتمدين وجاهزون لرفع ترتيب موقعك.</p>
-      <a href="https://wa.me/201110760081?text=أريد%20تحسين%20SEO%20لموقعي" class="cta-button">
-        <i class="fab fa-whatsapp"></i> احصل على تحليل مجاني
-      </a>
-    </div>
-  </section>
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h1>📊 SEO - تحسين البحث العضوي</h1>
+                <p>رفع ترتيب موقعك في جوجل بشكل عضوي واستمراري بدون الاعتماد على الإعلانات الممولة</p>
+            </div>
+        </section>
 
-  <section class="stats">
-    <div class="container">
-      <h2>📊 نتائجنا في السيو</h2>
-      <div class="stats-grid">
-        <div class="stat-item">
-          <span class="number">+300</span>
-          <span class="label">موقع محسّن</span>
-        </div>
-        <div class="stat-item">
-          <span class="number">850%</span>
-          <span class="label">متوسط زيادة الزيارات</span>
-        </div>
-        <div class="stat-item">
-          <span class="number">TOP 3</span>
-          <span class="label">متوسط الترتيب</span>
-        </div>
-        <div class="stat-item">
-          <span class="number">90%</span>
-          <span class="label">معدل النجاح</span>
-        </div>
-      </div>
-    </div>
-  </section>
+        <section>
+            <div class="container">
+                <h2>مزايا خدمة SEO</h2>
+                <div class="service-features">
+                    <article class="feature">
+                        <h3>📄 بحث كلمات</h3>
+                        <p>البحث عن أفضل الكلمات المفتاحية المربحة لمشروعك</p>
+                    </article>
+                    <article class="feature">
+                        <h3>🎁 تحسين على الموقع</h3>
+                        <p>تحسين العلامات البرمجية والوسوم والوصف</p>
+                    </article>
+                    <article class="feature">
+                        <h3>🔗 بناء الروابط</h3>
+                        <p>الحصول على روابط خلفية قوية من مواقع موثوقة</p>
+                    </article>
+                    <article class="feature">
+                        <h3>📈 تقارير مفصلة</h3>
+                        <p>تراقب تفاصيلي لكل معايير SEO مهمة</p>
+                    </article>
+                    <article class="feature">
+                        <h3>📛 مكرر المنافسين</h3>
+                        <p>دراسة استراتيجيات المنافسين وبناء خطة أقوى</p>
+                    </article>
+                    <article class="feature">
+                        <h3>📱 SEO موبايل</h3>
+                        <p>تاكد من رسبية موقعك للهواتف الذكية</p>
+                    </article>
+                </div>
+            </div>
+        </section>
 
-  <section class="features">
-    <div class="container">
-      <h2>✨ ماذا نقدم في خدمة السيو؟</h2>
-      <div class="features-grid">
-        <div class="feature-card">
-          <i class="fas fa-search"></i>
-          <h3>تحليل الكلمات المفتاحية</h3>
-          <p>دراسة شاملة للكلمات الأكثر بحثاً في مجالك واختيار الكلمات الأنسب لاستهداف عملائك المحتملين بدقة عالية.</p>
-        </div>
-        
-        <div class="feature-card">
-          <i class="fas fa-code"></i>
-          <h3>تحسين تقني للموقع</h3>
-          <p>إصلاح جميع المشاكل التقنية، تحسين السرعة، تحسين الأكواد، وضمان توافق الموقع مع معايير جوجل.</p>
-        </div>
-        
-        <div class="feature-card">
-          <i class="fas fa-edit"></i>
-          <h3>كتابة محتوى SEO</h3>
-          <p>إنشاء محتوى عالي الجودة محسّن لمحركات البحث يجذب الزوار ويحقق ترتيب أعلى في النتائج.</p>
-        </div>
-        
-        <div class="feature-card">
-          <i class="fas fa-link"></i>
-          <h3>بناء روابط خارجية</h3>
-          <p>استراتيجية بناء روابط خلفية عالية الجودة من مواقع موثوقة لتعزيز سلطة موقعك.</p>
-        </div>
-        
-        <div class="feature-card">
-          <i class="fas fa-mobile-alt"></i>
-          <h3>تحسين للجوال</h3>
-          <p>ضمان ظهور مثالي لموقعك على جميع الأجهزة المحمولة والتوافق مع معايير Mobile-First.</p>
-        </div>
-        
-        <div class="feature-card">
-          <i class="fas fa-chart-line"></i>
-          <h3>تقارير أداء دورية</h3>
-          <p>تقارير شاملة توضح تطور ترتيب موقعك، الزيارات، الكلمات المفتاحية، والتوصيات للتحسين المستمر.</p>
-        </div>
-      </div>
-    </div>
-  </section>
+        <section style="background: rgba(0, 212, 170, 0.02);">
+            <div class="container">
+                <h2>ما يتم تقديمه</h2>
+                <ul class="benefits-list">
+                    <li>بحث وتحليل مفصل للكلمات المفتاحية</li>
+                    <li>تحسين نسبة الزحاف للفهرسة</li>
+                    <li>رفع سرعة الموقع والأداء</li>
+                    <li>بناء شبكة روابط خلفية عالية الجودة</li>
+                    <li>تحسين التجربة على الموقع (UX)</li>
+                    <li>إنشاء محتوى محسّن SEO</li>
+                    <li>رفع الترتيب في خريطة جوجل (Google My Business)</li>
+                </ul>
+                <a href="https://wa.me/201110760081" class="cta-button" target="_blank">💬 ابدأ معي</a>
+            </div>
+        </section>
+    </main>
 
-  <section class="pricing">
-    <div class="container">
-      <h2>💰 باقات تحسين السيو</h2>
-      <div class="pricing-grid">
-        <div class="pricing-card">
-          <h3>🌟 باقة البداية</h3>
-          <div class="price">$399</div>
-          <p>للشهر</p>
-          <ul>
-            <li><i class="fas fa-check"></i> تدقيق SEO شامل</li>
-            <li><i class="fas fa-check"></i> 10 كلمات مفتاحية</li>
-            <li><i class="fas fa-check"></i> تحسين 5 صفحات</li>
-            <li><i class="fas fa-check"></i> تقرير شهري</li>
-            <li><i class="fas fa-check"></i> دعم أساسي</li>
-          </ul>
-          <a href="https://wa.me/201110760081?text=أريد%20باقة%20SEO%20البداية" class="cta-button">اختر الباقة</a>
+    <footer>
+        <div class="footer-content">
+            <div class="footer-grid">
+                <nav>
+                    <h4>الخدمات</h4>
+                    <a href="/arabsad/services/">الخدمات الرئيسية</a>
+                    <a href="/arabsad/services/google-ads.html">إعلانات Google Ads</a>
+                    <a href="/arabsad/services/social-media-ads.html">إعلانات السوشيال</a>
+                </nav>
+                <nav>
+                    <h4>روابط سريعة</h4>
+                    <a href="/arabsad/">الرئيسية</a>
+                    <a href="/arabsad/#contact">اتصل بنا</a>
+                    <a href="/arabsad/privacy-policy.html">سياسة الخصوصية</a>
+                </nav>
+                <nav>
+                    <h4>التواصل</h4>
+                    <a href="tel:+201110760081">☎️ +201110760081</a>
+                    <a href="https://wa.me/201110760081" target="_blank" rel="noopener noreferrer">💬 واتساب</a>
+                    <a href="mailto:info@arabsad.com">📧 info@arabsad.com</a>
+                </nav>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 مؤسسة إعلانات العرب - جميع الحقوق محفوظة</p>
+            </div>
         </div>
-        
-        <div class="pricing-card featured">
-          <h3>🚀 باقة النمو</h3>
-          <div class="price">$699</div>
-          <p>للشهر</p>
-          <ul>
-            <li><i class="fas fa-check"></i> تدقيق SEO متقدم</li>
-            <li><i class="fas fa-check"></i> 25 كلمة مفتاحية</li>
-            <li><i class="fas fa-check"></i> تحسين 15 صفحة</li>
-            <li><i class="fas fa-check"></i> كتابة 4 مقالات</li>
-            <li><i class="fas fa-check"></i> بناء 15 رابط</li>
-            <li><i class="fas fa-check"></i> تقرير أسبوعي</li>
-          </ul>
-          <a href="https://wa.me/201110760081?text=أريد%20باقة%20SEO%20النمو" class="cta-button">الأكثر طلباً</a>
-        </div>
-        
-        <div class="pricing-card">
-          <h3>🏆 باقة الاحتراف</h3>
-          <div class="price">$1299</div>
-          <p>للشهر</p>
-          <ul>
-            <li><i class="fas fa-check"></i> تدقيق SEO كامل</li>
-            <li><i class="fas fa-check"></i> كلمات مفتاحية غير محدودة</li>
-            <li><i class="fas fa-check"></i> تحسين شامل للموقع</li>
-            <li><i class="fas fa-check"></i> كتابة 8 مقالات</li>
-            <li><i class="fas fa-check"></i> بناء 30 رابط</li>
-            <li><i class="fas fa-check"></i> مدير حساب مخصص</li>
-          </ul>
-          <a href="https://wa.me/201110760081?text=أريد%20باقة%20SEO%20الاحتراف" class="cta-button">اختر الباقة</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="testimonials">
-    <div class="container">
-      <h2>👥 قصص نجاح عملائنا</h2>
-      <div class="testimonials-grid">
-        <div class="testimonial-card">
-          <p>"ارتفع ترتيب موقعي من الصفحة 5 إلى الصفحة الأولى في 4 أشهر. زيارات مضاعفة ومبيعات حقيقية."</p>
-          <div class="author">— خالد المنصور، صاحب متجر إلكتروني</div>
-        </div>
-        
-        <div class="testimonial-card">
-          <p>"استراتيجية سيو احترافية وتقارير واضحة. أصبحنا نظهر في أول 3 نتائج لأهم الكلمات."</p>
-          <div class="author">— نورة الشمري، مديرة تسويق</div>
-        </div>
-        
-        <div class="testimonial-card">
-          <p>"زيادة 700% في الزيارات العضوية خلال 6 أشهر. خدمة استثنائية ودعم مستمر."</p>
-          <div class="author">— عمر الدوسري، مالك شركة خدمات</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="faq">
-    <div class="container">
-      <h2>❓ الأسئلة الشائعة</h2>
-      
-      <div class="faq-item">
-        <h3>كم تحتاج خدمة السيو حتى تظهر النتائج؟</h3>
-        <p>تبدأ التحسينات بإظهار نتائج فعّالة خلال 3 إلى 8 أسابيع كمتوسط، وتستمر النتائج بالتحسن على مدى 6-12 شهراً للحصول على أفضل النتائج المستدامة.</p>
-      </div>
-      
-      <div class="faq-item">
-        <h3>هل ألزم بتغيير محتوى الموقع؟</h3>
-        <p>يتم التدقيق وكتابة محتوى جديد فقط عند الحاجة، دون الإضرار بهوية الموقع. نحسّن المحتوى الموجود ونضيف محتوى جديد يدعم الكلمات المستهدفة.</p>
-      </div>
-      
-      <div class="faq-item">
-        <h3>هل الخدمة تشمل بناء روابط؟</h3>
-        <p>نعم، بناء روابط داخلية وخارجية عالية الجودة جزء أساسي من الخدمة. نستخدم استراتيجيات White Hat فقط لضمان نتائج آمنة ومستدامة.</p>
-      </div>
-      
-      <div class="faq-item">
-        <h3>هل تعملون على مواقع عربية وإنجليزية؟</h3>
-        <p>نعم، نقدم خدمات SEO للمواقع العربية والإنجليزية والمواقع ثنائية اللغة، مع فهم كامل لخصوصية كل سوق.</p>
-      </div>
-      
-      <div class="faq-item">
-        <h3>هل يمكن استهداف مدن معينة في السيو؟</h3>
-        <p>نعم، نتخصص في Local SEO لاستهداف مدن ومناطق جغرافية محددة، مثالي للأعمال المحلية والعيادات والمحلات.</p>
-      </div>
-    </div>
-  </section>
-
-  <section class="hero" style="background: rgba(21, 36, 59, 0.5); padding: 60px 0;">
-    <div class="container">
-      <h2>🎯 جاهز لتصدر نتائج البحث؟</h2>
-      <p>احصل على تحليل مجاني لموقعك وخطة SEO مخصصة الآن</p>
-      <a href="https://wa.me/201110760081?text=أريد%20تحليل%20SEO%20مجاني%20لموقعي" class="cta-button">
-        <i class="fab fa-whatsapp"></i> تحليل مجاني الآن
-      </a>
-    </div>
-  </section>
-
-  <footer>
-    <div class="container">
-      <p>جميع الحقوق محفوظة © مؤسسة إعلانات العرب 2025</p>
-      <p style="margin-top: 10px;">
-        <a href="../index.html" style="color: #26de81; text-decoration: none; margin: 0 10px;">الرئيسية</a>
-        <a href="index.html" style="color: #26de81; text-decoration: none; margin: 0 10px;">جميع الخدمات</a>
-        <a href="../privacy-policy.html" style="color: #26de81; text-decoration: none; margin: 0 10px;">سياسة الخصوصية</a>
-      </p>
-    </div>
-  </footer>
-
-  <div class="whatsapp-float">
-    <a href="https://wa.me/201110760081?text=أريد%20الاستفسار%20عن%20خدمات%20SEO">
-      <i class="fab fa-whatsapp" style="font-size: 1.5rem;"></i>
-      <span>واتساب فوري</span>
-    </a>
-  </div>
+    </footer>
 </body>
 </html>
