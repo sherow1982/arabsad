@@ -233,7 +233,7 @@
             width: 85%;
             max-width: 320px;
             height: 100vh;
-            background: rgba(15, 32, 39, 0.99);
+            background: linear-gradient(180deg, #0f2027 0%, #203a43 100%);
             backdrop-filter: blur(10px);
             flex-direction: column;
             padding: 90px 20px 40px;
@@ -241,18 +241,20 @@
             z-index: 10001;
             overflow-y: auto;
             box-shadow: -5px 0 20px rgba(0,0,0,0.5);
-            border-left: 1px solid rgba(246, 185, 59, 0.1);
+            border-left: 2px solid rgba(246, 185, 59, 0.5);
             display: flex;
+            text-align: right;
         }
 
         .nav-menu.active { right: 0; }
 
         .nav-item { 
             width: 100%; 
-            margin-bottom: 5px;
+            margin-bottom: 10px;
             opacity: 0;
             transform: translateX(20px);
             transition: all 0.3s ease;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
         }
 
         .nav-menu.active .nav-item {
@@ -270,8 +272,28 @@
         .nav-link {
             width: 100%;
             justify-content: space-between;
-            padding: 15px 10px;
-            border-bottom: 1px solid rgba(255,255,255,0.05);
+            padding: 15px 15px;
+            font-size: 1.1rem;
+            color: #fff;
+            border-radius: 8px;
+        }
+        
+        .nav-link:hover, .nav-link:active, .nav-item.active > .nav-link {
+            background: rgba(255, 255, 255, 0.1);
+            color: #f6b93b;
+        }
+
+        /* Mobile Dropdown Fix */
+        .nav-item.active .dropdown-menu {
+            position: static;
+            opacity: 1;
+            visibility: visible;
+            transform: none;
+            box-shadow: none;
+            background: rgba(0, 0, 0, 0.2);
+            margin-top: 5px;
+            padding-right: 15px;
+            display: block;
         }
     }
 

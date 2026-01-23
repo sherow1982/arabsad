@@ -177,11 +177,14 @@ function addClickEffects() {
 function initMobileDropdowns() {
     if (window.innerWidth <= 992) {
         document.querySelectorAll('.dropdown-toggle').forEach(toggle => {
-            // Use onclick to ensure it works even if added dynamically
-            toggle.onclick = function(e) {
-                e.preventDefault();
+            // Remove old listeners to avoid duplicates if called multiple times
+            const newToggle = toggle.cloneNode(true);
+            toggle.parentNode.replaceChild(newToggle, toggle);
+            
+            newToggle.addEventListener('click', function(e) {
+                e.preventDefault(); // Prevent navigation
                 this.parentElement.classList.toggle('active');
-            };
+            });
         });
     }
 }

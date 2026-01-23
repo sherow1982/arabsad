@@ -681,5 +681,22 @@
         </a>
     </div>
 
+    <!-- Scripts -->
+    <script src="assets/js/navigation-system.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Load Shared Components
+            document.querySelectorAll('[data-include]').forEach(async function(el) {
+                try {
+                    const file = el.getAttribute('data-include');
+                    const response = await fetch('/arabsad/' + file);
+                    if (response.ok) {
+                        el.innerHTML = await response.text();
+                        if (file.includes('header') && typeof initMobileDropdowns === 'function') initMobileDropdowns();
+                    }
+                } catch (e) { console.log(e); }
+            });
+        });
+    </script>
 </body>
 </html>
