@@ -93,19 +93,29 @@ function buildPageCards(category) {
 }
 
 /**
- * تبديل عرض قائمة الجوال
+ * تبديل عرض قائمة الجوال - نسخة معاد كتابتها بالكامل
  */
 function toggleMobileNav() {
     const navMenu = document.getElementById('navMenu');
     const toggleBtn = document.getElementById('mobileToggle');
     const overlay = document.getElementById('menuOverlay');
+    const body = document.body;
     
-    if (navMenu) navMenu.classList.toggle('active');
-    if (toggleBtn) toggleBtn.classList.toggle('active');
-    if (overlay) overlay.classList.toggle('active');
+    if (!navMenu || !toggleBtn || !overlay) {
+        console.warn('عناصر القائمة غير موجودة في الصفحة');
+        return;
+    }
     
-    // Prevent body scroll when menu is open
-    document.body.style.overflow = (navMenu && navMenu.classList.contains('active')) ? 'hidden' : '';
+    navMenu.classList.toggle('active');
+    toggleBtn.classList.toggle('active');
+    overlay.classList.toggle('active');
+    
+    // منع التمرير في الخلفية
+    if (navMenu.classList.contains('active')) {
+        body.style.overflow = 'hidden';
+    } else {
+        body.style.overflow = '';
+    }
 }
 
 /**
@@ -175,26 +185,30 @@ function addClickEffects() {
  * تفعيل القوائم المنسدلة على الجوال
  */
 function initMobileDropdowns() {
-    if (window.innerWidth <= 992) {
-        document.querySelectorAll('.dropdown-toggle').forEach(toggle => {
-            // Remove old listeners to avoid duplicates if called multiple times
+    // التأكد من أننا على الجوال
+    const isMobile = window.matchMedia("(max-width: 992px)").matches;
+    
+    if (isMobile) {
+        const toggles = document.querySelectorAll('.dropdown-toggle');
+        
+        toggles.forEach(toggle => {
+            // إزالة المستمعين القدامى لتجنب التكرار
             const newToggle = toggle.cloneNode(true);
             toggle.parentNode.replaceChild(newToggle, toggle);
             
             newToggle.addEventListener('click', function(e) {
-                e.preventDefault(); // Prevent navigation
+                e.preventDefault(); // منع الانتقال للرابط
+                e.stopPropagation(); // منع انتشار الحدث
                 
-                // Toggle active class
-                const parent = this.parentElement;
-                const wasActive = parent.classList.contains('active');
-                // Close others (optional, but good for UX)
-                // document.querySelectorAll('.nav-item.active').forEach(item => item.classList.remove('active'));
+                const parentItem = this.parentElement;
                 
-                if (!wasActive) {
-                    parent.classList.add('active');
-                } else {
-                    parent.classList.remove('active');
-                }
+                // إغلاق القوائم الأخرى (اختياري - لتجربة أنظف)
+                document.querySelectorAll('.nav-item.active').forEach(item => {
+                    if (item !== parentItem) item.classList.remove('active');
+                });
+                
+                // تبديل حالة العنصر الحالي
+                parentItem.classList.toggle('active');
             });
         });
     }
