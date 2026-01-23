@@ -1,6 +1,26 @@
 User-agent: *
 Allow: /
-Disallow: /admin/
 
-Sitemap: https://sherow1982.github.io/arabsad-ads/sitemap.xml
-Crawl-delay: 1
+# AI & LLM Crawlers (ChatGPT, Gemini, Claude, etc.)
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+# Block only system files
+Disallow: /.git/
+Disallow: /node_modules/
+Disallow: /.htaccess
+
+# Sitemap location
+Sitemap: https://sherow1982.github.io/arabsad/sitemap.xml

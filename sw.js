@@ -1,3 +1,18 @@
+// Helper function to validate origin
+function isValidOrigin(url) {
+  try {
+    const requestUrl = new URL(url);
+    const allowedOrigins = [
+      'https://sherow1982.github.io',
+      'https://fonts.googleapis.com',
+      'https://fonts.gstatic.com'
+    ];
+    return allowedOrigins.some(origin => requestUrl.origin === origin);
+  } catch {
+    return false;
+  }
+}
+
 // Service Worker for ArabSad.com PWA
 const CACHE_NAME = 'arabsad-v1.0.1';
 const CACHE_VERSION = '2025-11-11';
@@ -104,14 +119,20 @@ self.addEventListener('fetch', event => {
         console.log('Service Worker: Serving from cache:', request.url);
         
         // تحديث الكاش في الخلفية (stale-while-revalidate)
-        fetch(request).then(response => {
-          if (response && response.status === 200) {
-            const responseClone = response.clone();
-            caches.open(CACHE_NAME).then(cache => {
-              cache.put(request, responseClone);
-            });
-          }
-        }).catch(() => {});
+        if (isValidOrigin(request.url)) {
+          fetch(request).then(response => {
+            if (response && response.status === 200) {
+              const responseClone = response.clone();
+              caches.open(CACHE_NAME).then(cache => {
+                cache.put(request, responseClone);
+              }).catch(err => {
+                console.warn('Service Worker: Failed to update cache:', err);
+              });
+            }
+          }).catch(err => {
+            console.warn('Service Worker: Background fetch failed:', err);
+          });
+        }
         
         return cachedResponse;
       }
@@ -129,13 +150,20 @@ self.addEventListener('fetch', event => {
         const responseClone = response.clone();
         caches.open(CACHE_NAME).then(cache => {
           cache.put(request, responseClone);
+        }).catch(err => {
+          console.warn('Service Worker: Failed to cache response:', err);
         });
         
         return response;
-      }).catch(() => {
+      }).catch(err => {
+        console.warn('Service Worker: Fetch failed:', err);
         // في حالة عدم وجود اتصال، إرجاع صفحة غير متصل
         if (request.destination === 'document') {
-          return caches.match('/index.html');
+          return caches.match('/index.html').catch(() => {
+            return new Response('<!DOCTYPE html><html><body><h1>غير متصل</h1></body></html>', {
+              headers: { 'Content-Type': 'text/html; charset=utf-8' }
+            });
+          });
         }
         
         // للموارد الأخرى، إرجاع استجابة فارغة
@@ -144,21 +172,33 @@ self.addEventListener('fetch', event => {
           statusText: 'Offline'
         });
       });
+    }).catch(err => {
+      console.error('Service Worker: Cache match failed:', err);
+      return fetch(request).catch(() => {
+        return new Response('Service Unavailable', {
+          status: 503,
+          statusText: 'Service Unavailable'
+        });
+      });
     })
   );
 });
 
 // التعامل مع رسائل من الصفحة الرئيسية
 self.addEventListener('message', event => {
-  if (event.data && event.data.type === 'SKIP_WAITING') {
-    self.skipWaiting();
-  }
-  
-  if (event.data && event.data.type === 'GET_VERSION') {
-    event.ports[0].postMessage({
-      version: CACHE_VERSION,
-      cacheName: CACHE_NAME
-    });
+  try {
+    if (event.data && event.data.type === 'SKIP_WAITING') {
+      self.skipWaiting();
+    }
+    
+    if (event.data && event.data.type === 'GET_VERSION' && event.ports[0]) {
+      event.ports[0].postMessage({
+        version: CACHE_VERSION,
+        cacheName: CACHE_NAME
+      });
+    }
+  } catch (error) {
+    console.error('Service Worker: Message handling error:', error);
   }
 });
 
@@ -183,18 +223,22 @@ self.addEventListener('sync', event => {
 self.addEventListener('push', event => {
   if (!event.data) return;
   
-  const data = event.data.json();
-  const options = {
-    body: data.body || 'لديك إشعار جديد من مؤسسة إعلانات العرب',
-    icon: '/favicon.svg',
-    badge: '/favicon.ico',
-    tag: 'arabsad-notification',
-    requireInteraction: true
-  };
-  
-  event.waitUntil(
-    self.registration.showNotification(data.title || 'مؤسسة إعلانات العرب', options)
-  );
+  try {
+    const data = event.data.json();
+    const options = {
+      body: data.body || 'لديك إشعار جديد من مؤسسة إعلانات العرب',
+      icon: '/favicon.svg',
+      badge: '/favicon.ico',
+      tag: 'arabsad-notification',
+      requireInteraction: true
+    };
+    
+    event.waitUntil(
+      self.registration.showNotification(data.title || 'مؤسسة إعلانات العرب', options)
+    );
+  } catch (error) {
+    console.error('Service Worker: Push notification error:', error);
+  }
 });
 
 // التعامل مع نقرات الإشعارات
@@ -203,7 +247,9 @@ self.addEventListener('notificationclick', event => {
   
   if (event.action === 'open' || !event.action) {
     event.waitUntil(
-      clients.openWindow('/') || clients.openWindow('https://arabsad.com')
+      clients.openWindow('/').catch(() => 
+        clients.openWindow('https://sherow1982.github.io/arabsad')
+      )
     );
   }
 });

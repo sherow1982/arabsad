@@ -229,21 +229,29 @@
           link.rel = (link.rel + ' nofollow noopener').trim();
         }
         
-        link.addEventListener('click', () => {
-          this.trackEvent('whatsapp_click', {
-            text: link.textContent.trim(),
-            url: link.href
-          });
+        link.addEventListener('click', (e) => {
+          // CSRF protection - validate origin
+          if (e.isTrusted && document.referrer && 
+              new URL(document.referrer).origin === window.location.origin) {
+            this.trackEvent('whatsapp_click', {
+              text: link.textContent.trim(),
+              url: link.href
+            });
+          }
         });
       });
       
       // Service links
       document.querySelectorAll('a[href*="service"]').forEach(link => {
-        link.addEventListener('click', () => {
-          this.trackEvent('service_page_click', {
-            service: link.textContent.trim(),
-            url: link.href
-          });
+        link.addEventListener('click', (e) => {
+          // CSRF protection - validate origin
+          if (e.isTrusted && document.referrer && 
+              new URL(document.referrer).origin === window.location.origin) {
+            this.trackEvent('service_page_click', {
+              service: link.textContent.trim(),
+              url: link.href
+            });
+          }
         });
       });
     },
@@ -263,6 +271,9 @@
       // Button click animations
       document.querySelectorAll('.btn').forEach(btn => {
         btn.addEventListener('click', function(e) {
+          // CSRF protection - validate trusted event
+          if (!e.isTrusted) return;
+          
           // Ripple effect
           const ripple = document.createElement('span');
           const rect = this.getBoundingClientRect();
@@ -496,6 +507,9 @@
       // Add smooth scroll to anchor links
       document.querySelectorAll('a[href^="#"]').forEach(link => {
         link.addEventListener('click', (e) => {
+          // CSRF protection - validate trusted event
+          if (!e.isTrusted) return;
+          
           const targetId = link.getAttribute('href').substring(1);
           const target = document.getElementById(targetId);
           

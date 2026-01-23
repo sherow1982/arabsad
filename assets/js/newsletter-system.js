@@ -89,7 +89,7 @@ class NewsletterSystem {
       // Since it's no-cors, we assume success if no error is thrown
       return true;
     } catch (error) {
-      console.log('FormSubmit method failed, trying alternatives...');
+      console.log('FormSubmit method failed, trying alternatives...', error);
     }
     
     // Method 2: Try Netlify Forms (if on Netlify)
@@ -107,12 +107,17 @@ class NewsletterSystem {
         return true;
       }
     } catch (error) {
-      console.log('Netlify method failed, using local storage...');
+      console.log('Netlify method failed, using local storage...', error);
     }
     
     // Method 3: Local storage as fallback
-    this.saveToLocalStorage(email);
-    return true;
+    try {
+      this.saveToLocalStorage(email);
+      return true;
+    } catch (error) {
+      console.error('Failed to save to local storage:', error);
+      return false;
+    }
   }
   
   handleSuccess(email, emailInput, submitBtn) {
@@ -215,10 +220,13 @@ class NewsletterSystem {
   }
   
   showMessage(message, type = 'info') {
+    // Sanitize message to prevent XSS
+    const sanitizedMessage = this.sanitizeText(message);
+    
     // Create toast notification
     const toast = document.createElement('div');
-    toast.className = `toast toast-${type}`;
-    toast.textContent = message;
+    toast.className = `toast toast-${this.sanitizeClassName(type)}`;
+    toast.textContent = sanitizedMessage; // Use textContent instead of innerHTML
     toast.setAttribute('role', 'alert');
     
     // Add toast to container
@@ -234,6 +242,16 @@ class NewsletterSystem {
         }
       }, 400);
     }, 4000);
+  }
+  
+  sanitizeText(text) {
+    const div = document.createElement('div');
+    div.textContent = text;
+    return div.innerHTML;
+  }
+  
+  sanitizeClassName(className) {
+    return className.replace(/[^a-zA-Z0-9-_]/g, '');
   }
   
   createToastContainer() {
@@ -373,11 +391,15 @@ class WebhookNewsletter {
   }
   
   async sendToWebhooks(email) {
+    // Generate CSRF token
+    const csrfToken = this.generateCSRFToken();
+    
     const data = {
       email: email,
       timestamp: new Date().toISOString(),
       source: 'arabsad.com',
-      language: 'ar'
+      language: 'ar',
+      csrf_token: csrfToken
     };
     
     const promises = this.webhooks.map(webhook => 
@@ -385,13 +407,20 @@ class WebhookNewsletter {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
+          'X-CSRF-Token': csrfToken,
+          'X-Requested-With': 'XMLHttpRequest'
         },
-        body: JSON.stringify(data)
+        body: JSON.stringify(data),
+        credentials: 'same-origin'
       }).catch(() => null) // Silent fail
     );
     
     const results = await Promise.allSettled(promises);
     return results.some(result => result.status === 'fulfilled');
+  }
+  
+  generateCSRFToken() {
+    return Math.random().toString(36).substring(2) + Date.now().toString(36);
   }
 }
 

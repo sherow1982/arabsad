@@ -120,6 +120,7 @@ jobs:
                           total_replacements += file_replacements_count
                   except Exception as e:
                       print(f"⚠️  Error processing {file_path}: {e}")
+                      continue)
           
           action_verb = "Would modify" if dry_run else "Modified"
           print(f"\n✅ {action_verb} {len(modified_files)} files")
@@ -133,6 +134,7 @@ jobs:
 
       - name: 📤 Commit changes
         if: inputs.dry_run != 'true'
+        continue-on-error: true
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"

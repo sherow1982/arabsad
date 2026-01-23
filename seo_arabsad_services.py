@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 سكربت متكامل لـ SEO وLocal Business 
-ريبو: arabsad-ads
+ريبو: arabsad
 تصحيح: حفظ كامل البيانات لجميع دول الخليج
 """
 
@@ -137,8 +137,8 @@ def extract_image(html: str) -> str:
         if src.startswith('http'):
             return src
         src = src.lstrip('./')
-        return f"https://sherow1982.github.io/arabsad-ads/{src}"
-    return "https://sherow1982.github.io/arabsad-ads/assets/images/logo.svg"
+        return f"https://sherow1982.github.io/arabsad/{src}"
+    return "https://sherow1982.github.io/arabsad/assets/images/logo.svg"
 
 def determine_page_type(file_path: Path) -> str:
     relative = str(file_path.relative_to(Path("."))).lower()
@@ -155,7 +155,7 @@ def determine_page_type(file_path: Path) -> str:
 def build_page_url(file_path: Path) -> str:
     relative_path = file_path.relative_to(Path("."))
     url_path = str(relative_path).replace("\\", "/")
-    return f"https://sherow1982.github.io/arabsad-ads/{url_path}"
+    return f"https://sherow1982.github.io/arabsad/{url_path}"
 
 def extract_page_keywords(file_path: Path, title: str) -> list:
     keywords = [
@@ -188,8 +188,8 @@ def create_service_schema(title: str, image: str, url: str, description: str) ->
         "provider": {
             "@type": "Organization",
             "name": "مؤسسة إعلانات العرب",
-            "url": "https://sherow1982.github.io/arabsad-ads/",
-            "logo": "https://sherow1982.github.io/arabsad-ads/assets/images/logo.svg",
+            "url": "https://sherow1982.github.io/arabsad/",
+            "logo": "https://sherow1982.github.io/arabsad/assets/images/logo.svg",
             "telephone": "+201110760081"
         },
         "url": url,
@@ -224,7 +224,7 @@ def create_organization_schema() -> str:
         "@context": "https://schema.org",
         "@type": "Organization",
         "name": "مؤسسة إعلانات العرب",
-        "url": "https://sherow1982.github.io/arabsad-ads/",
+        "url": "https://sherow1982.github.io/arabsad/",
         "telephone": "+201110760081",
         "email": "info@arabsad.com"
     }
@@ -234,7 +234,7 @@ def create_breadcrumb_schema(file_path: Path) -> str:
     import json
     relative = file_path.relative_to(Path("."))
     parts = relative.parts
-    breadcrumb_items = [{"@type": "ListItem", "position": 1, "name": "الرئيسية", "item": "https://sherow1982.github.io/arabsad-ads"}]
+    breadcrumb_items = [{"@type": "ListItem", "position": 1, "name": "الرئيسية", "item": "https://sherow1982.github.io/arabsad"}]
     
     current_path = ""
     for i, part in enumerate(parts[:-1], start=2):
@@ -244,35 +244,42 @@ def create_breadcrumb_schema(file_path: Path) -> str:
             "@type": "ListItem",
             "position": i,
             "name": name,
-            "item": f"https://sherow1982.github.io/arabsad-ads/{current_path}"
+            "item": f"https://sherow1982.github.io/arabsad/{current_path}"
         })
     
     schema = {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": breadcrumb_items}
     return json.dumps(schema, ensure_ascii=False, indent=2)
 
 def create_meta_tags(title: str, image: str, url: str, description: str, keywords: list) -> str:
+    import html
+    
     if len(description) > 155:
         desc_short = description[:152] + "..."
     else:
         desc_short = description
     
-    title_clean = title.replace('"', '').replace("'", '')
-    keywords_str = ", ".join(keywords[:15])
+    # Sanitize all inputs to prevent XSS
+    title_clean = html.escape(title.strip())
+    desc_clean = html.escape(desc_short.strip())
+    url_clean = html.escape(url.strip())
+    image_clean = html.escape(image.strip())
+    keywords_clean = [html.escape(k.strip()).replace('"', '').replace("'", '') for k in keywords if k.strip()]
+    keywords_str = ", ".join(keywords_clean[:15])
     
     meta = f"""
     <!-- SEO Meta Tags (Auto) -->
     <meta charset="UTF-8">
     <title>{title_clean} - مؤسسة إعلانات العرب</title>
-    <meta name="description" content="{desc_short}">
+    <meta name="description" content="{desc_clean}">
     <meta name="keywords" content="{keywords_str}">
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="canonical" href="{url}">
+    <link rel="canonical" href="{url_clean}">
     <!-- Open Graph -->
     <meta property="og:title" content="{title_clean} - مؤسسة إعلانات العرب">
-    <meta property="og:description" content="{desc_short}">
-    <meta property="og:image" content="{image}">
-    <meta property="og:url" content="{url}">
+    <meta property="og:description" content="{desc_clean}">
+    <meta property="og:image" content="{image_clean}">
+    <meta property="og:url" content="{url_clean}">
     """
     return meta
 
@@ -294,7 +301,7 @@ def create_google_business_profiles():
                 "country_name": country_data['arabic_name'],
                 "city": city_name,
                 "phone": "+201110760081",
-                "website": "https://sherow1982.github.io/arabsad-ads/",
+                "website": "https://sherow1982.github.io/arabsad/",
                 "latitude": lat,
                 "longitude": lng,
                 "services": [
@@ -349,10 +356,22 @@ def generate_sitemap(all_files: list) -> str:
 def generate_robots_txt() -> str:
     return """User-agent: *
 Allow: /
-Disallow: /admin/
 
-Sitemap: https://sherow1982.github.io/arabsad-ads/sitemap.xml
-Crawl-delay: 1
+# AI & LLM Crawlers (ChatGPT, Gemini, etc.)
+User-agent: GPTBot
+Allow: /
+User-agent: ChatGPT-User
+Allow: /
+User-agent: Google-Extended
+Allow: /
+User-agent: CCBot
+Allow: /
+
+# Block system files
+Disallow: /.git/
+Disallow: /node_modules/
+
+Sitemap: https://sherow1982.github.io/arabsad/sitemap.xml
 """
 
 # ================== الحقن ==================
@@ -421,7 +440,7 @@ def process_file(file_path: Path) -> tuple:
 
 def main():
     print("\n" + "="*80)
-    print("🏆 سكربت SEO + Google Business Profiles كاملة - arabsad-ads 🏆")
+    print("🏆 سكربت SEO + Google Business Profiles كاملة - arabsad 🏆")
     print("="*80 + "\n")
 
     root = Path(".")

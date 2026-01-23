@@ -23,16 +23,35 @@ window.ARABSAD_CHATBOT_CONFIG = {
     { 
       text: '💬 تواصل مع خبير فوراً', 
       url: 'https://wa.me/201110760081?text=أحتاج مساعدة خبير تسويق فوراً&utm_source=chatbot&utm_medium=greeting&utm_campaign=expert-now', 
-      target: '_blank' 
+      target: '_blank',
+      validate: function() {
+        try {
+          return new URL(this.url).protocol === 'https:';
+        } catch (e) {
+          console.error('Invalid URL:', this.url);
+          return false;
+        }
+      }
     },
     { 
       text: '📞 احجز مكالمة 15 دقيقة', 
       url: 'https://wa.me/201110760081?text=أريد حجز مكالمة استشارة 15 دقيقة&utm_source=chatbot&utm_medium=greeting&utm_campaign=book-call', 
-      target: '_blank' 
+      target: '_blank',
+      validate: function() {
+        try {
+          return new URL(this.url).protocol === 'https:';
+        } catch (e) {
+          console.error('Invalid URL:', this.url);
+          return false;
+        }
+      }
     },
     { 
       text: '📋 استعرض جميع الخدمات', 
-      url: 'services-page.html' 
+      url: 'services-page.html',
+      validate: function() {
+        return this.url && typeof this.url === 'string' && this.url.length > 0;
+      }
     }
   ],
   
