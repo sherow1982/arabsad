@@ -54,14 +54,19 @@ jobs:
           python-version: '3.11'
 
       - name: 🚀 Run domain cleanup
+        env:
+          DRY_RUN: ${{ inputs.dry_run }}
         run: |
           python3 << 'EOF'
           import os
           import re
           from pathlib import Path
           
+          dry_run = os.environ.get('DRY_RUN', 'false').lower() == 'true'
+
           # Configuration
-          REPLACEMENTS = {
+          # Define replacements (raw)
+          RAW_REPLACEMENTS = {
               'https://www.arabsad.com': 'https://sherow1982.github.io',
               'https://arabsad.com': 'https://sherow1982.github.io',
               'www.arabsad.com': 'sherow1982.github.io',
@@ -71,6 +76,9 @@ jobs:
               'http://hadaya-emirates.arabsad.com': 'https://sherow1982.github.io/hadaya-emirates',
           }
           
+          # Sort by length descending to ensure subdomains are handled before the root domain
+          REPLACEMENTS = dict(sorted(RAW_REPLACEMENTS.items(), key=lambda x: len(x[0]), reverse=True))
+
           ALLOWED_EXTENSIONS = {
               '.html', '.htm', '.css', '.js', '.json', '.md', '.txt',
               '.xml', '.svg', '.py', '.sh', '.yaml', '.yml', '.htaccess'
@@ -96,29 +104,35 @@ jobs:
                           content = f.read()
                       
                       original = content
+                      file_replacements_count = 0
                       for old, new in REPLACEMENTS.items():
                           pattern = re.compile(re.escape(old), re.IGNORECASE)
-                          content = pattern.sub(new, content)
+                          matches = len(pattern.findall(content))
+                          if matches > 0:
+                              content = pattern.sub(new, content)
+                              file_replacements_count += matches
                       
                       if content != original:
-                          with open(file_path, 'w', encoding='utf-8') as f:
-                              f.write(content)
-                          count = len(re.findall(re.escape(old), original, re.IGNORECASE)) if old in original else 0
+                          if not dry_run:
+                              with open(file_path, 'w', encoding='utf-8') as f:
+                                  f.write(content)
                           modified_files.append(str(file_path))
-                          total_replacements += len(REPLACEMENTS)
+                          total_replacements += file_replacements_count
                   except Exception as e:
                       print(f"⚠️  Error processing {file_path}: {e}")
           
-          print(f"\n✅ Modified {len(modified_files)} files")
+          action_verb = "Would modify" if dry_run else "Modified"
+          print(f"\n✅ {action_verb} {len(modified_files)} files")
           print(f"📊 Total replacements: {total_replacements}")
           
           if modified_files:
-              print("\n📁 Modified files:")
+              print(f"\n📁 {action_verb} files:")
               for f in modified_files:
                   print(f"   - {f}")
           EOF
 
       - name: 📤 Commit changes
+        if: inputs.dry_run != 'true'
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
