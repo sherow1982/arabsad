@@ -1,139 +1,653 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>تحسين SEO - مؤسسة إعلانات العرب</title>
-    <meta name="description" content="خدمات تحسين SEO الاحترافية لظهور موقعك في الصفحة الأولى من نتائج البحث بأسرع وقت.">
+    <title>خدمات تحسين محركات البحث SEO | مؤسسة إعلانات العرب</title>
+    <meta name="description"
+        content="خدمات سيو (SEO) احترافية لظهور موقعك في النتائج الأولى بجوجل. استراتيجيات نمو، كلمات مفتاحية، سيو تقني، وأرشفة سريعة في سوق الخليج.">
+    <meta name="keywords"
+        content="SEO, تحسين محركات البحث, سيو, تصدر نتائج البحث, أرشفة المواقع, سيو المواقع, سيو الرياض, سيو دبي">
     <link rel="canonical" href="https://sherow1982.github.io/arabsad/services/seo.html">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&display=swap" rel="stylesheet">
+
+    <!-- Schema.org - Service -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "Service",
-      "name": "تحسين SEO",
-      "description": "خدمات تحسين محركات البحث الكاملة بما في ذلك البحث عن الكلمات المفتاحية وتحسين الموقع وبناء الروابط",
-      "serviceType": "Search Engine Optimization"
+      "name": "خدمات تحسين محركات البحث SEO",
+      "description": "حلول متكاملة لتحسين ظهور المواقع في محركات البحث وزيادة الزيارات العضوية المجانية بشكل مستدام في منطقة الخليج ومصر.",
+      "image": "https://sherow1982.github.io/arabsad/assets/images/logo-arabsad.png",
+      "provider": {
+        "@type": "Organization",
+        "name": "مؤسسة إعلانات العرب",
+        "telephone": "+201110760081",
+        "url": "https://sherow1982.github.io/arabsad/",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "شارع التحرير",
+          "addressLocality": "القاهرة",
+          "addressRegion": "القاهرة",
+          "postalCode": "11511",
+          "addressCountry": "EG"
+        }
+      },
+      "areaServed": [
+        {"@type": "Country", "name": "السعودية"},
+        {"@type": "Country", "name": "الإمارات"},
+        {"@type": "Country", "name": "الكويت"},
+        {"@type": "Country", "name": "قطر"},
+        {"@type": "Country", "name": "البحرين"},
+        {"@type": "Country", "name": "عمان"},
+        {"@type": "Country", "name": "مصر"}
+      ],
+      "offers": {
+        "@type": "Offer",
+        "priceRange": "$$$-$$$$"
+      }
     }
     </script>
+
+    <!-- Schema.org - FAQPage -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [{
+        "@type": "Question",
+        "name": "كم يستغرق السيو (SEO) لظهور النتائج؟",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "يحتاج السيو عادة من 3 إلى 6 أشهر لرؤية نتائج ملموسة في ترتيب الصفحة الأولى، وذلك نظراً لطبيعة خوارزميات جوجل التي تحلل الجودة والمصداقية بمرور الوقت."
+        }
+      }, {
+        "@type": "Question",
+        "name": "ما الفرق بين السيو وإعلانات جوجل؟",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "السيو (SEO) هو تحسين طبيعي ومجاني للنتائج يستمر للأمد الطويل، بينما إعلانات جوجل تظهر نتائج فورية مدفوعة بمجرد تفعيل الحملة."
+        }
+      }]
+    }
+    </script>
+
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         :root {
             --primary: #FFB800;
-            --primary-dark: #FF9500;
-            --dark-bg: #0a0e27;
-            --dark-secondary: #1a1f3a;
-            --text-light: #e8edf5;
-            --text-muted: #a8b3c1;
-            --accent: #00d4aa;
+            --primary-dark: #cc9300;
+            --secondary: #00d4aa;
+            --dark-bg: #070b1e;
+            --dark-secondary: #0f142e;
+            --text-light: #ffffff;
+            --text-muted: #94a3b8;
         }
-        html, body { font-family: 'Segoe UI', sans-serif; background: var(--dark-bg); color: var(--text-light); line-height: 1.6; }
-        header { position: fixed; top: 0; width: 100%; z-index: 1000; background: rgba(10, 14, 39, 0.95); backdrop-filter: blur(10px); border-bottom: 1px solid rgba(255, 184, 0, 0.1); padding: 1.2rem 2rem; }
-        .header-wrapper { max-width: 1400px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; gap: 2rem; }
-        .logo { font-size: 1.5rem; font-weight: 800; background: linear-gradient(135deg, var(--primary), var(--accent)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; text-decoration: none; }
-        nav { display: flex; gap: 3rem; list-style: none; flex: 1; justify-content: center; }
-        nav a { color: var(--text-light); text-decoration: none; font-weight: 500; transition: color 0.3s ease; }
-        nav a:hover { color: var(--primary); }
-        .cta-header { background: linear-gradient(135deg, var(--primary), var(--primary-dark)); color: #000; padding: 0.8rem 1.8rem; border-radius: 50px; text-decoration: none; font-weight: 600; white-space: nowrap; }
-        main { margin-top: 80px; }
-        .breadcrumb { padding: 1rem 2rem; background: rgba(255, 184, 0, 0.05); }
-        .breadcrumb-content { max-width: 1400px; margin: 0 auto; color: var(--text-muted); font-size: 0.9rem; }
-        .breadcrumb a { color: var(--primary); text-decoration: none; }
-        .hero { padding: 4rem 2rem; }
-        .hero-content { max-width: 1200px; margin: 0 auto; }
-        .hero h1 { font-size: clamp(2rem, 6vw, 3.5rem); margin-bottom: 1.5rem; background: linear-gradient(135deg, var(--primary), var(--accent)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-        .hero p { font-size: 1.1rem; color: var(--text-muted); margin-bottom: 2rem; }
-        .content-section { padding: 4rem 2rem; max-width: 1200px; margin: 0 auto; }
-        h2 { font-size: 2rem; margin-bottom: 2rem; border-right: 4px solid var(--primary); padding-right: 1rem; }
-        .features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; }
-        .feature-card { background: linear-gradient(135deg, rgba(255, 184, 0, 0.08), rgba(0, 212, 170, 0.05)); border: 2px solid rgba(255, 184, 0, 0.2); border-radius: 15px; padding: 2rem; transition: all 0.3s ease; }
-        .feature-card:hover { border-color: rgba(255, 184, 0, 0.5); transform: translateY(-10px); }
-        .feature-icon { font-size: 2.5rem; margin-bottom: 1rem; }
-        .feature-card h3 { font-size: 1.2rem; margin-bottom: 0.8rem; color: var(--primary); }
-        .feature-card p { color: var(--text-muted); font-size: 0.95rem; }
-        .cta-section { padding: 4rem 2rem; background: linear-gradient(135deg, rgba(255, 184, 0, 0.1), rgba(0, 212, 170, 0.05)); text-align: center; border-radius: 20px; margin-top: 4rem; }
-        .btn { display: inline-flex; align-items: center; gap: 0.5rem; padding: 1.1rem 2.5rem; background: linear-gradient(135deg, var(--primary), var(--primary-dark)); color: #000; text-decoration: none; border-radius: 50px; font-weight: 600; }
-        .btn:hover { transform: translateY(-3px); }
-        footer { background: var(--dark-secondary); border-top: 2px solid rgba(255, 184, 0, 0.1); padding: 3rem 2rem 1.5rem; margin-top: 4rem; }
-        .footer-grid { max-width: 1400px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 3rem; margin-bottom: 2rem; }
-        .footer-column h4 { color: var(--primary); margin-bottom: 1rem; }
-        .footer-column ul { list-style: none; }
-        .footer-column a { color: var(--text-muted); text-decoration: none; }
-        .footer-column a:hover { color: var(--primary); }
-        .footer-bottom { border-top: 1px solid rgba(255, 184, 0, 0.1); padding-top: 1.5rem; text-align: center; color: var(--text-muted); font-size: 0.85rem; }
+
+        body {
+            font-family: 'Cairo', sans-serif;
+            background: var(--dark-bg);
+            color: var(--text-light);
+            line-height: 1.8;
+            overflow-x: hidden;
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            background: rgba(7, 11, 30, 0.95);
+            backdrop-filter: blur(15px);
+            border-bottom: 2px solid rgba(255, 184, 0, 0.1);
+            padding: 1rem 0;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .header-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.6rem;
+            font-weight: 900;
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        nav {
+            display: flex;
+            gap: 2.5rem;
+        }
+
+        nav a {
+            color: var(--text-light);
+            text-decoration: none;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--primary);
+        }
+
+        main {
+            margin-top: 80px;
+        }
+
+        .hero {
+            padding: 120px 0 100px;
+            text-align: center;
+            background: radial-gradient(circle at 50% 50%, rgba(255, 184, 0, 0.08) 0%, transparent 70%);
+        }
+
+        .hero h1 {
+            font-size: clamp(2.5rem, 6vw, 4.5rem);
+            font-weight: 900;
+            margin-bottom: 25px;
+            line-height: 1.2;
+        }
+
+        .hero p {
+            font-size: 1.3em;
+            color: var(--text-muted);
+            max-width: 800px;
+            margin: 0 auto 40px;
+        }
+
+        .btn {
+            display: inline-block;
+            background: var(--primary);
+            color: #000;
+            padding: 18px 45px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            transition: 0.3s;
+            box-shadow: 0 10px 25px rgba(255, 184, 0, 0.2);
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 35px rgba(255, 184, 0, 0.3);
+            background: #fff;
+            color: var(--primary);
+        }
+
+        section {
+            padding: 100px 0;
+        }
+
+        .section-title {
+            font-size: 3em;
+            color: var(--primary);
+            margin-bottom: 50px;
+            text-align: center;
+            font-weight: 900;
+        }
+
+        .seo-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+        }
+
+        .seo-card {
+            background: var(--dark-secondary);
+            padding: 40px;
+            border-radius: 30px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: 0.4s;
+        }
+
+        .seo-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--primary);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+        }
+
+        .icon-box {
+            font-size: 3rem;
+            margin-bottom: 25px;
+            display: block;
+        }
+
+        .seo-card h3 {
+            font-size: 1.8rem;
+            color: #fff;
+            margin-bottom: 20px;
+            font-weight: 800;
+        }
+
+        .seo-card p {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+            margin-bottom: 30px;
+        }
+
+        .features-list {
+            list-style: none;
+        }
+
+        .features-list li {
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: #d1d5db;
+        }
+
+        .features-list li::before {
+            content: '✔';
+            color: var(--secondary);
+            font-weight: 900;
+        }
+
+        .cta-dark {
+            background: #000;
+            padding: 80px 40px;
+            border-radius: 40px;
+            text-align: center;
+            margin: 80px 0;
+            border: 2px solid var(--primary);
+        }
+
+        .cta-dark h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        .faq-section {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background: #0f142e;
+            padding: 25px;
+            border-radius: 20px;
+            margin-bottom: 15px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .faq-item:hover {
+            border-color: var(--primary);
+        }
+
+        .faq-item h3 {
+            color: var(--primary);
+            font-size: 1.3rem;
+        }
+
+        .faq-answer {
+            display: none;
+            margin-top: 15px;
+            color: var(--text-muted);
+            line-height: 1.8;
+            padding-top: 15px;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        footer {
+            background: #040816;
+            padding: 80px 0 40px;
+            border-top: 2px solid rgba(255, 184, 0, 0.1);
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 50px;
+            margin-bottom: 60px;
+        }
+
+        .footer-col h4 {
+            color: var(--primary);
+            margin-bottom: 25px;
+        }
+
+        .footer-col a {
+            color: var(--text-muted);
+            text-decoration: none;
+            display: block;
+            margin-bottom: 12px;
+            transition: 0.3s;
+        }
+
+        .footer-col a:hover {
+            color: var(--primary);
+        }
+
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            left: 30px;
+            z-index: 1000;
+        }
+
+        .whatsapp-float a {
+            background: #25D366;
+            color: #fff;
+            padding: 16px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            box-shadow: 0 8px 30px rgba(37, 211, 102, 0.4);
+            font-weight: 700;
+            transition: 0.4s;
+        }
+
+        .whatsapp-float a:hover {
+            transform: translateY(-5px) scale(1.05);
+        }
     </style>
 </head>
+
 <body>
     <header>
-        <div class="header-wrapper">
-            <a href="/arabsad/" class="logo">🌐 إعلانات العرب</a>
+        <div class="container header-wrapper">
+            <a href="/arabsad/" class="logo">🎯 إعلانات العرب</a>
             <nav>
-                <a href="/arabsad/#services">الخدمات</a>
+                <a href="/arabsad/">الرئيسية</a>
+                <a href="/arabsad/services/">الخدمات</a>
+                <a href="/arabsad/about.html">عنا</a>
                 <a href="/arabsad/#contact">اتصل بنا</a>
             </nav>
-            <a href="https://wa.me/201110760081?text=%D8%B1%D9%8A%D8%AF%20%D8%A7%D8%B3%D8%AA%D8%B9%D9%84%D8%A7%D9%85%D8%A9%20%D8%B9%D9%86%20%D8%AE%D8%AF%D9%85%D8%A9%20SEO" target="_blank" class="cta-header">💬 استفسر</a>
+            <a href="https://wa.me/201110760081" class="btn cta-header-wa"
+                style="padding: 10px 25px; font-size: 0.9rem;">استشارة مجانية</a>
         </div>
     </header>
+
     <main>
-        <div class="breadcrumb"><div class="breadcrumb-content"><a href="/arabsad/">الرئيسية</a> / تحسين SEO</div></div>
+        <!-- Hero Section -->
         <section class="hero">
-            <div class="hero-content">
-                <h1>🔍 تحسين SEO الاحترافي</h1>
-                <p>ظهور في الصفحة الأولى من جوجل مع ضمان زيادة الزيارات والمبيعات المجانية</p>
+            <div class="container">
+                <h1>🔍 تصدر الصفحة الأولى في جوجل بذكاء واحترافية</h1>
+                <p>خدمات تحسين محركات البحث (SEO) الشاملة التي تضمن لك زيارات مجانية مستدامة ومبيعات حقيقية عبر بناء
+                    سلطة موقعك تقنياً رقمياً.</p>
+                <a href="#seo-services" class="btn">اكتشف حلول السيو لدينا</a>
             </div>
         </section>
-        <section class="content-section">
-            <h2>الخدمات</h2>
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">🎯</div>
-                    <h3>بحث الكلمات المفتاحية</h3>
-                    <p>اختيار الكلمات الذهبية التي تجلب مبيعات وليست مجرد زيارات</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">📄</div>
-                    <h3>تحسين الموقع</h3>
-                    <p>تحسين جميع عناصر الموقع من Meta Tags وسرعة التحميل</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">🔗</div>
-                    <h3>بناء الروابط</h3>
-                    <p>روابط خارجية قوية من مواقع موثوقة لرفع سلطة الموقع</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">📊</div>
-                    <h3>تقارير شهرية</h3>
-                    <p>متابعة حية للترتيبات والزيارات والتحسينات</p>
+
+        <!-- SEO Services Grid -->
+        <section id="seo-services">
+            <div class="container">
+                <h2 class="section-title">🛠️ خدماتنا في تحسين محركات البحث</h2>
+                <div class="seo-grid">
+                    <!-- Technical SEO -->
+                    <div class="seo-card">
+                        <span class="icon-box">⚙️</span>
+                        <h3>سيو تقني (Technical SEO)</h3>
+                        <p>تجهيز أساس موقعك ليكون "صديقاً" لمحركات البحث من خلال فحص شامل للأخطاء البرمجية وسرعة
+                            الأرشفة.</p>
+                        <ul class="features-list">
+                            <li>تسريع البرمجة وتحسين تجربة المستخدم</li>
+                            <li>إصلاح أخطاء الأرشفة (Crawl Errors)</li>
+                            <li>تجهيز خريطة الموقع وRobots.txt</li>
+                        </ul>
+                    </div>
+
+                    <!-- On-Page SEO -->
+                    <div class="seo-card">
+                        <span class="icon-box">✍️</span>
+                        <h3>سيو المحتوى (On-Page SEO)</h3>
+                        <p>تحليل وتطوير المحتوى الحالي وإنشاء محتوى جديد يستهدف الكلمات الذهبية ذات القوة الشرائية
+                            العالية.</p>
+                        <ul class="features-list">
+                            <li>بحث الكلمات المفتاحية (Keyword Research)</li>
+                            <li>تحسين العناوين والوصف (Meta Tags)</li>
+                            <li>توزيع الكلمات بذكاء داخل المحتوى</li>
+                        </ul>
+                    </div>
+
+                    <!-- Off-Page SEO -->
+                    <div class="seo-card">
+                        <span class="icon-box">🔗</span>
+                        <h3>سيو خارجي (Off-Page SEO)</h3>
+                        <p>بناء سلطة موقعك (Domain Authority) من خلال أفضل استراتيجيات الروابط الخلفية الحقيقية
+                            والموثوقة.</p>
+                        <ul class="features-list">
+                            <li>بناء باك لينكس (Backlinks) عالي الجودة</li>
+                            <li>نشر مقالات ضيف (Guest Posts)</li>
+                            <li>إدارة العلامة التجارية رقمياً</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </section>
-        <section class="content-section cta-section">
-            <h2 style="border: none; padding: 0; margin-bottom: 1rem;">اطلب عرض متخصص لموقعك</h2>
-            <p>كل موقع فريد ويحتاج استراتيجية SEO مخصصة</p>
-            <a href="https://wa.me/201110760081?text=%D8%B1%D9%8A%D8%AF%20%D8%B9%D8%B1%D8%B6%20SEO%20%D9%85%D8%AE%D8%B5%D8%B5" target="_blank" class="btn">💬 استفسر الآن</a>
+
+        <!-- Why SEO -->
+        <section style="background: rgba(255, 184, 0, 0.03);">
+            <div class="container">
+                <div style="display: flex; flex-wrap: wrap; gap: 50px; align-items: center;">
+                    <div style="flex: 1; min-width: 300px;">
+                        <h2 style="font-size: 2.5em; margin-bottom: 25px; color: var(--primary); font-weight: 800;">
+                            لماذا لا غنى عن السيو لعملك؟</h2>
+                        <ul style="font-size: 1.2rem; line-height: 2.5; color: #d1d5db;">
+                            <li>📉 **93%** من الرحلات الرقمية تبدأ بمحرك بحث.</li>
+                            <li>🥇 الصفحة الأولى تحصل على **92%** من إجمالي الزيارات.</li>
+                            <li>💎 السيو يوفر لك **زيارات مجانية** للأبد دون دفع ثمن كل نقرة.</li>
+                            <li>🤝 يزيد من **ثقة العميل** في علامتك التجارية كونك في الصدارة.</li>
+                        </ul>
+                    </div>
+                    <div
+                        style="flex: 1; min-width: 300px; background: var(--dark-secondary); padding: 50px; border-radius: 40px; text-align: center;">
+                        <h3 style="font-size: 2rem; margin-bottom: 20px; color: var(--secondary);">هل موقعك مؤهل
+                            للمنافسة؟</h3>
+                        <p style="margin-bottom: 30px; font-size: 1.1rem;">احصل على تحليل SEO أولي مجاني لموقعك الآن
+                            واعرف أين تقف مقارنة بمنافسيك.</p>
+                        <a href="https://wa.me/201110760081" class="btn btn-wa-audit">اطلب تحليل موقعك الآن</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Steps -->
+        <section>
+            <div class="container">
+                <h2 class="section-title">🚀 رحلتك نحو الصدارة معنا</h2>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px;">
+                    <div style="text-align: center;">
+                        <span style="font-size: 3em; color: var(--primary); font-weight: 900;">01</span>
+                        <h4 style="margin: 15px 0;">تحليل وفحص</h4>
+                        <p style="color: var(--text-muted);">فحص شامل للموقع والمنافسين</p>
+                    </div>
+                    <div style="text-align: center;">
+                        <span style="font-size: 3em; color: var(--primary); font-weight: 900;">02</span>
+                        <h4 style="margin: 15px 0;">تحديد استراتيجية</h4>
+                        <p style="color: var(--text-muted);">بناء خطة كلمات مفتاحية مربحة</p>
+                    </div>
+                    <div style="text-align: center;">
+                        <span style="font-size: 3em; color: var(--primary); font-weight: 900;">03</span>
+                        <h4 style="margin: 15px 0;">تنفيذ وتطوير</h4>
+                        <p style="color: var(--text-muted);">بدء إصلاحات السيو التقني والمحتوى</p>
+                    </div>
+                    <div style="text-align: center;">
+                        <span style="font-size: 3em; color: var(--primary); font-weight: 900;">04</span>
+                        <h4 style="margin: 15px 0;">نتائج وتقييم</h4>
+                        <p style="color: var(--text-muted);">متابعة الترتيب وزيادة التحويلات</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Packages -->
+        <section style="background: rgba(0, 0, 0, 0.2);">
+            <div class="container">
+                <h2 class="section-title">💼 باقات السيو الشهرية</h2>
+                <div class="seo-grid">
+                    <div class="seo-card" style="text-align: center; border-bottom: 5px solid var(--secondary);">
+                        <h3>الباقة الفضية</h3>
+                        <p>للمواقع الصغيرة والناشئة</p>
+                        <ul class="features-list" style="text-align: right; margin: 30px 0;">
+                            <li>استهداف 10 كلمات مفتاحية</li>
+                            <li>إصلاح سيو تقني أساسي</li>
+                            <li>4 مقالات شهيرة</li>
+                            <li>تقرير أداء شهري</li>
+                        </ul>
+                        <a href="https://wa.me/201110760081" class="btn btn-package-wa" style="width: 100%;">استفسر عن
+                            السعر</a>
+                    </div>
+                    <div class="seo-card"
+                        style="text-align: center; border: 2px solid var(--primary); transform: scale(1.05); background: #0c122b;">
+                        <div
+                            style="background: var(--primary); color: #000; padding: 5px 20px; border-radius: 20px; position: absolute; top: -15px; left: 50%; transform: translateX(-50%); font-weight: 800; font-size: 0.8em;">
+                            الأكثر طلباً</div>
+                        <h3>الباقة الذهبية</h3>
+                        <p>للشركات المتوسطة والمتطورة</p>
+                        <ul class="features-list" style="text-align: right; margin: 30px 0;">
+                            <li>استهداف 25 كلمة مفتاحية</li>
+                            <li>سيو تقني متكامل</li>
+                            <li>10 مقالات عالية الجودة</li>
+                            <li>بناء روابط (Backlinks) قوية</li>
+                            <li>تحليل أداء المنافسين</li>
+                        </ul>
+                        <a href="https://wa.me/201110760081" class="btn btn-package-wa" style="width: 100%;">استفسر عن
+                            السعر</a>
+                    </div>
+                    <div class="seo-card" style="text-align: center; border-bottom: 5px solid var(--primary-dark);">
+                        <h3>باقة الشركات</h3>
+                        <p>للمشاريع الكبرى والمنافسة</p>
+                        <ul class="features-list" style="text-align: right; margin: 30px 0;">
+                            <li>استهداف غير محدود للكلمات</li>
+                            <li>سيو تقني استراتيجي</li>
+                            <li>استراتيجية محتوى شاملة</li>
+                            <li>دعم فني وتطوير مستمر</li>
+                            <li>تقارير أسبوعية تفصيلية</li>
+                        </ul>
+                        <a href="https://wa.me/201110760081" class="btn btn-package-wa" style="width: 100%;">اطلب عرض
+                            سعر</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="faq">
+            <div class="container">
+                <h2 class="section-title">❓ الأسئلة الشائعة حول السيو</h2>
+                <div class="faq-section">
+                    <div class="faq-item">
+                        <h3>كم المدة الزمنية لرؤية نتائج السيو؟ ⌵</h3>
+                        <p class="faq-answer">السيو ليس عصا سحرية؛ يحتاج عادة من 3 إلى 6 أشهر لرؤية تقدم حقيقي في
+                            الترتيب. وذلك لأن جوجل يحتاج وقتاً للثقة في موقعك وأرشفة محتواك الجديد والتأكد من جودته
+                            مقارنة بالمنافسين القدامى.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>هل تضمنون الظهور في النتيجة الأولى؟ ⌵</h3>
+                        <p class="faq-answer">لا توجد وكالة محترمة تضمن "المركز الأول" يقيناً لأن القرار النهائي لجوجل،
+                            ولكننا نضمن لك اتباع أفضل الممارسات التي ترفع ترتيبك تدريجياً وبشكل مستقر وتزيد من زياراتك
+                            بشكل ملموس.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>هل أحتاج الدفع شهرياً للسيو؟ ⌵</h3>
+                        <p class="faq-answer">نعم، يفضل ذلك. السيو عملية مستمرة وليست مرة واحدة. المنافسون يطورون
+                            مواقعهم يومياً، وجوجل يحدث خوارزمياته باستمرار. التوقف يعني تراجع ترتيبك أمام المنافسين
+                            النشطين.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>ماذا لو توقفت عن خدمات السيو؟ ⌵</h3>
+                        <p class="faq-answer">النتائج التي حققتها لن تختفي فوراً، ولكن ستلاحظ تراجعاً تدريجياً في
+                            الترتيب مع الوقت لأن منافسيك يستمرون في العمل والتحسين. السيو هو استثمار طويل الأمد.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Final CTA -->
+        <section style="text-align: center; border-top: 1px solid rgba(255,184,0,0.1);">
+            <div class="container">
+                <h2 style="font-size: 2.5rem; margin-bottom: 20px;">🚀 دع جوجل يعمل لصالحك للأبد</h2>
+                <p style="margin-bottom: 40px; color: var(--text-muted); font-size: 1.2rem;">تواصل مع خبراء السيو لدينا
+                    الآن واحصّل على خطة عمل واضحة.</p>
+                <a href="https://wa.me/201110760081" class="btn" id="finalCta">تحدث مع خبير سيو الآن</a>
+            </div>
         </section>
     </main>
+
     <footer>
-        <div class="footer-grid">
-            <div class="footer-column">
-                <h4>الخدمات</h4>
-                <ul>
-                    <li><a href="/arabsad/services/google-ads.html" target="_blank">Google Ads</a></li>
-                    <li><a href="/arabsad/services/seo.html" target="_blank">SEO</a></li>
-                    <li><a href="/arabsad/services/ecommerce.html" target="_blank">E-commerce</a></li>
-                </ul>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col" style="flex: 1.5;">
+                    <a href="/arabsad/" class="logo" style="margin-bottom: 20px; display: block;">🎯 إعلانات العرب</a>
+                    <p style="color: var(--text-muted);">مؤسسة متخصصة في قيادة التحول الرقمي والتسويق الذكي للشركات
+                        الخليجية والمصرية. خبرتنا هي وقود نموك.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>الخدمات</h4>
+                    <a href="/arabsad/services/google-ads.html">إعلانات جوجل</a>
+                    <a href="/arabsad/services/ecommerce.html">المتاجر الإلكترونية</a>
+                    <a href="/arabsad/services/contracting-services.html">سيو المقاولات</a>
+                    <a href="/arabsad/services/gulf-cities.html">خدمات مدن الخليج</a>
+                </div>
+                <div class="footer-col">
+                    <h4>تواصل معنا</h4>
+                    <span style="color: var(--text-muted); display: block; margin-bottom: 12px;">☎ +201110760081</span>
+                    <span style="color: var(--text-muted); display: block; margin-bottom: 12px;">📧
+                        info@arabsad.com</span>
+                    <span style="color: var(--text-muted); display: block;">📍 القاهرة، شارع التحرير</span>
+                </div>
             </div>
-            <div class="footer-column">
-                <h4>اتصل</h4>
-                <ul>
-                    <li><a href="tel:+201110760081">☎ +201110760081</a></li>
-                    <li><a href="https://wa.me/201110760081" target="_blank">💬 WhatsApp</a></li>
-                </ul>
+            <div
+                style="text-align: center; color: var(--text-muted); font-size: 0.9rem; padding-top: 40px; border-top: 1px solid rgba(255,255,255,0.05);">
+                <p>&copy; 2026 مؤسسة إعلانات العرب. جميع الحقوق محفوظة.</p>
             </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2025 مؤسسة إعلانات العرب</p>
         </div>
     </footer>
-    <script src="/arabsad/js/bfcache-fix.js"></script>
+
+    <!-- WhatsApp Floating Button -->
+    <div class="whatsapp-float">
+        <a href="#" id="whatsappFloat" target="_blank">
+            <span style="font-size: 1.5em;">💬</span>
+            <span>استشارة سيو مجانية</span>
+        </a>
+    </div>
+
+    <!-- Dynamic WhatsApp Script -->
+    <script>
+        const currentPageUrl = window.location.href;
+        const pageTitle = document.title;
+
+        const whatsappMessage = `مرحباً، أريد الاستفسار عن خدمات السيو (SEO)
+من خلال صفحة: ${pageTitle}
+الرابط: ${currentPageUrl}`;
+
+        const phone = '201110760081';
+        const encodedMessage = encodeURIComponent(whatsappMessage);
+        const whatsappUrl = `https://wa.me/${phone}?text=${encodedMessage}`;
+
+        // Update all buttons
+        document.querySelectorAll('#whatsappFloat, #finalCta, .cta-header-wa, .btn-wa-audit, .btn-package-wa').forEach(btn => {
+            btn.href = whatsappUrl;
+        });
+
+        // FAQ toggle
+        document.querySelectorAll('.faq-item').forEach(item => {
+            item.addEventListener('click', () => {
+                const answer = item.querySelector('.faq-answer');
+                const isVisible = answer.style.display === 'block';
+                document.querySelectorAll('.faq-answer').forEach(ans => ans.style.display = 'none');
+                if (!isVisible) answer.style.display = 'block';
+            });
+        });
+    </script>
 </body>
+
 </html>
