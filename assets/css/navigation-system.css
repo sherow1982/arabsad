@@ -1,17 +1,121 @@
-/**
- * أنماط CSS لنظام التنقل الشامل
- * يتضمن البطاقات التفاعلية والقوائم المنسدلة
+/* 
+ * Navigation System CSS
+ * Styles for Cards, Dropdowns, Search, and Layout
  */
 
-/* ========== نظام البطاقات ========== */
+:root {
+    --primary-gold: #f6b93b;
+    --primary-green: #26de81;
+    --dark-bg: #0f2027;
+    --dark-gradient: linear-gradient(135deg, #0f2027 0%, #203a43 50%, #2c5364 100%);
+    --text-light: #ffffff;
+}
 
+/* General Layout */
+body {
+    font-family: 'Cairo', sans-serif;
+    background: var(--dark-gradient);
+    color: var(--text-light);
+    min-height: 100vh;
+    margin: 0;
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header Section in All Pages */
+.header-section {
+    text-align: center;
+    margin-bottom: 60px;
+    padding: 40px 20px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+}
+
+.header-section h1 {
+    font-size: 3rem;
+    font-weight: 900;
+    background: linear-gradient(135deg, var(--primary-gold), var(--primary-green));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 15px;
+}
+
+/* Search Box */
+.search-box {
+    max-width: 600px;
+    margin: 30px auto 0;
+    position: relative;
+}
+
+.search-box input {
+    width: 100%;
+    padding: 18px 60px 18px 25px;
+    border: 2px solid var(--primary-gold);
+    border-radius: 50px;
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    font-size: 1.1rem;
+    font-family: 'Cairo', sans-serif;
+    transition: all 0.3s;
+}
+
+.search-box input:focus {
+    outline: none;
+    background: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 0 30px rgba(246, 185, 59, 0.3);
+}
+
+.search-box i {
+    position: absolute;
+    left: 25px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.3rem;
+    color: var(--primary-gold);
+}
+
+/* Categories */
+.category {
+    margin-bottom: 60px;
+}
+
+.category-title {
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 30px;
+    padding-bottom: 15px;
+    border-bottom: 3px solid;
+    border-image: linear-gradient(90deg, var(--primary-gold), var(--primary-green)) 1;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.category-title i {
+    color: var(--primary-gold);
+}
+
+.category-count {
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--primary-green);
+    margin-right: auto;
+}
+
+/* Page Cards Grid */
 .pages-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
     gap: 25px;
-    margin-top: 30px;
 }
 
+/* Page Card Styles */
 .page-card {
     background: rgba(255, 255, 255, 0.08);
     padding: 30px;
@@ -24,7 +128,6 @@
     text-decoration: none;
     color: #fff;
     display: block;
-    backdrop-filter: blur(10px);
 }
 
 .page-card::before {
@@ -37,13 +140,12 @@
     background: linear-gradient(135deg, rgba(246, 185, 59, 0.1), rgba(38, 222, 129, 0.1));
     opacity: 0;
     transition: opacity 0.4s;
-    z-index: 0;
 }
 
 .page-card:hover {
     transform: translateY(-10px) scale(1.03);
     background: rgba(255, 255, 255, 0.12);
-    border-color: #f6b93b;
+    border-color: var(--primary-gold);
     box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
 }
 
@@ -51,24 +153,15 @@
     opacity: 1;
 }
 
-.page-card:active {
-    transform: translateY(-5px) scale(1.01);
-}
-
 .page-card-icon {
     font-size: 3rem;
     margin-bottom: 20px;
-    background: linear-gradient(135deg, #f6b93b, #26de81);
+    background: linear-gradient(135deg, var(--primary-gold), var(--primary-green));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
     position: relative;
     z-index: 1;
-    transition: all 0.3s ease;
-}
-
-.page-card:hover .page-card-icon {
-    transform: scale(1.15) rotate(5deg);
 }
 
 .page-card-title {
@@ -78,11 +171,10 @@
     color: #fff;
     position: relative;
     z-index: 1;
-    transition: all 0.3s;
 }
 
 .page-card:hover .page-card-title {
-    color: #f6b93b;
+    color: var(--primary-gold);
 }
 
 .page-card-desc {
@@ -105,562 +197,45 @@
     align-items: center;
     justify-content: center;
     font-size: 1rem;
-    color: #f6b93b;
+    color: var(--primary-gold);
     transition: all 0.3s;
     z-index: 2;
 }
 
 .page-card:hover .page-card-link {
-    background: #f6b93b;
+    background: var(--primary-gold);
     color: #1a1a2e;
     transform: scale(1.2) rotate(10deg);
 }
 
-/* ========== نظام القوائم المنسدلة ========== */
-
-.nav-item {
-    position: relative;
-}
-
-.dropdown-toggle {
-    cursor: pointer;
-}
-
-.dropdown-icon {
-    font-size: 0.7rem;
-    transition: transform 0.3s;
-    margin-right: 5px;
-}
-
-.nav-item:hover .dropdown-icon {
-    transform: rotate(180deg);
-}
-
-.dropdown-menu {
-    position: absolute;
-    top: 100%;
-    right: 0;
-    background: rgba(15, 32, 39, 0.98);
-    min-width: 280px;
-    border-radius: 12px;
-    box-shadow: 0 10px 40px rgba(0,0,0,0.6);
-    opacity: 0;
-    visibility: hidden;
-    transform: translateY(-15px);
-    transition: all 0.3s ease;
-    margin-top: 10px;
-    border: 2px solid #f6b93b;
-    max-height: 450px;
-    overflow-y: auto;
-    z-index: 10001;
-    backdrop-filter: blur(15px);
-}
-
-.nav-item:hover .dropdown-menu {
-    opacity: 1;
-    visibility: visible;
-    transform: translateY(0);
-}
-
-/* شريط التمرير -->
-.dropdown-menu::-webkit-scrollbar {
-    width: 8px;
-}
-
-.dropdown-menu::-webkit-scrollbar-track {
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 10px;
-}
-
-.dropdown-menu::-webkit-scrollbar-thumb {
-    background: linear-gradient(135deg, #f6b93b, #26de81);
-    border-radius: 10px;
-}
-
-.dropdown-menu::-webkit-scrollbar-thumb:hover {
-    background: #f6b93b;
-}
-
-.dropdown-item {
-    list-style: none;
-}
-
-.dropdown-link {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    padding: 13px 20px;
-    color: #ddd;
-    text-decoration: none;
-    transition: all 0.3s;
-    border-bottom: 1px solid rgba(255,255,255,0.05);
-    font-size: 0.92rem;
-    font-weight: 500;
-}
-
-.dropdown-link:hover {
-    background: linear-gradient(90deg, #f6b93b, #26de81);
-    color: #1a1a2e;
-    padding-right: 28px;
-    font-weight: 600;
-}
-
-.dropdown-link i {
-    width: 20px;
-    text-align: center;
-    transition: transform 0.3s;
-}
-
-.dropdown-link:hover i {
-    transform: scale(1.2);
-}
-
-.dropdown-item:last-child .dropdown-link {
-    border-bottom: none;
-}
-
-/* ========== بطاقات الخدمات ========== */
-
-.services-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 35px;
-    margin-top: 50px;
-}
-
-.service-card {
-    background: rgba(255, 255, 255, 0.08);
-    padding: 45px 30px;
-    border-radius: 25px;
-    text-align: center;
-    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    cursor: pointer;
-    backdrop-filter: blur(10px);
-    border: 2px solid transparent;
-    position: relative;
-    overflow: hidden;
-}
-
-.service-card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(135deg, rgba(246, 185, 59, 0.1), rgba(38, 222, 129, 0.1));
-    opacity: 0;
-    transition: opacity 0.4s ease;
-    z-index: 0;
-}
-
-.service-card:hover::before {
-    opacity: 1;
-}
-
-.service-card:hover {
-    transform: translateY(-20px) scale(1.05);
-    background: rgba(255, 255, 255, 0.15);
-    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5);
-    border-color: #f6b93b;
-}
-
-.service-card:active {
-    transform: translateY(-15px) scale(1.02);
-}
-
-.service-icon {
-    font-size: 4rem;
-    margin-bottom: 25px;
-    background: linear-gradient(135deg, #f6b93b, #26de81);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    transition: all 0.3s ease;
-    position: relative;
-    z-index: 1;
-}
-
-.service-card:hover .service-icon {
-    transform: scale(1.2) rotate(5deg);
-}
-
-.service-title {
-    font-size: 1.6rem;
-    font-weight: 700;
-    margin: 20px 0;
-    color: #fff;
-    position: relative;
-    z-index: 1;
-    transition: all 0.3s ease;
-}
-
-.service-card:hover .service-title {
-    color: #f6b93b;
-}
-
-.service-desc {
-    color: #ddd;
-    line-height: 1.8;
-    font-size: 1rem;
-    position: relative;
-    z-index: 1;
-}
-
-/* ========== فئات الصفحات ========== */
-
-.category {
-    margin-bottom: 60px;
-    animation: fadeInUp 0.6s ease-out both;
-}
-
-.category-title {
-    font-size: 2.2rem;
-    font-weight: 700;
-    margin-bottom: 30px;
-    padding-bottom: 15px;
-    border-bottom: 3px solid;
-    border-image: linear-gradient(90deg, #f6b93b, #26de81) 1;
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    color: #fff;
-}
-
-.category-title i {
-    color: #f6b93b;
-}
-
-.category-count {
-    font-size: 1rem;
-    font-weight: 400;
-    color: #26de81;
-    margin-right: auto;
-}
-
-/* ========== شريط البحث ========== */
-
-.search-box {
-    max-width: 600px;
-    margin: 30px auto 0;
-    position: relative;
-}
-
-.search-box input {
-    width: 100%;
-    padding: 18px 60px 18px 25px;
-    border: 2px solid #f6b93b;
-    border-radius: 50px;
-    background: rgba(255, 255, 255, 0.1);
-    color: #fff;
-    font-size: 1.1rem;
-    font-family: 'Cairo', sans-serif;
-    transition: all 0.3s;
-}
-
-.search-box input:focus {
-    outline: none;
-    background: rgba(255, 255, 255, 0.15);
-    box-shadow: 0 0 30px rgba(246, 185, 59, 0.3);
-    border-color: #26de81;
-}
-
-.search-box input::placeholder {
-    color: rgba(255, 255, 255, 0.5);
-}
-
-.search-box i {
-    position: absolute;
-    left: 25px;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 1.3rem;
-    color: #f6b93b;
-    pointer-events: none;
-}
-
-/* ========== شريط الإحصائيات ========== */
-
+/* Stats Bar */
 .stats-bar {
     background: rgba(255, 255, 255, 0.05);
-    padding: 25px;
+    padding: 20px;
     border-radius: 15px;
-    margin-bottom: 50px;
+    margin-bottom: 40px;
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
-    gap: 25px;
-    border: 2px solid rgba(246, 185, 59, 0.2);
-}
-
-.stat-item {
-    text-align: center;
-    padding: 15px 25px;
-    transition: all 0.3s;
-    border-radius: 10px;
-}
-
-.stat-item:hover {
-    background: rgba(255, 255, 255, 0.05);
-    transform: scale(1.1);
+    gap: 20px;
 }
 
 .stat-number {
     font-size: 2.5rem;
     font-weight: 900;
-    background: linear-gradient(135deg, #f6b93b, #26de81);
+    background: linear-gradient(135deg, var(--primary-gold), var(--primary-green));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    margin-bottom: 5px;
 }
 
-.stat-label {
-    font-size: 1rem;
-    color: #ddd;
-    margin-top: 5px;
-    font-weight: 600;
-}
-
-/* ========== زر العودة ========== */
-
-.back-home {
-    position: fixed;
-    bottom: 30px;
-    left: 30px;
-    padding: 15px 30px;
-    background: linear-gradient(135deg, #f6b93b, #26de81);
-    color: #1a1a2e;
-    text-decoration: none;
-    border-radius: 50px;
-    font-weight: 700;
-    font-size: 1.1rem;
-    box-shadow: 0 8px 25px rgba(246, 185, 59, 0.4);
-    transition: all 0.3s;
-    z-index: 1000;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.back-home:hover {
-    transform: translateY(-5px) scale(1.05);
-    box-shadow: 0 15px 40px rgba(246, 185, 59, 0.6);
-}
-
-/* ========== زر واتساب عائم ========== */
-
-.whatsapp-float {
-    position: fixed;
-    bottom: 100px;
-    left: 30px;
-    z-index: 9999;
-    animation: pulse 2s infinite;
-}
-
-@keyframes pulse {
-    0%, 100% { 
-        transform: scale(1); 
-    }
-    50% { 
-        transform: scale(1.1); 
-    }
-}
-
-.whatsapp-btn {
-    background: #25d366;
-    color: #fff;
-    padding: 18px 35px;
-    border-radius: 50px;
-    text-decoration: none;
-    font-weight: 700;
-    font-size: 1.1rem;
-    display: inline-flex;
-    align-items: center;
-    gap: 12px;
-    box-shadow: 0 8px 25px rgba(37, 211, 102, 0.5);
-    transition: all 0.3s;
-}
-
-.whatsapp-btn:hover {
-    background: #128c7e;
-    transform: translateY(-5px) scale(1.1);
-    box-shadow: 0 15px 40px rgba(37, 211, 102, 0.7);
-}
-
-/* ========== عرض الجوال ========== */
-
+/* Media Queries */
 @media (max-width: 768px) {
+    .header-section h1 {
+        font-size: 2rem;
+    }
+    
     .pages-grid {
         grid-template-columns: 1fr;
-        gap: 20px;
-    }
-    
-    .page-card {
-        padding: 25px;
-    }
-    
-    .page-card-icon {
-        font-size: 2.5rem;
-    }
-    
-    .page-card-title {
-        font-size: 1.2rem;
-    }
-    
-    .category-title {
-        font-size: 1.6rem;
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 10px;
-    }
-    
-    .search-box input {
-        font-size: 1rem;
-        padding: 15px 50px 15px 20px;
-    }
-    
-    .stats-bar {
-        flex-direction: column;
-        gap: 15px;
-    }
-    
-    .stat-number {
-        font-size: 2rem;
-    }
-    
-    .back-home,
-    .whatsapp-float {
-        bottom: 15px;
-        left: 15px;
-        padding: 12px 20px;
-        font-size: 1rem;
-    }
-    
-    .whatsapp-float {
-        bottom: 70px;
-    }
-    
-    .dropdown-menu {
-        position: static;
-        opacity: 1;
-        visibility: visible;
-        transform: none;
-        margin-top: 10px;
-        max-height: none;
-        display: none;
-    }
-    
-    .nav-item:hover .dropdown-menu {
-        display: block;
-    }
-}
-
-@media (max-width: 480px) {
-    .page-card {
-        padding: 20px;
-    }
-    
-    .page-card-icon {
-        font-size: 2rem;
-    }
-    
-    .page-card-title {
-        font-size: 1.1rem;
-    }
-    
-    .page-card-desc {
-        font-size: 0.9rem;
-    }
-    
-    .category-title {
-        font-size: 1.4rem;
-    }
-}
-
-/* ========== تأثيرات الحركة ========== */
-
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-@keyframes slideInRight {
-    from {
-        opacity: 0;
-        transform: translateX(-30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
-
-@keyframes scaleIn {
-    from {
-        opacity: 0;
-        transform: scale(0.8);
-    }
-    to {
-        opacity: 1;
-        transform: scale(1);
-    }
-}
-
-/* تطبيق التأثيرات على البطاقات */
-.page-card:nth-child(1) { animation-delay: 0.05s; }
-.page-card:nth-child(2) { animation-delay: 0.1s; }
-.page-card:nth-child(3) { animation-delay: 0.15s; }
-.page-card:nth-child(4) { animation-delay: 0.2s; }
-.page-card:nth-child(5) { animation-delay: 0.25s; }
-.page-card:nth-child(6) { animation-delay: 0.3s; }
-.page-card:nth-child(7) { animation-delay: 0.35s; }
-.page-card:nth-child(8) { animation-delay: 0.4s; }
-.page-card:nth-child(9) { animation-delay: 0.45s; }
-
-/* ========== شارة "جديد" ========== */
-
-.badge-new {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    background: linear-gradient(135deg, #ff6b6b, #ee5a6f);
-    color: #fff;
-    padding: 5px 12px;
-    border-radius: 20px;
-    font-size: 0.75rem;
-    font-weight: 700;
-    z-index: 3;
-    animation: pulse 2s infinite;
-}
-
-/* ========== تحسينات إمكانية الوصول ========== */
-
-.page-card:focus,
-.service-card:focus,
-.dropdown-link:focus,
-.nav-link:focus {
-    outline: 3px solid #f6b93b;
-    outline-offset: 3px;
-}
-
-/* ========== وضع الطباعة ========== */
-
-@media print {
-    .dropdown-menu,
-    .back-home,
-    .whatsapp-float,
-    .search-box {
-        display: none !important;
-    }
-    
-    .page-card {
-        break-inside: avoid;
     }
 }
