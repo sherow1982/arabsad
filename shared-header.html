@@ -233,15 +233,15 @@
             width: 85%;
             max-width: 320px;
             height: 100vh;
-            background: linear-gradient(180deg, #0f2027 0%, #203a43 100%);
-            backdrop-filter: blur(10px);
+            background: #0a0e17; /* خلفية داكنة جداً للتباين */
+            backdrop-filter: none; /* إزالة الضبابية للأداء والوضوح */
             flex-direction: column;
-            padding: 90px 20px 40px;
+            padding: 80px 20px 40px;
             transition: right 0.4s cubic-bezier(0.77, 0, 0.175, 1);
             z-index: 10001;
             overflow-y: auto;
-            box-shadow: -5px 0 20px rgba(0,0,0,0.5);
-            border-left: 2px solid rgba(246, 185, 59, 0.5);
+            box-shadow: -5px 0 30px rgba(0,0,0,0.8);
+            border-left: 1px solid #f6b93b;
             display: flex;
             text-align: right;
         }
@@ -254,7 +254,7 @@
             opacity: 0;
             transform: translateX(20px);
             transition: all 0.3s ease;
-            border-bottom: 1px solid rgba(255,255,255,0.05);
+            border-bottom: 1px solid rgba(255,255,255,0.1);
         }
 
         .nav-menu.active .nav-item {
@@ -274,13 +274,14 @@
             justify-content: space-between;
             padding: 15px 15px;
             font-size: 1.1rem;
-            color: #fff;
+            color: #ffffff;
+            font-weight: 700;
             border-radius: 8px;
         }
         
         .nav-link:hover, .nav-link:active, .nav-item.active > .nav-link {
-            background: rgba(255, 255, 255, 0.1);
-            color: #f6b93b;
+            background: rgba(246, 185, 59, 0.15);
+            color: #f6b93b; /* لون ذهبي للتباين */
         }
 
         /* Mobile Dropdown Fix */
@@ -290,10 +291,27 @@
             visibility: visible;
             transform: none;
             box-shadow: none;
-            background: rgba(0, 0, 0, 0.2);
+            background: rgba(255, 255, 255, 0.03);
             margin-top: 5px;
             padding-right: 15px;
             display: block;
+            border-top: none;
+            border-right: 2px solid #f6b93b;
+        }
+        
+        /* زر إغلاق داخل القائمة */
+        .mobile-close-btn {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background: none;
+            border: none;
+            color: #fff;
+            font-size: 1.5rem;
+            cursor: pointer;
+            display: block;
+            padding: 10px;
+            z-index: 10005;
         }
     }
 
@@ -303,6 +321,9 @@
         .site-logo { font-size: 1.6rem; }
         
         .mobile-toggle {
+            display: none;
+        }
+        .mobile-close-btn {
             display: none;
         }
 
@@ -363,6 +384,11 @@
             </button>
             
             <ul class="nav-menu" id="navMenu">
+                <!-- زر إغلاق للموبايل -->
+                <button class="mobile-close-btn" onclick="toggleMobileNav()">
+                    <i class="fas fa-times"></i>
+                </button>
+
                 <li class="nav-item">
                     <a href="/arabsad/index.html" class="nav-link">
                         <i class="fas fa-home"></i> الرئيسية

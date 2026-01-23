@@ -183,7 +183,18 @@ function initMobileDropdowns() {
             
             newToggle.addEventListener('click', function(e) {
                 e.preventDefault(); // Prevent navigation
-                this.parentElement.classList.toggle('active');
+                
+                // Toggle active class
+                const parent = this.parentElement;
+                const wasActive = parent.classList.contains('active');
+                // Close others (optional, but good for UX)
+                // document.querySelectorAll('.nav-item.active').forEach(item => item.classList.remove('active'));
+                
+                if (!wasActive) {
+                    parent.classList.add('active');
+                } else {
+                    parent.classList.remove('active');
+                }
             });
         });
     }
