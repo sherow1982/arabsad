@@ -23,7 +23,7 @@
 
     .main-header {
         background: rgba(15, 32, 39, 0.95);
-        padding: 80px 0 15px;
+        padding: 15px 0;
         position: sticky;
         top: 44px;
         z-index: 9999;
@@ -45,7 +45,7 @@
     }
 
     .site-logo {
-        font-size: 1.6rem;
+        font-size: 1.2rem;
         font-weight: 900;
         background: linear-gradient(135deg, #f6b93b, #26de81);
         -webkit-background-clip: text;
@@ -59,22 +59,26 @@
     }
 
     .nav-menu {
-        display: flex;
-        gap: 8px;
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        background: rgba(15, 32, 39, 0.98);
+        padding: 15px;
+        border-radius: 10px;
+        margin-top: 15px;
+        gap: 10px;
         list-style: none;
-        flex-wrap: wrap;
-        align-items: center;
     }
 
-    .nav-item {
-        position: relative;
-    }
+    .nav-menu.active { display: flex; }
+    .nav-item { width: 100%; position: relative; }
 
     .nav-link {
         color: #fff;
         text-decoration: none;
         font-weight: 600;
-        padding: 10px 16px;
+        padding: 12px;
+        width: 100%;
         border-radius: 8px;
         display: flex;
         align-items: center;
@@ -103,28 +107,20 @@
     }
 
     .dropdown-menu {
-        position: absolute;
-        top: 100%;
-        right: 0;
-        background: rgba(15, 32, 39, 0.98);
-        min-width: 280px;
-        border-radius: 12px;
-        box-shadow: 0 10px 40px rgba(0,0,0,0.6);
-        opacity: 0;
-        visibility: hidden;
-        transform: translateY(-15px);
-        transition: all 0.3s ease;
-        margin-top: 10px;
-        border: 2px solid #f6b93b;
-        max-height: 450px;
-        overflow-y: auto;
-        z-index: 10001;
-    }
-
-    .nav-item:hover .dropdown-menu {
+        position: static;
         opacity: 1;
         visibility: visible;
-        transform: translateY(0);
+        transform: none;
+        box-shadow: none;
+        border: 1px solid rgba(255,255,255,0.1);
+        background: rgba(0,0,0,0.2);
+        margin-top: 5px;
+        display: none;
+        max-height: none;
+    }
+
+    .nav-item.active .dropdown-menu {
+        display: block;
     }
 
     .dropdown-menu::-webkit-scrollbar {
@@ -174,7 +170,7 @@
     }
 
     .mobile-toggle {
-        display: none;
+        display: block;
         background: linear-gradient(135deg, #f6b93b, #26de81);
         color: #1a1a2e;
         border: none;
@@ -189,37 +185,48 @@
         transform: scale(1.1);
     }
 
-    @media (max-width: 968px) {
+    /* Desktop Styles */
+    @media (min-width: 992px) {
+        .main-header { padding: 20px 0; }
+        .site-logo { font-size: 1.6rem; }
+        
         .mobile-toggle {
-            display: block;
+            display: none;
         }
 
         .nav-menu {
-            display: none;
-            flex-direction: column;
-            width: 100%;
-            background: rgba(15, 32, 39, 0.98);
-            padding: 20px;
-            border-radius: 10px;
-            margin-top: 20px;
+            display: flex;
+            flex-direction: row;
+            width: auto;
+            background: transparent;
+            padding: 0;
+            margin-top: 0;
+            gap: 8px;
         }
 
-        .nav-menu.active {
-            display: flex;
-        }
+        .nav-item { width: auto; }
+        .nav-link { width: auto; padding: 10px 16px; }
 
         .dropdown-menu {
-            position: static;
-            opacity: 1;
-            visibility: visible;
-            transform: none;
+            position: absolute;
+            top: 100%;
+            right: 0;
+            background: rgba(15, 32, 39, 0.98);
+            min-width: 280px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.6);
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-15px);
+            display: block;
+            border: 2px solid #f6b93b;
+            z-index: 10001;
             margin-top: 10px;
-            margin-bottom: 10px;
-            max-height: none;
         }
 
-        .site-logo {
-            font-size: 1.2rem;
+        .nav-item:hover .dropdown-menu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
         }
     }
 </style>
@@ -231,7 +238,7 @@
 <header class="main-header">
     <nav class="header-container">
         <div class="header-nav">
-            <a href="index.html" class="site-logo">
+            <a href="/arabsad/index.html" class="site-logo">
                 <i class="fas fa-bullhorn"></i>
                 <div>
                     مؤسسة إعلانات العرب<br>
@@ -245,20 +252,20 @@
             
             <ul class="nav-menu" id="navMenu">
                 <li class="nav-item">
-                    <a href="index.html" class="nav-link">
+                    <a href="/arabsad/index.html" class="nav-link">
                         <i class="fas fa-home"></i> الرئيسية
                     </a>
                 </li>
 
                 <!-- All Pages Mega Menu -->
                 <li class="nav-item">
-                    <a href="all-pages.html" class="nav-link dropdown-toggle" target="_blank">
+                    <a href="/arabsad/all-pages.html" class="nav-link dropdown-toggle" target="_blank">
                         <i class="fas fa-th"></i> جميع الصفحات
                         <i class="fas fa-chevron-down dropdown-icon"></i>
                     </a>
                     <ul class="dropdown-menu">
                         <li class="dropdown-item">
-                            <a href="all-pages.html" target="_blank" class="dropdown-link">
+                            <a href="/arabsad/all-pages.html" target="_blank" class="dropdown-link">
                                 <i class="fas fa-th-large"></i> عرض جميع الصفحات (39 صفحة)
                             </a>
                         </li>
@@ -267,43 +274,43 @@
                 
                 <!-- Services Dropdown -->
                 <li class="nav-item">
-                    <a href="services/index.html" class="nav-link dropdown-toggle">
+                    <a href="/arabsad/services/index.html" class="nav-link dropdown-toggle">
                         <i class="fas fa-concierge-bell"></i> الخدمات
                         <i class="fas fa-chevron-down dropdown-icon"></i>
                     </a>
                     <ul class="dropdown-menu">
                         <li class="dropdown-item">
-                            <a href="services/index.html" target="_blank" class="dropdown-link">
+                            <a href="/arabsad/services/index.html" target="_blank" class="dropdown-link">
                                 <i class="fas fa-list"></i> جميع الخدمات
                             </a>
                         </li>
                         <li class="dropdown-item">
-                            <a href="services/google-ads-complete.html" target="_blank" class="dropdown-link">
+                            <a href="/arabsad/services/google-ads.html" target="_blank" class="dropdown-link">
                                 <i class="fab fa-google"></i> إعلانات Google Ads
                             </a>
                         </li>
                         <li class="dropdown-item">
-                            <a href="services/seo-complete.html" target="_blank" class="dropdown-link">
+                            <a href="/arabsad/services/seo.html" target="_blank" class="dropdown-link">
                                 <i class="fas fa-search"></i> تحسين محركات البحث SEO
                             </a>
                         </li>
                         <li class="dropdown-item">
-                            <a href="services/ecommerce.html" target="_blank" class="dropdown-link">
+                            <a href="/arabsad/services/ecommerce.html" target="_blank" class="dropdown-link">
                                 <i class="fas fa-shopping-cart"></i> المتاجر الإلكترونية
                             </a>
                         </li>
                         <li class="dropdown-item">
-                            <a href="services/social-media-ads.html" target="_blank" class="dropdown-link">
+                            <a href="/arabsad/services/social-media-ads.html" target="_blank" class="dropdown-link">
                                 <i class="fas fa-hashtag"></i> إدارة السوشيال ميديا
                             </a>
                         </li>
                         <li class="dropdown-item">
-                            <a href="services/website-design-complete.html" target="_blank" class="dropdown-link">
+                            <a href="/arabsad/services/website-design.html" target="_blank" class="dropdown-link">
                                 <i class="fas fa-palette"></i> تصميم المواقع
                             </a>
                         </li>
                         <li class="dropdown-item">
-                            <a href="services/gulf-cities.html" target="_blank" class="dropdown-link">
+                            <a href="/arabsad/services/gulf-cities.html" target="_blank" class="dropdown-link">
                                 <i class="fas fa-city"></i> خدمات المدن الخليجية
                             </a>
                         </li>
@@ -318,32 +325,32 @@
                     </a>
                     <ul class="dropdown-menu">
                         <li class="dropdown-item">
-                            <a href="sa.html" target="_blank" class="dropdown-link">
+                            <a href="/arabsad/sa.html" target="_blank" class="dropdown-link">
                                 <i class="fas fa-map-marker-alt"></i> 🇸🇦 السعودية
                             </a>
                         </li>
                         <li class="dropdown-item">
-                            <a href="ae.html" target="_blank" class="dropdown-link">
+                            <a href="/arabsad/ae.html" target="_blank" class="dropdown-link">
                                 <i class="fas fa-map-marker-alt"></i> 🇦🇪 الإمارات
                             </a>
                         </li>
                         <li class="dropdown-item">
-                            <a href="kw.html" target="_blank" class="dropdown-link">
+                            <a href="/arabsad/kw.html" target="_blank" class="dropdown-link">
                                 <i class="fas fa-map-marker-alt"></i> 🇰🇼 الكويت
                             </a>
                         </li>
                         <li class="dropdown-item">
-                            <a href="qa.html" target="_blank" class="dropdown-link">
+                            <a href="/arabsad/qa.html" target="_blank" class="dropdown-link">
                                 <i class="fas fa-map-marker-alt"></i> 🇶🇦 قطر
                             </a>
                         </li>
                         <li class="dropdown-item">
-                            <a href="bh.html" target="_blank" class="dropdown-link">
+                            <a href="/arabsad/bh.html" target="_blank" class="dropdown-link">
                                 <i class="fas fa-map-marker-alt"></i> 🇧🇭 البحرين
                             </a>
                         </li>
                         <li class="dropdown-item">
-                            <a href="om.html" target="_blank" class="dropdown-link">
+                            <a href="/arabsad/om.html" target="_blank" class="dropdown-link">
                                 <i class="fas fa-map-marker-alt"></i> 🇴🇲 عمان
                             </a>
                         </li>
@@ -358,42 +365,42 @@
                     </a>
                     <ul class="dropdown-menu">
                         <li class="dropdown-item">
-                            <a href="cities/dubai-digital-marketing.html" target="_blank" class="dropdown-link">
+                            <a href="/arabsad/cities/dubai-digital-marketing.html" target="_blank" class="dropdown-link">
                                 <i class="fas fa-building"></i> دبي
                             </a>
                         </li>
                         <li class="dropdown-item">
-                            <a href="cities/abudhabi-digital-marketing.html" target="_blank" class="dropdown-link">
+                            <a href="/arabsad/cities/abudhabi-digital-marketing.html" target="_blank" class="dropdown-link">
                                 <i class="fas fa-building"></i> أبوظبي
                             </a>
                         </li>
                         <li class="dropdown-item">
-                            <a href="cities/riyadh-google-ads.html" target="_blank" class="dropdown-link">
+                            <a href="/arabsad/cities/riyadh-google-ads.html" target="_blank" class="dropdown-link">
                                 <i class="fas fa-building"></i> الرياض
                             </a>
                         </li>
                         <li class="dropdown-item">
-                            <a href="cities/jeddah-google-ads.html" target="_blank" class="dropdown-link">
+                            <a href="/arabsad/cities/jeddah-google-ads.html" target="_blank" class="dropdown-link">
                                 <i class="fas fa-building"></i> جدة
                             </a>
                         </li>
                         <li class="dropdown-item">
-                            <a href="cities/dammam-google-ads.html" target="_blank" class="dropdown-link">
+                            <a href="/arabsad/cities/dammam-google-ads.html" target="_blank" class="dropdown-link">
                                 <i class="fas fa-building"></i> الدمام
                             </a>
                         </li>
                         <li class="dropdown-item">
-                            <a href="cities/doha-digital-marketing.html" target="_blank" class="dropdown-link">
+                            <a href="/arabsad/cities/doha-digital-marketing.html" target="_blank" class="dropdown-link">
                                 <i class="fas fa-building"></i> الدوحة
                             </a>
                         </li>
                         <li class="dropdown-item">
-                            <a href="cities/kuwait-digital-marketing.html" target="_blank" class="dropdown-link">
+                            <a href="/arabsad/cities/kuwait-digital-marketing.html" target="_blank" class="dropdown-link">
                                 <i class="fas fa-building"></i> الكويت
                             </a>
                         </li>
                         <li class="dropdown-item">
-                            <a href="cities/manama-digital-marketing.html" target="_blank" class="dropdown-link">
+                            <a href="/arabsad/cities/manama-digital-marketing.html" target="_blank" class="dropdown-link">
                                 <i class="fas fa-building"></i> المنامة
                             </a>
                         </li>
@@ -402,38 +409,38 @@
 
                 <!-- Blog Dropdown -->
                 <li class="nav-item">
-                    <a href="blog/index.html" class="nav-link dropdown-toggle">
+                    <a href="/arabsad/blog/index.html" class="nav-link dropdown-toggle">
                         <i class="fas fa-blog"></i> المدونة
                         <i class="fas fa-chevron-down dropdown-icon"></i>
                     </a>
                     <ul class="dropdown-menu">
                         <li class="dropdown-item">
-                            <a href="blog/index.html" target="_blank" class="dropdown-link">
+                            <a href="/arabsad/blog/index.html" target="_blank" class="dropdown-link">
                                 <i class="fas fa-blog"></i> جميع المقالات
                             </a>
                         </li>
                         <li class="dropdown-item">
-                            <a href="blog/google-ads-saudi-guide-2025.html" target="_blank" class="dropdown-link">
+                            <a href="/arabsad/blog/google-ads-saudi-guide-2025.html" target="_blank" class="dropdown-link">
                                 <i class="fas fa-newspaper"></i> Google Ads السعودية
                             </a>
                         </li>
                         <li class="dropdown-item">
-                            <a href="blog/google-ads-uae-guide-2025.html" target="_blank" class="dropdown-link">
+                            <a href="/arabsad/blog/google-ads-uae-guide-2025.html" target="_blank" class="dropdown-link">
                                 <i class="fas fa-newspaper"></i> Google Ads الإمارات
                             </a>
                         </li>
                         <li class="dropdown-item">
-                            <a href="blog/google-ads-kuwait-guide-2025.html" target="_blank" class="dropdown-link">
+                            <a href="/arabsad/blog/google-ads-kuwait-guide-2025.html" target="_blank" class="dropdown-link">
                                 <i class="fas fa-newspaper"></i> Google Ads الكويت
                             </a>
                         </li>
                         <li class="dropdown-item">
-                            <a href="blog/ecommerce-seo-gulf-optimization.html" target="_blank" class="dropdown-link">
+                            <a href="/arabsad/blog/ecommerce-seo-gulf-optimization.html" target="_blank" class="dropdown-link">
                                 <i class="fas fa-newspaper"></i> SEO للمتاجر
                             </a>
                         </li>
                         <li class="dropdown-item">
-                            <a href="blog/tiktok-snapchat-gulf-marketing-2025.html" target="_blank" class="dropdown-link">
+                            <a href="/arabsad/blog/tiktok-snapchat-gulf-marketing-2025.html" target="_blank" class="dropdown-link">
                                 <i class="fas fa-newspaper"></i> TikTok و Snapchat
                             </a>
                         </li>
@@ -441,7 +448,7 @@
                 </li>
                 
                 <li class="nav-item">
-                    <a href="analytics-dashboard.html" class="nav-link" target="_blank">
+                    <a href="/arabsad/analytics-dashboard.html" class="nav-link" target="_blank">
                         <i class="fas fa-chart-bar"></i> لوحة التحليلات
                     </a>
                 </li>
@@ -461,6 +468,19 @@
         const navMenu = document.getElementById('navMenu');
         navMenu.classList.toggle('active');
     }
+    
+    // Mobile Dropdown Toggle
+    document.addEventListener('DOMContentLoaded', function() {
+        if (window.innerWidth < 992) {
+            const dropdowns = document.querySelectorAll('.dropdown-toggle');
+            dropdowns.forEach(drop => {
+                drop.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    this.parentElement.classList.toggle('active');
+                });
+            });
+        }
+    });
 </script>
 
     <!-- SEO Meta Tags (Auto) -->

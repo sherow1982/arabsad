@@ -68,94 +68,6 @@
             scroll-behavior: smooth;
         }
 
-        /* Header */
-        header {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            z-index: 1000;
-            background: rgba(10, 14, 39, 0.95);
-            backdrop-filter: blur(10px);
-            border-bottom: 1px solid rgba(255, 184, 0, 0.1);
-            padding: 1.2rem 2rem;
-        }
-
-        .header-wrapper {
-            max-width: 1400px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            gap: 2rem;
-        }
-
-        .logo {
-            font-size: 1.8rem;
-            font-weight: 800;
-            background: linear-gradient(135deg, var(--primary), var(--accent));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            text-decoration: none;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            min-width: max-content;
-        }
-
-        nav {
-            display: flex;
-            gap: 3rem;
-            list-style: none;
-            flex: 1;
-            justify-content: center;
-        }
-
-        nav a {
-            color: var(--text-light);
-            text-decoration: none;
-            font-weight: 500;
-            transition: all 0.3s ease;
-            position: relative;
-            font-size: 0.95rem;
-        }
-
-        nav a::after {
-            content: '';
-            position: absolute;
-            bottom: -8px;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background: var(--primary);
-            transition: width 0.3s ease;
-        }
-
-        nav a:hover::after {
-            width: 100%;
-        }
-
-        nav a:hover {
-            color: var(--primary);
-        }
-
-        .cta-header {
-            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
-            color: #000;
-            padding: 0.8rem 1.8rem;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(255, 184, 0, 0.3);
-            white-space: nowrap;
-        }
-
-        .cta-header:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 25px rgba(255, 184, 0, 0.4);
-        }
-
         /* Hero Section */
         main {
             margin-top: 80px;
@@ -546,13 +458,6 @@
         }
 
         /* Footer */
-        footer {
-            background: var(--dark-secondary);
-            border-top: 2px solid rgba(255, 184, 0, 0.1);
-            padding: 4rem 2rem 2rem;
-            margin-top: 6rem;
-        }
-
         .footer-content {
             max-width: 1400px;
             margin: 0 auto;
@@ -662,17 +567,7 @@
 </head>
 <body>
     <!-- Header -->
-    <header>
-        <div class="header-wrapper">
-            <a href="/arabsad/" class="logo">🌐 إعلانات العرب</a>
-            <nav>
-                <a href="#home">الرئيسية</a>
-                <a href="#services">الخدمات</a>
-                <a href="#faq">الأسئلة</a>
-            </nav>
-            <a href="https://wa.me/201110760081" target="_blank" class="cta-header">💬 تواصل الآن</a>
-        </div>
-    </header>
+    <div data-include="shared-header.html"></div>
 
     <main>
         <!-- Hero Section -->
@@ -839,65 +734,21 @@
     </main>
 
     <!-- Footer -->
-    <footer id="contact">
-        <div class="footer-content">
-            <div class="footer-grid">
-                <div class="footer-column">
-                    <h4>🌐 عن الموقع</h4>
-                    <p>مؤسسة إعلانات العرب متخصصة في التسويق الرقمي وإدارة الحملات الإعلانية مع دعم مباشر 24/7 في جميع أنحاء الخليج ومصر.</p>
-                    <div class="social-links">
-                        <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" title="Facebook">f</a>
-                        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" title="Instagram">📷</a>
-                        <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" title="Twitter">𝔜</a>
-                        <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer" title="TikTok">♪</a>
-                    </div>
-                </div>
-                <div class="footer-column">
-                    <h4>📋 الخدمات</h4>
-                    <ul>
-                        <li><a href="/arabsad/services/google-ads.html" target="_blank">إعلانات Google Ads</a></li>
-                        <li><a href="/arabsad/services/social-media-ads.html" target="_blank">إعلانات وسائل التواصل</a></li>
-                        <li><a href="/arabsad/services/seo.html" target="_blank">تحسين محركات البحث</a></li>
-                        <li><a href="/arabsad/services/ecommerce.html" target="_blank">المتاجر الإلكترونية</a></li>
-                        <li><a href="/arabsad/services/website-design.html" target="_blank">تصميم المواقع</a></li>
-                        <li><a href="/arabsad/services/social-management.html" target="_blank">إدارة وسائل التواصل</a></li>
-                    </ul>
-                </div>
-                <div class="footer-column">
-                    <h4>ℹ️ معلومات مهمة</h4>
-                    <ul>
-                        <li><a href="/arabsad/">من نحن</a></li>
-                        <li><a href="/arabsad/about.html">عنا</a></li>
-                        <li><a href="/arabsad/faq.html">الأسئلة الشائعة</a></li>
-                        <li><a href="/arabsad/legal.html" target="_blank">الشروط والسياسات</a></li>
-                        <li><a href="#faq">استفسارات</a></li>
-                    </ul>
-                </div>
-                <div class="footer-column">
-                    <h4>📞 اتصل بنا</h4>
-                    <ul>
-                        <li><a href="tel:+201110760081">☎ +201110760081</a></li>
-                        <li><a href="https://wa.me/201110760081" target="_blank" rel="noopener noreferrer">ud83d� واتساب</a></li>
-                        <li><a href="mailto:info@arabsad.com">ud83d� info@arabsad.com</a></li>
-                    </ul>
-                    <p style="margin-top: 1rem; padding-top: 1rem; border-top: 1px solid rgba(255, 184, 0, 0.1);"><strong>ساعات العمل:</strong><br>السبت - الخميس<br>من 9 صباحاً إلى 6 مساءاً</p>
-                </div>
-            </div>
-
-            <div class="footer-bottom">
-                <p>&copy; 2025 مؤسسة إعلانات العرب - جميع الحقوق محفوظة</p>
-                <p style="font-size: 0.85rem; margin-top: 0.5rem;">وكالة تسويق رقمي متخصصة في الخليج ومصر والعالم العربي</p>
-                <div class="legal-links">
-                    <a href="/arabsad/legal.html" target="_blank">سياسة الخصوصية</a>
-                    <a href="/arabsad/legal.html" target="_blank">شروط الاستخدام</a>
-                    <a href="mailto:info@arabsad.com">الإبلاغ عن مشكلة</a>
-                </div>
-            </div>
-        </div>
-    </footer>
+    <div data-include="shared-footer.html"></div>
 
     <script src="/arabsad/js/bfcache-fix.js"></script>
     <script>
+        // Load Shared Header/Footer
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelectorAll('[data-include]').forEach(async function(el) {
+                try {
+                    const file = el.getAttribute('data-include');
+                    const response = await fetch('/arabsad/' + file);
+                    if (response.ok) el.innerHTML = await response.text();
+                } catch (e) { console.log(e); }
+            });
+        });
+
         // FAQ Toggle
         document.querySelectorAll('.faq-item').forEach(item => {
             item.addEventListener('click', () => {

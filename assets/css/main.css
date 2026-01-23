@@ -124,21 +124,24 @@ img[loading="lazy"] {
 
 /* Layout Components */
 .container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 1rem;
+  width: 100%;
+  padding-right: 1.25rem;
+  padding-left: 1.25rem;
+  margin-right: auto;
+  margin-left: auto;
 }
 
+@media (min-width: 640px) {
+  .container { max-width: 640px; }
+}
 @media (min-width: 768px) {
-  .container {
-    padding: 0 2rem;
-  }
+  .container { max-width: 768px; }
 }
-
-@media (min-width: 1200px) {
-  .container {
-    padding: 0 1.5rem;
-  }
+@media (min-width: 1024px) {
+  .container { max-width: 1024px; }
+}
+@media (min-width: 1280px) {
+  .container { max-width: 1280px; }
 }
 
 /* Grid System */

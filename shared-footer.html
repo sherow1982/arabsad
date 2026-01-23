@@ -14,8 +14,14 @@
         margin: 0 auto;
         padding: 0 20px;
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        grid-template-columns: 1fr; /* Mobile First */
         gap: 40px;
+    }
+    
+    @media (min-width: 768px) {
+        .footer-container {
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        }
     }
 
     .footer-col h3 {
@@ -173,12 +179,12 @@
         <div class="footer-col">
             <h3>💼 خدماتنا</h3>
             <ul class="footer-links">
-                <li><a href="services/google-ads-complete.html" target="_blank"><i class="fas fa-angle-left"></i> إعلانات Google Ads</a></li>
-                <li><a href="services/seo-complete.html" target="_blank"><i class="fas fa-angle-left"></i> تحسين محركات البحث SEO</a></li>
-                <li><a href="services/ecommerce.html" target="_blank"><i class="fas fa-angle-left"></i> المتاجر الإلكترونية</a></li>
-                <li><a href="services/social-media-ads.html" target="_blank"><i class="fas fa-angle-left"></i> إدارة السوشيال ميديا</a></li>
-                <li><a href="services/website-design-complete.html" target="_blank"><i class="fas fa-angle-left"></i> تصميم المواقع</a></li>
-                <li><a href="services/index.html" target="_blank"><i class="fas fa-angle-left"></i> جميع الخدمات</a></li>
+                <li><a href="/arabsad/services/google-ads.html" target="_blank"><i class="fas fa-angle-left"></i> إعلانات Google Ads</a></li>
+                <li><a href="/arabsad/services/seo.html" target="_blank"><i class="fas fa-angle-left"></i> تحسين محركات البحث SEO</a></li>
+                <li><a href="/arabsad/services/ecommerce.html" target="_blank"><i class="fas fa-angle-left"></i> المتاجر الإلكترونية</a></li>
+                <li><a href="/arabsad/services/social-media-ads.html" target="_blank"><i class="fas fa-angle-left"></i> إدارة السوشيال ميديا</a></li>
+                <li><a href="/arabsad/services/website-design.html" target="_blank"><i class="fas fa-angle-left"></i> تصميم المواقع</a></li>
+                <li><a href="/arabsad/services/index.html" target="_blank"><i class="fas fa-angle-left"></i> جميع الخدمات</a></li>
             </ul>
         </div>
 
@@ -186,12 +192,12 @@
         <div class="footer-col">
             <h3>🗺️ الدول والمدن</h3>
             <ul class="footer-links">
-                <li><a href="sa.html" target="_blank"><i class="fas fa-flag"></i> السعودية</a></li>
-                <li><a href="ae.html" target="_blank"><i class="fas fa-flag"></i> الإمارات</a></li>
-                <li><a href="kw.html" target="_blank"><i class="fas fa-flag"></i> الكويت</a></li>
-                <li><a href="cities/riyadh-google-ads.html" target="_blank"><i class="fas fa-city"></i> الرياض</a></li>
-                <li><a href="cities/dubai-digital-marketing.html" target="_blank"><i class="fas fa-city"></i> دبي</a></li>
-                <li><a href="gulf-cities.html" target="_blank"><i class="fas fa-globe"></i> جميع المدن</a></li>
+                <li><a href="/arabsad/sa.html" target="_blank"><i class="fas fa-flag"></i> السعودية</a></li>
+                <li><a href="/arabsad/ae.html" target="_blank"><i class="fas fa-flag"></i> الإمارات</a></li>
+                <li><a href="/arabsad/kw.html" target="_blank"><i class="fas fa-flag"></i> الكويت</a></li>
+                <li><a href="/arabsad/cities/riyadh-google-ads.html" target="_blank"><i class="fas fa-city"></i> الرياض</a></li>
+                <li><a href="/arabsad/cities/dubai-digital-marketing.html" target="_blank"><i class="fas fa-city"></i> دبي</a></li>
+                <li><a href="/arabsad/services/gulf-cities.html" target="_blank"><i class="fas fa-globe"></i> جميع المدن</a></li>
             </ul>
         </div>
 

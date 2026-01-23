@@ -100,16 +100,6 @@
             overflow-x: hidden;
         }
 
-        header {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            z-index: 1000;
-            background: rgba(7, 11, 30, 0.95);
-            backdrop-filter: blur(15px);
-            border-bottom: 2px solid rgba(255, 184, 0, 0.1);
-            padding: 1rem 0;
-        }
 
         .container {
             max-width: 1200px;
@@ -117,35 +107,6 @@
             padding: 0 20px;
         }
 
-        .header-wrapper {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            font-size: 1.6rem;
-            font-weight: 900;
-            color: var(--primary);
-            text-decoration: none;
-        }
-
-        nav {
-            display: flex;
-            gap: 2.5rem;
-        }
-
-        nav a {
-            color: var(--text-light);
-            text-decoration: none;
-            font-weight: 600;
-            transition: 0.3s;
-            font-size: 0.95rem;
-        }
-
-        nav a:hover {
-            color: var(--primary);
-        }
 
         main {
             margin-top: 80px;
@@ -293,34 +254,6 @@
             margin-top: 15px;
         }
 
-        footer {
-            background: #040816;
-            padding: 80px 0 40px;
-            border-top: 2px solid rgba(255, 184, 0, 0.1);
-        }
-
-        .footer-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 50px;
-        }
-
-        .footer-col h4 {
-            color: var(--primary);
-            margin-bottom: 25px;
-        }
-
-        .footer-col a {
-            color: var(--text-muted);
-            text-decoration: none;
-            display: block;
-            margin-bottom: 15px;
-            transition: 0.3s;
-        }
-
-        .footer-col a:hover {
-            color: var(--primary);
-        }
 
         .whatsapp-float {
             position: fixed;
@@ -488,19 +421,7 @@
 </head>
 
 <body>
-    <header>
-        <div class="container header-wrapper">
-            <a href="/arabsad/" class="logo">🎯 إعلانات العرب</a>
-            <nav>
-                <a href="/arabsad/">الرئيسية</a>
-                <a href="/arabsad/services/">الخدمات</a>
-                <a href="/arabsad/about.html">عنا</a>
-                <a href="/arabsad/#contact">اتصل بنا</a>
-            </nav>
-            <a href="https://wa.me/201110760081" class="btn cta-nav-wa"
-                style="padding: 10px 25px; font-size: 0.9rem;">اطلب متجرك</a>
-        </div>
-    </header>
+    <div data-include="shared-header.html"></div>
 
     <main>
         <section class="hero">
@@ -788,34 +709,7 @@
         </section>
     </main>
 
-    <footer>
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-col" style="flex: 1.5;">
-                    <h4 style="font-size: 1.5rem; color: var(--primary);">🎯 إعلانات العرب</h4>
-                    <p style="color: var(--text-muted); margin-top: 15px;">شريكك الاستراتيجي في رحلة التحول الرقمي
-                        والتجارة الإلكترونية الناجحة.</p>
-                </div>
-                <div class="footer-col">
-                    <h4>الخدمات</h4>
-                    <a href="social-media-ads.html">إعلانات السوشيال</a>
-                    <a href="google-ads.html">إعلانات جوجل</a>
-                    <a href="website-design.html">تصميم المواقع</a>
-                    <a href="seo.html">تحسين السيو</a>
-                </div>
-                <div class="footer-col">
-                    <h4>تواصل معنا</h4>
-                    <span style="color: var(--text-muted); display: block; margin-bottom: 12px;">☎ +201110760081</span>
-                    <span style="color: var(--text-muted); display: block; margin-bottom: 12px;">📧
-                        info@arabsad.com</span>
-                    <span style="color: var(--text-muted); display: block;">📍 القاهرة، شارع التحرير</span>
-                </div>
-            </div>
-            <p
-                style="text-align: center; margin-top: 60px; color: var(--text-muted); border-top: 1px solid rgba(255,255,255,0.05); padding-top: 30px;">
-                &copy; 2026 مؤسسة إعلانات العرب. جميع الحقوق محفوظة.</p>
-        </div>
-    </footer>
+    <div data-include="shared-footer.html"></div>
 
     <div class="whatsapp-float">
         <a href="#" id="whatsappFloat" target="_blank">
@@ -825,6 +719,17 @@
     </div>
 
     <script>
+        // Load Shared Header/Footer
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelectorAll('[data-include]').forEach(async function(el) {
+                try {
+                    const file = el.getAttribute('data-include');
+                    const response = await fetch('/arabsad/' + file);
+                    if (response.ok) el.innerHTML = await response.text();
+                } catch (e) { console.log(e); }
+            });
+        });
+
         const currentPageUrl = window.location.href;
         const pageTitle = document.title;
         const whatsappMessage = `مرحباً، أريد الاستفسار عن خدمات المتاجر الإلكترونية

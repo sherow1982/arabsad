@@ -94,47 +94,6 @@
             line-height: 1.8;
         }
 
-        header {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            z-index: 1000;
-            background: rgba(15, 20, 25, 0.95);
-            backdrop-filter: blur(10px);
-            border-bottom: 1px solid rgba(66, 133, 244, 0.2);
-            padding: 1rem 2rem;
-        }
-
-        .header-wrapper {
-            max-width: 1400px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: var(--primary);
-            text-decoration: none;
-        }
-
-        nav {
-            display: flex;
-            gap: 2rem;
-        }
-
-        nav a {
-            color: var(--text-light);
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-
-        nav a:hover {
-            color: var(--primary);
-        }
-
         main {
             margin-top: 70px;
         }
@@ -330,14 +289,6 @@
             margin-bottom: 15px;
         }
 
-        footer {
-            background: var(--dark-secondary);
-            padding: 40px 20px;
-            text-align: center;
-            margin-top: 60px;
-            border-top: 2px solid rgba(66, 133, 244, 0.2);
-        }
-
         .whatsapp-float {
             position: fixed;
             bottom: 20px;
@@ -375,16 +326,7 @@
 </head>
 
 <body>
-    <header>
-        <div class="header-wrapper">
-            <a href="/arabsad/" class="logo">🎯 إعلانات العرب - Google Ads</a>
-            <nav>
-                <a href="/arabsad/#services">الخدمات</a>
-                <a href="#faq">الأسئلة الشائعة</a>
-                <a href="#pricing">الأسعار</a>
-            </nav>
-        </div>
-    </header>
+    <div data-include="shared-header.html"></div>
 
     <main>
         <!-- Hero Section -->
@@ -876,10 +818,7 @@
         </section>
     </main>
 
-    <footer>
-        <p>&copy; 2026 مؤسسة إعلانات العرب - جميع الحقوق محفوظة</p>
-        <p style="margin-top: 10px;">📞 +201110760081 | 📧 info@arabsad.com</p>
-    </footer>
+    <div data-include="shared-footer.html"></div>
 
     <!-- Floating WhatsApp Button -->
     <div class="whatsapp-float">
@@ -891,6 +830,17 @@
 
     <!-- Dynamic WhatsApp Script -->
     <script>
+        // Load Shared Header/Footer
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelectorAll('[data-include]').forEach(async function(el) {
+                try {
+                    const file = el.getAttribute('data-include');
+                    const response = await fetch('/arabsad/' + file);
+                    if (response.ok) el.innerHTML = await response.text();
+                } catch (e) { console.log(e); }
+            });
+        });
+
         // Get current page info
         const currentPageUrl = window.location.href;
         const serviceName = document.querySelector('h1')?.textContent.trim() || 'خدمات Google Ads';
