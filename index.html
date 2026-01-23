@@ -5,6 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>مؤسسة إعلانات العرب - الوكالة الرقمية الأولى في الخليج</title>
     <meta name="description" content="وكالة تسويق رقمي متخصصة في Google Ads, SEO, تصميم مواقع ومتاجر إلكترونية، وإدارة الحملات الإعلانية مع دعم مباشر.">
+    <meta property="og:title" content="مؤسسة إعلانات العرب - الوكالة الرقمية">
+    <meta property="og:description" content="علامات رقمية للشركات والمتاجر">
+    <link rel="canonical" href="https://sherow1982.github.io/arabsad/">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "مؤسسة إعلانات العرب",
+      "image": "https://sherow1982.github.io/arabsad/og_image_arabsad.png",
+      "description": "وكالة تسويق رقمي",
+      "telephone": "+201110760081",
+      "email": "info@arabsad.com",
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "EG",
+        "addressLocality": "Cairo"
+      },
+      "url": "https://sherow1982.github.io/arabsad/",
+      "sameAs": [
+        "https://facebook.com/arabsad",
+        "https://instagram.com/arabsad",
+        "https://twitter.com/arabsad"
+      ]
+    }
+    </script>
     <style>
         * {
             margin: 0;
@@ -163,16 +188,6 @@
         @keyframes float {
             0%, 100% { transform: translateY(0px); }
             50% { transform: translateY(20px); }
-        }
-
-        .banner {
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 100%;
-            opacity: 0.3;
-            pointer-events: none;
         }
 
         .hero-content {
@@ -492,10 +507,15 @@
             color: var(--text-muted);
             text-decoration: none;
             transition: color 0.3s ease;
+            display: inline-block;
         }
 
         .footer-column a:hover {
             color: var(--primary);
+        }
+
+        .footer-column a[target="_blank"] {
+            cursor: pointer;
         }
 
         .social-links {
@@ -545,47 +565,16 @@
 
         /* Responsive */
         @media (max-width: 768px) {
-            header {
-                padding: 1rem;
-            }
-
-            .header-wrapper {
-                gap: 1rem;
-            }
-
-            nav {
-                display: none;
-            }
-
-            .hero {
-                min-height: 70vh;
-                padding: 2rem 1rem;
-            }
-
-            .hero-buttons {
-                flex-direction: column;
-                gap: 1rem;
-            }
-
-            .btn {
-                width: 100%;
-            }
-
-            .services {
-                padding: 4rem 1rem;
-            }
-
-            .services-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .service-card {
-                min-height: auto;
-            }
-
-            .footer-grid {
-                grid-template-columns: 1fr;
-            }
+            header { padding: 1rem; }
+            .header-wrapper { gap: 1rem; }
+            nav { display: none; }
+            .hero { min-height: 70vh; padding: 2rem 1rem; }
+            .hero-buttons { flex-direction: column; gap: 1rem; }
+            .btn { width: 100%; }
+            .services { padding: 4rem 1rem; }
+            .services-grid { grid-template-columns: 1fr; }
+            .service-card { min-height: auto; }
+            .footer-grid { grid-template-columns: 1fr; }
         }
     </style>
 </head>
@@ -606,29 +595,13 @@
     <main>
         <!-- Hero Section -->
         <section class="hero" id="home">
-            <svg class="banner" viewBox="0 0 1200 600" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
-                <defs>
-                    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
-                        <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(255,184,0,0.05)" stroke-width="1"/>
-                    </pattern>
-                    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
-                        <stop offset="0%" style="stop-color:#FFB800;stop-opacity:0.1" />
-                        <stop offset="100%" style="stop-color:#00d4aa;stop-opacity:0.05" />
-                    </linearGradient>
-                </defs>
-                <rect width="1200" height="600" fill="url(#grad1)"/>
-                <circle cx="100" cy="100" r="80" fill="rgba(255,184,0,0.1)"/>
-                <circle cx="1100" cy="500" r="120" fill="rgba(0,212,170,0.1)"/>
-                <rect x="200" y="300" width="300" height="200" fill="rgba(255,184,0,0.05)" rx="20"/>
-            </svg>
-
             <div class="hero-content">
                 <h1>🚀 نحو نتائج إعلان ملموسة ونجاح أعمالك</h1>
-                <p>خدماتنا تشمل: Google Ads، SEO، تصميم مواقع ومتاجر إلكترونية، إعلانات سوشيال ميديا وإدارة الحملات بدعم مباشر.</p>
+                <p>خدماتنا تشمل: Google Ads‎، SEO، تصميم مواقع ومتاجر إلكترونية، إعلانات سوشيال ميديا وإدارة الحملات بدعم مباشر.</p>
                 
                 <div class="hero-buttons">
                     <a href="https://wa.me/201110760081" target="_blank" class="btn btn-primary">💬 ابدأ الآن</a>
-                    <a href="#services" class="btn btn-secondary">📚 استكشف خدماتنا</a>
+                    <a href="#services" class="btn btn-secondary">📙 استكشف خدماتنا</a>
                 </div>
 
                 <div class="stats">
@@ -658,7 +631,7 @@
             <p class="section-subtitle">حلول تسويقية متكاملة تضمن نمو عملك بشكل مستدام</p>
 
             <div class="services-grid">
-                <a href="/arabsad/services/google-ads.html" class="service-card">
+                <a href="/arabsad/services/google-ads.html" target="_blank" class="service-card">
                     <div class="service-icon">📊</div>
                     <h3>إعلانات Google Ads</h3>
                     <p>حملات احترافية على محرك البحث الأقوى عالمياً لزيادة مبيعاتك بشكل مباشر وفوري</p>
@@ -670,7 +643,7 @@
                     <span class="service-card-arrow">ابدأ الآن ←</span>
                 </a>
                 
-                <a href="/arabsad/services/social-media-ads.html" class="service-card">
+                <a href="/arabsad/services/social-media-ads.html" target="_blank" class="service-card">
                     <div class="service-icon">📱</div>
                     <h3>إعلانات السوشيال ميديا</h3>
                     <p>إعلانات ممولة على فيسبوك وإنستجرام وسناب وتيك توك لجمهورك المستهدف</p>
@@ -682,7 +655,7 @@
                     <span class="service-card-arrow">اعرف المزيد ←</span>
                 </a>
                 
-                <a href="/arabsad/services/seo.html" class="service-card">
+                <a href="/arabsad/services/seo.html" target="_blank" class="service-card">
                     <div class="service-icon">🔍</div>
                     <h3>تحسين SEO</h3>
                     <p>رفع موقعك في نتائج البحث الأولى لزيادة الزيارات المجانية والعضوية</p>
@@ -694,7 +667,7 @@
                     <span class="service-card-arrow">اعرف المزيد ←</span>
                 </a>
                 
-                <a href="/arabsad/services/ecommerce.html" class="service-card">
+                <a href="/arabsad/services/ecommerce.html" target="_blank" class="service-card">
                     <div class="service-icon">🛒</div>
                     <h3>المتاجر الإلكترونية</h3>
                     <p>متاجر إلكترونية عصرية وجاهزة للتسويق والمبيعات في الخليج ومصر والعالم</p>
@@ -706,7 +679,7 @@
                     <span class="service-card-arrow">تصفح النماذج ←</span>
                 </a>
                 
-                <a href="/arabsad/services/website-design.html" class="service-card">
+                <a href="/arabsad/services/website-design.html" target="_blank" class="service-card">
                     <div class="service-icon">💻</div>
                     <h3>تصميم المواقع</h3>
                     <p>مواقع ويب احترافية سريعة ومتجاوبة بتصاميم عربية جذابة وفعالة</p>
@@ -718,13 +691,13 @@
                     <span class="service-card-arrow">شاهد أمثلة ←</span>
                 </a>
                 
-                <a href="/arabsad/services/social-management.html" class="service-card">
-                    <div class="service-icon">👥</div>
+                <a href="/arabsad/services/social-management.html" target="_blank" class="service-card">
+                    <div class="service-icon">ل</div>
                     <h3>إدارة السوشيال ميديا</h3>
                     <p>إدارة محترفة لحسابات التواصل لزيادة المتابعين والتفاعل وبناء مجتمع قوي</p>
                     <ul class="service-card-features">
                         <li>محتوى إبداعي وجذاب يومي</li>
-                        <li>إدارة التفاعلات والرسائل</li>
+                        <li>إدارة التفاعلات والرسالل</li>
                         <li>تقارير أداء شهرية مفصلة</li>
                     </ul>
                     <span class="service-card-arrow">ابدأ الآن ←</span>
@@ -741,21 +714,21 @@
                     <h4>🌐 عن الموقع</h4>
                     <p style="color: var(--text-muted); margin-bottom: 1rem;">مؤسسة إعلانات العرب متخصصة في التسويق الرقمي وإدارة الحملات الإعلانية مع دعم مباشر 24/7 في جميع أنحاء الخليج ومصر</p>
                     <div class="social-links">
-                        <a href="https://facebook.com" target="_blank" title="Facebook">f</a>
-                        <a href="https://instagram.com" target="_blank" title="Instagram">📷</a>
-                        <a href="https://twitter.com" target="_blank" title="Twitter">𝕏</a>
-                        <a href="https://tiktok.com" target="_blank" title="TikTok">♪</a>
+                        <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" title="Facebook">f</a>
+                        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" title="Instagram">📷</a>
+                        <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" title="Twitter">🐪</a>
+                        <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer" title="TikTok">♪</a>
                     </div>
                 </div>
                 <div class="footer-column">
                     <h4>📋 الخدمات</h4>
                     <ul>
-                        <li><a href="#services">إعلانات Google Ads</a></li>
-                        <li><a href="#services">إعلانات السوشيال ميديا</a></li>
-                        <li><a href="#services">تحسين SEO</a></li>
-                        <li><a href="#services">المتاجر الإلكترونية</a></li>
-                        <li><a href="#services">تصميم المواقع</a></li>
-                        <li><a href="#services">إدارة السوشيال</a></li>
+                        <li><a href="/arabsad/services/google-ads.html" target="_blank">إعلانات Google Ads</a></li>
+                        <li><a href="/arabsad/services/social-media-ads.html" target="_blank">إعلانات السوشيال</a></li>
+                        <li><a href="/arabsad/services/seo.html" target="_blank">تحسين SEO</a></li>
+                        <li><a href="/arabsad/services/ecommerce.html" target="_blank">المتاجر الإلكترونية</a></li>
+                        <li><a href="/arabsad/services/website-design.html" target="_blank">تصميم المواقع</a></li>
+                        <li><a href="/arabsad/services/social-management.html" target="_blank">إدارة السوشيال</a></li>
                     </ul>
                 </div>
                 <div class="footer-column">
@@ -765,16 +738,16 @@
                         <li><a href="#services">لماذا نحن</a></li>
                         <li><a href="#contact">تواصل معنا</a></li>
                         <li><a href="#">الأسئلة الشائعة</a></li>
-                        <li><a href="#">الشروط والسياسات</a></li>
+                        <li><a href="/arabsad/legal.html" target="_blank">الشروط والسياسات</a></li>
                     </ul>
                 </div>
                 <div class="footer-column">
                     <h4>📞 اتصل بنا</h4>
                     <ul>
-                        <li><a href="tel:+201110760081">☎️ +201110760081</a></li>
-                        <li><a href="https://wa.me/201110760081" target="_blank">💬 واتساب</a></li>
+                        <li><a href="tel:+201110760081">☎ +201110760081</a></li>
+                        <li><a href="https://wa.me/201110760081" target="_blank" rel="noopener noreferrer">💬 واتساب</a></li>
                         <li><a href="mailto:info@arabsad.com">📧 info@arabsad.com</a></li>
-                        <li style="margin-top: 1rem; padding-top: 1rem; border-top: 1px solid rgba(255, 184, 0, 0.1);"><strong>ساعات العمل:</strong><br>السبت - الخميس<br>من 9 صباحاً إلى 6 مساءً</li>
+                        <li style="margin-top: 1rem; padding-top: 1rem; border-top: 1px solid rgba(255, 184, 0, 0.1);"><strong>ساعات العمل:</strong><br>السبت - الخميس<br>من 9 صباحاً إلى 6 مساؤً</li>
                     </ul>
                 </div>
             </div>
@@ -792,16 +765,20 @@
     </footer>
 
     <script>
+        // Smooth scroll navigation
         document.querySelectorAll('a[href^="#"]').forEach(link => {
-            link.addEventListener('click', e => {
-                if (link.getAttribute('href') !== '#') {
+            link.addEventListener('click', function(e) {
+                if (this.getAttribute('href') !== '#') {
                     e.preventDefault();
-                    document.querySelector(link.getAttribute('href'))?.scrollIntoView({behavior: 'smooth'});
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({behavior: 'smooth', block: 'start'});
+                    }
                 }
             });
         });
 
-        // Add scroll animation to service cards
+        // Intersection Observer for animations
         const observerOptions = {
             threshold: 0.1,
             rootMargin: '0px 0px -50px 0px'
@@ -821,6 +798,18 @@
             el.style.transform = 'translateY(30px)';
             el.style.transition = 'all 0.6s ease';
             observer.observe(el);
+        });
+
+        // Clean up on page unload to prevent bfcache issues
+        window.addEventListener('beforeunload', () => {
+            observer.disconnect();
+        });
+
+        // Handle bfcache restoration
+        window.addEventListener('pageshow', (event) => {
+            if (event.persisted) {
+                console.log('Page was restored from bfcache');
+            }
         });
     </script>
 </body>
