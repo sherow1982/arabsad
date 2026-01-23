@@ -9,13 +9,14 @@ const SITE_PAGES = {
         { name: 'الرئيسية', url: 'index.html', icon: 'fa-home' }
     ],
     services: [
-        { name: 'جميع الخدمات', url: 'services/index.html', icon: 'fa-list' },
-        { name: 'إعلانات Google Ads', url: 'services/google-ads.html', icon: 'fab fa-google' },
-        { name: 'SEO تحسين محركات البحث', url: 'services/seo.html', icon: 'fa-search' },
-        { name: 'المتاجر الإلكترونية', url: 'services/ecommerce.html', icon: 'fa-shopping-cart' },
-        { name: 'إدارة السوشيال ميديا', url: 'services/social-media-ads.html', icon: 'fa-hashtag' },
-        { name: 'تصميم المواقع', url: 'services/website-design.html', icon: 'fa-palette' },
-        { name: 'إدارة الحسابات', url: 'services/social-management.html', icon: 'fa-users' }
+        { name: 'جميع الخدمات', url: 'services/index.html', icon: 'fa-list', desc: 'تصفح كافة خدماتنا الرقمية في مكان واحد' },
+        { name: 'إعلانات Google Ads', url: 'services/google-ads.html', icon: 'fab fa-google', desc: 'تصدر نتائج البحث وحقق مبيعات فورية' },
+        { name: 'SEO تحسين محركات البحث', url: 'services/seo.html', icon: 'fa-search', desc: 'زيارات مجانية مستدامة من جوجل' },
+        { name: 'المتاجر الإلكترونية', url: 'services/ecommerce.html', icon: 'fa-shopping-cart', desc: 'تصميم متاجر احترافية تبيع 24/7' },
+        { name: 'بديل خرائط جوجل', url: 'services/safahat-al5dmat.html', icon: 'fa-map-marked-alt', desc: 'صفحات هبوط خاصة تغنيك عن مشاكل الخرائط' },
+        { name: 'إدارة السوشيال ميديا', url: 'services/social-media-ads.html', icon: 'fa-hashtag', desc: 'حملات إعلانية على فيسبوك، انستجرام، وتيك توك' },
+        { name: 'تصميم المواقع', url: 'services/website-design.html', icon: 'fa-palette', desc: 'مواقع تعريفية تعكس احترافية نشاطك' },
+        { name: 'إدارة الحسابات', url: 'services/social-management.html', icon: 'fa-users', desc: 'إدارة شاملة لحسابات التواصل الاجتماعي' }
     ],
     countries: [
         { name: 'السعودية 🇸🇦', url: 'sa.html', icon: 'fa-map-marker-alt' },

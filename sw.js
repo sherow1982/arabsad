@@ -30,10 +30,12 @@ const CORE_CACHE = [
 
 // ملفات الصفحات المهمة
 const PAGES_CACHE = [
+  '/services/index.html',
   '/services/google-ads.html',
   '/services/seo.html',
   '/services/website-design.html',
   '/services/ecommerce.html',
+  '/services/safahat-al5dmat.html',
   '/services/social-media-ads.html',
   '/services/social-management.html',
   '/sa.html',
