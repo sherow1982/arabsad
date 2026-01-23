@@ -258,7 +258,8 @@
     <a href="https://wa.me/201110760081" target="_blank" class="shared-wa-float" 
        onclick="this.href='https://wa.me/201110760081?text=' + encodeURIComponent('مرحباً، أريد الاستفسار عن: ' + document.title + '\n' + window.location.href); return true;"
        aria-label="تواصل معنا عبر واتساب">
-        <i class="fab fa-whatsapp"></i>
+        <!-- Official WhatsApp SVG Icon -->
+        <svg viewBox="0 0 32 32" class="wa-icon-svg"><path d="M19.11 17.205c-.372 0-1.088 1.39-1.518 1.39a.63.63 0 0 1-.315-.1c-.802-.402-1.504-.817-2.163-1.447-.545-.516-1.146-1.29-1.46-1.963a.426.426 0 0 1-.073-.215c0-.33.99-.945.99-1.49 0-.143-.73-2.09-.832-2.335-.143-.372-.214-.487-.6-.487-.187 0-.36-.043-.53-.043-.276 0-.733.05-1.087.445-.3.315-.744.816-.744 1.7 0 .802.272 1.56 1.634 2.632 1.875 1.48 2.953 2.123 4.343 2.84 1.39.69 2.43.443 2.96.315.688-.163 1.755-.74 2.08-1.6.332-.85.332-1.62.26-1.735-.082-.13-.298-.183-.61-.183l-.15-.015zm4.87-12.41a15.001 15.001 0 0 0-7.67-2.145c-8.284 0-15.013 6.73-15.013 15.002 0 2.79.83 5.366 2.246 7.548l-2.358 8.12 8.688-2.09c2.008 1.017 4.177 1.633 6.437 1.633 8.27 0 15.016-6.73 15.016-15.002 0-4.01-1.568-7.77-4.348-10.566zm-7.67 27.67c-2.367 0-4.58-.66-6.32-1.77l-.29-.19-4.76 1.1 1.35-4.32-.23-.38a12.29 12.29 0 0 1-1.953-6.49c0-6.764 5.505-12.265 12.27-12.265 3.255 0 6.333 1.29 8.626 3.6 2.303 2.32 3.57 5.38 3.57 8.625 0 6.76-5.505 12.26-12.265 12.26z" fill="#FFF"/></svg>
         <span class="shared-wa-tooltip">تواصل معنا الآن</span>
     </a>
 
@@ -269,11 +270,10 @@
             left: 30px;
             width: 60px;
             height: 60px;
-            background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+            background-color: #25D366;
             color: white;
             border-radius: 50%;
             text-align: center;
-            font-size: 32px;
             box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
             z-index: 99999;
             display: flex;
@@ -283,6 +283,7 @@
             transition: all 0.3s ease;
             animation: waPulse 2s infinite;
         }
+        .wa-icon-svg { width: 35px; height: 35px; fill: white; }
         .shared-wa-float:hover { transform: scale(1.1); box-shadow: 0 6px 20px rgba(37, 211, 102, 0.6); }
         .shared-wa-tooltip {
             position: absolute; left: 70px; top: 50%; transform: translateY(-50%);
