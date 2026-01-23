@@ -327,8 +327,8 @@
 
         .services-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 2rem;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2.5rem;
         }
 
         .service-card {
@@ -339,6 +339,11 @@
             transition: all 0.3s ease;
             position: relative;
             overflow: hidden;
+            cursor: pointer;
+            text-decoration: none;
+            color: inherit;
+            display: flex;
+            flex-direction: column;
         }
 
         .service-card::before {
@@ -379,6 +384,19 @@
             color: var(--text-muted);
             line-height: 1.8;
             font-size: 0.95rem;
+            flex-grow: 1;
+        }
+
+        .service-card-arrow {
+            display: inline-block;
+            margin-top: 1rem;
+            color: var(--primary);
+            font-weight: 600;
+            transition: transform 0.3s ease;
+        }
+
+        .service-card:hover .service-card-arrow {
+            transform: translateX(-8px);
         }
 
         /* Footer */
@@ -515,12 +533,11 @@
     <!-- Header -->
     <header>
         <div class="header-wrapper">
-            <a href="/" class="logo">🌐 إعلانات العرب</a>
+            <a href="/arabsad/" class="logo">🌐 إعلانات العرب</a>
             <nav>
                 <a href="#home">الرئيسية</a>
-                <a href="about.html">من نحن</a>
                 <a href="#services">الخدمات</a>
-                <a href="contact.html">اتصل بنا</a>
+                <a href="#contact">اتصل بنا</a>
             </nav>
             <a href="https://wa.me/201110760081" target="_blank" class="cta-header">💬 تواصل الآن</a>
         </div>
@@ -546,12 +563,12 @@
             </svg>
 
             <div class="hero-content">
-                <h1>نحو نتائج إعلان ملموسة ونجاح أعمالك</h1>
+                <h1>🚀 نحو نتائج إعلان ملموسة ونجاح أعمالك</h1>
                 <p>خدماتنا تشمل: Google Ads، SEO، تصميم مواقع ومتاجر إلكترونية، إعلانات سوشيال ميديا وإدارة الحملات بدعم مباشر.</p>
                 
                 <div class="hero-buttons">
-                    <a href="https://wa.me/201110760081" target="_blank" class="btn btn-primary">💬 تواصل واتساب</a>
-                    <a href="about.html" class="btn btn-secondary">📋 اعرف عنا أكثر</a>
+                    <a href="https://wa.me/201110760081" target="_blank" class="btn btn-primary">💬 ابدأ الآن</a>
+                    <a href="#services" class="btn btn-secondary">📚 استكشف خدماتنا</a>
                 </div>
 
                 <div class="stats">
@@ -581,35 +598,46 @@
             <p class="section-subtitle">حلول تسويقية متكاملة تضمن نمو عملك بشكل مستدام</p>
 
             <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-icon">📊</div>
-                    <h3>إعلانات Google Ads</h3>
-                    <p>حملات إعلانية موجهة عبر محرك البحث الأقوى عالمياً مع ضمان أفضل ROI</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">📱</div>
-                    <h3>إدارة السوشيال ميديا</h3>
-                    <p>إعلانات Facebook, Instagram, TikTok و Snapchat بتصميم احترافي وموجه للجمهور</p>
-                </div>
+                <a href="/arabsad/services/ecommerce.html" class="service-card">
+                    <div class="service-icon">📐</div>
+                    <h3>متاجر إلكترونية</h3>
+                    <p>الحصول على متجر احترافي جاهز للبيع مع تكاملات الدفع والشحن مباشرة</p>
+                    <span class="service-card-arrow">اعرض النماذج ←</span>
+                </a>
+                
                 <div class="service-card">
                     <div class="service-icon">🔍</div>
                     <h3>تحسين محركات البحث</h3>
-                    <p>استراتيجيات SEO متقدمة لتصدر نتائج البحث الطبيعية والحصول على زيارات عضوية</p>
+                    <p>استراتيجيات SEO متقدمة لتصدر نتائج البحث والحصول على زيارات عضوية</p>
+                    <span class="service-card-arrow">اعرف المزيد ←</span>
                 </div>
+                
                 <div class="service-card">
-                    <div class="service-icon">🛒</div>
-                    <h3>تصميم المتاجر الإلكترونية</h3>
-                    <p>متاجر احترافية جاهزة للبيع مع تكاملات الدفع والشحن وإدارة المخزون</p>
+                    <div class="service-icon">📄</div>
+                    <h3>إعلانات Google Ads</h3>
+                    <p>حملات إعلانية موجهة عبر محرك البحث الأقوى مع ضمان أفضل ROI</p>
+                    <span class="service-card-arrow">ابدأ الآن ←</span>
                 </div>
+                
                 <div class="service-card">
-                    <div class="service-icon">💻</div>
-                    <h3>تصميم المواقع الويب</h3>
+                    <div class="service-icon">📱</div>
+                    <h3>إدارة السوشيال ميديا</h3>
+                    <p>إعلانات Facebook, Instagram, TikTok وSnapchat بتصميم احترافي وموجه للجمهور</p>
+                    <span class="service-card-arrow">البداية ←</span>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">🖥️</div>
+                    <h3>تصميم المواقع الرقمية</h3>
                     <p>مواقع حديثة وسريعة الأداء مع تصميم متجاوب ومتوافق مع جميع الأجهزة</p>
+                    <span class="service-card-arrow">الأمثلة ←</span>
                 </div>
+                
                 <div class="service-card">
-                    <div class="service-icon">📈</div>
+                    <div class="service-icon">📋</div>
                     <h3>تحليل البيانات</h3>
-                    <p>تقارير مفصلة وتحليل شامل للحملات لقياس الأداء واتخاذ قرارات مبنية على البيانات</p>
+                    <p>الثقرارير مفصلة ومراقبة الأداء لاتخاذ قرارات واعية بختم مخطط</p>
+                    <span class="service-card-arrow">البداية ←</span>
                 </div>
             </div>
         </section>
@@ -632,28 +660,27 @@
                 <div class="footer-column">
                     <h4>📋 الخدمات</h4>
                     <ul>
-                        <li><a href="#">إعلانات Google</a></li>
-                        <li><a href="#">إدارة السوشيال ميديا</a></li>
-                        <li><a href="#">تحسين محركات البحث</a></li>
-                        <li><a href="#">تصميم المتاجر</a></li>
-                        <li><a href="#">تصميم المواقع</a></li>
+                        <li><a href="/arabsad/services/ecommerce.html">متاجر إلكترونية</a></li>
+                        <li><a href="#services">إعلانات Google</a></li>
+                        <li><a href="#services">إدارة السوشيال</a></li>
+                        <li><a href="#services">تحسين محركات البحث</a></li>
                     </ul>
                 </div>
                 <div class="footer-column">
                     <h4>ℹ️ معلومات مهمة</h4>
                     <ul>
-                        <li><a href="about.html">من نحن</a></li>
-                        <li><a href="about.html#why-us">لماذا نحن</a></li>
-                        <li><a href="contact.html">تواصل معنا</a></li>
-                        <li><a href="legal.html">الصفحات القانونية</a></li>
+                        <li><a href="#home">من نحن</a></li>
+                        <li><a href="#services">لماذا نحن</a></li>
+                        <li><a href="#contact">تواصل معنا</a></li>
+                        <li><a href="#">الصفحات القانونية</a></li>
                     </ul>
                 </div>
                 <div class="footer-column">
-                    <h4>📞 تواصل معنا</h4>
+                    <h4>📞 اتصل بنا</h4>
                     <ul>
                         <li><a href="tel:+201110760081">☎️ +201110760081</a></li>
                         <li><a href="https://wa.me/201110760081" target="_blank">💬 واتساب</a></li>
-                        <li><a href="mailto:info@arabsad.com">📧 info@arabsad.com</a></li>
+                        <li><a href="mailto:info@arabsad.com">📧 البريد الإلكتروني</a></li>
                     </ul>
                 </div>
             </div>
@@ -662,9 +689,9 @@
                 <p>&copy; 2025 مؤسسة إعلانات العرب - جميع الحقوق محفوظة</p>
                 <p style="font-size: 0.85rem; margin-top: 0.5rem;">وكالة تسويق رقمي متخصصة في الخليج ومصر</p>
                 <div class="legal-links">
-                    <a href="legal.html">سياسة الخصوصية</a>
-                    <a href="legal.html">شروط الاستخدام</a>
-                    <a href="contact.html">الإبلاغ عن مشكلة</a>
+                    <a href="#">سياسة الخصوصية</a>
+                    <a href="#">شروط الاستخدام</a>
+                    <a href="#">الإبلاغ عن مشكلة</a>
                 </div>
             </div>
         </div>
