@@ -1,133 +1,405 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>المتاجر الإلكترونية - مؤسسة إعلانات العرب</title>
-    <meta name="description" content="متاجر إلكترونية احترافية جاهزة للمبيعات مع تكامل الدفع والشحن وإدارة متقدمة.">
+    <title>تصميم متاجر إلكترونية احترافية | مؤسسة إعلانات العرب</title>
+    <meta name="description"
+        content="تصميم وتطوير متاجر إلكترونية احترافية متجاوبة مع جميع الأجهزة. تكامل الدفع الإلكتروني، إدارة المنتجات، والشحن.">
+    <meta name="keywords"
+        content="متجر إلكتروني, تصميم متجر, تطوير متجر, التجارة الإلكترونية, دفع إلكتروني, متجر أونلاين">
     <link rel="canonical" href="https://sherow1982.github.io/arabsad/services/ecommerce.html">
+
+    <!-- Schema.org -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "Service",
-      "name": "المتاجر الإلكترونية",
+      "@type": "Service", 
+      "name": "تصميم متاجر إلكترونية",
       "description": "تصميم وتطوير متاجر إلكترونية احترافية مع كل الخدمات المرتبطة",
-      "serviceType": "E-commerce Store Development"
+      "provider": {
+        "@type": "Organization",
+        "name": "مؤسسة إعلانات العرب",
+        "telephone": "+201110760081",
+        "url": "https://sherow1982.github.io/arabsad/"
+      },
+      "areaServed": [
+        {"@type": "Country", "name": "السعودية"},
+        {"@type": "Country", "name": "الإمارات"},
+        {"@type": "Country", "name": "الكويت"},
+        {"@type": "Country", "name": "قطر"},
+        {"@type": "Country", "name": "البحرين"},
+        {"@type": "Country", "name": "عمان"}
+      ]
     }
     </script>
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        :root {
-            --primary: #FFB800;
-            --primary-dark: #FF9500;
-            --dark-bg: #0a0e27;
-            --dark-secondary: #1a1f3a;
-            --text-light: #e8edf5;
-            --text-muted: #a8b3c1;
-            --accent: #00d4aa;
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [{
+        "@type": "Question",
+        "name": "كم تستغرق مدة تصميم المتجر؟",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "تختلف المدة حسب حجم المتجر والميزات المطلوبة. عادةً نحتاج من 2-4 أسابيع للمتاجر المتوسطة، و4-8 أسابيع للمتاجر الكبيرة."
         }
-        html, body { font-family: 'Segoe UI', sans-serif; background: var(--dark-bg); color: var(--text-light); line-height: 1.6; }
-        header { position: fixed; top: 0; width: 100%; z-index: 1000; background: rgba(10, 14, 39, 0.95); backdrop-filter: blur(10px); border-bottom: 1px solid rgba(255, 184, 0, 0.1); padding: 1.2rem 2rem; }
-        .header-wrapper { max-width: 1400px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; gap: 2rem; }
-        .logo { font-size: 1.5rem; font-weight: 800; background: linear-gradient(135deg, var(--primary), var(--accent)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; text-decoration: none; }
-        nav { display: flex; gap: 3rem; list-style: none; flex: 1; justify-content: center; }
-        nav a { color: var(--text-light); text-decoration: none; font-weight: 500; }
-        nav a:hover { color: var(--primary); }
-        .cta-header { background: linear-gradient(135deg, var(--primary), var(--primary-dark)); color: #000; padding: 0.8rem 1.8rem; border-radius: 50px; text-decoration: none; font-weight: 600; white-space: nowrap; }
-        main { margin-top: 80px; }
-        .breadcrumb { padding: 1rem 2rem; background: rgba(255, 184, 0, 0.05); }
-        .breadcrumb-content { max-width: 1400px; margin: 0 auto; color: var(--text-muted); font-size: 0.9rem; }
-        .breadcrumb a { color: var(--primary); text-decoration: none; }
-        .hero { padding: 4rem 2rem; }
-        .hero-content { max-width: 1200px; margin: 0 auto; }
-        .hero h1 { font-size: clamp(2rem, 6vw, 3.5rem); margin-bottom: 1.5rem; background: linear-gradient(135deg, var(--primary), var(--accent)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-        .hero p { font-size: 1.1rem; color: var(--text-muted); margin-bottom: 2rem; }
-        .content-section { padding: 4rem 2rem; max-width: 1200px; margin: 0 auto; }
-        h2 { font-size: 2rem; margin-bottom: 2rem; border-right: 4px solid var(--primary); padding-right: 1rem; }
-        .features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; }
-        .feature-card { background: linear-gradient(135deg, rgba(255, 184, 0, 0.08), rgba(0, 212, 170, 0.05)); border: 2px solid rgba(255, 184, 0, 0.2); border-radius: 15px; padding: 2rem; }
-        .feature-card:hover { border-color: rgba(255, 184, 0, 0.5); transform: translateY(-10px); }
-        .feature-icon { font-size: 2.5rem; margin-bottom: 1rem; }
-        .feature-card h3 { font-size: 1.2rem; margin-bottom: 0.8rem; color: var(--primary); }
-        .feature-card p { color: var(--text-muted); font-size: 0.95rem; }
-        .cta-section { padding: 4rem 2rem; background: linear-gradient(135deg, rgba(255, 184, 0, 0.1), rgba(0, 212, 170, 0.05)); text-align: center; border-radius: 20px; margin-top: 4rem; }
-        .btn { display: inline-flex; align-items: center; gap: 0.5rem; padding: 1.1rem 2.5rem; background: linear-gradient(135deg, var(--primary), var(--primary-dark)); color: #000; text-decoration: none; border-radius: 50px; font-weight: 600; }
-        footer { background: var(--dark-secondary); border-top: 2px solid rgba(255, 184, 0, 0.1); padding: 3rem 2rem 1.5rem; margin-top: 4rem; }
-        .footer-grid { max-width: 1400px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 3rem; margin-bottom: 2rem; }
-        .footer-column h4 { color: var(--primary); margin-bottom: 1rem; }
-        .footer-column ul { list-style: none; }
-        .footer-column a { color: var(--text-muted); text-decoration: none; }
-        .footer-bottom { border-top: 1px solid rgba(255, 184, 0, 0.1); padding-top: 1.5rem; text-align: center; color: var(--text-muted); font-size: 0.85rem; }
+      }, {
+        "@type": "Question",
+        "name": "هل تقدمون الدعم الفني بعد التسليم؟",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "نعم، نقدم دعماً فنياً مجانياً لمدة شهر بعد التسليم، ثم يمكنك الاشتراك في باقات الصيانة الشهرية أو السنوية."
+        }
+      }]
+    }
+    </script>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #4CAF50;
+            --primary-dark: #388E3C;
+            --secondary: #FFC107;
+            --dark-bg: #1a1a1a;
+            --dark-secondary: #2c2c2c;
+            --text-light: #ffffff;
+            --text-muted: #b0b0b0;
+        }
+
+        html,
+        body {
+            font-family: 'Cairo', 'Segoe UI', sans-serif;
+            background: var(--dark-bg);
+            color: var(--text-light);
+            line-height: 1.8;
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            background: rgba(26, 26, 26, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(76, 175, 80, 0.2);
+            padding: 1rem 2rem;
+        }
+
+        .header-wrapper {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        nav {
+            display: flex;
+            gap: 2rem;
+        }
+
+        nav a {
+            color: var(--text-light);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--primary);
+        }
+
+        main {
+            margin-top: 80px;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 100px 20px 80px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 1.3em;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+
+        .btn {
+            display: inline-block;
+            background: var(--primary);
+            color: #fff;
+            padding: 15px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        section {
+            padding: 80px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        h2 {
+            font-size: 2.5em;
+            margin-bottom: 50px;
+            text-align: center;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .card {
+            background: var(--dark-secondary);
+            padding: 30px;
+            border-radius: 10px;
+            border: 2px solid transparent;
+            transition: all 0.3s;
+        }
+
+        .card:hover {
+            border-color: var(--primary);
+            transform: translateY(-5px);
+        }
+
+        .card h3 {
+            color: var(--primary);
+            margin-bottom: 15px;
+            font-size: 1.5em;
+        }
+
+        .faq-item {
+            background: var(--dark-secondary);
+            padding: 25px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            border-right: 4px solid var(--primary);
+        }
+
+        .faq-item h3 {
+            color: var(--primary);
+            margin-bottom: 10px;
+        }
+
+        footer {
+            background: var(--dark-secondary);
+            padding: 40px 20px;
+            text-align: center;
+            margin-top: 60px;
+        }
+
+        .whatsapp-float {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            z-index: 1000;
+        }
+
+        .whatsapp-float a {
+            background: #25D366;
+            color: #fff;
+            padding: 15px 25px;
+            border-radius: 50px;
+            text-decoration: none;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
     </style>
 </head>
+
 <body>
     <header>
         <div class="header-wrapper">
-            <a href="/arabsad/" class="logo">🌐 إعلانات العرب</a>
+            <a href="/arabsad/" class="logo">🛒 إعلانات العرب</a>
             <nav>
                 <a href="/arabsad/#services">الخدمات</a>
-                <a href="/arabsad/#contact">اتصل</a>
+                <a href="/arabsad/#contact">اتصل بنا</a>
             </nav>
-            <a href="https://wa.me/201110760081?text=%D8%B1%D9%8A%D8%AF%20%D9%85%D8%AA%D8%AC%D8%B1%20%D8%A7%D9%84%D9%83%D8%AA%D8%B1%D9%88%D9%86%D9%8A" target="_blank" class="cta-header">💬 استفسر</a>
         </div>
     </header>
+
     <main>
-        <div class="breadcrumb"><div class="breadcrumb-content"><a href="/arabsad/">الرئيسية</a> / متاجر إلكترونية</div></div>
         <section class="hero">
-            <div class="hero-content">
-                <h1>🛒 متاجر إلكترونية احترافية</h1>
-                <p>متاجر جاهزة للبيع مع جميع الميزات اللازمة لنجاح عملك</p>
-            </div>
+            <h1>🛒 متاجر إلكترونية احترافية</h1>
+            <p>نصمم متاجر إلكترونية عصرية جاهزة للمبيعات مع جميع الميزات</p>
+            <a href="#contact" class="btn">احصل على استشارة مجانية</a>
         </section>
-        <section class="content-section">
-            <h2>المميزات</h2>
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">⚡</div>
-                    <h3>سرعة عالية</h3>
-                    <p>متاجر سريعة التحميل وآمنة للدفع الإلكتروني</p>
+
+        <section>
+            <h2>⭐ مميزات متاجرنا الإلكترونية</h2>
+            <div class="grid">
+                <div class="card">
+                    <div style="font-size: 3em; margin-bottom: 15px;">⚡</div>
+                    <h3>سرعة فائقة</h3>
+                    <p>تحميل سريع للصفحات وأداء ممتاز على جميع الأجهزة</p>
                 </div>
-                <div class="feature-card">
-                    <div class="feature-icon">💳</div>
+                <div class="card">
+                    <div style="font-size: 3em; margin-bottom: 15px;">💳</div>
                     <h3>تكامل الدفع</h3>
-                    <p>ربط بجميع وسائل الدفع المحلية والعالمية</p>
+                    <p>ربط مع جميع بوابات الدفع المحلية والعالمية</p>
                 </div>
-                <div class="feature-card">
-                    <div class="feature-icon">📦</div>
+                <div class="card">
+                    <div style="font-size: 3em; margin-bottom: 15px;">📦</div>
                     <h3>إدارة الشحن</h3>
-                    <p>تكامل مع شركات الشحن الرئيسية لتسهيل العمليات</p>
+                    <p>تكامل مع شركات الشحن وتتبع الطلبات</p>
                 </div>
-                <div class="feature-card">
-                    <div class="feature-icon">📱</div>
-                    <h3>متجاوب</h3>
-                    <p>تصميم يعمل بشكل مثالي على جميع الأجهزة</p>
+                <div class="card">
+                    <div style="font-size: 3em; margin-bottom: 15px;">📱</div>
+                    <h3>تصميم متجاوب</h3>
+                    <p>يعمل بشكل مثالي على الهواتف والأجهزة اللوحية</p>
+                </div>
+                <div class="card">
+                    <div style="font-size: 3em; margin-bottom: 15px;">🔒</div>
+                    <h3>أمان عالي</h3>
+                    <p>شهادة SSL وحماية بيانات العملاء</p>
+                </div>
+                <div class="card">
+                    <div style="font-size: 3em; margin-bottom: 15px;">📊</div>
+                    <h3>لوحة تحكم سهلة</h3>
+                    <p>إدارة المنتجات والطلبات بسهولة تامة</p>
                 </div>
             </div>
         </section>
-        <section class="content-section cta-section">
-            <h2 style="border: none; padding: 0; margin-bottom: 1rem;">ابدأ متجرك الآن</h2>
-            <p>نحن هنا لمساعدتك في إطلاق متجرك الإلكتروني الاحترافي</p>
-            <a href="https://wa.me/201110760081?text=%D8%B1%D9%8A%D8%AF%20%D8%A8%D8%AF%D8%A1%20%D9%85%D8%AA%D8%AC%D8%B1" target="_blank" class="btn">💬 استفسر الآن</a>
+
+        <section style="background: var(--dark-secondary); border-radius: 15px; padding: 60px 40px;">
+            <h2>💼 باقات تصميم المتاجر</h2>
+            <div class="grid">
+                <div class="card"
+                    style="background: linear-gradient(135deg, rgba(76, 175, 80, 0.1), rgba(56, 142, 60, 0.05)); border: 2px solid var(--primary);">
+                    <h3>الباقة الأساسية</h3>
+                    <p style="font-size: 2em; color: var(--primary); margin: 20px 0;">$999</p>
+                    <ul style="list-style: none; line-height: 2.5;">
+                        <li>✅ تصميم حتى 50 منتج</li>
+                        <li>✅ تكامل دفع واحد</li>
+                        <li>✅ استضافة سنة</li>
+                        <li>✅ دعم فني شهر</li>
+                    </ul>
+                </div>
+                <div class="card"
+                    style="background: linear-gradient(135deg, rgba(76, 175, 80, 0.2), rgba(56, 142, 60, 0.1)); border: 3px solid var(--secondary); transform: scale(1.05);">
+                    <div
+                        style="background: var(--secondary); color: #000; padding: 5px 15px; border-radius: 20px; display: inline-block; margin-bottom: 10px;">
+                        الأكثر شعبية</div>
+                    <h3>الباقة الاحترافية</h3>
+                    <p style="font-size: 2em; color: var(--secondary); margin: 20px 0;">$1,999</p>
+                    <ul style="list-style: none; line-height: 2.5;">
+                        <li>✅ تصميم حتى 200 منتج</li>
+                        <li>✅ تكامل دفع متعدد</li>
+                        <li>✅ استضافة سنتين</li>
+                        <li>✅ تطبيق جوال</li>
+                        <li>✅ دعم فني 3 أشهر</li>
+                    </ul>
+                </div>
+                <div class="card"
+                    style="background: linear-gradient(135deg, rgba(76, 175, 80, 0.1), rgba(56, 142, 60, 0.05)); border: 2px solid var(--primary);">
+                    <h3>باقة المؤسسات</h3>
+                    <p style="font-size: 2em; color: var(--primary); margin: 20px 0;">حسب الطلب</p>
+                    <ul style="list-style: none; line-height: 2.5;">
+                        <li>✅ منتجات غير محدودة</li>
+                        <li>✅ ميزات متقدمة</li>
+                        <li>✅ تطبيق iOS & Android</li>
+                        <li>✅ SEO متقدم</li>
+                        <li>✅ دعم فني مفتوح</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>❓ الأسئلة الشائعة</h2>
+            <div>
+                <div class="faq-item">
+                    <h3>كم تستغرق مدة تصميم المتجر؟</h3>
+                    <p>تختلف المدة حسب حجم المتجر والميزات المطلوبة. عادةً نحتاج من 2-4 أسابيع للمتاجر المتوسطة، و4-8
+                        أسابيع للمتاجر الكبيرة.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>هل تقدمون الدعم الفني بعد التسليم؟</h3>
+                    <p>نعم، نقدم دعماً فنياً مجانياً لمدة شهر بعد التسليم، ثم يمكنك الاشتراك في باقات الصيانة الشهرية أو
+                        السنوية.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>هل يمكن ربط المتجر مع بوابات الدفع العربية؟</h3>
+                    <p>بالتأكيد! نوفر التكامل مع جميع بوابات الدفع الشهيرة مثل Payfort، تاب، Paymob، وغيرها من البوابات
+                        المحلية والعالمية.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>هل المتجر متوافق مع محركات البحث (SEO)؟</h3>
+                    <p>نعم، جميع متاجرنا مبنية وفق أفضل ممارسات SEO مع إمكانية إضافة باقات تحسين متقدم إذا كنت بحاجة
+                        لنتائج أفضل.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>هل يمكن إضافة ميزات إضافية لاحقاً؟</h3>
+                    <p>نعم، المتجر قابل للتوسع وإضافة ميزات جديدة في أي وقت حسب احتياجاتك المستقبلية.</p>
+                </div>
+            </div>
         </section>
     </main>
+
     <footer>
-        <div class="footer-grid">
-            <div class="footer-column">
-                <h4>الخدمات</h4>
-                <ul>
-                    <li><a href="/arabsad/services/ecommerce.html" target="_blank">متاجر</a></li>
-                    <li><a href="/arabsad/services/google-ads.html" target="_blank">إعلانات</a></li>
-                </ul>
-            </div>
-            <div class="footer-column">
-                <h4>اتصل</h4>
-                <ul>
-                    <li><a href="https://wa.me/201110760081" target="_blank">💬 WhatsApp</a></li>
-                </ul>
-            </div>
-        </div>
-        <div class="footer-bottom"><p>&copy; 2025 إعلانات العرب</p></div>
+        <p>&copy; 2026 مؤسسة إعلانات العرب - جميع الحقوق محفوظة</p>
+        <p style="margin-top: 10px;">📞 +201110760081 | 📧 info@arabsad.com</p>
     </footer>
-    <script src="/arabsad/js/bfcache-fix.js"></script>
+
+    <!-- Floating WhatsApp Button -->
+    <div class="whatsapp-float">
+        <a href="#" id="whatsappBtn" target="_blank">
+            <span style="font-size: 1.5em;">💬</span>
+            <span>تحدث معنا</span>
+        </a>
+    </div>
+
+    <!-- Dynamic WhatsApp Script -->
+    <script>
+        // Get current page info
+        const currentPageUrl = window.location.href;
+        const serviceName = document.querySelector('h1')?.textContent.trim() || 'خدمة من مؤسسة إعلانات العرب';
+
+        // Create WhatsApp message
+        const whatsappMessage = `مرحباً، أريد الاستفسار عن: ${serviceName}
+
+رابط الصفحة: ${currentPageUrl}`;
+
+        // Update all WhatsApp links
+        const phone = '201110760081';
+        const encodedMessage = encodeURIComponent(whatsappMessage);
+        const whatsappUrl = `https://wa.me/${phone}?text=${encodedMessage}`;
+
+        // Update floating button
+        document.getElementById('whatsappBtn').href = whatsappUrl;
+
+        // Update any other WhatsApp links on the page
+        document.querySelectorAll('a[href*="wa.me"]').forEach(link => {
+            if (!link.id) { // Don't update the floating button again
+                link.href = whatsappUrl;
+            }
+        });
+    </script>
 </body>
+
 </html>
