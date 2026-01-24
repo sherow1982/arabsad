@@ -72,6 +72,20 @@
     <priority>0.8</priority>
   </url>
   
+  <url>
+    <loc>https://sherow1982.github.io/arabsad/services/contracting-services.html</loc>
+    <lastmod>2026-01-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://sherow1982.github.io/arabsad/services/gulf-cities.html</loc>
+    <lastmod>2026-01-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
   <!-- صفحات الدول -->
   <url>
     <loc>https://sherow1982.github.io/arabsad/sa.html</loc>
