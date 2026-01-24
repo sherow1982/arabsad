@@ -1,0 +1,30 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+# TEAM
+
+    Developer: Sherow Ahmed
+    Contact: sherow1982 [at] gmail.com
+    Twitter: @sherow1982
+    From: Egypt
+
+# THANKS
+
+    GitHub Pages for hosting
+    Google Fonts for typography
+    Font Awesome for icons
+
+# TECHNOLOGY COLOPHON
+
+    HTML5, CSS3, JavaScript
+    Progressive Web App (PWA)
+    Service Worker
+    GitHub Pages
+    Git version control
+
+# SITE
+
+    Last update: 2026/01/23
+    Language: Arabic / العربية
+    Doctype: HTML5
+    IDE: Visual Studio Code

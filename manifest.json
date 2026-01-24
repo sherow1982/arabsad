@@ -4,7 +4,7 @@
   "description": "وكالة متخصصة في التسويق الرقمي وإعلانات جوجل والسوشيال وتصميم المواقع والمتاجر.",
   "lang": "ar",
   "dir": "rtl",
-  "start_url": "/index.html",
+  "start_url": "/arabsad/index.html",
   "display": "standalone",
   "background_color": "#0f2027",
   "theme_color": "#26de81",
@@ -32,31 +32,31 @@
     {
       "name": "Google Ads",
       "short_name": "Google Ads",
-      "url": "/services/google-ads.html",
+      "url": "/arabsad/services/google-ads.html",
       "description": "خدمة Google Ads رقم 1"
     },
     {
       "name": "SEO",
       "short_name": "SEO",
-      "url": "/services/seo.html",
+      "url": "/arabsad/services/seo.html",
       "description": "خدمات تحسين السيو"
     },
     {
       "name": "Website Design",
       "short_name": "Website Design",
-      "url": "/services/website-design.html",
+      "url": "/arabsad/services/website-design.html",
       "description": "تصميم وبرمجة مواقع سريعة"
     },
     {
       "name": "Ecommerce",
       "short_name": "Ecommerce",
-      "url": "/services/ecommerce.html",
+      "url": "/arabsad/services/ecommerce.html",
       "description": "تصميم متاجر إلكترونية عالية التحويل"
     },
     {
       "name": "Social Media Management",
       "short_name": "Social Media",
-      "url": "/services/social-management.html",
+      "url": "/arabsad/services/social-management.html",
       "description": "إدارة تواصل احترافية"
     }
   ]
