@@ -93,30 +93,30 @@ function buildPageCards(category) {
 }
 
 /**
- * تبديل عرض قائمة الجوال - نسخة معاد كتابتها بالكامل
+ * تبديل عرض قائمة الجوال - نسخة محسنة ومضمونة
  */
-function toggleMobileNav() {
+window.toggleMobileNav = function() {
     const navMenu = document.getElementById('navMenu');
     const toggleBtn = document.getElementById('mobileToggle');
     const overlay = document.getElementById('menuOverlay');
     const body = document.body;
     
-    if (!navMenu || !toggleBtn || !overlay) {
-        console.warn('عناصر القائمة غير موجودة في الصفحة');
-        return;
-    }
+    if (!navMenu) return;
+
+    const isActive = navMenu.classList.contains('active');
     
-    navMenu.classList.toggle('active');
-    toggleBtn.classList.toggle('active');
-    overlay.classList.toggle('active');
-    
-    // منع التمرير في الخلفية
-    if (navMenu.classList.contains('active')) {
-        body.style.overflow = 'hidden';
-    } else {
+    if (isActive) {
+        navMenu.classList.remove('active');
+        if (toggleBtn) toggleBtn.classList.remove('active');
+        if (overlay) overlay.classList.remove('active');
         body.style.overflow = '';
+    } else {
+        navMenu.classList.add('active');
+        if (toggleBtn) toggleBtn.classList.add('active');
+        if (overlay) overlay.classList.add('active');
+        body.style.overflow = 'hidden';
     }
-}
+};
 
 /**
  * بحث في الصفحات

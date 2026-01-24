@@ -525,6 +525,35 @@
     </a>
   </div>
 
+    <!-- Floating Quote Button -->
+    <a href="https://wa.me/201110760081?text=مرحباً، أرغب في طلب عرض سعر لخدمات المقاولات" target="_blank" class="quote-float-btn">
+        <i class="fas fa-file-invoice-dollar"></i>
+        <span>طلب عرض سعر</span>
+    </a>
+    <style>
+        .quote-float-btn {
+            position: fixed;
+            bottom: 100px;
+            left: 30px;
+            background: linear-gradient(135deg, #f6b93b, #e1b12c);
+            color: #000;
+            padding: 12px 25px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 800;
+            box-shadow: 0 4px 20px rgba(246, 185, 59, 0.4);
+            z-index: 99990;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            transition: all 0.3s ease;
+            border: 2px solid rgba(255,255,255,0.2);
+            font-family: 'Cairo', sans-serif;
+        }
+        .quote-float-btn:hover { transform: translateY(-5px); background: #fff; color: #f6b93b; box-shadow: 0 8px 25px rgba(255,255,255,0.2); }
+        @media (max-width: 768px) { .quote-float-btn { bottom: 95px; left: 20px; padding: 10px 20px; font-size: 0.9rem; } }
+    </style>
+
   <script>
     const currentPageUrl = window.location.href;
     const pageTitle = document.title;
