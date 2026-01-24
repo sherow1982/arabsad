@@ -259,7 +259,10 @@
                 try {
                     const file = el.getAttribute('data-include');
                     const response = await fetch('/arabsad/' + file);
-                    if (response.ok) el.innerHTML = await response.text();
+                    if (response.ok) {
+                        el.innerHTML = await response.text();
+                        if (file.includes('header') && typeof initMobileDropdowns === 'function') initMobileDropdowns();
+                    }
                 } catch (e) { console.log(e); }
             });
         });

@@ -269,6 +269,8 @@
 </head>
 
 <body>
+    <div data-include="shared-header.html"></div>
+    
     <div class="container">
         <article>
             <header class="country-header">
@@ -468,5 +470,21 @@
             </section>
         </article>
     </div>
-</body>
+    
+    <div data-include="shared-footer.html"></div>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelectorAll('[data-include]').forEach(async function(el) {
+                try {
+                    const file = el.getAttribute('data-include');
+                    const response = await fetch('/arabsad/' + file);
+                    if (response.ok) {
+                        el.innerHTML = await response.text();
+                        if (file.includes('header') && typeof initMobileDropdowns === 'function') initMobileDropdowns();
+                    }
+                } catch (e) { console.log(e); }
+            });
+        });
+    </script>
 </html>
