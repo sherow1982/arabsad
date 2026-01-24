@@ -275,38 +275,38 @@
 </head>
 <body>
 <div class="reading-progress" id="progress"></div>
-<header class="header"><nav class="nav"><div class="container"><a href="index.html" class="nav-brand">إعلانات العرب</a></div></nav></header>
+<header class="header"><nav class="nav"><div class="container"><a href="/arabsad/index.html" class="nav-brand">إعلانات العرب</a></div></nav></header>
 <main class="container">
 <h1 style="text-align: center; margin: 2rem 0; font-size: 3rem;">💼 جميع خدماتنا الاحترافية</h1>
 <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:2rem;margin:3rem 0">
   <div style="background: linear-gradient(135deg, #4285f4, #34a853); color: white; padding: 2rem; border-radius: 20px; text-align: center; transition: transform 0.3s ease;" onmouseover="this.style.transform='translateY(-8px)'" onmouseout="this.style.transform='translateY(0)'">
     <h3 style="margin-bottom: 1rem; font-size: 1.5rem;">🎯 Google Ads</h3>
     <p style="margin-bottom: 1.5rem;">حملات إعلانية احترافية على شبكة جوجل</p>
-    <a class="btn btn-primary" href="google-ads-service.html" style="background: rgba(255,255,255,0.2); color: white; border: 2px solid white;">تفاصيل الخدمة</a>
+    <a class="btn btn-primary" href="/arabsad/services/google-ads.html" style="background: rgba(255,255,255,0.2); color: white; border: 2px solid white;">تفاصيل الخدمة</a>
   </div>
   
   <div style="background: linear-gradient(135deg, #667eea, #764ba2); color: white; padding: 2rem; border-radius: 20px; text-align: center; transition: transform 0.3s ease;" onmouseover="this.style.transform='translateY(-8px)'" onmouseout="this.style.transform='translateY(0)'">
     <h3 style="margin-bottom: 1rem; font-size: 1.5rem;">🔍 خدمة SEO</h3>
     <p style="margin-bottom: 1.5rem;">تحسين محركات البحث للمواقع العربية</p>
-    <a class="btn btn-primary" href="seo-service.html" style="background: rgba(255,255,255,0.2); color: white; border: 2px solid white;">تفاصيل الخدمة</a>
+    <a class="btn btn-primary" href="/arabsad/services/seo.html" style="background: rgba(255,255,255,0.2); color: white; border: 2px solid white;">تفاصيل الخدمة</a>
   </div>
   
   <div style="background: linear-gradient(135deg, #ff6b6b, #ee5a52); color: white; padding: 2rem; border-radius: 20px; text-align: center; transition: transform 0.3s ease;" onmouseover="this.style.transform='translateY(-8px)'" onmouseout="this.style.transform='translateY(0)'">
     <h3 style="margin-bottom: 1rem; font-size: 1.5rem;">📱 إعلانات اجتماعية</h3>
     <p style="margin-bottom: 1.5rem;">فيسبوك، إنستجرام، تيك توك، سناب شات</p>
-    <a class="btn btn-primary" href="social-media-service.html" style="background: rgba(255,255,255,0.2); color: white; border: 2px solid white;">تفاصيل الخدمة</a>
+    <a class="btn btn-primary" href="/arabsad/services/social-media-ads.html" style="background: rgba(255,255,255,0.2); color: white; border: 2px solid white;">تفاصيل الخدمة</a>
   </div>
   
   <div style="background: linear-gradient(135deg, #f093fb, #f5576c); color: white; padding: 2rem; border-radius: 20px; text-align: center; transition: transform 0.3s ease;" onmouseover="this.style.transform='translateY(-8px)'" onmouseout="this.style.transform='translateY(0)'">
     <h3 style="margin-bottom: 1rem; font-size: 1.5rem;">🛍️ متاجر إلكترونية</h3>
     <p style="margin-bottom: 1.5rem;">تصميم وإعداد متاجر عصرية سريعة</p>
-    <a class="btn btn-primary" href="ecommerce-service.html" style="background: rgba(255,255,255,0.2); color: white; border: 2px solid white;">تفاصيل الخدمة</a>
+    <a class="btn btn-primary" href="/arabsad/services/ecommerce.html" style="background: rgba(255,255,255,0.2); color: white; border: 2px solid white;">تفاصيل الخدمة</a>
   </div>
   
   <div style="background: linear-gradient(135deg, #ffd89b, #19547b); color: white; padding: 2rem; border-radius: 20px; text-align: center; transition: transform 0.3s ease;" onmouseover="this.style.transform='translateY(-8px)'" onmouseout="this.style.transform='translateY(0)'">
     <h3 style="margin-bottom: 1rem; font-size: 1.5rem;">📰 مدونتنا</h3>
     <p style="margin-bottom: 1.5rem;">مقالات ونصائح تسويقية متخصصة</p>
-    <a class="btn btn-primary" href="blog/index.html" target="_blank" style="background: rgba(255,255,255,0.2); color: white; border: 2px solid white;">اقرأ المدونة</a>
+    <a class="btn btn-primary" href="/arabsad/blog/index.html" target="_blank" style="background: rgba(255,255,255,0.2); color: white; border: 2px solid white;">اقرأ المدونة</a>
   </div>
   
   <div style="background: linear-gradient(135deg, #a8edea, #fed6e3); color: #2d3748; padding: 2rem; border-radius: 20px; text-align: center; transition: transform 0.3s ease;" onmouseover="this.style.transform='translateY(-8px)'" onmouseout="this.style.transform='translateY(0)'">
@@ -347,11 +347,11 @@
 <!-- تحميل الهيدر والفوتر ديناميكياً -->
 <script>
 document.addEventListener('DOMContentLoaded', function() {
-    fetch('./shared-header.html')
+    fetch('/arabsad/shared-header.html')
         .then(r => r.ok ? r.text() : '')
         .then(html => { if (html) document.body.insertAdjacentHTML('afterbegin', html); });
     
-    fetch('./shared-footer.html')
+    fetch('/arabsad/shared-footer.html')
         .then(r => r.ok ? r.text() : '')
         .then(html => { if (html) {
             const currentFooter = document.querySelector('.footer');
@@ -362,7 +362,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         }});
     
-    fetch('./whatsapp-button.html')
+    fetch('/arabsad/whatsapp-button.html')
         .then(r => r.ok ? r.text() : '')
         .then(html => { if (html) document.body.insertAdjacentHTML('beforeend', html); });
 });
