@@ -54,45 +54,132 @@
   
   <!-- صفحات الدول -->
   <url>
-    <loc>https://sherow1982.github.io/arabsad/countries/sa.html</loc>
+    <loc>https://sherow1982.github.io/arabsad/sa.html</loc>
     <lastmod>2026-01-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
-    <loc>https://sherow1982.github.io/arabsad/countries/ae.html</loc>
+    <loc>https://sherow1982.github.io/arabsad/ae.html</loc>
     <lastmod>2026-01-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
-    <loc>https://sherow1982.github.io/arabsad/countries/kw.html</loc>
+    <loc>https://sherow1982.github.io/arabsad/kw.html</loc>
     <lastmod>2026-01-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
-    <loc>https://sherow1982.github.io/arabsad/countries/qa.html</loc>
+    <loc>https://sherow1982.github.io/arabsad/qa.html</loc>
     <lastmod>2026-01-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
-    <loc>https://sherow1982.github.io/arabsad/countries/bh.html</loc>
+    <loc>https://sherow1982.github.io/arabsad/bh.html</loc>
     <lastmod>2026-01-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
-    <loc>https://sherow1982.github.io/arabsad/countries/om.html</loc>
+    <loc>https://sherow1982.github.io/arabsad/om.html</loc>
     <lastmod>2026-01-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+  </url>
+  
+  <!-- صفحات المدن -->
+  <url>
+    <loc>https://sherow1982.github.io/arabsad/cities/riyadh-google-ads.html</loc>
+    <lastmod>2026-01-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://sherow1982.github.io/arabsad/cities/jeddah-google-ads.html</loc>
+    <lastmod>2026-01-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://sherow1982.github.io/arabsad/cities/dammam-google-ads.html</loc>
+    <lastmod>2026-01-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://sherow1982.github.io/arabsad/cities/dubai-digital-marketing.html</loc>
+    <lastmod>2026-01-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://sherow1982.github.io/arabsad/cities/abudhabi-digital-marketing.html</loc>
+    <lastmod>2026-01-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://sherow1982.github.io/arabsad/cities/kuwait-digital-marketing.html</loc>
+    <lastmod>2026-01-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://sherow1982.github.io/arabsad/cities/doha-digital-marketing.html</loc>
+    <lastmod>2026-01-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://sherow1982.github.io/arabsad/cities/manama-digital-marketing.html</loc>
+    <lastmod>2026-01-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <!-- المدونة -->
+  <url>
+    <loc>https://sherow1982.github.io/arabsad/blog/</loc>
+    <lastmod>2026-01-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- صفحات أساسية -->
+  <url>
+    <loc>https://sherow1982.github.io/arabsad/about.html</loc>
+    <lastmod>2026-01-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://sherow1982.github.io/arabsad/contact.html</loc>
+    <lastmod>2026-01-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://sherow1982.github.io/arabsad/legal.html</loc>
+    <lastmod>2026-01-23</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
   </url>
   
 </urlset>

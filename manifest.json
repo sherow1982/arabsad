@@ -1,63 +1,72 @@
 {
   "name": "مؤسسة إعلانات العرب للتسويق الرقمي",
   "short_name": "إعلانات العرب",
-  "description": "وكالة متخصصة في التسويق الرقمي وإعلانات جوجل والسوشيال وتصميم المواقع والمتاجر.",
+  "description": "وكالة متخصصة في التسويق الرقمي وإعلانات جوجل والسوشيال وتصميم المواقع والمتاجر في دول الخليج العربي.",
   "lang": "ar",
   "dir": "rtl",
-  "start_url": "/arabsad/index.html",
+  "start_url": "/arabsad/",
+  "scope": "/arabsad/",
   "display": "standalone",
   "background_color": "#0f2027",
   "theme_color": "#26de81",
+  "orientation": "portrait-primary",
+  "categories": ["business", "marketing", "productivity"],
   "icons": [
     {
-      "src": "/favicon.ico",
+      "src": "/arabsad/favicon.ico",
       "sizes": "48x48",
       "type": "image/x-icon"
     },
     {
-      "src": "/favicon.svg",
+      "src": "/arabsad/favicon.svg",
       "sizes": "any",
       "type": "image/svg+xml",
       "purpose": "any maskable"
     },
     {
-      "src": "/apple-touch-icon.png",
+      "src": "/arabsad/apple-touch-icon.png",
       "sizes": "180x180",
       "type": "image/png"
+    },
+    {
+      "src": "/arabsad/assets/images/logo.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
     }
   ],
-  "orientation": "portrait-primary",
-  "categories": ["business", "marketing", "productivity"],
   "shortcuts": [
     {
       "name": "Google Ads",
       "short_name": "Google Ads",
       "url": "/arabsad/services/google-ads.html",
-      "description": "خدمة Google Ads رقم 1"
+      "description": "خدمة Google Ads رقم 1 في الخليج"
     },
     {
       "name": "SEO",
       "short_name": "SEO",
       "url": "/arabsad/services/seo.html",
-      "description": "خدمات تحسين السيو"
+      "description": "خدمات تحسين محركات البحث"
     },
     {
-      "name": "Website Design",
-      "short_name": "Website Design",
+      "name": "تصميم المواقع",
+      "short_name": "تصميم المواقع",
       "url": "/arabsad/services/website-design.html",
-      "description": "تصميم وبرمجة مواقع سريعة"
+      "description": "تصميم وبرمجة مواقع سريعة ومتجاوبة"
     },
     {
-      "name": "Ecommerce",
-      "short_name": "Ecommerce",
+      "name": "المتاجر الإلكترونية",
+      "short_name": "المتاجر",
       "url": "/arabsad/services/ecommerce.html",
       "description": "تصميم متاجر إلكترونية عالية التحويل"
     },
     {
-      "name": "Social Media Management",
-      "short_name": "Social Media",
+      "name": "إدارة السوشيال",
+      "short_name": "السوشيال",
       "url": "/arabsad/services/social-management.html",
-      "description": "إدارة تواصل احترافية"
+      "description": "إدارة وسائل التواصل الاجتماعي"
     }
-  ]
+  ],
+  "related_applications": [],
+  "prefer_related_applications": false
 }
