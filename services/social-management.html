@@ -357,19 +357,7 @@
 </head>
 
 <body>
-    <header>
-        <div class="container header-wrapper">
-            <a href="/arabsad/" class="logo">🎯 إعلانات العرب</a>
-            <nav>
-                <a href="/arabsad/">الرئيسية</a>
-                <a href="/arabsad/services/">الخدمات</a>
-                <a href="/arabsad/about.html">عنا</a>
-                <a href="/arabsad/#contact">اتصل بنا</a>
-            </nav>
-            <a href="https://wa.me/201110760081" class="btn cta-nav-wa"
-                style="padding: 10px 25px; font-size: 0.9rem;">ابدأ الآن</a>
-        </div>
-    </header>
+    <div data-include="shared-header.html"></div>
 
     <main>
         <section class="hero">
@@ -528,34 +516,7 @@
         </section>
     </main>
 
-    <footer>
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-col" style="flex: 1.5;">
-                    <h4 style="font-size: 1.5rem; color: var(--primary);">🎯 إعلانات العرب</h4>
-                    <p style="color: var(--text-muted);">نحن شريكك الموثوق لبناء حضور رقمي قوي ومربح في سوق الشرق
-                        الأوسط.</p>
-                </div>
-                <div class="footer-col">
-                    <h4>الخدمات</h4>
-                    <a href="social-ads.html">إعلانات السوشيال</a>
-                    <a href="google-ads.html">إعلانات جوجل</a>
-                    <a href="ecommerce.html">المتاجر الإلكترونية</a>
-                    <a href="seo.html">تحسين السيو</a>
-                </div>
-                <div class="footer-col">
-                    <h4>تواصل معنا</h4>
-                    <span style="color: var(--text-muted); display: block; margin-bottom: 12px;">☎ +201110760081</span>
-                    <span style="color: var(--text-muted); display: block; margin-bottom: 12px;">📧
-                        sherow1982@gmail.com</span>
-                    <span style="color: var(--text-muted); display: block;">📍 القاهرة، شارع التحرير</span>
-                </div>
-            </div>
-            <p
-                style="text-align: center; margin-top: 60px; color: var(--text-muted); border-top: 1px solid rgba(255,255,255,0.05); padding-top: 30px;">
-                &copy; 2026 مؤسسة إعلانات العرب. جميع الحقوق محفوظة.</p>
-        </div>
-    </footer>
+    <div data-include="shared-footer.html"></div>
 
     <!-- Chatbot -->
     <script src="../assets/js/chatbot-config.js"></script>
@@ -598,6 +559,17 @@
     </style>
 
     <script>
+        // Load Shared Header/Footer
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelectorAll('[data-include]').forEach(async function(el) {
+                try {
+                    const file = el.getAttribute('data-include');
+                    const response = await fetch('/arabsad/' + file);
+                    if (response.ok) el.innerHTML = await response.text();
+                } catch (e) { console.log(e); }
+            });
+        });
+
         const currentPageUrl = window.location.href;
         const pageTitle = document.title;
         const whatsappMessage = `مرحباً، أريد الاستفسار عن خدمات إدارة السوشيال ميديا

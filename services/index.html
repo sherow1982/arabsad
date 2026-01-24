@@ -491,19 +491,7 @@
 </head>
 
 <body>
-    <header>
-        <div class="container header-wrapper">
-            <a href="/arabsad/" class="logo">🎯 إعلانات العرب</a>
-            <nav>
-                <a href="/arabsad/">الرئيسية</a>
-                <a href="/arabsad/services/">كتالوج الخدمات</a>
-                <a href="/arabsad/about.html">عنا</a>
-                <a href="/arabsad/#contact">اتصل بنا</a>
-            </nav>
-            <a href="https://wa.me/201110760081" id="navWa" class="btn"
-                style="padding: 10px 25px; font-size: 0.9rem;">تواصل سريع</a>
-        </div>
-    </header>
+    <div data-include="shared-header.html"></div>
 
     <main>
         <!-- Hero Section -->
@@ -704,49 +692,7 @@
         </section>
     </main>
 
-    <footer>
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-col">
-                    <h4>عن المؤسسة</h4>
-                    <p style="color: var(--text-muted);">مؤسسة إعلانات العرب هي شريكك الرقمي للنمو في الشرق الأوسط.
-                        شغفنا هو تحويل الشركات العادية إلى علامات تجارية رائدة.</p>
-                </div>
-                <div class="footer-col">
-                    <h4>الخدمات الأكثر طلباً</h4>
-                    <ul>
-                        <li><a href="/arabsad/services/google-ads.html">إعلانات جوجل</a></li>
-                        <li><a href="/arabsad/services/ecommerce.html">تصميم المتاجر</a></li>
-                        <li><a href="/arabsad/services/seo.html">تحسين السيو</a></li>
-                        <li><a href="/arabsad/services/social-media-ads.html">إعلانات المنصات</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h4>روابط هامة</h4>
-                    <ul>
-                        <li><a href="/arabsad/">الرئيسية</a></li>
-                        <li><a href="/arabsad/#about">عنا</a></li>
-                        <li><a href="/arabsad/#faq">الأسئلة الشائعة</a></li>
-                        <li><a href="/arabsad/#contact">اتصل بنا</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h4>تواصل معنا</h4>
-                    <ul>
-                        <li><a href="tel:+201110760081">☎ +201110760081</a></li>
-                        <li><a href="mailto:info@arabsad.com">📧 info@arabsad.com</a></li>
-                        <li>
-                            <p style="color: var(--text-muted);">📍 القاهرة، شارع التحرير</p>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <div
-                style="text-align: center; border-top: 1px solid rgba(255, 255, 255, 0.05); padding-top: 30px; color: var(--text-muted); font-size: 0.9rem;">
-                <p>&copy; 2026 مؤسسة إعلانات العرب. جميع الحقوق محفوظة.</p>
-            </div>
-        </div>
-    </footer>
+    <div data-include="shared-footer.html"></div>
 
     <!-- WhatsApp Floating Button -->
     <div class="whatsapp-float">
@@ -756,8 +702,18 @@
         </a>
     </div>
 
-    <!-- Dynamic WhatsApp Script -->
     <script>
+        // Load Shared Header/Footer
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelectorAll('[data-include]').forEach(async function(el) {
+                try {
+                    const file = el.getAttribute('data-include');
+                    const response = await fetch('/arabsad/' + file);
+                    if (response.ok) el.innerHTML = await response.text();
+                } catch (e) { console.log(e); }
+            });
+        });
+
         const currentPageUrl = window.location.href;
         const pageTitle = document.title;
 
