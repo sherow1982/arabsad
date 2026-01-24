@@ -232,7 +232,7 @@ class InternalLinkingSystem {
 
     generateBreadcrumbs() {
         const path = window.location.pathname;
-        const breadcrumbs = [{ title: 'الرئيسية', url: '/arabsad/' }];
+        const breadcrumbs = [];
 
         if (path.includes('/services/')) {
             breadcrumbs.push({ title: 'الخدمات', url: '/arabsad/services/' });
