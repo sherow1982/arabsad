@@ -1,0 +1,210 @@
+{
+  "siteStructure": {
+    "domain": "https://sherow1982.github.io/arabsad",
+    "lastUpdated": "2026-01-23",
+    "totalPages": 45,
+    "linkingStrategy": "contextual-semantic"
+  },
+  
+  "linkCategories": {
+    "services": {
+      "priority": 10,
+      "pages": {
+        "google-ads": {
+          "url": "/services/google-ads.html",
+          "title": "خدمات إعلانات جوجل - Google Ads",
+          "keywords": ["جوجل ادز", "google ads", "إعلانات جوجل", "حملات البحث", "إعلانات مدفوعة", "PPC", "CPC"],
+          "relatedServices": ["seo", "social-media-ads", "website-design"],
+          "targetCountries": ["saudi", "uae", "kuwait", "qatar", "bahrain", "oman"],
+          "linkDensity": "high"
+        },
+        "seo": {
+          "url": "/services/seo.html",
+          "title": "خدمات تحسين محركات البحث SEO",
+          "keywords": ["سيو", "seo", "تحسين محركات البحث", "ترتيب المواقع", "تصدر نتائج البحث", "أرشفة"],
+          "relatedServices": ["google-ads", "website-design", "ecommerce"],
+          "targetCountries": ["saudi", "uae", "kuwait", "qatar", "bahrain", "oman"],
+          "linkDensity": "high"
+        },
+        "social-media-ads": {
+          "url": "/services/social-media-ads.html",
+          "title": "إعلانات وسائل التواصل الاجتماعي",
+          "keywords": ["فيسبوك ادز", "انستجرام ادز", "سناب شات ادز", "تيك توك ادز", "إعلانات السوشيال ميديا", "facebook ads", "instagram ads"],
+          "relatedServices": ["google-ads", "social-management", "website-design"],
+          "targetCountries": ["saudi", "uae", "kuwait", "qatar"],
+          "linkDensity": "medium"
+        },
+        "website-design": {
+          "url": "/services/website-design.html",
+          "title": "تصميم وتطوير المواقع الإلكترونية",
+          "keywords": ["تصميم مواقع", "تطوير مواقع", "مواقع متجاوبة", "تصميم ويب", "برمجة مواقع"],
+          "relatedServices": ["seo", "ecommerce", "google-ads"],
+          "targetCountries": ["saudi", "uae", "bahrain", "oman"],
+          "linkDensity": "medium"
+        },
+        "ecommerce": {
+          "url": "/services/ecommerce.html",
+          "title": "تصميم المتاجر الإلكترونية",
+          "keywords": ["متجر إلكتروني", "تجارة إلكترونية", "متاجر أونلاين", "ecommerce", "تسوق إلكتروني"],
+          "relatedServices": ["seo", "google-ads", "website-design"],
+          "targetCountries": ["saudi", "uae", "kuwait", "qatar"],
+          "linkDensity": "medium"
+        }
+      }
+    },
+    
+    "countries": {
+      "priority": 9,
+      "pages": {
+        "saudi": {
+          "url": "/sa.html",
+          "title": "خدمات التسويق الرقمي في السعودية",
+          "keywords": ["السعودية", "المملكة العربية السعودية", "تسويق رقمي السعودية", "إعلانات السعودية"],
+          "cities": ["riyadh", "jeddah", "dammam"],
+          "primaryServices": ["google-ads", "seo", "social-media-ads"],
+          "linkDensity": "high"
+        },
+        "uae": {
+          "url": "/ae.html",
+          "title": "خدمات التسويق الرقمي في الإمارات",
+          "keywords": ["الإمارات", "دولة الإمارات", "تسويق رقمي الإمارات", "إعلانات الإمارات"],
+          "cities": ["dubai", "abudhabi"],
+          "primaryServices": ["google-ads", "social-media-ads", "website-design"],
+          "linkDensity": "high"
+        },
+        "kuwait": {
+          "url": "/kw.html",
+          "title": "خدمات التسويق الرقمي في الكويت",
+          "keywords": ["الكويت", "دولة الكويت", "تسويق رقمي الكويت", "إعلانات الكويت"],
+          "cities": ["kuwait-city"],
+          "primaryServices": ["social-media-ads", "website-design", "seo"],
+          "linkDensity": "medium"
+        },
+        "qatar": {
+          "url": "/qa.html",
+          "title": "خدمات التسويق الرقمي في قطر",
+          "keywords": ["قطر", "دولة قطر", "تسويق رقمي قطر", "إعلانات قطر"],
+          "cities": ["doha"],
+          "primaryServices": ["google-ads", "seo", "ecommerce"],
+          "linkDensity": "medium"
+        },
+        "bahrain": {
+          "url": "/bh.html",
+          "title": "خدمات التسويق الرقمي في البحرين",
+          "keywords": ["البحرين", "مملكة البحرين", "تسويق رقمي البحرين", "إعلانات البحرين"],
+          "cities": ["manama"],
+          "primaryServices": ["website-design", "ecommerce", "seo"],
+          "linkDensity": "medium"
+        },
+        "oman": {
+          "url": "/om.html",
+          "title": "خدمات التسويق الرقمي في عمان",
+          "keywords": ["عمان", "سلطنة عمان", "تسويق رقمي عمان", "إعلانات عمان"],
+          "cities": ["muscat"],
+          "primaryServices": ["seo", "social-media-ads", "google-ads"],
+          "linkDensity": "medium"
+        }
+      }
+    },
+    
+    "cities": {
+      "priority": 8,
+      "pages": {
+        "riyadh": {
+          "url": "/cities/riyadh-google-ads.html",
+          "title": "خدمات جوجل ادز في الرياض",
+          "keywords": ["الرياض", "جوجل ادز الرياض", "تسويق رقمي الرياض", "إعلانات الرياض"],
+          "country": "saudi",
+          "primaryService": "google-ads",
+          "linkDensity": "high"
+        },
+        "jeddah": {
+          "url": "/cities/jeddah-google-ads.html",
+          "title": "خدمات جوجل ادز في جدة",
+          "keywords": ["جدة", "جوجل ادز جدة", "تسويق رقمي جدة", "إعلانات جدة"],
+          "country": "saudi",
+          "primaryService": "google-ads",
+          "linkDensity": "high"
+        },
+        "dubai": {
+          "url": "/cities/dubai-digital-marketing.html",
+          "title": "خدمات التسويق الرقمي في دبي",
+          "keywords": ["دبي", "تسويق رقمي دبي", "إعلانات دبي", "شركة تسويق دبي"],
+          "country": "uae",
+          "primaryService": "social-media-ads",
+          "linkDensity": "high"
+        },
+        "doha": {
+          "url": "/cities/doha-digital-marketing.html",
+          "title": "خدمات التسويق الرقمي في الدوحة",
+          "keywords": ["الدوحة", "تسويق رقمي الدوحة", "إعلانات الدوحة"],
+          "country": "qatar",
+          "primaryService": "google-ads",
+          "linkDensity": "medium"
+        }
+      }
+    },
+    
+    "blog": {
+      "priority": 7,
+      "pages": {
+        "main-blog": {
+          "url": "/blog/",
+          "title": "مدونة التسويق الرقمي",
+          "keywords": ["مدونة", "مقالات تسويق", "نصائح تسويقية", "دليل التسويق"],
+          "linkDensity": "medium"
+        },
+        "google-ads-guide": {
+          "url": "/blog/articles/google-ads-comprehensive-guide.html",
+          "title": "الدليل الشامل لإعلانات جوجل",
+          "keywords": ["دليل جوجل ادز", "تعلم جوجل ادز", "شرح جوجل ادز"],
+          "relatedService": "google-ads",
+          "linkDensity": "high"
+        },
+        "seo-guide": {
+          "url": "/blog/articles/seo-comprehensive-guide.html",
+          "title": "الدليل الشامل لتحسين محركات البحث",
+          "keywords": ["دليل السيو", "تعلم السيو", "شرح السيو"],
+          "relatedService": "seo",
+          "linkDensity": "high"
+        }
+      }
+    }
+  },
+  
+  "linkingRules": {
+    "maxLinksPerPage": 15,
+    "minLinkDistance": 100,
+    "contextualRelevance": 0.8,
+    "keywordDensity": 0.02,
+    "anchorTextVariation": true,
+    "noFollowExternal": true,
+    "trackInternalClicks": true
+  },
+  
+  "seoBoosts": {
+    "priorityPages": [
+      "/services/google-ads.html",
+      "/services/seo.html",
+      "/sa.html",
+      "/ae.html",
+      "/cities/riyadh-google-ads.html",
+      "/cities/dubai-digital-marketing.html"
+    ],
+    "linkJuiceFlow": {
+      "homepage": 100,
+      "services": 85,
+      "countries": 75,
+      "cities": 65,
+      "blog": 55
+    }
+  },
+  
+  "automatedLinking": {
+    "enabled": true,
+    "updateFrequency": "weekly",
+    "contextAnalysis": true,
+    "semanticMatching": true,
+    "userBehaviorTracking": true
+  }
+}

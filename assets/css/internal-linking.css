@@ -1,0 +1,328 @@
+/**
+ * نظام الباك لنك الداخلي - تنسيقات CSS
+ * Internal Linking System Styles
+ * مؤسسة إعلانات العرب - ArabSad
+ */
+
+/* الروابط الداخلية التلقائية */
+.internal-link {
+    color: #2563eb;
+    text-decoration: underline;
+    text-decoration-color: rgba(37, 99, 235, 0.3);
+    text-underline-offset: 2px;
+    transition: all 0.2s ease;
+    font-weight: 500;
+    position: relative;
+}
+
+.internal-link:hover {
+    color: #1d4ed8;
+    text-decoration-color: #1d4ed8;
+    text-decoration-thickness: 2px;
+}
+
+.internal-link::after {
+    content: '🔗';
+    font-size: 0.7em;
+    opacity: 0;
+    margin-right: 2px;
+    transition: opacity 0.2s ease;
+}
+
+.internal-link:hover::after {
+    opacity: 0.6;
+}
+
+/* قسم الصفحات ذات الصلة */
+.related-links-section {
+    background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+    padding: 3rem 0;
+    margin: 3rem 0;
+    border-top: 1px solid #e2e8f0;
+    border-bottom: 1px solid #e2e8f0;
+    position: relative;
+}
+
+.related-links-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #FFB800, #00d4aa, #FFB800);
+}
+
+.related-links-section h3 {
+    text-align: center;
+    color: #1e293b;
+    margin-bottom: 2rem;
+    font-size: 1.8rem;
+    font-weight: 700;
+    position: relative;
+}
+
+.related-links-section h3::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(90deg, #FFB800, #00d4aa);
+    border-radius: 2px;
+}
+
+.related-links-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.related-link-card {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.5rem;
+    background: white;
+    border: 2px solid #e2e8f0;
+    border-radius: 12px;
+    text-decoration: none;
+    color: #374151;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    position: relative;
+    overflow: hidden;
+}
+
+.related-link-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 184, 0, 0.1), transparent);
+    transition: left 0.5s ease;
+}
+
+.related-link-card:hover::before {
+    left: 100%;
+}
+
+.related-link-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    border-color: #FFB800;
+    background: linear-gradient(135deg, #fff, #fefbf3);
+}
+
+.link-icon {
+    font-size: 1.5rem;
+    color: #FFB800;
+    transition: transform 0.3s ease;
+    min-width: 24px;
+}
+
+.related-link-card:hover .link-icon {
+    transform: scale(1.2) rotate(10deg);
+}
+
+.link-title {
+    font-weight: 600;
+    flex: 1;
+    font-size: 1rem;
+    line-height: 1.4;
+}
+
+/* مسار التنقل (Breadcrumbs) */
+.breadcrumb {
+    background: linear-gradient(135deg, #f8fafc, #f1f5f9);
+    padding: 1rem 0;
+    border-bottom: 1px solid #e2e8f0;
+    margin-bottom: 2rem;
+}
+
+.breadcrumb-list {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    font-size: 0.9rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.breadcrumb-item {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.breadcrumb-item:not(:last-child)::after {
+    content: '←';
+    margin: 0 0.75rem;
+    color: #6b7280;
+    font-weight: bold;
+}
+
+.breadcrumb-item a {
+    color: #2563eb;
+    text-decoration: none;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+}
+
+.breadcrumb-item a:hover {
+    background: rgba(37, 99, 235, 0.1);
+    text-decoration: underline;
+}
+
+.breadcrumb-item.active span {
+    color: #374151;
+    font-weight: 600;
+    padding: 0.25rem 0.5rem;
+    background: rgba(255, 184, 0, 0.1);
+    border-radius: 4px;
+}
+
+/* تحسينات للوضع المظلم */
+@media (prefers-color-scheme: dark) {
+    .related-links-section {
+        background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+        border-color: #475569;
+    }
+    
+    .related-links-section h3 {
+        color: #f1f5f9;
+    }
+    
+    .related-link-card {
+        background: #1e293b;
+        border-color: #475569;
+        color: #e2e8f0;
+    }
+    
+    .related-link-card:hover {
+        background: linear-gradient(135deg, #1e293b, #2d3748);
+        border-color: #FFB800;
+    }
+    
+    .breadcrumb {
+        background: linear-gradient(135deg, #1e293b, #334155);
+        border-color: #475569;
+    }
+    
+    .breadcrumb-item.active span {
+        background: rgba(255, 184, 0, 0.2);
+        color: #f1f5f9;
+    }
+}
+
+/* تحسينات الجوال */
+@media (max-width: 768px) {
+    .related-links-section {
+        padding: 2rem 0;
+        margin: 2rem 0;
+    }
+    
+    .related-links-section h3 {
+        font-size: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .related-links-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        padding: 0 0.5rem;
+    }
+    
+    .related-link-card {
+        padding: 1rem;
+        gap: 0.75rem;
+    }
+    
+    .link-title {
+        font-size: 0.9rem;
+    }
+    
+    .breadcrumb-list {
+        flex-wrap: wrap;
+        gap: 0.25rem;
+        font-size: 0.8rem;
+    }
+    
+    .breadcrumb-item:not(:last-child)::after {
+        margin: 0 0.5rem;
+    }
+}
+
+/* تأثيرات الحركة */
+@keyframes linkPulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.7; }
+}
+
+.internal-link.loading {
+    animation: linkPulse 1s infinite;
+}
+
+/* تحسينات إمكانية الوصول */
+.internal-link:focus,
+.related-link-card:focus,
+.breadcrumb-item a:focus {
+    outline: 2px solid #FFB800;
+    outline-offset: 2px;
+}
+
+/* تحسينات الطباعة */
+@media print {
+    .related-links-section,
+    .breadcrumb {
+        display: none;
+    }
+    
+    .internal-link::after {
+        display: none;
+    }
+}
+
+/* تحسينات الأداء */
+.related-link-card,
+.internal-link {
+    will-change: transform;
+}
+
+.related-links-section {
+    contain: layout style paint;
+}
+
+/* متغيرات CSS للتخصيص */
+:root {
+    --internal-link-color: #2563eb;
+    --internal-link-hover-color: #1d4ed8;
+    --related-section-bg: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+    --related-card-bg: white;
+    --related-card-border: #e2e8f0;
+    --related-card-hover-border: #FFB800;
+    --breadcrumb-bg: linear-gradient(135deg, #f8fafc, #f1f5f9);
+}
+
+/* تحسينات للشاشات عالية الدقة */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .internal-link {
+        text-decoration-thickness: 1.5px;
+    }
+    
+    .related-link-card {
+        border-width: 1.5px;
+    }
+}
