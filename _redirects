@@ -1,0 +1,14 @@
+# Redirects for GitHub Pages
+/google-ads-service.html /arabsad/services/google-ads.html 301
+/seo-service.html /arabsad/services/seo.html 301
+/social-media-service.html /arabsad/services/social-media-ads.html 301
+/ecommerce-service.html /arabsad/services/ecommerce.html 301
+/services-page.html /arabsad/services-page.html 301
+
+# Country redirects
+/sa.html /arabsad/countries/sa.html 301
+/ae.html /arabsad/countries/ae.html 301
+/kw.html /arabsad/countries/kw.html 301
+/qa.html /arabsad/countries/qa.html 301
+/bh.html /arabsad/countries/bh.html 301
+/om.html /arabsad/countries/om.html 301

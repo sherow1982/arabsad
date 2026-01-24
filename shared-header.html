@@ -239,8 +239,8 @@
             transition: right 0.4s cubic-bezier(0.77, 0, 0.175, 1);
             z-index: 10001;
             overflow-y: auto;
-            box-shadow: -5px 0 30px rgba(0,0,0,0.8);
-            border-left: 2px solid #f6b93b;
+            box-shadow: -5px 0 30px rgba(0,0,0,0.9);
+            border-left: 3px solid #f6b93b;
             display: flex;
             text-align: right;
         }
@@ -272,18 +272,22 @@
         .nav-link {
             width: 100%;
             justify-content: space-between;
-            padding: 16px 12px;
-            font-size: 1.1rem;
+            padding: 18px 15px;
+            font-size: 1.2rem;
             color: #ffffff;
-            font-weight: 600;
-            border-radius: 8px;
-            margin-bottom: 4px;
+            font-weight: 700;
+            border-radius: 10px;
+            margin-bottom: 8px;
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.1);
         }
         
         .nav-link:hover, .nav-link:active, .nav-item.active > .nav-link {
-            background: rgba(246, 185, 59, 0.15);
+            background: rgba(246, 185, 59, 0.25);
             color: #f6b93b;
-            transform: translateX(-5px);
+            transform: translateX(-8px);
+            border-color: #f6b93b;
+            box-shadow: 0 4px 15px rgba(246, 185, 59, 0.2);
         }
 
         /* Mobile Dropdown Improvements */

@@ -330,14 +330,46 @@ class ArabSadChatbot {
 
         @media (max-width: 768px) {
           .chatbot-widget {
-            left: 15px;
-            bottom: 15px;
+            left: 10px;
+            bottom: 10px;
+            right: 10px;
           }
           
           .chat-window {
-            width: calc(100vw - 30px);
-            height: 70vh;
-            max-width: 350px;
+            width: calc(100vw - 20px);
+            height: 80vh;
+            max-width: none;
+            left: 0;
+            right: 0;
+          }
+          
+          .chat-messages {
+            font-size: 16px;
+            padding: 20px;
+          }
+          
+          .message-bubble {
+            font-size: 16px;
+            padding: 12px 16px;
+            max-width: 85%;
+          }
+          
+          #chatInput {
+            font-size: 16px;
+            padding: 12px 16px;
+          }
+          
+          #chatSend {
+            font-size: 16px;
+            padding: 12px 16px;
+          }
+          
+          .chat-header {
+            padding: 20px;
+          }
+          
+          .chat-title {
+            font-size: 16px;
           }
         }
       </style>
@@ -476,23 +508,89 @@ class ArabSadChatbot {
 
   processMessage(message) {
     const lowerMessage = message.toLowerCase();
+    const kb = this.config.knowledgeBase;
     let response = '';
     
-    if (lowerMessage.includes('سعر') || lowerMessage.includes('تكلفة') || lowerMessage.includes('كم')) {
-      response = this.config.responses.pricing;
-    } else if (lowerMessage.includes('وقت') || lowerMessage.includes('متى') || lowerMessage.includes('مدة')) {
-      response = this.config.responses.timeline;
-    } else if (lowerMessage.includes('ضمان') || lowerMessage.includes('نتائج')) {
-      response = this.config.responses.guarantee;
-    } else if (lowerMessage.includes('متجر') || lowerMessage.includes('تجارة')) {
-      response = this.config.responses.ecommerce;
-    } else if (lowerMessage.includes('استشارة') || lowerMessage.includes('مجاني')) {
-      response = this.config.responses.consultation;
+    // تحليل ذكي للرسالة
+    if (lowerMessage.includes('سعر') || lowerMessage.includes('تكلفة') || lowerMessage.includes('كم') || lowerMessage.includes('باقة')) {
+      response = this.getSmartResponse('pricing', message);
+    } else if (lowerMessage.includes('وقت') || lowerMessage.includes('متى') || lowerMessage.includes('مدة') || lowerMessage.includes('زمن')) {
+      response = this.getSmartResponse('timeline', message);
+    } else if (lowerMessage.includes('ضمان') || lowerMessage.includes('نتائج') || lowerMessage.includes('عائد')) {
+      response = this.getSmartResponse('guarantee', message);
+    } else if (lowerMessage.includes('متجر') || lowerMessage.includes('تجارة') || lowerMessage.includes('إلكتروني')) {
+      response = this.getSmartResponse('ecommerce', message);
+    } else if (lowerMessage.includes('استشارة') || lowerMessage.includes('مجاني') || lowerMessage.includes('مكالمة')) {
+      response = this.getSmartResponse('consultation', message);
+    } else if (lowerMessage.includes('خدمات') || lowerMessage.includes('خدمة')) {
+      response = this.getSmartResponse('services', message);
+    } else if (lowerMessage.includes('دول') || lowerMessage.includes('بلد') || lowerMessage.includes('منطقة')) {
+      response = this.getSmartResponse('countries', message);
+    } else if (lowerMessage.includes('google') || lowerMessage.includes('جوجل') || lowerMessage.includes('إعلانات')) {
+      response = this.getGoogleAdsInfo();
+    } else if (lowerMessage.includes('seo') || lowerMessage.includes('سيو') || lowerMessage.includes('محركات')) {
+      response = this.getSEOInfo();
+    } else if (lowerMessage.includes('فيسبوك') || lowerMessage.includes('إنستجرام') || lowerMessage.includes('تيك توك')) {
+      response = this.getSocialMediaInfo();
     } else {
       response = this.config.escalation;
     }
     
     this.addMessage('bot', response);
+  }
+  
+  getSmartResponse(type, userMessage) {
+    const kb = this.config.knowledgeBase;
+    
+    switch(type) {
+      case 'pricing':
+        return `أسعارنا تنافسية ومرنة:\n\n📊 Google Ads: ${kb.services.googleAds.pricing}\n🔍 SEO: ${kb.services.seo.pricing}\n\nما نوع نشاطك التجاري لأقترح الباقة المناسبة؟`;
+        
+      case 'timeline':
+        return `المدة الزمنية حسب الخدمة:\n\n⚡ Google Ads: ${kb.services.googleAds.timeline}\n🔍 SEO: ${kb.services.seo.timeline}\n🛒 المتاجر: ${kb.services.ecommerce.timeline}\n\nأيهما أولويتك الآن؟`;
+        
+      case 'guarantee':
+        return `نضمن لك:\n\n✅ ${kb.company.satisfaction} رضا العملاء\n✅ فريق خبرة ${kb.company.experience}\n✅ ${kb.faq['الضمان']}\n\nهل تريد معرفة قصص نجاح عملائنا؟`;
+        
+      case 'ecommerce':
+        const features = kb.services.ecommerce.features.join('\n• ');
+        return `متاجرنا الإلكترونية تشمل:\n\n• ${features}\n\n${kb.services.ecommerce.timeline}\n\nالمتجر جديد أم تطوير لموجود؟`;
+        
+      case 'consultation':
+        return `الاستشارة مجانية 100% لمدة 30 دقيقة:\n\n📋 تحليل وضعك الحالي\n🎯 استراتيجية مخصصة\n💡 توصيات عملية\n\nبدون أي التزام! متى يناسبك؟`;
+        
+      case 'countries':
+        let response = 'نخدم جميع دول الخليج:\n\n';
+        Object.keys(kb.countries).forEach(country => {
+          const cities = kb.countries[country].slice(0, 3).join('، ');
+          response += `🇸🇦 ${country}: ${cities}\n`;
+        });
+        return response + '\nأي دولة تهمك؟';
+        
+      case 'services':
+        return `خدماتنا الرئيسية:\n\n🎯 ${kb.services.googleAds.name}\n🔍 ${kb.services.seo.name}\n📱 ${kb.services.socialMedia.name}\n🛒 ${kb.services.ecommerce.name}\n💻 ${kb.services.webDesign.name}\n👥 ${kb.services.socialManagement.name}\n\nأي خدمة تهمك أكثر؟`;
+        
+      default:
+        return this.config.escalation;
+    }
+  }
+  
+  getGoogleAdsInfo() {
+    const kb = this.config.knowledgeBase;
+    const benefits = kb.services.googleAds.benefits.join('\n• ');
+    return `🎯 ${kb.services.googleAds.name}:\n\n• ${benefits}\n\n⏱️ ${kb.services.googleAds.timeline}\n💰 ${kb.services.googleAds.pricing}\n\nهل تريد معرفة المزيد؟`;
+  }
+  
+  getSEOInfo() {
+    const kb = this.config.knowledgeBase;
+    const services = kb.services.seo.services.join('\n• ');
+    return `🔍 ${kb.services.seo.name}:\n\n• ${services}\n\n⏱️ ${kb.services.seo.timeline}\n💰 ${kb.services.seo.pricing}\n\nهل لديك موقع تريد تحسينه؟`;
+  }
+  
+  getSocialMediaInfo() {
+    const kb = this.config.knowledgeBase;
+    const platforms = kb.services.socialMedia.platforms.join('، ');
+    return `📱 ${kb.services.socialMedia.name}:\n\n🌐 المنصات: ${platforms}\n\n• ${kb.services.socialMedia.services.join('\n• ')}\n\nأي منصة تهمك أكثر؟`;
   }
 }
 

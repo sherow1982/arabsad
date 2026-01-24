@@ -1,48 +1,45 @@
-# Site settings - محسن لـ SEO الخليجي 2025
-title: "مؤسسة إعلانات العرب - أفضل شركة تسويق رقمي في الخليج"
-description: "شركة إعلانات العرب الرائدة في الخليج. Google Ads، فيسبوك، تيك توك، سناب شات، متاجر إلكترونية وSEO. 10+ سنوات خبرة في السعودية والإمارات والخليج."
-url: "https://sherow1982.github.io/arabsad"
-baseurl: ""
+title: "مؤسسة إعلانات العرب - ArabSad Digital Marketing"
+description: "وكالة تسويق رقمي متخصصة في Google Ads وFacebook Ads وSEO وتصميم المواقع في الخليج العربي"
+url: "https://sherow1982.github.io"
+baseurl: "/arabsad"
 lang: "ar"
-locale: "ar"
-timezone: "Asia/Riyadh"
-theme_color: "#1e40af"
+locale: "ar_EG"
 
-# Author info
-author:
-  name: "مؤسسة إعلانات العرب"
-  email: "sherow1982@gmail.com"
-  phone: "+201110760081"
-  
-logo: "/assets/images/logo-arabsad.png"
-
-# Social profiles
-social:
-  name: "مؤسسة إعلانات العرب"
-  links:
-    - "https://arabsad.com"
-    - "https://wa.me/201110760081"
-
-# Jekyll plugins for SEO
+# GitHub Pages settings
 plugins:
-  - jekyll-seo-tag
   - jekyll-sitemap
+  - jekyll-seo-tag
   - jekyll-feed
 
-# Build settings
+# Exclude files
+exclude:
+  - README.md
+  - LICENSE
+  - node_modules/
+  - .git/
+  - .github/
+
+# Include files
+include:
+  - _redirects
+  - .htaccess
+
+# Markdown settings
 markdown: kramdown
 highlighter: rouge
-permalink: /:title/
 
 # Compression
 sass:
   style: compressed
-  
-compress_html:
-  clippings: all
-  comments: all
-  endings: all
-  profile: false
+
+# Collections
+collections:
+  services:
+    output: true
+    permalink: /services/:name/
+  countries:
+    output: true
+    permalink: /countries/:name/
 
 # Defaults
 defaults:
@@ -52,12 +49,3 @@ defaults:
       layout: "default"
       lang: "ar"
       dir: "rtl"
-
-# Exclude
-exclude:
-  - node_modules
-  - vendor
-  - Gemfile*
-  - README.md
-  - ".git*"
-  - LICENSE
