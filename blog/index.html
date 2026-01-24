@@ -70,6 +70,23 @@
             box-shadow: 0 10px 30px rgba(255, 184, 0, 0.2);
         }
         
+        .article-image {
+            width: 100%;
+            height: 200px;
+            overflow: hidden;
+        }
+        
+        .article-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+        
+        .article-card:hover .article-image img {
+            transform: scale(1.05);
+        }
+        
         .card-header {
             padding: 1.5rem;
             border-bottom: 1px solid rgba(255, 184, 0, 0.1);
@@ -184,110 +201,98 @@
         </div>
         
         <div class="articles-grid">
-            <div class="article-card" onclick="window.open('articles/facebook-ads.html', '_blank')">
-                <div class="card-header">
-                    <span class="card-category">Facebook Ads</span>
-                    <h3 class="card-title">إعلانات فيسبوك الاحترافية</h3>
-                    <p class="card-description">تعلم كيفية إنشاء حملات فيسبوك ناجحة بهيكلة صحيحة ومحتوى يحول الزوار إلى عملاء</p>
+            <!-- مقال Google Ads الشامل -->
+            <div class="article-card" onclick="window.open('articles/google-ads-comprehensive-guide.html', '_blank')">
+                <div class="article-image">
+                    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="دليل إعلانات جوجل الشامل 2025" loading="lazy">
                 </div>
-                <div class="card-footer">
-                    <span class="card-date">يناير 2025</span>
-                    <span class="card-arrow">←</span>
-                </div>
-            </div>
-            
-            <div class="article-card" onclick="window.open('articles/google-search-ads.html', '_blank')">
                 <div class="card-header">
                     <span class="card-category">Google Ads</span>
-                    <h3 class="card-title">إعلانات البحث في جوجل</h3>
-                    <p class="card-description">دليل شامل لإنشاء حملات البحث المربحة واختيار الكلمات المفتاحية المناسبة</p>
+                    <h3 class="card-title">دليل إعلانات جوجل الشامل 2025</h3>
+                    <p class="card-description">تعلم كيفية إنشاء حملات Google Ads مربحة من الصفر. دليل شامل يغطي جميع أنواع الحملات مع استراتيجيات متقدمة للسوق الخليجي</p>
                 </div>
                 <div class="card-footer">
-                    <span class="card-date">يناير 2025</span>
+                    <span class="card-date">23 يناير 2025 • 15 دقيقة قراءة</span>
                     <span class="card-arrow">←</span>
                 </div>
             </div>
             
-            <div class="article-card" onclick="window.open('articles/google-display-ads.html', '_blank')">
-                <div class="card-header">
-                    <span class="card-category">Display Ads</span>
-                    <h3 class="card-title">الشبكة الإعلانية لجوجل</h3>
-                    <p class="card-description">كيفية الوصول لملايين المواقع عبر الشبكة الإعلانية وزيادة الوعي بعلامتك التجارية</p>
+            <!-- مقال SEO الشامل -->
+            <div class="article-card" onclick="window.open('articles/seo-comprehensive-guide.html', '_blank')">
+                <div class="article-image">
+                    <img src="https://images.unsplash.com/photo-1562577309-4932fdd64cd1?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="دليل تحسين محركات البحث SEO الشامل 2025" loading="lazy">
                 </div>
-                <div class="card-footer">
-                    <span class="card-date">يناير 2025</span>
-                    <span class="card-arrow">←</span>
-                </div>
-            </div>
-            
-            <div class="article-card" onclick="window.open('articles/youtube-ads.html', '_blank')">
-                <div class="card-header">
-                    <span class="card-category">YouTube Ads</span>
-                    <h3 class="card-title">إعلانات يوتيوب المؤثرة</h3>
-                    <p class="card-description">استراتيجيات إنشاء إعلانات فيديو جذابة تحقق أعلى معدلات مشاهدة وتفاعل</p>
-                </div>
-                <div class="card-footer">
-                    <span class="card-date">يناير 2025</span>
-                    <span class="card-arrow">←</span>
-                </div>
-            </div>
-            
-            <div class="article-card" onclick="window.open('articles/instagram-ads.html', '_blank')">
-                <div class="card-header">
-                    <span class="card-category">Instagram Ads</span>
-                    <h3 class="card-title">إعلانات انستقرام الإبداعية</h3>
-                    <p class="card-description">تصميم حملات انستقرام بصرية مذهلة تجذب الجمهور الشاب وتزيد المبيعات</p>
-                </div>
-                <div class="card-footer">
-                    <span class="card-date">يناير 2025</span>
-                    <span class="card-arrow">←</span>
-                </div>
-            </div>
-            
-            <div class="article-card" onclick="window.open('articles/snapchat-ads.html', '_blank')">
-                <div class="card-header">
-                    <span class="card-category">Snapchat Ads</span>
-                    <h3 class="card-title">إعلانات سناب شات المبتكرة</h3>
-                    <p class="card-description">الوصول للجيل الجديد عبر سناب شات بإعلانات تفاعلية ومرشحات مخصصة</p>
-                </div>
-                <div class="card-footer">
-                    <span class="card-date">يناير 2025</span>
-                    <span class="card-arrow">←</span>
-                </div>
-            </div>
-            
-            <div class="article-card" onclick="window.open('articles/tiktok-ads.html', '_blank')">
-                <div class="card-header">
-                    <span class="card-category">TikTok Ads</span>
-                    <h3 class="card-title">إعلانات تيك توك الفيروسية</h3>
-                    <p class="card-description">إنشاء محتوى فيديو قصير يصبح فيروسي ويحقق انتشار واسع بتكلفة منخفضة</p>
-                </div>
-                <div class="card-footer">
-                    <span class="card-date">يناير 2025</span>
-                    <span class="card-arrow">←</span>
-                </div>
-            </div>
-            
-            <div class="article-card" onclick="window.open('articles/google-shopping-ads.html', '_blank')">
-                <div class="card-header">
-                    <span class="card-category">Shopping Ads</span>
-                    <h3 class="card-title">إعلانات التسوق في جوجل</h3>
-                    <p class="card-description">عرض منتجاتك مباشرة في نتائج البحث مع الصور والأسعار لزيادة المبيعات</p>
-                </div>
-                <div class="card-footer">
-                    <span class="card-date">يناير 2025</span>
-                    <span class="card-arrow">←</span>
-                </div>
-            </div>
-            
-            <div class="article-card" onclick="window.open('ecommerce-seo-gulf-optimization.html', '_blank')">
                 <div class="card-header">
                     <span class="card-category">SEO</span>
-                    <h3 class="card-title">تحسين متاجر الخليج لمحركات البحث</h3>
-                    <p class="card-description">دليل شامل لتحسين المتاجر الإلكترونية في دول الخليج للظهور في النتائج الأولى</p>
+                    <h3 class="card-title">دليل تحسين محركات البحث SEO الشامل 2025</h3>
+                    <p class="card-description">اكتشف أسرار تصدر نتائج جوجل مع دليلنا الشامل لـ SEO. تعلم التحسين التقني واستراتيجيات المحتوى للسوق العربي</p>
                 </div>
                 <div class="card-footer">
-                    <span class="card-date">ديسمبر 2024</span>
+                    <span class="card-date">23 يناير 2025 • 18 دقيقة قراءة</span>
+                    <span class="card-arrow">←</span>
+                </div>
+            </div>
+            
+            <!-- مقال وسائل التواصل الاجتماعي -->
+            <div class="article-card" onclick="window.open('articles/social-media-ads-comprehensive-guide.html', '_blank')">
+                <div class="article-image">
+                    <img src="https://images.unsplash.com/photo-1611224923853-80b023f02d71?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="دليل إعلانات وسائل التواصل الاجتماعي الشامل 2025" loading="lazy">
+                </div>
+                <div class="card-header">
+                    <span class="card-category">Social Media</span>
+                    <h3 class="card-title">دليل إعلانات وسائل التواصل الاجتماعي الشامل 2025</h3>
+                    <p class="card-description">دليل متكامل لإعلانات فيسبوك، إنستغرام، سناب شات، تيك توك. استراتيجيات الاستهداف وإنشاء المحتوى</p>
+                </div>
+                <div class="card-footer">
+                    <span class="card-date">23 يناير 2025 • 16 دقيقة قراءة</span>
+                    <span class="card-arrow">←</span>
+                </div>
+            </div>
+            
+            <!-- مقال تصميم المواقع -->
+            <div class="article-card" onclick="window.open('articles/website-design-comprehensive-guide.html', '_blank')">
+                <div class="article-image">
+                    <img src="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="دليل تصميم المواقع الإلكترونية الشامل 2025" loading="lazy">
+                </div>
+                <div class="card-header">
+                    <span class="card-category">Web Design</span>
+                    <h3 class="card-title">دليل تصميم المواقع الإلكترونية الشامل 2025</h3>
+                    <p class="card-description">تعلم أساسيات وأحدث اتجاهات تصميم المواقع. من UX/UI إلى التصميم المتجاوب والأداء المحسن</p>
+                </div>
+                <div class="card-footer">
+                    <span class="card-date">23 يناير 2025 • 17 دقيقة قراءة</span>
+                    <span class="card-arrow">←</span>
+                </div>
+            </div>
+            
+            <!-- مقال التجارة الإلكترونية -->
+            <div class="article-card" onclick="window.open('articles/ecommerce-comprehensive-guide.html', '_blank')">
+                <div class="article-image">
+                    <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="دليل التجارة الإلكترونية الشامل 2025" loading="lazy">
+                </div>
+                <div class="card-header">
+                    <span class="card-category">eCommerce</span>
+                    <h3 class="card-title">دليل التجارة الإلكترونية الشامل 2025</h3>
+                    <p class="card-description">من فكرة إلى إمبراطورية رقمية! تعلم كيفية إنشاء وإدارة متجر إلكتروني ناجح في السوق الخليجي</p>
+                </div>
+                <div class="card-footer">
+                    <span class="card-date">23 يناير 2025 • 19 دقيقة قراءة</span>
+                    <span class="card-arrow">←</span>
+                </div>
+            </div>
+            
+            <!-- مقال إدارة وسائل التواصل -->
+            <div class="article-card" onclick="window.open('articles/social-media-management-guide.html', '_blank')">
+                <div class="article-image">
+                    <img src="https://images.unsplash.com/photo-1611224923853-80b023f02d71?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="دليل إدارة وسائل التواصل الاجتماعي الشامل 2025" loading="lazy">
+                </div>
+                <div class="card-header">
+                    <span class="card-category">Social Management</span>
+                    <h3 class="card-title">دليل إدارة وسائل التواصل الاجتماعي الشامل 2025</h3>
+                    <p class="card-description">فن بناء المجتمعات الرقمية! تعلم استراتيجيات المحتوى وإدارة الأزمات وبناء علاقات قوية مع جمهورك</p>
+                </div>
+                <div class="card-footer">
+                    <span class="card-date">23 يناير 2025 • 20 دقيقة قراءة</span>
                     <span class="card-arrow">←</span>
                 </div>
             </div>
