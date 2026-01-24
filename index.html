@@ -354,6 +354,21 @@
             transition: transform 0.4s ease;
         }
 
+        .service-image {
+            margin: 1rem 0;
+            text-align: center;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        
+        .service-image img {
+            width: 100%;
+            height: auto;
+            object-fit: contain;
+            border-radius: 10px;
+            max-height: 200px;
+        }
+        
         .service-card:hover .service-icon {
             transform: scale(1.2) rotate(5deg);
         }
@@ -643,6 +658,9 @@
                 <a href="/arabsad/services/google-ads.html" target="_blank" class="service-card">
                     <div class="service-icon">📊</div>
                     <h3>إعلانات Google Ads</h3>
+                    <div class="service-image">
+                        <img src="assets/images/خدمات اعلانات جوجل.jpg" alt="خدمات إعلانات Google Ads" loading="lazy">
+                    </div>
                     <p>حملات احترافية على محرك البحث الأقوى عالمياً لزيادة مبيعاتك بشكل مباشر وفوري</p>
                     <ul class="service-card-features">
                         <li>إعلانات البحث والشبكة الإعلانية</li>

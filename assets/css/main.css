@@ -5,6 +5,11 @@ img {
     animation: flagWave 3s ease-in-out infinite;
     filter: drop-shadow(0 0 10px rgba(255, 184, 0, 0.3));
     transition: all 0.3s ease;
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    object-fit: contain;
+    display: block;
 }
 
 img:hover {
