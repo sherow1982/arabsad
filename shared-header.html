@@ -233,7 +233,7 @@
             width: 85%;
             max-width: 320px;
             height: 100vh;
-            background: #0f172a; /* خلفية داكنة مريحة للعين */
+            background: linear-gradient(180deg, #1e293b 0%, #0f172a 100%); /* خلفية متدرجة أوضح */
             backdrop-filter: none; /* إزالة الضبابية للأداء والوضوح */
             flex-direction: column;
             padding: 80px 20px 40px;
@@ -291,12 +291,18 @@
             visibility: visible;
             transform: none;
             box-shadow: none;
-            background: rgba(0, 0, 0, 0.3);
+            background: rgba(255, 255, 255, 0.05); /* خلفية مميزة للقوائم الفرعية */
             margin-top: 5px;
             padding-right: 15px;
             display: block;
             border-top: none;
             border-right: 2px solid #f6b93b;
+        }
+
+        .dropdown-link {
+            color: #ffffff !important; /* نص أبيض ناصع للقراءة */
+            font-weight: 600;
+            border-bottom: 1px solid rgba(255,255,255,0.08);
         }
         
         /* زر إغلاق داخل القائمة */
