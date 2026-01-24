@@ -21,7 +21,7 @@
                 <h1>نحول طموحاتك التجارية في الإمارات إلى <span class="gradient-text">أرقام ونتائج قياسية</span></h1>
                 <p>من دبي إلى أبوظبي، نقدم حلول تسويق رقمي مبتكرة تناسب سرعة وتطور السوق الإماراتي. سيطر على مجالك الآن.</p>
                 <div class="hero-buttons" style="display: flex; justify-content: center; gap: 15px; margin-top: 30px;">
-                    <a href="https://wa.me/201110760081" class="btn btn-primary">استشارة مجانية</a>
+                    <a href="https://wa.me/971501234567" class="btn btn-primary">استشارة مجانية</a>
                     <a href="#services" class="btn btn-secondary">خدماتنا</a>
                 </div>
             </div>
@@ -99,7 +99,7 @@
                 <div class="card text-center" style="background: linear-gradient(135deg, var(--primary-color), var(--secondary-color)); color: white;">
                     <h2 style="color: white;">جاهز للنمو في السوق الإماراتي؟</h2>
                     <p style="color: rgba(255,255,255,0.9);">تواصل معنا اليوم واحصل على خطة تسويقية مخصصة لعملك.</p>
-                    <a href="https://wa.me/201110760081" class="btn btn-secondary" style="background: white; color: var(--primary-color); border: none;">تواصل معنا الآن</a>
+                    <a href="https://wa.me/971501234567" class="btn btn-secondary" style="background: white; color: var(--primary-color); border: none;">تواصل معنا الآن</a>
                 </div>
             </div>
         </section>
@@ -111,9 +111,11 @@
             document.querySelectorAll('[data-include]').forEach(async function(el) {
                 try {
                     const file = el.getAttribute('data-include');
-                    const response = await fetch('/arabsad/' + file);
+                    const basePath = window.location.pathname.includes('/arabsad/') ? '/arabsad/' : './';
+                    const response = await fetch(basePath + file);
                     if (response.ok) el.innerHTML = await response.text();
-                } catch (e) { console.log(e); }
+                    else console.warn(`Failed to load: ${file}`);
+                } catch (e) { console.error('Include error:', e); }
             });
         });
     </script>
