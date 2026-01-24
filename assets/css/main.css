@@ -1,5 +1,24 @@
 /* ArabSad Digital Marketing - Enhanced Main CSS */
 
+/* Image animations */
+img {
+    animation: flagWave 3s ease-in-out infinite;
+    filter: drop-shadow(0 0 10px rgba(255, 184, 0, 0.3));
+    transition: all 0.3s ease;
+}
+
+img:hover {
+    filter: drop-shadow(0 0 20px rgba(255, 184, 0, 0.6)) brightness(1.1);
+    transform: scale(1.02);
+}
+
+@keyframes flagWave {
+    0%, 100% { transform: rotate(0deg) translateY(0px); }
+    25% { transform: rotate(0.5deg) translateY(-2px); }
+    50% { transform: rotate(0deg) translateY(0px); }
+    75% { transform: rotate(-0.5deg) translateY(-1px); }
+}
+
 :root {
     --primary: #FFB800;
     --primary-dark: #cc9300;
