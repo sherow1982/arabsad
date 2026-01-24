@@ -3,204 +3,86 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>من نحن - مؤسسة إعلانات العرب | شريكك في النجاح الرقمي</title>
-    <meta name="description" content="تعرف على مؤسسة إعلانات العرب، الوكالة الرائدة في التسويق الرقمي في الخليج ومصر. خبرة عميقة، استراتيجيات مبتكرة، ونتائج مضمونة لنمو أعمالك.">
+    <title>من نحن - مؤسسة إعلانات العرب | الوكالة الرقمية الأولى في الخليج</title>
+    <meta name="description" content="تعرف على مؤسسة إعلانات العرب، الوكالة الرائدة في التسويق الرقمي بالخليج العربي. خبرة 10+ سنوات في Google Ads وSEO وتصميم المواقع">
     <link rel="canonical" href="https://sherow1982.github.io/arabsad/about.html">
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         :root {
             --primary: #FFB800;
-            --primary-dark: #FF9500;
-            --dark-bg: #0a0e27;
-            --dark-secondary: #1a1f3a;
-            --text-light: #e8edf5;
-            --text-muted: #a8b3c1;
-            --accent: #00d4aa;
+            --dark-bg: #070b1e;
+            --dark-card: #121831;
+            --text-light: #ffffff;
+            --text-muted: #94a3b8;
         }
         body { font-family: 'Cairo', sans-serif; background: var(--dark-bg); color: var(--text-light); line-height: 1.8; }
-        
-        /* Header & Nav */
-        header { position: fixed; top: 0; width: 100%; z-index: 1000; background: rgba(10, 14, 39, 0.95); padding: 1rem 0; border-bottom: 1px solid rgba(255, 184, 0, 0.1); backdrop-filter: blur(10px); }
-        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
-        .header-wrapper { max-width: 1400px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
-        .logo { font-size: 1.6rem; font-weight: 900; color: var(--primary); text-decoration: none; }
-        nav { display: flex; gap: 2rem; }
-        nav a { color: var(--text-light); text-decoration: none; font-weight: 600; transition: 0.3s; }
-        nav a:hover { color: var(--primary); }
-        .btn { display: inline-block; background: var(--primary); color: #000; padding: 12px 30px; border-radius: 50px; text-decoration: none; font-weight: 700; transition: 0.3s; }
-        .btn:hover { transform: translateY(-3px); background: #fff; }
-
-        main { margin-top: 80px; }
-
-        /* Hero */
-        .hero { padding: 100px 0; text-align: center; background: radial-gradient(circle at 50% 50%, rgba(255, 184, 0, 0.05) 0%, transparent 70%); }
-        .hero h1 { font-size: clamp(2.5rem, 6vw, 4rem); margin-bottom: 20px; font-weight: 900; line-height: 1.2; }
-        .hero p { font-size: 1.2rem; color: var(--text-muted); max-width: 800px; margin: 0 auto 30px; }
-
-        /* Story Section */
-        .story-section { padding: 80px 0; }
-        .story-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: center; }
-        .story-content h2 { font-size: 2.5rem; color: var(--primary); margin-bottom: 20px; }
-        .story-content p { margin-bottom: 20px; color: var(--text-muted); font-size: 1.1rem; }
-        .story-image { background: var(--dark-secondary); border-radius: 20px; height: 400px; position: relative; overflow: hidden; border: 1px solid rgba(255,255,255,0.05); }
-        .story-image::before { content: '🏢'; font-size: 10rem; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); opacity: 0.1; }
-
-        /* Values Grid */
-        .values-section { background: rgba(255,255,255,0.02); padding: 80px 0; }
-        .section-title { text-align: center; font-size: 2.5rem; margin-bottom: 50px; color: var(--primary); }
-        .values-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
-        .value-card { background: var(--dark-secondary); padding: 40px; border-radius: 20px; text-align: center; transition: 0.3s; border: 1px solid rgba(255,255,255,0.05); }
-        .value-card:hover { transform: translateY(-10px); border-color: var(--primary); }
-        .value-icon { font-size: 3rem; margin-bottom: 20px; display: block; }
-        .value-card h3 { font-size: 1.5rem; margin-bottom: 15px; color: #fff; }
-
-        /* Stats */
-        .stats-section { padding: 60px 0; border-top: 1px solid rgba(255,255,255,0.05); border-bottom: 1px solid rgba(255,255,255,0.05); }
-        .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 30px; text-align: center; }
-        .stat-number { font-size: 3.5rem; font-weight: 900; color: var(--primary); margin-bottom: 10px; }
-        .stat-label { font-size: 1.1rem; color: var(--text-muted); }
-
-        /* FAQ */
-        .faq-section { padding: 80px 0; max-width: 900px; margin: 0 auto; }
-        .faq-item { background: var(--dark-secondary); padding: 25px; border-radius: 15px; margin-bottom: 20px; cursor: pointer; transition: 0.3s; }
-        .faq-item:hover { background: rgba(255, 184, 0, 0.05); }
-        .faq-question { font-size: 1.2rem; font-weight: 700; display: flex; justify-content: space-between; align-items: center; }
-        .faq-answer { display: none; margin-top: 15px; color: var(--text-muted); padding-top: 15px; border-top: 1px solid rgba(255,255,255,0.1); }
-
-        /* Footer */
-        footer { background: #040816; padding: 60px 0 30px; margin-top: 60px; border-top: 1px solid rgba(255,255,255,0.05); text-align: center; color: var(--text-muted); }
-
-        @media (max-width: 768px) {
-            .story-grid { grid-template-columns: 1fr; }
-            nav { display: none; }
-            .hero h1 { font-size: 2.5rem; }
-        }
+        main { margin-top: 80px; padding: 100px 20px; max-width: 1200px; margin-left: auto; margin-right: auto; }
+        h1 { font-size: 3rem; color: var(--primary); text-align: center; margin-bottom: 2rem; }
+        .content { background: var(--dark-card); padding: 3rem; border-radius: 20px; margin-bottom: 2rem; }
+        h2 { color: var(--primary); margin: 2rem 0 1rem; font-size: 1.8rem; }
+        p { margin-bottom: 1.5rem; color: var(--text-muted); font-size: 1.1rem; }
+        .stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; margin: 3rem 0; }
+        .stat { text-align: center; background: rgba(255,184,0,0.1); padding: 2rem; border-radius: 15px; }
+        .stat-number { font-size: 2.5rem; color: var(--primary); font-weight: 900; }
+        .stat-label { color: var(--text-muted); margin-top: 0.5rem; }
     </style>
 </head>
 <body>
-    <!-- Header -->
-    <header>
-        <div class="container header-wrapper">
-            <a href="/arabsad/" class="logo">🎯 إعلانات العرب</a>
-            <nav>
-                <a href="/arabsad/">الرئيسية</a>
-                <a href="/arabsad/services/">الخدمات</a>
-                <a href="/arabsad/about.html" style="color: var(--primary);">من نحن</a>
-                <a href="/arabsad/#contact">اتصل بنا</a>
-            </nav>
-            <a href="https://wa.me/201110760081" class="btn" style="padding: 10px 25px; font-size: 0.9rem;">تواصل معنا</a>
-        </div>
-    </header>
-
+    <div data-include="shared-header.html"></div>
+    
     <main>
-        <!-- Hero -->
-        <section class="hero">
-            <div class="container">
-                <h1>نحن نصنع المستقبل الرقمي لعلامتك التجارية</h1>
-                <p>مؤسسة إعلانات العرب ليست مجرد وكالة تسويق، بل شريك استراتيجي يكرس خبراته وتقنياته لتحقيق نمو حقيقي ومستدام لأعمالك في الشرق الأوسط.</p>
-            </div>
-        </section>
-
-        <!-- Stats -->
-        <section class="stats-section">
-            <div class="container">
-                <div class="stats-grid">
-                    <div>
-                        <div class="stat-number">+10</div>
-                        <div class="stat-label">سنوات خبرة</div>
-                    </div>
-                    <div>
-                        <div class="stat-number">+500</div>
-                        <div class="stat-label">مشروع ناجح</div>
-                    </div>
-                    <div>
-                        <div class="stat-number">98%</div>
-                        <div class="stat-label">رضا العملاء</div>
-                    </div>
-                    <div>
-                        <div class="stat-number">24/7</div>
-                        <div class="stat-label">دعم فني</div>
-                    </div>
+        <h1>🎯 من نحن؟</h1>
+        
+        <div class="content">
+            <h2>🚀 مؤسسة إعلانات العرب - شريكك في النجاح الرقمي</h2>
+            <p>نحن وكالة تسويق رقمي متخصصة تأسست عام 2015 بهدف مساعدة الشركات والمؤسسات في دول الخليج العربي ومصر على تحقيق أهدافها التسويقية والوصول إلى جمهورها المستهدف بأكثر الطرق فعالية.</p>
+            
+            <h2>🎯 رؤيتنا</h2>
+            <p>أن نكون الوكالة الرقمية الأولى والأكثر ثقة في المنطقة العربية، نساعد عملاءنا على تحقيق نمو مستدام وقابل للقياس من خلال حلول تسويقية مبتكرة ومخصصة.</p>
+            
+            <h2>🎖️ مهمتنا</h2>
+            <p>تقديم خدمات تسويق رقمي عالية الجودة تشمل إعلانات Google، تحسين محركات البحث، تصميم المواقع والمتاجر الإلكترونية، وإدارة وسائل التواصل الاجتماعي بأسعار تنافسية ونتائج مضمونة.</p>
+            
+            <div class="stats">
+                <div class="stat">
+                    <div class="stat-number">+500</div>
+                    <div class="stat-label">مشروع ناجح</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">+50M</div>
+                    <div class="stat-label">وصول شهري</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">98%</div>
+                    <div class="stat-label">رضا العملاء</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">10+</div>
+                    <div class="stat-label">سنوات خبرة</div>
                 </div>
             </div>
-        </section>
-
-        <!-- Story -->
-        <section class="story-section">
-            <div class="container">
-                <div class="story-grid">
-                    <div class="story-content">
-                        <h2>من نحن؟</h2>
-                        <p>تأسست <strong>مؤسسة إعلانات العرب</strong> برؤية واضحة: سد الفجوة بين الشركات العربية والتقنيات التسويقية العالمية. نحن فريق من الخبراء الشغوفين بالتسويق الرقمي، نجمع بين الإبداع الفني والتحليل البياني الدقيق.</p>
-                        <p>نؤمن بأن كل نشاط تجاري، مهما كان حجمه، يستحق فرصة للظهور والنمو. لذلك، نقدم حلولاً مخصصة تناسب احتياجات السوق الخليجي والمصري، مع مراعاة الثقافة المحلية والسلوك الاستهلاكي.</p>
-                        <p>سواء كنت تبحث عن تصدر نتائج البحث (SEO)، أو إدارة حملات إعلانية ضخمة (Ads)، أو بناء متجر إلكتروني متكامل، فنحن هنا لنحول رؤيتك إلى واقع ملموس وأرقام أرباح.</p>
-                        <a href="https://wa.me/201110760081" class="btn" style="margin-top: 20px;">تحدث مع مستشارنا</a>
-                    </div>
-                    <div class="story-image">
-                        <!-- Placeholder for image/graphic -->
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Values -->
-        <section class="values-section">
-            <div class="container">
-                <h2 class="section-title">قيمنا ومبادئنا</h2>
-                <div class="values-grid">
-                    <div class="value-card">
-                        <span class="value-icon">💎</span>
-                        <h3>الشفافية المطلقة</h3>
-                        <p style="color: var(--text-muted);">لا رسوم خفية، لا وعود وهمية. نشاركك التقارير والأرقام بدقة لتكون على اطلاع دائم بأداء استثمارك.</p>
-                    </div>
-                    <div class="value-card">
-                        <span class="value-icon">🚀</span>
-                        <h3>النتائج أولاً</h3>
-                        <p style="color: var(--text-muted);">نحن لا نركز على "الجهد" بل على "الأثر". كل استراتيجية نضعها تهدف لتحقيق عائد مادي ملموس (ROI).</p>
-                    </div>
-                    <div class="value-card">
-                        <span class="value-icon">🤝</span>
-                        <h3>شراكة طويلة الأمد</h3>
-                        <p style="color: var(--text-muted);">نجاحك هو نجاحنا. نسعى لبناء علاقات عمل مستدامة تنمو فيها أعمالنا معاً عاماً بعد عام.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- FAQ -->
-        <section class="faq-section">
-            <h2 class="section-title">أسئلة شائعة عن المؤسسة</h2>
-            <div class="faq-item" onclick="this.querySelector('.faq-answer').style.display = this.querySelector('.faq-answer').style.display == 'block' ? 'none' : 'block'">
-                <div class="faq-question">أين يقع مقر المؤسسة؟ <span>▼</span></div>
-                <div class="faq-answer">يقع مقرنا الرئيسي في القاهرة، مصر، ولكننا ندير عملياتنا ونخدم عملاءنا في جميع دول الخليج (السعودية، الإمارات، الكويت، قطر، عمان، البحرين) بكفاءة تامة عن بُعد.</div>
-            </div>
-            <div class="faq-item" onclick="this.querySelector('.faq-answer').style.display = this.querySelector('.faq-answer').style.display == 'block' ? 'none' : 'block'">
-                <div class="faq-question">ما هي التخصصات الرئيسية للفريق؟ <span>▼</span></div>
-                <div class="faq-answer">فريقنا يضم متخصصين في: إعلانات Google المعتمدة، تحسين محركات البحث (SEO)، إدارة منصات التواصل الاجتماعي، تطوير الويب والمتاجر الإلكترونية، وكتابة المحتوى الإبداعي.</div>
-            </div>
-            <div class="faq-item" onclick="this.querySelector('.faq-answer').style.display = this.querySelector('.faq-answer').style.display == 'block' ? 'none' : 'block'">
-                <div class="faq-question">كيف تضمنون جودة العمل؟ <span>▼</span></div>
-                <div class="faq-answer">نعتمد على منهجية قائمة على البيانات (Data-Driven). نقوم بالتحليل المستمر، اختبار A/B، والتحسين الدوري للحملات لضمان أفضل أداء ممكن.</div>
-            </div>
-        </section>
-
-        <!-- CTA -->
-        <section style="text-align: center; padding: 60px 20px;">
-            <div class="container">
-                <h2 style="font-size: 2.5rem; margin-bottom: 20px; color: var(--primary);">جاهز لبدء رحلة النجاح؟</h2>
-                <p style="margin-bottom: 40px; font-size: 1.2rem;">دعنا نساعدك في تحقيق أهدافك التسويقية اليوم.</p>
-                <a href="https://wa.me/201110760081" class="btn" style="padding: 15px 40px; font-size: 1.1rem;">ابدأ الآن مجاناً</a>
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        <div class="container">
-            <p>&copy; 2026 مؤسسة إعلانات العرب. جميع الحقوق محفوظة.</p>
-            <p style="margin-top: 10px;">📞 +201110760081 | 📧 info@arabsad.com</p>
+            
+            <h2>🏆 لماذا نحن مختلفون؟</h2>
+            <p>• <strong>خبرة محلية عميقة:</strong> نفهم السوق العربي والخليجي بتفاصيله الدقيقة</p>
+            <p>• <strong>فريق متخصص:</strong> خبراء معتمدون من Google وFacebook</p>
+            <p>• <strong>نتائج قابلة للقياس:</strong> تقارير شفافة ومفصلة لكل حملة</p>
+            <p>• <strong>دعم 24/7:</strong> فريق دعم متاح طوال الوقت</p>
+            <p>• <strong>أسعار تنافسية:</strong> أفضل قيمة مقابل المال في السوق</p>
         </div>
-    </footer>
+    </main>
+    
+    <div data-include="shared-footer.html"></div>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelectorAll('[data-include]').forEach(async function(el) {
+                try {
+                    const file = el.getAttribute('data-include');
+                    const response = await fetch('/arabsad/' + file);
+                    if (response.ok) el.innerHTML = await response.text();
+                } catch (e) { console.log(e); }
+            });
+        });
+    </script>
 </body>
 </html>
