@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>شركة الدمام للتنظيف - خدمات تنظيف المنازل والمكاتب</title>
+    <meta name="description" content="شركة الدمام للتنظيف - خدمات تنظيف شاملة للمنازل والمكاتب بفريق مدرب ومواد تنظيف آمنة وفعالة في الدمام">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            font-family: 'Segoe UI', sans-serif; 
+            background: linear-gradient(135deg, #a29bfe 0%, #6c5ce7 100%);
+            color: #333; 
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            min-height: 100vh;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+        
+        .header {
+            background: linear-gradient(45deg, #6c5ce7, #a29bfe);
+            color: white;
+            padding: 2rem;
+            text-align: center;
+        }
+        
+        .header h1 {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .header p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+        
+        .content {
+            padding: 2rem;
+        }
+        
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        
+        .service-card {
+            background: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 10px;
+            border-left: 4px solid #6c5ce7;
+        }
+        
+        .service-card h3 {
+            color: #2d3436;
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+        
+        .service-card ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .service-card li {
+            padding: 0.3rem 0;
+            color: #636e72;
+        }
+        
+        .service-card li:before {
+            content: "✓ ";
+            color: #00b894;
+            font-weight: bold;
+        }
+        
+        .contact-section {
+            background: linear-gradient(45deg, #00b894, #00cec9);
+            color: white;
+            padding: 2rem;
+            border-radius: 10px;
+            text-align: center;
+            margin: 2rem 0;
+        }
+        
+        .contact-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 1.5rem;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background: white;
+            color: #00b894;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+        
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        
+        .whatsapp-btn {
+            background: #25D366;
+            color: white;
+        }
+        
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+        
+        .feature {
+            text-align: center;
+            padding: 1rem;
+        }
+        
+        .feature-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        
+        .pricing-section {
+            background: linear-gradient(45deg, #fd79a8, #e84393);
+            color: white;
+            padding: 2rem;
+            border-radius: 10px;
+            margin: 2rem 0;
+        }
+        
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+        
+        .price-card {
+            background: rgba(255,255,255,0.1);
+            padding: 1.5rem;
+            border-radius: 10px;
+            text-align: center;
+        }
+        
+        .before-after {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+        
+        .before-after-card {
+            background: #dfe6e9;
+            padding: 1.5rem;
+            border-radius: 10px;
+            text-align: center;
+        }
+        
+        @media (max-width: 768px) {
+            .header h1 { font-size: 1.5rem; }
+            .content { padding: 1rem; }
+            .contact-buttons { flex-direction: column; }
+            .btn { width: 100%; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🧹 شركة الدمام للتنظيف</h1>
+            <p>خدمات تنظيف شاملة للمنازل والمكاتب</p>
+            <p>📍 الدمام - المملكة العربية السعودية</p>
+        </div>
+        
+        <div class="content">
+            <div class="features">
+                <div class="feature">
+                    <div class="feature-icon">🏠</div>
+                    <h3>تنظيف منازل</h3>
+                    <p>تنظيف شامل لجميع غرف المنزل</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">🏢</div>
+                    <h3>تنظيف مكاتب</h3>
+                    <p>خدمات تنظيف احترافية للشركات</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">🛋️</div>
+                    <h3>تنظيف أثاث</h3>
+                    <p>تنظيف الكنب والسجاد والموكيت</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">⏰</div>
+                    <h3>خدمة مرنة</h3>
+                    <p>تنظيف دوري أو لمرة واحدة</p>
+                </div>
+            </div>
+            
+            <div class="service-grid">
+                <div class="service-card">
+                    <h3>🏠 تنظيف المنازل والشقق</h3>
+                    <ul>
+                        <li>تنظيف غرف النوم والمعيشة</li>
+                        <li>تنظيف المطابخ والحمامات</li>
+                        <li>تنظيف النوافذ والأبواب</li>
+                        <li>تنظيف الأرضيات والسيراميك</li>
+                        <li>تنظيف الإضاءة والمراوح</li>
+                    </ul>
+                </div>
+                
+                <div class="service-card">
+                    <h3>🏢 تنظيف المكاتب والشركات</h3>
+                    <ul>
+                        <li>تنظيف المكاتب الإدارية</li>
+                        <li>تنظيف قاعات الاجتماعات</li>
+                        <li>تنظيف الاستقبال والممرات</li>
+                        <li>تنظيف دورات المياه</li>
+                        <li>تنظيف المطابخ المكتبية</li>
+                    </ul>
+                </div>
+                
+                <div class="service-card">
+                    <h3>🛋️ تنظيف الكنب والسجاد</h3>
+                    <ul>
+                        <li>تنظيف الكنب بالبخار</li>
+                        <li>تنظيف السجاد والموكيت</li>
+                        <li>إزالة البقع الصعبة</li>
+                        <li>تعقيم وتطهير الأقمشة</li>
+                        <li>تجفيف سريع وآمن</li>
+                    </ul>
+                </div>
+                
+                <div class="service-card">
+                    <h3>🧽 خدمات تنظيف خاصة</h3>
+                    <ul>
+                        <li>تنظيف ما بعد الدهان</li>
+                        <li>تنظيف ما بعد التشطيب</li>
+                        <li>تنظيف المسابح والحدائق</li>
+                        <li>تنظيف الواجهات الخارجية</li>
+                        <li>خدمات التعقيم والتطهير</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="pricing-section">
+                <h2 style="text-align: center; margin-bottom: 1rem;">💰 أسعارنا التنافسية</h2>
+                <p style="text-align: center;">أسعار مناسبة لجميع الميزانيات مع جودة عالية</p>
+                
+                <div class="pricing-grid">
+                    <div class="price-card">
+                        <h3>🏠 شقة صغيرة</h3>
+                        <div style="font-size: 2rem; margin: 1rem 0;">200 ريال</div>
+                        <p>1-2 غرفة نوم</p>
+                    </div>
+                    <div class="price-card">
+                        <h3>🏡 شقة متوسطة</h3>
+                        <div style="font-size: 2rem; margin: 1rem 0;">350 ريال</div>
+                        <p>3-4 غرف نوم</p>
+                    </div>
+                    <div class="price-card">
+                        <h3>🏰 فيلا كبيرة</h3>
+                        <div style="font-size: 2rem; margin: 1rem 0;">500 ريال</div>
+                        <p>5+ غرف نوم</p>
+                    </div>
+                    <div class="price-card">
+                        <h3>🏢 مكاتب</h3>
+                        <div style="font-size: 2rem; margin: 1rem 0;">حسب المساحة</div>
+                        <p>عرض سعر مجاني</p>
+                    </div>
+                </div>
+            </div>
+            
+            <h2 style="text-align: center; color: #2d3436; margin: 2rem 0;">✨ قبل وبعد التنظيف</h2>
+            <div class="before-after">
+                <div class="before-after-card">
+                    <h3 style="color: #e17055;">❌ قبل التنظيف</h3>
+                    <ul style="list-style: none; padding: 0; margin-top: 1rem;">
+                        <li>🦠 تراكم الأتربة والغبار</li>
+                        <li>🕷️ وجود الحشرات والعناكب</li>
+                        <li>💧 بقع صعبة على الأسطح</li>
+                        <li>😷 روائح كريهة</li>
+                        <li>🦠 بكتيريا وجراثيم</li>
+                    </ul>
+                </div>
+                <div class="before-after-card">
+                    <h3 style="color: #00b894;">✅ بعد التنظيف</h3>
+                    <ul style="list-style: none; padding: 0; margin-top: 1rem;">
+                        <li>✨ نظافة مثالية ولمعان</li>
+                        <li>🛡️ بيئة صحية وآمنة</li>
+                        <li>🌸 رائحة منعشة وجميلة</li>
+                        <li>💎 أسطح لامعة ونظيفة</li>
+                        <li>😊 راحة نفسية وسعادة</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div style="background: #74b9ff; color: white; padding: 2rem; border-radius: 10px; margin: 2rem 0;">
+                <h3 style="text-align: center; margin-bottom: 1rem;">🧴 مواد التنظيف المستخدمة</h3>
+                <div class="features">
+                    <div class="feature">
+                        <div style="color: white;">🌿</div>
+                        <p>مواد طبيعية وآمنة</p>
+                    </div>
+                    <div class="feature">
+                        <div style="color: white;">👶</div>
+                        <p>آمنة للأطفال والحوامل</p>
+                    </div>
+                    <div class="feature">
+                        <div style="color: white;">🐕</div>
+                        <p>غير ضارة بالحيوانات الأليفة</p>
+                    </div>
+                    <div class="feature">
+                        <div style="color: white;">🌍</div>
+                        <p>صديقة للبيئة</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="contact-section">
+                <h2>📞 احجز موعدك الآن</h2>
+                <p>خدمة سريعة وموثوقة - نصل إليك في نفس اليوم</p>
+                <p>فريق مدرب ومعدات حديثة - نتائج مضمونة</p>
+                
+                <div class="contact-buttons">
+                    <a href="https://wa.me/966501234569?text=أريد+حجز+موعد+للتنظيف" class="btn whatsapp-btn">
+                        📱 واتساب: 0501234569
+                    </a>
+                    <a href="tel:+966138901234" class="btn">
+                        📞 اتصال مباشر: 0138901234
+                    </a>
+                </div>
+                
+                <div style="margin-top: 2rem; padding-top: 1rem; border-top: 1px solid rgba(255,255,255,0.3);">
+                    <p><strong>📍 العنوان:</strong> شارع الملك عبدالعزيز، حي الفيصلية، الدمام</p>
+                    <p><strong>⏰ ساعات العمل:</strong> السبت - الخميس: 6 صباحاً - 11 مساءً</p>
+                    <p><strong>🏙️ نخدم جميع مدن المنطقة الشرقية:</strong> الدمام، الخبر، الظهران، القطيف، الجبيل</p>
+                </div>
+            </div>
+            
+            <div style="text-align: center; padding: 2rem; background: #2d3436; color: white; border-radius: 10px;">
+                <h3>🏆 لماذا تختار شركة الدمام للتنظيف؟</h3>
+                <div class="features">
+                    <div class="feature">
+                        <div style="color: #a29bfe;">👥</div>
+                        <p>فريق مدرب ومحترف</p>
+                    </div>
+                    <div class="feature">
+                        <div style="color: #a29bfe;">🛡️</div>
+                        <p>ضمان على الخدمة</p>
+                    </div>
+                    <div class="feature">
+                        <div style="color: #a29bfe;">💰</div>
+                        <p>أسعار تنافسية</p>
+                    </div>
+                    <div class="feature">
+                        <div style="color: #a29bfe;">⚡</div>
+                        <p>خدمة سريعة وموثوقة</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

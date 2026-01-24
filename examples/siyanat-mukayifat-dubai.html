@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>شركة دبي لصيانة المكيفات - خدمات صيانة وإصلاح المكيفات</title>
+    <meta name="description" content="شركة دبي لصيانة المكيفات - صيانة وإصلاح جميع أنواع المكيفات بخبرة تزيد عن 10 سنوات وقطع غيار أصلية في دبي">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            font-family: 'Segoe UI', sans-serif; 
+            background: linear-gradient(135deg, #fd79a8 0%, #fdcb6e 100%);
+            color: #333; 
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            min-height: 100vh;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+        
+        .header {
+            background: linear-gradient(45deg, #e17055, #fd79a8);
+            color: white;
+            padding: 2rem;
+            text-align: center;
+        }
+        
+        .header h1 {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .header p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+        
+        .content {
+            padding: 2rem;
+        }
+        
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        
+        .service-card {
+            background: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 10px;
+            border-left: 4px solid #e17055;
+        }
+        
+        .service-card h3 {
+            color: #2d3436;
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+        
+        .service-card ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .service-card li {
+            padding: 0.3rem 0;
+            color: #636e72;
+        }
+        
+        .service-card li:before {
+            content: "✓ ";
+            color: #00b894;
+            font-weight: bold;
+        }
+        
+        .contact-section {
+            background: linear-gradient(45deg, #00b894, #00cec9);
+            color: white;
+            padding: 2rem;
+            border-radius: 10px;
+            text-align: center;
+            margin: 2rem 0;
+        }
+        
+        .contact-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 1.5rem;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background: white;
+            color: #00b894;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+        
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        
+        .whatsapp-btn {
+            background: #25D366;
+            color: white;
+        }
+        
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+        
+        .feature {
+            text-align: center;
+            padding: 1rem;
+        }
+        
+        .feature-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        
+        .emergency-section {
+            background: linear-gradient(45deg, #e74c3c, #c0392b);
+            color: white;
+            padding: 2rem;
+            border-radius: 10px;
+            text-align: center;
+            margin: 2rem 0;
+        }
+        
+        @media (max-width: 768px) {
+            .header h1 { font-size: 1.5rem; }
+            .content { padding: 1rem; }
+            .contact-buttons { flex-direction: column; }
+            .btn { width: 100%; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🔧 شركة دبي لصيانة المكيفات</h1>
+            <p>صيانة وإصلاح جميع أنواع المكيفات بخبرة 10+ سنوات</p>
+            <p>📍 دبي - دولة الإمارات العربية المتحدة</p>
+        </div>
+        
+        <div class="content">
+            <div class="features">
+                <div class="feature">
+                    <div class="feature-icon">🔧</div>
+                    <h3>صيانة دورية</h3>
+                    <p>صيانة وقائية لإطالة عمر المكيف</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">⚡</div>
+                    <h3>إصلاح فوري</h3>
+                    <p>إصلاح الأعطال في نفس اليوم</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">🧽</div>
+                    <h3>تنظيف شامل</h3>
+                    <p>تنظيف وتعقيم المكيفات</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">🌙</div>
+                    <h3>خدمة 24/7</h3>
+                    <p>خدمة طوارئ على مدار الساعة</p>
+                </div>
+            </div>
+            
+            <div class="service-grid">
+                <div class="service-card">
+                    <h3>🏠 صيانة مكيفات المنازل</h3>
+                    <ul>
+                        <li>مكيفات الشباك والسبليت</li>
+                        <li>المكيفات المركزية</li>
+                        <li>مكيفات الكاسيت</li>
+                        <li>المكيفات المحمولة</li>
+                        <li>أنظمة التبريد الذكية</li>
+                    </ul>
+                </div>
+                
+                <div class="service-card">
+                    <h3>🏢 صيانة مكيفات تجارية</h3>
+                    <ul>
+                        <li>مكيفات المكاتب والشركات</li>
+                        <li>أنظمة التبريد الصناعية</li>
+                        <li>مكيفات المولات والمحلات</li>
+                        <li>أنظمة التهوية المتقدمة</li>
+                        <li>صيانة وقائية شاملة</li>
+                    </ul>
+                </div>
+                
+                <div class="service-card">
+                    <h3>🧽 تنظيف وتعقيم</h3>
+                    <ul>
+                        <li>تنظيف الفلاتر والمبخرات</li>
+                        <li>تعقيم الوحدات الداخلية</li>
+                        <li>تنظيف المكثفات الخارجية</li>
+                        <li>إزالة الروائح الكريهة</li>
+                        <li>تحسين جودة الهواء</li>
+                    </ul>
+                </div>
+                
+                <div class="service-card">
+                    <h3>🔩 قطع الغيار الأصلية</h3>
+                    <ul>
+                        <li>قطع غيار جميع الماركات</li>
+                        <li>ضمان على قطع الغيار</li>
+                        <li>توفر فوري للقطع الشائعة</li>
+                        <li>أسعار تنافسية</li>
+                        <li>جودة عالية مضمونة</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="emergency-section">
+                <h2>🚨 خدمة الطوارئ 24/7</h2>
+                <p>مكيفك تعطل في الصيف؟ لا تقلق! نحن هنا لخدمتك على مدار الساعة</p>
+                <div class="features" style="margin-top: 1.5rem;">
+                    <div class="feature">
+                        <div style="color: white;">⚡</div>
+                        <p>استجابة خلال ساعة</p>
+                    </div>
+                    <div class="feature">
+                        <div style="color: white;">🔧</div>
+                        <p>فنيين متخصصين</p>
+                    </div>
+                    <div class="feature">
+                        <div style="color: white;">🚗</div>
+                        <p>وصول سريع لجميع مناطق دبي</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div style="background: #74b9ff; color: white; padding: 2rem; border-radius: 10px; margin: 2rem 0;">
+                <h3 style="text-align: center; margin-bottom: 1rem;">❄️ علامات تحتاج صيانة المكيف</h3>
+                <div class="features">
+                    <div class="feature">
+                        <div style="color: white;">🌡️</div>
+                        <p>تبريد ضعيف أو غير كافي</p>
+                    </div>
+                    <div class="feature">
+                        <div style="color: white;">💧</div>
+                        <p>تسريب المياه من الوحدة</p>
+                    </div>
+                    <div class="feature">
+                        <div style="color: white;">🔊</div>
+                        <p>أصوات غريبة أثناء التشغيل</p>
+                    </div>
+                    <div class="feature">
+                        <div style="color: white;">💰</div>
+                        <p>ارتفاع فاتورة الكهرباء</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="contact-section">
+                <h2>📞 تواصل معنا الآن</h2>
+                <p>فحص مجاني وتشخيص دقيق للأعطال</p>
+                <p>خدمة سريعة وموثوقة في جميع مناطق دبي</p>
+                
+                <div class="contact-buttons">
+                    <a href="https://wa.me/971501234567?text=أحتاج+صيانة+مكيف+في+دبي" class="btn whatsapp-btn">
+                        📱 واتساب: 0501234567
+                    </a>
+                    <a href="tel:+97143456789" class="btn">
+                        📞 اتصال مباشر: 043456789
+                    </a>
+                </div>
+                
+                <div style="margin-top: 2rem; padding-top: 1rem; border-top: 1px solid rgba(255,255,255,0.3);">
+                    <p><strong>📍 العنوان:</strong> شارع الشيخ زايد، منطقة الكرامة، دبي</p>
+                    <p><strong>⏰ ساعات العمل:</strong> 24 ساعة - 7 أيام في الأسبوع</p>
+                    <p><strong>🏙️ نخدم جميع مناطق دبي:</strong> الكرامة، بر دبي، ديرة، جميرا، مارينا، وجميع المناطق</p>
+                </div>
+            </div>
+            
+            <div style="text-align: center; padding: 2rem; background: #2d3436; color: white; border-radius: 10px;">
+                <h3>🏆 لماذا تختار شركة دبي لصيانة المكيفات؟</h3>
+                <div class="features">
+                    <div class="feature">
+                        <div style="color: #fd79a8;">👨‍🔧</div>
+                        <p>فنيين معتمدين ومدربين</p>
+                    </div>
+                    <div class="feature">
+                        <div style="color: #fd79a8;">🛡️</div>
+                        <p>ضمان شامل على الخدمة</p>
+                    </div>
+                    <div class="feature">
+                        <div style="color: #fd79a8;">💎</div>
+                        <p>قطع غيار أصلية</p>
+                    </div>
+                    <div class="feature">
+                        <div style="color: #fd79a8;">⚡</div>
+                        <p>خدمة سريعة ومضمونة</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

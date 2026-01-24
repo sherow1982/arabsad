@@ -7,25 +7,45 @@
     <lastmod>2026-01-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="ar-SA" href="https://sherow1982.github.io/arabsad/"/>
+    <xhtml:link rel="alternate" hreflang="ar-AE" href="https://sherow1982.github.io/arabsad/"/>
+    <xhtml:link rel="alternate" hreflang="ar-KW" href="https://sherow1982.github.io/arabsad/"/>
+    <xhtml:link rel="alternate" hreflang="ar-QA" href="https://sherow1982.github.io/arabsad/"/>
+    <xhtml:link rel="alternate" hreflang="ar-BH" href="https://sherow1982.github.io/arabsad/"/>
+    <xhtml:link rel="alternate" hreflang="ar-OM" href="https://sherow1982.github.io/arabsad/"/>
   </url>
   
   <!-- صفحات الخدمات -->
   <url>
-    <loc>https://sherow1982.github.io/arabsad/services/google-ads.html</loc>
+    <loc>https://sherow1982.github.io/arabsad/services/</loc>
+    <lastmod>2026-01-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  
+  <url>
+    <loc>https://sherow1982.github.io/arabsad/services/safahat-al5dmat.html</loc>
     <lastmod>2026-01-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
+  </url>
+  
+  <url>
+    <loc>https://sherow1982.github.io/arabsad/services/google-ads.html</loc>
+    <lastmod>2026-01-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://sherow1982.github.io/arabsad/services/social-media-ads.html</loc>
+    <lastmod>2026-01-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
   
   <url>
     <loc>https://sherow1982.github.io/arabsad/services/seo.html</loc>
-    <lastmod>2026-01-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  
-  <url>
-    <loc>https://sherow1982.github.io/arabsad/services/website-design.html</loc>
     <lastmod>2026-01-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -39,7 +59,7 @@
   </url>
   
   <url>
-    <loc>https://sherow1982.github.io/arabsad/services/social-media-ads.html</loc>
+    <loc>https://sherow1982.github.io/arabsad/services/website-design.html</loc>
     <lastmod>2026-01-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -57,42 +77,42 @@
     <loc>https://sherow1982.github.io/arabsad/sa.html</loc>
     <lastmod>2026-01-23</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.9</priority>
   </url>
   
   <url>
     <loc>https://sherow1982.github.io/arabsad/ae.html</loc>
     <lastmod>2026-01-23</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.9</priority>
   </url>
   
   <url>
     <loc>https://sherow1982.github.io/arabsad/kw.html</loc>
     <lastmod>2026-01-23</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.9</priority>
   </url>
   
   <url>
     <loc>https://sherow1982.github.io/arabsad/qa.html</loc>
     <lastmod>2026-01-23</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  
-  <url>
-    <loc>https://sherow1982.github.io/arabsad/bh.html</loc>
-    <lastmod>2026-01-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.9</priority>
   </url>
   
   <url>
     <loc>https://sherow1982.github.io/arabsad/om.html</loc>
     <lastmod>2026-01-23</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://sherow1982.github.io/arabsad/bh.html</loc>
+    <lastmod>2026-01-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
   
   <!-- صفحات المدن -->
@@ -100,14 +120,14 @@
     <loc>https://sherow1982.github.io/arabsad/cities/riyadh-google-ads.html</loc>
     <lastmod>2026-01-23</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
   </url>
   
   <url>
     <loc>https://sherow1982.github.io/arabsad/cities/jeddah-google-ads.html</loc>
     <lastmod>2026-01-23</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
   </url>
   
   <url>
@@ -121,7 +141,7 @@
     <loc>https://sherow1982.github.io/arabsad/cities/dubai-digital-marketing.html</loc>
     <lastmod>2026-01-23</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
   </url>
   
   <url>
@@ -149,7 +169,7 @@
     <loc>https://sherow1982.github.io/arabsad/cities/manama-digital-marketing.html</loc>
     <lastmod>2026-01-23</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.5</priority>
   </url>
   
   <!-- المدونة -->
@@ -160,23 +180,72 @@
     <priority>0.7</priority>
   </url>
   
-  <!-- صفحات أساسية -->
   <url>
-    <loc>https://sherow1982.github.io/arabsad/about.html</loc>
+    <loc>https://sherow1982.github.io/arabsad/blog/google-ads-saudi-guide-2025.html</loc>
+    <lastmod>2026-01-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://sherow1982.github.io/arabsad/blog/google-ads-uae-guide-2025.html</loc>
+    <lastmod>2026-01-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://sherow1982.github.io/arabsad/blog/google-ads-kuwait-guide-2025.html</loc>
+    <lastmod>2026-01-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://sherow1982.github.io/arabsad/blog/google-ads-qatar-guide-2025.html</loc>
+    <lastmod>2026-01-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://sherow1982.github.io/arabsad/blog/google-ads-bahrain-guide-2025.html</loc>
     <lastmod>2026-01-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://sherow1982.github.io/arabsad/contact.html</loc>
+    <loc>https://sherow1982.github.io/arabsad/blog/google-ads-oman-guide-2025.html</loc>
     <lastmod>2026-01-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://sherow1982.github.io/arabsad/legal.html</loc>
+    <loc>https://sherow1982.github.io/arabsad/blog/ecommerce-seo-gulf-optimization.html</loc>
+    <lastmod>2026-01-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://sherow1982.github.io/arabsad/blog/tiktok-snapchat-gulf-marketing-2025.html</loc>
+    <lastmod>2026-01-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <!-- صفحات قانونية -->
+  <url>
+    <loc>https://sherow1982.github.io/arabsad/privacy-policy.html</loc>
+    <lastmod>2026-01-23</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  
+  <url>
+    <loc>https://sherow1982.github.io/arabsad/terms-of-service.html</loc>
     <lastmod>2026-01-23</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>

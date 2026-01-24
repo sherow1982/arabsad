@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مطعم البيتزا الإيطالية - أفضل بيتزا في الكويت</title>
+    <meta name="description" content="مطعم البيتزا الإيطالية في الكويت - قائمة طعام تفاعلية مع إمكانية الطلب المباشر وخدمة التوصيل السريع">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            font-family: 'Segoe UI', sans-serif; 
+            background: linear-gradient(135deg, #e17055 0%, #f39c12 100%);
+            color: #333; 
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            min-height: 100vh;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+        
+        .header {
+            background: linear-gradient(45deg, #c0392b, #e74c3c);
+            color: white;
+            padding: 2rem;
+            text-align: center;
+        }
+        
+        .header h1 {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .header p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+        
+        .content {
+            padding: 2rem;
+        }
+        
+        .menu-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        
+        .menu-card {
+            background: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 10px;
+            border-left: 4px solid #e74c3c;
+            text-align: center;
+        }
+        
+        .menu-card h3 {
+            color: #2d3436;
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+        
+        .menu-card .price {
+            font-size: 1.5rem;
+            color: #e74c3c;
+            font-weight: bold;
+            margin: 1rem 0;
+        }
+        
+        .menu-card ul {
+            list-style: none;
+            padding: 0;
+            text-align: right;
+        }
+        
+        .menu-card li {
+            padding: 0.3rem 0;
+            color: #636e72;
+        }
+        
+        .menu-card li:before {
+            content: "🍕 ";
+            margin-left: 0.5rem;
+        }
+        
+        .contact-section {
+            background: linear-gradient(45deg, #27ae60, #2ecc71);
+            color: white;
+            padding: 2rem;
+            border-radius: 10px;
+            text-align: center;
+            margin: 2rem 0;
+        }
+        
+        .contact-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 1.5rem;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background: white;
+            color: #27ae60;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+        
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        
+        .whatsapp-btn {
+            background: #25D366;
+            color: white;
+        }
+        
+        .order-btn {
+            background: #e74c3c;
+            color: white;
+        }
+        
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+        
+        .feature {
+            text-align: center;
+            padding: 1rem;
+        }
+        
+        .feature-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        
+        .offers-section {
+            background: linear-gradient(45deg, #f39c12, #e67e22);
+            color: white;
+            padding: 2rem;
+            border-radius: 10px;
+            margin: 2rem 0;
+        }
+        
+        .offers-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+        
+        .offer-card {
+            background: rgba(255,255,255,0.1);
+            padding: 1.5rem;
+            border-radius: 10px;
+            text-align: center;
+        }
+        
+        @media (max-width: 768px) {
+            .header h1 { font-size: 1.5rem; }
+            .content { padding: 1rem; }
+            .contact-buttons { flex-direction: column; }
+            .btn { width: 100%; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🍕 مطعم البيتزا الإيطالية</h1>
+            <p>أصالة الطعم الإيطالي في قلب الكويت</p>
+            <p>📍 الكويت - دولة الكويت</p>
+        </div>
+        
+        <div class="content">
+            <div class="features">
+                <div class="feature">
+                    <div class="feature-icon">🇮🇹</div>
+                    <h3>بيتزا إيطالية أصلية</h3>
+                    <p>وصفات تقليدية من إيطاليا</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">🚚</div>
+                    <h3>توصيل سريع</h3>
+                    <p>توصيل خلال 30 دقيقة</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">📱</div>
+                    <h3>طلب أونلاين</h3>
+                    <p>اطلب بسهولة عبر الواتساب</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">⭐</div>
+                    <h3>جودة عالية</h3>
+                    <p>مكونات طازجة يومياً</p>
+                </div>
+            </div>
+            
+            <h2 style="text-align: center; color: #2d3436; margin: 2rem 0;">🍕 قائمة البيتزا المميزة</h2>
+            <div class="menu-grid">
+                <div class="menu-card">
+                    <h3>🍕 مارجريتا الكلاسيكية</h3>
+                    <div class="price">8 دنانير</div>
+                    <ul>
+                        <li>صلصة طماطم طازجة</li>
+                        <li>جبنة موتزاريلا إيطالية</li>
+                        <li>أوراق الريحان الطازج</li>
+                        <li>زيت زيتون بكر</li>
+                    </ul>
+                </div>
+                
+                <div class="menu-card">
+                    <h3>🍕 بيبروني الحارة</h3>
+                    <div class="price">12 دينار</div>
+                    <ul>
+                        <li>شرائح بيبروني مدخنة</li>
+                        <li>جبنة موتزاريلا</li>
+                        <li>فلفل حار</li>
+                        <li>صلصة طماطم حارة</li>
+                    </ul>
+                </div>
+                
+                <div class="menu-card">
+                    <h3>🍕 الأربع جبنات</h3>
+                    <div class="price">15 دينار</div>
+                    <ul>
+                        <li>موتزاريلا إيطالية</li>
+                        <li>جبنة بارميزان</li>
+                        <li>جبنة جورجونزولا</li>
+                        <li>جبنة ريكوتا</li>
+                    </ul>
+                </div>
+                
+                <div class="menu-card">
+                    <h3>🍕 سوبريم الخاصة</h3>
+                    <div class="price">18 دينار</div>
+                    <ul>
+                        <li>لحم مفروم مشوي</li>
+                        <li>فطر طازج</li>
+                        <li>فلفل ملون</li>
+                        <li>زيتون أسود وأخضر</li>
+                    </ul>
+                </div>
+                
+                <div class="menu-card">
+                    <h3>🍕 المأكولات البحرية</h3>
+                    <div class="price">22 دينار</div>
+                    <ul>
+                        <li>جمبري طازج</li>
+                        <li>حبار مشوي</li>
+                        <li>سلمون مدخن</li>
+                        <li>صلصة بيضاء كريمية</li>
+                    </ul>
+                </div>
+                
+                <div class="menu-card">
+                    <h3>🍕 الخضار الإيطالية</h3>
+                    <div class="price">10 دنانير</div>
+                    <ul>
+                        <li>باذنجان مشوي</li>
+                        <li>كوسا وفلفل</li>
+                        <li>طماطم كرزية</li>
+                        <li>جرجير طازج</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="offers-section">
+                <h2 style="text-align: center; margin-bottom: 1rem;">🎉 العروض اليومية</h2>
+                <p style="text-align: center;">عروض مميزة كل يوم في الأسبوع</p>
+                
+                <div class="offers-grid">
+                    <div class="offer-card">
+                        <h3>🌟 عرض الاثنين</h3>
+                        <div style="font-size: 1.5rem; margin: 1rem 0;">بيتزا + 1</div>
+                        <p>اشتري بيتزا واحصل على الثانية مجاناً</p>
+                    </div>
+                    <div class="offer-card">
+                        <h3>🔥 عرض الأربعاء</h3>
+                        <div style="font-size: 1.5rem; margin: 1rem 0;">خصم 50%</div>
+                        <p>خصم على جميع أنواع البيتزا الكبيرة</p>
+                    </div>
+                    <div class="offer-card">
+                        <h3>🎊 عرض نهاية الأسبوع</h3>
+                        <div style="font-size: 1.5rem; margin: 1rem 0;">وجبة عائلية</div>
+                        <p>3 بيتزا + مشروبات + حلى بـ 35 دينار</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div style="background: #74b9ff; color: white; padding: 2rem; border-radius: 10px; margin: 2rem 0;">
+                <h3 style="text-align: center; margin-bottom: 1rem;">🍽️ خدمات إضافية</h3>
+                <div class="features">
+                    <div class="feature">
+                        <div style="color: white;">🥗</div>
+                        <p>سلطات طازجة</p>
+                    </div>
+                    <div class="feature">
+                        <div style="color: white;">🥤</div>
+                        <p>مشروبات باردة وساخنة</p>
+                    </div>
+                    <div class="feature">
+                        <div style="color: white;">🍰</div>
+                        <p>حلويات إيطالية</p>
+                    </div>
+                    <div class="feature">
+                        <div style="color: white;">🍝</div>
+                        <p>معكرونة إيطالية</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="contact-section">
+                <h2>📞 اطلب الآن</h2>
+                <p>توصيل مجاني لجميع مناطق الكويت</p>
+                <p>طلبات الحد الأدنى 5 دنانير - دفع كاش أو كي نت</p>
+                
+                <div class="contact-buttons">
+                    <a href="https://wa.me/96550123456?text=أريد+طلب+بيتزا+من+المطعم" class="btn whatsapp-btn">
+                        📱 طلب واتساب: 50123456
+                    </a>
+                    <a href="tel:+96522345678" class="btn order-btn">
+                        📞 طلب هاتفي: 22345678
+                    </a>
+                </div>
+                
+                <div style="margin-top: 2rem; padding-top: 1rem; border-top: 1px solid rgba(255,255,255,0.3);">
+                    <p><strong>📍 العنوان:</strong> شارع سالم المبارك، منطقة السالمية، الكويت</p>
+                    <p><strong>⏰ ساعات العمل:</strong> يومياً من 11 صباحاً - 2 صباحاً</p>
+                    <p><strong>🚚 مناطق التوصيل:</strong> جميع مناطق الكويت - توصيل مجاني للطلبات فوق 10 دنانير</p>
+                </div>
+            </div>
+            
+            <div style="text-align: center; padding: 2rem; background: #2d3436; color: white; border-radius: 10px;">
+                <h3>🏆 لماذا مطعم البيتزا الإيطالية؟</h3>
+                <div class="features">
+                    <div class="feature">
+                        <div style="color: #e74c3c;">👨‍🍳</div>
+                        <p>طهاة إيطاليين محترفين</p>
+                    </div>
+                    <div class="feature">
+                        <div style="color: #e74c3c;">🌿</div>
+                        <p>مكونات طازجة يومياً</p>
+                    </div>
+                    <div class="feature">
+                        <div style="color: #e74c3c;">⚡</div>
+                        <p>توصيل سريع ومضمون</p>
+                    </div>
+                    <div class="feature">
+                        <div style="color: #e74c3c;">💰</div>
+                        <p>أسعار مناسبة للجميع</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
