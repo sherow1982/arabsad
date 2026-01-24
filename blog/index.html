@@ -22,6 +22,7 @@
             background: var(--dark-bg); 
             color: var(--text-light); 
             line-height: 1.6;
+            padding-top: 100px;
         }
         
         .container {
@@ -339,11 +340,21 @@
             .container { padding: 1rem; }
         }
     </style>
+
+    <meta property="og:image" content="https://sherow1982.github.io/arabsad/assets/images/بانر الصفحة الرئيسية.jpg">
+    <meta property="og:image:width" content="900">
+    <meta property="og:image:height" content="400">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="ar_SA">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://sherow1982.github.io/arabsad/assets/images/بانر الصفحة الرئيسية.jpg">
 </head>
 <body>
+    <!-- Header -->
+    <div data-include="shared-header.html"></div>
     <div class="container">
         <div class="hero">
-            <img src="../assets/images/المدونة.jpg" alt="مدونة إعلانات العرب" style="width: 100%; max-width: 600px; height: auto; margin: 0 auto 30px; display: block; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.3);">
+            <img src="../assets/images/المدونة.jpg" alt="مدونة إعلانات العرب" style="width: 100%; max-width: 600px; height: auto; margin: 0 auto 30px; display: block; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.3);" loading="lazy">
             <h1>📚 مدونة إعلانات العرب</h1>
             <p>دليلك الشامل للتسويق الرقمي وإعلانات Google وFacebook في دول الخليج العربي</p>
         </div>
@@ -384,7 +395,7 @@
             <!-- مقال وسائل التواصل الاجتماعي -->
             <div class="article-card" onclick="window.open('articles/social-media-ads-comprehensive-guide.html', '_blank')">
                 <div class="article-image">
-                    <img src="https://images.unsplash.com/photo-1611224923853-80b023f02d71?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="دليل إعلانات وسائل التواصل الاجتماعي الشامل 2025" loading="lazy">
+                    <img src="https://images.unsplash.com/photo-1611224923853-80b023f02d71?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="خدمات إعلانات وسائل التواصل الاجتماعي - فيسبوك وإنستغرام وسناب شات" loading="lazy">
                 </div>
                 <div class="card-header">
                     <span class="card-category">Social Media</span>
@@ -400,7 +411,7 @@
             <!-- مقال تصميم المواقع -->
             <div class="article-card" onclick="window.open('articles/website-design-comprehensive-guide.html', '_blank')">
                 <div class="article-image">
-                    <img src="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="دليل تصميم المواقع الإلكترونية الشامل 2025" loading="lazy">
+                    <img src="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="تصميم مواقع ويب احترافية ومتجاوبة - مؤسسة إعلانات العرب" loading="lazy">
                 </div>
                 <div class="card-header">
                     <span class="card-category">Web Design</span>
@@ -432,7 +443,7 @@
             <!-- مقال إدارة وسائل التواصل -->
             <div class="article-card" onclick="window.open('articles/social-media-management-guide.html', '_blank')">
                 <div class="article-image">
-                    <img src="https://images.unsplash.com/photo-1611224923853-80b023f02d71?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="دليل إدارة وسائل التواصل الاجتماعي الشامل 2025" loading="lazy">
+                    <img src="https://images.unsplash.com/photo-1611224923853-80b023f02d71?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="خدمات إعلانات وسائل التواصل الاجتماعي - فيسبوك وإنستغرام وسناب شات" loading="lazy">
                 </div>
                 <div class="card-header">
                     <span class="card-category">Social Management</span>
@@ -539,5 +550,25 @@
             </div>
         </div>
     </div>
+    <!-- Footer -->
+    <div data-include="shared-footer.html"></div>
+
+    <!-- Universal Header/Footer Script -->
+    <script src="/arabsad/assets/js/universal-header-footer.js"></script>
+    <script>
+        // Load Shared Header/Footer
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelectorAll('[data-include]').forEach(async function(el) {
+                try {
+                    const file = el.getAttribute('data-include');
+                    const response = await fetch('/arabsad/' + file);
+                    if (response.ok) {
+                        el.innerHTML = await response.text();
+                        if (file.includes('header') && typeof initMobileDropdowns === 'function') initMobileDropdowns();
+                    }
+                } catch (e) { console.log(e); }
+            });
+        });
+    </script>
 </body>
 </html>

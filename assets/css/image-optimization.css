@@ -1,0 +1,106 @@
+/**
+ * تحسين الصور - Image Optimization CSS
+ * مؤسسة إعلانات العرب - ArabSad
+ */
+
+/* تحسين عام للصور */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    transition: opacity 0.3s ease;
+}
+
+/* تحسين تحميل الصور */
+img[loading="lazy"] {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+img[loading="lazy"].loaded {
+    opacity: 1;
+}
+
+/* صور الخدمات */
+.service-image img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.service-card:hover .service-image img {
+    transform: scale(1.05);
+}
+
+/* صورة البانر الرئيسي */
+.hero-banner-img {
+    width: 100%;
+    max-width: 900px;
+    height: auto;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+    border-radius: 15px;
+    box-shadow: 0 15px 40px rgba(255, 184, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.hero-banner-img:hover {
+    transform: scale(1.02);
+}
+
+/* صور المقالات */
+.article-image img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.article-card:hover .article-image img {
+    transform: scale(1.05);
+}
+
+/* تحسين الأداء */
+@media (prefers-reduced-motion: reduce) {
+    img {
+        transition: none;
+    }
+}
+
+/* تحسين للشاشات عالية الدقة */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .hero-banner-img {
+        image-rendering: -webkit-optimize-contrast;
+        image-rendering: crisp-edges;
+    }
+}
+
+/* Placeholder للصور أثناء التحميل */
+.image-placeholder {
+    background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+    background-size: 200% 100%;
+    animation: loading 1.5s infinite;
+}
+
+@keyframes loading {
+    0% { background-position: 200% 0; }
+    100% { background-position: -200% 0; }
+}
+
+/* تحسين للجوال */
+@media (max-width: 768px) {
+    .hero-banner-img {
+        max-width: 100%;
+        height: auto;
+    }
+    
+    .service-image img {
+        height: 150px;
+    }
+    
+    .article-image img {
+        height: 150px;
+    }
+}

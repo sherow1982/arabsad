@@ -84,5 +84,28 @@
             });
         });
     </script>
+
+    <!-- Universal Header/Footer Scripts -->
+    <script src="/arabsad/assets/js/bfcache-fix.js"></script>
+    <script src="/arabsad/assets/js/universal-header-footer.js"></script>
+    <script>
+        // Load Shared Header/Footer
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelectorAll('[data-include]').forEach(async function(el) {
+                try {
+                    const file = el.getAttribute('data-include');
+                    const response = await fetch(file);
+                    if (response.ok) {
+                        el.innerHTML = await response.text();
+                        if (file.includes('header') && typeof initMobileDropdowns === 'function') {
+                            initMobileDropdowns();
+                        }
+                    }
+                } catch (e) { 
+                    console.log('Header/Footer load error:', e); 
+                }
+            });
+        });
+    </script>
 </body>
 </html>

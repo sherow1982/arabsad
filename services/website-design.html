@@ -357,7 +357,7 @@
     <main>
         <section class="hero">
             <div class="container">
-                <img src="../assets/images/مواقع.jpg" alt="تصميم مواقع ويب احترافية" style="width: 100%; max-width: 600px; height: auto; margin: 0 auto 30px; display: block; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.3);">
+                <img src="../assets/images/مواقع.jpg" alt="تصميم مواقع ويب احترافية ومتجاوبة - مؤسسة إعلانات العرب" style="width: 100%; max-width: 600px; height: auto; margin: 0 auto 30px; display: block; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.3);" loading="lazy">
                 <h1>💻 موقعك الإلكتروني هو موظف المبيعات الذي لا ينام</h1>
                 <p>نحن نصمم مواقع ويب احترافية، سريعة، وفخمة تجمع بين جمال التصميم وقوة البرمجة لتحويل الزوار إلى عملاء
                     دائمين.</p>
@@ -557,6 +557,29 @@
                 const isVisible = answer.style.display === 'block';
                 document.querySelectorAll('.faq-answer').forEach(ans => ans.style.display = 'none');
                 if (!isVisible) answer.style.display = 'block';
+            });
+        });
+    </script>
+
+    <!-- Universal Header/Footer Scripts -->
+    <script src="/arabsad/assets/js/bfcache-fix.js"></script>
+    <script src="/arabsad/assets/js/universal-header-footer.js"></script>
+    <script>
+        // Load Shared Header/Footer
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelectorAll('[data-include]').forEach(async function(el) {
+                try {
+                    const file = el.getAttribute('data-include');
+                    const response = await fetch(file);
+                    if (response.ok) {
+                        el.innerHTML = await response.text();
+                        if (file.includes('header') && typeof initMobileDropdowns === 'function') {
+                            initMobileDropdowns();
+                        }
+                    }
+                } catch (e) { 
+                    console.log('Header/Footer load error:', e); 
+                }
             });
         });
     </script>

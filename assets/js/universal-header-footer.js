@@ -7,6 +7,8 @@
 class UniversalHeaderFooter {
     constructor() {
         this.baseUrl = this.getBaseUrl();
+        this.retryCount = 0;
+        this.maxRetries = 3;
         this.init();
     }
 
@@ -19,10 +21,24 @@ class UniversalHeaderFooter {
     }
 
     async init() {
-        await this.loadHeader();
-        await this.loadFooter();
-        this.adjustBodyPadding();
-        this.initializeNavigation();
+        try {
+            await this.loadHeader();
+            await this.loadFooter();
+            this.adjustBodyPadding();
+            this.initializeNavigation();
+            console.log('✅ Header & Footer loaded successfully');
+        } catch (error) {
+            console.error('❌ Failed to load header/footer:', error);
+            if (this.retryCount < this.maxRetries) {
+                this.retryCount++;
+                console.log(`🔄 Retrying... (${this.retryCount}/${this.maxRetries})`);
+                setTimeout(() => this.init(), 1000);
+            } else {
+                console.log('🚨 Using fallback header/footer');
+                this.createFallbackHeader();
+                this.createFallbackFooter();
+            }
+        }
     }
 
     async loadHeader() {
