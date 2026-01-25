@@ -127,7 +127,8 @@
     </script>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            if (!localStorage.getItem('cookieConsent')) {
+            try {
+            if (!localStorage || !localStorage.getItem('cookieConsent')) {
                 var banner = document.createElement('div');
                 banner.id = 'cookie-banner';
                 banner.style.cssText = 'position: fixed; bottom: 20px; right: 20px; left: 20px; background: #1a1f3a; color: #fff; padding: 20px; border-radius: 10px; box-shadow: 0 5px 20px rgba(0,0,0,0.3); z-index: 10000; border: 1px solid #FFB800; display: flex; flex-direction: column; gap: 15px; max-width: 500px; font-family: "Cairo", sans-serif; direction: rtl;';
@@ -141,7 +142,7 @@
                 btn.style.cssText = 'background: #FFB800; color: #000; border: none; padding: 8px 20px; border-radius: 5px; cursor: pointer; font-weight: bold; align-self: flex-end; font-family: "Cairo", sans-serif;';
                 
                 btn.onclick = function() {
-                    localStorage.setItem('cookieConsent', 'true');
+                    try { localStorage.setItem('cookieConsent', 'true'); } catch(e) {}
                     banner.style.display = 'none';
                 };
                 
@@ -149,6 +150,7 @@
                 banner.appendChild(btn);
                 document.body.appendChild(banner);
             }
+            } catch(e) { console.log('Cookie banner error:', e); }
         });
     </script>
 
@@ -800,10 +802,18 @@
                 try {
                     const file = el.getAttribute('data-include');
                     // Try multiple paths to find the file
-                    let response = await fetch('../' + file);
-                    if (!response.ok) response = await fetch('/arabsad/' + file);
+                    let response;
+                    try {
+                        response = await fetch('../' + file);
+                    } catch(e) { console.log('Fetch 1 failed', e); }
                     
-                    if (response.ok) {
+                    if (!response || !response.ok) {
+                        try {
+                            response = await fetch('/arabsad/' + file);
+                        } catch(e) { console.log('Fetch 2 failed', e); }
+                    }
+                    
+                    if (response && response.ok) {
                         el.innerHTML = await response.text();
                         // Execute scripts found in the included file
                         el.querySelectorAll('script').forEach(s => {
