@@ -138,14 +138,15 @@ class UniversalHeaderFooter {
             }
         };
 
-        // ربط الزر يدوياً لضمان العمل
-        const btn = document.querySelector('.mobile-menu-btn');
-        if (btn) {
-            btn.onclick = function(e) {
+        // ربط الزر باستخدام التفويض (Delegation) لضمان العمل
+        document.addEventListener('click', function(e) {
+            const btn = e.target.closest('.mobile-menu-btn');
+            if (btn) {
+                e.preventDefault();
                 e.stopPropagation();
                 window.toggleMobileMenu();
             }
-        };
+        });
 
         // إغلاق القائمة عند النقر خارجها
         document.addEventListener('click', function(event) {
