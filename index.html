@@ -8,6 +8,23 @@
     <link rel="canonical" href="https://sherow1982.github.io/arabsad/">
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     
+    <!-- Indexing & SEO -->
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://sherow1982.github.io/arabsad/">
+    <meta property="og:title" content="مؤسسة إعلانات العرب | وكالة تسويق رقمي شاملة في الخليج">
+    <meta property="og:description" content="شريكك الاستراتيجي في التسويق الرقمي. نقدم خدمات إعلانات جوجل، إدارة السوشيال ميديا، تحسين محركات البحث، وتصميم المواقع.">
+    <meta property="og:image" content="https://sherow1982.github.io/arabsad/assets/images/logo-arabsad.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://sherow1982.github.io/arabsad/">
+    <meta property="twitter:title" content="مؤسسة إعلانات العرب | وكالة تسويق رقمي شاملة في الخليج">
+    <meta property="twitter:description" content="شريكك الاستراتيجي في التسويق الرقمي. نقدم خدمات إعلانات جوجل، إدارة السوشيال ميديا، تحسين محركات البحث، وتصميم المواقع.">
+    <meta property="twitter:image" content="https://sherow1982.github.io/arabsad/assets/images/logo-arabsad.png">
+    
     <!-- Fonts & Icons -->
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
@@ -160,6 +177,23 @@
 <body>
     <!-- Header will be injected here -->
     <div data-include="shared-header.html"></div>
+    
+    <!-- Fallback Navigation for Crawlers (SEO Fix) -->
+    <noscript>
+        <div style="padding: 20px; background: #0f142e; color: #fff; text-align: center;">
+            <nav>
+                <a href="services/" style="color: #FFB800; margin: 0 10px;">الخدمات</a> |
+                <a href="about.html" style="color: #FFB800; margin: 0 10px;">من نحن</a> |
+                <a href="contact.html" style="color: #FFB800; margin: 0 10px;">اتصل بنا</a> |
+                <a href="sa.html" style="color: #FFB800; margin: 0 10px;">السعودية</a> |
+                <a href="ae.html" style="color: #FFB800; margin: 0 10px;">الإمارات</a> |
+                <a href="kw.html" style="color: #FFB800; margin: 0 10px;">الكويت</a> |
+                <a href="qa.html" style="color: #FFB800; margin: 0 10px;">قطر</a> |
+                <a href="bh.html" style="color: #FFB800; margin: 0 10px;">البحرين</a> |
+                <a href="om.html" style="color: #FFB800; margin: 0 10px;">عمان</a>
+            </nav>
+        </div>
+    </noscript>
 
     <main>
         <!-- Hero Section -->
@@ -180,6 +214,20 @@
             <div class="container">
                 <div class="section-title">خدماتنا المتميزة</div>
                 <div class="services-grid">
+                    <!-- Google Maps Alternative -->
+                    <a href="services/safahat-al5dmat.html" class="service-card" style="border: 1px solid var(--primary); box-shadow: 0 0 20px rgba(255, 184, 0, 0.1);">
+                        <div class="service-image-wrapper">
+                            <div style="position: absolute; top: 15px; left: 15px; background: var(--primary); color: #000; padding: 5px 12px; border-radius: 50px; font-weight: bold; font-size: 0.8rem; z-index: 5;">حصري 🔥</div>
+                            <img src="assets/images/بديل خرائط جوجل.jpg" alt="بديل خرائط جوجل" loading="lazy">
+                            <div class="service-icon-float"><i class="fas fa-map-location-dot"></i></div>
+                        </div>
+                        <div class="service-content">
+                            <h3 class="service-title">بديل خرائط جوجل</h3>
+                            <p class="service-desc">احمِ نشاطك من الإغلاق. صفحات هبوط خاصة ملك لك 100% تغنيك عن مشاكل الخرائط وبلاغات المنافسين.</p>
+                            <span class="service-link">المزيد ←</span>
+                        </div>
+                    </a>
+
                     <!-- Google Ads -->
                     <a href="services/google-ads.html" class="service-card">
                         <div class="service-image-wrapper">
