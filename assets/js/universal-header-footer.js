@@ -116,11 +116,43 @@ class UniversalHeaderFooter {
 
     initializeNavigation() {
         // تهيئة التنقل بعد تحميل الهيدر
-        setTimeout(() => {
-            if (typeof toggleMobileMenu === 'function') {
-                // الدوال موجودة بالفعل في shared-header.html
+        
+        // تعريف دوال القائمة للموبايل
+        window.toggleMobileMenu = function() {
+            const menu = document.getElementById('mobile-menu');
+            const icon = document.getElementById('hamburger-icon');
+            
+            if (menu && icon) {
+                if (menu.style.display === 'none' || menu.style.display === '') {
+                    menu.style.display = 'block';
+                    icon.textContent = '✕';
+                } else {
+                    menu.style.display = 'none';
+                    icon.textContent = '☰';
+                }
             }
-        }, 100);
+        };
+
+        window.closeMobileMenu = function() {
+            const menu = document.getElementById('mobile-menu');
+            const icon = document.getElementById('hamburger-icon');
+            if (menu && icon) {
+                menu.style.display = 'none';
+                icon.textContent = '☰';
+            }
+        };
+
+        // إغلاق القائمة عند النقر خارجها
+        document.addEventListener('click', function(event) {
+            const menu = document.getElementById('mobile-menu');
+            const btn = document.querySelector('.mobile-menu-btn');
+            
+            if (menu && btn && !menu.contains(event.target) && !btn.contains(event.target)) {
+                if (menu.style.display === 'block') {
+                    window.closeMobileMenu();
+                }
+            }
+        });
     }
 
     createFallbackHeader() {
