@@ -40,6 +40,48 @@
             .grid-3, .grid-4 { grid-template-columns: 1fr; }
         }
     </style>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-KTDVX65TFY"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-KTDVX65TFY');
+    </script>
+    <script type="text/javascript">
+        (function(c,l,a,r,i,t,y){
+            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+        })(window, document, "clarity", "script", "v6p11fohgx");
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            if (!localStorage.getItem('cookieConsent')) {
+                var banner = document.createElement('div');
+                banner.id = 'cookie-banner';
+                banner.style.cssText = 'position: fixed; bottom: 20px; right: 20px; left: 20px; background: #1a1f3a; color: #fff; padding: 20px; border-radius: 10px; box-shadow: 0 5px 20px rgba(0,0,0,0.3); z-index: 10000; border: 1px solid #FFB800; display: flex; flex-direction: column; gap: 15px; max-width: 500px; font-family: "Cairo", sans-serif; direction: rtl;';
+                
+                var text = document.createElement('p');
+                text.style.cssText = 'margin: 0; font-size: 0.95rem; line-height: 1.6;';
+                text.textContent = 'نحن لا نقوم بتسجيل بياناتك لان موقعنا ستاتيك  لا نحصل على اي بيانات الا التي تريد انت كمستخدم ان تعطيها لنا';
+                
+                var btn = document.createElement('button');
+                btn.textContent = 'حسناً، فهمت';
+                btn.style.cssText = 'background: #FFB800; color: #000; border: none; padding: 8px 20px; border-radius: 5px; cursor: pointer; font-weight: bold; align-self: flex-end; font-family: "Cairo", sans-serif;';
+                
+                btn.onclick = function() {
+                    localStorage.setItem('cookieConsent', 'true');
+                    banner.style.display = 'none';
+                };
+                
+                banner.appendChild(text);
+                banner.appendChild(btn);
+                document.body.appendChild(banner);
+            }
+        });
+    </script>
 </head>
 <body>
     <div data-include="shared-header.html"></div>
