@@ -813,6 +813,12 @@
                         } catch(e) { console.log('Fetch 2 failed', e); }
                     }
                     
+                    if (!response || !response.ok) {
+                        try {
+                            response = await fetch(file); // Try direct path as last resort
+                        } catch(e) { console.log('Fetch 3 failed', e); }
+                    }
+                    
                     if (response && response.ok) {
                         el.innerHTML = await response.text();
                         // Execute scripts found in the included file
