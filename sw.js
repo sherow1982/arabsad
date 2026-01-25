@@ -1,6 +1,6 @@
 // Service Worker for ArabSad PWA - Enhanced Version
 const CACHE_NAME = 'arabsad-v2.0.0';
-const CACHE_VERSION = '2026-01-23-v7';
+const CACHE_VERSION = '2026-01-23-v8';
 
 // قائمة الملفات الأساسية للتخزين المؤقت
 const CORE_CACHE = [
