@@ -73,8 +73,26 @@ footer {
         backdrop-filter: blur(15px) !important;
         -webkit-backdrop-filter: blur(15px) !important;
         border-top: 1px solid rgba(255, 184, 0, 0.2) !important;
-        padding: 1rem !important;
         box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2) !important;
+        
+        /* Animation Styles */
+        display: block !important;
+        max-height: 0;
+        opacity: 0;
+        visibility: hidden;
+        overflow: hidden;
+        padding: 0 !important;
+        transform: translateY(-10px);
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    }
+    
+    .mobile-menu.active {
+        max-height: 80vh;
+        opacity: 1;
+        visibility: visible;
+        padding: 1rem !important;
+        transform: translateY(0);
+        overflow-y: auto;
     }
     
     .mobile-menu a {

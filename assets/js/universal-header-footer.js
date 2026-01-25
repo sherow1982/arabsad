@@ -123,13 +123,9 @@ class UniversalHeaderFooter {
             const icon = document.getElementById('hamburger-icon');
             
             if (menu) {
-                if (menu.style.display === 'none' || menu.style.display === '') {
-                    menu.style.display = 'block';
-                    if (icon) icon.textContent = '✕';
-                } else {
-                    menu.style.display = 'none';
-                    if (icon) icon.textContent = '☰';
-                }
+                menu.classList.toggle('active');
+                const isOpen = menu.classList.contains('active');
+                if (icon) icon.textContent = isOpen ? '✕' : '☰';
             }
         };
 
@@ -137,7 +133,7 @@ class UniversalHeaderFooter {
             const menu = document.getElementById('mobile-menu');
             const icon = document.getElementById('hamburger-icon');
             if (menu) {
-                menu.style.display = 'none';
+                menu.classList.remove('active');
                 if (icon) icon.textContent = '☰';
             }
         };
@@ -157,7 +153,7 @@ class UniversalHeaderFooter {
             const btn = document.querySelector('.mobile-menu-btn');
             
             if (menu && btn && !menu.contains(event.target) && !btn.contains(event.target)) {
-                if (menu.style.display === 'block') {
+                if (menu.classList.contains('active')) {
                     window.closeMobileMenu();
                 }
             }
