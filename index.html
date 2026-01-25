@@ -48,6 +48,114 @@
         ]
     }
     </script>
+    <style>
+        /* Mobile First Styles for Services */
+        .services-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 25px;
+            margin-top: 30px;
+        }
+        @media (min-width: 768px) {
+            .services-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        @media (min-width: 1024px) {
+            .services-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+        
+        .service-card {
+            background: var(--dark-secondary);
+            border-radius: 20px;
+            overflow: hidden;
+            text-decoration: none;
+            color: inherit;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255,255,255,0.05);
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            height: 100%;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--primary);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+        }
+        
+        .service-image-wrapper {
+            height: 220px;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .service-image-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .service-card:hover .service-image-wrapper img {
+            transform: scale(1.1);
+        }
+        
+        .service-content {
+            padding: 25px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .service-icon-float {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: rgba(255, 255, 255, 0.95);
+            width: 50px;
+            height: 50px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            color: var(--primary);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            z-index: 2;
+        }
+        
+        .service-title {
+            font-size: 1.4rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            color: #fff;
+        }
+        
+        .service-desc {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+        
+        .service-link {
+            margin-top: auto;
+            color: var(--primary);
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            font-size: 0.9rem;
+        }
+        
+        .service-card:hover .service-link {
+            gap: 10px;
+        }
+    </style>
 </head>
 <body>
     <!-- Header will be injected here -->
@@ -71,43 +179,84 @@
         <section class="section">
             <div class="container">
                 <div class="section-title">خدماتنا المتميزة</div>
-                <div class="grid grid-3">
-                    <div class="card">
-                        <div class="card-icon"><i class="fab fa-google"></i></div>
-                        <h3>إعلانات Google Ads</h3>
-                        <p>تصدر نتائج البحث وحقق مبيعات فورية مع حملات مدروسة.</p>
-                        <a href="services/google-ads.html" style="color: var(--primary); text-decoration: none; font-weight: bold;">المزيد ←</a>
-                    </div>
-                    <div class="card">
-                        <div class="card-icon"><i class="fas fa-search"></i></div>
-                        <h3>تحسين محركات البحث SEO</h3>
-                        <p>ظهور طبيعي ومستدام في الصفحات الأولى لمحركات البحث.</p>
-                        <a href="services/seo.html" style="color: var(--primary); text-decoration: none; font-weight: bold;">المزيد ←</a>
-                    </div>
-                    <div class="card">
-                        <div class="card-icon"><i class="fas fa-share-alt"></i></div>
-                        <h3>إدارة السوشيال ميديا</h3>
-                        <p>بناء مجتمع متفاعل وتعزيز هويتك الرقمية على منصات التواصل.</p>
-                        <a href="services/social-management.html" style="color: var(--primary); text-decoration: none; font-weight: bold;">المزيد ←</a>
-                    </div>
-                    <div class="card">
-                        <div class="card-icon"><i class="fas fa-laptop-code"></i></div>
-                        <h3>تصميم المواقع</h3>
-                        <p>مواقع ويب عصرية وسريعة تعكس احترافية عملك.</p>
-                        <a href="services/website-design.html" style="color: var(--primary); text-decoration: none; font-weight: bold;">المزيد ←</a>
-                    </div>
-                    <div class="card">
-                        <div class="card-icon"><i class="fas fa-shopping-cart"></i></div>
-                        <h3>المتاجر الإلكترونية</h3>
-                        <p>حلول تجارة إلكترونية متكاملة لبيع منتجاتك أونلاين.</p>
-                        <a href="services/ecommerce.html" style="color: var(--primary); text-decoration: none; font-weight: bold;">المزيد ←</a>
-                    </div>
-                    <div class="card">
-                        <div class="card-icon"><i class="fas fa-bullhorn"></i></div>
-                        <h3>إعلانات السوشيال ميديا</h3>
-                        <p>حملات ممولة دقيقة الاستهداف على فيسبوك، انستقرام، وسناب شات.</p>
-                        <a href="services/social-media-ads.html" style="color: var(--primary); text-decoration: none; font-weight: bold;">المزيد ←</a>
-                    </div>
+                <div class="services-grid">
+                    <!-- Google Ads -->
+                    <a href="services/google-ads.html" class="service-card">
+                        <div class="service-image-wrapper">
+                            <img src="assets/images/خدمات اعلانات جوجل.jpg" alt="إعلانات Google Ads" loading="lazy">
+                            <div class="service-icon-float"><i class="fab fa-google"></i></div>
+                        </div>
+                        <div class="service-content">
+                            <h3 class="service-title">إعلانات Google Ads</h3>
+                            <p class="service-desc">تصدر نتائج البحث وحقق مبيعات فورية مع حملات مدروسة تستهدف عملاءك بدقة.</p>
+                            <span class="service-link">المزيد ←</span>
+                        </div>
+                    </a>
+
+                    <!-- SEO -->
+                    <a href="services/seo.html" class="service-card">
+                        <div class="service-image-wrapper">
+                            <img src="assets/images/سيو.jpg" alt="تحسين محركات البحث SEO" loading="lazy">
+                            <div class="service-icon-float"><i class="fas fa-search"></i></div>
+                        </div>
+                        <div class="service-content">
+                            <h3 class="service-title">تحسين محركات البحث SEO</h3>
+                            <p class="service-desc">ظهور طبيعي ومستدام في الصفحات الأولى لمحركات البحث لزيادة الزيارات المجانية.</p>
+                            <span class="service-link">المزيد ←</span>
+                        </div>
+                    </a>
+
+                    <!-- Social Media Management -->
+                    <a href="services/social-management.html" class="service-card">
+                        <div class="service-image-wrapper">
+                            <img src="assets/images/وسائل التواصل.jpg" alt="إدارة السوشيال ميديا" loading="lazy">
+                            <div class="service-icon-float"><i class="fas fa-share-alt"></i></div>
+                        </div>
+                        <div class="service-content">
+                            <h3 class="service-title">إدارة السوشيال ميديا</h3>
+                            <p class="service-desc">بناء مجتمع متفاعل وتعزيز هويتك الرقمية على منصات التواصل بمحتوى إبداعي.</p>
+                            <span class="service-link">المزيد ←</span>
+                        </div>
+                    </a>
+
+                    <!-- Website Design -->
+                    <a href="services/website-design.html" class="service-card">
+                        <div class="service-image-wrapper">
+                            <img src="assets/images/مواقع.jpg" alt="تصميم المواقع" loading="lazy">
+                            <div class="service-icon-float"><i class="fas fa-laptop-code"></i></div>
+                        </div>
+                        <div class="service-content">
+                            <h3 class="service-title">تصميم المواقع</h3>
+                            <p class="service-desc">مواقع ويب عصرية وسريعة تعكس احترافية عملك وتعمل بكفاءة على جميع الأجهزة.</p>
+                            <span class="service-link">المزيد ←</span>
+                        </div>
+                    </a>
+
+                    <!-- Ecommerce -->
+                    <a href="services/ecommerce.html" class="service-card">
+                        <div class="service-image-wrapper">
+                            <img src="assets/images/التجارة الالكترونية.jpg" alt="المتاجر الإلكترونية" loading="lazy">
+                            <div class="service-icon-float"><i class="fas fa-shopping-cart"></i></div>
+                        </div>
+                        <div class="service-content">
+                            <h3 class="service-title">المتاجر الإلكترونية</h3>
+                            <p class="service-desc">حلول تجارة إلكترونية متكاملة لبيع منتجاتك أونلاين مع ربط الدفع والشحن.</p>
+                            <span class="service-link">المزيد ←</span>
+                        </div>
+                    </a>
+
+                    <!-- Social Media Ads -->
+                    <a href="services/social-media-ads.html" class="service-card">
+                        <div class="service-image-wrapper">
+                            <img src="assets/images/وسائل التواصل.jpg" alt="إعلانات السوشيال ميديا" loading="lazy">
+                            <div class="service-icon-float"><i class="fas fa-bullhorn"></i></div>
+                        </div>
+                        <div class="service-content">
+                            <h3 class="service-title">إعلانات السوشيال ميديا</h3>
+                            <p class="service-desc">حملات ممولة دقيقة الاستهداف على فيسبوك، انستقرام، وسناب شات لتحقيق أعلى عائد.</p>
+                            <span class="service-link">المزيد ←</span>
+                        </div>
+                    </a>
                 </div>
             </div>
         </section>
