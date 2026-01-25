@@ -799,8 +799,20 @@
             document.querySelectorAll('[data-include]').forEach(async function(el) {
                 try {
                     const file = el.getAttribute('data-include');
-                    const response = await fetch('/arabsad/' + file);
-                    if (response.ok) el.innerHTML = await response.text();
+                    // Try multiple paths to find the file
+                    let response = await fetch('../' + file);
+                    if (!response.ok) response = await fetch('/arabsad/' + file);
+                    
+                    if (response.ok) {
+                        el.innerHTML = await response.text();
+                        // Execute scripts found in the included file
+                        el.querySelectorAll('script').forEach(s => {
+                            const newScript = document.createElement('script');
+                            if (s.src) newScript.src = s.src;
+                            else newScript.textContent = s.textContent;
+                            document.body.appendChild(newScript);
+                        });
+                    }
                 } catch (e) { console.log(e); }
             });
         });
