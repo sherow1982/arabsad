@@ -534,11 +534,20 @@
             document.querySelectorAll('[data-include]').forEach(async function(el) {
                 try {
                     const file = el.getAttribute('data-include');
-                    const basePath = window.location.pathname.includes('/arabsad/') ? '/arabsad/' : './';
-                    const response = await fetch(basePath + file);
-                    if (response.ok) el.innerHTML = await response.text();
-                    else console.warn(`Failed to load: ${file}`);
-                } catch (e) { console.error('Include error:', e); }
+                    let response;
+                    try { response = await fetch(file); } catch(e) {}
+                    if (!response || !response.ok) try { response = await fetch('/arabsad/' + file); } catch(e) {}
+                    
+                    if (response && response.ok) {
+                        el.innerHTML = await response.text();
+                        el.querySelectorAll('script').forEach(s => {
+                            const newScript = document.createElement('script');
+                            if (s.src) newScript.src = s.src;
+                            else newScript.textContent = s.textContent;
+                            document.body.appendChild(newScript);
+                        });
+                    }
+                } catch (e) { console.log(e); }
             });
         });
     </script>
