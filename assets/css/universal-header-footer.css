@@ -120,6 +120,10 @@ footer {
         display: none !important;
     }
     
+    .mobile-menu {
+        display: none !important;
+    }
+    
     .desktop-menu {
         display: flex !important;
         align-items: center !important;
