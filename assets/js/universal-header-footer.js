@@ -122,13 +122,13 @@ class UniversalHeaderFooter {
             const menu = document.getElementById('mobile-menu');
             const icon = document.getElementById('hamburger-icon');
             
-            if (menu && icon) {
+            if (menu) {
                 if (menu.style.display === 'none' || menu.style.display === '') {
                     menu.style.display = 'block';
-                    icon.textContent = '✕';
+                    if (icon) icon.textContent = '✕';
                 } else {
                     menu.style.display = 'none';
-                    icon.textContent = '☰';
+                    if (icon) icon.textContent = '☰';
                 }
             }
         };
@@ -136,9 +136,18 @@ class UniversalHeaderFooter {
         window.closeMobileMenu = function() {
             const menu = document.getElementById('mobile-menu');
             const icon = document.getElementById('hamburger-icon');
-            if (menu && icon) {
+            if (menu) {
                 menu.style.display = 'none';
-                icon.textContent = '☰';
+                if (icon) icon.textContent = '☰';
+            }
+        };
+
+        // ربط الزر يدوياً لضمان العمل
+        const btn = document.querySelector('.mobile-menu-btn');
+        if (btn) {
+            btn.onclick = function(e) {
+                e.stopPropagation();
+                window.toggleMobileMenu();
             }
         };
 
