@@ -170,6 +170,29 @@
         </header>
 
         <div class="articles-grid">
+            
+            <!-- (جديد) مقال السعودية: تم إضافته هنا في البداية -->
+            <article class="article-card">
+                <div class="article-image">
+                    <!-- وضعت صورة تعبر عن السوق السعودي/المالي، يمكنك تغيير الرابط بصورتك الخاصة -->
+                    <img src="https://images.unsplash.com/photo-1559526324-4b87b5e36e44?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="دليل إعلانات السعودية 2026" loading="lazy">
+                    <div class="article-badge" style="background-color: #006C35;">Saudi Market</div>
+                </div>
+                <div class="article-content">
+                    <h2 class="article-title">دليل شامل: كيف تبدأ حملة إعلانية ممولة ناجحة في السعودية</h2>
+                    <div class="article-meta">
+                        <span>28 يناير 2026</span>
+                        <div class="read-time">
+                            <span>⏱️</span>
+                            <span>7 دقائق قراءة</span>
+                        </div>
+                    </div>
+                    <p class="article-excerpt">دليل عملي لاكتساح السوق السعودي في 2026. كل ما تحتاج معرفته عن رخصة "موثوق"، إعلانات سناب شات وتيك توك، وكيفية استخدام تابي وتمارا لمضاعفة المبيعات.</p>
+                    <a href="saudi-ads-guide-2026.html" class="article-link" style="background-color: #006C35;">اقرأ الدليل الكامل</a>
+                </div>
+            </article>
+            <!-- نهاية مقال السعودية -->
+
             <!-- مقال Google Ads -->
             <article class="article-card">
                 <div class="article-image">
@@ -305,11 +328,4 @@
                     const response = await fetch('/arabsad/' + file);
                     if (response.ok) {
                         el.innerHTML = await response.text();
-                        if (file.includes('header') && typeof initMobileDropdowns === 'function') initMobileDropdowns();
-                    }
-                } catch (e) { console.log(e); }
-            });
-        });
-    </script>
-</body>
-</html>
+                        if (file.includes('head
