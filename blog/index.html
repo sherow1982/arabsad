@@ -314,329 +314,4 @@
         
         .guide-card:hover {
             transform: translateY(-3px);
-            box-shadow: 0 8px 25px rgba(0, 212, 170, 0.2);
-        }
-        
-        .guide-icon {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-        }
-        
-        .guide-title {
-            font-size: 1.2rem;
-            color: var(--text-light);
-            margin-bottom: 0.5rem;
-        }
-        
-        .guide-country {
-            color: var(--accent);
-            font-weight: 600;
-        }
-        
-        @media (max-width: 768px) {
-            .hero h1 { font-size: 2rem; }
-            .articles-grid { grid-template-columns: 1fr; }
-            .guides-grid { grid-template-columns: 1fr; }
-            .container { padding: 1rem; }
-        }
-    </style>
-
-    <meta property="og:image" content="https://sherow1982.github.io/arabsad/assets/images/بانر الصفحة الرئيسية.jpg">
-    <meta property="og:image:width" content="900">
-    <meta property="og:image:height" content="400">
-    <meta property="og:type" content="website">
-    <meta property="og:locale" content="ar_SA">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:image" content="https://sherow1982.github.io/arabsad/assets/images/بانر الصفحة الرئيسية.jpg">
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-KTDVX65TFY"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'G-KTDVX65TFY');
-    </script>
-    <script type="text/javascript">
-        (function(c,l,a,r,i,t,y){
-            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-        })(window, document, "clarity", "script", "v6p11fohgx");
-    </script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            if (!localStorage.getItem('cookieConsent')) {
-                var banner = document.createElement('div');
-                banner.id = 'cookie-banner';
-                banner.style.cssText = 'position: fixed; bottom: 20px; right: 20px; left: 20px; background: #1a1f3a; color: #fff; padding: 20px; border-radius: 10px; box-shadow: 0 5px 20px rgba(0,0,0,0.3); z-index: 10000; border: 1px solid #FFB800; display: flex; flex-direction: column; gap: 15px; max-width: 500px; font-family: "Cairo", sans-serif; direction: rtl;';
-                
-                var text = document.createElement('p');
-                text.style.cssText = 'margin: 0; font-size: 0.95rem; line-height: 1.6;';
-                text.textContent = 'نحن لا نقوم بتسجيل بياناتك لان موقعنا ستاتيك  لا نحصل على اي بيانات الا التي تريد انت كمستخدم ان تعطيها لنا';
-                
-                var btn = document.createElement('button');
-                btn.textContent = 'حسناً، فهمت';
-                btn.style.cssText = 'background: #FFB800; color: #000; border: none; padding: 8px 20px; border-radius: 5px; cursor: pointer; font-weight: bold; align-self: flex-end; font-family: "Cairo", sans-serif;';
-                
-                btn.onclick = function() {
-                    localStorage.setItem('cookieConsent', 'true');
-                    banner.style.display = 'none';
-                };
-                
-                banner.appendChild(text);
-                banner.appendChild(btn);
-                document.body.appendChild(banner);
-            }
-        });
-    </script>
-</head>
-<body>
-    <!-- Header -->
-    <div data-include="shared-header.html"></div>
-    <div class="container">
-        <div class="hero">
-            <img src="../assets/images/المدونة.jpg" alt="مدونة إعلانات العرب" style="width: 100%; max-width: 600px; height: auto; margin: 0 auto 30px; display: block; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.3);" loading="lazy">
-            <h1>📚 مدونة إعلانات العرب</h1>
-            <p>دليلك الشامل للتسويق الرقمي وإعلانات Google وFacebook في دول الخليج العربي</p>
-        </div>
-        
-        <div class="articles-grid">
-            <!-- مقال Google Ads الشامل -->
-            <div class="article-card" onclick="window.open('articles/google-ads-comprehensive-guide.html', '_blank')">
-                <div class="article-image">
-                    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="دليل إعلانات جوجل الشامل 2025" loading="lazy">
-                </div>
-                <div class="card-header">
-                    <span class="card-category">Google Ads</span>
-                    <h3 class="card-title">دليل إعلانات جوجل الشامل 2025</h3>
-                    <p class="card-description">تعلم كيفية إنشاء حملات Google Ads مربحة من الصفر. دليل شامل يغطي جميع أنواع الحملات مع استراتيجيات متقدمة للسوق الخليجي</p>
-                </div>
-                <div class="card-footer">
-                    <span class="card-date">23 يناير 2025 • 15 دقيقة قراءة</span>
-                    <span class="card-arrow">←</span>
-                </div>
-            </div>
-            
-            <!-- مقال SEO الشامل -->
-            <div class="article-card" onclick="window.open('articles/seo-comprehensive-guide.html', '_blank')">
-                <div class="article-image">
-                    <img src="https://images.unsplash.com/photo-1562577309-4932fdd64cd1?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="دليل تحسين محركات البحث SEO الشامل 2025" loading="lazy">
-                </div>
-                <div class="card-header">
-                    <span class="card-category">SEO</span>
-                    <h3 class="card-title">دليل تحسين محركات البحث SEO الشامل 2025</h3>
-                    <p class="card-description">اكتشف أسرار تصدر نتائج جوجل مع دليلنا الشامل لـ SEO. تعلم التحسين التقني واستراتيجيات المحتوى للسوق العربي</p>
-                </div>
-                <div class="card-footer">
-                    <span class="card-date">23 يناير 2025 • 18 دقيقة قراءة</span>
-                    <span class="card-arrow">←</span>
-                </div>
-            </div>
-            
-            <!-- مقال وسائل التواصل الاجتماعي -->
-            <div class="article-card" onclick="window.open('articles/social-media-ads-comprehensive-guide.html', '_blank')">
-                <div class="article-image">
-                    <img src="https://images.unsplash.com/photo-1611224923853-80b023f02d71?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="خدمات إعلانات وسائل التواصل الاجتماعي - فيسبوك وإنستغرام وسناب شات" loading="lazy">
-                </div>
-                <div class="card-header">
-                    <span class="card-category">Social Media</span>
-                    <h3 class="card-title">دليل إعلانات وسائل التواصل الاجتماعي الشامل 2025</h3>
-                    <p class="card-description">دليل متكامل لإعلانات فيسبوك، إنستغرام، سناب شات، تيك توك. استراتيجيات الاستهداف وإنشاء المحتوى</p>
-                </div>
-                <div class="card-footer">
-                    <span class="card-date">23 يناير 2025 • 16 دقيقة قراءة</span>
-                    <span class="card-arrow">←</span>
-                </div>
-            </div>
-            
-            <!-- مقال تصميم المواقع -->
-            <div class="article-card" onclick="window.open('articles/website-design-comprehensive-guide.html', '_blank')">
-                <div class="article-image">
-                    <img src="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="تصميم مواقع ويب احترافية ومتجاوبة - مؤسسة إعلانات العرب" loading="lazy">
-                </div>
-                <div class="card-header">
-                    <span class="card-category">Web Design</span>
-                    <h3 class="card-title">دليل تصميم المواقع الإلكترونية الشامل 2025</h3>
-                    <p class="card-description">تعلم أساسيات وأحدث اتجاهات تصميم المواقع. من UX/UI إلى التصميم المتجاوب والأداء المحسن</p>
-                </div>
-                <div class="card-footer">
-                    <span class="card-date">23 يناير 2025 • 17 دقيقة قراءة</span>
-                    <span class="card-arrow">←</span>
-                </div>
-            </div>
-            
-            <!-- مقال التجارة الإلكترونية -->
-            <div class="article-card" onclick="window.open('articles/ecommerce-comprehensive-guide.html', '_blank')">
-                <div class="article-image">
-                    <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="دليل التجارة الإلكترونية الشامل 2025" loading="lazy">
-                </div>
-                <div class="card-header">
-                    <span class="card-category">eCommerce</span>
-                    <h3 class="card-title">دليل التجارة الإلكترونية الشامل 2025</h3>
-                    <p class="card-description">من فكرة إلى إمبراطورية رقمية! تعلم كيفية إنشاء وإدارة متجر إلكتروني ناجح في السوق الخليجي</p>
-                </div>
-                <div class="card-footer">
-                    <span class="card-date">23 يناير 2025 • 19 دقيقة قراءة</span>
-                    <span class="card-arrow">←</span>
-                </div>
-            </div>
-            
-            <!-- مقال إدارة وسائل التواصل -->
-            <div class="article-card" onclick="window.open('articles/social-media-management-guide.html', '_blank')">
-                <div class="article-image">
-                    <img src="https://images.unsplash.com/photo-1611224923853-80b023f02d71?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="خدمات إعلانات وسائل التواصل الاجتماعي - فيسبوك وإنستغرام وسناب شات" loading="lazy">
-                </div>
-                <div class="card-header">
-                    <span class="card-category">Social Management</span>
-                    <h3 class="card-title">دليل إدارة وسائل التواصل الاجتماعي الشامل 2025</h3>
-                    <p class="card-description">فن بناء المجتمعات الرقمية! تعلم استراتيجيات المحتوى وإدارة الأزمات وبناء علاقات قوية مع جمهورك</p>
-                </div>
-                <div class="card-footer">
-                    <span class="card-date">23 يناير 2025 • 20 دقيقة قراءة</span>
-                    <span class="card-arrow">←</span>
-                </div>
-            </div>
-        </div>
-        
-        <div class="guides-section">
-            <h2 class="section-title">🌍 أدلة Google Ads حسب الدولة</h2>
-            <p class="section-subtitle">أدلة مخصصة لكل دولة خليجية مع استراتيجيات محلية وأمثلة عملية</p>
-            
-            <div class="guides-grid">
-                <div class="guide-card saudi" onclick="window.open('google-ads-saudi-guide-2025.html', '_blank')">
-                    <div class="guide-flag">🇸🇦</div>
-                    <div class="guide-content">
-                        <h3 class="guide-title">دليل Google Ads السعودية 2025</h3>
-                        <p class="guide-description">استراتيجيات مخصصة للسوق السعودي مع أمثلة من الرياض وجدة والدمام</p>
-                        <div class="guide-stats">
-                            <span class="stat">📊 أكبر سوق خليجي</span>
-                            <span class="stat">💰 ميزانيات عالية</span>
-                        </div>
-                    </div>
-                    <div class="guide-arrow">←</div>
-                </div>
-                
-                <div class="guide-card uae" onclick="window.open('google-ads-uae-guide-2025.html', '_blank')">
-                    <div class="guide-flag">🇦🇪</div>
-                    <div class="guide-content">
-                        <h3 class="guide-title">دليل Google Ads الإمارات 2025</h3>
-                        <p class="guide-description">تسويق متعدد الثقافات في دبي وأبوظبي مع استهداف المقيمين والمواطنين</p>
-                        <div class="guide-stats">
-                            <span class="stat">🌐 تنوع ثقافي</span>
-                            <span class="stat">🏙️ مدن عالمية</span>
-                        </div>
-                    </div>
-                    <div class="guide-arrow">←</div>
-                </div>
-                
-                <div class="guide-card kuwait" onclick="window.open('google-ads-kuwait-guide-2025.html', '_blank')">
-                    <div class="guide-flag">🇰🇼</div>
-                    <div class="guide-content">
-                        <h3 class="guide-title">دليل Google Ads الكويت 2025</h3>
-                        <p class="guide-description">استراتيجيات للسوق الكويتي المتميز مع التركيز على الجودة والعلامات التجارية</p>
-                        <div class="guide-stats">
-                            <span class="stat">💎 جودة عالية</span>
-                            <span class="stat">🛍️ قوة شرائية</span>
-                        </div>
-                    </div>
-                    <div class="guide-arrow">←</div>
-                </div>
-                
-                <div class="guide-card qatar" onclick="window.open('google-ads-qatar-guide-2025.html', '_blank')">
-                    <div class="guide-flag">🇶🇦</div>
-                    <div class="guide-content">
-                        <h3 class="guide-title">دليل Google Ads قطر 2025</h3>
-                        <p class="guide-description">التسويق في الدوحة والريان مع التركيز على الأحداث الرياضية والسياحة</p>
-                        <div class="guide-stats">
-                            <span class="stat">⚽ أحداث رياضية</span>
-                            <span class="stat">🏨 سياحة متنامية</span>
-                        </div>
-                    </div>
-                    <div class="guide-arrow">←</div>
-                </div>
-                
-                <div class="guide-card bahrain" onclick="window.open('google-ads-bahrain-guide-2025.html', '_blank')">
-                    <div class="guide-flag">🇧🇭</div>
-                    <div class="guide-content">
-                        <h3 class="guide-title">دليل Google Ads البحرين 2025</h3>
-                        <p class="guide-description">استراتيجيات للمركز المالي الخليجي مع التركيز على الخدمات المصرفية والتقنية</p>
-                        <div class="guide-stats">
-                            <span class="stat">🏦 مركز مالي</span>
-                            <span class="stat">💻 تقنية متقدمة</span>
-                        </div>
-                    </div>
-                    <div class="guide-arrow">←</div>
-                </div>
-                
-                <div class="guide-card oman" onclick="window.open('google-ads-oman-guide-2025.html', '_blank')">
-                    <div class="guide-flag">🇴🇲</div>
-                    <div class="guide-content">
-                        <h3 class="guide-title">دليل Google Ads عُمان 2025</h3>
-                        <p class="guide-description">التسويق في مسقط وصلالة مع التركيز على السياحة الطبيعية والتراث العماني</p>
-                        <div class="guide-stats">
-                            <span class="stat">🏔️ سياحة طبيعية</span>
-                            <span class="stat">🏛️ تراث عريق</span>
-                        </div>
-                    </div>
-                    <div class="guide-arrow">←</div>
-                </div>
-            </div>
-            
-            <div class="cta-section">
-                <h3>🚀 هل تحتاج استراتيجية مخصصة لدولتك؟</h3>
-                <p>احصل على استشارة مجانية من خبرائنا المحليين في كل دولة خليجية</p>
-                <a href="https://wa.me/201110760081?text=أريد استشارة مخصصة لدولتي في Google Ads" class="cta-button" target="_blank">
-                    💬 استشارة مجانية الآن
-                </a>
-            </div>
-        </div>
-    </div>
-    <!-- Footer -->
-    <div data-include="shared-footer.html"></div>
-
-    <!-- Universal Header/Footer Script -->
-    <script src="/arabsad/assets/js/universal-header-footer.js"></script>
-    <script>
-        // Load Shared Header/Footer
-        document.addEventListener('DOMContentLoaded', function() {
-            document.querySelectorAll('[data-include]').forEach(async function(el) {
-                try {
-                    const file = el.getAttribute('data-include');
-                    let response;
-                    try { response = await fetch('../' + file); } catch(e) {}
-                    if (!response || !response.ok) try { response = await fetch('/arabsad/' + file); } catch(e) {}
-                    
-                    if (response && response.ok) {
-                        el.innerHTML = await response.text();
-                        if (file.includes('header') && typeof initMobileDropdowns === 'function') initMobileDropdowns();
-                        el.querySelectorAll('script').forEach(s => {
-                            const newScript = document.createElement('script');
-                            if (s.src) newScript.src = s.src;
-                            else newScript.textContent = s.textContent;
-                            document.body.appendChild(newScript);
-                        });
-                    }
-                } catch (e) { console.log(e); }
-            });
-        });
-    </script>
-
-    <script type="application/ld+json">
-{
-    "@context": "https://schema.org",
-    "@type": "Blog",
-    "name": "مدونة إعلانات العرب",
-    "description": "مدونة متخصصة في التسويق الرقمي والخدمات الإلكترونية",
-    "url": "https://sherow1982.github.io/arabsad/blog/",
-    "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "4.8",
-        "ratingCount": "150",
-        "bestRating": "5",
-        "worstRating": "1"
-    }
-}
-</script>
-</body>
-</html>
+            box-shadow: 0 8px 25px rgba(0, 212, 170, 0
