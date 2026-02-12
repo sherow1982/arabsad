@@ -242,8 +242,11 @@ footer{text-align:center;color:#aaa;padding:22px 0 10px 0;font-size:1rem;backgro
 }
 </script>
 
+    <link rel="stylesheet" href="/assets/css/mobile-first.css">
 </head>
 <body>
+    <div data-include="shared-header.html"></div>
+
 <div class="reading-progress" id="progress"></div>
 <header>
 <h1>إعلانات جوجل شبكة</h1>
@@ -284,5 +287,7 @@ footer{text-align:center;color:#aaa;padding:22px 0 10px 0;font-size:1rem;backgro
 const progress=document.getElementById('progress');
 window.addEventListener('scroll',()=>{const h=document.documentElement;const s=(h.scrollTop)/(h.scrollHeight-h.clientHeight)*100;progress.style.width=s+'%'});
 </script>
+    <div data-include="shared-footer.html"></div>
+    <script src="/assets/js/universal-header-footer.js"></script>
 </body>
 </html>

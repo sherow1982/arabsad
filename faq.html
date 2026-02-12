@@ -31,8 +31,11 @@
         .faq-item.active p { max-height: 300px; }
         footer { background: var(--dark-secondary); padding: 3rem 2rem 1.5rem; margin-top: 4rem; text-align: center; border-top: 2px solid rgba(255, 184, 0, 0.1); color: var(--text-muted); font-size: 0.85rem; }
     </style>
+    <link rel="stylesheet" href="/assets/css/mobile-first.css">
 </head>
 <body>
+    <div data-include="shared-header.html"></div>
+
     <header>
         <div class="header-wrapper">
             <a href="/" class="logo">🌐 إعلانات العرب</a>
@@ -107,5 +110,6 @@
             });
         });
     </script>
+    <div data-include="shared-footer.html"></div>
 </body>
 </html>
