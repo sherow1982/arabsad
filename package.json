@@ -13,7 +13,12 @@
     "fix-repo": "node scripts/fix-repo.js",
     "fix-services": "node scripts/fix-services.js",
     "fix-blog": "node scripts/fix-blog.js",
-    "universal-fix": "node scripts/universal-fix.js"
+    "universal-fix": "node scripts/universal-fix.js",
+    "history:save": "node scripts/save-history.js",
+    "task:update-all": "npm run history:save && echo 'تم التحديث الشامل'",
+    "task:fix-build": "echo 'إصلاح البناء'",
+    "task:generate-seo": "echo 'توليد SEO'",
+    "fix-seo-layout": "node scripts/fix-seo-layout.js"
   },
   "dependencies": {
     "@google/genai": "^1.40.0"
