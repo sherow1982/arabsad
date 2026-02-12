@@ -40,9 +40,9 @@
 
     <style>
         :root {
-            --primary: #FFB800;       
-            --saudi-green: #006C35;   
-            --dark-bg: #0a0e27;       
+            --primary: #FFB800;
+            --saudi-green: #006C35;
+            --dark-bg: #0a0e27;
             --dark-secondary: #1a1f3a;
             --text-light: #e8edf5;
             --text-muted: #a8b3c1;
@@ -102,7 +102,7 @@
             margin-top: 35px;
             margin-bottom: 15px;
         }
-        
+
         h4 {
             font-size: 1.1rem;
             color: var(--text-muted);
@@ -246,7 +246,7 @@
             ul, ol { padding-right: 20px; }
         }
     </style>
-    
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
@@ -307,7 +307,7 @@
         <p>
             لقد انتهى عصر "الدفع عند الاستلام" (COD) كخيار وحيد. نعم، ما زال موجوداً، لكن الاعتماد عليه وحده هو انتحار تجاري بسبب نسبة المرتجعات (RTO) التي قد تصل لـ 40%.
         </p>
-        
+
         <h3>ثورة الـ BNPL (اشترِ الآن وادفع لاحقاً)</h3>
         <p>
             شركات مثل <strong>Tabby</strong> و <strong>Tamara</strong> ليست مجرد طرق دفع، هي أدوات تسويقية جبارة. الإحصائيات في 2026 تؤكد:
@@ -448,15 +448,15 @@
 
 <div data-include="shared-footer.html"></div>
 
-<script src="/arabsad/assets/js/universal-header-footer.js"></script>
+<script src="/assets/js/universal-header-footer.js"></script>
 <script>
     document.addEventListener('DOMContentLoaded', function() {
         document.querySelectorAll('[data-include]').forEach(async function(el) {
             try {
                 const file = el.getAttribute('data-include');
-                let response = await fetch('../../' + file); 
+                let response = await fetch('../../' + file);
                 if (!response.ok) response = await fetch('/arabsad/' + file);
-                
+
                 if (response.ok) {
                     el.innerHTML = await response.text();
                     if (file.includes('header') && typeof initMobileDropdowns === 'function') {

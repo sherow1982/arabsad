@@ -7,13 +7,13 @@
     <meta name="description" content="مطعم البيتزا الإيطالية في الكويت - قائمة طعام تفاعلية مع إمكانية الطلب المباشر وخدمة التوصيل السريع">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { 
-            font-family: 'Segoe UI', sans-serif; 
+        body {
+            font-family: 'Segoe UI', sans-serif;
             background: linear-gradient(135deg, #e17055 0%, #f39c12 100%);
-            color: #333; 
+            color: #333;
             line-height: 1.6;
         }
-        
+
         .container {
             max-width: 800px;
             margin: 0 auto;
@@ -21,35 +21,35 @@
             min-height: 100vh;
             box-shadow: 0 0 20px rgba(0,0,0,0.1);
         }
-        
+
         .header {
             background: linear-gradient(45deg, #c0392b, #e74c3c);
             color: white;
             padding: 2rem;
             text-align: center;
         }
-        
+
         .header h1 {
             font-size: 2rem;
             margin-bottom: 0.5rem;
         }
-        
+
         .header p {
             font-size: 1.1rem;
             opacity: 0.9;
         }
-        
+
         .content {
             padding: 2rem;
         }
-        
+
         .menu-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 1.5rem;
             margin: 2rem 0;
         }
-        
+
         .menu-card {
             background: #f8f9fa;
             padding: 1.5rem;
@@ -57,36 +57,36 @@
             border-left: 4px solid #e74c3c;
             text-align: center;
         }
-        
+
         .menu-card h3 {
             color: #2d3436;
             margin-bottom: 1rem;
             font-size: 1.2rem;
         }
-        
+
         .menu-card .price {
             font-size: 1.5rem;
             color: #e74c3c;
             font-weight: bold;
             margin: 1rem 0;
         }
-        
+
         .menu-card ul {
             list-style: none;
             padding: 0;
             text-align: right;
         }
-        
+
         .menu-card li {
             padding: 0.3rem 0;
             color: #636e72;
         }
-        
+
         .menu-card li:before {
             content: "🍕 ";
             margin-left: 0.5rem;
         }
-        
+
         .contact-section {
             background: linear-gradient(45deg, #27ae60, #2ecc71);
             color: white;
@@ -95,7 +95,7 @@
             text-align: center;
             margin: 2rem 0;
         }
-        
+
         .contact-buttons {
             display: flex;
             gap: 1rem;
@@ -103,7 +103,7 @@
             flex-wrap: wrap;
             margin-top: 1.5rem;
         }
-        
+
         .btn {
             display: inline-block;
             padding: 1rem 2rem;
@@ -114,39 +114,39 @@
             font-weight: bold;
             transition: all 0.3s ease;
         }
-        
+
         .btn:hover {
             transform: translateY(-2px);
             box-shadow: 0 5px 15px rgba(0,0,0,0.2);
         }
-        
+
         .whatsapp-btn {
             background: #25D366;
             color: white;
         }
-        
+
         .order-btn {
             background: #e74c3c;
             color: white;
         }
-        
+
         .features {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             gap: 1rem;
             margin: 2rem 0;
         }
-        
+
         .feature {
             text-align: center;
             padding: 1rem;
         }
-        
+
         .feature-icon {
             font-size: 3rem;
             margin-bottom: 1rem;
         }
-        
+
         .offers-section {
             background: linear-gradient(45deg, #f39c12, #e67e22);
             color: white;
@@ -154,21 +154,21 @@
             border-radius: 10px;
             margin: 2rem 0;
         }
-        
+
         .offers-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             gap: 1rem;
             margin-top: 1.5rem;
         }
-        
+
         .offer-card {
             background: rgba(255,255,255,0.1);
             padding: 1.5rem;
             border-radius: 10px;
             text-align: center;
         }
-        
+
         @media (max-width: 768px) {
             .header h1 { font-size: 1.5rem; }
             .content { padding: 1rem; }
@@ -187,7 +187,7 @@
             <p>أصالة الطعم الإيطالي في قلب الكويت</p>
             <p>📍 الكويت - دولة الكويت</p>
         </div>
-        
+
         <div class="content">
             <div class="features">
                 <div class="feature">
@@ -211,7 +211,7 @@
                     <p>مكونات طازجة يومياً</p>
                 </div>
             </div>
-            
+
             <h2 style="text-align: center; color: #2d3436; margin: 2rem 0;">🍕 قائمة البيتزا المميزة</h2>
             <div class="menu-grid">
                 <div class="menu-card">
@@ -224,7 +224,7 @@
                         <li>زيت زيتون بكر</li>
                     </ul>
                 </div>
-                
+
                 <div class="menu-card">
                     <h3>🍕 بيبروني الحارة</h3>
                     <div class="price">12 دينار</div>
@@ -235,7 +235,7 @@
                         <li>صلصة طماطم حارة</li>
                     </ul>
                 </div>
-                
+
                 <div class="menu-card">
                     <h3>🍕 الأربع جبنات</h3>
                     <div class="price">15 دينار</div>
@@ -246,7 +246,7 @@
                         <li>جبنة ريكوتا</li>
                     </ul>
                 </div>
-                
+
                 <div class="menu-card">
                     <h3>🍕 سوبريم الخاصة</h3>
                     <div class="price">18 دينار</div>
@@ -257,7 +257,7 @@
                         <li>زيتون أسود وأخضر</li>
                     </ul>
                 </div>
-                
+
                 <div class="menu-card">
                     <h3>🍕 المأكولات البحرية</h3>
                     <div class="price">22 دينار</div>
@@ -268,7 +268,7 @@
                         <li>صلصة بيضاء كريمية</li>
                     </ul>
                 </div>
-                
+
                 <div class="menu-card">
                     <h3>🍕 الخضار الإيطالية</h3>
                     <div class="price">10 دنانير</div>
@@ -280,11 +280,11 @@
                     </ul>
                 </div>
             </div>
-            
+
             <div class="offers-section">
                 <h2 style="text-align: center; margin-bottom: 1rem;">🎉 العروض اليومية</h2>
                 <p style="text-align: center;">عروض مميزة كل يوم في الأسبوع</p>
-                
+
                 <div class="offers-grid">
                     <div class="offer-card">
                         <h3>🌟 عرض الاثنين</h3>
@@ -303,7 +303,7 @@
                     </div>
                 </div>
             </div>
-            
+
             <div style="background: #74b9ff; color: white; padding: 2rem; border-radius: 10px; margin: 2rem 0;">
                 <h3 style="text-align: center; margin-bottom: 1rem;">🍽️ خدمات إضافية</h3>
                 <div class="features">
@@ -325,12 +325,12 @@
                     </div>
                 </div>
             </div>
-            
+
             <div class="contact-section">
                 <h2>📞 اطلب الآن</h2>
                 <p>توصيل مجاني لجميع مناطق الكويت</p>
                 <p>طلبات الحد الأدنى 5 دنانير - دفع كاش أو كي نت</p>
-                
+
                 <div class="contact-buttons">
                     <a href="https://wa.me/96550123456?text=أريد+طلب+بيتزا+من+المطعم" class="btn whatsapp-btn">
                         📱 طلب واتساب: 50123456
@@ -339,14 +339,14 @@
                         📞 طلب هاتفي: 22345678
                     </a>
                 </div>
-                
+
                 <div style="margin-top: 2rem; padding-top: 1rem; border-top: 1px solid rgba(255,255,255,0.3);">
                     <p><strong>📍 العنوان:</strong> شارع سالم المبارك، منطقة السالمية، الكويت</p>
                     <p><strong>⏰ ساعات العمل:</strong> يومياً من 11 صباحاً - 2 صباحاً</p>
                     <p><strong>🚚 مناطق التوصيل:</strong> جميع مناطق الكويت - توصيل مجاني للطلبات فوق 10 دنانير</p>
                 </div>
             </div>
-            
+
             <div style="text-align: center; padding: 2rem; background: #2d3436; color: white; border-radius: 10px;">
                 <h3>🏆 لماذا مطعم البيتزا الإيطالية؟</h3>
                 <div class="features">

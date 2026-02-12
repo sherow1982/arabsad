@@ -1,29 +1,29 @@
 <header style="position: fixed; top: 0; width: 100%; z-index: 1000; background: rgba(10, 14, 39, 0.95); backdrop-filter: blur(10px); padding: 1rem; border-bottom: 1px solid rgba(255, 184, 0, 0.1);">
     <div style="max-width: 1400px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center;">
-        <a href="/arabsad/" style="font-size: 1.5rem; font-weight: 800; color: #FFB800; text-decoration: none;">🌐 إعلانات العرب</a>
-        
+        <a href="/" style="font-size: 1.5rem; font-weight: 800; color: #FFB800; text-decoration: none;">🌐 إعلانات العرب</a>
+
         <!-- Desktop Menu -->
         <nav class="desktop-menu" style="display: flex; align-items: center; gap: 1.5rem;">
-            <a href="/arabsad/services/" style="color: #e8edf5; text-decoration: none; font-weight: 500; transition: color 0.3s ease;">الخدمات</a>
-            <a href="/arabsad/blog/" style="color: #e8edf5; text-decoration: none; font-weight: 500; transition: color 0.3s ease;">المدونة</a>
-            <a href="/arabsad/about.html" style="color: #e8edf5; text-decoration: none; font-weight: 500; transition: color 0.3s ease;">من نحن</a>
-            <a href="/arabsad/contact.html" style="color: #e8edf5; text-decoration: none; font-weight: 500; transition: color 0.3s ease;">اتصل بنا</a>
+            <a href="/services/" style="color: #e8edf5; text-decoration: none; font-weight: 500; transition: color 0.3s ease;">الخدمات</a>
+            <a href="/blog/" style="color: #e8edf5; text-decoration: none; font-weight: 500; transition: color 0.3s ease;">المدونة</a>
+            <a href="/about.html" style="color: #e8edf5; text-decoration: none; font-weight: 500; transition: color 0.3s ease;">من نحن</a>
+            <a href="/contact.html" style="color: #e8edf5; text-decoration: none; font-weight: 500; transition: color 0.3s ease;">اتصل بنا</a>
             <a href="https://wa.me/201110760081?text=أريد+استشارة+مجانية" style="background: #FFB800; color: #000; padding: 0.7rem 1.2rem; border-radius: 25px; font-weight: 600; text-decoration: none; font-size: 0.9rem;">📞 استشارة فورية</a>
         </nav>
-        
+
         <!-- Mobile Hamburger -->
         <button class="mobile-menu-btn" style="display: none; background: none; border: none; color: #FFB800; font-size: 1.5rem; cursor: pointer; padding: 0.5rem;">
             <span id="hamburger-icon">☰</span>
         </button>
     </div>
-    
+
     <!-- Mobile Menu -->
     <nav id="mobile-menu" class="mobile-menu" style="display: none; position: absolute; top: 100%; left: 0; right: 0; background: rgba(10, 14, 39, 0.98); backdrop-filter: blur(15px); border-top: 1px solid rgba(255, 184, 0, 0.2);">
         <div style="display: flex; flex-direction: column; gap: 1rem; max-width: 1400px; margin: 0 auto;">
-            <a href="/arabsad/services/" onclick="window.closeMobileMenu()" style="color: #e8edf5; text-decoration: none; font-weight: 500; padding: 0.8rem; border-radius: 8px; transition: all 0.3s ease; border: 1px solid transparent;">📋 الخدمات</a>
-            <a href="/arabsad/blog/" onclick="window.closeMobileMenu()" style="color: #e8edf5; text-decoration: none; font-weight: 500; padding: 0.8rem; border-radius: 8px; transition: all 0.3s ease; border: 1px solid transparent;">📚 المدونة</a>
-            <a href="/arabsad/about.html" onclick="window.closeMobileMenu()" style="color: #e8edf5; text-decoration: none; font-weight: 500; padding: 0.8rem; border-radius: 8px; transition: all 0.3s ease; border: 1px solid transparent;">🏢 من نحن</a>
-            <a href="/arabsad/contact.html" onclick="window.closeMobileMenu()" style="color: #e8edf5; text-decoration: none; font-weight: 500; padding: 0.8rem; border-radius: 8px; transition: all 0.3s ease; border: 1px solid transparent;">📞 اتصل بنا</a>
+            <a href="/services/" onclick="window.closeMobileMenu()" style="color: #e8edf5; text-decoration: none; font-weight: 500; padding: 0.8rem; border-radius: 8px; transition: all 0.3s ease; border: 1px solid transparent;">📋 الخدمات</a>
+            <a href="/blog/" onclick="window.closeMobileMenu()" style="color: #e8edf5; text-decoration: none; font-weight: 500; padding: 0.8rem; border-radius: 8px; transition: all 0.3s ease; border: 1px solid transparent;">📚 المدونة</a>
+            <a href="/about.html" onclick="window.closeMobileMenu()" style="color: #e8edf5; text-decoration: none; font-weight: 500; padding: 0.8rem; border-radius: 8px; transition: all 0.3s ease; border: 1px solid transparent;">🏢 من نحن</a>
+            <a href="/contact.html" onclick="window.closeMobileMenu()" style="color: #e8edf5; text-decoration: none; font-weight: 500; padding: 0.8rem; border-radius: 8px; transition: all 0.3s ease; border: 1px solid transparent;">📞 اتصل بنا</a>
             <a href="https://wa.me/201110760081?text=أريد+استشارة+مجانية" onclick="window.closeMobileMenu()" style="background: #FFB800; color: #000; padding: 1rem; border-radius: 8px; font-weight: 600; text-decoration: none; text-align: center; margin-top: 0.5rem;">📞 استشارة فورية</a>
         </div>
     </nav>
@@ -51,7 +51,7 @@ body { padding-top: 80px !important; }
 window.toggleMobileMenu = function() {
     const menu = document.getElementById('mobile-menu');
     const icon = document.getElementById('hamburger-icon');
-    
+
     if (menu && icon) {
         menu.classList.toggle('active');
         const isOpen = menu.classList.contains('active');
@@ -72,7 +72,7 @@ setTimeout(() => {
     document.addEventListener('click', function(event) {
         const menu = document.getElementById('mobile-menu');
         const btn = document.querySelector('.mobile-menu-btn');
-        
+
         if (menu && btn && !menu.contains(event.target) && !btn.contains(event.target)) {
             window.closeMobileMenu();
         }

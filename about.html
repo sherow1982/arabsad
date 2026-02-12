@@ -48,20 +48,20 @@
                 var banner = document.createElement('div');
                 banner.id = 'cookie-banner';
                 banner.style.cssText = 'position: fixed; bottom: 20px; right: 20px; left: 20px; background: #1a1f3a; color: #fff; padding: 20px; border-radius: 10px; box-shadow: 0 5px 20px rgba(0,0,0,0.3); z-index: 10000; border: 1px solid #FFB800; display: flex; flex-direction: column; gap: 15px; max-width: 500px; font-family: "Cairo", sans-serif; direction: rtl;';
-                
+
                 var text = document.createElement('p');
                 text.style.cssText = 'margin: 0; font-size: 0.95rem; line-height: 1.6;';
                 text.textContent = 'نحن لا نقوم بتسجيل بياناتك لان موقعنا ستاتيك  لا نحصل على اي بيانات الا التي تريد انت كمستخدم ان تعطيها لنا';
-                
+
                 var btn = document.createElement('button');
                 btn.textContent = 'حسناً، فهمت';
                 btn.style.cssText = 'background: #FFB800; color: #000; border: none; padding: 8px 20px; border-radius: 5px; cursor: pointer; font-weight: bold; align-self: flex-end; font-family: "Cairo", sans-serif;';
-                
+
                 btn.onclick = function() {
                     localStorage.setItem('cookieConsent', 'true');
                     banner.style.display = 'none';
                 };
-                
+
                 banner.appendChild(text);
                 banner.appendChild(btn);
                 document.body.appendChild(banner);
@@ -71,20 +71,20 @@
 </head>
 <body>
     <div data-include="shared-header.html"></div>
-    
+
     <main>
         <h1>🎯 من نحن؟</h1>
-        
+
         <div class="content">
             <h2>🚀 مؤسسة إعلانات العرب - شريكك في النجاح الرقمي</h2>
             <p>نحن وكالة تسويق رقمي متخصصة تأسست عام 2015 بهدف مساعدة الشركات والمؤسسات في دول الخليج العربي ومصر على تحقيق أهدافها التسويقية والوصول إلى جمهورها المستهدف بأكثر الطرق فعالية.</p>
-            
+
             <h2>🎯 رؤيتنا</h2>
             <p>أن نكون الوكالة الرقمية الأولى والأكثر ثقة في المنطقة العربية، نساعد عملاءنا على تحقيق نمو مستدام وقابل للقياس من خلال حلول تسويقية مبتكرة ومخصصة.</p>
-            
+
             <h2>🎖️ مهمتنا</h2>
             <p>تقديم خدمات تسويق رقمي عالية الجودة تشمل إعلانات Google، تحسين محركات البحث، تصميم المواقع والمتاجر الإلكترونية، وإدارة وسائل التواصل الاجتماعي بأسعار تنافسية ونتائج مضمونة.</p>
-            
+
             <div class="stats">
                 <div class="stat">
                     <div class="stat-number">+500</div>
@@ -103,22 +103,22 @@
                     <div class="stat-label">سنوات خبرة</div>
                 </div>
             </div>
-            
+
             <h2>🏆 لماذا نحن مختلفون؟</h2>
             <p>• <strong>خبرة محلية عميقة:</strong> نفهم السوق العربي والخليجي بتفاصيله الدقيقة</p>
             <p>• <strong>فريق متخصص:</strong> خبراء معتمدون من Google وFacebook</p>
             <p>• <strong>نتائج قابلة للقياس:</strong> تقارير شفافة ومفصلة لكل حملة</p>
             <p>• <strong>دعم 24/7:</strong> فريق دعم متاح طوال الوقت</p>
             <p>• <strong>أسعار تنافسية:</strong> أفضل قيمة مقابل المال في السوق</p>
-            
+
             <div style="margin-top: 40px; text-align: center;">
                 <img src="assets/images/الضرايب مبلورة.jpg" alt="الشهادة الضريبية - مؤسسة إعلانات العرب" style="max-width: 100%; height: auto; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.3);">
             </div>
         </div>
     </main>
-    
+
     <div data-include="shared-footer.html"></div>
-    
+
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             document.querySelectorAll('[data-include]').forEach(async function(el) {
@@ -127,7 +127,7 @@
                     let response;
                     try { response = await fetch(file); } catch(e) {}
                     if (!response || !response.ok) try { response = await fetch('/arabsad/' + file); } catch(e) {}
-                    
+
                     if (response && response.ok) {
                         el.innerHTML = await response.text();
                         el.querySelectorAll('script').forEach(s => {

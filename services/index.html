@@ -132,20 +132,20 @@
                 var banner = document.createElement('div');
                 banner.id = 'cookie-banner';
                 banner.style.cssText = 'position: fixed; bottom: 20px; right: 20px; left: 20px; background: #1a1f3a; color: #fff; padding: 20px; border-radius: 10px; box-shadow: 0 5px 20px rgba(0,0,0,0.3); z-index: 10000; border: 1px solid #FFB800; display: flex; flex-direction: column; gap: 15px; max-width: 500px; font-family: "Cairo", sans-serif; direction: rtl;';
-                
+
                 var text = document.createElement('p');
                 text.style.cssText = 'margin: 0; font-size: 0.95rem; line-height: 1.6;';
                 text.textContent = 'نحن لا نقوم بتسجيل بياناتك لان موقعنا ستاتيك  لا نحصل على اي بيانات الا التي تريد انت كمستخدم ان تعطيها لنا';
-                
+
                 var btn = document.createElement('button');
                 btn.textContent = 'حسناً، فهمت';
                 btn.style.cssText = 'background: #FFB800; color: #000; border: none; padding: 8px 20px; border-radius: 5px; cursor: pointer; font-weight: bold; align-self: flex-end; font-family: "Cairo", sans-serif;';
-                
+
                 btn.onclick = function() {
                     try { localStorage.setItem('cookieConsent', 'true'); } catch(e) {}
                     banner.style.display = 'none';
                 };
-                
+
                 banner.appendChild(text);
                 banner.appendChild(btn);
                 document.body.appendChild(banner);
@@ -357,7 +357,7 @@
             border-radius: 10px;
             overflow: hidden;
         }
-        
+
         .service-image img {
             width: 100%;
             height: auto;
@@ -365,7 +365,7 @@
             border-radius: 10px;
             max-height: 180px;
         }
-        
+
         .card-content {
             position: relative;
             z-index: 1;
@@ -531,7 +531,7 @@
             left: 25px;
             z-index: 1000;
         }
-        
+
         .whatsapp-float a {
             display: flex;
             align-items: center;
@@ -545,12 +545,12 @@
             transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
             animation: pulse 2s infinite;
         }
-        
+
         .whatsapp-float a:hover {
             transform: scale(1.1);
             box-shadow: 0 6px 25px rgba(37, 211, 102, 0.6);
         }
-        
+
         @keyframes pulse {
             0% { box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4); }
             50% { box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4), 0 0 0 10px rgba(37, 211, 102, 0.1); }
@@ -598,12 +598,12 @@
 
                 <div class="services-grid">
                     <!-- Google Maps Alternative -->
-                    <a href="/arabsad/services/safahat-al5dmat.html" class="service-card" style="border: 1px solid var(--primary);">
+                    <a href="/services/safahat-al5dmat.html" class="service-card" style="border: 1px solid var(--primary);">
                         <div class="card-content">
                             <div class="service-icon">🗺️</div>
                             <h3>بديل خرائط جوجل</h3>
                             <div class="service-image">
-                                <img src="/arabsad/assets/images/خدمات اعلانات جوجل.jpg" alt="بديل خرائط جوجل" loading="lazy">
+                                <img src="/assets/images/خدمات اعلانات جوجل.jpg" alt="بديل خرائط جوجل" loading="lazy">
                             </div>
                             <p>صفحات هبوط خاصة تغنيك عن مشاكل الخرائط وتضمن لك تواجداً دائماً ومستقلاً.</p>
                             <ul class="service-features">
@@ -616,12 +616,12 @@
                     </a>
 
                     <!-- Google Ads -->
-                    <a href="/arabsad/services/google-ads.html" class="service-card">
+                    <a href="/services/google-ads.html" class="service-card">
                         <div class="card-content">
                             <div class="service-icon">📊</div>
                             <h3>إعلانات Google Ads</h3>
                             <div class="service-image">
-                                <img src="/arabsad/assets/images/خدمات اعلانات جوجل.jpg" alt="خدمات إعلانات Google Ads" loading="lazy">
+                                <img src="/assets/images/خدمات اعلانات جوجل.jpg" alt="خدمات إعلانات Google Ads" loading="lazy">
                             </div>
                             <p>تصدر نتائج البحث الأولى فوراً واجذب عملاء يبحثون عنك بنشاط.</p>
                             <ul class="service-features">
@@ -634,7 +634,7 @@
                     </a>
 
                     <!-- Ecommerce -->
-                    <a href="/arabsad/services/ecommerce.html" class="service-card">
+                    <a href="/services/ecommerce.html" class="service-card">
                         <div class="card-content">
                             <div class="service-icon">🛒</div>
                             <h3>المتاجر الإلكترونية</h3>
@@ -649,7 +649,7 @@
                     </a>
 
                     <!-- Contracting -->
-                    <a href="/arabsad/services/contracting-services.html" class="service-card">
+                    <a href="/services/contracting-services.html" class="service-card">
                         <div class="card-content">
                             <div class="service-icon">🏗️</div>
                             <h3>تسويق المقاولات</h3>
@@ -664,7 +664,7 @@
                     </a>
 
                     <!-- Gulf Cities -->
-                    <a href="/arabsad/services/gulf-cities.html" class="service-card">
+                    <a href="/services/gulf-cities.html" class="service-card">
                         <div class="card-content">
                             <div class="service-icon">🏙️</div>
                             <h3>تسويق مدن الخليج</h3>
@@ -679,12 +679,12 @@
                     </a>
 
                     <!-- Social Media -->
-                    <a href="/arabsad/services/social-media-ads.html" class="service-card">
+                    <a href="/services/social-media-ads.html" class="service-card">
                         <div class="card-content">
                             <div class="service-icon">📱</div>
                             <h3>إعلانات السوشيال ميديا</h3>
                             <div class="service-image">
-                                <img src="/arabsad/assets/images/وسائل التواصل.jpg" alt="إعلانات وسائل التواصل الاجتماعي" loading="lazy">
+                                <img src="/assets/images/وسائل التواصل.jpg" alt="إعلانات وسائل التواصل الاجتماعي" loading="lazy">
                             </div>
                             <p>اجعل علامتك التجارية حاضرة في كل مكان (تيك توك، سناب، إنستقرام).</p></p>
                             <ul class="service-features">
@@ -697,7 +697,7 @@
                     </a>
 
                     <!-- SEO -->
-                    <a href="/arabsad/services/seo.html" class="service-card">
+                    <a href="/services/seo.html" class="service-card">
                         <div class="card-content">
                             <div class="service-icon">🔍</div>
                             <h3>تحسين محركات البحث</h3>
@@ -806,19 +806,19 @@
                     try {
                         response = await fetch('../' + file);
                     } catch(e) { console.log('Fetch 1 failed', e); }
-                    
+
                     if (!response || !response.ok) {
                         try {
                             response = await fetch('/arabsad/' + file);
                         } catch(e) { console.log('Fetch 2 failed', e); }
                     }
-                    
+
                     if (!response || !response.ok) {
                         try {
                             response = await fetch(file); // Try direct path as last resort
                         } catch(e) { console.log('Fetch 3 failed', e); }
                     }
-                    
+
                     if (response && response.ok) {
                         el.innerHTML = await response.text();
                         // Execute scripts found in the included file

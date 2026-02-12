@@ -16,46 +16,46 @@
             --text-muted: #a8b3c1;
             --accent: #00d4aa;
         }
-        
-        body { 
-            font-family: 'Segoe UI', sans-serif; 
-            background: var(--dark-bg); 
-            color: var(--text-light); 
+
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background: var(--dark-bg);
+            color: var(--text-light);
             line-height: 1.6;
             padding-top: 100px;
         }
-        
+
         .container {
             max-width: 1200px;
             margin: 0 auto;
             padding: 2rem 1rem;
         }
-        
+
         .hero {
             text-align: center;
             margin-bottom: 3rem;
         }
-        
+
         .hero h1 {
             font-size: 2.5rem;
             color: var(--primary);
             margin-bottom: 1rem;
         }
-        
+
         .hero p {
             font-size: 1.2rem;
             color: var(--text-muted);
             max-width: 600px;
             margin: 0 auto;
         }
-        
+
         .articles-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
             gap: 2rem;
             margin-bottom: 3rem;
         }
-        
+
         .article-card {
             background: var(--dark-secondary);
             border-radius: 15px;
@@ -64,35 +64,35 @@
             cursor: pointer;
             border: 2px solid transparent;
         }
-        
+
         .article-card:hover {
             transform: translateY(-5px);
             border-color: var(--primary);
             box-shadow: 0 10px 30px rgba(255, 184, 0, 0.2);
         }
-        
+
         .article-image {
             width: 100%;
             height: 200px;
             overflow: hidden;
         }
-        
+
         .article-image img {
             width: 100%;
             height: 100%;
             object-fit: cover;
             transition: transform 0.3s ease;
         }
-        
+
         .article-card:hover .article-image img {
             transform: scale(1.05);
         }
-        
+
         .card-header {
             padding: 1.5rem;
             border-bottom: 1px solid rgba(255, 184, 0, 0.1);
         }
-        
+
         .card-category {
             display: inline-block;
             background: var(--primary);
@@ -103,53 +103,53 @@
             font-weight: 600;
             margin-bottom: 1rem;
         }
-        
+
         .card-title {
             font-size: 1.3rem;
             color: var(--text-light);
             margin-bottom: 0.5rem;
             font-weight: 600;
         }
-        
+
         .card-description {
             color: var(--text-muted);
             font-size: 0.95rem;
             line-height: 1.5;
         }
-        
+
         .card-footer {
             padding: 1.5rem;
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
-        
+
         .card-date {
             color: var(--text-muted);
             font-size: 0.85rem;
         }
-        
+
         .card-arrow {
             color: var(--primary);
             font-size: 1.2rem;
             transition: transform 0.3s ease;
         }
-        
+
         .article-card:hover .card-arrow {
             transform: translateX(-5px);
         }
-        
+
         .guides-section {
             margin-top: 4rem;
         }
-        
+
         .section-title {
             font-size: 2rem;
             color: var(--primary);
             text-align: center;
             margin-bottom: 2rem;
         }
-        
+
         .section-subtitle {
             text-align: center;
             color: var(--text-muted);
@@ -159,14 +159,14 @@
             margin-left: auto;
             margin-right: auto;
         }
-        
+
         .guides-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
             gap: 2rem;
             margin-bottom: 3rem;
         }
-        
+
         .guide-card {
             background: var(--dark-secondary);
             border-radius: 15px;
@@ -180,7 +180,7 @@
             position: relative;
             overflow: hidden;
         }
-        
+
         .guide-card::before {
             content: '';
             position: absolute;
@@ -190,49 +190,49 @@
             height: 4px;
             background: var(--country-color, var(--primary));
         }
-        
+
         .guide-card.saudi { --country-color: #006C35; }
         .guide-card.uae { --country-color: #FF0000; }
         .guide-card.kuwait { --country-color: #007A3D; }
         .guide-card.qatar { --country-color: #8D1B3D; }
         .guide-card.bahrain { --country-color: #CE1126; }
         .guide-card.oman { --country-color: #ED2939; }
-        
+
         .guide-card:hover {
             transform: translateY(-5px);
             border-color: var(--country-color);
             box-shadow: 0 15px 35px rgba(255, 184, 0, 0.2);
         }
-        
+
         .guide-flag {
             font-size: 3rem;
             flex-shrink: 0;
         }
-        
+
         .guide-content {
             flex: 1;
         }
-        
+
         .guide-title {
             font-size: 1.3rem;
             color: var(--text-light);
             margin-bottom: 0.5rem;
             font-weight: 600;
         }
-        
+
         .guide-description {
             color: var(--text-muted);
             font-size: 0.95rem;
             line-height: 1.5;
             margin-bottom: 1rem;
         }
-        
+
         .guide-stats {
             display: flex;
             gap: 1rem;
             flex-wrap: wrap;
         }
-        
+
         .stat {
             background: rgba(255, 184, 0, 0.1);
             color: var(--primary);
@@ -241,7 +241,7 @@
             font-size: 0.8rem;
             font-weight: 600;
         }
-        
+
         .guide-arrow {
             color: var(--country-color);
             font-size: 1.5rem;
@@ -249,11 +249,11 @@
             transition: transform 0.3s ease;
             flex-shrink: 0;
         }
-        
+
         .guide-card:hover .guide-arrow {
             transform: translateX(-5px);
         }
-        
+
         .cta-section {
             background: linear-gradient(135deg, var(--dark-secondary), #2a3f5f);
             padding: 3rem 2rem;
@@ -262,13 +262,13 @@
             margin-top: 3rem;
             border: 2px solid rgba(255, 184, 0, 0.2);
         }
-        
+
         .cta-section h3 {
             font-size: 1.8rem;
             color: var(--primary);
             margin-bottom: 1rem;
         }
-        
+
         .cta-section p {
             color: var(--text-muted);
             font-size: 1.1rem;
@@ -277,7 +277,7 @@
             margin-left: auto;
             margin-right: auto;
         }
-        
+
         .cta-button {
             display: inline-block;
             background: #25D366;
@@ -290,19 +290,19 @@
             transition: all 0.3s ease;
             box-shadow: 0 5px 15px rgba(37, 211, 102, 0.3);
         }
-        
+
         .cta-button:hover {
             background: #128C7E;
             transform: translateY(-2px);
             box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4);
         }
-        
+
         .guides-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 1.5rem;
         }
-        
+
         .guide-card {
             background: linear-gradient(135deg, var(--dark-secondary), #2a3f5f);
             padding: 2rem;
@@ -311,28 +311,28 @@
             transition: all 0.3s ease;
             cursor: pointer;
         }
-        
+
         .guide-card:hover {
             transform: translateY(-3px);
             box-shadow: 0 8px 25px rgba(0, 212, 170, 0.2);
         }
-        
+
         .guide-icon {
             font-size: 3rem;
             margin-bottom: 1rem;
         }
-        
+
         .guide-title {
             font-size: 1.2rem;
             color: var(--text-light);
             margin-bottom: 0.5rem;
         }
-        
+
         .guide-country {
             color: var(--accent);
             font-weight: 600;
         }
-        
+
         @media (max-width: 768px) {
             .hero h1 { font-size: 2rem; }
             .articles-grid { grid-template-columns: 1fr; }
@@ -370,20 +370,20 @@
                 var banner = document.createElement('div');
                 banner.id = 'cookie-banner';
                 banner.style.cssText = 'position: fixed; bottom: 20px; right: 20px; left: 20px; background: #1a1f3a; color: #fff; padding: 20px; border-radius: 10px; box-shadow: 0 5px 20px rgba(0,0,0,0.3); z-index: 10000; border: 1px solid #FFB800; display: flex; flex-direction: column; gap: 15px; max-width: 500px; font-family: "Cairo", sans-serif; direction: rtl;';
-                
+
                 var text = document.createElement('p');
                 text.style.cssText = 'margin: 0; font-size: 0.95rem; line-height: 1.6;';
                 text.textContent = 'نحن لا نقوم بتسجيل بياناتك لان موقعنا ستاتيك  لا نحصل على اي بيانات الا التي تريد انت كمستخدم ان تعطيها لنا';
-                
+
                 var btn = document.createElement('button');
                 btn.textContent = 'حسناً، فهمت';
                 btn.style.cssText = 'background: #FFB800; color: #000; border: none; padding: 8px 20px; border-radius: 5px; cursor: pointer; font-weight: bold; align-self: flex-end; font-family: "Cairo", sans-serif;';
-                
+
                 btn.onclick = function() {
                     localStorage.setItem('cookieConsent', 'true');
                     banner.style.display = 'none';
                 };
-                
+
                 banner.appendChild(text);
                 banner.appendChild(btn);
                 document.body.appendChild(banner);
@@ -400,9 +400,9 @@
             <h1>📚 مدونة إعلانات العرب</h1>
             <p>دليلك الشامل للتسويق الرقمي وإعلانات Google وFacebook في دول الخليج العربي</p>
         </div>
-        
+
         <div class="articles-grid">
-            
+
             <!-- (جديد) مقال السعودية: تم إضافته هنا -->
             <div class="article-card" onclick="window.open('articles/saudi-ads-guide-2026.html', '_blank')">
                 <div class="article-image">
@@ -436,7 +436,7 @@
                     <span class="card-arrow">←</span>
                 </div>
             </div>
-            
+
             <!-- مقال SEO الشامل -->
             <div class="article-card" onclick="window.open('articles/seo-comprehensive-guide.html', '_blank')">
                 <div class="article-image">
@@ -452,7 +452,7 @@
                     <span class="card-arrow">←</span>
                 </div>
             </div>
-            
+
             <!-- مقال وسائل التواصل الاجتماعي -->
             <div class="article-card" onclick="window.open('articles/social-media-ads-comprehensive-guide.html', '_blank')">
                 <div class="article-image">
@@ -468,7 +468,7 @@
                     <span class="card-arrow">←</span>
                 </div>
             </div>
-            
+
             <!-- مقال تصميم المواقع -->
             <div class="article-card" onclick="window.open('articles/website-design-comprehensive-guide.html', '_blank')">
                 <div class="article-image">
@@ -484,7 +484,7 @@
                     <span class="card-arrow">←</span>
                 </div>
             </div>
-            
+
             <!-- مقال التجارة الإلكترونية -->
             <div class="article-card" onclick="window.open('articles/ecommerce-comprehensive-guide.html', '_blank')">
                 <div class="article-image">
@@ -500,7 +500,7 @@
                     <span class="card-arrow">←</span>
                 </div>
             </div>
-            
+
             <!-- مقال إدارة وسائل التواصل -->
             <div class="article-card" onclick="window.open('articles/social-media-management-guide.html', '_blank')">
                 <div class="article-image">
@@ -517,11 +517,11 @@
                 </div>
             </div>
         </div>
-        
+
         <div class="guides-section">
             <h2 class="section-title">🌍 أدلة Google Ads حسب الدولة</h2>
             <p class="section-subtitle">أدلة مخصصة لكل دولة خليجية مع استراتيجيات محلية وأمثلة عملية</p>
-            
+
             <div class="guides-grid">
                 <div class="guide-card saudi" onclick="window.open('google-ads-saudi-guide-2025.html', '_blank')">
                     <div class="guide-flag">🇸🇦</div>
@@ -535,7 +535,7 @@
                     </div>
                     <div class="guide-arrow">←</div>
                 </div>
-                
+
                 <div class="guide-card uae" onclick="window.open('google-ads-uae-guide-2025.html', '_blank')">
                     <div class="guide-flag">🇦🇪</div>
                     <div class="guide-content">
@@ -548,7 +548,7 @@
                     </div>
                     <div class="guide-arrow">←</div>
                 </div>
-                
+
                 <div class="guide-card kuwait" onclick="window.open('google-ads-kuwait-guide-2025.html', '_blank')">
                     <div class="guide-flag">🇰🇼</div>
                     <div class="guide-content">
@@ -561,7 +561,7 @@
                     </div>
                     <div class="guide-arrow">←</div>
                 </div>
-                
+
                 <div class="guide-card qatar" onclick="window.open('google-ads-qatar-guide-2025.html', '_blank')">
                     <div class="guide-flag">🇶🇦</div>
                     <div class="guide-content">
@@ -574,7 +574,7 @@
                     </div>
                     <div class="guide-arrow">←</div>
                 </div>
-                
+
                 <div class="guide-card bahrain" onclick="window.open('google-ads-bahrain-guide-2025.html', '_blank')">
                     <div class="guide-flag">🇧🇭</div>
                     <div class="guide-content">
@@ -587,7 +587,7 @@
                     </div>
                     <div class="guide-arrow">←</div>
                 </div>
-                
+
                 <div class="guide-card oman" onclick="window.open('google-ads-oman-guide-2025.html', '_blank')">
                     <div class="guide-flag">🇴🇲</div>
                     <div class="guide-content">
@@ -601,7 +601,7 @@
                     <div class="guide-arrow">←</div>
                 </div>
             </div>
-            
+
             <div class="cta-section">
                 <h3>🚀 هل تحتاج استراتيجية مخصصة لدولتك؟</h3>
                 <p>احصل على استشارة مجانية من خبرائنا المحليين في كل دولة خليجية</p>
@@ -615,7 +615,7 @@
     <div data-include="shared-footer.html"></div>
 
     <!-- Universal Header/Footer Script -->
-    <script src="/arabsad/assets/js/universal-header-footer.js"></script>
+    <script src="/assets/js/universal-header-footer.js"></script>
     <script>
         // Load Shared Header/Footer
         document.addEventListener('DOMContentLoaded', function() {
@@ -625,7 +625,7 @@
                     let response;
                     try { response = await fetch('../' + file); } catch(e) {}
                     if (!response || !response.ok) try { response = await fetch('/arabsad/' + file); } catch(e) {}
-                    
+
                     if (response && response.ok) {
                         el.innerHTML = await response.text();
                         if (file.includes('header') && typeof initMobileDropdowns === 'function') initMobileDropdowns();

@@ -20,13 +20,13 @@
             border-radius: 0 0 50px 50px;
             margin-bottom: 60px;
         }
-        
+
         .legal-content {
             max-width: 1000px;
             margin: 0 auto;
             padding: 0 20px;
         }
-        
+
         .legal-card {
             background: white;
             border-radius: 20px;
@@ -36,12 +36,12 @@
             border: 1px solid var(--border-light);
             transition: transform 0.3s ease;
         }
-        
+
         .legal-card:hover {
             transform: translateY(-5px);
             box-shadow: 0 15px 40px rgba(0,0,0,0.1);
         }
-        
+
         .legal-card h2 {
             color: var(--primary-color);
             border-bottom: 2px solid var(--bg-secondary);
@@ -51,19 +51,19 @@
             align-items: center;
             gap: 10px;
         }
-        
+
         .legal-card ul {
             list-style: none;
             padding: 0;
         }
-        
+
         .legal-card li {
             margin-bottom: 15px;
             padding-right: 25px;
             position: relative;
             color: var(--text-secondary);
         }
-        
+
         .legal-card li::before {
             content: '✓';
             color: var(--accent-color);
@@ -71,7 +71,7 @@
             right: 0;
             font-weight: bold;
         }
-        
+
         .last-updated {
             text-align: center;
             color: var(--text-muted);
@@ -123,14 +123,14 @@
                 <li>تقارير شفافة ودورية توضح أداء الحملات والميزانيات المصروفة.</li>
             </ul>
         </div>
-        
+
         <div class="last-updated">
             آخر تحديث: يناير 2026
         </div>
     </main>
 
     <div data-include="shared-footer.html"></div>
-    
+
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             document.querySelectorAll('[data-include]').forEach(async function(el) {

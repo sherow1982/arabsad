@@ -49,20 +49,20 @@
                 var banner = document.createElement('div');
                 banner.id = 'cookie-banner';
                 banner.style.cssText = 'position: fixed; bottom: 20px; right: 20px; left: 20px; background: #1a1f3a; color: #fff; padding: 20px; border-radius: 10px; box-shadow: 0 5px 20px rgba(0,0,0,0.3); z-index: 10000; border: 1px solid #FFB800; display: flex; flex-direction: column; gap: 15px; max-width: 500px; font-family: "Cairo", sans-serif; direction: rtl;';
-                
+
                 var text = document.createElement('p');
                 text.style.cssText = 'margin: 0; font-size: 0.95rem; line-height: 1.6;';
                 text.textContent = 'نحن لا نقوم بتسجيل بياناتك لان موقعنا ستاتيك  لا نحصل على اي بيانات الا التي تريد انت كمستخدم ان تعطيها لنا';
-                
+
                 var btn = document.createElement('button');
                 btn.textContent = 'حسناً، فهمت';
                 btn.style.cssText = 'background: #FFB800; color: #000; border: none; padding: 8px 20px; border-radius: 5px; cursor: pointer; font-weight: bold; align-self: flex-end; font-family: "Cairo", sans-serif;';
-                
+
                 btn.onclick = function() {
                     localStorage.setItem('cookieConsent', 'true');
                     banner.style.display = 'none';
                 };
-                
+
                 banner.appendChild(text);
                 banner.appendChild(btn);
                 document.body.appendChild(banner);
@@ -72,14 +72,14 @@
 </head>
 <body>
     <div data-include="shared-header.html"></div>
-    
+
     <main>
         <h1>📞 اتصل بنا</h1>
-        
+
         <div class="contact-grid">
             <div class="contact-card">
                 <h2>🌟 معلومات التواصل</h2>
-                
+
                 <div class="contact-item">
                     <span class="contact-icon">📱</span>
                     <div>
@@ -87,7 +87,7 @@
                         <a href="https://wa.me/201110760081" style="color: var(--primary);">+201110760081</a>
                     </div>
                 </div>
-                
+
                 <div class="contact-item">
                     <span class="contact-icon">📧</span>
                     <div>
@@ -95,7 +95,7 @@
                         <a href="mailto:info@arabsad.com" style="color: var(--primary);">info@arabsad.com</a>
                     </div>
                 </div>
-                
+
                 <div class="contact-item">
                     <span class="contact-icon">📍</span>
                     <div>
@@ -103,7 +103,7 @@
                         مصر - الجيزة - حدائق أكتوبر
                     </div>
                 </div>
-                
+
                 <div class="contact-item">
                     <span class="contact-icon">🕒</span>
                     <div>
@@ -111,36 +111,36 @@
                         24/7 - خدمة مستمرة
                     </div>
                 </div>
-                
+
                 <a href="https://wa.me/201110760081?text=مرحباً، أريد استشارة مجانية" class="btn">💬 تواصل عبر واتساب</a>
             </div>
-            
+
             <div class="contact-card">
                 <h2>🚀 خدمات سريعة</h2>
                 <p style="color: var(--text-muted); margin-bottom: 2rem;">احصل على استشارة فورية أو عرض سعر مخصص لمشروعك</p>
-                
+
                 <div style="display: grid; gap: 1rem;">
                     <a href="https://wa.me/201110760081?text=أريد استشارة مجانية عن Google Ads" class="btn" style="text-align: center;">📊 استشارة Google Ads</a>
                     <a href="https://wa.me/201110760081?text=أريد عرض سعر لتصميم موقع" class="btn" style="text-align: center;">💻 عرض سعر موقع</a>
                     <a href="https://wa.me/201110760081?text=أريد استشارة SEO مجانية" class="btn" style="text-align: center;">🔍 استشارة SEO</a>
                     <a href="https://wa.me/201110760081?text=أريد عرض سعر متجر إلكتروني" class="btn" style="text-align: center;">🛒 عرض سعر متجر</a>
                 </div>
-                
+
                 <div style="background: rgba(255,184,0,0.1); padding: 2rem; border-radius: 15px; margin-top: 2rem; text-align: center;">
                     <h3 style="color: var(--primary); margin-bottom: 1rem;">⚡ استجابة فورية</h3>
                     <p style="color: var(--text-muted);">متوسط وقت الرد أقل من 30 دقيقة في أوقات العمل</p>
                 </div>
             </div>
         </div>
-        
+
         <!-- Tax Certificate -->
         <div style="margin-top: 40px; text-align: center;">
             <img src="assets/images/الضرايب مبلورة.jpg" alt="الشهادة الضريبية - مؤسسة إعلانات العرب" style="max-width: 100%; height: auto; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.3);">
         </div>
     </main>
-    
+
     <div data-include="shared-footer.html"></div>
-    
+
     <script src="assets/js/universal-header-footer.js"></script>
     <script src="assets/js/chatbot-working.js"></script>
 </body>
