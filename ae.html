@@ -495,7 +495,7 @@
             response = await fetch(file);
           } catch (e) {}
           if (!response || !response.ok) try {
-            response = await fetch('/arabsad/' + file);
+            response = await fetch('/' + file);
           } catch (e) {}
           if (response && response.ok) {
             el.innerHTML = await response.text();

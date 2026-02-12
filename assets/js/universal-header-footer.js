@@ -14,7 +14,7 @@ class UniversalHeaderFooter {
 
     getBaseUrl() {
         const path = window.location.pathname;
-        if (path.includes('/arabsad/')) {
+        if (path.includes('/')) {
             return '/arabsad';
         }
         return '';
@@ -96,7 +96,7 @@ class UniversalHeaderFooter {
     }
 
     updateRelativeLinks(container) {
-        const links = container.querySelectorAll('a[href^="/arabsad/"]');
+        const links = container.querySelectorAll('a[href^="/"]');
         links.forEach(link => {
             const href = link.getAttribute('href');
             if (!href.startsWith('http') && !href.startsWith('mailto:') && !href.startsWith('tel:')) {

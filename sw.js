@@ -3,33 +3,33 @@ const CACHE_NAME = 'arabsad-v2.0.0';
 const CACHE_VERSION = '2026-01-23-v1
 // قائمة الملفات الأساسية للتخزين المؤقت
 const CORE_CACHE = [
-  '/arabsad/',
-  '/arabsad/index.html',
-  '/arabsad/assets/css/main.css',
-  '/arabsad/assets/css/navigation-system.css',
-  '/arabsad/assets/js/boot.js',
-  '/arabsad/favicon.ico',
-  '/arabsad/favicon.svg',
-  '/arabsad/manifest.json'
+  '/',
+  '/index.html',
+  '/assets/css/main.css',
+  '/assets/css/navigation-system.css',
+  '/assets/js/boot.js',
+  '/favicon.ico',
+  '/favicon.svg',
+  '/manifest.json'
 ];
 
 // ملفات الصفحات المهمة
 const PAGES_CACHE = [
-  '/arabsad/services/google-ads.html',
-  '/arabsad/services/seo.html',
-  '/arabsad/services/website-design.html',
-  '/arabsad/services/ecommerce.html',
-  '/arabsad/services/social-media-ads.html',
-  '/arabsad/services/social-management.html',
-  '/arabsad/sa.html',
-  '/arabsad/ae.html',
-  '/arabsad/kw.html',
-  '/arabsad/qa.html',
-  '/arabsad/bh.html',
-  '/arabsad/om.html',
-  '/arabsad/about.html',
-  '/arabsad/contact.html',
-  '/arabsad/legal.html'
+  '/services/google-ads.html',
+  '/services/seo.html',
+  '/services/website-design.html',
+  '/services/ecommerce.html',
+  '/services/social-media-ads.html',
+  '/services/social-management.html',
+  '/sa.html',
+  '/ae.html',
+  '/kw.html',
+  '/qa.html',
+  '/bh.html',
+  '/om.html',
+  '/about.html',
+  '/contact.html',
+  '/legal.html'
 ];
 
 // Helper function to validate origin
@@ -247,8 +247,8 @@ self.addEventListener('push', event => {
     const data = event.data.json();
     const options = {
       body: data.body || 'لديك إشعار جديد من مؤسسة إعلانات العرب',
-      icon: '/arabsad/favicon.svg',
-      badge: '/arabsad/favicon.ico',
+      icon: '/favicon.svg',
+      badge: '/favicon.ico',
       tag: 'arabsad-notification',
       requireInteraction: true,
       actions: [
@@ -277,7 +277,7 @@ self.addEventListener('notificationclick', event => {
   
   if (event.action === 'open' || !event.action) {
     event.waitUntil(
-      clients.openWindow('/arabsad/').catch(() => 
+      clients.openWindow('/').catch(() => 
         clients.openWindow('https://arabsads.storesads.shop/')
       )
     );

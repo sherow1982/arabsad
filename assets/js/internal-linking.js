@@ -8,83 +8,83 @@ class InternalLinkingSystem {
         this.linkMap = {
             // الخدمات الرئيسية
             'google-ads': {
-                url: '/arabsad/services/google-ads.html',
+                url: '/services/google-ads.html',
                 title: 'خدمات إعلانات جوجل',
                 keywords: ['جوجل ادز', 'google ads', 'إعلانات جوجل', 'حملات البحث', 'إعلانات مدفوعة']
             },
             'seo': {
-                url: '/arabsad/services/seo.html',
+                url: '/services/seo.html',
                 title: 'خدمات تحسين محركات البحث SEO',
                 keywords: ['سيو', 'seo', 'تحسين محركات البحث', 'ترتيب المواقع', 'تصدر نتائج البحث']
             },
             'social-media-ads': {
-                url: '/arabsad/services/social-media-ads.html',
+                url: '/services/social-media-ads.html',
                 title: 'إعلانات وسائل التواصل الاجتماعي',
                 keywords: ['فيسبوك ادز', 'انستجرام ادز', 'سناب شات ادز', 'تيك توك ادز', 'إعلانات السوشيال ميديا']
             },
             'website-design': {
-                url: '/arabsad/services/website-design.html',
+                url: '/services/website-design.html',
                 title: 'تصميم وتطوير المواقع',
                 keywords: ['تصميم مواقع', 'تطوير مواقع', 'مواقع متجاوبة', 'تصميم ويب']
             },
             'ecommerce': {
-                url: '/arabsad/services/ecommerce.html',
+                url: '/services/ecommerce.html',
                 title: 'تصميم المتاجر الإلكترونية',
                 keywords: ['متجر إلكتروني', 'تجارة إلكترونية', 'متاجر أونلاين', 'ecommerce']
             },
 
             // الدول
             'saudi': {
-                url: '/arabsad/sa.html',
+                url: '/sa.html',
                 title: 'خدمات التسويق الرقمي في السعودية',
                 keywords: ['السعودية', 'الرياض', 'جدة', 'الدمام', 'تسويق رقمي السعودية']
             },
             'uae': {
-                url: '/arabsad/ae.html',
+                url: '/ae.html',
                 title: 'خدمات التسويق الرقمي في الإمارات',
                 keywords: ['الإمارات', 'دبي', 'أبوظبي', 'الشارقة', 'تسويق رقمي الإمارات']
             },
             'kuwait': {
-                url: '/arabsad/kw.html',
+                url: '/kw.html',
                 title: 'خدمات التسويق الرقمي في الكويت',
                 keywords: ['الكويت', 'مدينة الكويت', 'تسويق رقمي الكويت']
             },
             'qatar': {
-                url: '/arabsad/qa.html',
+                url: '/qa.html',
                 title: 'خدمات التسويق الرقمي في قطر',
                 keywords: ['قطر', 'الدوحة', 'تسويق رقمي قطر']
             },
             'bahrain': {
-                url: '/arabsad/bh.html',
+                url: '/bh.html',
                 title: 'خدمات التسويق الرقمي في البحرين',
                 keywords: ['البحرين', 'المنامة', 'تسويق رقمي البحرين']
             },
             'oman': {
-                url: '/arabsad/om.html',
+                url: '/om.html',
                 title: 'خدمات التسويق الرقمي في عمان',
                 keywords: ['عمان', 'مسقط', 'تسويق رقمي عمان']
             },
 
             // المدن
             'riyadh': {
-                url: '/arabsad/cities/riyadh-google-ads.html',
+                url: '/cities/riyadh-google-ads.html',
                 title: 'خدمات جوجل ادز في الرياض',
                 keywords: ['الرياض', 'جوجل ادز الرياض', 'تسويق رقمي الرياض']
             },
             'jeddah': {
-                url: '/arabsad/cities/jeddah-google-ads.html',
+                url: '/cities/jeddah-google-ads.html',
                 title: 'خدمات جوجل ادز في جدة',
                 keywords: ['جدة', 'جوجل ادز جدة', 'تسويق رقمي جدة']
             },
             'dubai': {
-                url: '/arabsad/cities/dubai-digital-marketing.html',
+                url: '/cities/dubai-digital-marketing.html',
                 title: 'خدمات التسويق الرقمي في دبي',
                 keywords: ['دبي', 'تسويق رقمي دبي', 'إعلانات دبي']
             },
 
             // المقالات والمدونة
             'blog': {
-                url: '/arabsad/blog/',
+                url: '/blog/',
                 title: 'مدونة التسويق الرقمي',
                 keywords: ['مدونة', 'مقالات تسويق', 'نصائح تسويقية', 'دليل التسويق']
             }
@@ -235,11 +235,11 @@ class InternalLinkingSystem {
         const breadcrumbs = [];
 
         if (path.includes('/services/')) {
-            breadcrumbs.push({ title: 'الخدمات', url: '/arabsad/services/' });
+            breadcrumbs.push({ title: 'الخدمات', url: '/services/' });
         } else if (path.includes('/blog/')) {
-            breadcrumbs.push({ title: 'المدونة', url: '/arabsad/blog/' });
+            breadcrumbs.push({ title: 'المدونة', url: '/blog/' });
         } else if (path.includes('/cities/')) {
-            breadcrumbs.push({ title: 'المدن', url: '/arabsad/cities/' });
+            breadcrumbs.push({ title: 'المدن', url: '/cities/' });
         }
 
         // Add current page

@@ -809,7 +809,7 @@
 
                     if (!response || !response.ok) {
                         try {
-                            response = await fetch('/arabsad/' + file);
+                            response = await fetch('/' + file);
                         } catch(e) { console.log('Fetch 2 failed', e); }
                     }
 

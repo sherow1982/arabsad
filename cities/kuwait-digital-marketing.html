@@ -265,7 +265,7 @@
             document.querySelectorAll('[data-include]').forEach(async function(el) {
                 try {
                     const file = el.getAttribute('data-include');
-                    const basePath = window.location.pathname.includes('/arabsad/') ? '/arabsad/' : '../';
+                    const basePath = window.location.pathname.includes('/') ? '/' : '../';
                     const response = await fetch(basePath + file);
                     if (response.ok) el.innerHTML = await response.text();
                     else console.warn(`Failed to load: ${file}`);

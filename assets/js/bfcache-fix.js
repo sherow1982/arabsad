@@ -11,7 +11,7 @@
                 // Re-trigger include loading if needed
                 const file = el.getAttribute('data-include');
                 if (file && !el.innerHTML.trim()) {
-                    fetch('/arabsad/' + file)
+                    fetch('/' + file)
                         .then(response => response.text())
                         .then(html => el.innerHTML = html)
                         .catch(e => console.log('Include load error:', e));

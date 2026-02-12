@@ -77,7 +77,7 @@ function ensureHeaderFooter(filePath) {
     const relativePath = '../'.repeat(depth);
     const sharedHeaderPath = depth === 0 ? 'shared-header.html' : `${relativePath}shared-header.html`;
     const sharedFooterPath = depth === 0 ? 'shared-footer.html' : `${relativePath}shared-footer.html`;
-    const jsPath = depth === 0 ? '/arabsad/assets/js/' : '/arabsad/assets/js/';
+    const jsPath = depth === 0 ? '/assets/js/' : '/assets/js/';
 
     // التحقق من وجود الهيدر
     if (!content.includes('data-include') && !content.includes('<header') && !content.includes('shared-header')) {

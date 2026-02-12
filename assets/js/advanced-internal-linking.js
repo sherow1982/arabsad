@@ -10,7 +10,7 @@ class AdvancedInternalLinking {
             // المقالات الرئيسية
             articles: {
                 'google-ads-comprehensive-guide': {
-                    url: '/arabsad/blog/articles/google-ads-comprehensive-guide.html',
+                    url: '/blog/articles/google-ads-comprehensive-guide.html',
                     title: 'دليل إعلانات جوجل الشامل 2025',
                     keywords: ['إعلانات جوجل', 'google ads', 'جوجل ادز', 'PPC', 'حملات البحث', 'إعلانات مدفوعة'],
                     relatedServices: ['google-ads'],
@@ -19,7 +19,7 @@ class AdvancedInternalLinking {
                     priority: 10
                 },
                 'seo-comprehensive-guide': {
-                    url: '/arabsad/blog/articles/seo-comprehensive-guide.html',
+                    url: '/blog/articles/seo-comprehensive-guide.html',
                     title: 'دليل تحسين محركات البحث الشامل',
                     keywords: ['سيو', 'SEO', 'تحسين محركات البحث', 'ترتيب المواقع', 'تصدر نتائج البحث'],
                     relatedServices: ['seo', 'website-design'],
@@ -28,7 +28,7 @@ class AdvancedInternalLinking {
                     priority: 10
                 },
                 'social-media-ads-comprehensive-guide': {
-                    url: '/arabsad/blog/articles/social-media-ads-comprehensive-guide.html',
+                    url: '/blog/articles/social-media-ads-comprehensive-guide.html',
                     title: 'دليل إعلانات وسائل التواصل الشامل',
                     keywords: ['فيسبوك ادز', 'انستجرام ادز', 'سناب شات ادز', 'تيك توك ادز', 'إعلانات السوشيال ميديا'],
                     relatedServices: ['social-media-ads', 'social-management'],
@@ -37,7 +37,7 @@ class AdvancedInternalLinking {
                     priority: 9
                 },
                 'website-design-comprehensive-guide': {
-                    url: '/arabsad/blog/articles/website-design-comprehensive-guide.html',
+                    url: '/blog/articles/website-design-comprehensive-guide.html',
                     title: 'دليل تصميم المواقع الشامل',
                     keywords: ['تصميم مواقع', 'تطوير مواقع', 'مواقع متجاوبة', 'تصميم ويب'],
                     relatedServices: ['website-design', 'ecommerce'],
@@ -46,7 +46,7 @@ class AdvancedInternalLinking {
                     priority: 8
                 },
                 'ecommerce-comprehensive-guide': {
-                    url: '/arabsad/blog/articles/ecommerce-comprehensive-guide.html',
+                    url: '/blog/articles/ecommerce-comprehensive-guide.html',
                     title: 'دليل التجارة الإلكترونية الشامل',
                     keywords: ['متجر إلكتروني', 'تجارة إلكترونية', 'متاجر أونلاين', 'ecommerce'],
                     relatedServices: ['ecommerce', 'google-ads', 'seo'],
@@ -59,7 +59,7 @@ class AdvancedInternalLinking {
             // مقالات الدول
             countryArticles: {
                 'google-ads-saudi-guide-2025': {
-                    url: '/arabsad/blog/google-ads-saudi-guide-2025.html',
+                    url: '/blog/google-ads-saudi-guide-2025.html',
                     title: 'دليل إعلانات جوجل في السعودية 2025',
                     keywords: ['جوجل ادز السعودية', 'إعلانات جوجل الرياض', 'google ads saudi'],
                     relatedServices: ['google-ads'],
@@ -69,7 +69,7 @@ class AdvancedInternalLinking {
                     priority: 9
                 },
                 'google-ads-uae-guide-2025': {
-                    url: '/arabsad/blog/google-ads-uae-guide-2025.html',
+                    url: '/blog/google-ads-uae-guide-2025.html',
                     title: 'دليل إعلانات جوجل في الإمارات 2025',
                     keywords: ['جوجل ادز الإمارات', 'إعلانات جوجل دبي', 'google ads uae'],
                     relatedServices: ['google-ads'],
@@ -83,7 +83,7 @@ class AdvancedInternalLinking {
             // الخدمات
             services: {
                 'google-ads': {
-                    url: '/arabsad/services/google-ads.html',
+                    url: '/services/google-ads.html',
                     title: 'خدمات إعلانات جوجل',
                     keywords: ['خدمات جوجل ادز', 'شركة إعلانات جوجل', 'إدارة حملات جوجل'],
                     relatedArticles: ['google-ads-comprehensive-guide', 'google-ads-saudi-guide-2025'],
@@ -92,7 +92,7 @@ class AdvancedInternalLinking {
                     priority: 10
                 },
                 'seo': {
-                    url: '/arabsad/services/seo.html',
+                    url: '/services/seo.html',
                     title: 'خدمات تحسين محركات البحث',
                     keywords: ['خدمات سيو', 'شركة SEO', 'تحسين المواقع'],
                     relatedArticles: ['seo-comprehensive-guide'],
@@ -101,7 +101,7 @@ class AdvancedInternalLinking {
                     priority: 10
                 },
                 'social-media-ads': {
-                    url: '/arabsad/services/social-media-ads.html',
+                    url: '/services/social-media-ads.html',
                     title: 'خدمات إعلانات وسائل التواصل',
                     keywords: ['خدمات فيسبوك ادز', 'إدارة إعلانات السوشيال ميديا'],
                     relatedArticles: ['social-media-ads-comprehensive-guide'],

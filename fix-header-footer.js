@@ -14,14 +14,14 @@ const footerInclude = `    <!-- Footer -->
     <div data-include="shared-footer.html"></div>`;
 
 const universalScript = `    <!-- Universal Header/Footer Script -->
-    <script src="/arabsad/assets/js/universal-header-footer.js"></script>
+    <script src="/assets/js/universal-header-footer.js"></script>
     <script>
         // Load Shared Header/Footer
         document.addEventListener('DOMContentLoaded', function() {
             document.querySelectorAll('[data-include]').forEach(async function(el) {
                 try {
                     const file = el.getAttribute('data-include');
-                    const response = await fetch('/arabsad/' + file);
+                    const response = await fetch('/' + file);
                     if (response.ok) {
                         el.innerHTML = await response.text();
                         if (file.includes('header') && typeof initMobileDropdowns === 'function') initMobileDropdowns();
