@@ -13,10 +13,6 @@ class UniversalHeaderFooter {
     }
 
     getBaseUrl() {
-        const path = window.location.pathname;
-        if (path.includes('/')) {
-            return '/arabsad';
-        }
         return '';
     }
 
