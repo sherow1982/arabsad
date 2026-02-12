@@ -8,7 +8,8 @@
     "history": "node scripts/auto-history.js",
     "optimize": "node scripts/big-tasks-fixed.js optimize",
     "full-cleanup": "node scripts/big-tasks-fixed.js full",
-    "update-sitemap": "node scripts/update-sitemap.js"
+    "update-sitemap": "node scripts/update-sitemap.js",
+    "fix-all": "node scripts/fix-all-issues.js"
   },
   "dependencies": {
     "@google/genai": "^1.40.0"
