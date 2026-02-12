@@ -1,5 +1,23 @@
 {
+  "name": "arabsad",
+  "version": "2.0.0",
+  "description": "موقع إعلانات العرب - خدمات التسويق الرقمي",
+  "scripts": {
+    "clean": "node scripts/cleanup-project-fixed.js",
+    "big-task": "node scripts/big-tasks-fixed.js",
+    "history": "node scripts/auto-history.js",
+    "optimize": "node scripts/big-tasks-fixed.js optimize",
+    "full-cleanup": "node scripts/big-tasks-fixed.js full"
+  },
   "dependencies": {
     "@google/genai": "^1.40.0"
-  }
+  },
+  "keywords": [
+    "تسويق رقمي",
+    "إعلانات جوجل",
+    "سيو",
+    "مواقع"
+  ],
+  "author": "arabsads.storesads.shop",
+  "license": "MIT"
 }
