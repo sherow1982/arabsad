@@ -1,4 +1,13 @@
 User-agent: *
 Allow: /
 
+# Sitemaps
 Sitemap: https://arabsads.storesads.shop/sitemap.xml
+
+# Crawl-delay
+Crawl-delay: 1
+
+# Disallow admin areas
+Disallow: /scripts/
+Disallow: /.git/
+Disallow: /node_modules/
