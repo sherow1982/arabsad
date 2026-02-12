@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://sherow1982.github.io/arabsad/sitemap.xml
+Sitemap: https://arabsads.storesads.shop/sitemap.xml

@@ -185,4 +185,4 @@ console.log('- Added universal-header-footer.js and bfcache-fix.js scripts');
 console.log('- Added body padding-top for fixed header');
 console.log('- Fixed relative paths for nested directories');
 console.log('\n🔄 Please refresh your browser to see the changes.');
-console.log('🌐 Test the website: https://sherow1982.github.io/arabsad/');
+console.log('🌐 Test the website: https://arabsads.storesads.shop/');

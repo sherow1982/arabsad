@@ -278,7 +278,7 @@ self.addEventListener('notificationclick', event => {
   if (event.action === 'open' || !event.action) {
     event.waitUntil(
       clients.openWindow('/arabsad/').catch(() => 
-        clients.openWindow('https://sherow1982.github.io/arabsad/')
+        clients.openWindow('https://arabsads.storesads.shop/')
       )
     );
   }

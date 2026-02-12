@@ -92,13 +92,13 @@ function fixImagesInFile(filePath) {
     // إضافة meta tags للسيو
     if (!content.includes('og:image') && filePath.endsWith('index.html')) {
         const ogTags = `
-    <meta property="og:image" content="https://sherow1982.github.io/arabsad/assets/images/بانر الصفحة الرئيسية.jpg">
+    <meta property="og:image" content="https://arabsads.storesads.shop/assets/images/بانر الصفحة الرئيسية.jpg">
     <meta property="og:image:width" content="900">
     <meta property="og:image:height" content="400">
     <meta property="og:type" content="website">
     <meta property="og:locale" content="ar_SA">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:image" content="https://sherow1982.github.io/arabsad/assets/images/بانر الصفحة الرئيسية.jpg">`;
+    <meta name="twitter:image" content="https://arabsads.storesads.shop/assets/images/بانر الصفحة الرئيسية.jpg">`;
         
         content = content.replace('</head>', `${ogTags}\n</head>`);
         modified = true;
@@ -107,7 +107,7 @@ function fixImagesInFile(filePath) {
 
     // تحسين structured data
     if (content.includes('"@type": "ProfessionalService"')) {
-        const imageUrl = 'https://sherow1982.github.io/arabsad/assets/images/logo-arabsad.png';
+        const imageUrl = 'https://arabsads.storesads.shop/assets/images/logo-arabsad.png';
         if (!content.includes(imageUrl)) {
             content = content.replace(
                 /"image": "[^"]*"/,
@@ -148,4 +148,4 @@ console.log('- Added loading="lazy" to all images');
 console.log('- Improved alt text for better accessibility');
 console.log('- Added Open Graph meta tags');
 console.log('- Enhanced structured data');
-console.log('\n🌐 Test the website: https://sherow1982.github.io/arabsad/');
+console.log('\n🌐 Test the website: https://arabsads.storesads.shop/');
