@@ -1,13 +1,52 @@
+# Content Signals
 User-agent: *
+Content-Signal: search=yes,ai-train=no
 Allow: /
 
-# Sitemaps
-Sitemap: https://arabsads.storesads.shop/sitemap.xml
+# Block AI bots
+User-agent: Amazonbot
+Disallow: /
 
-# Crawl-delay
-Crawl-delay: 1
+User-agent: Applebot-Extended
+Disallow: /
 
-# Disallow admin areas
+User-agent: Bytespider
+Disallow: /
+
+User-agent: CCBot
+Disallow: /
+
+User-agent: ClaudeBot
+Disallow: /
+
+User-agent: Google-Extended
+Disallow: /
+
+User-agent: GPTBot
+Disallow: /
+
+User-agent: meta-externalagent
+Disallow: /
+
+# Allow search bots
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: YandexBot
+Allow: /
+
+User-agent: Baiduspider
+Allow: /
+
+# Block sensitive paths
+User-agent: *
 Disallow: /scripts/
 Disallow: /.git/
 Disallow: /node_modules/
+
+Crawl-delay: 1
+
+Sitemap: https://storesads.shop/sitemap.xml
