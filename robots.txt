@@ -94,8 +94,5 @@ Disallow: /scripts/
 Disallow: /.git/
 Disallow: /node_modules/
 
-# --- Performance ---
-Crawl-delay: 1
-
 # --- Sitemap ---
 Sitemap: https://storesads.shop/sitemap.xml
