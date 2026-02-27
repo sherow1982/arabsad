@@ -167,3 +167,4 @@ Disallow: *page=-*
 Disallow: *page=0*
 
 Sitemap: https://storesads.shop/sitemap.xml
+
