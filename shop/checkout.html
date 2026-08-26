@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>إتمام الطلب | متجر إعلانات العرب</title>
+<meta name="robots" content="noindex">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/shop.css">
+<style>
+.checkout-steps{display:flex;justify-content:center;gap:0;margin-bottom:40px;max-width:500px;margin-left:auto;margin-right:auto}
+.step{flex:1;text-align:center;position:relative}
+.step::after{content:'';position:absolute;top:18px;left:-50%;width:100%;height:2px;background:rgba(255,255,255,.1);z-index:0}
+.step:first-child::after{display:none}
+.step-circle{width:36px;height:36px;border-radius:50%;background:var(--card2);border:2px solid rgba(255,255,255,.15);display:flex;align-items:center;justify-content:center;margin:0 auto 8px;font-size:.85rem;font-weight:700;position:relative;z-index:1}
+.step.active .step-circle{background:var(--gold);border-color:var(--gold);color:#000}
+.step.done .step-circle{background:rgba(37,211,102,.2);border-color:#25D366;color:#25D366}
+.step-label{font-size:.75rem;color:var(--muted)}
+.step.active .step-label{color:var(--gold);font-weight:700}
+.phone-hint{font-size:.78rem;color:var(--muted);margin-top:4px}
+.payment-methods{display:flex;gap:10px;flex-wrap:wrap;margin-top:10px}
+.payment-method{display:flex;align-items:center;gap:8px;background:var(--card2);border:2px solid rgba(255,255,255,.08);border-radius:10px;padding:10px 16px;cursor:pointer;transition:all .3s;font-size:.88rem;font-weight:600}
+.payment-method input{accent-color:var(--gold)}
+.payment-method:has(input:checked){border-color:var(--gold);background:rgba(201,162,39,.08)}
+.order-item-img{width:50px;height:50px;border-radius:8px;object-fit:cover;background:var(--card2)}
+.order-item-info{flex:1}
+.order-item-name{font-weight:700;font-size:.9rem}
+.order-item-qty{font-size:.8rem;color:var(--muted)}
+.order-item-price{font-weight:900;color:var(--gold)}
+.empty-cart{text-align:center;padding:60px 20px}
+.empty-cart .icon{font-size:4rem;margin-bottom:16px}
+.empty-cart p{color:var(--muted);margin-bottom:20px}
+.empty-cart a{color:var(--gold);text-decoration:none;font-weight:700;background:rgba(201,162,39,.1);padding:12px 28px;border-radius:30px;display:inline-block}
+</style>
+</head>
+<body>
+<a href="../shop/" class="top-banner-link" aria-label="متجر إعلانات العرب" target="_blank"><style>.top-banner-link{display:block;width:100%;background:#0a0e27;line-height:0;border-bottom:1px solid rgba(255,184,0,.15)}.top-banner-link img{width:100%;height:auto;display:block}</style><img src="../assets/images/top-banner.png" alt="إعلانات العرب" loading="eager" fetchpriority="high" width="1070" height="453"></a><header class="site-header" dir="rtl">
+<style>
+.site-header{position:sticky;top:0;z-index:999;background:#0a0e27;border-bottom:1px solid rgba(255,184,0,.22);font-family:Cairo,sans-serif}
+.site-header .wrap{max-width:1200px;margin:auto;padding:10px 18px;display:flex;align-items:center;justify-content:space-between;gap:18px}
+.site-header .brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:#fff;font-weight:900}
+.site-header .brand img{width:44px;height:44px;border-radius:50%;object-fit:cover}
+.site-header nav{display:flex;gap:16px;align-items:center;flex-wrap:wrap}
+.site-header nav a{color:#e8edf5;text-decoration:none;font-weight:700;font-size:.9rem}
+.site-header nav a.shop-link{color:#C9A227!important;font-weight:900}
+.site-header .wa{background:#25D366;color:#fff!important;padding:8px 14px;border-radius:22px}
+.site-header .mob-toggle{display:none;background:none;border:none;color:#fff;font-size:1.5rem;cursor:pointer;padding:4px 8px}
+@media(max-width:700px){
+  .site-header .mob-toggle{display:block}
+  .site-header nav{display:none;position:absolute;top:100%;right:0;left:0;background:#0a0e27;flex-direction:column;padding:16px 18px;gap:14px;border-bottom:1px solid rgba(255,184,0,.22)}
+  .site-header nav.open{display:flex}
+  .site-header .brand span{display:none}
+}
+</style>
+<div class="wrap">
+  <a class="brand" href="../">
+    <img src="../assets/images/logo-arabsad.jpg" alt="شعار إعلانات العرب" width="44" height="44">
+    <span>إعلانات العرب</span>
+  </a>
+  <button class="mob-toggle" aria-label="القائمة" onclick="this.nextElementSibling.classList.toggle('open');this.textContent=this.nextElementSibling.classList.contains('open')?'✕':'☰'">☰</button>
+  <nav aria-label="التنقل الرئيسي">
+    <a href="../">الرئيسية</a>
+    <a href="../services/">الخدمات</a>
+    <a href="../shop/" class="shop-link">🛒 المتجر</a>
+    <a href="../blog/">المدونة</a>
+    <a href="../about.html">من نحن</a>
+    <a class="wa" href="https://wa.me/201110760081?text=%D8%A3%D8%B1%D9%8A%D8%AF%20%D8%A7%D8%B3%D8%AA%D8%B4%D8%A7%D8%B1%D8%A9%20%D8%AA%D8%B3%D9%88%D9%8A%D9%82%D9%8A%D8%A9" target="_blank" rel="noopener noreferrer">واتساب</a>
+  </nav>
+</div>
+</header>
+
+<div class="checkout-wrap">
+  <div class="checkout-steps">
+    <div class="step done"><div class="step-circle">✓</div><div class="step-label">السلة</div></div>
+    <div class="step active"><div class="step-circle">2</div><div class="step-label">بياناتك</div></div>
+    <div class="step"><div class="step-circle">3</div><div class="step-label">التأكيد</div></div>
+  </div>
+
+  <h1 class="checkout-title">🛒 إتمام الطلب</h1>
+
+  <div id="emptyCart" class="empty-cart" style="display:none">
+    <div class="icon">🛒</div>
+    <p>سلتك فارغة! أضف خدمة أولاً.</p>
+    <a href="/shop/">تصفح الخدمات</a>
+  </div>
+
+  <div id="checkoutContent">
+    <div class="checkout-grid">
+      <!-- نموذج البيانات -->
+      <form id="orderForm" class="checkout-form" onsubmit="submitOrder(event)">
+
+        <div class="form-section-title">👤 بيانات العميل</div>
+        <div class="form-row">
+          <div class="form-group">
+            <label>الاسم الكامل *</label>
+            <input type="text" id="fullName" placeholder="محمد أحمد العتيبي" required>
+          </div>
+          <div class="form-group">
+            <label>البريد الإلكتروني *</label>
+            <input type="email" id="email" placeholder="example@email.com" required>
+          </div>
+        </div>
+
+        <div class="form-section-title" style="margin-top:24px">📍 العنوان</div>
+        <div class="form-group">
+          <label>الدولة *</label>
+          <select id="country" required onchange="updatePhoneFormat()">
+            <option value="">-- اختر دولتك --</option>
+            <option value="SA">🇸🇦 المملكة العربية السعودية</option>
+            <option value="AE">🇦🇪 الإمارات العربية المتحدة</option>
+            <option value="KW">🇰🇼 الكويت</option>
+            <option value="QA">🇶🇦 قطر</option>
+            <option value="BH">🇧🇭 البحرين</option>
+            <option value="OM">🇴🇲 سلطنة عُمان</option>
+            <option value="EG">🇪🇬 مصر</option>
+          </select>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label>المدينة *</label>
+            <select id="city" required>
+              <option value="">-- اختر المدينة --</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>الحي / المنطقة</label>
+            <input type="text" id="district" placeholder="حي النزهة">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>رقم الجوال *</label>
+          <input type="tel" id="phone" placeholder="" required>
+          <div class="phone-hint" id="phoneHint">اختر الدولة أولاً</div>
+        </div>
+
+        <div class="form-group">
+          <label>اسم الشركة / النشاط التجاري</label>
+          <input type="text" id="company" placeholder="شركة النجاح للتجارة">
+        </div>
+
+        <div class="form-group">
+          <label>ملاحظات إضافية</label>
+          <textarea id="notes" rows="3" placeholder="أي تفاصيل إضافية تريد إضافتها..."></textarea>
+        </div>
+
+        <div class="form-section-title" style="margin-top:24px">💳 طريقة الدفع</div>
+        <div class="payment-methods">
+          <label class="payment-method">
+            <input type="radio" name="payment" value="whatsapp" checked>
+            <span>💬 واتساب (تحويل بنكي)</span>
+          </label>
+          <label class="payment-method">
+            <input type="radio" name="payment" value="visa">
+            <span>💳 فيزا / ماستركارد</span>
+          </label>
+          <label class="payment-method">
+            <input type="radio" name="payment" value="stcpay">
+            <span>📱 STC Pay</span>
+          </label>
+          <label class="payment-method">
+            <input type="radio" name="payment" value="mada">
+            <span>🏦 مدى</span>
+          </label>
+        </div>
+
+        <button type="submit" class="btn-submit">
+          ✅ تأكيد الطلب والمتابعة
+        </button>
+        <p style="text-align:center;font-size:.8rem;color:var(--muted);margin-top:12px">
+          🔒 بياناتك محمية ومشفرة بالكامل
+        </p>
+      </form>
+
+      <!-- ملخص الطلب -->
+      <div class="order-summary">
+        <h3>📋 ملخص طلبك</h3>
+        <div id="orderItems"></div>
+        <div class="order-total">
+          <span>الإجمالي</span>
+          <span id="orderTotal">$0</span>
+        </div>
+        <div style="margin-top:16px;padding:14px;background:rgba(37,211,102,.08);border-radius:10px;border:1px solid rgba(37,211,102,.2)">
+          <div style="font-size:.82rem;color:#25D366;font-weight:700;margin-bottom:6px">✅ ما يشمله طلبك</div>
+          <div style="font-size:.8rem;color:var(--muted);line-height:1.8">
+            • بدء التنفيذ خلال 24 ساعة<br>
+            • مدير حساب مخصص على واتساب<br>
+            • تقارير أداء دورية<br>
+            • دعم فني مستمر
+          </div>
+        </div>
+        <div style="margin-top:14px;text-align:center">
+          <a href="/shop/" style="color:var(--gold);font-size:.85rem;text-decoration:none">← إضافة خدمة أخرى</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="site-footer" dir="rtl">
+<style>
+.site-footer{background:#070b1e;color:#e8edf5;padding:40px 18px 24px;font-family:Cairo,sans-serif;text-align:center}
+.site-footer .footer-logo img{width:58px;height:58px;border-radius:50%;object-fit:cover}
+.site-footer .footer-name{margin:10px 0 4px;font-weight:900;font-size:1.1rem}
+.site-footer .footer-desc{margin:0 0 18px;color:#a8b3c1;font-size:.9rem}
+.site-footer .footer-nav{display:flex;flex-wrap:wrap;justify-content:center;gap:10px 20px;margin-bottom:18px}
+.site-footer .footer-nav a{color:#a8b3c1;text-decoration:none;font-size:.88rem;transition:color .2s}
+.site-footer .footer-nav a:hover{color:#C9A227}
+.site-footer .footer-nav a.shop-link{color:#C9A227;font-weight:800}
+.site-footer .footer-wa{color:#25D366;text-decoration:none;font-weight:800;font-size:.95rem}
+.site-footer .footer-feed{margin:10px 0 0;font-size:.75rem;color:#5a6478}
+.site-footer .footer-feed a{color:#4a9eff;text-decoration:none}
+.site-footer .footer-copy{margin:16px 0 0;font-size:.75rem;color:#3a4458;border-top:1px solid rgba(255,255,255,.05);padding-top:14px}
+.site-footer .footer-address{display:block;margin:18px auto 0;max-width:560px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:12px;padding:16px 20px;font-style:normal;text-align:center}
+.site-footer .footer-address-title{display:block;font-weight:800;color:#C9A227;margin-bottom:8px;font-size:.9rem}
+.site-footer .footer-address span{display:block;color:#a8b3c1;font-size:.8rem;line-height:1.8}
+.site-footer .footer-email{display:inline-block;margin-top:10px;color:#4a9eff;text-decoration:none;font-weight:700;font-size:.85rem}
+.site-footer .footer-email:hover{text-decoration:underline}
+.site-footer .footer-contact{display:flex;flex-wrap:wrap;justify-content:center;gap:12px 28px;margin:14px 0 0}
+.site-footer .footer-contact a{color:#a8b3c1;text-decoration:none;font-size:.85rem;display:flex;align-items:center;gap:6px;transition:color .2s}
+.site-footer .footer-contact a:hover{color:#C9A227}
+.site-footer .footer-map{margin:20px auto 0;max-width:600px;border-radius:14px;overflow:hidden;border:1px solid rgba(255,255,255,.08)}
+.site-footer .footer-map iframe{display:block;width:100%;height:260px;border:0}
+</style>
+<div class="footer-logo"><img src="../assets/images/logo-arabsad.jpg" alt="شعار إعلانات العرب" width="58" height="58"></div>
+<p class="footer-name">إعلانات العرب</p>
+<p class="footer-desc">حلول التسويق الرقمي والإعلانات الممولة للمتاجر والشركات في الخليج.</p>
+<nav class="footer-nav" aria-label="روابط الفوتر">
+  <a href="../">الرئيسية</a>
+  <a href="../services/">الخدمات</a>
+  <a href="../shop/" class="shop-link">🛒 المتجر</a>
+  <a href="../blog/">المدونة</a>
+  <a href="../about.html">من نحن</a>
+  <a href="../contact.html">تواصل معنا</a>
+  <a href="../privacy.html">الخصوصية</a>
+</nav>
+<p><a class="footer-wa" href="https://wa.me/201110760081?text=%D8%A3%D8%B1%D9%8A%D8%AF%20%D8%A7%D8%B3%D8%AA%D8%B4%D8%A7%D8%B1%D8%A9%20%D8%AA%D8%B3%D9%88%D9%8A%D9%82%D9%8A%D8%A9" target="_blank" rel="noopener noreferrer">💬 تواصل عبر واتساب</a></p>
+<p class="footer-feed">Google Merchant Feed: <a href="../shop/google-merchant-feed.xml" target="_blank">/shop/google-merchant-feed.xml</a></p>
+<div class="footer-contact">
+  <a href="https://wa.me/201110760081" target="_blank" rel="noopener noreferrer">💬 واتساب: +201110760081</a>
+  <a href="tel:+201110760081">📞 +20 111 076 0081</a>
+  <a href="mailto:info@storesads.shop">✉️ info@storesads.shop</a>
+</div>
+<address class="footer-address">
+  <span class="footer-address-title">📍 عنوان المؤسسة</span>
+  <span>مبنى 69، شقة 3، الحي الأول، المنطقة السادسة</span>
+  <span>مدينة السادس من أكتوبر، الجيزة 12566 — جمهورية مصر العربية</span>
+  <span>Building 69, Apt. 3, 1st Neighborhood, 6th District, 6th of October City, Giza 12566, Egypt</span>
+</address>
+<div class="footer-map">
+  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2696.60544641916!2d30.924408099999994!3d29.938672299999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x145855f8808491f5%3A0xc71d9bdea768bf6e!2z2LTYsdmD2Kkg2KfYudmE2KfZhtin2Kog2KfZhNi52LHYqA!5e1!3m2!1sar!2seg!4v1787715724520!5m2!1sar!2seg" width="600" height="260" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" title="موقع مؤسسة إعلانات العرب على الخريطة"></iframe>
+</div>
+<p class="footer-copy">© 2025 مؤسسة إعلانات العرب — جميع الحقوق محفوظة</p>
+</footer>
+
+<script src="../assets/js/shop.js"></script>
+<script>
+const CITIES = {
+  SA:['الرياض','جدة','مكة المكرمة','المدينة المنورة','الدمام','الخبر','الطائف','تبوك','أبها','القصيم','حائل','نجران','جازان','الجوف','الباحة'],
+  AE:['دبي','أبوظبي','الشارقة','عجمان','رأس الخيمة','الفجيرة','أم القيوين','العين'],
+  KW:['مدينة الكويت','حولي','الفروانية','الأحمدي','الجهراء','مبارك الكبير'],
+  QA:['الدوحة','الريان','الوكرة','الخور','الشمال','الشيلة','أم صلال'],
+  BH:['المنامة','المحرق','الرفاع','مدينة عيسى','مدينة حمد','سترة','الحد'],
+  OM:['مسقط','صلالة','صحار','نزوى','صور','البريمي','الرستاق','خصب'],
+  EG:['القاهرة','الإسكندرية','الجيزة','الشرقية','الدقهلية','البحيرة','المنوفية','القليوبية','الغربية','كفر الشيخ','المنيا','أسيوط','سوهاج','قنا','الأقصر','أسوان','الفيوم','بني سويف','الإسماعيلية','السويس','بورسعيد','دمياط','شمال سيناء','جنوب سيناء','البحر الأحمر','الوادي الجديد','مطروح']
+};
+
+const PHONE_FORMATS = {
+  SA:{placeholder:'05XXXXXXXX',hint:'مثال: 0512345678 (10 أرقام)',pattern:'05[0-9]{8}'},
+  AE:{placeholder:'05XXXXXXXX',hint:'مثال: 0501234567 (10 أرقام)',pattern:'05[0-9]{8}'},
+  KW:{placeholder:'XXXXXXXX',hint:'مثال: 55123456 (8 أرقام)',pattern:'[569][0-9]{7}'},
+  QA:{placeholder:'XXXXXXXX',hint:'مثال: 55123456 (8 أرقام)',pattern:'[3567][0-9]{7}'},
+  BH:{placeholder:'XXXXXXXX',hint:'مثال: 33123456 (8 أرقام)',pattern:'[3679][0-9]{7}'},
+  OM:{placeholder:'XXXXXXXX',hint:'مثال: 91234567 (8 أرقام)',pattern:'[79][0-9]{7}'},
+  EG:{placeholder:'01XXXXXXXXX',hint:'مثال: 01012345678 (11 رقم)',pattern:'01[0-9]{9}'}
+};
+
+function updatePhoneFormat(){
+  const country=document.getElementById('country').value;
+  const citySelect=document.getElementById('city');
+  const phoneInput=document.getElementById('phone');
+  const phoneHint=document.getElementById('phoneHint');
+  citySelect.innerHTML='<option value="">-- اختر المدينة --</option>';
+  if(country && CITIES[country]){
+    CITIES[country].forEach(c=>{
+      const opt=document.createElement('option');
+      opt.value=c;opt.textContent=c;
+      citySelect.appendChild(opt);
+    });
+  }
+  if(country && PHONE_FORMATS[country]){
+    const fmt=PHONE_FORMATS[country];
+    phoneInput.placeholder=fmt.placeholder;
+    phoneInput.pattern=fmt.pattern;
+    phoneHint.textContent=fmt.hint;
+  }
+}
+
+function renderOrderSummary(){
+  const cart=getCart();
+  const itemsEl=document.getElementById('orderItems');
+  const totalEl=document.getElementById('orderTotal');
+  const emptyEl=document.getElementById('emptyCart');
+  const contentEl=document.getElementById('checkoutContent');
+  if(!cart.length){
+    emptyEl.style.display='block';
+    contentEl.style.display='none';
+    return;
+  }
+  let total=0;
+  itemsEl.innerHTML='';
+  cart.forEach(item=>{
+    total+=item.price*item.qty;
+    const div=document.createElement('div');
+    div.className='order-item';
+    div.innerHTML=`<div class="order-item-info"><div class="order-item-name">${item.name}</div><div class="order-item-qty">الكمية: ${item.qty}</div></div><div class="order-item-price">$${(item.price*item.qty).toLocaleString()}</div>`;
+    itemsEl.appendChild(div);
+  });
+  totalEl.textContent='$'+total.toLocaleString();
+}
+
+function submitOrder(e){
+  e.preventDefault();
+  const name=document.getElementById('fullName').value;
+  const email=document.getElementById('email').value;
+  const country=document.getElementById('country').options[document.getElementById('country').selectedIndex].text;
+  const city=document.getElementById('city').value;
+  const phone=document.getElementById('phone').value;
+  const company=document.getElementById('company').value;
+  const notes=document.getElementById('notes').value;
+  const payment=document.querySelector('input[name="payment"]:checked').value;
+  const cart=getCart();
+  const total=cart.reduce((s,i)=>s+i.price*i.qty,0);
+  const services=cart.map(i=>`- ${i.name} (${i.qty}x $${i.price})`).join('\n');
+  const orderRef='ORD-'+Date.now().toString().slice(-6);
+  const msg=`🛒 *طلب جديد - ${orderRef}*\n\n👤 *بيانات العميل:*\nالاسم: ${name}\nالبريد: ${email}\nالدولة: ${country}\nالمدينة: ${city}\nالجوال: ${phone}${company?'\nالشركة: '+company:''}\n\n📦 *الخدمات المطلوبة:*\n${services}\n\n💰 *الإجمالي: $${total.toLocaleString()}*\n💳 طريقة الدفع: ${payment}${notes?'\n\n📝 ملاحظات: '+notes:''}`;
+  localStorage.setItem('lastOrder',JSON.stringify({ref:orderRef,name,total,services:cart}));
+  saveCart([]);
+  window.location.href='https://wa.me/201110760081?text='+encodeURIComponent(msg);
+}
+
+document.addEventListener('DOMContentLoaded',function(){
+  renderOrderSummary();
+  updateCartUI();
+});
+</script>
+</body>
+</html>
