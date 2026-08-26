@@ -19,8 +19,6 @@
 .shop-grid-wrap{max-width:1200px;margin:0 auto;padding:0 20px 60px;position:relative;z-index:1}
 .shop-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:24px}
 .shop-card{background:var(--card);border-radius:20px;overflow:hidden;border:1px solid rgba(255,255,255,.06);transition:all .3s;display:flex;flex-direction:column}
-.shop-card-overlay{position:absolute;inset:0;z-index:2;display:block}
-.shop-card-btn,.shop-card-rating{position:relative;z-index:1;}
 .shop-card:hover{border-color:rgba(201,162,39,.3);transform:translateY(-6px);box-shadow:0 15px 35px rgba(0,0,0,.3)}
 .shop-card-img{aspect-ratio:16/9;overflow:hidden;background:var(--card2);position:relative}
 .shop-card-img img{width:100%;height:100%;object-fit:cover;transition:transform .4s}
@@ -38,8 +36,8 @@
 .shop-card-rating{display:flex;align-items:center;gap:6px;font-size:.82rem;color:var(--muted)}
 .shop-card-rating .stars{color:#F0C040;font-size:.9rem}
 .section-title{font-size:1.8rem;font-weight:900;color:var(--gold);margin-bottom:24px;text-align:center}
-.shop-card-overlay{position:absolute;inset:0;z-index:0;display:block}
-.shop-card-body,.shop-card-img,.shop-card-badge,.shop-card-btn,.shop-card-rating{position:relative;z-index:1}
+.shop-card-overlay{position:absolute;inset:0;z-index:2;display:block;text-decoration:none}
+.shop-card-body,.shop-card-img,.shop-card-badge,.shop-card-btn,.shop-card-rating{position:relative;z-index:3}
 /* id للـ style tag */
 </style>
 </head>
@@ -95,7 +93,7 @@
   <div class="shop-grid">
 
     <div class="shop-card" style="position:relative;cursor:pointer">
-      <a class="shop-card-overlay" href="/shop/google-ads.html" aria-label="عرض المنتج"></a>
+      <a class="shop-card-overlay" href="./google-ads.html" target="_blank" rel="noopener noreferrer" aria-label="عرض المنتج"></a>
       <div class="shop-card-img">
         <img src="../assets/images/خدمات اعلانات جوجل.jpg" alt="إعلانات Google Ads">
         <span class="shop-card-badge">⭐ الأكثر طلباً</span>
@@ -107,13 +105,13 @@
         <div class="shop-card-desc">تصدر نتائج البحث فوراً وحقق مبيعات حقيقية من العملاء الباحثين عن خدماتك.</div>
         <div class="shop-card-footer">
           <div class="shop-card-price">$1,000<small>شهرياً</small></div>
-          <a href="/shop/google-ads.html" class="shop-card-btn">اشترِ الآن</a>
+          <a href="./google-ads.html" class="shop-card-btn" target="_blank" rel="noopener noreferrer">اشترِ الآن</a>
         </div>
       </div>
     </div>
 
     <div class="shop-card" style="position:relative;cursor:pointer">
-      <a class="shop-card-overlay" href="/shop/social-media-ads.html" aria-label="عرض المنتج"></a>
+      <a class="shop-card-overlay" href="./social-media-ads.html" target="_blank" rel="noopener noreferrer" aria-label="عرض المنتج"></a>
       <div class="shop-card-img">
         <img src="../assets/images/وسائل التواصل.jpg" alt="إعلانات السوشيال ميديا">
         <span class="shop-card-badge">🔥 الأعلى مبيعاً</span>
@@ -125,13 +123,13 @@
         <div class="shop-card-desc">تيك توك، سناب، إنستقرام، فيسبوك. وصول واسع وتحويلات حقيقية للجمهور الخليجي.</div>
         <div class="shop-card-footer">
           <div class="shop-card-price">$1,000<small>شهرياً</small></div>
-          <a href="/shop/social-media-ads.html" class="shop-card-btn">اشترِ الآن</a>
+          <a href="./social-media-ads.html" class="shop-card-btn" target="_blank" rel="noopener noreferrer">اشترِ الآن</a>
         </div>
       </div>
     </div>
 
     <div class="shop-card" style="position:relative;cursor:pointer">
-      <a class="shop-card-overlay" href="/shop/seo.html" aria-label="عرض المنتج"></a>
+      <a class="shop-card-overlay" href="./seo.html" target="_blank" rel="noopener noreferrer" aria-label="عرض المنتج"></a>
       <div class="shop-card-img">
         <img src="../assets/images/سيو.jpg" alt="تحسين محركات البحث SEO">
       </div>
@@ -142,13 +140,13 @@
         <div class="shop-card-desc">زيارات مجانية مستدامة من جوجل. تصدر الصفحة الأولى في 3-6 أشهر.</div>
         <div class="shop-card-footer">
           <div class="shop-card-price">$1,000<small>شهرياً</small></div>
-          <a href="/shop/seo.html" class="shop-card-btn">اشترِ الآن</a>
+          <a href="./seo.html" class="shop-card-btn" target="_blank" rel="noopener noreferrer">اشترِ الآن</a>
         </div>
       </div>
     </div>
 
     <div class="shop-card" style="position:relative;cursor:pointer">
-      <a class="shop-card-overlay" href="/shop/website-design.html" aria-label="عرض المنتج"></a>
+      <a class="shop-card-overlay" href="./website-design.html" target="_blank" rel="noopener noreferrer" aria-label="عرض المنتج"></a>
       <div class="shop-card-img">
         <img src="../assets/images/مواقع.jpg" alt="تصميم المواقع">
         <span class="shop-card-badge">⚡ تسليم 7 أيام</span>
@@ -160,13 +158,13 @@
         <div class="shop-card-desc">مواقع سريعة ومتجاوبة بتصميم خليجي عصري مع تحسين SEO مدمج.</div>
         <div class="shop-card-footer">
           <div class="shop-card-price">$1,000<small>مشروع</small></div>
-          <a href="/shop/website-design.html" class="shop-card-btn">اشترِ الآن</a>
+          <a href="./website-design.html" class="shop-card-btn" target="_blank" rel="noopener noreferrer">اشترِ الآن</a>
         </div>
       </div>
     </div>
 
     <div class="shop-card" style="position:relative;cursor:pointer">
-      <a class="shop-card-overlay" href="/shop/ecommerce.html" aria-label="عرض المنتج"></a>
+      <a class="shop-card-overlay" href="./ecommerce.html" target="_blank" rel="noopener noreferrer" aria-label="عرض المنتج"></a>
       <div class="shop-card-img">
         <img src="../assets/images/التجارة الالكترونية.jpg" alt="المتاجر الإلكترونية">
       </div>
@@ -177,13 +175,13 @@
         <div class="shop-card-desc">متجر كامل مع بوابات دفع خليجية وشحن وإدارة مخزون. جاهز للبيع فوراً.</div>
         <div class="shop-card-footer">
           <div class="shop-card-price">$1,000<small>مشروع</small></div>
-          <a href="/shop/ecommerce.html" class="shop-card-btn">اشترِ الآن</a>
+          <a href="./ecommerce.html" class="shop-card-btn" target="_blank" rel="noopener noreferrer">اشترِ الآن</a>
         </div>
       </div>
     </div>
 
     <div class="shop-card" style="position:relative;cursor:pointer">
-      <a class="shop-card-overlay" href="/shop/social-management.html" aria-label="عرض المنتج"></a>
+      <a class="shop-card-overlay" href="./social-management.html" target="_blank" rel="noopener noreferrer" aria-label="عرض المنتج"></a>
       <div class="shop-card-img">
         <img src="../assets/images/وسائل التواصل.jpg" alt="إدارة السوشيال ميديا">
       </div>
@@ -194,13 +192,13 @@
         <div class="shop-card-desc">30 منشور شهرياً بتصميم احترافي ومحتوى عربي خليجي مع تفاعل مستمر.</div>
         <div class="shop-card-footer">
           <div class="shop-card-price">$1,000<small>شهرياً</small></div>
-          <a href="/shop/social-management.html" class="shop-card-btn">اشترِ الآن</a>
+          <a href="./social-management.html" class="shop-card-btn" target="_blank" rel="noopener noreferrer">اشترِ الآن</a>
         </div>
       </div>
     </div>
 
     <div class="shop-card" style="position:relative;cursor:pointer">
-      <a class="shop-card-overlay" href="/shop/landing-page.html" aria-label="عرض المنتج"></a>
+      <a class="shop-card-overlay" href="./landing-page.html" target="_blank" rel="noopener noreferrer" aria-label="عرض المنتج"></a>
       <div class="shop-card-img">
         <img src="../assets/images/لاندنج بيدج صفحات الهبوط.jpg" alt="صفحات الهبوط">
         <span class="shop-card-badge">🎯 تحويل عالي</span>
@@ -212,13 +210,13 @@
         <div class="shop-card-desc">صفحات هبوط عالية التحويل مخصصة لحملاتك الإعلانية. تسليم 3 أيام.</div>
         <div class="shop-card-footer">
           <div class="shop-card-price">$1,000<small>مشروع</small></div>
-          <a href="/shop/landing-page.html" class="shop-card-btn">اشترِ الآن</a>
+          <a href="./landing-page.html" class="shop-card-btn" target="_blank" rel="noopener noreferrer">اشترِ الآن</a>
         </div>
       </div>
     </div>
 
     <div class="shop-card" style="position:relative;cursor:pointer">
-      <a class="shop-card-overlay" href="/shop/maps-alternative.html" aria-label="عرض المنتج"></a>
+      <a class="shop-card-overlay" href="./maps-alternative.html" target="_blank" rel="noopener noreferrer" aria-label="عرض المنتج"></a>
       <div class="shop-card-img">
         <img src="../assets/images/بديل خرائط جوجل.jpg" alt="بديل خرائط جوجل">
       </div>
@@ -229,7 +227,7 @@
         <div class="shop-card-desc">صفحة هبوط تغنيك عن خرائط جوجل. ملكية كاملة وحماية من الإغلاق.</div>
         <div class="shop-card-footer">
           <div class="shop-card-price">$1,000<small>مشروع</small></div>
-          <a href="/shop/maps-alternative.html" class="shop-card-btn">اشترِ الآن</a>
+          <a href="./maps-alternative.html" class="shop-card-btn" target="_blank" rel="noopener noreferrer">اشترِ الآن</a>
         </div>
       </div>
     </div>
